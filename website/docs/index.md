@@ -1,6 +1,6 @@
 ---
-id: documentation
-title: Documentation
+id: overview
+title: Overview
 ---
 
-Welcome to the main documentation page.
+Welcome to the overview documentation page.

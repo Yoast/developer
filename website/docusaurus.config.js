@@ -14,7 +14,7 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
+        {to: 'docs/overview', label: 'Docs', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -73,6 +73,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
+  themes: [ '@docusaurus/theme-search-algolia' ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -80,7 +81,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/Yoast/developer-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

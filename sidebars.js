@@ -7,6 +7,6 @@
 
 module.exports = {
   mainSidebar: {
-    Main: ['overview'],
+    Main: [ 'overview' ],
   },
 };

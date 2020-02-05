@@ -36,6 +36,8 @@ module.exports = {
 				label: 'Schema.org markup',
 				items: [
 					'features/schema/overview',
+					'features/schema/background',
+					'features/schema/technology-approach',
 					'features/schema/specification',
 					'features/schema/api',
 					{

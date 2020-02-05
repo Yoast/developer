@@ -1,7 +1,7 @@
 ---
-id: offer
-title: Schema piece - Offer
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/offer.md
+id: product
+title: Schema piece - Product
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/product.md
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

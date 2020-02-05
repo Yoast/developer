@@ -1,12 +1,27 @@
 import React from 'react';
 import CodeBlock from '@theme/CodeBlock';
 
-const cleanScript = ( jsonScript ) => {
+/**
+ * Outputs a properly formed JSON-LD tag to be used in the output.
+ *
+ * @param string jsonScript
+ *
+ * @returns {string} The HTML output.
+ */
+const toHTMLOutput = ( jsonScript ) => {
 	return `<script type="application/ld+json">${ jsonScript }</script>`;
 };
 
+/**
+ * The Yoast Schema Example component.
+ *
+ * @param {Object} props The props.
+ *
+ * @returns {JSX} The schema example component.
+ * @constructor
+ */
 const YoastSchemaExample = ( props ) => {
-	const cleaned = cleanScript( props.children );
+	const cleaned = toHTMLOutput( props.children );
 
 	return (
 		<div className="schema_example">

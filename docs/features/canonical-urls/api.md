@@ -1,6 +1,6 @@
 ---
 id: api
-title: API documentation
+title: Yoast SEO Canonical API documentation
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/canonical-urls/api.md
 ---
 

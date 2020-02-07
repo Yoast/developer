@@ -39,7 +39,7 @@ If you want to completely remove the canonical URL from a page, simply return fa
  *
  * @param string $canonical The current page's generated canonical URL.
  *
- * @return string The filtered canonical.
+ * @return bool|string The filtered canonical or false when we want to remove it.
  */
 function prefix_filter_canonical_example( $canonical ) {
   if ( is_page( 12345 ) ) {

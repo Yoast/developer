@@ -8,8 +8,8 @@ import CodeBlock from '@theme/CodeBlock';
  *
  * @returns {string} The HTML output.
  */
-const toHTMLOutput = ( jsonScript ) => {
-	return `<script type="application/ld+json">${ jsonScript }</script>`;
+const toHTMLOutput = (jsonScript) => {
+	return `<script type="application/ld+json">${jsonScript}</script>`;
 };
 
 /**
@@ -20,14 +20,14 @@ const toHTMLOutput = ( jsonScript ) => {
  * @returns {JSX} The schema example component.
  * @constructor
  */
-const YoastSchemaExample = ( props ) => {
-	const cleaned = toHTMLOutput( props.children );
+const YoastSchemaExample = (props) => {
+	const cleaned = toHTMLOutput(props.children);
 
 	return (
 		<div className="schema_example">
 			<form action="https://search.google.com/structured-data/testing-tool" method="post" target="_blank">
-				<input className="button button--secondary" type="submit" value="See in the Google Structured Data Testing Tool" />
-				<textarea name="code" style={{display: "none"}} value={cleaned} readOnly></textarea>
+				<input className="button button--secondary" type="submit" value="Test &amp; modify in the Google Structured Data Testing Tool" />
+				<textarea name="code" style={{ display: "none" }} value={cleaned} readOnly></textarea>
 			</form>
 			<CodeBlock className="json">{props.children}</CodeBlock>
 		</div>

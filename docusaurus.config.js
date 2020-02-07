@@ -3,8 +3,8 @@ module.exports = {
 	tagline: 'Yoast - SEO for everyone',
 	url: 'https://developer.yoast.com',
 	baseUrl: '/',
-	favicon: 'img/favicon.ico',
-	organizationName: 'Yoast B.V.', // Usually your GitHub org/user name.
+	favicon: 'img/favicon.png',
+	organizationName: 'Yoast', // Usually your GitHub org/user name.
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	themeConfig: {
 		disableDarkMode: true,
@@ -15,8 +15,8 @@ module.exports = {
 				src: 'img/yoast-logo.png',
 			},
 			links: [
-				{to: 'docs/overview', label: 'Docs', position: 'left'},
-				{href: 'https://developer.yoast.com/blog', label: 'Blog', position: 'left'},
+				{ to: 'docs/overview', label: 'Docs', position: 'left' },
+				{ href: 'https://developer.yoast.com/blog', label: 'Blog', position: 'left' },
 				{
 					href: 'https://github.com/yoast/developer-docs',
 					label: 'GitHub',
@@ -44,19 +44,19 @@ module.exports = {
 					],
 				},
 				{
-					title: 'Social',
+					title: 'Yoast',
 					items: [
 						{
 							label: 'About us',
-							href: 'https://yoast.com/about-us',
+							href: 'https://yoast.com/about-us/',
 						},
 						{
 							label: 'Work at Yoast',
-							href: 'https://yoast.com/jobs',
+							href: 'https://yoast.com/jobs/',
 						},
 						{
-							label: 'Blog',
-							href: 'https://developer.yoast.com/blog',
+							label: 'Developer Blog',
+							href: 'https://developer.yoast.com/blog/',
 						},
 						{
 							label: 'Twitter',
@@ -65,7 +65,7 @@ module.exports = {
 					],
 				},
 			],
-			copyright: `Copyright © ${new Date().getFullYear()} Yoast B.V. Built with Docusaurus.`,
+			copyright: `Copyright © ${new Date().getFullYear()} Yoast · Built with Docusaurus.`,
 		},
 	},
 	themes: ['@docusaurus/theme-search-algolia'],
@@ -75,10 +75,10 @@ module.exports = {
 			{
 				docs: {
 					path: '../developer-docs/docs',
-					sidebarPath: require.resolve( './sidebars.js' ),
+					sidebarPath: require.resolve('./sidebars.js'),
 				},
 				theme: {
-					customCss: require.resolve( './src/css/custom.css' ),
+					customCss: require.resolve('./src/css/custom.css'),
 				},
 			},
 		],

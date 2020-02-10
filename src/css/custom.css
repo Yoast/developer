@@ -60,25 +60,3 @@ header h1, .markdown > h1, .markdown > h2, .markdown > h3, .markdown > h4 {
 .markdown > h2 {
   margin-top: 1.2em;
 }
-
-.logo {
-  width: 100%;
-  display: block;
-  background: var(--ifm-color-primary);
-  padding: 24px;
-  height: 160px;
-}
-
-.logo__image {
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
-@media (max-width: 996px) {
-  .logo {
-    padding: 8px;
-    height: 72px;
-  }
-}

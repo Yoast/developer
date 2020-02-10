@@ -14,6 +14,7 @@
   --ifm-color-primary-lighter: #bd2e7a;
   --ifm-color-primary-lightest: #cf3a89;
   --ifm-code-font-size: 95%;
+  --ifm-font-size-base: 1em;
   --ifm-navbar-height: 0;
   --ifm-footer-background-color: var(--ifm-color-primary-darkest);
   --ifm-footer-padding-vertical: 24px;
@@ -32,6 +33,32 @@
 
 .main-wrapper {
   margin-top: 0;
+}
+
+.menu__list {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contents {
+  font-size: 0.9rem;
+}
+
+.markdown h1:first-of-type {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.markdown h1:first-of-type:hover .hash-link {
+  display: none
+}
+
+header h1, .markdown > h1, .markdown > h2, .markdown > h3, .markdown > h4 {
+  font-weight: 400;
+}
+
+.markdown > h2 {
+  margin-top: 1.2em;
 }
 
 .logo {

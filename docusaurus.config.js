@@ -25,18 +25,21 @@ module.exports = {
 			],
 		},
 		footer: {
-			style: 'dark',
 			links: [
 				{
 					title: 'Docs',
 					items: [
 						{
-							label: 'Schema',
-							to: 'docs/doc1',
+							label: 'XML sitemaps',
+							to: 'docs/features/xml-sitemaps/overview',
 						},
 						{
-							label: 'APIs',
-							to: 'docs/doc2',
+							label: 'Canonical URLs',
+							to: 'docs/features/canonical-urls/overview',
+						},
+						{
+							label: 'Schema',
+							to: 'docs/features/schema/overview',
 						},
 					],
 				},

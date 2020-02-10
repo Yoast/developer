@@ -75,3 +75,10 @@ header h1, .markdown > h1, .markdown > h2, .markdown > h3, .markdown > h4 {
   margin: 0 auto;
   display: block;
 }
+
+@media (max-width: 996px) {
+  .logo {
+    padding: 8px;
+    height: 72px;
+  }
+}

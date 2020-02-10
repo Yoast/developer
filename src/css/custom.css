@@ -48,3 +48,10 @@
   margin: 0 auto;
   display: block;
 }
+
+@media (max-width: 996px) {
+  .logo {
+    padding: 8px;
+    height: 72px;
+  }
+}

@@ -17,7 +17,7 @@ import NotFound from '@theme/NotFound';
 import {matchPath} from '@docusaurus/router';
 
 import styles from './styles.module.css';
-import Logo from "../Logo/Logo";
+import Logo from "../Logo";
 
 function matchingRouteExist( routes, pathname ) {
 	return routes.some( route => matchPath( pathname, route ) );

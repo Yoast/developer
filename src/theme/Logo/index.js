@@ -1,5 +1,6 @@
 import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import styles from './styles.module.css';
 
 /**
  * The Logo component.
@@ -13,8 +14,8 @@ const Logo = () => {
 	const logoFile = useBaseUrl( "/img/yoast-logo.svg" );
 
 	return (
-		<a href="/" className="logo">
-			<img src={logoFile} alt="" className="logo__image" />
+		<a href="/" className={styles.logo}>
+			<img src={logoFile} alt="" className={styles.logo__image} />
 		</a>
 
 	);

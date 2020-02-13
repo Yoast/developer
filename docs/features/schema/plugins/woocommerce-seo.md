@@ -18,11 +18,5 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 	* Set the `seller` to the `Organization` (or `Person` ) which is set as the `Publisher` of the `WebSite`.
     * Stitch `offers`, `review` and/or `aggregateRating` values into the graph (when available / as appropriate).
 
-### On product listing pages
-* Add a `@type` value of `CollectionPage` to the `WebPage`.
-* Add a `Product` piece for each product returned by the query.
-* Add an `itemList` piece which references each of those products by ID.
-* Add a `mainEntityOfPage` property to the `itemList` which references the `WebPage`.
-
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.

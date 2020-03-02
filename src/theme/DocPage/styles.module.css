@@ -25,6 +25,10 @@
   padding: 0.5rem;
 }
 
+.sidebar__menu {
+  padding: 0.5rem;
+}
+
 .docMainContainer {
   flex-grow: 1;
 }

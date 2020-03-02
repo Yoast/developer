@@ -5,12 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {MDXProvider} from '@mdx-js/react';
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import renderRoutes from '@docusaurus/renderRoutes';
 import Layout from '@theme/Layout';
+import SearchBar from '@theme/SearchBar';
 import DocSidebar from '@theme/DocSidebar';
 import MDXComponents from '@theme/MDXComponents';
 import NotFound from '@theme/NotFound';
@@ -30,6 +31,10 @@ function DocPage( props ) {
 	const {siteConfig: {themeConfig = {}} = {}} = useDocusaurusContext();
 	const {sidebarCollapsible = true} = themeConfig;
 
+	const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
+
+
+
 	let content = (
 		<MDXProvider components={MDXComponents}>
 			{renderRoutes( route.routes )}
@@ -45,17 +50,22 @@ function DocPage( props ) {
 	return (
 		<Layout version={version}>
 			<div className={styles.docPage}>
-				<div className={styles.docSidebarContainer}>
+				<aside className={styles.sidebar}>
 					<Logo/>
-					{sidebar && (
+					<div className={styles.sidebar__menu}>
+						<SearchBar
+							handleSearchBarToggle={setIsSearchBarExpanded}
+							isSearchBarExpanded={isSearchBarExpanded}
+						/>
 						<DocSidebar
 							docsSidebars={docsSidebars}
 							location={location}
 							sidebar={sidebar}
 							sidebarCollapsible={sidebarCollapsible}
 						/>
-					)}
-				</div>
+					</div>
+
+				</aside>
 				<main className={styles.docMainContainer}>
 					{content}
 				</main>

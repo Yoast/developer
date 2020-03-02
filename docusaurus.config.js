@@ -7,6 +7,11 @@ module.exports = {
 	organizationName: 'Yoast', // Usually your GitHub org/user name.
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	themeConfig: {
+		algolia: {
+			apiKey: 'YOUR_KEY_HERE',
+			indexName: 'yoast_developer',
+
+		},
 		disableDarkMode: true,
 		navbar: {
 			title: 'Yoast Developer portal',

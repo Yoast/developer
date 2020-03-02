@@ -12,6 +12,11 @@ module.exports = {
 		},
 	],
 	themeConfig: {
+		algolia: {
+			apiKey: 'YOUR_KEY_HERE',
+			indexName: 'yoast_developer',
+
+		},
 		disableDarkMode: true,
 		sidebarCollapsible: true,
 		navbar: {

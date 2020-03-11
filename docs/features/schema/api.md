@@ -4,6 +4,15 @@ title: API documentation
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
 ---
 
+## Making Schema easier to debug
+If you're working on Schema, it can be rather hard to read. To change that, you should toggle the `yoast_seo_development_mode` filter to `true`. At that point all the Schema that Yoast SEO outputs will be pretty printed. 
+
+``` php
+add_filter( 'yoast_seo_development_mode', '__return_true' );
+```
+
+Note: it is _not_ recommended to leave this on in production.
+
 ## To disable Schema entirely
 If you return false or an empty array on the `wpseo_json_ld_output` filter, you disable all Yoast SEO’s schema output.
 

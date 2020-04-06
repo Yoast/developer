@@ -1,5 +1,5 @@
 ---
-id: features
+id: overview
 title: Features overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/overview.md
 ---

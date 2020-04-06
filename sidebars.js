@@ -51,7 +51,8 @@ module.exports = {
 						'features/schema/overview',
 						'features/schema/background',
 						'features/schema/technology-approach',
-						'features/schema/specification',
+						'features/schema/functional-specification',
+						'features/schema/integration-guidelines',
 						'features/schema/api',
 						{
 							type: 'category',
@@ -69,6 +70,7 @@ module.exports = {
 							type: 'category',
 							label: 'Schema pieces',
 							items: [
+								'features/schema/pieces',
 								'features/schema/pieces/aggregateoffer',
 								'features/schema/pieces/article',
 								'features/schema/pieces/breadcrumb',

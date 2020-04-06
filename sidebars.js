@@ -12,7 +12,7 @@ module.exports = {
 			type: 'category',
 			label: 'Features',
 			items: [
-				'features/features',
+				'features/overview',
 
 				{
 					type: 'category',
@@ -31,6 +31,16 @@ module.exports = {
 						'features/canonical-urls/overview',
 						'features/canonical-urls/functional-specification',
 						'features/canonical-urls/api',
+					],
+				},
+
+				{
+					type: 'category',
+					label: 'Meta robots',
+					items: [
+						'features/meta-robots/overview',
+						'features/meta-robots/functional-specification',
+						'features/meta-robots/api',
 					],
 				},
 

@@ -13,7 +13,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `Person` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/person/{{ID}}`, where  `{{ID}}`  is a unique identifier. Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
+* `@id`: The site’s home URL appended by `#/schema/person/{{ID}}`, where `{{ID}}` is a unique identifier. Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
 * `name`: The full name of the `Person`.
 
 ### Failure scenarios

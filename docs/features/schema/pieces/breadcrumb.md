@@ -13,12 +13,12 @@ Should be added as top-level node in the graph, as/when required by other nodes.
 ## Required properties
 A valid `BreadcrumbList` must have the following properties.
 
-* `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `itemListElement`: An array of `ListItem` objects, with the following properties:
 	* `position`: An integer (starting at `1` ), counting the depth of the page from the homepage.
 	* `item`: A `WebPage` object *stub*, with the following properties:
-		* `@id`: The unmodified  *canonical URL*  of the page in question.
-		* `url`: The unmodified  *canonical URL*  of the page in question.
+		* `@id`: The unmodified *canonical URL* of the page in question.
+		* `url`: The unmodified *canonical URL* of the page in question.
 		* `name`: The name of the page in question, as it appears in the breadcrumb navigation.
 
 ### Failure scenarios

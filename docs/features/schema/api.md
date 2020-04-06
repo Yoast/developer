@@ -21,7 +21,7 @@ add_filter( ‘wpseo_json_ld_output’, ‘__return_false’ );
 ```
 
 ## To add or remove graph pieces
-As [the documentation](https://developer.yoast.com/schema-documentation/yoast-seo/) clearly shows we output a lot of graph pieces on some pages. You might want to remove some, or better yet, add your own. To do this you should use the `wpseo_schema_graph_pieces` filter.
+As [the documentation](plugins/yoast-seo.md) clearly shows we output a lot of graph pieces on some pages. You might want to remove some, or better yet, add your own. To do this you should use the `wpseo_schema_graph_pieces` filter.
 
 Each of our graph pieces implements a `WPSEO_Graph_Piece` interface. We pass each of these pieces a `WPSEO_Schema_Context` object which has a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case) , and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/frontend/schema/class-schema-author.php) .
 

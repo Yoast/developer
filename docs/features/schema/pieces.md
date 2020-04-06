@@ -1,6 +1,6 @@
 ---
 id: pieces
-title: Schema pieces
+title: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
 ---
 In Yoast SEO, we refer to individual nodes in our graph as ‘pieces’. This page acts as an index for our documentation on the characteristics and behaviour of each piece we output or manage.
@@ -26,8 +26,8 @@ Components which identify a *thing*.
 
 * [Person](pieces/person.md)
 * [Product](pieces/product.md)
-	* [Offer](pieces/offer.md)
-	* [Aggregate Offer](pieces/aggregateoffer.md) (AggregateOffer)
+  * [Offer](pieces/offer.md)
+  * [Aggregate Offer](pieces/aggregateoffer.md) (AggregateOffer)
 
 ### Content
 Components which describe the content of/in a page.

@@ -36,7 +36,7 @@ The following should be added whenever available and valid:
 The  `Organization` type may be transformed in the following scenarios.
 
 ### When the business is ‘local’
-* When location information is available, the `Organization` may be eligible for extension into a [LocalBusiness](https://developer.yoast.com/features/schema/pieces/localbusiness/) type.
+* When location information is available, the `Organization` may be eligible for extension into a [LocalBusiness](localbusiness.md) type.
 
 ## Examples
 ### Minimum criteria

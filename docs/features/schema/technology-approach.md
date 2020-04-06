@@ -52,9 +52,9 @@ ID parameters should always adopt the following structure:
 
 `{{website}}{{slug}}/#/schema/{{type}}/{{ID}}` E.g., `https://www.example.com/#/schema/image/abc123`.
 
-[Pieces](https://developer.yoast.com/features/schema/pieces/) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content. 
+[Pieces](pieces.md) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content. 
 
-For example, a [HowTo](https://developer.yoast.com/features/schema/pieces/howto/) piece is an explicit child of the [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) (or [Article](https://developer.yoast.com/features/schema/pieces/article/) ) within which it resides. A [Person](https://developer.yoast.com/features/schema/pieces/person/) or an [image](https://developer.yoast.com/features/schema/pieces/image/) , however, exists independently of a [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) or [Article](https://developer.yoast.com/features/schema/pieces/article/) which references it. 
+For example, a [HowTo](pieces/howto.md) piece is an explicit child of the [WebPage](pieces/webpage.md) (or [Article](pieces/article.md) ) within which it resides. A [Person](pieces/person.md) or an [image](pieces/image.md) , however, exists independently of a [WebPage](pieces/webpage.md) or [Article](pieces/article.md) which references it. 
 
 Local pieces should include the `{{slug}}` component. Global pieces should not.
 
@@ -74,7 +74,7 @@ Local pieces should include the `{{slug}}` component. Global pieces should not.
 * `https://www.example.com/example-category/example-post/#/schema/howto/abc123
 * `https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123
 
-See the relevant [pieces documentation](https://developer.yoast.com/features/schema/pieces/) in each case for the correct structure (where defined).
+See the relevant [pieces documentation](pieces.md) in each case for the correct structure (where defined).
 
 **Notes:**
 * `website` is the `protocol` + `hostname` of the site (e.g., `https://www.example.com`).
@@ -88,7 +88,7 @@ The `{{identifier}} `parameter should always be constructed using the following 
 * A sequential integer local to the `WebPage` in which the entity resides (e.g., `4` for the fourth `itemlist` on a given page).
 
 ### Exceptions
-These are also documented in their various [pieces documentation](https://developer.yoast.com/features/schema/pieces/) , but bear repeating here.
+These are also documented in their various [pieces documentation](pieces.md) , but bear repeating here.
 
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., `https://www.example.com/#/schema/organization/1`).

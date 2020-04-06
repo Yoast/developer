@@ -13,7 +13,7 @@ Describes an group of offers for a `Product`, typically due to variations in att
 ## Required properties
 A valid `AggregateOffer` must have the following properties.
 
-* `ID`: The site’s home URL appended by `#/schema/aggregate-offer/{{ID}}`, where  `{{ID}}`  is a unique identifier.
+* `ID`: The site’s home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `lowPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
 * `highPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
@@ -23,7 +23,7 @@ A valid `AggregateOffer` must have the following properties.
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have referenced the `AggregateOffer` should remove those references (e.g., when a product references an  `AggregateOffer`  by ID).
+If the node is not output, any entities which would otherwise have referenced the `AggregateOffer` should remove those references (e.g., when a product references an `AggregateOffer` by ID).
 
 ## Examples
 ### Minimum criteria

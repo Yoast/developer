@@ -35,7 +35,7 @@ The following should be added whenever available and valid:
 * `datePublished`: The time at which the page was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `dateModified`: The time at which the page was last modified, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `primaryImageOfPage`: A reference-by-ID to a node representing the page’s featured image.
-* `breadcrumb`: A reference-by-ID to a node representing the page’s breadrumb structure [ [link](https://developer.yoast.com/features/schema/pieces/breadcrumb/) ].
+* `breadcrumb`: A reference-by-ID to a node representing the page’s breadrumb structure [ [link](breadcrumb.md) ].
 * `image`: An array of all images in the page content, referenced by ID (including the image referenced by the `primaryImageOfPage` ).
 * `video`: An array of all videos in the page content, referenced by ID.
 * `keywords`: An array of the names of tags attached to the page (e.g., `["cats","dogs","cake"]` ).

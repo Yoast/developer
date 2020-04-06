@@ -13,7 +13,7 @@ Should be added as a top-level node in the graph, when the content of a page con
 ## Required properties
 A valid `HowTo` must have the following properties.
 
-* `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/howto/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/howto/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `mainEntityOfPage`: Referencing the `WebPage` by ID.
 * `name`: A string describing the guide.
 * `step`: An array of `howToStep` objects, with the following properties:

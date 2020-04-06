@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Overview
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/canonical-urls/overview.md
 ---
 This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and/or manages canonical URL values and tags.
 

@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Overview
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/overview.md
 ---
 This documentation describes how we represent [schema.org](http://schema.org/) integration in [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) , as well as our broader approach to structured data.
 ## Overview

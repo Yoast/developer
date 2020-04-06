@@ -1,7 +1,7 @@
 ---
 id: functional-specification
 title: Functional specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/functional-specification.md
 ---
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.
 An individual XML sitemap should be constructed for each *content type*. Large sitemaps may be split into individual, paginated files.

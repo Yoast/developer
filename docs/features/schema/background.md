@@ -1,7 +1,7 @@
 ---
 id: background
 title: Background information
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/background.md
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
 

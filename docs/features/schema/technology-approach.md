@@ -1,7 +1,7 @@
 ---
 id: technology-approach
 title: Technology and approach
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/technology-approach.md
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 

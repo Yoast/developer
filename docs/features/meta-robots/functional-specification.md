@@ -1,7 +1,7 @@
 ---
 id: functional-specification
 title: Functional specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-robots/functional-specification.md
 ---
 When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines, we output a meta robots tag in the `<head>` of that page.
 The tag takes the following format, where {{values}} may be a single value or a comma-separated list of values.

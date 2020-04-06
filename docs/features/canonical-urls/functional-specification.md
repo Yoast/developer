@@ -1,7 +1,7 @@
 ---
 id: functional-specification
 title: Functional specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/canonical-urls/functional-specification.md
 ---
 Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not*have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.
 A valid canonical URL tag takes the following format:

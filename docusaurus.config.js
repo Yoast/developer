@@ -16,7 +16,7 @@ module.exports = {
 				src: 'img/yoast-logo.png',
 			},
 			links: [
-				{ to: 'docs/overview', label: 'Docs', position: 'left' },
+				{ to: '/', label: 'Docs', position: 'left' },
 				{ href: 'https://developer.yoast.com/blog', label: 'Blog', position: 'left' },
 				{
 					href: 'https://github.com/yoast/developer-docs',
@@ -32,15 +32,19 @@ module.exports = {
 					items: [
 						{
 							label: 'XML sitemaps',
-							to: 'docs/features/xml-sitemaps/overview',
+							to: '/features/xml-sitemaps/overview',
 						},
 						{
 							label: 'Canonical URLs',
-							to: 'docs/features/canonical-urls/overview',
+							to: '/features/canonical-urls/overview',
 						},
 						{
-							label: 'Schema',
-							to: 'docs/features/schema/overview',
+							label: 'Schema.org markup',
+							to: '/features/schema/overview',
+						},
+						{
+							label: 'Yoast SEO Product sheet',
+							to: '/product-sheet',
 						},
 					],
 				},
@@ -75,6 +79,7 @@ module.exports = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
+					routeBasePath: '',
 					path: '../developer-docs/docs',
 					sidebarPath: require.resolve('./sidebars.js'),
 				},

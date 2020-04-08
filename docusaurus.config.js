@@ -44,7 +44,7 @@ module.exports = {
 						},
 						{
 							label: 'Yoast SEO Product sheet',
-							to: '/product-sheet',
+							to: '/yoast-seo-product-sheet',
 						},
 					],
 				},

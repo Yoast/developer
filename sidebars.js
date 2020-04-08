@@ -57,7 +57,7 @@ module.exports = {
 						{
 							type: 'link',
 							label: 'Schema.org pieces',
-							href: '/docs/features/schema/pieces'
+							href: '/features/schema/pieces'
 						},
 					],
 				},
@@ -68,7 +68,7 @@ module.exports = {
 		{
 			type: 'link',
 			label: '‹ Schema.org plugin output',
-			href: '/docs/features/schema/overview'
+			href: '/features/schema/overview'
 		},
 		{
 			type: 'category',
@@ -86,7 +86,7 @@ module.exports = {
 		{
 			type: 'link',
 			label: '‹ Schema.org pieces',
-			href: '/docs/features/schema/overview'
+			href: '/features/schema/overview'
 		},
 		'features/schema/pieces',
 		{

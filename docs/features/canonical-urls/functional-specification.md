@@ -5,7 +5,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 ---
 Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not*have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.
 A valid canonical URL tag takes the following format:
-`<link rel=“canonical” href=“{{URL}}” />`
+`<link rel="canonical" href="{{URL}}" />`
 The following sections describe how the value of the `{{URL}}` component of the tag should be constructed.
 
 ## Logic per request type
@@ -60,7 +60,7 @@ When there’s no evidence of preference, the default behaviour should be to use
 * A taxonomy index of pages related to ‘milk’ (which has parent taxonomies of both ‘foods’ and ‘liquids’, and where the path root for the taxonomy is stuff/) should have a %%path%% of stuff/foods/milk.
 
 ## Constructing the %%date%% variable
-Date structures are used in date indexes (e.g., “all posts published in 2016”), and, when the user prefers that all posts/pages have a date root.
+Date structures are used in date indexes (e.g., "all posts published in 2016"), and, when the user prefers that all posts/pages have a date root.
 In both cases, we assume that the user has defined a preferred date structure/format, which may take any format (e.g., Y/m/d, U, d-M-y, date/d-m-Y, etc). If so, then the %%path%% should be prefixed by the preferred format (e.g., date/22-05-2018/post-name).
 If there’s no evidence of preferred format (and a page may be accessed via multiple formats, such as the raw timestamp and a ‘pretty’ structure), the %%path%% should select a canonical date format based on the following order of preference when valid (adapting / using comparable concepts when there’s no precise match):
 * **Y/m/d**, e.g., 2018/05/22

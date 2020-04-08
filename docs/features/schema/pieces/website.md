@@ -15,7 +15,7 @@ A valid `WebSite` must have the following properties.
 
 * `@id`: The site’s home URL appended by `#/schema/website/{{ID}}`,
 * where `{{ID}}` is a globally unique, stable identifier.
-	* If the `WebSite` is the website being viewed/consumed (i.e., “*this website*”), then the value of `{{ID}}` should be `1`.
+	* If the `WebSite` is the website being viewed/consumed (i.e., "*this website*"), then the value of `{{ID}}` should be `1`.
 * `url`: The site’s home URL (excluding a trailing slash).
 * `name`: The name of the website.
 * `publisher`: A reference-by-ID to the `Organization` which publishes the `WebSite` (or an array of `Organization` and `Person` in the case that the website represents an individual).

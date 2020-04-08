@@ -47,7 +47,7 @@ function yoast_add_graph_pieces( $pieces, $context ) {
 }
 ```
 
-And then `Team_Member` is a “graph piece”, so let’s create it. We’re going to create it by extending the existing `Person` class, as that saves us a lot of code.
+And then `Team_Member` is a "graph piece", so let’s create it. We’re going to create it by extending the existing `Person` class, as that saves us a lot of code.
 
 ``` php
 /**
@@ -113,7 +113,7 @@ And that is all, now this code will be output on your team member post type!
 
 Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/). Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
 
-## “My plugin/theme already outputs schema markup”
+## "My plugin/theme already outputs schema markup"
 
 Unless you’re already adding individual pieces to a `@graph` (and connecting those pieces via `@id`  referencing), you may need to make some changes in order to integrate effectively. If you already use an ID-based approach, you should be able to ‘stitch’ your pieces into our graph by using [our Schema API](api.md) and by following [our specification](functional-specification.md).
 

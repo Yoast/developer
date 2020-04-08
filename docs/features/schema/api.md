@@ -66,7 +66,7 @@ function example_change_article( $data ) {
   $image_id = 12345; 
   
   // We instantiate the image class, it always needs an $id, so the output can be referenced by other graph pieces.
-  $id = “#image_12345";
+  $id = "#image_12345";
   $schema_image = new WPSEO_Schema_Image( $id );
 
   // Now we just generate and add the image output.
@@ -77,7 +77,7 @@ function example_change_article( $data ) {
 ```
 
 ## Schema for Gutenberg blocks
-If you’re writing blocks for the block editor (sometimes known as “Gutenberg”) you’ll want to add Schema output too. There are two useful hooks for you that make this possible.
+If you’re writing blocks for the block editor (sometimes known as "Gutenberg") you’ll want to add Schema output too. There are two useful hooks for you that make this possible.
 
 ### Know which blocks are on the page
 First, you have to know which blocks are on the page. You can know this based on the `wpseo_pre-schema_block-type_<block-type>` action. If this action fires for your block type, you know that your block type will be output on the page. 

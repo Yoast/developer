@@ -102,7 +102,7 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
     <video:title><![CDATA[Example Video]]></video:title>
     <video:publication_date>2015-12-15T15:36:03+00:00</video:publication_date>
     <video:description><![CDATA[Example video description]]></video:description>
-    <video:player_loc allow_embed=“yes”>https://www.youtube-nocookie.com/v/abc123</video:player_loc>			 
+    <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/v/abc123</video:player_loc>			 
     <video:thumbnail_loc>https://www.example.com/video-thumbnail.jpg</video:thumbnail_loc>
     <video:duration>98</video:duration>
     <video:view_count>367</video:view_count>
@@ -112,7 +112,7 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
     <video:tag>Example tag</video:tag>
     <video:tag>Another example tag</video:tag>
     <video:family_friendly>yes</video:family_friendly>
-    <video:uploader info=“https://www.example.com/example-profile-page”>Example Person</video:uploader>
+    <video:uploader info="https://www.example.com/example-profile-page">Example Person</video:uploader>
   </video:video>
 </url>
 {…}
@@ -138,7 +138,7 @@ Our [News SEO for WordPress plugin](https://yoast.com/wordpress/plugins/news-seo
 News sitemaps should only reference articles which were published or modified within the last 48 hours.
 The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<news:news>` container for each news article. E.g: 
 ``` xml
-<urlset xmlns=“http://www.sitemaps.org/schemas/sitemap/0.9” xmlns:news=“http://www.google.com/schemas/sitemap-news/0.9” xmlns:image=“http://www.google.com/schemas/sitemap-image/1.1”>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
   <loc>http://www.example.com/example-page/</loc>
   <news:news>
@@ -158,7 +158,7 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 </urlset>
 ```
 
-* publication.name is the *Site Title* (e.g., “Yoast”)
+* publication.name is the *Site Title* (e.g., "Yoast")
 * **(Optional)** publication.language is the language code of the article (in [ISO 639](http://www.loc.gov/standards/iso639-2/php/code_list.php) format)
 * publication_date is the date in [W3C format](https://www.w3.org/TR/NOTE-datetime) 
 * title is the post name of the article

@@ -14,7 +14,7 @@ It starts with a general specification, describing the functionality a Yoast SEO
 Some things need to work out of the box when the module is enabled.
 
 * The site needs to have pretty permalinks. System permalinks should refer to their human-readable equivalents through canonicals.
-* Every page needs to have a rel=“canonical” that defaults to its generated pretty URL. See [rel=canonical: the ultimate guide](https://yoast.com/rel-canonical/) on Yoast.com.
+* Every page needs to have a rel="canonical" that defaults to its generated pretty URL. See [rel=canonical: the ultimate guide](https://yoast.com/rel-canonical/) on Yoast.com.
 * The site needs to handle paginated content well. Paginated content should have `rel="next"` and/or `rel="prev"` tags. See [Google’s documentation on paginated content](https://support.google.com/webmasters/answer/1663744?hl=en).
 * Search results and archive pages that should be public should have meta robots tags `noindex, follow`.
 * Category pages which are paginated should index all pages in the series (previous advice suggested that only the first page should be indexed).
@@ -194,7 +194,7 @@ For an expansive guide on how we use Schema in our plugins, you can check out ou
 * Nice to have: there are a lot of modules that extend Magento’s basic CMS functionality. Some add custom fields to the content editing experience. It would be nice to integrate with the most used amongst these modules.
 * Products are not part of Magento’s CMS functionality. These are in fact built up out of a pretty much endless set of fields. To integrate the content analysis for product detail pages, the approach that was chosen is to create a template for analysis in which we load a standard set of fields in logical positions. The template is then fed to the content analysis and analyzed for SEO and readability.
 * Product category pages can be content only, product only (often with content widgets) or contain both content and a list of products. We should probably only integrate our content analysis for product category pages that contain content.
-* Every variant to a product can have its own page or only be visible through a product page of a configurable product (a product with many variants i.e. different sizes and colors) or a bundle. One could think of a red XL shirt which is a separate product but is only shown on the product page for “shirt” as a variant.
+* Every variant to a product can have its own page or only be visible through a product page of a configurable product (a product with many variants i.e. different sizes and colors) or a bundle. One could think of a red XL shirt which is a separate product but is only shown on the product page for "shirt" as a variant.
 * In case a product that is a variant to a configurable product does have its own page, should it canonicalize to the configurable product’s page?
 * It would probably be a good idea to add structured metadata for [Product](https://schema.org/Product). The idea is to only add properties that Google actually looks at. `offers` and `review` seem like good candidates. What else?
 * Magento is licensed under OSL. We should check if there are any compatibility issues with GPLv3 that might bite us.

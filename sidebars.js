@@ -55,44 +55,62 @@ module.exports = {
 						'features/schema/integration-guidelines',
 						'features/schema/api',
 						{
-							type: 'category',
-							label: 'Plugin output',
-							items: [
-								'features/schema/plugins/yoast-seo',
-								'features/schema/plugins/local-seo',
-								'features/schema/plugins/woocommerce-seo',
-								'features/schema/plugins/news-seo',
-								'features/schema/plugins/video-seo',
-							]
+							type: 'link',
+							label: 'Schema.org pieces',
+							href: '/docs/features/schema/pieces'
 						},
-
-						{
-							type: 'category',
-							label: 'Schema pieces',
-							items: [
-								'features/schema/pieces',
-								'features/schema/pieces/aggregateoffer',
-								'features/schema/pieces/article',
-								'features/schema/pieces/breadcrumb',
-								'features/schema/pieces/comment',
-								'features/schema/pieces/howto',
-								'features/schema/pieces/image',
-								'features/schema/pieces/localbusiness',
-								'features/schema/pieces/offer',
-								'features/schema/pieces/organization',
-								'features/schema/pieces/person',
-								'features/schema/pieces/postaladdress',
-								'features/schema/pieces/product',
-								'features/schema/pieces/question',
-								'features/schema/pieces/review',
-								'features/schema/pieces/searchaction',
-								'features/schema/pieces/video',
-								'features/schema/pieces/webpage',
-								'features/schema/pieces/website',
-							],
-						}
 					],
 				},
+			],
+		}
+	],
+	schemaPluginsSidebar: [
+		{
+			type: 'link',
+			label: '‹ Schema.org plugin output',
+			href: '/docs/features/schema/overview'
+		},
+		{
+			type: 'category',
+			label: 'Plugins',
+			items: [
+				'features/schema/plugins/yoast-seo',
+				'features/schema/plugins/local-seo',
+				'features/schema/plugins/woocommerce-seo',
+				'features/schema/plugins/news-seo',
+				'features/schema/plugins/video-seo',
+			]
+		},
+	],
+	schemaPiecesSidebar: [
+		{
+			type: 'link',
+			label: '‹ Schema.org pieces',
+			href: '/docs/features/schema/overview'
+		},
+		'features/schema/pieces',
+		{
+			type: 'category',
+			label: 'Schema pieces',
+			items: [
+				'features/schema/pieces/aggregateoffer',
+				'features/schema/pieces/article',
+				'features/schema/pieces/breadcrumb',
+				'features/schema/pieces/comment',
+				'features/schema/pieces/howto',
+				'features/schema/pieces/image',
+				'features/schema/pieces/localbusiness',
+				'features/schema/pieces/offer',
+				'features/schema/pieces/organization',
+				'features/schema/pieces/person',
+				'features/schema/pieces/postaladdress',
+				'features/schema/pieces/product',
+				'features/schema/pieces/question',
+				'features/schema/pieces/review',
+				'features/schema/pieces/searchaction',
+				'features/schema/pieces/video',
+				'features/schema/pieces/webpage',
+				'features/schema/pieces/website',
 			],
 		}
 	],

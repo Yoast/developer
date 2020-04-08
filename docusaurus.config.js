@@ -8,6 +8,7 @@ module.exports = {
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	themeConfig: {
 		disableDarkMode: true,
+		sidebarCollapsible: false,
 		navbar: {
 			title: 'Yoast Developer portal',
 			logo: {

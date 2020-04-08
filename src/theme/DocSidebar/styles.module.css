@@ -45,3 +45,14 @@
   line-height: 0.9;
   width: 24px;
 }
+
+.sidebarCategoryItem {
+  border-radius: 0.25rem;
+  color: var(--ifm-menu-color);
+  display: flex;
+  line-height: 20px;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: 0;
+  padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}

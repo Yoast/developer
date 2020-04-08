@@ -34,6 +34,17 @@ function DocSidebarItem({item, onItemClick, collapsible}) {
 
   switch (type) {
     case 'category':
+
+      const category = collapsible ? <a
+          className={classnames('menu__link', {
+            'menu__link--sublist': collapsible,
+            'menu__link--active': collapsible && !item.collapsed,
+          })}
+          href="#!"
+          onClick={collapsible ? handleItemClick : undefined}>
+        {label}
+      </a> : <span className={styles.sidebarCategoryItem}>{label}</span>;
+
       return (
         items.length > 0 && (
           <li
@@ -41,15 +52,9 @@ function DocSidebarItem({item, onItemClick, collapsible}) {
               'menu__list-item--collapsed': collapsed,
             })}
             key={label}>
-            <a
-              className={classnames('menu__link', {
-                'menu__link--sublist': collapsible,
-                'menu__link--active': collapsible && !item.collapsed,
-              })}
-              href="#!"
-              onClick={collapsible ? handleItemClick : undefined}>
-              {label}
-            </a>
+
+            {category}
+
             <ul className="menu__list">
               {items.map(childItem => (
                 <DocSidebarItem

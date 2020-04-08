@@ -1,7 +1,7 @@
 ---
 id: product-sheet
 title: Yoast SEO Product sheet
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/product-sheet.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/yoast-seo-product-sheet.md
 ---
 import YoastSchemaExample from '../../developer-site/src/components/YoastSchemaExample';
 

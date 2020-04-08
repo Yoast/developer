@@ -1,5 +1,5 @@
 ---
-id: product-sheet
+id: yoast-seo-product-sheet
 title: Yoast SEO Product sheet
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/yoast-seo-product-sheet.md
 ---

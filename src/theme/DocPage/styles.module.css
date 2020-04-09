@@ -18,6 +18,7 @@
   position: -webkit-sticky;
   max-height: 100vh;
   top: 0;
+  overflow-y: auto;
 }
 
 .docMainContainer {

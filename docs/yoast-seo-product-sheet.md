@@ -3,6 +3,7 @@ id: yoast-seo-product-sheet
 title: Yoast SEO Product sheet
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/yoast-seo-product-sheet.md
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
 import YoastSchemaExample from '../../developer-site/src/components/YoastSchemaExample';
 
 This document is a living document, describing the functionality of Yoast SEO for any platform. 
@@ -105,7 +106,21 @@ Optionally, we might also want to include a few options for setting the robots m
 
 #### Content & Readability analysis
 For content & readability analysis, we’ve built a tool called [YoastSEO.js](https://github.com/Yoast/javascript/tree/master/packages/yoastseo). It’s able to analyze content for a whole range of SEO, accessibility and readability checks.
+
+Example of the SEO & accessibility checks
+<img src={useBaseUrl( 'img/docs/seo-analysis.png' )} alt='Example of the SEO & accessibility checks' />
+
+Example of the readability checks
+<img src={useBaseUrl( 'img/docs/readability.png' )} alt='Example of the SEO & accessibility checks' />
+
 YoastSEO.js also contains a Google snippet editor which contains a preview of how the page will (probably) be displayed in Google desktop or mobile search and an editor in which users can edit the title, slug and meta description intuitively.
+
+Snippet editor (desktop)
+<img src={useBaseUrl( 'img/docs/desktop-preview.png' )} alt='Snippet editor (desktop)' />
+
+Snippet editor (mobile)
+<img src={useBaseUrl( 'img/docs/mobile-preview.png' )} alt='Snippet editor (mobile)' />
+
 These UI elements should be integrated into the content editing experience and should update in a real-time or semi-realtime manner. For inspiration, implementors are recommended to take a look at how these elements are integrated into [Yoast SEO for WordPress](https://wordpress.org/plugins/wordpress-seo/).
 
 ### Structured metadata

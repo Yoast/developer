@@ -14,7 +14,7 @@ const Logo = () => {
 	const logoFile = useBaseUrl( "/img/yoast-logo.svg" );
 
 	return (
-		<a href={useBaseUrl('/overview')} className={styles.logo}>
+		<a href={useBaseUrl('/')} className={styles.logo}>
 			<img src={logoFile} alt="" className={styles.logo__image} />
 		</a>
 

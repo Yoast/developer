@@ -7,7 +7,6 @@
 
 module.exports = {
 	mainSidebar: [
-		'overview',
 		{
 			type: 'category',
 			label: 'Features',

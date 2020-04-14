@@ -13,7 +13,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `postalAddress` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/address/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The site's home URL appended by `#/schema/address/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `streetAddress`: The building number and street (e.g., *123 fake road* ).
 * `postalCode`: The postal code.
 * `addressCountry`: The two-digit country-code representing the country (e.g., *US* ).

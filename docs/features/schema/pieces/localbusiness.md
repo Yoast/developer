@@ -5,7 +5,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-Describes a business which allows public visitation. Typically used to represent the business ‘behind’ the website, or on a page about a specific business.
+Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 
 May be transformed into a more specific type (such as `library` ), or extend an existing `Organization` if the required conditions are met.
 
@@ -18,13 +18,13 @@ May be transformed into a more specific type (such as `library` ), or extend an 
 A valid `LocalBusiness` must have the following properties.
 
 * `@type`: Should always be an array of  `Organization`,  `Place`, and the most specific sub-type selected (e.g.,  `['Organization','Place','Dentist']` ).
-* `ID`: The site’s home URL appended by `#/schema/organization/{{ID}}`, where  `{{ID}}`  is a unique identifier (e.g., the *Post ID* ).
+* `ID`: The site's home URL appended by `#/schema/organization/{{ID}}`, where  `{{ID}}`  is a unique identifier (e.g., the *Post ID* ).
 * `name`: The name of the business.
 * `image`: A reference-by-ID to an `imageObject` which represents the business.
 * `address`: A reference-by-ID to an `PostalAddress` piece.
 
 ### Failure scenarios
-If any of the required fields are missing or invalid, the node should fall back to a normal `Organization` (removing any ‘local’ `@type` values), whilst retaining any optional properties from below.
+If any of the required fields are missing or invalid, the node should fall back to a normal `Organization` (removing any 'local' `@type` values), whilst retaining any optional properties from below.
 
 ## Optional properties
 The following should be added whenever available and valid:

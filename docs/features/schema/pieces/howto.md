@@ -18,7 +18,7 @@ A valid `HowTo` must have the following properties.
 * `name`: A string describing the guide.
 * `step`: An array of `howToStep` objects, with the following properties:
 	* `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/howtostep/{{ID}}`, where `{{ID}}` is a unique identifier.
-	* `url`: A link to a fragment identifier (an ‘ID anchor’) of the individual `howToStep` (e.g., `https://www.example.com/example-page/#howtostep-5` ).
+	* `url`: A link to a fragment identifier (an 'ID anchor') of the individual `howToStep` (e.g., `https://www.example.com/example-page/#howtostep-5` ).
 	* Either a `name` or `text` property (see *Conditional scenarios* ).
 
 ## Failure scenarios

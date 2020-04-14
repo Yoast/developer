@@ -10,14 +10,14 @@ Describes an article on a page. Connects to `WebPage` (and in turn, the `WebSite
 May be transformed into a more specific type (such as  `NewsArticle` ) if the required conditions are met. 
 
 ## Triggers
-Should only be output on explicitly ‘authored’ pages. In the case of a standard WordPress setup, this is limited to native *Posts*.
+Should only be output on explicitly 'authored' pages. In the case of a standard WordPress setup, this is limited to native *Posts*.
 
 ## Required properties
 A valid `Article` must have the following properties.
 
 * `@id`: The unmodified *canonical URL* of the parent `WebPage`, appended by `#/schema/article/{{ID}}`, where `{{ID}}` is a unique identifier for the article in question.
 * `headline`: The headline of the article (falling back to the *title* of the `WebPage` ).
-* `description`: A summary of the article (falling back to the page’s meta description content).
+* `description`: A summary of the article (falling back to the page's meta description content).
 * `isPartOf`: A reference-by-ID to the `WebPage` node.
 * `mainEntityOfPage`: A reference-by-ID to the `WebPage` node.
 * `datePublished`: The time at which the article was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
@@ -38,7 +38,7 @@ If the node is not output, the parent `WebPage` node should be altered to refere
 * `commentCount`
 
 #### Missing images
-If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they’re valid candidates (in the following order of precedence):
+If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they're valid candidates (in the following order of precedence):
 
 * The image used in the `primaryImageOfPage` property of the parent `WebPage`.
 * The first image in the `image` array attached to the parent `WebPage`.

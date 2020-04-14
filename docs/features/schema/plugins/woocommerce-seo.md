@@ -7,7 +7,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 
 ## Core functionality
 ### On all pages
-* Remove WooCommerce’s breadcrumb schema.
+* Remove WooCommerce's breadcrumb schema.
 
 ### On product pages
 * Change the `@type` of the `WebPage` piece into `ItemPage`.

@@ -5,11 +5,11 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plugins/local-seo/) builds upon [Yoast SEO for WordPress’ base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
+The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plugins/local-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
 
 ## Core logic
 ### When a Primary Location is defined
-* Merge properties from the business’ *Primary Location* into the main `Organization` (i.e., the one in the *base script* ) to attempt to extend it into a `LocalBusiness`.
+* Merge properties from the business' *Primary Location* into the main `Organization` (i.e., the one in the *base script* ) to attempt to extend it into a `LocalBusiness`.
 
 ### When a Primary Location is not defined
 * Add any shared/default Location properties (such as `email`, `VAT`, `priceRange` ) to the main `Organization`.

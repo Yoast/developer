@@ -15,10 +15,10 @@ Should be output on all public pages.
 ## Required properties
 A valid `Organization` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/organization/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the `organization` ).
+* `@id`: The site's home URL appended by `#/schema/organization/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the `organization` ).
 	* If the `organization` is the publisher of the `WebSite` (i.e., the "*primary organization*", or "*this organization*"), then the value of `{{ID}}` should be `1`.
-* `logo`: A reference-by-ID to an `image` of the organization’s logo.
-* `URL:` The site’s home URL.
+* `logo`: A reference-by-ID to an `image` of the organization's logo.
+* `URL:` The site's home URL.
 * `name`: The name of the `Organization`.
 
 ### Failure scenarios
@@ -35,7 +35,7 @@ The following should be added whenever available and valid:
 ## Transformations
 The  `Organization` type may be transformed in the following scenarios.
 
-### When the business is ‘local’
+### When the business is 'local'
 * When location information is available, the `Organization` may be eligible for extension into a [LocalBusiness](localbusiness.md) type.
 
 ## Examples

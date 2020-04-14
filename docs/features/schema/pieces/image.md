@@ -15,7 +15,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `ImageObject` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/image/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the image object).
+* `@id`: The site's home URL appended by `#/schema/image/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the image object).
 * `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg` ).
 
 ## Failure scenarios

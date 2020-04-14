@@ -13,9 +13,9 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `VideoObject` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/video/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The site's home URL appended by `#/schema/video/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The title of the video.
-* `description`: A description of the video (falling back to the `caption`, then to ‘No description’).
+* `description`: A description of the video (falling back to the `caption`, then to 'No description').
 * `thumbnailUrl`: A reference-by-ID to an `imageObject`.
 * `uploadDate`: The date the video was published, in ISO 8601 format.
 
@@ -33,7 +33,7 @@ The following should be added whenever available and valid:
 * `duration`: The duration of the video in ISO 8601 format.
 * `width`: The width of the video in pixels.
 * `height`: The height of the video in pixels.
-* `isFamilyFriendly`: Whether the video should be considered ‘family friendly’, default to ‘yes’, may be set to ‘no’.
+* `isFamilyFriendly`: Whether the video should be considered 'family friendly', default to 'yes', may be set to 'no'.
 * `inLanguage`: The language code for the content of the video; e.g., `en-GB`.
 
 ## Conditional properties

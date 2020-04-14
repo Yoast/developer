@@ -13,9 +13,9 @@ Describes an group of offers for a `Product`, typically due to variations in att
 ## Required properties
 A valid `AggregateOffer` must have the following properties.
 
-* `ID`: The site’s home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `lowPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
-* `highPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
+* `ID`: The site's home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `lowPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
+* `highPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
 * `offerCount`: The number of offers in the group
 * `offers`: An array of `Offer` pieces, referenced by ID.

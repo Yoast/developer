@@ -14,7 +14,7 @@ Every page should (attempt to) output the following [pieces](../pieces.md):
 * [WebSite](../pieces/website.md)
 * [WebPage](../pieces/webpage.md)
 
-This produces a ‘base script’, which will typically looks something like the following (a composite of the above *pieces* ):
+This produces a 'base script', which will typically looks something like the following (a composite of the above *pieces* ):
 
 <YoastSchemaExample>
 {`{

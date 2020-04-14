@@ -14,7 +14,7 @@ Describes a product sold by a business.
 ## Required properties
 A valid `Product` must have the following properties.
 
-* `@id`: The site’s home URL appended by `#/schema/product/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The site's home URL appended by `#/schema/product/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The name of the product.
 * `image`: A reference-by-ID to one or more `imageObject` s which represent the product.
 

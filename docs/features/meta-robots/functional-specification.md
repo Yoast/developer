@@ -16,7 +16,7 @@ Given that a meta robots tag may have multiple (potentially conflicting) values,
 An up-to-date list of all possible meta robots values and their relationships is maintained [here](https://yoast.com/robots-meta-tags/) .
 
 ### Conditions
-#### Noindex’ing by content type
+#### Noindex'ing by content type
 Any page, post or archive type which the user has determined should *not*appear in search results (e.g., via our Search Appearance settings) should return noindex and follow properties.
 
 #### Custom controls per-post/page

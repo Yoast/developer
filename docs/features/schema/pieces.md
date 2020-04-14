@@ -3,7 +3,7 @@ id: pieces
 title: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/pieces.md
 ---
-In Yoast SEO, we refer to individual nodes in our graph as ‘pieces’. This page acts as an index for our documentation on the characteristics and behaviour of each piece we output or manage.
+In Yoast SEO, we refer to individual nodes in our graph as 'pieces'. This page acts as an index for our documentation on the characteristics and behaviour of each piece we output or manage.
 
 This documentation is a work in progress.
 

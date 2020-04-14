@@ -123,7 +123,7 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
 * description is the caption of the video, falling back to any available description of the video, falling back the URL of the video (e.g., the public YouTube URL of a video) 
 * player_loc is a URL pointing to the video player 
 * thumbnail_loc is the URL of a video thumbnail image 
-* **(Optional)** publication date is the timestamp at which the video was ‘published’ (alternatively, *uploaded*)
+* **(Optional)** publication date is the timestamp at which the video was 'published' (alternatively, *uploaded*)
 * **(Optional)** duration is the duration in seconds
 * **(Optional)** view_count is the number of views
 * **(Optional)** width and height are the dimensions of the embedded video in pixels

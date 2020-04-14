@@ -31,8 +31,8 @@ to remove some, or better yet, add your own. To do this you should use the `wpse
 Each of our graph pieces extends a `Abstract_Schema_Piece` abstract class. This `Abstract_Schema_Piece` is an abstract, 
 and not an interface, because it has two public properties: `$context` and `$helpers`. These are filled magically and can be 
 used to obtain important data. A good example of that can be found in our 
-[example use case](integration-guidelines.md#an-example-use-case) , and deeper examples can be found 
-[here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php) .
+[example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found 
+[here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php).
 
 ## Referencing other graph pieces
 

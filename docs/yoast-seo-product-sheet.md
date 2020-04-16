@@ -3,7 +3,7 @@ id: yoast-seo-product-sheet
 title: Yoast SEO Product sheet
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/yoast-seo-product-sheet.md
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import YoastSchemaExample from '../../developer-site/src/components/YoastSchemaExample';
 
 This document is a living document, describing the functionality of Yoast SEO for any platform. 

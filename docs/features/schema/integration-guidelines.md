@@ -3,12 +3,17 @@ id: integration-guidelines
 title: Integration guidelines
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
 ---
+import Alert from '../../../../developer-site/src/components/Alert';
 
-## NOTICE
+<Alert>
 
 The release of [Yoast SEO 14.0](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/) in April 2020 brings significant changes to how our Schema API and integration mechanics work. This document reflects our API *after* that release.
+</Alert>
+
+<Alert>
 
 This page will be updated with up-do-date information in the near future. If you have any questions, or want to get a head start, you can find our release announcements and technical documentation [here](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/).
+</Alert>
 
 ## Introduction
 

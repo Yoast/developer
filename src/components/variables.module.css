@@ -1,0 +1,16 @@
+:root {
+    --color-border: rgba(0,0,0, 0.2);
+
+    /* Alert styles */
+    --color-success--text: #395315;
+    --color-success--bg: #e2f2cc;
+
+    --color-error--text: #8f1919;
+    --color-error--bg: #f9dcdc;
+
+    --color-warning--text: #674e00;
+    --color-warning--bg: #fff3cd;
+
+    --color-info--text: #00468f;
+    --color-info--bg: #cce5ff;
+}

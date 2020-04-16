@@ -20,3 +20,12 @@ This is an alert!
 ```
 
 **Please note:** There is an extra line-break after the opening tag. This is, due to a quirk in MDX, necessary if you plan on using Markdown syntax within the component.
+
+### Supported types
+
+Currently, the component supports the following types, which can be passed along by defining the `type` property on the component:
+
+* `info` - Shows a blue alert, used for informing readers about important changes etc. (Default)
+* `success` - Shows a green alert, used for informing readers about something positive / good.
+* `error` - Shows a red alert, used for informing readers about bad practices, common mistakes etc.
+* `warning` - Shows a yellow alert, used for informing readers about upcoming changes etc.

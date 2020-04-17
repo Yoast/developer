@@ -20,31 +20,7 @@ Generally speaking, we advise people to create a `Yoast` folder in their `Docume
 
 **Note: The first option is preferable, as there's a lower chance of messing things up.**
 
-In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the VVV directory and navigate to `<your VVV directory>/www/wordpress-default/public_html/wp-content/plugins` where you can clone the various plugin repositories.
-
-## Setting up PHPUnit
-
-### Making it work with WordPress
-
-When developing, it's also necessary that you add and run tests before submitting a PR. To be able to do this, we use PHPUnit to create and run tests. Before being able to run PHPUnit, you'll have to configure a few things.
-
-First, you should edit your local `.zshrc` configuration file (via `vim ~/.zshrx` or a similar editor) and add the following lines:
-
-    export WP_PLUGIN_DIR="/dir/to/plugin/directory"
-    export WP_DEVELOP_DIR="/dir/to/wp/develop/directory"
-
-For example:
-
-    "/your-VVV-directory/wordpress-default/public_html/wp-content/plugins"
-    "/your-VVV-directory/wordpress-develop/public_html/"
-
-**Note: Make sure to reload your terminal once you've added the above lines.**
-
-The `WP_DEVELOP_DIR` (`wordpress-develop`) should point to a `trunk` build of WordPress. In the older VVV instances this defaulted to `wordpress-develop`, in the newer this is `wordpress-trunk`. If afterwards you get an error in PhpStorm saying you can not connect, the test database needs to be set up.
-
-*   The sample configuration is located in `wordpress-trunk/public_html/wp-tests-config-sample.php`. Copy the sample to `wp-tests-config.php`.
-*   Fill in the configuration with valid data. Create the database manually, if needed (you can use Sequel Pro or PHPMyAdmin). _Mind the `$table_prefix` variable in the configuration here. By default it is set to `wptests_`_
-*   **Important:** Ensure that the `DB_HOST` points to the Vagrant box URL `vvv.test` since this is run from your local machine (in PhpStorm), not from the Vagrant box itself.
+In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the Docker directory and navigate to `<your docker directory>/plugins` where you can clone the various plugin repositories.
 
 ### Enabling PHPUnit in PhpStorm
 
@@ -66,7 +42,7 @@ Some of our plugins contain tests that are only run on multisite. To run those t
 
 All the following directories are relative to the directory in which you have installed Vagrant.
 
-To have the complete set of Yoast plugins, clone the following repositories in your: `./www/wordpress-default/public_html/wp-content/plugins/` folder.
+To have the complete set of Yoast plugins, clone the following repositories in your: `<your docker directory/plugins/` folder.
 
 Yoast SEO with the addons:
 
@@ -78,7 +54,7 @@ For each of these add-ons, run `composer install` and `yarn` in the respective d
 
 Additional plugins:
 
-*   [https://github.com/Yoast/yoast-plugin-toggler](https://github.com/Yoast/yoast-plugin-toggler) - Switch between Yoast SEO Free and Premium
+*   [https://wordpress.org/plugins/yoast-test-helper/](https://wordpress.org/plugins/yoast-test-helper/) - Makes testing Yoast SEO, Yoast SEO add-ons and integrations and resetting the different features a lot easier.
 *   [https://github.com/Yoast/yoast-acf-analysis](https://github.com/Yoast/yoast-acf-analysis) - Provide compatiblity with [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 *   [https://github.com/Yoast/yoastseo-amp](https://github.com/Yoast/yoastseo-amp) - Provide additional functionality for The [AMP plugin](https://nl.wordpress.org/plugins/amp/)
 
@@ -88,14 +64,8 @@ All our publicly accessible repositories can be [found on GitHub](https://github
 
 If you're developing within the JavaScript code that is part of the plugin, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using [linking](https://yarnpkg.com/lang/en/docs/cli/link/) in Yarn.
 
-Follow these steps to link YoastSEO.js to your WordPress environment:
-
-*   Check out the branch you want to link in the yoastseo.js folder
-*   Run `yarn install` in the yoastseo.js folder
-*   Run `yarn link` in the yoastseo.js folder (once, but more can't hurt, to register the repository as linkable to Yarn)
-*   Run `yarn link yoastseo` in the wordpress-seo directory in `/your-VVV-directory/www/wordpress-default/public_html/wp-content/plugins/wordpress-seo`
-*   Run `yarn install` and `grunt build:js` in the wordpress-seo folder.
+Due to how we've structured our JavaScript code into a monorepo, we've created [a separate page](https://github.com/Yoast/javascript) that includes all the information you'll need to get things up and running.
 
 ## Now what?
 
-After you've cloned the repositories, you can navigate to `local.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!
+After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

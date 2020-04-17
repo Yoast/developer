@@ -49,28 +49,9 @@ Documentation on how to configure your local Git setup and how to add your SSH k
 
 [Add a global git ignore file](version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
 
-### VVV
+### Docker
 
-VVV is a development setup specifically created for developing WordPress websites on your local machine. VVV is built on top of Vagrant and makes use of virtual machines to ensure you end up with the same basic setup as others contributing to the project.
-
-To get VVV up and running, you need the following three pieces of software before cloning the VVV GitHub repository:
-
-*   [VirtualBox](https://www.virtualbox.org/wiki/Downloads) ( run `brew cask install virtualbox` ) In case of an error during installation: check if Oracle has permission in System Preferences → Security & Privacy → General
-*   [Vagrant](http://www.vagrantup.com/downloads.html) ( run `brew cask install vagrant` )
-*   [Vagrant Hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) ( run `vagrant plugin install vagrant-hostsupdater` )
-
-To allow vagrant to automatically update the hosts file without asking for a sudo password, add the following snippet to a new sudoers file include, i.e. `sudo visudo -f /etc/sudoers.d/vagrant_hostsupdater`:
-
-    # Allow passwordless startup of Vagrant with vagrant-hostsupdater.
-    Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
-    Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
-    %admin ALL=(root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE
-
-**Note: the above snippet uses vi. If you don't know how to exit vi, you should first exit insert mode ( see `INSERT` in the bottom left corner ) by pressing `esc` and then type `:wq` to save and exit or `:q!` to exit without saving.**
-
-After you've installed bot VirtualBox and Vagrant, you can clone the VVV repository by navigating to the desired directory via the command line and run `git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git` . This will automatically create a VVV directory in the current directory and will default to the master branch. Once this has completed, navigate to the VVV direcotry and run `vagrant up` to start provisioning the virtual machine.
-
-For more information see the [VVV installation guide](https://varyingvagrantvagrants.org/docs/en-US/installation/).
+At Yoast, we make use of [Docker](https://docker.com) as the foundation for our development setup. To get developers up and running faster, we created [our own development setup](https://github.com/Yoast/plugin-development-docker), based on Docker, that you can freely use.
 
 ### Sequel Pro
 
@@ -147,4 +128,6 @@ yarn global add grunt-cli
 
 After this has been installed, you can run various commands in your project's directory to deal with various tasks. A command that is usually used is `grunt watch`. This command will watch for changes in directories and run a set of predefined commands over the source code to ensure it's properly outputted.
 
-Please make sure you check out the Grunt directory and especially the `aliases.yml` file to see what commands are available.
+As our repositories use a lot of similar tasks, we ended up [creating a repository](https://github.com/Yoast/plugin-grunt-tasks) to bring these similar tasks together. 
+
+Please make sure you also check out the Grunt directory and especially the `aliases.yml` file to see what commands are available.

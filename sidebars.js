@@ -61,7 +61,21 @@ module.exports = {
 					],
 				},
 			],
-		}
+		},
+		{
+			type: 'category',
+			label: 'Standards',
+			items: [
+				'standards/overview',
+				'standards/development-tools',
+				'standards/development-setup',
+				'standards/running-unit-tests-code-style-checks-and-linters',
+				'standards/coding-guidelines-and-principles',
+				'standards/version-control-conventions',
+				'standards/productivity-tips-and-tricks',
+				'standards/cheatsheets',
+			]
+		},
 	],
 	schemaPluginsSidebar: [
 		{

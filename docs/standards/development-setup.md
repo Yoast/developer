@@ -40,8 +40,6 @@ Some of our plugins contain tests that are only run on multisite. To run those t
 
 ## Installing the plugins
 
-All the following directories are relative to the directory in which you have installed Vagrant.
-
 To have the complete set of Yoast plugins, clone the following repositories in your: `<your docker directory/plugins/` folder.
 
 Yoast SEO with the addons:

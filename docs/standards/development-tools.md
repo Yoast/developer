@@ -57,11 +57,7 @@ At Yoast, we make use of [Docker](https://docker.com) as the foundation for our 
 
 To manage and search your database in an easy and quick way, Sequel Pro is the tool to use. You can download the latest version from: [https://www.sequelpro.com/](https://www.sequelpro.com/)
 
-After installation, start up Sequel Pro and add a new connection with the following configuration settings:
-
-<figure class="wp-block-image">![sequel_pro](https://user-images.githubusercontent.com/35524806/56283625-9c3c1680-6112-11e9-84cf-cd80c369e008.png)</figure>
-
-_The default password for VVV is `root`_
+To find out how to connect to the Docker database, [check out the instructions](https://github.com/Yoast/plugin-development-docker#connecting-to-the-database) on the Plugin Development Docker repository.
 
 ### xgettext
 

@@ -66,15 +66,3 @@ So to get your SSH key into GitHub you could use the following command, `cat ~/.
 
 * Increase `sudo` timeout: 
   Add this to your `/etc/sudoers` file: ```Defaults timestamp_timeout=15```
-* Allow Vagrant startup without needing password:
-  * Create a new file `/etc/sudoers.d/vagrant_hostsupdater` and add the following in it:
-    ```# Allow passwordless startup of Vagrant with vagrant-hostsupdater.
-    Cmnd_Alias VAGRANT_HOSTS_ADD = /bin/sh -c echo "*" >> /etc/hosts
-    Cmnd_Alias VAGRANT_HOSTS_REMOVE = /usr/bin/sed -i -e /*/ d /etc/hosts
-    %admin ALL=(root) NOPASSWD: VAGRANT_HOSTS_ADD, VAGRANT_HOSTS_REMOVE%
-* If you'd rather not allow that, you can also opt for making sudo work with your MBP's touch ID:
-  * Edit `/etc/pam.d/sudo`, making this the 2nd line of the file:
-    ```
-    auth sufficient pam_tid.so
-    ```
-* To verify that your changes are OK and your sudoers config is still valid, run `sudo visudo -c`.

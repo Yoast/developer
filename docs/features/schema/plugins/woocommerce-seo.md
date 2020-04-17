@@ -13,16 +13,10 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 * Change the `@type` of the `WebPage` piece into `ItemPage`.
 * Alter the `Product` piece.
 	* Apply our validation logic to each existing WooCommerce *piece* /value.
+    * Add a `mainEntityOfPage` property to the `Product`, referencing the `WebPage` by ID.
 	* Set the `brand` and `manufacturer` properties, based on taxonomy settings.
 	* Set the `seller` to the `Organization` (or `Person` ) which is set as the `Publisher` of the `WebSite`.
-* Add a `mainEntityOfPage` property to the `Product`, referencing the `WebPage` by ID.
-
-### On product listing pages
-* Add a `@type` value of `CollectionPage` to the `WebPage`.
-* Add a `Product` piece for each product returned by the query.
-* Add an `itemList` piece which references each of those products by ID.
-* Add a `mainEntityOfPage` property to the `itemList` which references the `WebPage`.
+    * Stitch `offers`, `review` and/or `aggregateRating` values into the graph (when available / as appropriate).
 
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.
-

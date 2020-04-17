@@ -1,0 +1,73 @@
+@import './../variables.module.css';
+
+.alert {
+    line-height: 1.5;
+}
+
+/* Component */
+.alert {
+    display: flex;
+    position: relative;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 24px;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert a {
+    color: #004973;
+    text-decoration: underline;
+}
+
+.alert__icon {
+    margin-top: 2px;
+    margin-right: 8px;
+}
+
+.alert__icon svg {
+    width: auto;
+    height: 16px;
+}
+
+.alert__content {
+    max-width: 600px;
+}
+
+.alert--success {
+    color: var(--color-success--text);
+    background: var(--color-success--bg);
+}
+
+.alert--success__icon {
+    fill: var(--color-success--text);
+}
+
+.alert--error {
+    color: var(--color-error--text);
+    background: var(--color-error--bg);
+}
+
+.alert--error__icon {
+    fill: var(--color-error--text);
+}
+
+.alert--warning {
+    color: var(--color-warning--text);
+    background: var(--color-warning--bg);
+}
+
+.alert--warning__icon {
+    fill: var(--color-warning--text);
+}
+
+.alert--info {
+    color: var(--color-info--text);
+    background: var(--color-info--bg);
+}
+
+.alert--info__icon {
+    fill: var(--color-info--text);
+}

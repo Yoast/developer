@@ -3,10 +3,12 @@ id: api
 title: API documentation
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/api.md
 ---
+import Alert from '../../../../developer-site/src/components/Alert';
 
-## NOTICE
+<Alert>
 
 The release of [Yoast SEO 14.0](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/) in April 2020 brings significant changes to how our Schema API and integration mechanics work. This document reflects our API *after* that release.
+</Alert>
 
 ## Making Schema easier to debug
 If you're working on Schema, it can be rather hard to read. To change that, you should toggle the `yoast_seo_development_mode` filter to `true`. At that point all the Schema that Yoast SEO outputs will be pretty printed. 

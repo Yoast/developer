@@ -2,6 +2,7 @@
 id: yoast-seo
 title: Schema output for Yoast SEO
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo.md
+description: This page documents the schema.org markup output by the Yoast SEO plugin.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

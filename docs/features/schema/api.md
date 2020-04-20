@@ -2,6 +2,7 @@
 id: api
 title: API documentation
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/api.md
+description: Using the Yoast SEO Schema API you can filter the Schema output from Yoast SEO to fix your exact needs. 
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 

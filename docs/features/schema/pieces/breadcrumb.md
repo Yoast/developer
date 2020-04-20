@@ -2,6 +2,7 @@
 id: breadcrumb
 title: Schema piece - Breadcrumb
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/breadcrumb.md
+description: Describes a BreadcrumbList of a WebPage in relation to its hierarchical position within a WebSite. 
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

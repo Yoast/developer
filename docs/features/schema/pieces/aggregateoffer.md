@@ -2,6 +2,7 @@
 id: aggregateoffer
 title: Schema piece - AggregateOffer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/aggregateoffer.md
+description: Describes an group of offers for a Product, typically due to variations in attributes (colors, sizes, prices). 
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

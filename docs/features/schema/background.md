@@ -2,10 +2,11 @@
 id: background
 title: Background information
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/background.md
+description: This page provides information about our approach, rationale, and considerations. It describes the key underlying principles, design decisions, and methodologies.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
 
-This section provides information about our approach, rationale, and considerations. It describes the key underlying principles, design decisions, and methodologies.
+This page provides information about our approach, rationale, and considerations. It describes the key underlying principles, design decisions, and methodologies.
 
 ## Understanding the role of structured markup
 Structured markup allows search engines, users and systems to understand the content, context and relationship of entities. It adds meta information about the properties of *things* on web pages and their relationship, which may not be immediately available or easy to parse from the 'human' version of the page.

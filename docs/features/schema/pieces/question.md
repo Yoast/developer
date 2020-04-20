@@ -2,6 +2,7 @@
 id: question
 title: Schema piece - Question
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/question.md
+description: Describes a Question. Most commonly used in FAQPage or QAPage content.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

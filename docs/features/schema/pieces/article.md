@@ -2,6 +2,7 @@
 id: article
 title: Schema piece - Article
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/article.md
+description: Describes an article on a page. Connects to WebPage (and in turn, the WebSite and Organization). May be transformed into a more specific type (such as NewsArticle) if the required conditions are met. Triggers Should only be output on explicitly 'authored' pages. In the case of a standard WordPress setup, this is limited to native Posts. 
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

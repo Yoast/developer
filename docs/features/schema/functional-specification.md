@@ -1,7 +1,8 @@
 ---
 id: functional-specification
 title: Functional specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/functional-specification.md
+description: An overview of how (and why) we construct scalable, interoperable schema.org markup. For developers, plugin authors, and data geeks!
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 

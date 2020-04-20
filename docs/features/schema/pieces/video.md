@@ -2,6 +2,7 @@
 id: video
 title: Schema piece - VideoObject
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/video.md
+description: Describes an individual video (usually in the context of an embedded media object).
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

@@ -2,6 +2,7 @@
 id: searchaction
 title: Schema piece - SearchAction
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/searchaction.md
+description: Describes a SearchAction on a website.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

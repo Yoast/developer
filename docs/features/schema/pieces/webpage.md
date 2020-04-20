@@ -2,6 +2,7 @@
 id: webpage
 title: Schema piece - WebPage
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/webpage.md
+description: Describes a single page on a website. Acts as a container for sub-page elements (such as Article). Acts as a connector from a page's content to the parent WebSite (and in turn, to the Organization). May be transformed into a more specific type (such as FAQPage) if the required conditions are met.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

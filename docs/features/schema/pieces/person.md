@@ -2,6 +2,7 @@
 id: person
 title: Schema piece - Person
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/person.md
+description: Describes an individual person. Most commonly used to identify the author of a piece of content (such as an Article or Comment). May also identify the publisher of a WebSite (or other content) in some cases.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

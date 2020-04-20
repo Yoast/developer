@@ -1,7 +1,8 @@
 ---
 id: integration-guidelines
 title: Integration guidelines
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/integration-guidelines.md
+description: Want to integrate your plugin or theme's structured data into our rich, comprehensive JSON-LD graph? Just follow these guidelines!
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 

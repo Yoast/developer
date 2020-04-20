@@ -2,6 +2,7 @@
 id: product
 title: Schema piece - Product
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/product.md
+description: Describes a product sold by a business.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

@@ -2,6 +2,7 @@
 id: postaladdress
 title: Schema piece - PostalAddress
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/postaladdress.md
+description: Describes the postal address of a place; usually in the context of a LocalBusiness.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

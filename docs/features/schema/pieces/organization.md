@@ -2,6 +2,7 @@
 id: organization
 title: Schema piece - Organization
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/organization.md
+description: Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a WebSite. May be transformed into a more specific type (such as Corporation or LocalBusiness) if the required conditions are met.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

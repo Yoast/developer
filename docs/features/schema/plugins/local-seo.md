@@ -2,6 +2,7 @@
 id: local-seo
 title: Schema output for Local SEO for WordPress
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/local-seo.md
+description: The schema output for Local SEO for WordPress builds upon Yoast SEO for WordPress' base schema output, to add additional local business detail (such as addresses and opening hours).
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

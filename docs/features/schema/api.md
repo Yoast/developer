@@ -19,6 +19,8 @@ add_filter( 'yoast_seo_development_mode', '__return_true' );
 
 Note: it is _not_ recommended to leave this on in production.
 
+If you're looking for a more convenient way of debugging Schema, try our [our Yoast Test Helper plugin](https://wordpress.org/plugins/yoast-test-helper/) which allows you to debug more easily.
+
 ## To disable Schema entirely
 If you return false or an empty array on the `wpseo_json_ld_output` filter, you disable all Yoast SEO's schema output.
 

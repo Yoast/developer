@@ -45,6 +45,17 @@ module.exports = {
 
 				{
 					type: 'category',
+					label: 'Meta tags',
+					items: [
+						'features/meta-tags/overview',
+						'features/meta-tags/functional-specification',
+						'features/meta-tags/extensions-and-addons',
+						'features/meta-tags/api',
+					],
+				},
+
+				{
+					type: 'category',
 					label: 'Schema.org markup',
 					items: [
 						'features/schema/overview',

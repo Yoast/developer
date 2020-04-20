@@ -41,14 +41,8 @@ Sometimes the unit tests will run on a different PHP version than the one used f
 To fix this, under `Edit Configurations...` -> `Command line` -> `Interpreter`, you can specify an interpreter. However, running with code coverage always uses the `<Default project interpreter>`, even when you have specified another interpreter. In case you get fatal errors when running with code coverage, take a look at the default project interpreter (`Preferences` -> `Languages & Frameworks` -> `PHP`) and ensure that this one is also properly configured.
 
 ### Integration tests
-When running integration tests, there are two approaches that we use: One we consider the 'old' way of things for tests that haven't fully been rewritten in Brainmonkey and the other is used for running tests that have been written in Brainmonkey.
 
-To run the 'old' integration tests, use the following command in your terminal:
-* `composer integration-test`
-
-If you want to run the Brainmonkey tests, use the following command in your terminal
-* `composer global require phpunit/phpunit:5.7` (This is only required the very first time you want to run the Brainmonkey tests)
-* `composer test`
+If you're interested in getting integration tests up and running, make sure to check out our guide on [Setting up integration tests for the plugins](setting-up-integration-tests-for-the-plugins.md).
 
 #### Other plugins
 Most of our other plugins also contain a variety of tests, written to check the PHP code. To run these tests, use the following command in your terminal:

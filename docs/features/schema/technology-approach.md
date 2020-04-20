@@ -2,7 +2,7 @@
 id: technology-approach
 title: Technology and approach
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/technology-approach.md
-description: This page documents the preferred technilogical approaches when implementing schema.org standards.
+description: This page documents the preferred technological approaches when implementing schema.org standards.
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 

@@ -116,7 +116,7 @@ class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
 
 And that is all, now this code will be output on your team member post type!
 
-Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/). Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
+Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) of version 14.0 or higher. Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
 
 ## "My plugin/theme already outputs schema markup"
 

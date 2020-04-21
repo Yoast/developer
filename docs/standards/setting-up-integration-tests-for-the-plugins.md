@@ -61,7 +61,7 @@ WP_PLUGIN_DIR=/Users/andy/Documents/Development/plugin-development-docker/plugin
 Note the trailing slash in `WP_DEVELOP_DIR` and the absence of it in `WP_PLUGIN_DIR`.
 </Alert>
 
-## Setup PHPUnit
+## Set up PHPUnit
 
 <Alert>
 

@@ -17,9 +17,9 @@ JSON-LD provides the flexibility, scalability, and standardization we require to
 JSON-LD allows properties to reference other pieces by their *ID*. For example, a *product page* needn't include (or repeat) all of the markup for the *organization* which sells that product, if it can just reference the ID of a piece which represents that *organization*.
 In theory, this allows us to avoid having to duplicate or repeat shared properties, and to reduce the amount of code/processing/overhead required to represent a page's content.
 
-Unfortunately, the level of  *cross-page* support for this technique is limited - Google's documentation is vague, and there's ambiguity around the relationship between IDs and URIs (anecdotally, they "can't extract structured data from other pages" [*verbatim*]). Given this constraint, we require that every page output all of the relevant pieces, and cross-reference these through hasPart , isPartOf,  mainEntityOfPage and similar lookup mechanisms.
+Unfortunately, the level of  *cross-page* support for this technique is limited - Google's documentation is vague, and there's ambiguity around the relationship between IDs and URIs (anecdotally, they "can't extract structured data from other pages" [*verbatim*]). Given this constraint, we require that every page output all of the relevant pieces, and cross-reference these through `hasPart`, `isPartOf`, `mainEntityOfPage` and similar lookup mechanisms.
 
-E.g., the following (simplified) JSON snippet defines an Organization, and references that Organization as the Publisher of a Website:
+E.g., the following (simplified) JSON snippet defines an `Organization`, and references that `Organization` as the `Publisher` of a `Website`:
 
 <YoastSchemaExample>
 {`{
@@ -44,18 +44,18 @@ E.g., the following (simplified) JSON snippet defines an Organization, and refer
   }`}
 </YoastSchemaExample>
 
-In this example, we know that the `publisher` of the website is the same as the `Organization`. And because we already have a top-level piece in the graph representing that `Organization`, we can simply reference it by its @id in the `WebSite` piece. This provides enormous flexibility, and prevents us from repeating ourselves.
+In this example, we know that the `publisher` of the website is the same as the `Organization`. And because we already have a top-level piece in the graph representing that `Organization`, we can simply reference it by its `@id` in the `WebSite` piece. This provides enormous flexibility, and prevents us from repeating ourselves.
 
 Given this capability, we prefer to avoid deep nesting of properties whenever possible and prefer to break out individual pieces, as in the examples which follow. This keeps the code readable, modularized, and extensible.
 
 ### Constructing ID parameters
 ID parameters should always adopt the following structure:
 
-`{{website}}{{slug}}/#/schema/{{type}}/{{ID}}` E.g., `https://www.example.com/#/schema/image/abc123`.
+`{{website}}{{slug}}/#/schema/{{type}}/{{ID}}` (e.g., `https://www.example.com/#/schema/image/abc123`).
 
-[Pieces](pieces.md) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content. 
+[Pieces](pieces.md) may be either *local* or *global*. Local pieces are explicitly related/connect to a `WebPage` and only exist in the context of page content, whereas global pieces may exist independently of page content. 
 
-For example, a [HowTo](pieces/howto.md) piece is an explicit child of the [WebPage](pieces/webpage.md) (or [Article](pieces/article.md) ) within which it resides. A [Person](pieces/person.md) or an [image](pieces/image.md) , however, exists independently of a [WebPage](pieces/webpage.md) or [Article](pieces/article.md) which references it. 
+For example, a [HowTo](pieces/howto.md) piece is an explicit child of the [WebPage](pieces/webpage.md) (or [Article](pieces/article.md) ) within which it resides. A [Person](pieces/person.md) or an [image](pieces/image.md), however, exists independently of a [WebPage](pieces/webpage.md) or [Article](pieces/article.md) which references it. 
 
 Local pieces should include the `{{slug}}` component. Global pieces should not.
 
@@ -93,7 +93,7 @@ These are also documented in their various [pieces documentation](pieces.md) , b
 
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., `https://www.example.com/#/schema/organization/1`).
-* The `{{identifier}}` fragment of the `WebSite` which represents "this site" should always be `` (e.g., `https://www.example.com/#/schema/website/1`).
+* The `{{identifier}}` fragment of the `WebSite` which represents "this site" should always be ` ` (e.g., `https://www.example.com/#/schema/website/1`).
 * The `{{identifier}}` fragment of a `person `should always be obfuscated.
 
 ### Hybrid types & composite IDs

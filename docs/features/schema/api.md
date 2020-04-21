@@ -43,7 +43,7 @@ used to obtain important data. A good example of that can be found in our
 
 You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the 
 `Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many 
-others. For instance if a piece you are adding needs to reference the Organization piece, all you have to do is this:
+others. For instance if a piece you are adding needs to reference the `Organization` piece, all you have to do is this:
 
 ```
 $data['organization'] = [ '@id' => Schema_IDs::ORGANIZATION_HASH ]

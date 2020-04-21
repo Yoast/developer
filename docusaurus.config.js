@@ -8,22 +8,14 @@ module.exports = {
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	themeConfig: {
 		disableDarkMode: true,
-		sidebarCollapsible: false,
+		sidebarCollapsible: true,
 		navbar: {
 			title: 'Yoast Developer portal',
 			logo: {
 				alt: 'Yoast Developer portal',
 				src: 'img/yoast-logo.png',
 			},
-			links: [
-				{ to: '/', label: 'Docs', position: 'left' },
-				{ href: 'https://developer.yoast.com/blog', label: 'Blog', position: 'left' },
-				{
-					href: 'https://github.com/yoast/developer-docs',
-					label: 'GitHub',
-					position: 'right',
-				},
-			],
+			links: [],
 		},
 		footer: {
 			links: [
@@ -60,7 +52,7 @@ module.exports = {
 							href: 'https://yoast.com/jobs/',
 						},
 						{
-							label: 'Developer Blog',
+							label: 'Developer blog',
 							href: 'https://developer.yoast.com/blog/',
 						},
 						{

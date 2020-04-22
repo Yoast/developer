@@ -84,7 +84,7 @@ You might run into some merge conflicts. Solve them, commit the merge and push t
 
 Three golden rules:
 
-- Follow the [Yoast coding guidelines and principles](https://github.com/Yoast/Wiki/wiki/Coding-guidelines-and-principles).
+- Follow the [Yoast coding guidelines and principles](coding-guidelines-and-principles.md).
 - Ensure that you've added tests (when applicable). This also applies to bugfixes.
 - Add steps to the PR so the person that'll be acceptance testing your PR knows what the intended behavior is of your code. Also include things like adding / changing configuration files. 
 

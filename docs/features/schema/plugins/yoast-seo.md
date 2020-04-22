@@ -1,6 +1,7 @@
 ---
 id: yoast-seo
 title: Schema output for Yoast SEO
+sidebar_label: Yoast SEO
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo.md
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
@@ -9,12 +10,10 @@ This page documents the [schema.org](https://schema.org/) markup output by the Y
 
 ## Core logic
 Every page should (attempt to) output the following [pieces](../pieces.md):
-
 * [Organization](../pieces/organization.md)
 * [WebSite](../pieces/website.md)
 * [WebPage](../pieces/webpage.md)
-
-This produces a ‘base script’, which will typically looks something like the following (a composite of the above *pieces* ):
+This produces a ‘base script’, which will typically looks something like the following (a composite of the above *pieces*):
 
 <YoastSchemaExample>
 {`{

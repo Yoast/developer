@@ -1,12 +1,13 @@
 ---
 id: api
-title: Yoast SEO Canonical API documentation
+title: Canonical URLs - API documentation
+sidebar_label: API
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/canonical-urls/api.md
+description: Instructions on how to modify the canonical URL value programmatically.
 ---
 
 # Yoast SEO canonical API
-
-To change the canonical URL that Yoast SEO generated for a URL programatically, you can use the `wpseo_canonical` filter. 
+To change the canonical URL that Yoast SEO generated for a URL programatically, you can use the `wpseo_canonical` filter.
 
 ## Change the canonical URL
 For example, the following code would change the canonical on a page with ID `12345`:

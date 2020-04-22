@@ -1,7 +1,9 @@
 ---
 id: question
 title: Schema piece - Question
+sidebar_label: Question
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/question.md
+description: Describes a 'Question'. Most commonly used in 'FAQPage' or 'QAPage' content.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
@@ -12,7 +14,6 @@ Should be added as top-level nodes in the graph, when the content of a page cont
 
 ## Required properties
 A valid `Question` must have the following properties.
-
 * `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/question/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The text content of the question.
 * `acceptedAnswer`: An `answer` object, with a `text` property which contains the answer to the question.
@@ -23,10 +24,10 @@ If a node is not output, any entities which would otherwise have declared a rela
 
 ## Optional properties
 The following should be added whenever available and valid:
-
 * `inLanguage`: The language code for the question; e.g., `en-GB`.
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

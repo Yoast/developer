@@ -1,6 +1,7 @@
 ---
 id: local-seo
 title: Schema output for Local SEO for WordPress
+sidebar_label: Local SEO for WordPress
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/local-seo.md
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
@@ -8,15 +9,18 @@ import YoastSchemaExample from '../../../../../developer-site/src/components/Yoa
 The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plugins/local-seo/) builds upon [Yoast SEO for WordPress’ base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
 
 ## Core logic
+
 ### When a Primary Location is defined
-* Merge properties from the business’ *Primary Location* into the main `Organization` (i.e., the one in the *base script* ) to attempt to extend it into a `LocalBusiness`.
+* Merge properties from the business’ *Primary Location* into the main `Organization` (i.e., the one in the *base script*) to attempt to extend it into a `LocalBusiness`.
 
 ### When a Primary Location is not defined
 * Add any shared/default Location properties (such as `email`, `VAT`, `priceRange` ) to the main `Organization`.
-	* Do *not* add `geo` properties, `areasServed` or `priceRange` properties.
+ * Do *not* add `geo` properties, `areasServed` or `priceRange` properties.
 
 ## Additional scenarios
+
 ### On a single location page
+
 #### When the page does *not* represent the Primary Location
 * Add a `LocalBusiness` piece for the Location in question.
 
@@ -25,12 +29,12 @@ The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plug
 
 #### In all cases
 * Add a `mainEntityOfPage` property to the `LocalBusiness` piece which references the ID of the `WebPage`.
-	* NOTE: In the case of the Primary Location, this should be attached to the main `Organization` / `LocalBusiness` piece in the base script).
+ * NOTE: In the case of the Primary Location, this should be attached to the main `Organization` / `LocalBusiness` piece in the base script).
 
 ## Examples
+
 ### An arbitrary post on a single-location business site
 This example assumes that:
-
 * The post contains / is a valid `Article`.
 
 <YoastSchemaExample>

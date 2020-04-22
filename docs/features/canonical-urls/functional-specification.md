@@ -1,9 +1,11 @@
 ---
 id: functional-specification
-title: Functional specification
+title: Canonical URLs - Functional specification
+sidebar_label: Functional specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+description: An overview of how canonical URLs work in Yoast SEO.
 ---
-Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not*have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.
+Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not* have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.
 A valid canonical URL tag takes the following format:
 `<link rel=“canonical” href=“{{URL}}” />`
 The following sections describe how the value of the `{{URL}}` component of the tag should be constructed.
@@ -29,8 +31,8 @@ If the application is aware of the preferred address (hostname) of the website i
 If there’s no evidence of a preferred domain, then the request hostname should be returned.
 
 ### Constructing the %%path%% variable
-The logic which determines which components are included in the %%path%% variable may differ by content type, by website, by platform, and by user preference/configuration. 
-It’s also common that a resource may be requested via a variety of different path queries and structures, with little evidence as to which of these is the most ‘correct’. Even when using seemingly robust platform methods, such as WordPress’ get_permalink() function (and similar methods for taxonomy indexes, etc), there may still be some ambiguity as to whether the returned URL should be used as the canonical URL value.
+The logic which determines which components are included in the %%path%% variable may differ by content type, by website, by platform, and by user preference/configuration.
+It’s also common that a resource may be requested via a variety of different path queries and structures, with little evidence as to which of these is the most ‘correct’. Even when using seemingly robust platform methods, such as WordPress’ `get_permalink()` function (and similar methods for taxonomy indexes, etc), there may still be some ambiguity as to whether the returned URL should be used as the canonical URL value.
 Given this challenge, the following sections explore the specific logic required to return the most optimal %%path%% components, based on a variety of scenarios.
 
 #### Including ancestors
@@ -41,7 +43,7 @@ Some pages may include parent directories in the URL. If the inclusion of those 
 **NOTE**: The Yoast SEO plugin contains functionality to remove the category/ ‘base’ component of the path in WordPress. If this is enabled, the category/ component should also be removed from the %%path%%.
 
 #### Ancestor type preference
-It’s assumed that in each of these cases that the user has indicated a preference for which ancestors should be used to construct the URL. E.g., in WordPress, a user may define a ‘permalink structure’, and decide that all posts should be preceded by their *tag*(s)(as opposed to their *categories*), or, by the word ‘widgets’.
+It’s assumed that in each of these cases that the user has indicated a preference for which ancestors should be used to construct the URL. E.g., in WordPress, a user may define a ‘permalink structure’, and decide that all posts should be preceded by their *tag*(s) (as opposed to their *categories*), or, by the word ‘widgets’.
 If such a preference is set, then the canonical %%path%% should always reflect this.
 If a page can be accessed via multiple routes (e.g., where category/widgets/example-post and tag/cats/example-post both return the same page) and no ancestor type preference is set, then the %%path%% should select canonical ancestors based on the following order of preference when valid (adapting / using comparable concepts when there’s no precise match):
 * **Category**; e.g., category/blue-widgets/page
@@ -52,7 +54,7 @@ If a page can be accessed via multiple routes (e.g., where category/widgets/exam
 * **The ‘raw’ query** for the resource; e.g., ?p=123
 
 #### Handling multiple ancestors
-Within each of the above scenarios, it’s possible that a requested page may have *multiple*valid ancestors (e.g., a post in several categories, or, a category which itself is in multiple categories). 
+Within each of the above scenarios, it’s possible that a requested page may have *multiple* valid ancestors (e.g., a post in several categories, or, a category which itself is in multiple categories).
 If the user has declared a preference for a specific ancestor (e.g., a ‘primary category’), then this ancestor should be used in the %%path%%.
 When there’s no evidence of preference, the default behaviour should be to use the first valid option, alphabetically. E.g:
 * A post in categories ‘cats’ and ‘dogs’ (where *category* is the preferred ancestor structure) should have a %%path%% of category/cats/example-post.
@@ -82,12 +84,12 @@ Note that, in the case that ‘pretty permalinks’ are available, these ‘raw�
 All of the examples in this document assume that requests don’t have, or enforce, trailing slashes. In reality, this will vary by system, and by user preference. In most cases, valid pages  - with the exception of ‘data’ pages - *do* have (and enforce, via a 301 redirect) the presence of a trailing slash.
 All %%path%% variables, therefore, should conditionally include or exclude a trailing slash based on the following scenarios:
 * **Trailing slashes are enforced on all requests**, therefore the %%path%% should append a trailing slash.
-* **Pages***can***have trailing slashes appended, but, this isn’t enforced** (via a 301 redirect). In this case, the %%path%% *should*append a trailing slash.
-* **Pages do***not***resolve when trailing slashes are added**. In this case, %%path%% should *not* append a trailing slash.
+* **Pages** *can* **have trailing slashes appended, but, this isn’t enforced** (via a 301 redirect). In this case, the %%path%% *should* append a trailing slash.
+* **Pages do** *not* **resolve when trailing slashes are added**. In this case, %%path%% should *not* append a trailing slash.
 * **Requests which end in a trailing represent a different resource** (e.g., page vs folder/). In this case, the %%path%% should only output the trailing slash if this is part of the valid request for the resource (e.g., on folder/).
 
 ### Pagination
-Some requests may accept additional parameters in order to return a paginated state. E.g., category/page/3 (or ?category=cats&page=3). 
+Some requests may accept additional parameters in order to return a paginated state. E.g., category/page/3 (or ?category=cats&page=3).
 When this returns a valid, paginated response, the pagination component should be appended to the %%path%% variable. It should *not* be appended in scenarios where the addition of the pagination component does *not* result in paginated results.
 
 ### Sanitizing
@@ -95,16 +97,16 @@ Path values should always undergo the following treatments before being output:
 * Force to lowercase.
 * Encoding non-ASCII UTF-8 characters.
 * Removing multiple concurrent slashes.
-* Removing any querying, sorting, filtering or arbitrary queries not addressed in this document (e.g., category/page/2/?a=b should sanitize to category/page/2). 
+* Removing any querying, sorting, filtering or arbitrary queries not addressed in this document (e.g., category/page/2/?a=b should sanitize to category/page/2).
 * Removing any redundant appendages (e.g., in the case that category/post/randomstring returns the page represented by category/post, the randomstring component should be removed).
 
 ### Compound types
-Some request types may combine multiple %%path%% components to return a valid result. E.g., a category, filtered by date (category/cats/2012, or 
+Some request types may combine multiple %%path%% components to return a valid result. E.g., a category, filtered by date (category/cats/2012, or
 category/cats/2012/06/02), or a paginated state of a date-based author index (writers/George/2006/page/2). These components should be added to the %%path%%.
 If these components can be applied in more than one order (and return the same, valid response), then the %%path%% should be constructed with the following order (if/when the components are present): %%taxonomy%%/%%date%%/%%pagination%%.
 
 ### Noindex’d pages
-Pages which have a meta robots tag (or x-robots-tag HTTP header) with a *noindex*directive set should omit the canonical URL tag entirely. This includes scenarios where template logic dictates the *noindex*property (such as search results pages), as well as scenarios where the user has set a particular page to noindex.
+Pages which have a meta robots tag (or x-robots-tag HTTP header) with a *noindex* directive set should omit the canonical URL tag entirely. This includes scenarios where template logic dictates the *noindex* property (such as search results pages), as well as scenarios where the user has set a particular page to noindex.
 
 ### Error scenarios
 Requests which result in errors (all scenarios leading to a 4xx or 5xx range HTTP response) should omit the canonical URL tag entirely.

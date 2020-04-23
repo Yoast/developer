@@ -1,13 +1,14 @@
 ---
 id: yoast-seo-product-sheet
 title: Yoast SEO Product sheet
+sidebar_label: Product sheet
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/yoast-seo-product-sheet.md
-description: This document is a living document, describing the functionality of Yoast SEO for any platform. 
+description: This document is a living document, describing the functionality of Yoast SEO for any platform.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import YoastSchemaExample from '../../developer-site/src/components/YoastSchemaExample';
 
-This document is a living document, describing the functionality of Yoast SEO for any platform. 
+This document is a living document, describing the functionality of Yoast SEO for any platform.
 It starts with a general specification, describing the functionality a Yoast SEO module should always guarantee, regardless of the platform for which it has been built. Further down you will find more platform specific requirements.
 
 ## Yoast SEO: general specification

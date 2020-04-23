@@ -1,8 +1,9 @@
 ---
 id: background
-title: Background information
+title: Schema - Background information
+sidebar_label: Background
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/background.md
-description: This page provides information about our approach, rationale, and considerations. It describes the key underlying principles, design decisions, and methodologies.
+description: Information about our approach, rationale, and considerations when it comes to schema.org markup.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
 
@@ -12,7 +13,6 @@ This page provides information about our approach, rationale, and considerations
 Structured markup allows search engines, users and systems to understand the content, context and relationship of entities. It adds meta information about the properties of *things* on web pages and their relationship, which may not be immediately available or easy to parse from the 'human' version of the page.
 
 For our purposes, we're particularly interested in how search engines understand the relationship between a website's *pages*, the *organization* which operates the website, the *products* they offer, and other related concepts. Structured markup allows us to describe how these entities are connected, and to define their properties.
-
 
 Including this kind of markup may result in search engines providing additional or enhanced coverage in their results (such as 'rich listings'), and eligibility for new/emerging features (e.g., 'Knowledge graph panels').
 

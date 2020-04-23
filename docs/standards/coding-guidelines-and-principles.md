@@ -1,6 +1,7 @@
 ---
 id: coding-guidelines-and-principles
-title: Coding guidelines and principles
+title: Standards - Coding guidelines and principles
+sidebar_label: Coding guidelines and principles
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/coding-guidelines-and-principles.md
 ---
 
@@ -61,7 +62,7 @@ As a developer working in a team, we want to be able to easily understand what c
 ## Coding principles
 
 ### Keep it simple stupid (KISS)
-When looking at code, it should be easy to understand what is going on. If you get stuck in dogma's about abstraction, design patterns or other coding standards, you find yourself changing code for the sake of the standard. That's a bit stupid, which explains the last S in KISS. Always use your mind and ask yourself, does this change make it easier to understand what is going on here? If you're unsure, you can always ask someone for advice! 
+When looking at code, it should be easy to understand what is going on. If you get stuck in dogma's about abstraction, design patterns or other coding standards, you find yourself changing code for the sake of the standard. That's a bit stupid, which explains the last S in KISS. Always use your mind and ask yourself, does this change make it easier to understand what is going on here? If you're unsure, you can always ask someone for advice!
 
 ### Don't Repeat Yourself (DRY)
 
@@ -79,7 +80,7 @@ A few guidelines with regards to testing:
 
 * Even though it's common practice to only test the public interface, sometimes a lot of behavior is hidden away in a private interface. In this case, try to test the private interface via something like a test double.
 * When fixing bugs, try reproducing the bug in a regression test first. A regression test is a test you write to prevent bugs from occuring again. All you have to do then is make the test pass.
-* For every PR, check if the changes are covered by unit tests. 
+* For every PR, check if the changes are covered by unit tests.
 
 #### Test Driven Development (TDD)
 
@@ -88,4 +89,3 @@ TDD is a principle when you write tests before writing the actual implementation
 ### Codescout principle
 
 Refactoring should happen primarily through the codescout principle. That means you leave the code better than you found it. When fixing bugs or adding new features, feel free to take some time to improve the functionality that is concerned. Of course, only do this when it is really needed and remember to keep it simple.
-

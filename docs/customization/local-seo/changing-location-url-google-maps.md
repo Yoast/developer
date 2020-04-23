@@ -1,6 +1,7 @@
 ---
 id: changing-location-url-google-maps
-title: Changing the Location URL in Google Maps
+title: Local SEO - Changing the Location URL in Google Maps
+sidebar_label: Changing the Location URL in Google Maps
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/local-seo/changing-location-url-google-maps.md
 ---
 

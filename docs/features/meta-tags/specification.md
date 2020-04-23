@@ -1,7 +1,10 @@
 ---
-id: functional-specification
-title: Functional specification
+id: specification
+title: Meta Tags - Functional specification
+sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-tags/functional-specification.md
+description: This documentation provides technical information about which meta tags Yoast SEO generates and outputs.
+
 ---
 This documentation provides technical information about which meta tags [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs.
 
@@ -18,7 +21,7 @@ The following tags describe the page for search engines and general consumers:
 
 ## Crawling & indexing directives
 
-The following tags provide instructions to search engines (and other compliant data consumers) about their permissions with regards to consuming and extracting information from a page. 
+The following tags provide instructions to search engines (and other compliant data consumers) about their permissions with regards to consuming and extracting information from a page.
 
 | Tag | Description |
 |---|----|
@@ -75,7 +78,7 @@ Only output the following tags are output:
 
 ## Deprecated tags
 
-The following tags used to be output by Yoast SEO, but have been removed in recent updates. 
+The following tags used to be output by Yoast SEO, but have been removed in recent updates.
 
 | Tag | Description | Reason | Deprecation |
 |---|----|---|---|

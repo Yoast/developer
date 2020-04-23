@@ -1,6 +1,7 @@
 ---
 id: product
 title: Schema piece - Product
+sidebar_label: Product
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/product.md
 description: Describes a product sold by a business.
 ---
@@ -14,20 +15,17 @@ Describes a product sold by a business.
 
 ## Required properties
 A valid `Product` must have the following properties.
-
 * `@id`: The site's home URL appended by `#/schema/product/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The name of the product.
 * `image`: A reference-by-ID to one or more `imageObject` s which represent the product.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
-
-If the node is not output, any entities which would otherwise have declared themselves to be part of the `Product` should remove those references 
-(e.g., an  `Offer`  relating to the `Product` ).
+If the node is not output, any entities which would otherwise have declared themselves to be part of the `Product` should remove those references
+(e.g., an `Offer` relating to the `Product`).
 
 ## Optional properties
 The following should be added whenever available and valid:
-
 * `offers`: An array of references-by-ID to one or more `Offer` or `aggregateOffer` pieces.
 * `brand`: A reference to an `Organization` piece, representing brand associated with the `Product`.
 * `seller`: A reference to an `Organization` piece which represents the `WebSite.`
@@ -38,6 +36,7 @@ The following should be added whenever available and valid:
 * `manufacturer`: A reference to an `Organization` piece, representing the brand which produces the `Product`.
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

@@ -1,6 +1,7 @@
 ---
 id: development-setup
-title: Development setup
+title: Standards - Development setup
+sidebar_label: Development setup
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/development-setup.md
 ---
 This page describes the process of how we setup development environments at Yoast.

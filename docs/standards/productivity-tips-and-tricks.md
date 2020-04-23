@@ -1,6 +1,7 @@
 ---
 id: productivity-tips-and-tricks
-title: Productivity tips and tricks
+title: Standards - Productivity tips and tricks
+sidebar_label: Productivity tips & tricks
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/productivity-tips-and-tricks.md
 ---
 
@@ -10,7 +11,7 @@ Here's a few things you could do or learn to make your life a bit easier when it
 
 ## PhpStorm
 ### shortcuts
-| Shortcut        | Description | 
+| Shortcut        | Description |
 | ------------- |:-------------|
 |`⌘ + e`        | Opens the 'recent files' window. Select by typing the name of the file or moving up and down with arrow keys. Or press the return key directly for the previous file. |
 |`⌥ + ↑`     | Hard to explain, just give it a try... Selects, or extends, the selection of text in your editor. Pressing it repeatedly, increases the scope in which code is selected. Can be used to select a word, a statement or variable, a line, a function or a class and so on. |
@@ -64,5 +65,5 @@ So to get your SSH key into GitHub you could use the following command, `cat ~/.
 
 ## `sudo` easiness
 
-* Increase `sudo` timeout: 
+* Increase `sudo` timeout:
   Add this to your `/etc/sudoers` file: ```Defaults timestamp_timeout=15```

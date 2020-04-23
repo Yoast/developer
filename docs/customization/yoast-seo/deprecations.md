@@ -1,6 +1,7 @@
 ---
 id: api-filter-actions-deprecations
-title: Deprecated filters and actions
+title: Yoast SEO - Deprecated filters and actions
+sidebar_label: Deprecated filters & actions
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/deprecations.md
 ---
 
@@ -24,4 +25,3 @@ We removed this action without a replacement. Please add a new meta data present
 
 #### `wpseo_twitter`
 We removed this action without a replacement. Please add a new meta data presenter per [this documentation](https://developer.yoast.com/blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
-

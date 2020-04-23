@@ -1,8 +1,9 @@
 ---
 id: api
-title: API documentation
+title: Schema - API documentation
+sidebar_label: API
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/api.md
-description: Using the Yoast SEO Schema API you can filter the Schema output from Yoast SEO to fix your exact needs. 
+description: Instructions on how to modify our schema output programmatically.
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 
@@ -12,7 +13,7 @@ The release of [Yoast SEO 14.0](https://developer.yoast.com/upcoming-release-yoa
 </Alert>
 
 ## Making Schema easier to debug
-If you're working on Schema, it can be rather hard to read. To change that, you should toggle the `yoast_seo_development_mode` filter to `true`. At that point all the Schema that Yoast SEO outputs will be pretty printed. 
+If you're working on Schema, it can be rather hard to read. To change that, you should toggle the `yoast_seo_development_mode` filter to `true`. At that point all the Schema that Yoast SEO outputs will be pretty printed.
 
 ``` php
 add_filter( 'yoast_seo_development_mode', '__return_true' );
@@ -30,19 +31,15 @@ add_filter( 'wpseo_json_ld_output', '__return_false' );
 ```
 
 ## To add or remove graph pieces
-As [the documentation](plugins/yoast-seo.md) clearly shows we output a lot of graph pieces on some pages. You might want 
+As [the documentation](plugins/yoast-seo.md) clearly shows we output a lot of graph pieces on some pages. You might want
 to remove some, or better yet, add your own. To do this you should use the `wpseo_schema_graph_pieces` filter.
 
-Each of our graph pieces extends a `Abstract_Schema_Piece` abstract class. This `Abstract_Schema_Piece` is an abstract, 
-and not an interface, because it has two public properties: `$context` and `$helpers`. These are filled magically and can be 
-used to obtain important data. A good example of that can be found in our 
-[example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found 
-[here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php).
+Each of our graph pieces implements a `WPSEO_Graph_Piece` interface. We pass each of these pieces a `WPSEO_Schema_Context` object which has a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/frontend/schema/class-schema-author.php).
 
 ## Referencing other graph pieces
 
-You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the 
-`Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many 
+You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the
+`Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many
 others. For instance if a piece you are adding needs to reference the `Organization` piece, all you have to do is this:
 
 ``` php
@@ -62,13 +59,13 @@ add_filter( 'wpseo_schema_article', 'example_change_article' );
  *
  * @return array $data Schema.org Article data array.
  */
-function example_change_article( $data ) { 
-  $data['@type'] = 'NonsensePage'; 
-  return $data; 
+function example_change_article( $data ) {
+  $data['@type'] = 'NonsensePage';
+  return $data;
 }
 ```
 
-In most cases, you're probably going to want to include some conditional logic to determine where and when you change or 
+In most cases, you're probably going to want to include some conditional logic to determine where and when you change or
 set your own values. In those cases, you can use standard WordPress filtering and functions, like so:
 
 ``` php
@@ -81,18 +78,18 @@ add_filter( 'wpseo_schema_webpage', 'example_change_webpage' );
  *
  * @return array $data Schema.org Webpage data array.
  */
-function example_change_webpage( $data ) { 
-  if ( ! is_page( 'about' ) ) { 
+function example_change_webpage( $data ) {
+  if ( ! is_page( 'about' ) ) {
     return $data;
   }
-  $data['@type'] = 'AboutPage'; 
-  return $data; 
+  $data['@type'] = 'AboutPage';
+  return $data;
 }
 ```
 
 ## To add images to your Schema
-If you want to add an image to an object programmatically, you can do it as follows. Note that we use the `YoastSEO` 
-surface to get both the `canonical` from the `meta` surface as the `helpers` surface to access the `schema->image` 
+If you want to add an image to an object programmatically, you can do it as follows. Note that we use the `YoastSEO`
+surface to get both the `canonical` from the `meta` surface as the `helpers` surface to access the `schema->image`
 functionality.
 
 ``` php
@@ -105,33 +102,32 @@ add_filter( 'wpseo_schema_article', 'example_change_article' );
  *
  * @return array $data Schema.org Article data array.
  */
-function example_change_article( $data ) { 
-    // This is the attachment ID for our image.
-    $attachment_id = 12345; 
+function example_change_article( $data ) {
+  // This is the attachment ID for our image.
+  $image_id = 12345;
 
-    // We're going to create a graph piece for our image. Every graph piece always needs a Schema ID, so it can 
-    // be referenced by other graph pieces, best practice is to base that on the canonical adding an ID that's 
+  // We instantiate the image class, it always needs an $id, so the output can be referenced by other graph pieces.
+  $id = "#image_12345";
+  $schema_image = new WPSEO_Schema_Image( $id );
+
+    // We're going to create a graph piece for our image. Every graph piece always needs a Schema ID, so it can
+    // be referenced by other graph pieces, best practice is to base that on the canonical adding an ID that's
     // always going to be unique.
     $schema_id = YoastSEO()->meta->for_current_page()->canonical . '#/schema/image/' . $attachment_id;
 
-    // Now we generate the graph piece.
-    $data['image'] = YoastSEO()->helpers->schema->image->generate_from_attachment_id( $schema_id, $attachment_id );
-
-    return $data; 
+  return $data;
 }
 ```
 
-Instead of `YoastSEO()->helpers->schema->image->generate_from_attachment_id()` you can also use 
+Instead of `YoastSEO()->helpers->schema->image->generate_from_attachment_id()` you can also use
 `YoastSEO()->helpers->schema->image->generate_from_url()` which takes, as you've guessed, a URL as input.
 
 ## Schema for Gutenberg blocks
-If you're writing blocks for the block editor (sometimes known as "Gutenberg") you'll want to add Schema output too. 
+If you're writing blocks for the block editor (sometimes known as "Gutenberg") you'll want to add Schema output too.
 There are two useful hooks for you that make this possible.
 
 ### Know which blocks are on the page
-First, you have to know which blocks are on the page. You can know this based on the 
-`wpseo_pre-schema_block_type_<block-type>` action. If this action fires for your block type, you know that your block 
-type will be output on the page. 
+First, you have to know which blocks are on the page. You can know this based on the `wpseo_pre-schema_block-type_<block-type>` action. If this action fires for your block type, you know that your block type will be output on the page.
 
 We use this filter for instance to change the `@typeof WebPage` in our FAQ blocks with this simple function:
 
@@ -150,13 +146,12 @@ public function prepare_schema( $blocks ) {
 }
 ```
 
-As you can see this code is taken from inside a class. The `wpseo_pre-schema_block_type_<block-type>` action gets an 
-array of all the blocks of that type as an argument. We save those in the class that later on uses this data to 
+As you can see this code is taken from inside a class. The `wpseo_pre-schema_block_type_<block-type>` action gets an
+array of all the blocks of that type as an argument. We save those in the class that later on uses this data to
 determine its output.
 
 ### Output for a specific block
-If you have a specific block you need to add output for, you can do this using the `wpseo_schema_block_<block-type>` 
-filter. This filter has 3 parameters: 
+If you have a specific block you need to add output for, you can do this using the `wpseo_schema_block_<block-type>` filter. This filter has 3 parameters:
 
 * `$graph`: which you have to return, which allows you to filter the graph based on your block.
 * `$block`: the content of the block that this filter fired for.
@@ -183,7 +178,7 @@ And then, when the plugin encounters an FAQ block, this function gets called, wh
 public function render_joost_block_schema( $graph, $block, $context ) {
 	$graph['data'] = $block['data'];
 	$graph['id']   = YoastSEO()->meta->for_current_page()->canonical . '#/schema/joost/' . $block['id'];
-  
+
 	return $graph;
 }
 ```
@@ -194,7 +189,7 @@ Sometimes you might want to enable or disable a graph piece based on other varia
 
 ``` php
 add_filter( 'wpseo_schema_needs_person', '__return_true');
-add_filter( 'wpseo_schema_person_user_id', function() { 
+add_filter( 'wpseo_schema_person_user_id', function() {
   return 1; // Make sure 1 is a valid User ID.
 } );
 ```
@@ -228,4 +223,3 @@ We also have some more specific filters for convenience:
 * `wpseo_json_ld_search_url` - allows you to change the search URL for your site.
 * `wpseo_schema_article_post_type` - allows changing for which post types we output the Article graph piece.
 * `wpseo_schema_person_user_id` - allows changing the ID of the user we use to represent your site, should your site represent a person.
-

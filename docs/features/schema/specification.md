@@ -1,8 +1,9 @@
 ---
-id: functional-specification
-title: Functional specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/functional-specification.md
-description: An overview of how (and why) we construct scalable, interoperable schema.org markup. For developers, plugin authors, and data geeks!
+id: specification
+title: Schema - Specification
+sidebar_label: Specification
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/specification.md
+description: This page describes our functional and technical approach to constructing schema.org markup.
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 

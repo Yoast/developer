@@ -1,6 +1,7 @@
 ---
 id: development-tools
-title: Development tools
+title: Standards - Development tools
+sidebar_label: Development tools
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/development-tools.md
 ---
 
@@ -124,6 +125,6 @@ yarn global add grunt-cli
 
 After this has been installed, you can run various commands in your project's directory to deal with various tasks. A command that is usually used is `grunt watch`. This command will watch for changes in directories and run a set of predefined commands over the source code to ensure it's properly outputted.
 
-As our repositories use a lot of similar tasks, we ended up [creating a repository](https://github.com/Yoast/plugin-grunt-tasks) to bring these similar tasks together. 
+As our repositories use a lot of similar tasks, we ended up [creating a repository](https://github.com/Yoast/plugin-grunt-tasks) to bring these similar tasks together.
 
 Please make sure you also check out the Grunt directory and especially the `aliases.yml` file to see what commands are available.

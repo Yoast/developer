@@ -1,10 +1,11 @@
 ---
 id: overview
-title: Overview
+title: Standards - Overview
+sidebar_label: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/overview.md
 ---
 This page lists a variety of procedures, techniques and standards that we use during development here at Yoast.
-The list below can be used to discover how you can use these various elements in your own development practices. 
+The list below can be used to discover how you can use these various elements in your own development practices.
 
 ## Tools and settings
 * [Development tools](development-tools.md)

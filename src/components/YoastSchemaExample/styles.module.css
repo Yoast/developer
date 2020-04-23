@@ -1,0 +1,13 @@
+.schemaExample {
+    overflow: hidden;
+}
+
+.codeArea {
+    display: none;
+}
+
+.modifyButton {
+    white-space: normal;
+    border-radius: var(--ifm-button-border-radius) var(--ifm-button-border-radius) 0 0;
+}
+

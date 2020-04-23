@@ -1,5 +1,5 @@
 ---
-id: specification
+id: functional-specification
 title: XML Sitemaps - Functional specification
 sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/specification.md

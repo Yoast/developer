@@ -16,15 +16,18 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 
 ## Required properties
 A valid `ImageObject` must have the following properties.
+
 * `@id`: The site's home URL appended by `#/schema/image/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the image object).
 * `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
+
 If the node is not output, any entities which would otherwise have declared a relationship with the `Image` (e.g., as the `logo` of an `Organization`) should remove those references.
 
 ## Optional properties
 The following should be added whenever available and valid:
+
 * `caption`: A text string describing the image.
  * Fall back to the image `alt` attribute if no specific `caption` field exists or is defined.
 

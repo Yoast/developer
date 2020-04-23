@@ -6,12 +6,14 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: An overview of how canonical URLs work in Yoast SEO.
 ---
 Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not* have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.
-A valid canonical URL tag takes the following format:
-`<link rel="canonical" href="{{URL}}" />`
+
+A valid canonical URL tag takes the following format: `<link rel="canonical" href="{{URL}}" />`
+
 The following sections describe how the value of the `{{URL}}` component of the tag should be constructed.
 
 ## Logic per request type
 The table below describes all of the request types which we consider and the structure of the canonical URL value in each case. Note that this doesn't cover every conceivable scenario or edge-case, as we only expect this specification to be typically applied within the constraints of a content management system or website.
+
 Also note that the word 'page' is used throughout to indicate any valid, indexable result served in response to a requested URL. That includes some typically 'non-page' results, like RSS feeds.
 
 | Request type | Notes | Canonical URL structure | Example |
@@ -24,6 +26,7 @@ Also note that the word 'page' is used throughout to indicate any valid, indexab
 
 ## Constructing the %%protocol%% variable
 If the application is aware of the website's preferred protocol (e.g., a developer or user has defined an option for the site's address which includes, e.g., http or https), then the protocol value should be retrieved, and a : character should be appended to the variable (to produce, e.g., https:).
+
 If the application cannot ascertain the protocol in use, this parameter should be omitted from the permalink (resulting in a protocol-agnostic URL).
 
 ### Constructing the %%hostname%% variable
@@ -32,20 +35,27 @@ If there's no evidence of a preferred domain, then the request hostname should b
 
 ### Constructing the %%path%% variable
 The logic which determines which components are included in the %%path%% variable may differ by content type, by website, by platform, and by user preference/configuration.
+
 It's also common that a resource may be requested via a variety of different path queries and structures, with little evidence as to which of these is the most 'correct'. Even when using seemingly robust platform methods, such as WordPress' `get_permalink()` function (and similar methods for taxonomy indexes, etc), there may still be some ambiguity as to whether the returned URL should be used as the canonical URL value.
+
 Given this challenge, the following sections explore the specific logic required to return the most optimal %%path%% components, based on a variety of scenarios.
 
 #### Including ancestors
 Some pages may include parent directories in the URL. If the inclusion of those directories is necessary to return the page in question, then the %%path%% variable should also include these directories. E.g:
+
 * A category index on a new WordPress installation may have a path of category/blue-widgets. In this case, the %%path%% should also be category/blue-widgets.
 * An index for a content type, such as 'artists', might produce a URL pattern of, e.g., artists/picasso. In this case, the %%path%% should also be artists/picasso.
 * An individual page about the band Pink Floyd's 1970's rock album, 'The Dark Side of the Moon' might be nested within a multi-layer category structure, and thus have a URL of category/music/pink-floyd/dark-side-of-the-moon. In this case, the %%path%% should also be category/music/pink-floyd/dark-side-of-the-moon.
+
 **NOTE**: The Yoast SEO plugin contains functionality to remove the category/ 'base' component of the path in WordPress. If this is enabled, the category/ component should also be removed from the %%path%%.
 
 #### Ancestor type preference
 It's assumed that in each of these cases that the user has indicated a preference for which ancestors should be used to construct the URL. E.g., in WordPress, a user may define a 'permalink structure', and decide that all posts should be preceded by their *tag*(s) (as opposed to their *categories*), or, by the word 'widgets'.
+
 If such a preference is set, then the canonical %%path%% should always reflect this.
+
 If a page can be accessed via multiple routes (e.g., where category/widgets/example-post and tag/cats/example-post both return the same page) and no ancestor type preference is set, then the %%path%% should select canonical ancestors based on the following order of preference when valid (adapting / using comparable concepts when there's no precise match):
+
 * **Category**; e.g., category/blue-widgets/page
 * **Date**; e.g., 2010/12/31/page
 * **Author**; e.g., author/john-smith/page
@@ -55,7 +65,9 @@ If a page can be accessed via multiple routes (e.g., where category/widgets/exam
 
 #### Handling multiple ancestors
 Within each of the above scenarios, it's possible that a requested page may have *multiple* valid ancestors (e.g., a post in several categories, or, a category which itself is in multiple categories).
+
 If the user has declared a preference for a specific ancestor (e.g., a 'primary category'), then this ancestor should be used in the %%path%%.
+
 When there's no evidence of preference, the default behaviour should be to use the first valid option, alphabetically. E.g:
 * A post in categories 'cats' and 'dogs' (where *category* is the preferred ancestor structure) should have a %%path%% of category/cats/example-post.
 * A post with a custom taxonomy of 'location', tagged as 'Spain' and 'Europe' (where *location* is the preferred ancestor structure, and assuming that the path root for 'location' is location/) should have a %%path%% of location/europe/example-post.
@@ -63,8 +75,11 @@ When there's no evidence of preference, the default behaviour should be to use t
 
 ## Constructing the %%date%% variable
 Date structures are used in date indexes (e.g., "all posts published in 2016"), and, when the user prefers that all posts/pages have a date root.
+
 In both cases, we assume that the user has defined a preferred date structure/format, which may take any format (e.g., Y/m/d, U, d-M-y, date/d-m-Y, etc). If so, then the %%path%% should be prefixed by the preferred format (e.g., date/22-05-2018/post-name).
+
 If there's no evidence of preferred format (and a page may be accessed via multiple formats, such as the raw timestamp and a 'pretty' structure), the %%path%% should select a canonical date format based on the following order of preference when valid (adapting / using comparable concepts when there's no precise match):
+
 * **Y/m/d**, e.g., 2018/05/22
 * **Y-m-d**, e.g., 2018-05-22
 * **Ymd** or **ymd**, e.g., 180522
@@ -74,15 +89,20 @@ If there's no evidence of preferred format (and a page may be accessed via multi
 
 ### When 'pretty permalinks' aren't in use
 Some systems of configurations (or preferences) result in valid URL formats and requests being limited to 'raw' object queries. E.g:
+
 * ?post_id=6, rather than category/example-post
 * ?pagename=about rather than about
 * ?category=cats&page=3 rather than category/cats/page/3
+
 In this scenario, the canonical %%path%% component should match the raw query ID as above.
+
 Note that, in the case that 'pretty permalinks' are available, these 'raw' queries should execute a 301 redirect to the canonical equivalent.
 
 ### Trailing slashes
 All of the examples in this document assume that requests don't have, or enforce, trailing slashes. In reality, this will vary by system, and by user preference. In most cases, valid pages  - with the exception of 'data' pages - *do* have (and enforce, via a 301 redirect) the presence of a trailing slash.
+
 All %%path%% variables, therefore, should conditionally include or exclude a trailing slash based on the following scenarios:
+
 * **Trailing slashes are enforced on all requests**, therefore the %%path%% should append a trailing slash.
 * **Pages** *can* **have trailing slashes appended, but, this isn't enforced** (via a 301 redirect). In this case, the %%path%% *should* append a trailing slash.
 * **Pages do** *not* **resolve when trailing slashes are added**. In this case, %%path%% should *not* append a trailing slash.
@@ -94,6 +114,7 @@ When this returns a valid, paginated response, the pagination component should b
 
 ### Sanitizing
 Path values should always undergo the following treatments before being output:
+
 * Force to lowercase.
 * Encoding non-ASCII UTF-8 characters.
 * Removing multiple concurrent slashes.
@@ -101,8 +122,8 @@ Path values should always undergo the following treatments before being output:
 * Removing any redundant appendages (e.g., in the case that category/post/randomstring returns the page represented by category/post, the randomstring component should be removed).
 
 ### Compound types
-Some request types may combine multiple %%path%% components to return a valid result. E.g., a category, filtered by date (category/cats/2012, or
-category/cats/2012/06/02), or a paginated state of a date-based author index (writers/George/2006/page/2). These components should be added to the %%path%%.
+Some request types may combine multiple %%path%% components to return a valid result. E.g., a category, filtered by date (category/cats/2012, or category/cats/2012/06/02), or a paginated state of a date-based author index (writers/George/2006/page/2). These components should be added to the %%path%%.
+
 If these components can be applied in more than one order (and return the same, valid response), then the %%path%% should be constructed with the following order (if/when the components are present): %%taxonomy%%/%%date%%/%%pagination%%.
 
 ### Noindex'd pages
@@ -113,5 +134,7 @@ Requests which result in errors (all scenarios leading to a 4xx or 5xx range HTT
 
 ## User-specified canonical URLs
 When a user has manually specified a canonical URL for a page, this should override all other logic. We should output the value as-is, bypassing the sanitization and handling rules defined above.
+
 This also applies to cross-domain canonical URLs specified by the user.
+
 Any risks of conflict, errors or breakage should be addressed via inline warnings or validation errors during the publishing workflow.

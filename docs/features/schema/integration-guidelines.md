@@ -8,17 +8,14 @@ description: Integrating with Yoast's structured data framework is easy, and, we
 import Alert from '../../../../developer-site/src/components/Alert';
 
 <Alert>
-
 The release of [Yoast SEO 14.0](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/) in April 2020 brings significant changes to how our Schema API and integration mechanics work. This document reflects our API *after* that release.
 </Alert>
 
 <Alert>
-
 This page will be updated with up-do-date information in the near future. If you have any questions, or want to get a head start, you can find our release announcements and technical documentation [here](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/).
 </Alert>
 
 ## Introduction
-
 Integrating with Yoast's structured data framework is easy, and, we encourage all plugin/theme/software authors to consider adopting and extending our approach.
 
 You should start by reading [our specification](functional-specification.md), and making sure that you understand the core principles. Loosely, these are that:
@@ -30,7 +27,6 @@ You should start by reading [our specification](functional-specification.md), an
 * By adapting and extending our graph, we produce richer representations of web pages, which help consumers like Google, Facebook and others understand (and better expose) the content of those pages.
 
 ## An example use-case
-
 Yoast SEO software already creates a large, structured graph, but there are content types which we don't (currently) support. You might want to add support for a specific content type. For example, you might want to add `Person` output to team profile pages, like we have here at Yoast. To do that, you should output a custom `Person` piece and stitch it into the main graph.
 
 Specifically, on a `WebPage` representing a single person, that person could be added as new *piece*, and defined as the `mainEntityOfPage` of the `WebPage` piece. Example code to achieve this might look something like the following.
@@ -121,7 +117,6 @@ And that is all, now this code will be output on your team member post type!
 Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) of version 14.0 or higher. Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
 
 ## "My plugin/theme already outputs schema markup"
-
 Unless you're already adding individual pieces to a `@graph` (and connecting those pieces via `@id`  referencing), you may need to make some changes in order to integrate effectively. If you already use an ID-based approach, you should be able to 'stitch' your pieces into our graph by using [our Schema API](api.md) and by following [our specification](functional-specification.md).
 
 If you use a different approach (e.g., you output a structured `JSON-LD` tree, or use microdata), there's a risk that the various pieces might have conflicting information, and that the page isn't accurately represented.

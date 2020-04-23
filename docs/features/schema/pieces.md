@@ -11,6 +11,7 @@ This documentation is a work in progress.
 
 ## Core pieces
 Collectively, these nodes (and their derivatives) form the core of any graph we build.
+
 * [Organization](pieces/organization.md)
 * [WebSite](pieces/website.md)
 * [WebPage](pieces/webpage.md)
@@ -19,11 +20,13 @@ Collectively, these nodes (and their derivatives) form the core of any graph we 
 
 ### Structural
 Components which relate to the structure of a website, page or content.
+
 * [Breadcrumb](pieces/breadcrumb.md)
 * [Site search](pieces/searchaction.md) (searchAction)
 
 ### Entities
 Components which identify a *thing*.
+
 * [Person](pieces/person.md)
 * [Product](pieces/product.md)
  * [Offer](pieces/offer.md)

@@ -6,21 +6,25 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: This page describes our functional and technical approach to constructing XML Sitemaps.
 ---
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.
+
 An individual XML sitemap should be constructed for each *content type*. Large sitemaps may be split into individual, paginated files.
 Each XML sitemaps should be listed within an *XML sitemap index*.
 
 ## Content types
 XML sitemaps should be created for each of the following content types, providing that the content type is *public* and it contains valid members.
+
 * Posts
 * Pages
 * Authors
 * Custom post types
 * Taxonomies
 * Paginated states of multi-part posts/pages
+
 In addition to the individual XML sitemaps, an *XML sitemap index* should be created, which references each of these sitemaps.
 
 ## Exclusions & empty sitemaps
 The following conditions should lead to a page being excluded from (the appropriate) XML sitemap:
+
 * Posts/pages which are not eligible for indexing by search engines (i.e., any scenario which results in a URL outputting a meta robots noindex directive)
 * Posts/pages which have a manual canonical URL set, which is *not* the same as their default canonical value
 * Private pages
@@ -29,7 +33,8 @@ The following conditions should lead to a page being excluded from (the appropri
 * Paginated views of any type of archive (e.g., /blog/page/2/)
 * Non-public archives and taxonomies
 * All URLs, if/when the whole site is set to 'private' (e.g., in WordPress, when the *Search Engine Visibility* option is set to "*Discourage search engines from indexing this site*")
-Some of these scenarios may lead to an XML sitemap (or the XML sitemap index) being empty. This is expected and permissible behaviour.
+
+Some of these scenarios may lead to an XML sitemap (or the XML sitemap index) being empty. This is expected and permissible behavior.
 Requests to non-existent sitemap URLs should return normal 404 behavior.
 
 ## Content
@@ -49,6 +54,7 @@ The index file contains a `<sitemap>` entry for each individual XML sitemap, eac
 
 * The loc property should reference the absolute URL of the XML sitemap in question
 * **(Optional)** The lastmod property should reflect the most recent lastmod value from within the XML sitemap in question
+
 Optional properties may be omitted if unavailable.
 
 #### URLs & redirects
@@ -78,16 +84,20 @@ Each sitemap contains a `<url>` entry for each page, comprised of a loc, lastmod
 * **(Optional)** An image:image property should be output for each image in / associated with a page, with:
  * A loc property (referencing the absolute URL of the image)
  * **(Optional)** A title property, referencing the image caption
+
 Optional properties may be omitted if unavailable.
 
 #### Limits & pagination
 By default, each sitemap can contain a limit of 1,000 items. If there are more than 1,000 items for a given content type, then (up to 50,000) additional sitemaps are generated to contain the overflow.
 
 #### URLs & redirects
-The URL of each sitemap should be constructed in the following format: {{type}}-sitemap{{n}}.xml, where:
+The URL of each sitemap should be constructed in the following format: `{{type}}-sitemap{{n}}.xml`, where:
+
 * {{type}} is the content type (e.g., page)
 * {{n}} is the pagination state (ignoring the first page in the series).
+
 E.g., post-sitemap.xml, post-sitemap2.xml,custom_taxonomy_name-sitemap.xml.
+
 Requests to sitemaps where {{n}} is 1 or 0 should trigger a 301 redirect to remove {{n}} (e.g., post-sitemap1.xml and post-sitemap0 should redirect to post-sitemap.xml).
 
 ### XSL stylesheets
@@ -133,7 +143,8 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
 * **(Optional)** category is the primary category of the page/post in which the video is embedded
 * **(Optional)** tag is a series of the tags associated with the page/post in which the video is embedded
 * **(Optional)** family_friendly is a boolean value, configured in the video embed UI
-* **(Optional)** uploader is the name of the person who uploaded the video, with optional info property referencing a profile/homepage URL
+* **(Optional)** uploader is the name of the person who uploaded the video, with optional info property referencing a profile/homepage
+
 The video XML sitemap uses a dedicated XSL file.
 
 ### News sitemaps
@@ -168,4 +179,5 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 * **(Optional)** An image:image property should be output for each image in / associated with a page, with:
  * A loc property (referencing the absolute URL of the image)
  * **(Optional)** A title property, referencing the image caption
+
 The news XML sitemap uses a dedicated XSL file.

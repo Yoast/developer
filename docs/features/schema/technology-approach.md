@@ -85,12 +85,14 @@ See the relevant [pieces documentation](pieces.md) in each case for the correct 
 
 ### `{{identifier}}` composition
 The `{{identifier}}` parameter should always be constructed using the following cascade:
+
 * A globally unique, stable system ID (e.g., the database ID of an `image`).
 * A globally unique, stable ID synthesized from context (e.g., `abc123-3` for the third `offer` associated with a `product` having ID `abc123`).
 * A sequential integer local to the `WebPage` in which the entity resides (e.g., `4` for the fourth `itemlist` on a given page).
 
 ### Exceptions
 These are also documented in their various [pieces documentation](https://developer.yoast.com/features/schema/pieces/), but bear repeating here.
+
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., https://www.example.com/#/schema/organization/1).
 * The `{{identifier}}` fragment of the `WebSite` which represents "this site" should always be `1` (e.g., https://www.example.com/#/schema/website/1).
@@ -98,12 +100,15 @@ These are also documented in their various [pieces documentation](https://develo
 
 ### Hybrid types & composite IDs
 When the node is a hybrid type (i.e., `@type` is an array of values, such as `['Organization', 'Person']`), then:
+
 * The `{{type}}` value should concatenate the `@type` values in alphabetical order, separated by a hyphen (e.g., `organization-person`), and;
 * The `{{identifier}}`value should concatenate the `{{identifier}}` values from each member, in alphabetical order by `@type` (e.g., `1-abc123` for an `organization` with ID `1` and a `person` with ID `abc123`).
 
 ## Primary entities
 Our model assumes that every URL should represent a *primary entity*- be it an organization, a product, a blog post (or collection of blog posts), a person, or some other *thing*.
+
 We always aim for that 'primary entity' to be at the centre of the network graph on each page. This mental model aligns closely to how we want search engines to understand our networks; it allows us to articulate our content in ways such as, "This *URL* represents a `Recipe`, which is part of an `Article`, which was written by a `Person`, on a `WebPage`, which is part of a `WebSite`, which is operated by an `Organization`".
+
 The code examples throughout this document reflect this approach; we constructs directional relationships between entities with the use of `hasPart`, `isPartOf`, `mainEntityOfPage` and similar connections.
 
 ## Code fragmentation & placement
@@ -112,6 +117,7 @@ Sometimes placement in the `<head>` is impossible, for example due to architectu
 Because we're using `@id` attributes to join pieces, it's technically possible to split and distribute the code throughout the page, through multiple `<script>` tags and graph structures, and to simply cross-reference entities via their IDs as per the approach outlined in this document. It's also possible to *extend* an existing piece by creating a new reference to it with the same ID, elsewhere in the page.
 
 We generally recommend that system authors attempt to avoid this kind of fragmentation when possible (as it introduces fragility and obfuscation into an already complex system), but, recognize that it's sometimes necessary.
+
 In fact, we use this approach in some of our own solutions when it's not possible to compute and output everything in the `<head>`. For example, our [Yoast WooCommerce SEO plugin](https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/) relies on parsing product information which isn't available during initialization, and so outputs a secondary `<script>` blog in the page's footer which contains additions to the page's graph (specifically, product and review information). This additional graph stitches seamlessly to create a cohesive whole.
 
 ## Hybrid types

@@ -11,7 +11,6 @@ This documentation provides technical information about which meta tags [Yoast S
 We output a variety of `<meta>` tags in the `<head>` of each page, in order to better inform data consumers about the content of the page in question.
 
 ## Titles & descriptions
-
 The following tags describe the page for search engines and general consumers:
 
 | Tag | Description |
@@ -20,7 +19,6 @@ The following tags describe the page for search engines and general consumers:
 | Meta decription | The metadescription of the page. <br /> <br /> _Will only output if a user-defined meta description (or template) is defined for the page._ |
 
 ## Crawling & indexing directives
-
 The following tags provide instructions to search engines (and other compliant data consumers) about their permissions with regards to consuming and extracting information from a page.
 
 | Tag | Description |
@@ -29,7 +27,6 @@ The following tags provide instructions to search engines (and other compliant d
 | Meta robots | Provides crawling and indexing directives. <br /> <br /> _See [our full meta robots spec](../meta-robots/overview.md) for more information._ |
 
 ## Global social metadata
-
 The following tags provide social networks and platforms (e.g., Facebook, Twitter, Pinterest) with additional information about the page and its content.
 
 Assuming that the respective admin settings are not disabled, these tags are output on all pages (except for _error_ templates, which are described separately).
@@ -46,7 +43,6 @@ Assuming that the respective admin settings are not disabled, these tags are out
 | twitter:site | The twitter handle of the site owner/operator. |
 
 ## Conditional tags
-
 The following tags are only output when their conditions are met:
 
 | Tag | Description | Notes |
@@ -65,7 +61,6 @@ The following tags are only output when their conditions are met:
 | twitter:image | The URL of the primary image of the page, specifically for sharing on Twitter. | Only populated when a specific image (different from the `og:image`) is defined for Twitter, or, when Facebook / `og:image` tags are disabled. |
 
 ## Error templates
-
 Only output the following tags are output:
 
 | Tag | Value |
@@ -77,7 +72,6 @@ Only output the following tags are output:
 | og:site_name | The name of the site. |
 
 ## Deprecated tags
-
 The following tags used to be output by Yoast SEO, but have been removed in recent updates.
 
 | Tag | Description | Reason | Deprecation |

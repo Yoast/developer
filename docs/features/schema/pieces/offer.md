@@ -14,6 +14,7 @@ Describes an offer for a `Product` (typically prices, stock availability, etc).
 
 ## Required properties
 A valid `Offer` must have the following properties.
+
 * `ID`: The site's home URL appended by `#/schema/offer/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `availability`: A schema.org URL representing a schema `itemAvailability` value (e.g., *https://schema.org/OutOfStock*).
 * `price`: The price, omitting any currency symbols, and using '.' to indicate a decimal place.
@@ -23,6 +24,7 @@ A valid `Offer` must have the following properties.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
+
 If the node is not output, any entities which would otherwise have referenced the `Offer` should remove those references (e.g., when a product references an  `Offer`  by ID).
 
 ## Examples

@@ -10,11 +10,9 @@ import Alert from '../../../developer-site/src/components/Alert';
 When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part. An added bonus of this is that you also have a separate setup for writing patches and unit tests.
 
 ## Clone the repository
-
 Clone [WordPress/wordpress-develop](https://github.com/WordPress/wordpress-develop).
 
 ## Expose MySQL port
-
 After cloning has been done, you have to expose the MySQL port, which allows us to connect to it later on.
 
 In `wordpress-develop`, open the `docker-compose.yml` file and change:
@@ -28,7 +26,6 @@ into
 This will expose the port to the local environment.
 
 ## Edit your hosts file
-
 Edit your hosts file by running `sudo nano /etc/hosts` in your terminal and add the following:
 
 ```
@@ -37,13 +34,11 @@ Edit your hosts file by running `sudo nano /etc/hosts` in your terminal and add 
 ```
 
 ## Making your database accessible
-
 To make your database accessible, run the following command:
 
 `sudo ifconfig lo0 alias 10.254.254.254`
 
 ## Tying it all together
-
 The last step is to tie it together with your `wordpress-seo` cloned repository.
 To do this, you'll have to define two environment variables:
 
@@ -58,14 +53,11 @@ WP_PLUGIN_DIR=/Users/andy/Documents/Development/plugin-development-docker/plugin
 ```
 
 <Alert type="warning">
-
 Note the trailing slash in `WP_DEVELOP_DIR` and the absence of it in `WP_PLUGIN_DIR`.
 </Alert>
 
 ## Set up PHPUnit
-
 <Alert>
-
 If you have `WP_DEVELOP_DIR` and `WP_PLUGIN_DIR` as environment variables, you can skip this section.
 </Alert>
 
@@ -74,7 +66,6 @@ Configure your PHPUnit configuration in PhpStorm by going to `Edit Configuration
 ![](https://lh5.googleusercontent.com/9TJaufyDOzjcM9bGn6ELSVnGTL6tfFOlW8LMoTmmOLoOtvANfN36B5kVZ72iesKy8isliFQHmSq2uMPR58FkHwRVqPCF_O9MvdEAhy4QHK1h53Kp6ppiJ83d70AUNLOSFBDvuxyv)
 
 ## Spin up the containers
-
 If you've gone through all the above steps, it's time to start the containers!
 
 In your terminal, run the following commands:
@@ -90,7 +81,5 @@ When you want to stop the containers, you simply can do:
 
 `npm run env:stop`
 
-
 ## Troubleshooting
-
 If you get errors about the database connection, make sure other no MySQL processes are running in the background by running `brew services stop mysql` in your terminal.

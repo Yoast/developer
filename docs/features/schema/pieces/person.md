@@ -71,7 +71,5 @@ Optional properties which should only be output when the required criteria is me
               ]
           }
       ]
-  }
-
-  Get free SEO`}
+  }`}
 </YoastSchemaExample>

@@ -1,5 +1,5 @@
 ---
-id: specification
+id: functional-specification
 title: Meta robots - Functional specification
 sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-robots/specification.md

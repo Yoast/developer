@@ -7,6 +7,9 @@ module.exports = {
 	organizationName: 'Yoast', // Usually your GitHub org/user name.
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	themeConfig: {
+		gtag: {
+			trackingID: 'GTM-NHRB36F',
+		},
 		disableDarkMode: true,
 		sidebarCollapsible: true,
 		navbar: {

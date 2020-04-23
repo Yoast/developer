@@ -14,7 +14,7 @@ module.exports = {
 		},
 		{
 			type: 'category',
-			label: 'Features',
+			label: 'Yoast SEO Features',
 			items: [
 				'features/overview',
 
@@ -30,32 +30,53 @@ module.exports = {
 
 				{
 					type: 'category',
-					label: 'Canonical URLs',
+					label: 'SEO tags',
 					items: [
-						'features/canonical-urls/overview',
-						'features/canonical-urls/functional-specification',
-						'features/canonical-urls/api',
+
+						{
+							type: 'category',
+							label: 'Canonical URLs',
+							items: [
+								'features/seo-tags/canonical-urls/overview',
+								'features/seo-tags/canonical-urls/functional-specification',
+								'features/seo-tags/canonical-urls/api',
+							],
+						},
+
+						{
+							type: 'category',
+							label: 'Meta robots',
+							items: [
+								'features/seo-tags/meta-robots/overview',
+								'features/seo-tags/meta-robots/functional-specification',
+								'features/seo-tags/meta-robots/api',
+							],
+						},
 					],
 				},
 
 				{
 					type: 'category',
-					label: 'Meta robots',
+					label: 'OpenGraph',
 					items: [
-						'features/meta-robots/overview',
-						'features/meta-robots/functional-specification',
-						'features/meta-robots/api',
+						'features/opengraph/overview',
+						'features/opengraph/functional-specification',
+						{
+							type: 'category',
+							label: 'API',
+							items: [
+								'features/opengraph/api/overview',
+								'features/opengraph/api/changing-og-locale-output',
+							]
+						},
 					],
 				},
 
 				{
 					type: 'category',
-					label: 'Meta tags',
+					label: 'Twitter',
 					items: [
-						'features/meta-tags/overview',
-						'features/meta-tags/functional-specification',
-						'features/meta-tags/extensions-and-addons',
-						'features/meta-tags/api',
+						'features/twitter/functional-specification',
 					],
 				},
 
@@ -86,7 +107,6 @@ module.exports = {
 					type: 'category',
 					label: 'Yoast SEO',
 					items: [
-						'customization/yoast-seo/changing-og-locale-output',
 						'customization/yoast-seo/api-filter-actions-deprecations',
 						'customization/yoast-seo/adding-custom-data-analysis',
 					],

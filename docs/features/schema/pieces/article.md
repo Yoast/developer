@@ -26,9 +26,8 @@ A valid `Article` must have the following properties.
 * `author`: A reference-by-ID to the author of the article.
 * `publisher`: A reference-by-ID to the publisher of the article.
 * `image`: An image object (or array of all images in the article content), referenced by ID.
-
-	* Must be at least `696` pixels wide.
-	* Must be of the following formats+file extensions: `.jpg`, `.png`, or `.gif`.
+   * Must be at least `696` pixels wide.
+   * Must be of the following formats+file extensions: `.jpg`, `.png`, or `.gif`.
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
@@ -67,9 +66,8 @@ Optional properties which should only be output when the required criteria are m
 * `commentCount`: An integer value of the number of comments associated with the article.
 * `comment`: An array of references-by-ID the comments associated with the article.
 * `potentialAction`: A `CommentAction` object with values:
-
-	* `name`: "Comment".
-	* `target`: The `url` property of the parent `WebPage`, appended with `#comment`.
+   * `name`: "Comment".
+   * `target`: The `url` property of the parent `WebPage`, appended with `#comment`.
 
 ## Transformations
 The `Article` type may be transformed in the following scenarios:

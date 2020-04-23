@@ -1,14 +1,16 @@
 ---
 id: technology-approach
-title: Technology and approach
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps.md
+title: Schema - Technology and approach
+sidebar_label: Technology
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/technology-approach.md
+description: An overview of some of the technical choices and standards used in our schema.org outputs.
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 
 ## JSON-LD as a preferred format
 Structured markup can be implemented in a number of ways, and via a number of different standards. We’re particularly interested in the standards defined by [schema.org](https://schema.org/) , given Google’s close adherence to their specifications.
 
- [Schema.org](http://schema.org/) markup can be added to web pages in a number of ways. Of all of the available approaches, **we believe that including JSON-LD in the HTML source code of the page is the best (current) approach**.
+[Schema.org](http://schema.org/) markup can be added to web pages in a number of ways. Of all of the available approaches, **we believe that including JSON-LD in the HTML source code of the page is the best (current) approach**.
 
 JSON-LD provides the flexibility, scalability, and standardization we require to achieve a consistent and extensible foundation. While it lacks some of the potential benefits of ‘inlining’ (where structured markup is implemented directly as part of the HTML code representing those entities), its strengths, flexibility and scalability far outweigh these limitations.
 
@@ -52,27 +54,27 @@ ID parameters should always adopt the following structure:
 
 `{{website}}{{slug}}/#/schema/{{type}}/{{ID}}` E.g., `https://www.example.com/#/schema/image/abc123`.
 
-[Pieces](https://developer.yoast.com/features/schema/pieces/) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content. 
+[Pieces](https://developer.yoast.com/features/schema/pieces/) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content.
 
-For example, a [HowTo](https://developer.yoast.com/features/schema/pieces/howto/) piece is an explicit child of the [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) (or [Article](https://developer.yoast.com/features/schema/pieces/article/) ) within which it resides. A [Person](https://developer.yoast.com/features/schema/pieces/person/) or an [image](https://developer.yoast.com/features/schema/pieces/image/) , however, exists independently of a [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) or [Article](https://developer.yoast.com/features/schema/pieces/article/) which references it. 
+For example, a [HowTo](https://developer.yoast.com/features/schema/pieces/howto/) piece is an explicit child of the [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) (or [Article](https://developer.yoast.com/features/schema/pieces/article/)) within which it resides. A [Person](https://developer.yoast.com/features/schema/pieces/person/) or an [image](https://developer.yoast.com/features/schema/pieces/image/) , however, exists independently of a [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) or [Article](https://developer.yoast.com/features/schema/pieces/article/) which references it.
 
 Local pieces should include the `{{slug}}` component. Global pieces should not.
 
 **Example global pieces:**
-* `https://www.example.com/#/schema/organization/abc123
-* `https://www.example.com/#/schema/image/abc123
-* `https://www.example.com/#/schema/person/abc123
-* `https://www.example.com/#/schema/location/abc123
-* `https://www.example.com/#/schema/address/abc123
-* `https://www.example.com/#/schema/website/abc123
-* `https://www.example.com/#/schema/product/abc123
-* `https://www.example.com/#/schema/offer/abc123
+* https://www.example.com/#/schema/organization/abc123
+* https://www.example.com/#/schema/image/abc123
+* https://www.example.com/#/schema/person/abc123
+* https://www.example.com/#/schema/location/abc123
+* https://www.example.com/#/schema/address/abc123
+* https://www.example.com/#/schema/website/abc123
+* https://www.example.com/#/schema/product/abc123
+* https://www.example.com/#/schema/offer/abc123
 
 **Example local pieces:**
-* `https://www.example.com/example-page/#/schema/article/abc123
-* `https://www.example.com/example-category/example-post/#/schema/breadcrumb/abc123
-* `https://www.example.com/example-category/example-post/#/schema/howto/abc123
-* `https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123
+* https://www.example.com/example-page/#/schema/article/abc123
+* https://www.example.com/example-category/example-post/#/schema/breadcrumb/abc123
+* https://www.example.com/example-category/example-post/#/schema/howto/abc123
+* https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123
 
 See the relevant [pieces documentation](https://developer.yoast.com/features/schema/pieces/) in each case for the correct structure (where defined).
 
@@ -89,15 +91,13 @@ The `{{identifier}} `parameter should always be constructed using the following 
 
 ### Exceptions
 These are also documented in their various [pieces documentation](https://developer.yoast.com/features/schema/pieces/) , but bear repeating here.
-
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
-* The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., `https://www.example.com/#/schema/organization/1`).
-* The `{{identifier}}` fragment of the `WebSite` which represents “this site” should always be `` (e.g., `https://www.example.com/#/schema/website/1`).
+* The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., https://www.example.com/#/schema/organization/1).
+* The `{{identifier}}` fragment of the `WebSite` which represents “this site” should always be `1` (e.g., https://www.example.com/#/schema/website/1).
 * The `{{identifier}}` fragment of a `person `should always be obfuscated.
 
 ### Hybrid types & composite IDs
 When the node is a hybrid type (i.e., `@type` is an array of values, such as `[‘Organization’, ‘Person’]`), then:
-
 * The `{{type}}` value should concatenate the `@type` values in alphabetical order, separated by a hyphen (e.g., `organization-person`), and;
 * The `{{identifier}}`value should concatenate the `{{identifier}}` values from each member, in alphabetical order by `@type` (e.g., `1-abc123` for an `organization` with ID `1` and a `person` with ID `abc123`).
 

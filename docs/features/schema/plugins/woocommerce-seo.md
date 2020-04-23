@@ -3,6 +3,7 @@ id: woocommerce-seo
 title: Schema output for WooCommerce SEO
 sidebar_label: WooCommerce SEO
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/woocommerce-seo.md
+description: Describes the schema output of Yoast's "WooCommerce SEO" plugin for WordPress.
 ---
 The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about products and ecommerce functionality.
 

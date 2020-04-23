@@ -3,6 +3,7 @@ id: news-seo
 title: Schema output for News SEO for WordPress
 sidebar_label: News SEO for WordPress
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/news-seo.md
+description: Describes the schema output of Yoast's "News SEO" plugin for WordPress.
 ---
 The schema output for [News SEO for WordPress](https://yoast.com/wordpress/plugins/news-seo/) builds upon  [Yoast SEO for WordPress’ base schema output](yoast-seo.md), to provide additional *news* context and detail.
 

@@ -3,6 +3,7 @@ id: yoast-seo
 title: Schema output for Yoast SEO
 sidebar_label: Yoast SEO
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo.md
+description: Describes the schema output of the Yoast SEO plugin for WordPress.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 

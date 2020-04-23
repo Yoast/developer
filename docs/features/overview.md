@@ -8,6 +8,6 @@ This page is a placeholder which acts as a hub for all of the technical document
 
 ## Features
 * [XML sitemaps](xml-sitemaps/overview.md)
-* [Canonical URLs](canonical-urls/overview.md)
-* [Meta robots](meta-robots/overview.md)
+* [Canonical URLs](seo-tags/canonical-urls/overview.md)
+* [Meta robots](seo-tags/meta-robots/overview.md)
 * [Schema.org markup](schema/overview.md)

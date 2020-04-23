@@ -22,9 +22,11 @@ An up-to-date list of all possible meta robots values and their relationships is
 ## Standard structure
 Yoast SEO outputs *three* meta robots tags by default on each (public) page, with the following structure:
 
-* `<meta name="robots" content="{{values}}" />`
-* `<meta name="googlebot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`
-* `<meta name="bingbot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`
+``` html
+<meta name="robots" content="{{values}}" />
+<meta name="googlebot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+```
 
 This provides generic instructions to all robots, and, opts users into Google and Bing's specific handling of snippet/media restrictions.
 

@@ -8,7 +8,7 @@ Welcome to the Yoast Developer portal, the place to find any technical informati
 
 Currently, we have the following features documented:
 
-- [Canonical URL page](features/canonical-urls/overview.md)
-- [Meta robots](features/meta-robots/overview.md)
+- [Canonical URL page](features/seo-tags/canonical-urls/overview.md)
+- [Meta robots](features/seo-tags/meta-robots/overview.md)
 - [Schema.org](features/schema/overview.md)
 - [XML sitemaps](features/xml-sitemaps/overview.md)

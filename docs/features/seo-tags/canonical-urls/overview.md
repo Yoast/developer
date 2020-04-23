@@ -9,7 +9,7 @@ This documentation provides technical information about how [Yoast SEO](https://
 
 ## Resources
 * Our [functional specification](functional-specification.md) describes the logic we use to determine, construct and output a canonical URL value for any given type of request.
-* Our [API documentation](api.md) [coming soon] provides examples of how technical users and developers can modify the default behavior.
+* Our [API documentation](api.md) provides examples of how technical users and developers can modify the default behavior.
 * You can learn more about the role of canonical URLs in our products on our [feature overview page]() [coming soon].
 
 ## Further reading

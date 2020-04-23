@@ -12,7 +12,7 @@ The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plug
 ## Core logic
 
 ### When a Primary Location is defined
-* Merge properties from the business’ *Primary Location* into the main `Organization` (i.e., the one in the *base script*) to attempt to extend it into a `LocalBusiness`.
+* Merge properties from the business' *Primary Location* into the main `Organization` (i.e., the one in the *base script*) to attempt to extend it into a `LocalBusiness`.
 
 ### When a Primary Location is not defined
 * Add any shared/default Location properties (such as `email`, `VAT`, `priceRange` ) to the main `Organization`.

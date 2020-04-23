@@ -22,7 +22,7 @@ A valid `Recipe` must have the following properties.
 * `recipeIngredient`: An array of strings representing each ingredient and quantity (e.g., "3 apples").
 * `recipeInstructions`: An array of `HowToStep` objects, with the following properties:
  * `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/recipe-step/{{ID}}`, where `{{ID}}` is a unique identifier.
- * `url`: A link to a fragment identifier (an 'ID anchor') of the individual step (e.g., `https://www.example.com/example-page/#recipe-step-5` ).
+ * `url`: A link to a fragment identifier (an 'ID anchor') of the individual step (e.g., `https://www.example.com/example-page/#recipe-step-5`).
  * `text`: The instruction string ("e.g., "Bake at 200*C for 40 minutes, or until golden-brown, stirring periodically throughout").
  * `name` (optional): A short summary of the step (e.g., "Bake").
  * `image` (optional): An image representing the step, referenced by ID.

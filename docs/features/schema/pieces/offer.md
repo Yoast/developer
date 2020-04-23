@@ -14,9 +14,9 @@ Describes an offer for a `Product` (typically prices, stock availability, etc).
 
 ## Required properties
 A valid `Offer` must have the following properties.
-* `ID`: The site’s home URL appended by `#/schema/offer/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `ID`: The site's home URL appended by `#/schema/offer/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `availability`: A schema.org URL representing a schema `itemAvailability` value (e.g., *https://schema.org/OutOfStock*).
-* `price`: The price, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
+* `price`: The price, omitting any currency symbols, and using '.' to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
 * `url`: The canonical URL of the page containing the `Offer`.
 * `priceSpecification`: A `PriceSpecification` object, including a `price`, `priceCurrency`, and `valueAddedTaxIncluded` property.

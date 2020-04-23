@@ -3,7 +3,7 @@ id: integration-guidelines
 title: Schema - Integration guidelines
 sidebar_label: Integration guidelines
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/integration-guidelines.md
-description: Integrating with Yoast’s structured data framework is easy, and, we encourage all plugin/theme/software authors to consider adopting and extending our approach.
+description: Integrating with Yoast's structured data framework is easy, and, we encourage all plugin/theme/software authors to consider adopting and extending our approach.
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 

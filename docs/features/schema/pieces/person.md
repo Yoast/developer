@@ -15,15 +15,15 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 
 ## Required properties
 A valid `Person` must have the following properties.
-* `@id`: The site’s home URL appended by `#/schema/person/{{ID}}`, where `{{ID}}` is a unique identifier. Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
+* `@id`: The site's home URL appended by `#/schema/person/{{ID}}`, where `{{ID}}` is a unique identifier. Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
 * `name`: The full name of the `Person`.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 If the node is not output, any entities which would otherwise have declared a relationship with the `Person` (e.g., as the `publisher` of a `WebSite`, or the `author` of an `Article`) should remove those references.
 
-#### ‘Admin’ usernames
-If the `name` of the person is ‘*admin*’ or similar (or localised equivalents), then the `Person` should be invalidated; we should never present content as being authored by ‘admin’.
+#### 'Admin' usernames
+If the `name` of the person is '*admin*' or similar (or localised equivalents), then the `Person` should be invalidated; we should never present content as being authored by 'admin'.
 
 ## Optional properties
 The following should be added whenever available and valid:

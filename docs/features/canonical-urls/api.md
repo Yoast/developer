@@ -7,7 +7,7 @@ description: Instructions on how to modify our canonical URL values programmatic
 ---
 
 # Yoast SEO canonical API
-To change the canonical URL that Yoast SEO generated for a URL programatically, you can use the `wpseo_canonical` filter.
+To change the canonical URL that Yoast SEO generated for a URL programmatically, you can use the `wpseo_canonical` filter.
 
 ## Change the canonical URL
 For example, the following code would change the canonical on a page with ID `12345`:

@@ -35,7 +35,7 @@ If the node is not output, the parent `WebPage` node should be altered to refere
 * `commentCount`
 
 #### Missing images
-If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they’re valid candidates (in the following order of precedence):
+If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they're valid candidates (in the following order of precedence):
 * The image used in the `primaryImageOfPage` property of the parent `WebPage`.
 * The first image in the `image` array attached to the parent `WebPage`.
 If no suitable image is found, the node should fail (and adhere to the *Failure scenarios*).

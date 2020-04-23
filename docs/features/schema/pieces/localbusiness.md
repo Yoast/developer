@@ -3,11 +3,11 @@ id: localbusiness
 title: Schema piece - LocalBusiness
 sidebar_label: LocalBusiness
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/localbusiness.md
-description: Describes a business which allows public visitation. Typically used to represent the business ‘behind’ the website, or on a page about a specific business.
+description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-Describes a business which allows public visitation. Typically used to represent the business ‘behind’ the website, or on a page about a specific business.
+Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 May be transformed into a more specific type (such as `library`), or extend an existing `Organization` if the required conditions are met.
 
 ## Triggers

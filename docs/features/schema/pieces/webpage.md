@@ -8,7 +8,7 @@ Description: Describes a single page on a 'WebSite'. Acts as a container for sub
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
 Describes a single page on a `WebSite`. Acts as a container for sub-page elements (such as `Article`).
-Acts as a connector from a page’s content to the parent `WebSite` (and in turn, to the `Organization`).
+Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the `Organization`).
 
 May be transformed into a more specific type (such as `FAQPage` ) if the required conditions are met.
 
@@ -30,12 +30,12 @@ If the node is not output, any entities which would otherwise have declared them
 
 ## Optional properties
 The following should be added whenever available and valid:
-* `description`: The page’s meta description content.
+* `description`: The page's meta description content.
 * `inLanguage`: The language code for the page; e.g., `en-GB`.
 * `datePublished`: The time at which the page was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `dateModified`: The time at which the page was last modified, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
-* `primaryImageOfPage`: A reference-by-ID to a node representing the page’s featured image.
-* `breadcrumb`: A reference-by-ID to a node representing the page’s breadrumb structure [[link](https://developer.yoast.com/features/schema/pieces/breadcrumb/)].
+* `primaryImageOfPage`: A reference-by-ID to a node representing the page's featured image.
+* `breadcrumb`: A reference-by-ID to a node representing the page's breadrumb structure [[link](https://developer.yoast.com/features/schema/pieces/breadcrumb/)].
 * `image`: An array of all images in the page content, referenced by ID (including the image referenced by the `primaryImageOfPage`).
 * `video`: An array of all videos in the page content, referenced by ID.
 * `keywords`: An array of the names of tags attached to the page (e.g., `["cats","dogs","cake"]`).
@@ -55,7 +55,7 @@ Optional properties which should only be output when the required criteria is me
 
 ### When it's a homepage
 * Add an additional `about` property which references the main entity of the site (typically an `Organization` or `Person`, depending on user configuration).
-* If there’s no explicitly defined featured image for the page, set the `primaryImageOfPage` to the (`imageObject` representing the) site’s logo.
+* If there's no explicitly defined featured image for the page, set the `primaryImageOfPage` to the (`imageObject` representing the) site's logo.
 
 ## Transformations
 The `WebPage` type may be transformed in the following scenarios.

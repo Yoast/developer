@@ -9,7 +9,7 @@ When you enable OpenGraph in Yoast SEO, it'll output an `og:locale` meta tag. Th
 So, if you want it to output `nl_NL` instead of the default `en_US`, you simply switch your WordPress installs' language to `nl_NL`. You can read [how to do that on the WordPress codex](http://codex.wordpress.org/WordPress_in_Your_Language).
 
 ## Change the `og:locale` tag
-If you don’t want to change the language of your WordPress install but _do_ want to change the locale output of Yoast SEO, you can do so by filtering the output. You should add code that looks like this to your theme’s `functions.php`:
+If you don't want to change the language of your WordPress install but _do_ want to change the locale output of Yoast SEO, you can do so by filtering the output. You should add code that looks like this to your theme's `functions.php`:
 
 ```php
 function yst_wpseo_change_og_locale( $locale ) {
@@ -21,7 +21,7 @@ add_filter( 'wpseo_locale', 'yst_wpseo_change_og_locale' );
 
 ## Remove the `og:locale` tag
 
-If you would like to remove the `og:locale` you will need to unhook `WPSEO_OpenGraph->locale()` from `wpseo_opengraph` by adding the code below to your theme’s `functions.php` file.
+If you would like to remove the `og:locale` you will need to unhook `WPSEO_OpenGraph->locale()` from `wpseo_opengraph` by adding the code below to your theme's `functions.php` file.
 This code snippet works in most cases, however, it does not work if you are using PHP 5.2 on your server. For the health and safety of your site, we recommend creating a backup of your site and database prior to any code changes, as we are unable to guarantee exactly what would happen on your specific site.
 
 ```php

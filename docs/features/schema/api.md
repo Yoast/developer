@@ -60,7 +60,7 @@ add_filter( 'wpseo_schema_article', 'example_change_article' );
  * @return array $data Schema.org Article data array.
  */
 function example_change_article( $data ) {
-  $data[‘@type’] = ‘NonsensePage’;
+  $data['@type'] = 'NonsensePage';
   return $data;
 }
 ```
@@ -188,8 +188,8 @@ public function render_joost_block_schema( $graph, $block, $context ) {
 Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
 
 ``` php
-add_filter( ‘wpseo_schema_needs_person’, ‘__return_true’);
-add_filter( ‘wpseo_schema_person_user_id’, function() {
+add_filter( 'wpseo_schema_needs_person', '__return_true');
+add_filter( 'wpseo_schema_person_user_id', function() {
   return 1; // Make sure 1 is a valid User ID.
 } );
 ```

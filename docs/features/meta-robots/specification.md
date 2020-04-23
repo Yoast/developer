@@ -7,7 +7,7 @@ description: An overview of how meta robots work in Yoast SEO.
 ---
 When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines, we output a meta robots tag in the `<head>` of that page.
 The tag takes the following format, where {{values}} may be a single value or a comma-separated list of values.
-`<meta name=“robots” content=“{{values}}” />`
+`<meta name="robots" content="{{values}}" />`
 In cases where crawling, indexing and content usage are unrestricted, no tag is output.
 
 ## Constructing {{values}}

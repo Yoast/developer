@@ -80,11 +80,11 @@ See the relevant [pieces documentation](pieces.md) in each case for the correct 
 
 **Notes:**
 * `website` is the `protocol` + `hostname` of the site (e.g., `https://www.example.com`).
-* `type `should always be forced to lowercase, and all spaces/delimiters removed.
+* `type` should always be forced to lowercase, and all spaces/delimiters removed.
 * `slug` is the page/request path (e.g., `/example-category/example-post/`).
 
-### `{{identifier}} `composition
-The `{{identifier}} `parameter should always be constructed using the following cascade:
+### `{{identifier}}` composition
+The `{{identifier}}` parameter should always be constructed using the following cascade:
 * A globally unique, stable system ID (e.g., the database ID of an `image`).
 * A globally unique, stable ID synthesized from context (e.g., `abc123-3` for the third `offer` associated with a `product` having ID `abc123`).
 * A sequential integer local to the `WebPage` in which the entity resides (e.g., `4` for the fourth `itemlist` on a given page).
@@ -94,7 +94,7 @@ These are also documented in their various [pieces documentation](https://develo
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., https://www.example.com/#/schema/organization/1).
 * The `{{identifier}}` fragment of the `WebSite` which represents "this site" should always be `1` (e.g., https://www.example.com/#/schema/website/1).
-* The `{{identifier}}` fragment of a `person `should always be obfuscated.
+* The `{{identifier}}` fragment of a `person` should always be obfuscated.
 
 ### Hybrid types & composite IDs
 When the node is a hybrid type (i.e., `@type` is an array of values, such as `[‘Organization’, ‘Person’]`), then:

@@ -9,17 +9,21 @@ This documentation provides technical information about which additional meta ta
 
 ## Yoast WooCommerce SEO plugin
 
-The following tags are added to _product pages_ when this plugin is enabled.
+The following tags are added to (or altered on) _product pages_ when this plugin is enabled.
 
+| Tag | Description |
+|---|----|
+| og:type | `product` |
+| og:availability | The stock availability status. |
+| product:retailer_item_id | The product's retailer ID. |
+| product:condition | The product's condition. |
+| product:availability | The stock availability status. |
+
+### On simple products only
 | Tag | Description |
 |---|----|
 | product:price:amount | The price (omitting a currency symbol, and using `.` as a delimiter). |
 | product:price:currency | The currency code. |
-| product:retailer_item_id | The product's retailer ID. |
-| product:condition | The product's condition. |
-| og:availability | The stock availability status. |
-| product:availability | The stock availability status. |
-| og:type | `product` on product pages. |
 
 ## Yoast Video SEO plugin
 

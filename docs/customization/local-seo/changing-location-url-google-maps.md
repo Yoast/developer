@@ -1,7 +1,7 @@
 ---
 id: changing-location-url-google-maps
 title: Changing the Location URL in Google Maps
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/changing-location-url-google-maps.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/local-seo/changing-location-url-google-maps.md
 ---
 
 [Yoast SEO: Local](https://yoast.com/wordpress/plugins/local-seo/) and [Yoast SEO: Local SEO for WooCommerce](https://yoast.com/wordpress/plugins/local-seo-for-woocommerce/) include the ability to add a Google map for your location(s). The URL in the map, by default, points to the Yoast SEO location page on your website. In some cases, you may prefer to link to a different URL.

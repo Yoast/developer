@@ -1,7 +1,7 @@
 ---
 id: enhancing-search-results
 title: Enhancing search results
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/enhancing-search-results.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/local-seo/enhancing-search-results.md
 ---
 One of the hidden features of the Local SEO plugin is enhancing your website’s internal search results with your location content. In rare cases, the enhanced search results can conflict with other plugin or theme features. Therefore, Local SEO version 7.1 introduced developer filters to disable these enhancements.
 

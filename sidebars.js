@@ -23,7 +23,7 @@ module.exports = {
 					label: 'XML sitemaps',
 					items: [
 						'features/xml-sitemaps/overview',
-						'features/xml-sitemaps/specification',
+						'features/xml-sitemaps/functional-specification',
 						'features/xml-sitemaps/api',
 					],
 				},
@@ -33,7 +33,7 @@ module.exports = {
 					label: 'Canonical URLs',
 					items: [
 						'features/canonical-urls/overview',
-						'features/canonical-urls/specification',
+						'features/canonical-urls/functional-specification',
 						'features/canonical-urls/api',
 					],
 				},
@@ -43,7 +43,7 @@ module.exports = {
 					label: 'Meta robots',
 					items: [
 						'features/meta-robots/overview',
-						'features/meta-robots/specification',
+						'features/meta-robots/functional-specification',
 						'features/meta-robots/api',
 					],
 				},
@@ -53,7 +53,7 @@ module.exports = {
 					label: 'Meta tags',
 					items: [
 						'features/meta-tags/overview',
-						'features/meta-tags/specification',
+						'features/meta-tags/functional-specification',
 						'features/meta-tags/extensions-and-addons',
 						'features/meta-tags/api',
 					],
@@ -66,7 +66,7 @@ module.exports = {
 						'features/schema/overview',
 						'features/schema/background',
 						'features/schema/technology-approach',
-						'features/schema/specification',
+						'features/schema/functional-specification',
 						'features/schema/integration-guidelines',
 						'features/schema/api',
 						{

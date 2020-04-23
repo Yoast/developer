@@ -9,6 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import YoastSchemaExample from '../../developer-site/src/components/YoastSchemaExample';
 
 This document is a living document, describing the functionality of Yoast SEO for any platform.
+
 It starts with a general specification, describing the functionality a Yoast SEO module should always guarantee, regardless of the platform for which it has been built. Further down you will find more platform specific requirements.
 
 ## Yoast SEO: general specification

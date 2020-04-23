@@ -8,7 +8,6 @@ description: Instructions on how to modify our schema output programmatically.
 import Alert from '../../../../developer-site/src/components/Alert';
 
 <Alert>
-
 The release of [Yoast SEO 14.0](https://developer.yoast.com/upcoming-release-yoast-seo-14-0-indexables/) in April 2020 brings significant changes to how our Schema API and integration mechanics work. This document reflects our API *after* that release.
 </Alert>
 
@@ -37,7 +36,6 @@ to remove some, or better yet, add your own. To do this you should use the `wpse
 Each of our graph pieces implements a `WPSEO_Graph_Piece` interface. We pass each of these pieces a `WPSEO_Schema_Context` object which has a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/frontend/schema/class-schema-author.php).
 
 ## Referencing other graph pieces
-
 You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the
 `Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many
 others. For instance if a piece you are adding needs to reference the `Organization` piece, all you have to do is this:
@@ -184,6 +182,7 @@ public function render_joost_block_schema( $graph, $block, $context ) {
 ```
 
 ## More specific filters
+
 ### Enable / disabling graph pieces by filter
 Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
 

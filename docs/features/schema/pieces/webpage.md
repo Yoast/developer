@@ -8,6 +8,7 @@ Description: Describes a single page on a 'WebSite'. Acts as a container for sub
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
 Describes a single page on a `WebSite`. Acts as a container for sub-page elements (such as `Article`).
+
 Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the `Organization`).
 
 May be transformed into a more specific type (such as `FAQPage` ) if the required conditions are met.
@@ -25,11 +26,12 @@ A valid `WebPage` must have the following properties.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
-If the node is not output, any entities which would otherwise have declared themselves to be part of the `WebPage` should remove those references
-(e.g., an `Article` which has a `mainEntityOfPage` property referencing the ID of the `WebPage` should unset that property).
+
+If the node is not output, any entities which would otherwise have declared themselves to be part of the `WebPage` should remove those references (e.g., an `Article` which has a `mainEntityOfPage` property referencing the ID of the `WebPage` should unset that property).
 
 ## Optional properties
 The following should be added whenever available and valid:
+
 * `description`: The page's meta description content.
 * `inLanguage`: The language code for the page; e.g., `en-GB`.
 * `datePublished`: The time at which the page was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
@@ -65,6 +67,7 @@ When the query returns a loop of posts (e.g., a category archive, a blog homepag
 
 ### Profile pages
 When the page is about a particular user (e.g., an member bio / author archive):
+
 * The `type` property should be altered to an array of `[WebPage, ProfilePage]`.
 * Add a `mainEntityOfPage` property to the `Person` which the page is about, which references the `WebPage` by ID.
 

@@ -14,6 +14,7 @@ Should be output on all public pages.
 
 ## Required properties
 A valid `WebSite` must have the following properties.
+
 * `@id`: The site's home URL appended by `#/schema/website/{{ID}}`,
 * where `{{ID}}` is a globally unique, stable identifier.
  * If the `WebSite` is the website being viewed/consumed (i.e., "*this website*"), then the value of `{{ID}}` should be `1`.
@@ -23,10 +24,12 @@ A valid `WebSite` must have the following properties.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
+
 If the node is not output, the `WebPage` node should inherit the `publisher` property (when valid and present).
 
 ## Optional properties
 The following should be added whenever available and valid:
+
 * `potentialAction`: A `SearchAction` object describing the site's internal search.
 * `inLanguage`: The language code for the WebSite; e.g., `en-GB`.
  * If the website is available in multiple languages, then output an array of `inLanguage` values.

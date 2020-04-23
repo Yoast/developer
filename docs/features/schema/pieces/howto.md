@@ -14,6 +14,7 @@ Should be added as a top-level node in the graph, when the content of a page con
 
 ## Required properties
 A valid `HowTo` must have the following properties.
+
 * `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/howto/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `mainEntityOfPage`: Referencing the `WebPage` by ID.
 * `name`: A string describing the guide.
@@ -24,10 +25,12 @@ A valid `HowTo` must have the following properties.
 
 ## Failure scenarios
 If any of the required fields of the `HowTo` or of a `step` are missing or invalid, the node should not be output.
+
 If a node is not output, any entities which would otherwise have declared a relationship with it should remove those references.
 
 ## Optional properties
 The following should be added whenever available and valid:
+
 * `totalTime`: The total time required to complete the instructions, in ISO 8601 duration format.
 * `description`: Introduction or description content relating to the HowTo guide.
 * `inLanguage`: The language code for the guide; e.g., `en-GB`.

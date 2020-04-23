@@ -14,6 +14,7 @@ Should be added as top-level node in the graph, as/when required by other nodes.
 
 ## Required properties
 A valid `BreadcrumbList` must have the following properties.
+
 * `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `itemListElement`: An array of `ListItem` objects, with the following properties:
  * `position`: An integer (starting at `1`), counting the depth of the page from the homepage.
@@ -24,6 +25,7 @@ A valid `BreadcrumbList` must have the following properties.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
+
 If the node is not output, any entities which would otherwise have declared a relationship with the `breadcrumb` should remove those references.
 
 ## Conditional properties

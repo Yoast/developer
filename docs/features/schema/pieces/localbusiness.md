@@ -8,6 +8,7 @@ description: Describes a business which allows public visitation. Typically used
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
 Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
+
 May be transformed into a more specific type (such as `library`), or extend an existing `Organization` if the required conditions are met.
 
 ## Triggers
@@ -42,6 +43,7 @@ The following should be added whenever available and valid:
 * `taxID`: The tax ID of the business.
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

@@ -14,6 +14,7 @@ Should be added as a `potentialAction` property on the `WebSite` node, when the 
 
 ## Required properties
 A valid `SearchAction` must have the following properties.
+
 * `target`: An object of type `EntryPoint`, with a `urlTemplate` which describes the URL pattern of the internal search function (e.g., `https://www.example.com/?s={search_term_string}`).
 * `query-input`: An object of type `PropertyValueSpecification`, with the following properties:
  * `valueRequired`: Boolean `true`.

@@ -12,7 +12,6 @@ This page describes the tools used at Yoast when developing the various plugins 
 ## Generic tools
 
 ### Homebrew
-
 Homebrew is a package manager for OSX, similar to `apt`, `yum` and `pip` and allows you to easily install and update software from the command line.
 
 Installing Homebrew is pretty straight-forward:
@@ -23,7 +22,6 @@ Installing Homebrew is pretty straight-forward:
 More information about how to work with Homebrew can be found at: [http://brew.sh/](http://brew.sh/)
 
 ### Iterm2 and Oh-My-Zsh (Optional)
-
 iTerm2 is a replacement for the default terminal application that can be found on Mac OSX. The reason we suggest you install this is because it adds a lot of extra features when working in your terminal. [Click here](https://www.iterm2.com/features.html) to see what kind of snazzy features are included!
 
 [Oh-My-Zsh](https://ohmyz.sh/) is a shell for your command line that adds certain features that can't be done in a regular shell without a lot of hassle. It also allows you to more easily manage your zsh configurations.
@@ -41,7 +39,6 @@ Example:
 *   Better auto-completion for directories and filenames.
 
 ### Git / GitHub
-
 Within Yoast, Git is used for version control. Don't know how Git works? Check out [this tutorial](https://try.github.io/levels/1/challenges/1). Our Git repositories are all hosted on GitHub. If you don't have one already, go and [create an account](https://github.com/signup).
 
 Install git by running `brew install git`
@@ -51,17 +48,14 @@ Documentation on how to configure your local Git setup and how to add your SSH k
 [Add a global git ignore file](version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
 
 ### Docker
-
 At Yoast, we make use of [Docker](https://docker.com) as the foundation for our development setup. To get developers up and running faster, we created [our own development setup](https://github.com/Yoast/plugin-development-docker), based on Docker, that you can freely use.
 
 ### Sequel Pro
-
 To manage and search your database in an easy and quick way, Sequel Pro is the tool to use. You can download the latest version from: [https://www.sequelpro.com/](https://www.sequelpro.com/)
 
 To find out how to connect to the Docker database, [check out the instructions](https://github.com/Yoast/plugin-development-docker#connecting-to-the-database) on the Plugin Development Docker repository.
 
 ### xgettext
-
 xgettext is a GNU internationalization (i18n) and localization (l10n) library. At the time of writing this is needed to build the wordpress-seo plugin.
 
 ```
@@ -72,7 +66,6 @@ brew link gettext --force
 ## Project tools
 
 ### Composer
-
 Composer is a package manager for PHP and is used in our WordPress plugins to manage code dependencies in an easy way. To install it, run the following command in your terminal:
 
 ```
@@ -88,7 +81,6 @@ composer install
 **Note: To update the packages, run `composer update`. However, this is generally something that isn't necessary to do.**
 
 ### Node via NVM
-
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is used by our tools and to compile our JavaScript. Node Version Manager (NVM) is a simple bash script to manage multiple active Node.js versions.
 
 First off, [install NVM](https://github.com/nvm-sh/nvm#installation-and-update). After that, you can install a node version by running the following command
@@ -100,7 +92,6 @@ nvm install <version>
 [Check the Node.js website](https://nodejs.org/en/) to see what the latest LTS version is.
 
 ### Yarn
-
 Yarn is a package manager used for managing JavaScript dependencies. To install Yarn, ensure you have Brew installed first and then run the following command to globally install it on your machine. Note that this method will install Node too, _but we don't use that version_.
 
 ```
@@ -114,7 +105,6 @@ yarn
 ```
 
 ### Grunt CLI
-
 Grunt CLI is a tool that helps running repetitive tasks, such as running a code linter, minifying code or any other kind of task that could be automated for development purposes. Generally speaking, Grunt is used to manage JavaScript code.
 
 To install Grunt CLI, run the following command in your terminal:

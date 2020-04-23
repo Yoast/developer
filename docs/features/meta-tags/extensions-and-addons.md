@@ -8,7 +8,6 @@ description: This documentation provides technical information about which addit
 This documentation provides technical information about which additional meta tags our extensions and addons generate and output.
 
 ## Yoast WooCommerce SEO plugin
-
 The following tags are added to (or altered on) _product pages_ when this plugin is enabled.
 
 | Tag | Description |
@@ -26,7 +25,6 @@ The following tags are added to (or altered on) _product pages_ when this plugin
 | product:price:currency | The currency code. |
 
 ## Yoast Video SEO plugin
-
 The following tags are added to _pages containing an embedded video_ when this plugin is enabled.
 
 | Tag | Description |

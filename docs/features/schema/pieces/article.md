@@ -15,6 +15,7 @@ Should only be output on explicitly 'authored' pages. In the case of a standard 
 
 ## Required properties
 A valid `Article` must have the following properties.
+
 * `@id`: The unmodified *canonical URL* of the parent `WebPage`, appended by `#/schema/article/{{ID}}`, where `{{ID}}` is a unique identifier for the article in question.
 * `headline`: The headline of the article (falling back to the *title* of the `WebPage` ).
 * `description`: A summary of the article (falling back to the page's meta description content).
@@ -30,18 +31,23 @@ A valid `Article` must have the following properties.
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
+
 If the node is not output, the parent `WebPage` node should be altered to reference the following properties by ID (when valid and present):
+
 * `author`
 * `commentCount`
 
 #### Missing images
 If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they're valid candidates (in the following order of precedence):
+
 * The image used in the `primaryImageOfPage` property of the parent `WebPage`.
 * The first image in the `image` array attached to the parent `WebPage`.
+
 If no suitable image is found, the node should fail (and adhere to the *Failure scenarios*).
 
 ## Optional properties
 The following should be added whenever available and valid:
+
 * `video`: An array of all videos in the article content, referenced by ID.
 * (when greater than 0).
 * `comment`: An array of references by ID to `comment` pieces.
@@ -65,6 +71,7 @@ Optional properties which should only be output when the required criteria are m
 
 ## Transformations
 The `Article` type may be transformed in the following scenarios:
+
 * When explicitly nominated as a "news article", the *type* property should be altered to an array of `[Article, NewsArticle]`.
 
 ## Examples

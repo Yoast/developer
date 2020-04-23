@@ -14,6 +14,7 @@ This documentation describes how we construct and output [schema.org](http://sch
 
 ## Output per plugin
 Our own plugins use and build upon our API and documentation, as detailed here.
+
 * [Yoast SEO for WordPress](plugins/yoast-seo.md)
 * [Local SEO for WordPress](plugins/local-seo.md)
 * [Yoast WooCommerce SEO](plugins/woocommerce-seo.md)
@@ -22,6 +23,7 @@ Our own plugins use and build upon our API and documentation, as detailed here.
 
 ## You're a developer and unsure where to start?
 Want to extend, integrate or modify our schema.org output? We recommend reading in this order:
+
 1. [Our Schema specification](specification.md)
 2. [Our integration guide](integration-guidelines.md)
 3. [Our Schema API docs](api.md)

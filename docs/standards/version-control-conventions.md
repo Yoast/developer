@@ -8,7 +8,6 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standa
 Because we heavily rely on Git for our version control, it is necessary to enforce a strict set of rules when managing code.
 
 ## Branches
-
 Our repositories contain a few of special branches:
 
 | Branch | Description |
@@ -21,13 +20,11 @@ Our repositories contain a few of special branches:
 **\* In some repositories, `develop` is still called `trunk`. This is something we will be changing in the future.**
 
 ### Exceptions
-
 The only exception in which commiting directly to `master` is permitted, is in the case of a high priority bugfix or security patch. Once a release is planned, `develop` will be used to create an Release Candidate (RC) and will eventually be merged into `master`.
 
 The My Yoast project makes use of a different setup where feature branches are merged directly to `master` if they pass all the requirements. Therefore, there is no `develop` branch on that repository.
 
 ### Creating branches
-
 Whenever you start working on an issue, it is important that you use a separate branch to commit to. This ensures that code that isn't complete (or possibly broken), isn't being spread to everyones development environment.
 
 All these different branches contain the "truth" with regard to what __is__ shipped (`master`), what __can__ be shipped (`develop`), and what __will__ eventually be shipped (feature branches).
@@ -35,7 +32,6 @@ All these different branches contain the "truth" with regard to what __is__ ship
 **Please refrain from branching off a branch that has not been merged. This is actually counter-productive. If you need a branched merged before being able to continue with an other issue, please request a code-review and acceptance test from one of your fellow team members.**
 
 #### Branch naming conventions
-
 To ensure branches can easily be identified within a repository, we adhere a convention that follows the following structure:
 `{issue number}-{issue title}`.
 
@@ -46,7 +42,6 @@ Generally speaking the issue title is a short description of the problem that ne
 In the past we used an alternative convention that also contained your initials, but seeing at multiple people can be working on a single issue, it doesn't make much sense to adhere that structure. You might also run into a structure like `stories/{issue title}`. This is also part of the 'old' way of naming branches.
 
 #### Tree example
-
 Schematically our Git tree should look like this:
 
 ```
@@ -64,7 +59,6 @@ master
 ```
 
 ## Commits
-
 Please try to use clear commit messages and keep your commits as small as possible.
 
 ## Pull Requests
@@ -82,7 +76,6 @@ git merge {parent_branch}
 You might run into some merge conflicts. Solve them, commit the merge and push the code before filing a Pull Request (PR).
 
 ### Before submitting a PR
-
 Three golden rules:
 
 - Follow the [Yoast coding guidelines and principles](coding-guidelines-and-principles.md).
@@ -103,7 +96,6 @@ Your code is now ready for a code review.
 ## Other
 
 ### Global Git Ignore
-
 To make sure we are not committing files to any repositories that don't belong in the repository, Git offers a way to globally exclude files from being staged to commits.
 
 Adding a global git ignore file to Git, execute the following command in your terminal:

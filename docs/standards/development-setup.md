@@ -9,11 +9,9 @@ This page describes the process of how we setup development environments at Yoas
 **Note: These instructions assume you're working with OSX.**
 
 ## Getting started
-
 Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](development-tools.md) which lists the various tools that need to be used (unless otherwise noted).
 
 ## Organizing your projects
-
 Generally speaking, we advise people to create a `Yoast` folder in their `Documents` directory to keep all things together. After this, you have two flavors:
 
 *   Clone plugins on an environment-by-environment basis, which allows you to have various versions of the same plugin on your system, without them (possibly) conflicting.
@@ -24,7 +22,6 @@ Generally speaking, we advise people to create a `Yoast` folder in their `Docume
 In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the Docker directory and navigate to `<your docker directory>/plugins` where you can clone the various plugin repositories.
 
 ### Enabling PHPUnit in PhpStorm
-
 The setup in PhpStorm can be completed by following the next steps:
 
 *   Under the Run menu in PhpStorm, go to `Edit configurations`.
@@ -36,11 +33,9 @@ The setup in PhpStorm can be completed by following the next steps:
 *   Finally, when you return to the `Run/Debug configurations` window, there might be an error message at the bottom. Press the `Fix` button next to it and select PHP as your CLI interpreter. Apply and done!
 
 #### Running multisite tests
-
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
 ## Installing the plugins
-
 To have the complete set of Yoast plugins, clone the following repositories in your: `<your docker directory/plugins/` folder.
 
 Yoast SEO with the addons:
@@ -60,11 +55,9 @@ Additional plugins:
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
 
 ## Linking repositories via Yarn
-
 If you're developing within the JavaScript code that is part of the plugin, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using [linking](https://yarnpkg.com/lang/en/docs/cli/link/) in Yarn.
 
 Due to how we've structured our JavaScript code into a monorepo, we've created [a separate page](https://github.com/Yoast/javascript) that includes all the information you'll need to get things up and running.
 
 ## Now what?
-
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

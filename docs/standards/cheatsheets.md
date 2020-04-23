@@ -1,6 +1,7 @@
 ---
 id: cheatsheets
-title: Cheatsheets
+title: Standards - Cheatsheets
+sidebar_label: Cheatsheets
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/cheatsheets.md
 ---
 

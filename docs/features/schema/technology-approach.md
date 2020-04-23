@@ -93,7 +93,7 @@ The `{{identifier}} `parameter should always be constructed using the following 
 These are also documented in their various [pieces documentation](https://developer.yoast.com/features/schema/pieces/) , but bear repeating here.
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., https://www.example.com/#/schema/organization/1).
-* The `{{identifier}}` fragment of the `WebSite` which represents “this site” should always be `1` (e.g., https://www.example.com/#/schema/website/1).
+* The `{{identifier}}` fragment of the `WebSite` which represents "this site" should always be `1` (e.g., https://www.example.com/#/schema/website/1).
 * The `{{identifier}}` fragment of a `person `should always be obfuscated.
 
 ### Hybrid types & composite IDs

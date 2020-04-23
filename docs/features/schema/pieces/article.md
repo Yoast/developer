@@ -60,12 +60,12 @@ Optional properties which should only be output when the required criteria are m
 * `commentCount`: An integer value of the number of comments associated with the article.
 * `comment`: An array of references-by-ID the comments associated with the article.
 * `potentialAction`: A `CommentAction` object with values:
- * `name`: “Comment”.
+ * `name`: "Comment".
  * `target`: The `url` property of the parent `WebPage`, appended with `#comment`.
 
 ## Transformations
 The `Article` type may be transformed in the following scenarios:
-* When explicitly nominated as a “news article”, the *type* property should be altered to an array of `[Article, NewsArticle]`.
+* When explicitly nominated as a "news article", the *type* property should be altered to an array of `[Article, NewsArticle]`.
 
 ## Examples
 

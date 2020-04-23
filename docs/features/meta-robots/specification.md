@@ -1,7 +1,7 @@
 ---
-id: functional-specification
+id: specification
 title: Meta robots - Functional specification
-sidebar_label: Functional specification
+sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-robots/specification.md
 description: An overview of how meta robots work in Yoast SEO.
 ---
@@ -36,4 +36,4 @@ E.g., a combination of index, noindex, noimageindex and follow values should res
 
 ## Google-specific properties
 In any scenario when a page and/or template is eligible to be indexed (i.e., it does *not* have a noindex or equivalent tag) we output an *additional* meta robots tag with site-wide directives specific to Google. It has the following format and fixed value (unless filtered/disabled):
-`<meta name=“googlebot” content=“max-snippet:-1, max-image-preview:large, max-video-preview:-1” />`
+`<meta name="googlebot" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`

@@ -1,9 +1,10 @@
 ---
 id: running-unit-tests-code-style-checks-and-linters
-title: Running unit tests, code style checks and linters
+title: Standards - Running unit tests, code style checks and linters
+sidebar_label: Running unit tests, code style checks & linters
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/running-unit-tests-code-style-checks-and-linters.md
 ---
-At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs. 
+At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs.
 
 These tools include the following:
 
@@ -25,8 +26,8 @@ To configure your system to be able to run with code coverage, follow these step
 
 1. Run `pecl install xdebug` in your terminal to install XDebug.
 1. To run the tests including the coverage, click <img alt="Coverage button in PhpStorm" src="https://user-images.githubusercontent.com/17744553/53946611-714ab580-40c4-11e9-85b6-fde5576e4609.png" /> in the upper right corner of PhpStorm.
-    
-##### Troubleshooting 
+
+##### Troubleshooting
 
 If you get an error `"Failed loading /usr/local/Cellar/php@7.1/7.1.26/lib/php/20160303/xdebug.so"` or something similar, it is possible your extension directory needs to be configured so PHP knows where to look for it.
 
@@ -37,7 +38,7 @@ Follow these steps to configure your extension directory:
 1. To find out what the proper extension directory is, run: `pecl config-get ext_dir` in a separate terminal window.
 1. Now uncomment and update the extension_dir in your php.ini:`extension_dir = /usr/local/lib/php/pecl/<php_api_version>` and replace the pathname with the one you found in the previous step.
 
-Sometimes the unit tests will run on a different PHP version than the one used for code coverage. This is because of a quirk in PhpStorm. 
+Sometimes the unit tests will run on a different PHP version than the one used for code coverage. This is because of a quirk in PhpStorm.
 To fix this, under `Edit Configurations...` -> `Command line` -> `Interpreter`, you can specify an interpreter. However, running with code coverage always uses the `<Default project interpreter>`, even when you have specified another interpreter. In case you get fatal errors when running with code coverage, take a look at the default project interpreter (`Preferences` -> `Languages & Frameworks` -> `PHP`) and ensure that this one is also properly configured.
 
 ### Integration tests
@@ -62,7 +63,7 @@ When using a linter on our code base, we utilize a combination of various coding
 To configure the linter to utilize the mentioned coding standards, run the following two commands in your terminal:
 
 1. `composer install`
-1. `composer config-yoastcs`. 
+1. `composer config-yoastcs`.
 
 If no errors occur, you're ready to start running the linter.
 
@@ -92,15 +93,15 @@ If no errors occur, you're ready to start running the linter.
 ### Unit tests
 For our JavaScript code, we utilize Jest and Jasmine to test code for expected behavior. Please ensure you've run `yarn` prior to trying to run the following commands so that all necessary NPM packages are installed.
 
-To run the tests, use the following command in your terminal: 
+To run the tests, use the following command in your terminal:
 * `yarn test`
 
 #### Coverage
-To run the tests, including coverage, use the following command in your terminal: 
+To run the tests, including coverage, use the following command in your terminal:
 * `yarn test --coverage`
 
 ### Linting
-To run the linter, use the following command in your terminal: 
+To run the linter, use the following command in your terminal:
 * `grunt eslint`
 
 ## Availability

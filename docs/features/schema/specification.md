@@ -7,7 +7,7 @@ description: This page describes our functional and technical approach to constr
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
 
-The core of our approach is to output a “base script” - a `@graph` object rendered in `JSON-LD` - which describes the `WebPage`, the `WebSite`, and the `Organization` (or `Person`, in the case of a website which represents an individual). This is included on every page of a website running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) .
+The core of our approach is to output a "base script" - a `@graph` object rendered in `JSON-LD` - which describes the `WebPage`, the `WebSite`, and the `Organization` (or `Person`, in the case of a website which represents an individual). This is included on every page of a website running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) .
 
 On any given page, the graph may be altered and/or extended to reflect the specific *type* of web page and its attributes. For any given scenario, we aim to identify the ‘main entity’ of the page, and to develop the graph to represent this entity (see ‘ [Primary entities](technology-approach.md#primary-entities) ‘).
 All markup, properties and attributes are drawn directly from [schema.org](https://schema.org/) , and (other than the *base script* below) all code provided is for demonstrative purposes only.

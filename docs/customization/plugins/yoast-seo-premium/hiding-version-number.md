@@ -1,6 +1,7 @@
 ---
 id: hiding-version-number
-title: Hiding the version number
+title: Yoast SEO Premium - Hiding the version number
+sidebar_label: Hiding the version number
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/hiding-version-number.md
 ---
 

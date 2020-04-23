@@ -1,6 +1,7 @@
 ---
 id: setting-up-integration-tests-for-the-plugins
-title: Setting up integration tests for the plugins
+title: Standards - Setting up integration tests for the plugins
+sidebar_label: Setting up integration tests
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/setting-up-integration-tests-for-the-plugins.md
 description: When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part.
 ---
@@ -93,6 +94,3 @@ When you want to stop the containers, you simply can do:
 ## Troubleshooting
 
 If you get errors about the database connection, make sure other no MySQL processes are running in the background by running `brew services stop mysql` in your terminal.
-
-
-

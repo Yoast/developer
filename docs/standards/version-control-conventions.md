@@ -1,6 +1,7 @@
 ---
 id: version-control-conventions
-title: Version control conventions
+title: Standards - Version control conventions
+sidebar_label: Version control conventions
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/version-control-conventions.md
 ---
 
@@ -15,7 +16,7 @@ Our repositories contain a few of special branches:
 | `master` | This is the branch that holds the latest released version. It should not contain any code that hasn't been properly reviewed and tested. |
 | `develop` * | This is the branch that holds code that is in active development and which will be published in the next release. Whenever creating a new branch, this branch should be used. |
 | `release/*.*` | This is the branch that's created when making a Release Candidate to ensure development can continue on `trunk`. |
-| `hotfix/*.*` | This is the branch used for creating patches for the latest release. This branch is always based on `master`, not on trunk. 
+| `hotfix/*.*` | This is the branch used for creating patches for the latest release. This branch is always based on `master`, not on trunk.
 
 **\* In some repositories, `develop` is still called `trunk`. This is something we will be changing in the future.**
 
@@ -86,7 +87,7 @@ Three golden rules:
 
 - Follow the [Yoast coding guidelines and principles](coding-guidelines-and-principles.md).
 - Ensure that you've added tests (when applicable). This also applies to bugfixes.
-- Add steps to the PR so the person that'll be acceptance testing your PR knows what the intended behavior is of your code. Also include things like adding / changing configuration files. 
+- Add steps to the PR so the person that'll be acceptance testing your PR knows what the intended behavior is of your code. Also include things like adding / changing configuration files.
 
 **Note: Do not assume that the person that will be testing your code uses the same setup as you do! Please take this into account when writing your PR.**
 

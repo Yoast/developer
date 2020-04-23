@@ -1,8 +1,9 @@
 ---
 id: integration-guidelines
-title: Integration guidelines
+title: Schema - Integration guidelines
+sidebar_label: Integration guidelines
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/integration-guidelines.md
-description: Want to integrate your plugin or theme's structured data into our rich, comprehensive JSON-LD graph? Just follow these guidelines!
+description: Integrating with Yoast’s structured data framework is easy, and, we encourage all plugin/theme/software authors to consider adopting and extending our approach.
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 

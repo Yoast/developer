@@ -1,32 +1,32 @@
 ---
 id: aggregateoffer
 title: Schema piece - AggregateOffer
+sidebar_label: AggregateOffer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/aggregateoffer.md
-description: Describes an group of offers for a Product, typically due to variations in attributes (colors, sizes, prices). 
+description: Describes a group of 'offers' for a 'Product', typically due to variations in attributes (colors, sizes, prices).
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-Describes an group of offers for a `Product`, typically due to variations in attributes (colors, sizes, prices).
+Describes a group of `offers` for a `Product`, typically due to variations in attributes (colors, sizes, prices).
 
 ## Triggers
 * Should be output when required by a `Product` piece.
 
 ## Required properties
 A valid `AggregateOffer` must have the following properties.
-
-* `ID`: The site's home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `lowPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
-* `highPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
+* `ID`: The site’s home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `lowPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
+* `highPrice`: The lowest price of the group, omitting any currency symbols, and using ‘.’ to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
 * `offerCount`: The number of offers in the group
 * `offers`: An array of `Offer` pieces, referenced by ID.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
-
-If the node is not output, any entities which would otherwise have referenced the `AggregateOffer` should remove those references (e.g., when a product references an `AggregateOffer` by ID).
+If the node is not output, any entities which would otherwise have referenced the `AggregateOffer` should remove those references (e.g., when a product references an  `AggregateOffer`  by ID).
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

@@ -1,8 +1,9 @@
 ---
 id: postaladdress
 title: Schema piece - PostalAddress
+sidebar_label: Postal Address
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/postaladdress.md
-description: Describes the postal address of a place; usually in the context of a LocalBusiness.
+description: Describes the postal address of a place; usually in the context of a 'LocalBusiness'.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
@@ -13,25 +14,23 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 
 ## Required properties
 A valid `postalAddress` must have the following properties.
-
-* `@id`: The site's home URL appended by `#/schema/address/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The site’s home URL appended by `#/schema/address/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `streetAddress`: The building number and street (e.g., *123 fake road* ).
 * `postalCode`: The postal code.
 * `addressCountry`: The two-digit country-code representing the country (e.g., *US* ).
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
-
-If the node is not output, any entities which would otherwise have declared a relationship with the `Address` (e.g., when included by reference by a `localBusiness` ) should remove those references.
+If the node is not output, any entities which would otherwise have declared a relationship with the `Address` (e.g., when included by reference by a `localBusiness`) should remove those references.
 
 ## Optional properties
 The following should be added whenever available and valid:
-
 * `addressLocality`: The town, city or equivalent.
 * `addressRegion`: The region or district.
 * `postOfficeBoxNumber`: A PO box number.
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

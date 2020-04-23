@@ -45,7 +45,7 @@ You can always reference the Yoast SEO core graph pieces using their fixed IDs. 
 `Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many 
 others. For instance if a piece you are adding needs to reference the `Organization` piece, all you have to do is this:
 
-```
+``` php
 $data['organization'] = [ '@id' => Schema_IDs::ORGANIZATION_HASH ]
 ```
 

@@ -15,9 +15,10 @@ The following tags are added to _product pages_ when this plugin is enabled.
 |---|----|
 | product:price:amount | The price (omitting a currency symbol, and using `.` as a delimiter). |
 | product:price:currency | The currency code. |
-| og:availability | The stock availability status. |
 | product:retailer_item_id | The product's retailer ID. |
 | product:condition | The product's condition. |
+| og:availability | The stock availability status. |
+| product:availability | The stock availability status. |
 | og:type | `product` on product pages. |
 
 ## Yoast Video SEO plugin

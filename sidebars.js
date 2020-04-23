@@ -80,6 +80,36 @@ module.exports = {
 		},
 		{
 			type: 'category',
+			label: 'Customization',
+			items: [
+				{
+					type: 'category',
+					label: 'Yoast SEO',
+					items: [
+						'customization/yoast-seo/changing-og-locale-output',
+						'customization/yoast-seo/api-filter-actions-deprecations',
+					],
+				},
+				{
+					type: 'category',
+					label: 'Yoast SEO Premium',
+					items: [
+						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
+						'customization/yoast-seo-premium/hiding-version-number',
+					],
+				},
+				{
+					type: 'category',
+					label: 'Local SEO',
+					items: [
+						'customization/local-seo/changing-location-url-google-maps',
+						'customization/local-seo/enhancing-search-results',
+					],
+				},
+			]
+		},
+		{
+			type: 'category',
 			label: 'Standards',
 			items: [
 				'standards/overview',

@@ -58,7 +58,7 @@ To find out how to connect to the Docker database, [check out the instructions](
 ### xgettext
 xgettext is a GNU internationalization (i18n) and localization (l10n) library. At the time of writing this is needed to build the wordpress-seo plugin.
 
-```
+```shell script
 brew install gettext
 brew link gettext --force
 ```
@@ -68,13 +68,13 @@ brew link gettext --force
 ### Composer
 Composer is a package manager for PHP and is used in our WordPress plugins to manage code dependencies in an easy way. To install it, run the following command in your terminal:
 
-```
+```shell script
 brew install composer
 ```
 
 After Composer has been installed, you'll be able to run the following command in the plugin directories which contain a `composer.json` file to install all necessary dependencies:
 
-```
+```shell script
 composer install
 ```
 
@@ -85,7 +85,7 @@ Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is 
 
 First off, [install NVM](https://github.com/nvm-sh/nvm#installation-and-update). After that, you can install a node version by running the following command
 
-```
+```shell script
 nvm install <version>
 ```
 
@@ -94,13 +94,13 @@ nvm install <version>
 ### Yarn
 Yarn is a package manager used for managing JavaScript dependencies. To install Yarn, ensure you have Brew installed first and then run the following command to globally install it on your machine. Note that this method will install Node too, _but we don't use that version_.
 
-```
+```shell script
 brew install yarn
 ```
 
 Just like with Composer, you need to navigate to the directories containing a specific file. In the case of JavaScript you need to ensure you're in the same directory as the `package.json` file prior to running:
 
-```
+```shell script
 yarn
 ```
 
@@ -109,7 +109,7 @@ Grunt CLI is a tool that helps running repetitive tasks, such as running a code 
 
 To install Grunt CLI, run the following command in your terminal:
 
-```
+```shell script
 yarn global add grunt-cli
 ```
 

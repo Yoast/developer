@@ -66,7 +66,7 @@ Please try to use clear commit messages and keep your commits as small as possib
 #### Preparing your branch
 Once your branch is ready, make sure you merge the latest version of the parent branch (`master`, `trunk` or a feature branch) in your current branch. This can be done by executing:
 
-```SH
+```shell script
 git checkout {parent_branch}
 git pull
 git checkout {your_branch}
@@ -99,27 +99,27 @@ Your code is now ready for a code review.
 To make sure we are not committing files to any repositories that don't belong in the repository, Git offers a way to globally exclude files from being staged to commits.
 
 Adding a global git ignore file to Git, execute the following command in your terminal:
-```
+```shell script
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
 Enter the following data into the file `~/.gitignore_global`:
-```
+```shell script
 # IDE Specific files #
-\.idea
+.idea
 
 # Compiled files #
-\.so
+.so
 
 # OS generated files #
 ######################
-\.DS_Store
-\.DS_Store?
-\._*
-\.Spotlight-V100
-\.Trashes
-ehthumbs\.db
-Thumbs\.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 ```
 
 ### Configure Git Hooks
@@ -128,7 +128,7 @@ Thumbs\.db
 The following command creates a Git hook, which is executed whenever `git checkout` is executed.
 This will run the `composer install` command to make sure you have the right packages and generated autoloaders.
 
-```
+```shell script
 cat <<EOT >> .git/hooks/post-receive
 #!/bin/sh
 composer install --working-dir=$GIT_DIR/../

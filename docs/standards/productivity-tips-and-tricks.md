@@ -46,7 +46,7 @@ In normal text editors on your mac, you can navigate through text quickly using 
 
 Add this line to your `~/.bash_profile` or `~/.zshrc` file. Use the latter only if you're using Z-shell (or `echo $SHELL` outputs something like `/bin/zsh`).
 
-``` bash
+```shell script
 alias delete-merged='git branch --merged | grep -v "\*" | grep -v master | grep -v trunk | grep -v develop | xargs -n 1 git branch -d'
 ```
 You can now use `delete-merged` in the terminal in any git repository to delete branches which have been merged to either trunk, develop or master.
@@ -71,4 +71,7 @@ If autojump picks the incorrect directory, simply run the command again. It will
 So to get your SSH key into GitHub you could use the following command, `cat ~/.ssh/id_rsa.pub | pbcopy` and then paste it into to GitHub UI. `pbpaste` is very useful if you copied data from somewhere that needs to go into a script. Use `pbpaste | ./awesome-data-processing-script.php`.
 
 ## `sudo` easiness
-* Increase `sudo` timeout: Add this to your `/etc/sudoers` file: ```Defaults timestamp_timeout=15```
+* Increase `sudo` timeout: Add this to your `/etc/sudoers` file: 
+```shell script
+Defaults timestamp_timeout=15
+```

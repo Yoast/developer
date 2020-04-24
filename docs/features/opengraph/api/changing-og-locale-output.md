@@ -1,9 +1,12 @@
 ---
 id: changing-og-locale-output
 title: Yoast SEO - Changing the og:locale output
+hide_title: true
 sidebar_label: Changing the og:locale output
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/changing-og-locale-output.md
 ---
+# Changing the og:locale output
+
 When you enable OpenGraph settings in Yoast SEO, it'll output an `og:locale` meta tag. This `og:locale` is based on the language settings for your WordPress install.
 
 So, if you want it to output `nl_NL` instead of the default `en_US`, you simply switch your WordPress installs' language to `nl_NL`. You can read [how to do that on the WordPress codex](http://codex.wordpress.org/WordPress_in_Your_Language).

@@ -28,7 +28,7 @@ This will expose the port to the local environment.
 ## Edit your hosts file
 Edit your hosts file by running `sudo nano /etc/hosts` in your terminal and add the following:
 
-```
+```shell script
 127.0.0.1 localhost
 10.254.254.254 mysql
 ```
@@ -36,7 +36,9 @@ Edit your hosts file by running `sudo nano /etc/hosts` in your terminal and add 
 ## Making your database accessible
 To make your database accessible, run the following command:
 
-`sudo ifconfig lo0 alias 10.254.254.254`
+```shell script
+sudo ifconfig lo0 alias 10.254.254.254
+```
 
 ## Tying it all together
 The last step is to tie it together with your `wordpress-seo` cloned repository.
@@ -70,7 +72,7 @@ If you've gone through all the above steps, it's time to start the containers!
 
 In your terminal, run the following commands:
 
-```
+```shell script
 npm install
 npm run build:dev
 npm run env:start

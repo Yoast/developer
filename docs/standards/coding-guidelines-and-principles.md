@@ -11,7 +11,7 @@ The [Yoast PHP coding standards](https://github.com/Yoast/yoastcs) is a PHPCS ru
 
 1) We don't enforce Yoda style assignments.
 
-```PHP
+```php
 // Yoast style
 
 if ( $foo == 'bar' ) {
@@ -27,7 +27,7 @@ if ( 'bar' == $foo ) {
 
 2) We put `else` on a new line.
 
-```PHP
+```php
 
 // Yoast style:
 

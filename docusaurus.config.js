@@ -8,7 +8,7 @@ module.exports = {
 	projectName: 'yoast-developer-site', // Usually your repo name.
 	scripts: [
 		{
-			src: "/static/js/google-tag-manager.js",
+			src: "/js/google-tag-manager.js",
 		},
 	],
 	themeConfig: {

@@ -23,6 +23,7 @@ function Layout(props) {
     themeConfig: { image: defaultImage },
     url: siteUrl,
   } = siteConfig;
+
   const {
     children,
     title,
@@ -32,11 +33,15 @@ function Layout(props) {
     keywords,
     permalink,
     version,
+    titlePrefix,
   } = props;
+
   const metaTitle = title || `${defaultTitle} · ${tagline}`;
   const metaImage = image || defaultImage;
   const metaImageUrl = siteUrl + useBaseUrl(metaImage);
   const faviconUrl = useBaseUrl(favicon);
+
+  const pageTitle = (title && titlePrefix) ? `${titlePrefix} - ${title}` : metaTitle;
   return (
     <>
       <Head>
@@ -44,7 +49,7 @@ function Layout(props) {
         <html lang="en" />
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        {metaTitle && <title>{metaTitle}</title>}
+        {pageTitle && <title>{pageTitle}</title>}
         {metaTitle && <meta property="og:title" content={metaTitle} />}
         {favicon && <link rel="shortcut icon" href={faviconUrl} />}
         {description && <meta name="description" content={description} />}

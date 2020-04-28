@@ -19,7 +19,6 @@ function Home( props ) {
 	return (
 		<Layout
 			permalink="/"
-			title={tagline}
 			description={customFields.description}>
 			<div className={pageStyles.docPage}>
 				<div className={pageStyles.docSidebarContainer}>

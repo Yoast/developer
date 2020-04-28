@@ -55,8 +55,13 @@ function Headings({headings, isChild}) {
 
 function DocItem(props) {
   const {siteConfig = {}} = useDocusaurusContext();
-  const {url: siteUrl, title: siteTitle} = siteConfig;
-  const {content: DocContent} = props;
+  const {
+    title: defaultTitle,
+    url: siteUrl,
+    themeConfig: { image: defaultImage, separator },
+  } = siteConfig;
+
+  const {content: DocContent, parentItem} = props;
   const {metadata} = DocContent;
   const {
     description,
@@ -67,20 +72,21 @@ function DocItem(props) {
     lastUpdatedBy,
     version,
   } = metadata;
+
   const {
     frontMatter: {
-      image: metaImage,
+      image,
       keywords,
       hide_title: hideTitle,
       hide_table_of_contents: hideTableOfContents,
     },
   } = DocContent;
 
-  const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-  let metaImageUrl = siteUrl + useBaseUrl(metaImage);
-  if (!isInternalUrl(metaImage)) {
-    metaImageUrl = metaImage;
-  }
+  const pageTitle = ( parentItem ) ? `${parentItem} - ${title}` : title;
+  const metaTitle = `${pageTitle} ${separator} ${defaultTitle}`;
+  const metaImage = image || defaultImage;
+
+  const metaImageUrl = ( ! isInternalUrl( metaImage ) ) ? metaImage : siteUrl + useBaseUrl(metaImage);
 
   return (
     <>
@@ -116,7 +122,7 @@ function DocItem(props) {
                   )}
                   {!hideTitle && (
                     <header>
-                      <h1 className={styles.docTitle}>{title}</h1>
+                      <h1 className={styles.docTitle}>{pageTitle}</h1>
                     </header>
                   )}
                   <div className="markdown">

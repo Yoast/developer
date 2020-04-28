@@ -29,8 +29,16 @@ function getSanitizedLocation( location ) {
 
 let parentNode = {};
 
-function getCurrentSidebarItem( items, targetItem ) {
-	return items.reduce( ( result, current ) => {
+/**
+ * Gets the currently active sidebar entry, if present.
+ *
+ * @param {Object} sidebarEntries The sidebar entries.
+ * @param {string} targetItem The target item's href.
+ *
+ * @returns {Object} The sidebar entry.
+ */
+function getCurrentSidebarItem( sidebarEntries, targetItem ) {
+	return sidebarEntries.reduce( ( result, current ) => {
 		if ( current.type !== "category" ) {
 			if ( current.href !== "" && current.href === targetItem ) {
 				return { ...current, parent: parentNode };
@@ -45,16 +53,24 @@ function getCurrentSidebarItem( items, targetItem ) {
 			return result;
 		}
 
-		let nItems = getCurrentSidebarItem( current.items, targetItem );
+		let childItems = getCurrentSidebarItem( current.items, targetItem );
 
-		if ( nItems.label ) {
-			return nItems;
+		if ( childItems.label ) {
+			return childItems;
 		}
 
 		return result;
 	}, {} );
 }
 
+/**
+ * Gets the current page's parent.
+ *
+ * @param {Object} sidebarEntries The sidebar entries.
+ * @param {Object} location The current location.
+ *
+ * @returns {string} The parent's label or an empty string if there is no parent.
+ */
 function getPageParent( sidebarEntries, location ) {
 	const match = getCurrentSidebarItem( sidebarEntries, location );
 
@@ -71,11 +87,16 @@ function DocPage( props ) {
 	const { permalinkToSidebar, docsSidebars, version } = docsMetadata;
 	const { siteConfig: { themeConfig = {} } = {} } = useDocusaurusContext();
 	const { sidebarCollapsible = true } = themeConfig;
+
 	const sidebar = permalinkToSidebar[getSanitizedLocation( location )] || "mainSidebar";
+	const parent = getPageParent(
+		docsSidebars[sidebar],
+		getSanitizedLocation( location )
+	);
 
 	let content = (
 		<MDXProvider components={ MDXComponents }>
-			{ renderRoutes( route.routes ) }
+			{ renderRoutes( route.routes, { parentItem: parent } ) }
 		</MDXProvider>
 	);
 
@@ -85,10 +106,8 @@ function DocPage( props ) {
 		);
 	}
 
-	const parent = getPageParent( docsSidebars[sidebar], getSanitizedLocation( location ) );
-
 	return (
-		<Layout version={ version } titlePrefix={parent}>
+		<Layout version={ version }>
 			<div className={ styles.docPage }>
 				<div className={ styles.docSidebarContainer }>
 					<Logo/>

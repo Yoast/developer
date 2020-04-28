@@ -9,7 +9,6 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Navbar from '@theme/Navbar';
 import Footer from '@theme/Footer';
 
 import './styles.css';
@@ -18,9 +17,8 @@ function Layout(props) {
   const { siteConfig = {} } = useDocusaurusContext();
   const {
     favicon,
-    tagline,
     title: defaultTitle,
-    themeConfig: { image: defaultImage },
+    themeConfig: { image: defaultImage, separator },
     url: siteUrl,
   } = siteConfig;
 
@@ -33,15 +31,14 @@ function Layout(props) {
     keywords,
     permalink,
     version,
-    titlePrefix,
   } = props;
 
-  const metaTitle = title || `${defaultTitle} · ${tagline}`;
+  // Default is the website
+  const metaTitle = ( title ) ? `${title} ${separator} ${defaultTitle}` : defaultTitle;
   const metaImage = image || defaultImage;
   const metaImageUrl = siteUrl + useBaseUrl(metaImage);
   const faviconUrl = useBaseUrl(favicon);
 
-  const pageTitle = (title && titlePrefix) ? `${titlePrefix} - ${title}` : metaTitle;
   return (
     <>
       <Head>
@@ -49,7 +46,7 @@ function Layout(props) {
         <html lang="en" />
 
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        {pageTitle && <title>{pageTitle}</title>}
+        {metaTitle && <title>{metaTitle}</title>}
         {metaTitle && <meta property="og:title" content={metaTitle} />}
         {favicon && <link rel="shortcut icon" href={faviconUrl} />}
         {description && <meta name="description" content={description} />}

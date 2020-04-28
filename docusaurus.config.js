@@ -69,6 +69,7 @@ module.exports = {
 			],
 			copyright: `Copyright © ${new Date().getFullYear()} Yoast · Built with Docusaurus.`,
 		},
+		separator: '·',
 	},
 	themes: ['@docusaurus/theme-search-algolia'],
 	presets: [

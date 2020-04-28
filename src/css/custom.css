@@ -61,6 +61,10 @@ header h1, .markdown > h1, .markdown > h2, .markdown > h3, .markdown > h4 {
   margin-top: 1.2em;
 }
 
+.markdown a {
+  text-decoration: underline;
+}
+
 table td {
   vertical-align: text-top;
 }

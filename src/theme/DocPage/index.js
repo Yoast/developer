@@ -102,7 +102,7 @@ function DocPage( props ) {
 
 	if ( !matchingRouteExist( route.routes, location.pathname ) ) {
 		content = (
-			<NotFound { ...props } />
+			<NotFound {...props} />
 		);
 	}
 

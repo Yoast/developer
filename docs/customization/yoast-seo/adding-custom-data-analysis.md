@@ -6,7 +6,9 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/custom
 
 Yoast SEO comes featured with a powerful set of tools to not only help you improve your SEO, but to also help you write better texts by analyzing the content of the post or page that you're working on.
 
-In some cases, plugin developers might want to add some extra data to the analysis, which they consider to be of added importance for their overall Readability and SEO score. Luckily, Yoast SEO allows for this kind of extending of the analysis.
+In some cases, plugin developers might want to add some extra data to the analysis, which they consider to be of added importance for their overall Readability and SEO score. Yoast SEO allows for this kind of extending of the analysis.
+
+This is also useful for plugins which add page content in ways which our plugin(s) may not natively detect (such as via custom data structures, functions and shortcodes), which they wish us to include in our analysis.
 
 **Note:** We'll be using ES6 syntax in this example, so please make sure you adapt the code to fit your own syntax if you're not working with ES6 yet or don't use a compiler such as [Babel](https://babeljs.io/) or [Webpack](https://webpack.js.org/).
 

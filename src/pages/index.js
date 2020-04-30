@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from 'react';
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import Layout from "@theme/Layout";
 import DocSidebar from "@theme/DocSidebar";
+import SearchBar from '@theme/SearchBar';
 import pageStyles from "../theme/DocPage/styles.module.css";
 import itemStyles from "../theme/DocItem/styles.module.css";
 import Logo from "../theme/Logo";
@@ -12,27 +13,32 @@ import classnames from "classnames";
 
 function Home( props ) {
 	const {location} = props;
-	const {siteConfig: {customFields = {}, tagline, themeConfig = {}} = {}} = useDocusaurusContext();
+	const {siteConfig: {customFields = {}, themeConfig = {}} = {}} = useDocusaurusContext();
 	const {sidebarCollapsible = true} = themeConfig;
 	const sidebar = "mainSidebar";
+	const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
 
 	return (
 		<Layout
+			title="Yoast Developer portal"
 			permalink="/"
-			title={tagline}
 			description={customFields.description}>
 			<div className={pageStyles.docPage}>
-				<div className={pageStyles.docSidebarContainer}>
+				<aside className={pageStyles.sidebar}>
 					<Logo/>
-					{sidebar && (
+					<div className={pageStyles.sidebar__menu}>
+						<SearchBar
+							handleSearchBarToggle={setIsSearchBarExpanded}
+							isSearchBarExpanded={isSearchBarExpanded}
+						/>
 						<DocSidebar
 							docsSidebars={docsSidebars}
 							location={location}
 							sidebar={sidebar}
 							sidebarCollapsible={sidebarCollapsible}
 						/>
-					)}
-				</div>
+					</div>
+				</aside>
 				<main className={pageStyles.docMainContainer}>
 					<div className="padding-vert--lg">
 						<div className="container">

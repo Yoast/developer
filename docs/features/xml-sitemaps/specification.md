@@ -58,10 +58,10 @@ The index file contains a `<sitemap>` entry for each individual XML sitemap, eac
 Optional properties may be omitted if unavailable.
 
 #### URLs & redirects
-The file should be accessible at /sitemap_index.xml. Requests to /sitemap.xml should redirect here.
+The file should be accessible at `/sitemap_index.xml`. Requests to `/sitemap.xml` should redirect here.
 
 ### XML sitemaps
-Each sitemap contains a `<url>` entry for each page, comprised of a loc, lastmod, and series of image:image properties. E.g:
+Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `lastmod`, and `image:image` properties. E.g:
 ``` xml
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
@@ -79,11 +79,11 @@ Each sitemap contains a `<url>` entry for each page, comprised of a loc, lastmod
 </urlset>
 ```
 
-* The loc property should reference the canonical URL (the permalink) of the post/page/object
-* **(Optional)** The lastmod property should reference the time at which the object was last updated. In the case of archives/similar, this should reflect the time at which the archive members last updated (e.g., for a given category, the last time a post was published in that category)
-* **(Optional)** An image:image property should be output for each image in / associated with a page, with:
+* The `loc` property should reference the canonical URL (the permalink) of the post/page/object
+* **(Optional)** The `lastmod` property should reference the time at which the object was last updated. In the case of archives/similar, this should reflect the time at which the archive members last updated (e.g., for a given category, the last time a post was published in that category)
+* **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
  * A loc property (referencing the absolute URL of the image)
- * **(Optional)** A title property, referencing the image caption
+ * **(Optional)** A `title` property, referencing the image caption
 
 Optional properties may be omitted if unavailable.
 
@@ -93,12 +93,12 @@ By default, each sitemap can contain a limit of 1,000 items. If there are more t
 #### URLs & redirects
 The URL of each sitemap should be constructed in the following format: `{{type}}-sitemap{{n}}.xml`, where:
 
-* {{type}} is the content type (e.g., page)
-* {{n}} is the pagination state (ignoring the first page in the series).
+* `{{type}}` is the content type (e.g., page)
+* `{{n}}` is the pagination state (ignoring the first page in the series).
 
-E.g., post-sitemap.xml, post-sitemap2.xml,custom_taxonomy_name-sitemap.xml.
+E.g., `post-sitemap.xml`, `post-sitemap2.xml`, `custom_taxonomy_name-sitemap.xml`.
 
-Requests to sitemaps where {{n}} is 1 or 0 should trigger a 301 redirect to remove {{n}} (e.g., post-sitemap1.xml and post-sitemap0 should redirect to post-sitemap.xml).
+Requests to sitemaps where `{{n}}` is `1` or `0` should trigger a 301 redirect to remove `{{n}}` (e.g., requests to `post-sitemap1.xml` and `post-sitemap0.xml` should redirect to `post-sitemap.xml`).
 
 ### XSL stylesheets
 Sitemap indexes and individual sitemaps reference an XSL file, which provides the layout and styling configurations for the page.
@@ -106,7 +106,8 @@ Sitemap indexes and individual sitemaps reference an XSL file, which provides th
 ## Additional scenarios
 
 ### Video sitemaps
-Our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/) adds an additional *video sitemap* (at /video-sitemap.xml, and included in the sitemap index) which contains information on each video hosted/referenced within site content.
+Our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/) adds an additional *video sitemap* (at `video-sitemap.xml`, and included in the sitemap index) which contains information on each video hosted/referenced within site content.
+
 For each page which contains video, the sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<video:video>` container for each video on the page. E.g:
 ``` xml
 <url>
@@ -132,24 +133,26 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
 </urlset>
 ```
 
-* title is the name of the video
-* description is the caption of the video, falling back to any available description of the video, falling back the URL of the video (e.g., the public YouTube URL of a video)
-* player_loc is a URL pointing to the video player
-* thumbnail_loc is the URL of a video thumbnail image
-* **(Optional)** publication date is the timestamp at which the video was 'published' (alternatively, *uploaded*)
-* **(Optional)** duration is the duration in seconds
-* **(Optional)** view_count is the number of views
-* **(Optional)** width and height are the dimensions of the embedded video in pixels
-* **(Optional)** category is the primary category of the page/post in which the video is embedded
-* **(Optional)** tag is a series of the tags associated with the page/post in which the video is embedded
-* **(Optional)** family_friendly is a boolean value, configured in the video embed UI
-* **(Optional)** uploader is the name of the person who uploaded the video, with optional info property referencing a profile/homepage
+* `title` is the name of the video
+* `description` is the caption of the video, falling back to any available description of the video, falling back the URL of the video (e.g., the public YouTube URL of a video)
+* `player_loc` is a URL pointing to the video player
+* `thumbnail_loc` is the URL of a video thumbnail image
+* **(Optional)** `publication date` is the timestamp at which the video was 'published' (alternatively, *uploaded*)
+* **(Optional)** `duration` is the duration in seconds
+* **(Optional)** `view_count` is the number of views
+* **(Optional)** `width` and `height` are the dimensions of the embedded video in pixels
+* **(Optional)** `category` is the primary category of the page/post in which the video is embedded
+* **(Optional)** `tag` is a series of the tags associated with the page/post in which the video is embedded
+* **(Optional)** `family_friendly` is a boolean value, configured in the video embed UI
+* **(Optional)** `uploader` is the name of the person who uploaded the video, with optional info property referencing a profile/homepage
 
 The video XML sitemap uses a dedicated XSL file.
 
 ### News sitemaps
-Our [News SEO for WordPress plugin](https://yoast.com/wordpress/plugins/news-seo/) adds an additional *news sitemap* (at /news-sitemap.xml, and included in the sitemap index ) which contains information news articles published on the site.
+Our [News SEO for WordPress plugin](https://yoast.com/wordpress/plugins/news-seo/) adds an additional *news sitemap* (at `news-sitemap.xml`, and included in the sitemap index) which contains information news articles published on the site.
+
 News sitemaps should only reference articles which were published or modified within the last 48 hours.
+
 The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<news:news>` container for each news article. E.g:
 ``` xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -172,12 +175,12 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 </urlset>
 ```
 
-* publication.name is the *Site Title* (e.g., "Yoast")
-* **(Optional)** publication.language is the language code of the article (in [ISO 639](http://www.loc.gov/standards/iso639-2/php/code_list.php) format)
-* publication_date is the date in [W3C format](https://www.w3.org/TR/NOTE-datetime)
-* title is the post name of the article
-* **(Optional)** An image:image property should be output for each image in / associated with a page, with:
- * A loc property (referencing the absolute URL of the image)
- * **(Optional)** A title property, referencing the image caption
+* `publication.name` is the *Site Title* (e.g., "Yoast")
+* **(Optional)** `publication.language` is the language code of the article (in [ISO 639](http://www.loc.gov/standards/iso639-2/php/code_list.php) format)
+* `publication_date` is the date in [W3C format](https://www.w3.org/TR/NOTE-datetime)
+* `title` is the post name of the article
+* **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
+ * A `loc` property (referencing the absolute URL of the image)
+ * **(Optional)** A `title` property, referencing the image caption
 
 The news XML sitemap uses a dedicated XSL file.

@@ -10,6 +10,7 @@
     height: calc(100vh - var(--ifm-navbar-height));
     overflow-y: auto;
     padding: 0.5rem;
+    max-height: calc(100vh - 260px);
   }
 
   .sidebar::-webkit-scrollbar {

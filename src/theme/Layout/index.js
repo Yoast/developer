@@ -9,7 +9,6 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Navbar from '@theme/Navbar';
 import Footer from '@theme/Footer';
 
 import './styles.css';

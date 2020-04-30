@@ -48,6 +48,7 @@ const Search = props => {
 						`#__docusaurus` === a.hash
 							? `${a.pathname}`
 							: `${a.pathname}${a.hash}`;
+
 					history.push( routePath );
 				},
 			} );

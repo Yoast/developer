@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://developer.yoast.com/sitemap.xml
+Sitemap: https://developer.yoast.com/blog/sitemap_index.xml

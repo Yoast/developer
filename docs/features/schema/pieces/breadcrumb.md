@@ -17,11 +17,11 @@ A valid `BreadcrumbList` must have the following properties.
 
 * `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `itemListElement`: An array of `ListItem` objects, with the following properties:
- * `position`: An integer (starting at `1`), counting the depth of the page from the homepage.
- * `item`: A `WebPage` object *stub*, with the following properties:
-  * `@id`: The unmodified *canonical URL* of the page in question.
-  * `url`: The unmodified *canonical URL* of the page in question.
-  * `name`: The name of the page in question, as it appears in the breadcrumb navigation.
+  * `position`: An integer (starting at `1`), counting the depth of the page from the homepage.
+  * `item`: A `WebPage` object *stub*, with the following properties:
+    * `@id`: The unmodified *canonical URL* of the page in question.
+    * `url`: The unmodified *canonical URL* of the page in question.
+    * `name`: The name of the page in question, as it appears in the breadcrumb navigation.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.

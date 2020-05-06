@@ -12,15 +12,6 @@ This documentation describes how we construct and output [schema.org](http://sch
 * Our [pieces documentation](pieces.md) describes the specific logic and output of each node which we construct in our graph. It's a good place to read up if you have questions about specific parts of our approach.
 * All of our output can be changed, managed and extended using our [Schema API](api.md). Please follow our [integration guide](integration-guidelines.md) when you're building on that API.
 
-## Output per plugin
-Our own plugins use and build upon our API and documentation, as detailed here.
-
-* [Yoast SEO for WordPress](plugins/yoast-seo.md)
-* [Local SEO for WordPress](plugins/local-seo.md)
-* [Yoast WooCommerce SEO](plugins/woocommerce-seo.md)
-* [News SEO for WordPress](plugins/news-seo.md)
-* [Video SEO for WordPress](plugins/video-seo.md)
-
 ## You're a developer and unsure where to start?
 Want to extend, integrate or modify our schema.org output? We recommend reading in this order:
 

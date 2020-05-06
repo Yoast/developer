@@ -95,6 +95,11 @@ module.exports = {
 							label: 'Schema.org pieces',
 							href: '/features/schema/pieces'
 						},
+						{
+							type: 'link',
+							label: 'Output per plugin',
+							href: '/features/schema/plugins'
+						},
 					],
 				},
 			],
@@ -151,6 +156,7 @@ module.exports = {
 			label: '‹ Schema.org plugin output',
 			href: '/features/schema/overview'
 		},
+		'features/schema/plugins',
 		{
 			type: 'category',
 			label: 'Plugins',

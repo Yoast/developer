@@ -43,7 +43,7 @@ The following should be added whenever available and valid:
 * `keywords`: An array of the names of tags attached to the page (e.g., `["cats","dogs","cake"]`).
 * `speakable`: A `SpeakableSpecification` object which identifies any content elements suitable for spoken results.
 * `potentialAction`: A `ReadAction` object with values:
- * `target`: The unmodified *canonical URL* of the page.
+  * `target`: The unmodified *canonical URL* of the page.
 
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.
@@ -68,7 +68,8 @@ When the query returns a loop of posts (e.g., a category archive, a blog homepag
 ### Profile pages
 When the page is about a particular user (e.g., an member bio / author archive):
 
-* The `type` property should be altered to an array of `[WebPage, ProfilePage]`.
+* The `type` property should be altered to `ProfilePage`.
+  * If the page features posts/pages authored by that `Person`, then the `type` property should instead by an array of `['CollectionPage','ProfilePage']`.
 * Add a `mainEntityOfPage` property to the `Person` which the page is about, which references the `WebPage` by ID.
 
 ### Search results

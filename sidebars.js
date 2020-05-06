@@ -95,6 +95,7 @@ module.exports = {
 							label: 'Schema.org pieces',
 							href: '/features/schema/pieces'
 						},
+						'features/schema/plugins',
 					],
 				},
 			],

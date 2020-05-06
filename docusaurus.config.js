@@ -29,19 +29,19 @@ module.exports = {
 					items: [
 						{
 							label: 'XML sitemaps',
-							to: '/features/xml-sitemaps/overview',
+							to: '/features/xml-sitemaps/overview/',
 						},
 						{
 							label: 'Canonical URLs',
-							to: '/features/canonical-urls/overview',
+							to: 'features/seo-tags/canonical-urls/overview/',
 						},
 						{
 							label: 'Schema.org markup',
-							to: '/features/schema/overview',
+							to: '/features/schema/overview/',
 						},
 						{
 							label: 'Yoast SEO Product sheet',
-							to: '/yoast-seo-product-sheet',
+							to: '/yoast-seo-product-sheet/',
 						},
 					],
 				},

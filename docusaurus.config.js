@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 	title: 'Yoast Developer portal',
 	tagline: 'Yoast - SEO for everyone',
@@ -89,4 +91,5 @@ module.exports = {
 			},
 		],
 	],
+	plugins: [path.resolve(__dirname, './src/plugins/yoast-auto-index')],
 };

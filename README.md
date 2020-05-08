@@ -34,4 +34,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Deployment is fully automatic and thus requires no configuration.
+Deployment is fully automatic and thus requires no configuration or user interaction.

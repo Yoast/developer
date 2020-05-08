@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "fs-extra": "^9.0.0",
     "dotenv": "^8.2.0",
+    "dotenv": "^8.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

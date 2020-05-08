@@ -76,7 +76,7 @@ function DocItem(props) {
     },
   } = DocContent;
 
-  const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+  const metaTitle = title ? `${title} · ${siteTitle}` : siteTitle;
   let metaImageUrl = siteUrl + useBaseUrl(metaImage);
   if (!isInternalUrl(metaImage)) {
     metaImageUrl = metaImage;

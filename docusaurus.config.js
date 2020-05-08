@@ -1,5 +1,7 @@
 const path = require('path');
 
+require('dotenv').config()
+
 module.exports = {
 	title: 'Yoast Developer portal',
 	tagline: 'Yoast - SEO for everyone',
@@ -14,6 +16,11 @@ module.exports = {
 		},
 	],
 	themeConfig: {
+		algolia: {
+			apiKey: process.env.DOCSEARCH_KEY,
+			indexName: 'yoast_developer',
+
+		},
 		disableDarkMode: true,
 		sidebarCollapsible: true,
 		navbar: {

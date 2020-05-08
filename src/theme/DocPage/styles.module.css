@@ -10,7 +10,7 @@
   height: 100%;
 }
 
-.docSidebarContainer {
+.sidebar {
   border-right: 1px solid var(--ifm-contents-border-color);
   box-sizing: border-box;
   width: 300px;
@@ -18,8 +18,15 @@
   position: -webkit-sticky;
   max-height: 100vh;
   top: 0;
-  overflow-y: auto;
   z-index: 999;
+}
+
+.sidebar__menu {
+  padding: 0.5rem;
+}
+
+.sidebar__menu {
+  padding: 0.5rem;
 }
 
 .docMainContainer {
@@ -31,7 +38,7 @@
     display: inherit;
   }
 
-  .docSidebarContainer {
+  .sidebar {
     width: 100%;
   }
 }

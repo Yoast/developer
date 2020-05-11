@@ -1,8 +1,8 @@
 const path = require('path');
 
-require('dotenv').config()
+require('dotenv').config();
 
-module.exports = {
+const config = {
 	title: 'Yoast Developer portal',
 	tagline: 'Yoast - SEO for everyone',
 	url: 'https://developer.yoast.com',
@@ -82,6 +82,9 @@ module.exports = {
 			additionalLanguages: ['php'],
 		},
 	},
+	customFields: {
+		docsPath: '../developer-docs/docs',
+	},
 	themes: ['@docusaurus/theme-search-algolia'],
 	presets: [
 		[
@@ -89,7 +92,7 @@ module.exports = {
 			{
 				docs: {
 					routeBasePath: '',
-					path: '../developer-docs/docs',
+					get path(){ return config.customFields.docsPath; },
 					sidebarPath: require.resolve('./sidebars.js'),
 				},
 				theme: {
@@ -98,5 +101,10 @@ module.exports = {
 			},
 		],
 	],
-	plugins: [path.resolve(__dirname, './src/plugins/yoast-auto-index')],
+	plugins: [
+		path.resolve(__dirname, './src/plugins/yoast-auto-index'),
+		path.resolve(__dirname, './src/plugins/yoast-docs-assets'),
+	],
 };
+
+module.exports = config;

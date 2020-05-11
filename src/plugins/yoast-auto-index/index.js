@@ -5,7 +5,7 @@ const chalk = require( "chalk" );
 const { resolve } = require( "path" );
 const { readdir } = require( "fs-extra" ).promises;
 
-const excludedDirectories = [ "js", "img" ];
+const excludedDirectories = [ "js", "img", "docs" ];
 
 const template = () => {
 	return (

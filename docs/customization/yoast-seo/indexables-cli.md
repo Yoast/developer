@@ -7,7 +7,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/custom
 import Alert from '../../../../developer-site/src/components/Alert';
 
 With the introduction of Yoast SEO 14.0, we've introduced new database tables in which we combine all the metadata for indexable objects on a site. 
-However, these database tables also need to be filled with data before they can be properly used. To do this, we've introduced a WP CLI command.
+However, these database tables also need to be filled with data before they can be properly used. To do this efficiently on large sites, we've introduced a WP CLI command.
 This page describes the command and all its options.
 
 <Alert>

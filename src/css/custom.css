@@ -73,3 +73,7 @@ table {
 table td {
   vertical-align: text-top;
 }
+
+table code, table pre {
+  word-break: break-word;
+}

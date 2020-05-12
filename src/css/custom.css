@@ -13,6 +13,7 @@
   --ifm-color-primary-light: #b42c75;
   --ifm-color-primary-lighter: #bd2e7a;
   --ifm-color-primary-lightest: #cf3a89;
+  --ifm-code-background: #e8e8e8;
   --ifm-code-font-size: 95%;
   --ifm-font-size-base: 1em;
   --ifm-navbar-height: 0;
@@ -63,6 +64,10 @@ header h1, .markdown > h1, .markdown > h2, .markdown > h3, .markdown > h4 {
 
 .markdown a {
   text-decoration: underline;
+}
+
+table {
+  display: table;
 }
 
 table td {

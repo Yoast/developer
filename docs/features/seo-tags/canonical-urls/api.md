@@ -6,7 +6,6 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: Instructions on how to modify our canonical URL values programmatically.
 ---
 
-# Yoast SEO canonical API
 To change the canonical URL that Yoast SEO generated for a URL programmatically, you can use the `wpseo_canonical` filter.
 
 ## Change the canonical URL

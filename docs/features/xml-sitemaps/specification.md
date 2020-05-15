@@ -103,6 +103,9 @@ Requests to sitemaps where `{{n}}` is `1` or `0` should trigger a 301 redirect t
 ### XSL stylesheets
 Sitemap indexes and individual sitemaps reference an XSL file, which provides the layout and styling configurations for the page.
 
+## Indexing controls
+XML sitemaps do not need to be indexed by search engines in order to be read or parsed. Therefore, a `x-robots-tag` HTTP header with a value of `noindex, follow` should returned with all XML sitemap responses.
+
 ## Additional scenarios
 
 ### Video sitemaps

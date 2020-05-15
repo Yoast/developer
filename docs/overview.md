@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/overvi
 
 Welcome to the Yoast Developer portal, the place to find any technical information related to our software.
 
-This documentation is aimed at advanced end-users, developers, plugin/theme authors, and those curious about the mechanics of search engine optimisation.
+This documentation is aimed at advanced end-users, developers, plugin/theme authors, and those curious about the mechanics of search engine optimization.
 
 ## Browse technical specifications
 Learn how our features work, how to customize the outputs, and how best to integrate into or out of other systems.

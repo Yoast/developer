@@ -1,10 +1,9 @@
 ---
 id: functional-specification
-title: OpenGraph - Functional specification
+title: OpenGraph Tags - Functional specification
 sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/opengraph/functional-specification.md
 description: This documentation provides technical information about which OpenGraph tags Yoast SEO generates and outputs.
-
 ---
 This documentation provides technical information about which OpenGraph tags [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs.
 

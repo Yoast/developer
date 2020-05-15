@@ -20,7 +20,7 @@ Beyond the immediate marketing applications, structured markup will enable futur
 
 Platforms such as Google, Bing and Facebook are continually rolling out support for new features and formats, which rely on structured markup.
 
-<img src={useBaseUrl( 'img/docs/larry-page.png' )} alt='Knowledge graph panel of Larry Page' />
+<img src={useBaseUrl( 'img/larry-page.png' )} alt='Knowledge graph panel of Larry Page' />
 
 ## Why have we created a new standard/approach?
 Many content management systems, platforms, themes and plugins already provide some level of structured markup. However, the implementations are frequently incomplete, inconsistent, conflicting, or incorrect.

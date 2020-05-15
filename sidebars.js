@@ -115,6 +115,7 @@ module.exports = {
 						'customization/yoast-seo/api-filter-actions-deprecations',
 						'customization/yoast-seo/adding-custom-data-analysis',
 						'customization/yoast-seo/indexables-cli',
+						'customization/yoast-seo/disabling-primary-category',
 					],
 				},
 				{

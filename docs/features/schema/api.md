@@ -58,8 +58,8 @@ add_filter( 'wpseo_schema_article', 'example_change_article' );
  *
  * @return array $data Schema.org Article data array.
  */
-function example_change_article( $data ) {
-  $data['@type'] = 'NonsensePage';
+function change_article_to_social_posting( $data ) {
+  $data['@type'] = 'SocialMediaPosting';
   return $data;
 }
 ```

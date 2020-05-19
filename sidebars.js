@@ -131,6 +131,7 @@ module.exports = {
 					label: 'Local SEO',
 					items: [
 						'customization/local-seo/changing-location-url-google-maps',
+						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
 					],
 				},

@@ -14,15 +14,19 @@ import Alert from '../../../developer-site/src/components/Alert';
 To get Composer installed on your system, make sure you follow the [official installation steps](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).
 
 ## Installing Yoast SEO via Composer
-When installing Yoast SEO via Composer, there are two options:
+To install Yoast SEO via Composer, run the following command in your `plugins` directory:
 
-1. `composer create-project yoast/wordpress-seo` - Downloads the latest version of the Yoast SEO plugin and installs all neccessary dependencies.
-2. `composer create-project yoast/wordpress-seo:dev-trunk --prefer-source --keep-vcs` - Downloads a development version of Yoast SEO, including version control files.
+```shell script
+composer require yoast/wordpress-seo
+``` 
 
-<Alert>
+The command above downloads the latest version of the Yoast SEO plugin and installs all neccessary dependencies.
 
-Once Composer has completed its installation process, please make sure you run `yarn`, followed by `grunt:build` in the `wordpress-seo` directory to ensure all necessary files are properly built.
-</Alert>
+## Installing a development version of Yoast SEO
+If you are looking to help develop Yoast SEO (i.e. patch a bug, for example), we recommend you use `git clone git@github.com:Yoast/wordpress-seo.git` as we don't support downloading development versions of Yoast SEO through Composer.
+
+## Post-installation
+Once Composer has completed its installation process, or git is done cloning the repository, please make sure you run `yarn`, followed by `grunt:build` in the `wordpress-seo` directory to ensure all necessary files are properly built.
 
 ## Updating dependencies
 

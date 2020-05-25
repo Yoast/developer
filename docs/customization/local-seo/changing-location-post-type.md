@@ -11,5 +11,9 @@ This filter is particularly useful in cases where you have defined a custom post
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired post type.
 
 ```php
+function my_custom_locations_post_type() {
+    return 'my_custom_locations_post_type';
+}
+
 add_filter( 'wpseo_local_post_type', 'my_custom_locations_post_type' );
 ```

@@ -19,7 +19,6 @@ Some things need to work out of the box when the module is enabled.
 
 * The site needs to have pretty permalinks. System permalinks should refer to their human-readable equivalents through canonicals.
 * Every page needs to have a rel="canonical" that defaults to its generated pretty URL. See [rel=canonical: the ultimate guide](https://yoast.com/rel-canonical/) on Yoast.com.
-* The site needs to handle paginated content well. Paginated content should have `rel="next"` and/or `rel="prev"` tags. See [Google's documentation on paginated content](https://support.google.com/webmasters/answer/1663744?hl=en).
 * Search results and archive pages that should be public should have meta robots tags `noindex, follow`.
 * Category pages which are paginated should index all pages in the series (previous advice suggested that only the first page should be indexed).
 
@@ -111,18 +110,18 @@ Optionally, we might also want to include a few options for setting the robots m
 For content & readability analysis, we've built a tool called [YoastSEO.js](https://github.com/Yoast/javascript/tree/master/packages/yoastseo). It's able to analyze content for a whole range of SEO, accessibility and readability checks.
 
 Example of the SEO & accessibility checks
-<img src={useBaseUrl( 'img/docs/seo-analysis.png' )} alt='Example of the SEO & accessibility checks' />
+<img src={useBaseUrl( 'img/seo-analysis.png' )} alt='Example of the SEO & accessibility checks' />
 
 Example of the readability checks
-<img src={useBaseUrl( 'img/docs/readability.png' )} alt='Example of the SEO & accessibility checks' />
+<img src={useBaseUrl( 'img/readability.png' )} alt='Example of the SEO & accessibility checks' />
 
 YoastSEO.js also contains a Google snippet editor which contains a preview of how the page will (probably) be displayed in Google desktop or mobile search and an editor in which users can edit the title, slug and meta description intuitively.
 
 Snippet editor (desktop)
-<img src={useBaseUrl( 'img/docs/desktop-preview.png' )} alt='Snippet editor (desktop)' />
+<img src={useBaseUrl( 'img/desktop-preview.png' )} alt='Snippet editor (desktop)' />
 
 Snippet editor (mobile)
-<img src={useBaseUrl( 'img/docs/mobile-preview.png' )} alt='Snippet editor (mobile)' />
+<img src={useBaseUrl( 'img/mobile-preview.png' )} alt='Snippet editor (mobile)' />
 
 These UI elements should be integrated into the content editing experience and should update in a real-time or semi-realtime manner. For inspiration, implementors are recommended to take a look at how these elements are integrated into [Yoast SEO for WordPress](https://wordpress.org/plugins/wordpress-seo/).
 

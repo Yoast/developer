@@ -53,7 +53,7 @@ class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
 	 *
 	 * @var WPSEO_Schema_Context
 	 */
-	private $context;
+	public $context;
 
 	/**
 	 * Team_Member constructor.

@@ -11,7 +11,7 @@ The core of our approach is to output a "base script" - a `@graph` object render
 
 On any given page, the graph may be altered and/or extended to reflect the specific *type* of web page and its attributes. For any given scenario, we aim to identify the 'main entity' of the page, and to develop the graph to represent this entity (see '[Primary entities](technology-approach.md#primary-entities)').
 
-All markup, properties and attributes are drawn directly from [schema.org](https://schema.org/) , and (other than the *base script* below) all code provided is for demonstrative purposes only.
+All markup, properties and attributes are drawn directly from [schema.org](https://schema.org/), and (other than the *base script* below) all code provided is for demonstrative purposes only.
 
 ## The base script
 The following is a simplified representation of the graph which we construct on each page.

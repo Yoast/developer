@@ -92,7 +92,7 @@ NOTE: If a URL doesn't exist in our Indexables table, then this method will retu
 
 ## Access to our helpers
 
-Sometimes you need more than just the raw SEO data of a page. For instance, you need to know whether the current post type should be indexable at all. Well, our <code>post_type</code> helper can help with that:
+Sometimes you need more than just the raw SEO data of a page. For instance, you need to know whether the current post type should be indexable at all. Well, our `post_type` helper can help with that:
 
 ```php
 YoastSEO()->helpers->post_type->is_indexable( get_post_type() );

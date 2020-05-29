@@ -28,13 +28,20 @@
   }
 }
 
+@media (min-width: 997px) and (max-width: 1320px) {
+  .docItemWrapper {
+    max-width: calc(
+      var(--ifm-container-width) - 300px - var(--ifm-spacing-horizontal) * 2
+    );
+  }
+}
+
 .tableOfContents {
   display: inherit;
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   overflow-y: auto;
   position: sticky;
-  position: -webkit-sticky;
-  top: 10px;
+  top: calc(var(--ifm-navbar-height) + 2rem);
 }
 
 .tableOfContents::-webkit-scrollbar {

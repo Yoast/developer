@@ -34,7 +34,7 @@ The `current_page` surface exposes every bit of data we have on the current page
 | site_name | string | The site name from the Yoast SEO settings. |
 | wordpress_site_name | string | The site name from the WordPress settings. |
 | site_url | string | The main URL for the site. |
-| company_name | string | The company name from the Knowledge graph settings. |
+| company_name | string | The company name from the Knowledge Graph settings. |
 | company_logo_id | int | The attachment ID for the company logo. |
 | site_user_id | int | If the site represents a 'person', this is the ID of the accompanying user profile. |
 | site_represents | string | Whether the site represents a 'person' or a 'company'. |

@@ -98,7 +98,9 @@ Sometimes you need more than just the raw SEO data of a page. For instance, you 
 YoastSEO()->helpers->post_type->is_indexable( get_post_type() );
 ```
 
-This will return a simple `boolean`. If you'd rather have a list of indexable post types? You should use:
+This will return a simple `boolean`. 
+
+If you want a list of indexable post types, you should use:
 
 ```php
 $public_post_types = YoastSEO()->helpers->post_type->get_public_post_types();

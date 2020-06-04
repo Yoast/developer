@@ -19,4 +19,4 @@ This will remove the content from the tables and reindex all of them, so your da
 
 ## Reset through Yoast Test Helper
 
-Install the [Yoast Test Helper plugin](http://wordpress.org/plugins/yoast-test-helper/) and hit the button labelled "Reset Indexables tables & migrations". This will reset the plugin, causing it to ask you to index the site.
+Install the [Yoast Test Helper plugin](https://wordpress.org/plugins/yoast-test-helper/) and hit the button labelled "Reset Indexables tables & migrations". This will reset the plugin, causing it to ask you to index the site.

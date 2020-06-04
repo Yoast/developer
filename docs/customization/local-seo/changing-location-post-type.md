@@ -17,9 +17,16 @@ If you change the post type, please make sure to [reindex Yoast SEO's indexables
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired post type.
 
 ```php
-function my_custom_locations_post_type() {
+/** 
+ * Change the Yoast SEO: Local post type used for locations.
+ *
+ * @param string $post_type The post type we're replacing.
+ *
+ * @return string Our locations post type.
+ */
+function my_custom_locations_post_type( $post_type ) {
     return 'my_custom_locations_post_type';
 }
 
-add_filter( 'wpseo_local_post_type', 'my_custom_locations_post_type' );
+add_filter( 'wpseo_local_post_type', 'my_custom_locations_post_type', 10, 1 );
 ```

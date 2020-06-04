@@ -11,7 +11,7 @@ This filter is particularly useful in cases where you have defined a custom post
 
 <Alert>
 
-If you change the post type, please make sure to do a full Yoast indexables reindex. You can do that either through [WP CLI](../yoast-seo/indexables-cli.md) or by installing [Yoast Test Helper](https://wordpress.org/plugins/yoast-test-helper/) and hitting the "Reset Indexables tables & migrations" button in that plugin. This will delete the Indexables tables. After that you can run the process again.
+If you change the post type, please make sure to [reindex Yoast SEO's indexables](../../standards/reindex-indexables).
 </Alert>
 
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired post type.

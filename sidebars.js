@@ -108,6 +108,15 @@ module.exports = {
 			type: 'category',
 			label: 'Customization',
 			items: [
+                {
+					type: 'category',
+					label: 'APIs',
+					items: [
+						'customization/apis/overview',
+						'customization/apis/rest-api',
+						'customization/apis/surfaces-api',
+					],
+				},
 				{
 					type: 'category',
 					label: 'Yoast SEO',

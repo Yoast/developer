@@ -33,7 +33,6 @@ const Search = props => {
 				indexName: algolia.indexName,
 				inputSelector: '#search_input_react',
 				algoliaOptions: algolia.algoliaOptions,
-				debug: true,
 				// Override algolia's default selection event, allowing us to do client-side
 				// navigation and avoiding a full page refresh.
 				handleSelected: ( _input, _event, suggestion ) => {

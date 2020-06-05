@@ -136,7 +136,7 @@ add_action( 'wpseo_pre_schema_block_type_yoast/faq-block', [ $this, 'prepare_faq
 /**
  * If this fires, we know there's an FAQ block on the page, so filter the page type.
  *
- * @param array The blocks of this type on the current page.
+ * @param array $blocks The blocks of this type on the current page.
  */
 public function prepare_schema( $blocks ) {
     $this->blocks    = $blocks;

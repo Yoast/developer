@@ -16,6 +16,8 @@ If you don't want to change the language of your WordPress install but _do_ want
 /**
  * Changes the locale output.
  * 
+ * @param string $locale The current locale.
+ * 
  * @return string The locale.
  */
 function yst_wpseo_change_og_locale( $locale ) {

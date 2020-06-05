@@ -2,7 +2,7 @@
 id: functional-specification
 title: XML Sitemaps - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/specification.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/functional-specification.md
 description: This page describes our functional and technical approach to constructing XML Sitemaps.
 ---
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.
@@ -82,8 +82,8 @@ Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `last
 * The `loc` property should reference the canonical URL (the permalink) of the post/page/object
 * **(Optional)** The `lastmod` property should reference the time at which the object was last updated. In the case of archives/similar, this should reflect the time at which the archive members last updated (e.g., for a given category, the last time a post was published in that category)
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
- * A loc property (referencing the absolute URL of the image)
- * **(Optional)** A `title` property, referencing the image caption
+  * A loc property (referencing the absolute URL of the image)
+  * **(Optional)** A `title` property, referencing the image caption
 
 Optional properties may be omitted if unavailable.
 
@@ -183,7 +183,7 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 * `publication_date` is the date in [W3C format](https://www.w3.org/TR/NOTE-datetime)
 * `title` is the post name of the article
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
- * A `loc` property (referencing the absolute URL of the image)
- * **(Optional)** A `title` property, referencing the image caption
+  * A `loc` property (referencing the absolute URL of the image)
+  * **(Optional)** A `title` property, referencing the image caption
 
 The news XML sitemap uses a dedicated XSL file.

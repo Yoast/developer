@@ -20,7 +20,7 @@ To install Yoast SEO via Composer, run the following command in your `plugins` d
 composer require yoast/wordpress-seo
 ``` 
 
-The command above downloads the latest version of the Yoast SEO plugin and installs all neccessary dependencies.
+The command above downloads the latest version of the Yoast SEO plugin and installs all necessary dependencies.
 
 ## Installing a development version of Yoast SEO
 If you are looking to help develop Yoast SEO (i.e. patch a bug, for example), we recommend you use `git clone git@github.com:Yoast/wordpress-seo.git` as we don't support downloading development versions of Yoast SEO through Composer.

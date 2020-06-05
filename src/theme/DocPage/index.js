@@ -5,69 +5,85 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState} from 'react';
-import {MDXProvider} from '@mdx-js/react';
+import React, { useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
 
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import renderRoutes from '@docusaurus/renderRoutes';
-import Layout from '@theme/Layout';
-import SearchBar from '@theme/SearchBar';
-import DocSidebar from '@theme/DocSidebar';
-import MDXComponents from '@theme/MDXComponents';
-import NotFound from '@theme/NotFound';
-import {matchPath} from '@docusaurus/router';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import renderRoutes from "@docusaurus/renderRoutes";
+import Layout from "@theme/Layout";
+import SearchBar from "@theme/SearchBar";
+import DocSidebar from "@theme/DocSidebar";
+import MDXComponents from "@theme/MDXComponents";
+import NotFound from "@theme/NotFound";
+import { matchPath } from "@docusaurus/router";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 import Logo from "../Logo";
-
-function matchingRouteExist( routes, pathname ) {
-	return routes.some( route => matchPath( pathname, route ) );
-}
+import DocItem from "../DocItem";
 
 function DocPage( props ) {
-	const {route, docsMetadata, location} = props;
-	const {permalinkToSidebar, docsSidebars, version} = docsMetadata;
-	const sidebar = permalinkToSidebar[location.pathname.replace( /\/$/, '' )] || 'mainSidebar';
-	const {siteConfig: {themeConfig = {}} = {}} = useDocusaurusContext();
-	const {sidebarCollapsible = true} = themeConfig;
+	const { route: baseRoute, docsMetadata, location, content } = props;
+	const {
+		permalinkToSidebar,
+		docsSidebars,
+		version,
+		isHomePage,
+		homePagePath,
+	} = docsMetadata;
 
-	const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
+	// Get case-sensitive route such as it is defined in the sidebar.
+	const currentRoute = !isHomePage
+		? baseRoute.routes.find( ( route ) => {
+		return matchPath( location.pathname, route );
+	} ) || {}
+		: {};
 
+	let sidebar = isHomePage
+		? content.metadata.sidebar
+		: permalinkToSidebar[currentRoute.path];
 
+	const { siteConfig: { themeConfig = {} } = {}, isClient } = useDocusaurusContext();
+	const { sidebarCollapsible = true } = themeConfig;
+	const [ isSearchBarExpanded, setIsSearchBarExpanded ] = useState( false );
 
-	let content = (
-		<MDXProvider components={MDXComponents}>
-			{renderRoutes( route.routes )}
-		</MDXProvider>
+	let renderedContent = (
+        <MDXProvider components={ MDXComponents }>
+          { isHomePage ? (
+              <DocItem content={ content }/>
+          ) : (
+              renderRoutes( baseRoute.routes )
+          ) }
+        </MDXProvider>
 	);
 
-	if ( !matchingRouteExist( route.routes, location.pathname ) ) {
-		content = (
-			<NotFound {...props} />
-		);
+	if ( !isHomePage && Object.keys( currentRoute ).length === 0 ) {
+		renderedContent = <NotFound { ...props } />;
+		sidebar = 'mainSidebar';
 	}
 
 	return (
-		<Layout version={version}>
-			<div className={styles.docPage}>
-				<aside className={styles.sidebar}>
+		<Layout version={ version } key={ isClient }>
+			<div className={ styles.docPage }>
+
+				<aside className={ styles.sidebar }>
 					<Logo/>
-					<div className={styles.sidebar__menu}>
+					<div className={ styles.sidebar__menu }>
 						<SearchBar
-							handleSearchBarToggle={setIsSearchBarExpanded}
-							isSearchBarExpanded={isSearchBarExpanded}
+							handleSearchBarToggle={ setIsSearchBarExpanded }
+							isSearchBarExpanded={ isSearchBarExpanded }
 						/>
 						<DocSidebar
-							docsSidebars={docsSidebars}
-							location={location}
-							sidebar={sidebar}
-							sidebarCollapsible={sidebarCollapsible}
+							docsSidebars={ docsSidebars }
+							location={ location }
+							sidebar={ sidebar }
+							sidebarCollapsible={ sidebarCollapsible }
+							path={ isHomePage ? homePagePath : currentRoute.path }
 						/>
 					</div>
-
 				</aside>
-				<main className={styles.docMainContainer}>
-					{content}
+
+				<main className={ styles.docMainContainer }>
+                  {renderedContent}
 				</main>
 			</div>
 		</Layout>

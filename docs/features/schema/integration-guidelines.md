@@ -24,7 +24,7 @@ Specifically, on a `WebPage` representing a single person, that person could be 
 
 First, we add the piece to the graph:
 
-``` php
+```php
 add_filter( 'wpseo_schema_graph_pieces', 'yoast_add_graph_pieces', 11, 2 );
 
 /**
@@ -33,17 +33,18 @@ add_filter( 'wpseo_schema_graph_pieces', 'yoast_add_graph_pieces', 11, 2 );
  * @param array                 $pieces  Graph pieces to output.
  * @param \WPSEO_Schema_Context $context Object with context variables.
  *
- * @return array $pieces Graph pieces to output.
+ * @return array Graph pieces to output.
  */
 function yoast_add_graph_pieces( $pieces, $context ) {
 	$pieces[] = new Team_Member( $context );
+
 	return $pieces;
 }
 ```
 
 And then `Team_Member` is a "graph piece", so let's create it. We're going to create it by extending the existing `Person` class, as that saves us a lot of code.
 
-``` php
+```php
 /**
  * Class Team_Member
  */
@@ -67,7 +68,7 @@ class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
 	/**
 	 * Determines whether or not a piece should be added to the graph.
 	 *
-	 * @return bool
+	 * @return bool Whether or not a piece should be added.
 	 */
 	public function is_needed() {
 		if ( is_singular( 'yoast_team_member' ) ) {
@@ -80,7 +81,7 @@ class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
 	/**
 	 * Adds our Team Member's Person piece of the graph.
 	 *
-	 * @return array $graph Person Schema markup
+	 * @return array Person Schema markup.
 	 */
 	public function generate() {
 		$data = parent::generate();

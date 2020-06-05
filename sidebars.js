@@ -155,6 +155,7 @@ module.exports = {
 				'standards/development-tools',
 				'standards/development-setup',
 				'standards/reindex-indexables',
+				'standards/using-composer',
 				'standards/setting-up-integration-tests-for-the-plugins',
 				'standards/running-unit-tests-code-style-checks-and-linters',
 				'standards/coding-guidelines-and-principles',

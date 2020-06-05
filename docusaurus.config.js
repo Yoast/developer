@@ -85,12 +85,13 @@ const config = {
 	customFields: {
 		docsPath: '../developer-docs/docs',
 	},
-	themes: ['@docusaurus/theme-search-algolia'],
+	themes: [ require.resolve( '@docusaurus/theme-search-algolia' ) ],
 	presets: [
 		[
 			'@docusaurus/preset-classic',
 			{
 				docs: {
+					homePageId: 'overview',
 					routeBasePath: '',
 					get path(){ return config.customFields.docsPath; },
 					sidebarPath: require.resolve('./sidebars.js'),

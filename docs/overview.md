@@ -1,5 +1,5 @@
 ---
-id: _index
+id: overview
 title: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/overview.md
 ---

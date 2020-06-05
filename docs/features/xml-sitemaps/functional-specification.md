@@ -42,7 +42,7 @@ Requests to non-existent sitemap URLs should return normal 404 behavior.
 ### XML sitemap indexes
 The index file contains a `<sitemap>` entry for each individual XML sitemap, each of which has a loc and lastmod property. E.g:
 
-``` xml
+```xml
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
   <loc>https://www.example.com/author-sitemap.xml</loc>
@@ -62,7 +62,7 @@ The file should be accessible at `/sitemap_index.xml`. Requests to `/sitemap.xml
 
 ### XML sitemaps
 Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `lastmod`, and `image:image` properties. E.g:
-``` xml
+```xml
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://www.example.com/blog/example-post/</loc>
@@ -112,7 +112,7 @@ XML sitemaps do not need to be indexed by search engines in order to be read or 
 Our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/) adds an additional *video sitemap* (at `video-sitemap.xml`, and included in the sitemap index) which contains information on each video hosted/referenced within site content.
 
 For each page which contains video, the sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<video:video>` container for each video on the page. E.g:
-``` xml
+```xml
 <url>
   <loc>https://www.example.com/example-page/</loc>
   <video:video>
@@ -157,7 +157,7 @@ Our [News SEO for WordPress plugin](https://yoast.com/wordpress/plugins/news-seo
 News sitemaps should only reference articles which were published or modified within the last 48 hours.
 
 The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<news:news>` container for each news article. E.g:
-``` xml
+```xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
   <loc>http://www.example.com/example-page/</loc>

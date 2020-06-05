@@ -18,7 +18,7 @@ In either your custom plugin or your theme's `functions.php`, add the following 
 
 ```php
 /** 
- * Change the Yoast SEO: Local post type used for locations.
+ * Changes the Yoast SEO: Local post type used for locations.
  *
  * @param string $post_type The post type we're replacing.
  *

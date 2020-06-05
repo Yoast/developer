@@ -42,13 +42,11 @@ The [Yoast PHP coding standards](https://github.com/Yoast/yoastcs) is a PHPCS ru
 
 ```php
 // Yoast style
-
 if ( $foo == 'bar' ) {
   echo 'It is Yoast style!';
 }
 
 // Yoda style
-
 if ( 'bar' == $foo ) {
   echo 'Yoda style is how this looks';
 }
@@ -57,9 +55,7 @@ if ( 'bar' == $foo ) {
 2. We put `else` on a new line.
 
 ```php
-
 // Yoast style:
-
 if ( $foo == 'bar' ) {
   echo 'foo bar';
 }
@@ -68,7 +64,6 @@ else {
 }
 
 // WP Coding Standards:
-
 if ( $foo == 'bar' ) {
   echo 'foo bar';
 } else {

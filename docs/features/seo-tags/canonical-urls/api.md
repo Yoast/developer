@@ -13,11 +13,11 @@ For example, the following code would change the canonical on a page with ID `12
 
 ```php
 /**
- * Filter the canonical URL.
+ * Filters the canonical URL.
  *
  * @param string $canonical The current page's generated canonical URL.
  *
- * @return string The filtered canonical.
+ * @return string The filtered canonical URL.
  */
 function prefix_filter_canonical_example( $canonical ) {
   if ( is_page( 12345 ) ) {
@@ -39,7 +39,7 @@ If you want to completely remove the canonical URL from a page, simply return fa
  *
  * @param string $canonical The current page's generated canonical URL.
  *
- * @return bool|string The filtered canonical or false when we want to remove it.
+ * @return bool|string The filtered canonical URL or false when we want to remove it.
  */
 function prefix_filter_canonical_example( $canonical ) {
   if ( is_page( 12345 ) ) {

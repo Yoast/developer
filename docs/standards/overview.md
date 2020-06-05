@@ -12,6 +12,7 @@ The list below can be used to discover how you can use these various elements in
 * [Development tools](development-tools.md)
 * [Development setup](development-setup.md)
 * [Running unit tests, code style checks and linters](running-unit-tests-code-style-checks-and-linters.md)
+* [How to reindex indexables](reindex-indexables.md)
 
 ## Guidelines and conventions
 * [Coding guidelines and principles](coding-guidelines-and-principles.md)

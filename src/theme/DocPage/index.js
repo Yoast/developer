@@ -39,7 +39,7 @@ function DocPage( props ) {
 		: {};
 
 	let sidebar = isHomePage
-		? content.metadata.sidebar
+		? 'mainSidebar'
 		: permalinkToSidebar[currentRoute.path];
 
 	const { siteConfig: { themeConfig = {} } = {}, isClient } = useDocusaurusContext();

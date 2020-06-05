@@ -108,6 +108,15 @@ module.exports = {
 			type: 'category',
 			label: 'Customization',
 			items: [
+                {
+					type: 'category',
+					label: 'APIs',
+					items: [
+						'customization/apis/overview',
+						'customization/apis/rest-api',
+						'customization/apis/surfaces-api',
+					],
+				},
 				{
 					type: 'category',
 					label: 'Yoast SEO',
@@ -116,6 +125,7 @@ module.exports = {
 						'customization/yoast-seo/adding-custom-data-analysis',
 						'customization/yoast-seo/indexables-cli',
 						'customization/yoast-seo/disabling-primary-category',
+						'customization/yoast-seo/disabling-yoast-seo',
 					],
 				},
 				{
@@ -131,6 +141,7 @@ module.exports = {
 					label: 'Local SEO',
 					items: [
 						'customization/local-seo/changing-location-url-google-maps',
+						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
 					],
 				},
@@ -143,6 +154,7 @@ module.exports = {
 				'standards/overview',
 				'standards/development-tools',
 				'standards/development-setup',
+				'standards/reindex-indexables',
 				'standards/using-composer',
 				'standards/setting-up-integration-tests-for-the-plugins',
 				'standards/running-unit-tests-code-style-checks-and-linters',

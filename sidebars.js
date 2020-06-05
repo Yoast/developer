@@ -125,6 +125,7 @@ module.exports = {
 						'customization/yoast-seo/adding-custom-data-analysis',
 						'customization/yoast-seo/indexables-cli',
 						'customization/yoast-seo/disabling-primary-category',
+						'customization/yoast-seo/disabling-yoast-seo',
 					],
 				},
 				{

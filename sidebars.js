@@ -33,6 +33,25 @@ module.exports = {
 					label: 'SEO tags',
 					items: [
 
+                        {
+                            type: 'category',
+                            label: 'Titles',
+                            items: [
+                                'features/seo-tags/titles/overview',
+                                'features/seo-tags/titles/functional-specification',
+                                'features/seo-tags/titles/api',
+                            ],
+                        },
+
+                        {
+							type: 'category',
+							label: 'Descriptions',
+							items: [
+								'features/seo-tags/descriptions/overview',
+								'features/seo-tags/descriptions/functional-specification',
+								'features/seo-tags/descriptions/api',
+							],
+						},
 						{
 							type: 'category',
 							label: 'Canonical URLs',

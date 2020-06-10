@@ -13,6 +13,13 @@ So, if you want it to output `nl_NL` instead of the default `en_US`, you simply 
 If you don't want to change the language of your WordPress install but _do_ want to change the locale output of Yoast SEO, you can do so by filtering the output. You should add code that looks like this to your theme's `functions.php`:
 
 ```php
+/**
+ * Changes the locale output.
+ * 
+ * @param string $locale The current locale.
+ * 
+ * @return string The locale.
+ */
 function yst_wpseo_change_og_locale( $locale ) {
     return 'nl_NL';
 }

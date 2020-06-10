@@ -15,7 +15,7 @@ This page describes the command and all its options.
 If you don't know what WP CLI is, you're missing out! It's a command line interface for WordPress that makes loads of tasks easier. [Read all about it on wp-cli.org](https://wp-cli.org/). 
 </Alert>
 
-If you plan on using our [REST API](https://developer.yoast.com/blog/yoast-seo-rest-api-endpoint/) or [our surfaces](https://developer.yoast.com/blog/yoast-seo-14-0-using-yoast-seo-surfaces/), running the CLI command on your website beforehand is very important.
+If you plan on using our [REST API](../apis/rest-api.md) or [our surfaces](../apis/surfaces-api.md), running the CLI command on your website beforehand is very important.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ Indexing general objects  100% [====================] 0:00 / 0:00
 
 * If one of these doesn't show that is because all of the items in there were already indexed. 
 * Authors are indexed as part of the posts indexation process. 
-* If you want to test this index command multiple times, please use the [Yoast Test Helper](https://developer.yoast.com/blog/yoast-test-helper-easy-testing/). If you hit the "Reset Indexables tables & migrations" button in that plugin, 
+* If you want to test this index command multiple times, please use the [Yoast Test Helper](https://wordpress.org/plugins/yoast-test-helper/). If you hit the "Reset Indexables tables & migrations" button in that plugin, 
 it'll delete the Indexables tables. After that you can run the process again.
 
 ## Options

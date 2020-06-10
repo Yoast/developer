@@ -12,22 +12,35 @@ You will find an example of how to use the filter below.
 
 ## Single location
 ```php
-add_filter('yoast_seo_local_change_map_location_url', 'yoast_seo_local_change_map_location_url', 10, 1 );
+add_filter( 'yoast_seo_local_change_map_location_url', 'yoast_seo_local_change_map_location_url', 10, 1 );
 
+/**
+ * Changes the location of the Google Maps URLs for your location.
+ *
+ * @param string $url The URL we're replacing.
+ *
+ * @return string The maps URL.
+ */
 function yoast_seo_local_change_map_location_url( $url ) {
-    $url = 'https://www.yoast.com';
-
-    return $url;
+   return 'https://www.yoast.com';
 }
 ```
 
 ## Multiple locations
 ```php
-add_filter('yoast_seo_local_change_map_location_url', 'yoast_seo_local_change_map_location_url', 10, 2 );
+add_filter( 'yoast_seo_local_change_map_location_url', 'yoast_seo_local_change_map_location_url', 10, 2 );
 
-function yoast_seo_local_change_map_location_url( $url, $post_id ) {
-    // Change this to the post ID you want to match against
-    if( $post_id == 1 ) {
+/**
+ * Changes the location of the Google Maps URLs for your location, per location.
+ *
+ * @param string $url         The URL we're replacing.
+ * @param int    $location_id The ID of the location we're changing the map for.
+ *
+ * @return string The maps URL.
+ */
+function yoast_seo_local_change_map_location_url( $url, $location_id ) {
+    // Change this to the post ID you want to match against.
+    if ( $location_id === 1 ) {
         $url = 'https://www.yoast.com';
     }
 

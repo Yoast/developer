@@ -93,17 +93,27 @@ Assuming you have a plugin file present (i.e. `MyCustomPlugin.php`), your file m
 <?php
 // ...
 class MyCustomPlugin {
+
+    /**
+     * MyCustomPlugin constructor.
+     */
     public function __construct() {
         // ...
         add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
     }
     
+    /** 
+     * Enqueues the plugin file.
+     */
     public function enqueue_scripts() {
         wp_enqueue_script( 'my-custom-plugin', plugins_url( 'js/MyCustomDataPlugin.js', __FILE__ ), [], '1.', true );
     }
 
 }
 
+/** 
+ * Loads the plugin.
+ */
 function loadMyCustomPlugin() {
     new MyCustomPlugin();
 }

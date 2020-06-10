@@ -121,6 +121,17 @@ module.exports = {
 						},
 					],
 				},
+
+                {
+                    type: 'category',
+                    label: 'HTTP headers',
+                    items: [
+                        'features/http-headers/overview',
+                        'features/http-headers/functional-specification',
+                        'features/http-headers/api',
+                    ],
+                },
+
 			],
 		},
 		{
@@ -181,6 +192,7 @@ module.exports = {
 				'standards/version-control-conventions',
 				'standards/productivity-tips-and-tricks',
 				'standards/cheatsheets',
+                'standards/yoast-seo-product-sheet',
 			]
 		},
 	],

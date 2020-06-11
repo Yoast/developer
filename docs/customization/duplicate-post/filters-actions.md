@@ -115,7 +115,7 @@ function my_custom_duplicate_post_pre_copy() {
 add_action( 'duplicate_post_pre_copy', 'my_custom_duplicate_post_pre_copy' );
 ```
 
-### `duplicate_post_pre_copy`
+### `duplicate_post_post_copy`
 
 This action is called right before cloning of the post or page starts.
 

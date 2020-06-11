@@ -126,7 +126,7 @@ In either your custom plugin or your theme's `functions.php`, add the following 
  * Performs some actions after copying the post.
  */
 function my_custom_duplicate_post_post_copy() {
-    // Perform some actions before copying the post.
+    // Perform some actions after copying the post.
 }
 
 add_action( 'duplicate_post_post_copy', 'my_custom_duplicate_post_post_copy' );
@@ -147,7 +147,7 @@ In either your custom plugin or your theme's `functions.php`, add the following 
 
 ```php
 /**
- * Performs some actions the WordPress standard fields of a post, or a non-hierarchical custom type item, have been copied.
+ * Performs some actions after the WordPress standard fields of a post, or a non-hierarchical custom type item, have been copied.
  * 
  * @param int $new_post_id The newly created post's ID.
  * @param WP_Post $post The original post's object.

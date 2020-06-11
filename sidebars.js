@@ -145,6 +145,14 @@ module.exports = {
 						'customization/local-seo/enhancing-search-results',
 					],
 				},
+				{
+					type: 'category',
+					label: 'Duplicate Post',
+					items: [
+						'customization/duplicate-post/filters-actions',
+						'customization/duplicate-post/functions-template-tags',
+					],
+				},
 			]
 		},
 		{

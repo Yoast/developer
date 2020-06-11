@@ -75,7 +75,7 @@ add_filter( 'duplicate_post_get_clone_post_link', 'my_custom_get_clone_post_link
 
 ### `duplicate_post_clone_post_link`
 
-This filter is used in conjunction with the `duplicate_post_clone_post_link` template tag and allows you to manipulate parts of the outputted link.
+This filter is used in conjunction with the [`duplicate_post_clone_post_link`](functions-template-tags.md#duplicate_post_clone_post_link) template tag and allows you to manipulate parts of the outputted link.
 
 In either your custom plugin or your theme's `functions.php`, add the following code and retrieve or alter the post link's HTML
 

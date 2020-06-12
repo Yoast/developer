@@ -2,7 +2,7 @@
 id: functional-specification
 title: Meta robots - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-robots/functional-specification.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/seo-tags/meta-robots/functional-specification.md
 description: An overview of how meta robots tags work in Yoast SEO.
 ---
 When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines, we output a meta robots tag in the `<head>` of that page.

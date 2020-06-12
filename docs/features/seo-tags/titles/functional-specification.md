@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: An overview of how title tags work in Yoast SEO.
 ---
 
-Every page on a website should include a unique title tag in the `<head>` of the document.
+Every page on a website should include a unique, descriptive title tag in the `<head>` of the document.
 
 A valid title tag takes the following format: `<title>{{VALUE}}</title>`.
 

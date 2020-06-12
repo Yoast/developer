@@ -35,6 +35,25 @@ module.exports = {
 
 						{
 							type: 'category',
+							label: 'Titles',
+							items: [
+								'features/seo-tags/titles/overview',
+								'features/seo-tags/titles/functional-specification',
+								'features/seo-tags/titles/api',
+							],
+						},
+
+						{
+							type: 'category',
+							label: 'Descriptions',
+							items: [
+								'features/seo-tags/descriptions/overview',
+								'features/seo-tags/descriptions/functional-specification',
+								'features/seo-tags/descriptions/api',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Canonical URLs',
 							items: [
 								'features/seo-tags/canonical-urls/overview',
@@ -102,13 +121,24 @@ module.exports = {
 						},
 					],
 				},
+
+				{
+					type: 'category',
+					label: 'HTTP headers',
+					items: [
+						'features/http-headers/overview',
+						'features/http-headers/functional-specification',
+						'features/http-headers/api',
+					],
+				},
+
 			],
 		},
 		{
 			type: 'category',
 			label: 'Customization',
 			items: [
-                {
+				{
 					type: 'category',
 					label: 'APIs',
 					items: [
@@ -162,6 +192,7 @@ module.exports = {
 				'standards/version-control-conventions',
 				'standards/productivity-tips-and-tricks',
 				'standards/cheatsheets',
+				'standards/yoast-seo-product-sheet',
 			]
 		},
 	],

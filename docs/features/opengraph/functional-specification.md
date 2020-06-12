@@ -48,6 +48,7 @@ The following tags used to be output by Yoast SEO, but have been removed in rece
 
 | Tag | Description | Reason | Deprecation |
 |---|----|---|---|
+| `fb:admins` | Legacy Facebook control | No longer appears to be supported | Unknown |
 | `article:section` | Legacy Facebook / Open Graph tag. | No longer appears to be supported. | Yoast SEO v14.0 (Apr 2020) |
 | `og:updated_time` | Legacy Facebook / Open Graph tag. | No longer appears to be supported. | Yoast SEO v14.0 (Apr 2020) |
 | `og:image:secure_url` | Defines a (separate) URL for the featured image, available over HTTPS. | Unnecessarily duplicates the `og:image` tag when a site is on HTTPS, and, unnecessary/omitted when the site is not. | Yoast SEO v14.0 (Apr 2020) |

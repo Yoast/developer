@@ -24,7 +24,7 @@ Also note that the word 'page' is used throughout to indicate any 'non-system' r
 | Taxonomy index page | Any template which lists a selection of posts or pages based on a taxonomy or similar. E.g. a category page or tag page, or a page listing all posts by a particular author. | `%%term_title%% archives %%page%% %%sep%% %sitename%` | Blue widgets archive - Acne Inc |
 | Date index page | Any template which lists a selection of posts or pages filtered by date. E.g, all posts which were published in a certain year, or, all pages which were added on a certain day/date. | `%%date%% %%page%% %%sep%% %sitename%` | 2018 - Acne Inc |
 | Search pages | Any template which lists a selection of posts or pages filtered by a user query. E.g, all posts which are relevant for the word 'widget'. | `You searched for %%search_phrase%% %%page%% %%sep%% %sitename%` | You searched for red widgets - Acne Inc |
-| 404 pages | Any template is served when the user requests a URL which returns a 404 error | `Page not found %%sep%% %sitename%` | Page not found - Acne Inc |
+| 404 pages | Any template is served when the user requests a URL which returns a 404 error. | `Page not found %%sep%% %sitename%` | Page not found - Acne Inc |
 
 Most of these variables should be fairly self-descriptive, and shouldn't need extensive documentation. However, for the avoidance of doubt:
 

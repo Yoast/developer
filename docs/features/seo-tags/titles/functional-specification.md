@@ -32,7 +32,7 @@ Most of these variables should be fairly self-descriptive, and shouldn't need ex
 - `%%sep%%`: A separator character. E.g., `-`, `|`, or similar.
 - `%%tagline%%`: A short description of the site, or similar. E.g., "The best widgets in the world".
 - `%%postname%%`: The name of a page/post. E.g., "Widget FAQs".
-- `$%page%%`: A representation of the pagination state. E.g., "Page 1 of 8".
+- `$%page%%`: A representation of the pagination state (omitted on the first page in a series). E.g., "Page 2 of 8".
 - `%%term_title%%`: The name of the taxonomy/archive. E.g., "Blue widgets".
 - `%%date%%`: The date of the archive. E.g., "July 2016".
 - `%%search_phrase%%`: The search string. E.g., "How much do red widgets cost".

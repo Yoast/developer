@@ -173,16 +173,17 @@ module.exports = {
 						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
 					],
-				},
-				{
-					type: 'category',
-					label: 'Duplicate Post',
-					items: [
-						'customization/duplicate-post/filters-actions',
-						'customization/duplicate-post/functions-template-tags',
-					],
-				},
+				}
 			]
+		},
+		{
+			type: 'category',
+			label: 'Duplicate Post',
+			items: [
+				'duplicate-post/overview',
+				'duplicate-post/filters-actions',
+				'duplicate-post/functions-template-tags',
+			],
 		},
 		{
 			type: 'category',

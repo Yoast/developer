@@ -16,8 +16,6 @@ module.exports = {
 			type: 'category',
 			label: 'Yoast SEO Features',
 			items: [
-				'features/overview',
-
 				{
 					type: 'category',
 					label: 'XML sitemaps',

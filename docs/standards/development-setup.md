@@ -4,7 +4,9 @@ title: Standards - Development setup
 sidebar_label: Development setup
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/development-setup.md
 ---
-This page describes the process of how we setup development environments at Yoast.
+import Alert from '../../../developer-site/src/components/Alert';
+
+This page describes the process of how we set up development environments at Yoast.
 
 **Note: These instructions assume you're working with OSX.**
 
@@ -55,9 +57,29 @@ Additional plugins:
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
 
 ## Linking repositories via Yarn
-If you're developing within the JavaScript code that is part of the plugin, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using [linking](https://yarnpkg.com/lang/en/docs/cli/link/) in Yarn.
+Due to the way we have structured most of our JavaScript / React code in the form of a monorepo, it is necessary to use Yarn's [linking](https://yarnpkg.com/lang/en/docs/cli/link/) feature if you plan on working on the JavaScript code. 
 
-Due to how we've structured our JavaScript code into a monorepo, we've created [a separate page](https://github.com/Yoast/javascript) that includes all the information you'll need to get things up and running.
+### Working on JavaScript used in the plugins
+If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:
+
+* Ensure you've cloned the JavaScript monorepo to somewhere on your machine.
+* Navigate to your WordPress development environment and are in the correct plugin's directory (i.e. `/plugins/wordpress-seo` or `/plugins/wordpress-seo-premium`).
+* Checkout your desired branch in the plugin's directory (or create a new one).
+* Run `yarn`, followed by `yarn link-monorepo`.
+* While running the second command, you might be asked to give up the directory that you've cloned the monorepo to. 
+  * If prompted, ensure you give up the *full* path to this directory (i.e. `/Users/<your user account>/<directory of monorepo>` ). Please note that the usage of `~` in the pathname, is not supported.
+* If no errors occur, you should now be able to proceed developing and run commands such as `grunt build` as you normally would.
+
+<Alert>
+
+If your pull-request requires a specific branch from the monorepo, please ensure that you create a branch on the monorepo with the *exact* same name as the branch on the plugin's repository.
+This ensures that Travis uses the correct branches when building. 
+</Alert>
+
+### Working on standalone JavaScript
+If you're planning on only working on the JavaScript code, outside of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things, up and running.
+
+A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) are also available.
 
 ## Now what?
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

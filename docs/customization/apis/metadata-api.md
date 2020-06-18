@@ -16,14 +16,14 @@ Each meta tag which we output on a page is managed via a `presenter`. The `prese
 ## Creating or adding meta tags
 Adding your own meta tag(s) is as simple as creating your own class which extends `Abstract_Indexable_Presenter`. To get started, you'll need to understand the following:
 
-- Each implementation of `Abstract_Indexable_Presenter` must implement the two functions: `get` and `present`.
-  - The `get` function should return the raw value of your meta (usually whatever is in the `content` property of the meta tag).
-  - The `present` function should return the full meta tag.
+* Each implementation of `Abstract_Indexable_Presenter` must implement the two functions: `get` and `present`.
+  * The `get` function should return the raw value of your meta (usually whatever is in the `content` property of the meta tag).
+  * The `present` function should return the full meta tag.
 
-- Every `Abstract_Indexable_Presenter` class has 3 public properties, `helpers`, `replace_vars` and the `presentation`. You can use these to gather all data you need:
-  - The `presentation` contains all data that Yoast SEO puts out. Your IDE should make it easy for you to find the values you need.
-  - The `helpers` property currently includes all our helper classes which you can use to, for example, determine whether or not something is an article post type in regards to schema, using `$this->helpers->schema->article->is_article_post_type( $post_type )`.
-  - The `replace_vars` property ensures you can use the `$this->replace_vars( $string )` function to make use of our replacement variables in your own string if so desired.
+* Every `Abstract_Indexable_Presenter` class has 3 public properties, `helpers`, `replace_vars` and the `presentation`. You can use these to gather all data you need:
+  * The `presentation` contains all data that Yoast SEO puts out. Your IDE should make it easy for you to find the values you need.
+  * The `helpers` property currently includes all our helper classes which you can use to, for example, determine whether or not something is an article post type in regards to schema, using `$this->helpers->schema->article->is_article_post_type( $post_type )`.
+  * The `replace_vars` property ensures you can use the `$this->replace_vars( $string )` function to make use of our replacement variables in your own string if so desired.
 
 Combined, this should lead to code that looks something like this:
 
@@ -107,4 +107,62 @@ add_filter( 'wpseo_frontend_presenters', 'add_my_custom_presenter' );
 Coming soon.
 
 ## Removing meta tags
-Coming soon.
+Removing meta tags can be done by using the `wpseo_frontend_presenters` filter. In the following example, we'll remove the GoogleBot presenter from the list.
+
+```php
+// File: functions.php
+
+/**
+ * Removes GoogleBot from the presenters.
+ *
+ * @param array $presenters The registered presenters.
+ *
+ * @return array The remaining presenters.
+ */
+function remove_googlebot_presenter( $presenters ) {
+    return array_map( function( $presenter ) {
+        if ( ! $presenter instanceof Googlebot_Presenter ) {
+            return $presenter;
+        }
+    }, $presenters );
+}
+
+add_action( 'wpseo_frontend_presenters', 'remove_googlebot_presenter' );
+```
+
+### Available presenters
+The other Presenter classes that output metadata, are as follows:
+
+#### Generic presenters
+* Googlebot_Presenter
+* Bingbot_Presenter
+* Meta_Description_Presenter
+* Robots_Presenter
+
+#### Webmaster presenters
+* Baidu_Presenter
+* Bing_Presenter
+* Google_Presenter
+* Pinterest_Presenter
+* Yandex_Presenter
+
+#### Twitter presenters
+* Card_Presenter
+* Creator_Presenter
+* Description_Presenter
+* Image_Presenter
+* Site_Presenter
+* Title_Presenter
+
+#### OpenGraph presenters
+* Article_Author_Presenter
+* Article_Modified_Time_Presenter
+* Article_Published_Time_Presenter
+* Article_Publisher_Presenter
+* Description_Presenter
+* FB_App_ID_Presenter
+* Locale_Presenter
+* Site_Name_Presenter
+* Title_Presenter
+* Type_Presenter
+* Url_Presenter

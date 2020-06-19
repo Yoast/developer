@@ -122,7 +122,7 @@ This simpler format requires you to specify your tag format and replace where yo
 Because `Abstract_Indexable_Tag_Presenter` is itself inherited from `Abstract_Indexable_Presenter` all the tools you have there are available here too.
 
 ## Registering your presenter
-Regardless of which method you choose, you could then register your presenter through a filter:
+Regardless of which of the above methods you choose, you can then register your presenter through a filter:
 
 ```php
 /**

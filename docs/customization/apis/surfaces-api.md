@@ -2,6 +2,7 @@
 id: surfaces-api
 title: Yoast SEO - Surfaces API
 sidebar_label: Surfaces API
+description: Retrieve metadata from a post or URL, seamlessly.
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/apis/surfaces-api.md
 ---
 
@@ -98,7 +99,7 @@ Sometimes you need more than just the raw SEO data of a page. For instance, you 
 YoastSEO()->helpers->post_type->is_indexable( get_post_type() );
 ```
 
-This will return a simple `boolean`. 
+This will return a simple `boolean`.
 
 If you want a list of indexable post types, you should use:
 

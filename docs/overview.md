@@ -13,6 +13,8 @@ Learn how our features work, how to customize the outputs, and how best to integ
 
 - [XML sitemaps](features/xml-sitemaps/overview.md)
 - [SEO tags](features/seo-tags/canonical-urls/overview.md)
+  - [Title tags](features/seo-tags/titles/overview.md)
+  - [Meta description tags](features/seo-tags/descriptions/overview.md)
   - [Canonical URLs](features/seo-tags/canonical-urls/overview.md)
   - [Meta robots tags](features/seo-tags/meta-robots/overview.md)
 - [OpenGraph tags](features/opengraph/overview.md)
@@ -20,6 +22,11 @@ Learn how our features work, how to customize the outputs, and how best to integ
 - [Schema.org markup](features/schema/overview.md)
   - [Schema pieces](/features/schema/pieces.md)
   - [Output per plugin](/features/schema/plugins.md)
+
+## Explore our APIs
+- [REST API](customization/apis/rest-api)
+- [Surfaces API](customization/apis/surfaces-api)
+- [Metadata API](customization/apis/metadata-api)
 
 ## Looking for something else?
 - [Our official website](https://yoast.com)

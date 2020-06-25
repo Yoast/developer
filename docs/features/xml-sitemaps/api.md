@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: Coming soon.
 ---
 
-Whilst Yoast SEO provides sensible default behaviours for XML sitemaps (and UI controls for inclusion/exclusion), custom themes or plugins sometimes need to alter our markup or logic.
+Whilst Yoast SEO provides sensible default behaviors for XML sitemaps (and UI controls for inclusion/exclusion), custom themes or plugins sometimes need to alter our markup or logic.
 In those cases, you can use the examples below to modify how our sitemaps are generated and output.
 
 ## Excluding content types
@@ -14,11 +14,12 @@ In those cases, you can use the examples below to modify how our sitemaps are ge
 ### Exclude specific posts
 ```php
 /**
- * Excludes posts from XML sitemaps
+ * Excludes posts from XML sitemaps.
+ *
+ * @return array The IDs of posts to exclude.
  */
 function exclude_posts_from_xml_sitemaps() {
-    $posts = array( 1, 2, 3 );
-    return $posts;
+    return [ 1, 2, 3 ];
 }
 add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', 'exclude_posts_from_xml_sitemaps' );
 ```
@@ -26,11 +27,12 @@ add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', 'exclude_posts_from_xml_si
 ### Exclude a post type
 ```php
 /**
- * Exclude a post type from XML sitemaps
+ * Exclude a post type from XML sitemaps.
+ *
+ * @return bool Whether or not a given post type should be excluded.
  */
 function sitemap_exclude_post_type( $value, $post_type ) {
-    $post_type_slug = 'recipes'; // An example custom post type slug.
-    if ( $post_type == $post_type_slug ) return true;
+    return $post_type === 'recipes';
 }
 add_filter( 'wpseo_sitemap_exclude_post_type', 'sitemap_exclude_post_type', 10, 2 );
 ```
@@ -38,11 +40,12 @@ add_filter( 'wpseo_sitemap_exclude_post_type', 'sitemap_exclude_post_type', 10, 
 ### Exclude a taxonomy
 ```php
 /**
- * Exclude a taxonomy from XML sitemaps
+ * Exclude a taxonomy from XML sitemaps.
+ *
+ * @return bool Whether or not a given taxonomy should be excluded.
  */
 function sitemap_exclude_taxonomy( $value, $taxonomy ) {
-    $taxonomy_slug = 'ingredients'; // An example taxonomy slug.
-    if ( $taxonomy == $taxonomy_slug ) return true;
+    return $taxonomy === 'ingredients';
 }
 add_filter( 'wpseo_sitemap_exclude_taxonomy', 'sitemap_exclude_taxonomy', 10, 2 );
 ```
@@ -58,13 +61,12 @@ Coming soon. See `wpseo_exclude_from_sitemap_by_term_ids`.
 ### Add a custom post type
 ```php
 /**
- * Adds an XML sitemap for a custom post type
+ * Adds an XML sitemap for a custom post type.
  */
 function enable_custom_sitemap() {
-    $post_type = 'recipes'; // An example custom post type slug.
     global $wpseo_sitemaps;
     if ( isset( $wpseo_sitemaps ) && ! empty ( $wpseo_sitemaps ) ) {
-        $wpseo_sitemaps->register_sitemap( $post_type, 'create_TYPE_sitemap' );
+        $wpseo_sitemaps->register_sitemap( 'recipe' 'create_recipe_sitemap' );
     }
 }
 add_action( 'init', 'enable_custom_sitemap' );
@@ -73,16 +75,17 @@ add_action( 'init', 'enable_custom_sitemap' );
 ### Add additional/external XML sitemaps to the XML sitemap index
 ```php
 /**
- * Writes additional/custom XML sitemap strings to the XML sitemap index
+ * Writes additional/custom XML sitemap strings to the XML sitemap index.
+ *
+ * @param string $sitemap_custom_items XML describing one or more custom sitemaps.
  */
 function add_sitemap_custom_items( $sitemap_custom_items ) {
-   $sitemap_custom_items .= '
+    $sitemap_custom_items .= '
 <sitemap>
 <loc>http://www.example.com/external-sitemap-1.xml</loc>
 <lastmod>2017-05-22T23:12:27+00:00</lastmod>
 </sitemap>';
-
-return $sitemap_custom_items;
+    return $sitemap_custom_items;
 }
 add_filter( 'wpseo_sitemap_index', 'add_sitemap_custom_items' );
 ```
@@ -92,15 +95,17 @@ Coming soon. See `apply_filters( 'wpseo_sitemap_{$type}_content', string $conten
 
 ## Misc
 
-## Alter the URL of an entry
+### Alter the URL of an entry
 Coming soon. See `wpseo_xml_sitemap_post_url`.
 
 ### Alter the number of sitemap entries
 ```php
 /**
- * Alters the number of entries in each XML sitemap
+ * Alters the number of entries in each XML sitemap.
+ *
+ * @return integer The maximum entries per sitemap.
  */
-function max_entries_per_sitemap() {
+ function max_entries_per_sitemap() {
     return 100;
 }
 

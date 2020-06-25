@@ -54,6 +54,16 @@ Most of our other plugins also contain a variety of tests, written to check the 
 ### Linting
 
 #### Checking for PHP syntax errors
+**Free**
+
+* Use `composer lint`
+
+**Premium**
+
+* Use `composer premium-lint`
+
+**Other**
+
 To check for syntax errors, run `find -L . -path ./vendor -prune -o -path ./node_modules -prune -o -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l`
 
 #### Coding standards

@@ -2,6 +2,7 @@
 id: metadata-api
 title: Yoast SEO - Metadata API
 sidebar_label: Metadata API
+description: Add, alter or remove metadata for a post or URL.
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/apis/metadata-api.md
 ---
 

@@ -16,8 +16,6 @@ module.exports = {
 			type: 'category',
 			label: 'Yoast SEO Features',
 			items: [
-				'features/overview',
-
 				{
 					type: 'category',
 					label: 'XML sitemaps',
@@ -144,8 +142,8 @@ module.exports = {
 					items: [
 						'customization/apis/overview',
 						'customization/apis/rest-api',
-                        'customization/apis/surfaces-api',
-                        'customization/apis/metadata-api',
+                    				'customization/apis/surfaces-api',
+                      				'customization/apis/metadata-api',
 					],
 				},
 				{
@@ -175,8 +173,17 @@ module.exports = {
 						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
 					],
-				},
+				}
 			]
+		},
+		{
+			type: 'category',
+			label: 'Duplicate Post',
+			items: [
+				'duplicate-post/overview',
+				'duplicate-post/filters-actions',
+				'duplicate-post/functions-template-tags',
+			],
 		},
 		{
 			type: 'category',

@@ -9,7 +9,7 @@ This documentation provides technical information about how [Yoast SEO](https://
 
 ## Resources
 * Our [functional specification](functional-specification.md) describes the logic we use to construct and output XML sitemaps for various content types and conditions.
-* Our [API documentation](api.md) [coming soon] provides examples of how technical users and developers can modify the default behavior.
+* Our [API documentation](api.md) provides examples of how technical users and developers can modify the default behavior.
 * You can learn more about the role of XML Sitemaps in our products on our [feature overview page](https://yoast.com/wordpress/plugins/seo/xml-sitemaps/).
 
 ## Further reading

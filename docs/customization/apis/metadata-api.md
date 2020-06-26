@@ -18,6 +18,9 @@ Each meta tag which we output on a page, is managed via a `presenter`. The `pres
 By default, Yoast SEO ships with the following presenters that output meta tags
 
 ### Generic presenters
+* Title_Presenter
+* Meta_Description_Presenter
+* Canonical_Presenter
 * Googlebot_Presenter
 * Bingbot_Presenter
 * Meta_Description_Presenter
@@ -142,6 +145,28 @@ function add_my_custom_presenter( $presenters ) {
 add_filter( 'wpseo_frontend_presenters', 'add_my_custom_presenter' );
 ```
 
+## Removing meta tags
+Removing meta tags can be done by using the `wpseo_frontend_presenters` filter. In the following example, we'll remove the canonical URL presenter from the list.
+
+```php
+/**
+ * Removes the canonical URL from the presenters.
+ *
+ * @param array $presenters The registered presenters.
+ *
+ * @return array The remaining presenters.
+ */
+function remove_canonical_presenter( $presenters ) {
+    return array_map( function( $presenter ) {
+        if ( ! $presenter instanceof Canonical_Presenter ) {
+            return $presenter;
+        }
+    }, $presenters );
+}
+
+add_action( 'wpseo_frontend_presenters', 'remove_canonical_presenter' );
+```
+
 ## Editing existing meta tags
 Sometimes you might run into a situation where you want to edit the output of one of the meta tags that are outputted by Yoast SEO.
 To achieve this, Metadata Presenters have each been given a filter that you can hook in to.
@@ -152,6 +177,9 @@ _Please note that all these filters expect a string to be returned._
 The following filters are available for you to hook in to:
 
 #### Generic presenters
+* `wpseo_title` - Filter to manipulate the Title_Presenter's output.
+* `wpseo_metadesc` - Filter to manipulate the Meta_Description_Presenter's output.
+* `wpseo_canonical` - Filter to manipulate the Canonical_Presenters's output.
 * `wpseo_googlebot` - Filter to manipulate the Googlebot_Presenter's output.
 * `wpseo_bingbot` - Filter to manipulate the Bingbot_Presenter's output.
 * `wpseo_metadesc` - Filter to manipulate the Meta_Description_Presenter's output.
@@ -172,8 +200,11 @@ The following filters are available for you to hook in to:
 * `wpseo_opengraph_type` - Filter to manipulate the Type_Presenter's output.
 * `wpseo_opengraph_url` - Filter to manipulate the Url_Presenter's output.
 
-### Example
-An example of using such a filter to manipulate the output of the Googlebot_Presenter, can be found below:
+### Examples
+
+Below you will find a variety of examples that demonstrate some filters we provide.
+
+#### Manipulate Googlebot's output
 
 ```php
 /**
@@ -201,24 +232,28 @@ function change_video_preview( $output, $presentation ) {
 add_filter( 'wpseo_googlebot', 'change_video_preview', 10, 2 );
 ```
 
-## Removing meta tags
-Removing meta tags can be done by using the `wpseo_frontend_presenters` filter. In the following example, we'll remove the GoogleBot presenter from the list.
+#### Appending a string to a category's title
 
 ```php
 /**
- * Removes GoogleBot from the presenters.
+ * Changes title for a specific category.
  *
- * @param array $presenters The registered presenters.
+ * @param string $title        The current title.
+ * @param object $presentation The presentation object containing the necessary data.
  *
- * @return array The remaining presenters.
+ * @return string The altered title tag.
  */
-function remove_googlebot_presenter( $presenters ) {
-    return array_map( function( $presenter ) {
-        if ( ! $presenter instanceof Googlebot_Presenter ) {
-            return $presenter;
-        }
-    }, $presenters );
+function change_category_title( $title, $presentation ) {
+	$categories = \get_the_category( $presentation->model->object_id );
+
+	foreach ( $categories as $category ) {
+		if ( $category->slug === 'books' ) {
+			return sprintf( '%s - %s', $title, $category->name );
+		}
+
+		return $title;
+	}
 }
 
-add_action( 'wpseo_frontend_presenters', 'remove_googlebot_presenter' );
+add_filter( 'wpseo_title', 'change_category_title', 10, 2 );
 ```

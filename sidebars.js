@@ -117,6 +117,11 @@ module.exports = {
 						},
 					],
 				},
+                {
+                    type: 'link',
+                    label: 'Link attributes',
+                    href: 'features/link-attributes/functional-specification'
+                },
 				{
 					type: 'link',
 					label: 'HTTP headers',

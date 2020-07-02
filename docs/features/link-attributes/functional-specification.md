@@ -18,4 +18,4 @@ Our article, "[What are sponsored, nofollow and ugc links, and why use them?](ht
 ## Controls
 Yoast SEO provides a UI control for users when placing links, which allows users to select how a link should be treat.
 
-Our help article, "[Which link settings should I use?](https://yoast.com/help/which-link-settings-should-i-use/)" describes these options and their behaviours.
+Our help article, "[Which link settings should I use?](https://yoast.com/help/which-link-settings-should-i-use/)" describes these options and their behaviors.

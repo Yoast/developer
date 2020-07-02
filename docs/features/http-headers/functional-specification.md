@@ -13,6 +13,7 @@ When the content management system serves these resources, we can manipulate the
 
 We do this in the following cases:
 - All XML sitemaps return a `noindex, follow` directive. *NB, this does not affect sitemap consumption or processing.*
+- XMLRPC files return a `noindex, follow` directive.
 
 ## x-redirected-by
 When our redirect manager executes a redirect, we pass a value of 'Yoast SEO Premium' to WordPress' `wp_redirect()` function. This adds a `x-redirected-by` header to the response, which can be helpful when debugging.

@@ -90,9 +90,8 @@ module.exports = {
 				},
 
 				{
-					type: 'link',
-					label: 'Twitter',
-					href: 'features/twitter/functional-specification',
+					type: 'doc',
+					id: 'features/twitter/functional-specification',
 				},
 
 				{
@@ -118,14 +117,12 @@ module.exports = {
 					],
 				},
                 {
-                    type: 'link',
-                    label: 'Link attributes',
-                    href: 'features/link-attributes/functional-specification'
+                    type: 'doc',
+                    id: 'features/link-attributes/functional-specification'
                 },
 				{
-					type: 'link',
-					label: 'HTTP headers',
-                    href: 'features/http-headers/functional-specification'
+					type: 'doc',
+                    id: 'features/http-headers/functional-specification'
 				},
 			],
 		},

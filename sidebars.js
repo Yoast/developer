@@ -90,11 +90,8 @@ module.exports = {
 				},
 
 				{
-					type: 'category',
-					label: 'Twitter',
-					items: [
-						'features/twitter/functional-specification',
-					],
+					type: 'doc',
+					id: 'features/twitter/functional-specification',
 				},
 
 				{
@@ -119,17 +116,14 @@ module.exports = {
 						},
 					],
 				},
-
 				{
-					type: 'category',
-					label: 'HTTP headers',
-					items: [
-						'features/http-headers/overview',
-						'features/http-headers/functional-specification',
-						'features/http-headers/api',
-					],
+					type: 'doc',
+					id: 'features/link-attributes/functional-specification'
 				},
-
+				{
+					type: 'doc',
+					id: 'features/http-headers/functional-specification'
+				},
 			],
 		},
 		{
@@ -142,8 +136,9 @@ module.exports = {
 					items: [
 						'customization/apis/overview',
 						'customization/apis/rest-api',
-                    				'customization/apis/surfaces-api',
-                      				'customization/apis/metadata-api',
+						'customization/apis/surfaces-api',
+						'customization/apis/metadata-api',
+						'features/schema/api',
 					],
 				},
 				{

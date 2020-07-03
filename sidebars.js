@@ -116,13 +116,13 @@ module.exports = {
 						},
 					],
 				},
-                {
-                    type: 'doc',
-                    id: 'features/link-attributes/functional-specification'
-                },
 				{
 					type: 'doc',
-                    id: 'features/http-headers/functional-specification'
+					id: 'features/link-attributes/functional-specification'
+				},
+				{
+					type: 'doc',
+					id: 'features/http-headers/functional-specification'
 				},
 			],
 		},
@@ -136,9 +136,9 @@ module.exports = {
 					items: [
 						'customization/apis/overview',
 						'customization/apis/rest-api',
-        				'customization/apis/surfaces-api',
-          				'customization/apis/metadata-api',
-                        'features/schema/api',
+						'customization/apis/surfaces-api',
+						'customization/apis/metadata-api',
+						'features/schema/api',
 					],
 				},
 				{

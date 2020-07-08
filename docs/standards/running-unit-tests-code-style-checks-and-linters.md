@@ -54,6 +54,16 @@ Most of our other plugins also contain a variety of tests, written to check the 
 ### Linting
 
 #### Checking for PHP syntax errors
+**Free**
+
+* Use `composer lint`
+
+**Premium**
+
+* Use `composer premium-lint`
+
+**Other**
+
 To check for syntax errors, run `find -L . -path ./vendor -prune -o -path ./node_modules -prune -o -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l`
 
 #### Coding standards
@@ -74,16 +84,12 @@ If no errors occur, you're ready to start running the linter.
 #### Running the linter
 **Free**
 
-* To check everything: `composer check-cs`
-* When you only want to output the errors (not the warnings): `composer check-cs-errors`
-* To auto-fix errors and warnings: `composer fix-cs`
-* To check the files you currently have stages: `composer check-staged-cs`
-* To check the files of your branch: `composer check-branch-cs {BRANCH-TO-CHECK-AGAINST}`. The parameter should be the name of the branch you wish to merge to.
+* For an interactive menu use: `composer cs`
+* To check the files of your branch against a branch other than `trunk`: `composer check-branch-cs {BRANCH-TO-CHECK-AGAINST}`. The parameter should be the name of the branch you wish to merge to.
 
 **Premium**
 
 * All the commands from Free work for Premium as well.
-* To check only the premium folder: `composer premium-check-cs`
 
 **News**
 * To check everything: `grunt phpcs`

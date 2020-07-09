@@ -17,6 +17,10 @@ You should start by reading [our specification](functional-specification.md), an
 * [Our Schema API](api.md) allows developers to alter or extend the output of the graph.
 * By adapting and extending our graph, we produce richer representations of web pages, which help consumers like Google, Facebook and others understand (and better expose) the content of those pages.
 
+## Migration guide
+If you've made use of the `WPSEO_Graph_Piece` interface in the past, you may have noticed a deprecation message since upgrading to 14.0. In this release, we introduced a new abstract class to deal with custom graph pieces, that you need to migrate to.
+To quickly see what changed, make sure you check out [our blogpost](https://developer.yoast.com/blog/yoast-seo-14-0-changing-the-yoast-schema-api/) and adapt your own code, accordingly.
+
 ## An example use-case
 Yoast SEO software already creates a large, structured graph, but there are content types which we don't (currently) support. You might want to add support for a specific content type. For example, you might want to add `Person` output to team profile pages, like we have here at Yoast. To do that, you should output a custom `Person` piece and stitch it into the main graph.
 
@@ -48,7 +52,7 @@ And then `Team_Member` is a "graph piece", so let's create it. We're going to cr
 /**
  * Class Team_Member
  */
-class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
+class Team_Member extends \Person {
 	/**
 	 * A value object with context variables.
 	 *
@@ -86,8 +90,8 @@ class Team_Member extends \WPSEO_Schema_Person implements \WPSEO_Graph_Piece {
 	public function generate() {
 		$data = parent::generate();
 
-		$data['worksFor']         = [ '@id' => $this->context->site_url . \WPSEO_Schema_IDs::ORGANIZATION_HASH ];
-		$data['mainEntityOfPage'] = [ '@id' => $this->context->canonical . \WPSEO_Schema_IDs::WEBPAGE_HASH ];
+		$data['worksFor']         = [ '@id' => $this->context->site_url . \Schema_IDs::ORGANIZATION_HASH ];
+		$data['mainEntityOfPage'] = [ '@id' => $this->context->canonical . \Schema_IDs::WEBPAGE_HASH ];
 
 		$job_title = get_post_meta( $this->context->id, 'employees_function_title', true );
 		if ( ! empty( $job_title ) ) {

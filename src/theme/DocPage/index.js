@@ -27,16 +27,18 @@ function DocPage( props ) {
 		permalinkToSidebar,
 		docsSidebars,
 		version,
-		isHomePage,
-		homePagePath,
 	} = docsMetadata;
+
 
 	// Get case-sensitive route such as it is defined in the sidebar.
 	const currentRoute = baseRoute.routes.find( ( route ) => {
 		return matchPath( location.pathname, route );
 	} ) || {};
 
-	let sidebar = currentRoute.path === '/'
+	const homePagePath = '/';
+	const isHomePage = currentRoute.path === homePagePath;
+
+	let sidebar = isHomePage
 		? 'mainSidebar'
 		: permalinkToSidebar[currentRoute.path];
 
@@ -46,11 +48,7 @@ function DocPage( props ) {
 
 	let renderedContent = (
         <MDXProvider components={ MDXComponents }>
-          { isHomePage ? (
-              <DocItem content={ content }/>
-          ) : (
-              renderRoutes( baseRoute.routes )
-          ) }
+          { renderRoutes( baseRoute.routes ) }
         </MDXProvider>
 	);
 

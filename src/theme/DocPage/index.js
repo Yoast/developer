@@ -32,13 +32,11 @@ function DocPage( props ) {
 	} = docsMetadata;
 
 	// Get case-sensitive route such as it is defined in the sidebar.
-	const currentRoute = !isHomePage
-		? baseRoute.routes.find( ( route ) => {
+	const currentRoute = baseRoute.routes.find( ( route ) => {
 		return matchPath( location.pathname, route );
-	} ) || {}
-		: {};
+	} ) || {};
 
-	let sidebar = isHomePage
+	let sidebar = currentRoute.path === '/'
 		? 'mainSidebar'
 		: permalinkToSidebar[currentRoute.path];
 

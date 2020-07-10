@@ -19,7 +19,6 @@ import { matchPath } from "@docusaurus/router";
 
 import styles from "./styles.module.css";
 import Logo from "../Logo";
-import DocItem from "../DocItem";
 
 function DocPage( props ) {
 	const { route: baseRoute, docsMetadata, location, content } = props;
@@ -27,16 +26,15 @@ function DocPage( props ) {
 		permalinkToSidebar,
 		docsSidebars,
 		version,
-		isHomePage,
-		homePagePath,
 	} = docsMetadata;
 
 	// Get case-sensitive route such as it is defined in the sidebar.
-	const currentRoute = !isHomePage
-		? baseRoute.routes.find( ( route ) => {
+	const currentRoute = baseRoute.routes.find( ( route ) => {
 		return matchPath( location.pathname, route );
-	} ) || {}
-		: {};
+	} ) || {};
+
+	const homePagePath = '/';
+	const isHomePage = currentRoute.path === homePagePath;
 
 	let sidebar = isHomePage
 		? 'mainSidebar'
@@ -48,11 +46,7 @@ function DocPage( props ) {
 
 	let renderedContent = (
         <MDXProvider components={ MDXComponents }>
-          { isHomePage ? (
-              <DocItem content={ content }/>
-          ) : (
-              renderRoutes( baseRoute.routes )
-          ) }
+          { renderRoutes( baseRoute.routes ) }
         </MDXProvider>
 	);
 

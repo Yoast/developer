@@ -19,7 +19,6 @@ import { matchPath } from "@docusaurus/router";
 
 import styles from "./styles.module.css";
 import Logo from "../Logo";
-import DocItem from "../DocItem";
 
 function DocPage( props ) {
 	const { route: baseRoute, docsMetadata, location, content } = props;
@@ -28,7 +27,6 @@ function DocPage( props ) {
 		docsSidebars,
 		version,
 	} = docsMetadata;
-
 
 	// Get case-sensitive route such as it is defined in the sidebar.
 	const currentRoute = baseRoute.routes.find( ( route ) => {

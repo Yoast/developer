@@ -70,6 +70,10 @@ const config = {
 							href: 'https://developer.yoast.com/blog/',
 						},
 						{
+							label: 'Security program',
+							href: 'https://yoast.com/security-program/',
+						},
+						{
 							label: 'Twitter',
 							href: 'https://twitter.com/yoastdev',
 						},

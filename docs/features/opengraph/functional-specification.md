@@ -30,7 +30,7 @@ The following tags are only output when their conditions are met:
 | `article:author` | The URL of the profile page of the author. | Only populated when the user has a valid profile URL. <br /> Only populated on `post` types. |
 | `article:modified_time` | A timestamp of when the page was last modified. | Only populated on `post` and `page` types. |
 | `article:published_time` | A timestamp of when the page was published. | Only populated on `post` and `page` types. |
-| `og:image` | The URL of the primary image of the page. | Only populated when the page contains a valid image, based on the following hierarchy: <ul><li>A user-defined image (for a specific platform).</li><li>A 'featured' image.</li><li>A prominent image from the page's content.</li><li>In the case of the profile template, the user's Gravatar image.</li><li>The site's fallback/default social image.</li></ul> |
+| `og:image` | The URL of the primary image of the page. | Only populated when the page contains a valid image, based on the following hierarchy: <ul><li>A user-defined image (for a specific platform).</li><li>A 'featured' image.</li><li>A prominent image from the page's content.</li><li>In the case of an author archive template, the user's Gravatar image.</li><li>The site's fallback/default social image.</li></ul> |
 | `og:image:width` | The width in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 | `og:image:height` | The height in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 

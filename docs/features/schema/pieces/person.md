@@ -70,8 +70,8 @@ Optional properties which should only be output when the required criteria is me
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
               "sameAs": [
-                  "https://www.wikipedia.com/example-organization",
-                  "https://www.linkedin.com/company/1234"
+                  "https://www.wikipedia.com/example-person",
+                  "https://www.facebook.com/example-person"
               ]
           }
       ]

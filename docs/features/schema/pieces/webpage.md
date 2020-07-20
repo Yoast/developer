@@ -89,7 +89,7 @@ On search results pages, the *type* property should be altered to an array of `[
               "url": "https://www.example.com/example-page/",
               "name": "Example page name",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               }
           }
       ]
@@ -110,7 +110,7 @@ On search results pages, the *type* property should be altered to an array of `[
               "description": "Example page description",
               "keywords": "cats,dogs,cake",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "inLanguage": "en-US",
               "datePublished": "2019-07-10T08:08:40+00:00",

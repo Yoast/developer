@@ -99,7 +99,7 @@ The `Article` type may be transformed in the following scenarios:
                   "@id": "https://www.example.com/#/schema/person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "image": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
@@ -135,7 +135,7 @@ The `Article` type may be transformed in the following scenarios:
                   "@id": "https://www.example.com/#/schema/person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "image": [
                   {

@@ -43,7 +43,7 @@ This produces a 'base script', which will typically looks something like the fol
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "potentialAction": {
@@ -63,7 +63,7 @@ This produces a 'base script', which will typically looks something like the fol
               "description": "Example page description",
               "keywords": "cats,dogs,cake",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "inLanguage": "en-US",
               "datePublished": "2019-07-10T08:08:40+00:00",

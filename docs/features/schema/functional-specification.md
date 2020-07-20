@@ -22,17 +22,17 @@ The following is a simplified representation of the graph which we construct on 
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
-              "url": "https://www.example.com/#/schema/organization/",
+              "@id": "https://www.example.com/#/schema/organization/1",
+              "url": "https://www.example.com/",
               "name": "Example organization name"
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               }
           },
           {
@@ -42,7 +42,7 @@ The following is a simplified representation of the graph which we construct on 
               "name": "Example page name",
               "description": "Example page description",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               }
           }
       ]
@@ -63,7 +63,7 @@ The following examples demonstrate how our base script may be extended and alter
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
+              "@id": "https://www.example.com/#/schema/organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -89,11 +89,11 @@ The following examples demonstrate how our base script may be extended and alter
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -108,10 +108,10 @@ The following examples demonstrate how our base script may be extended and alter
               "inLanguage": "en-US",
               "name": "Example Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "about": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -128,7 +128,7 @@ The following examples demonstrate how our base script may be extended and alter
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
+              "@id": "https://www.example.com/#/schema/organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -154,11 +154,11 @@ The following examples demonstrate how our base script may be extended and alter
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -176,7 +176,7 @@ The following examples demonstrate how our base script may be extended and alter
               },
               "name": "Example Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -201,7 +201,7 @@ The following examples demonstrate how our base script may be extended and alter
                   "@id": "https://www.example.com/#/schema/person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "image": [
                   {
@@ -260,9 +260,7 @@ The following examples demonstrate how our base script may be extended and alter
                       "@type": "ListItem",
                       "position": 3,
                       "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/blog/example-article/",
-                          "name": "Example Page"
+                          "@id": "https://www.example.com/blog/example-article/"
                       }
                   }
               ]
@@ -280,7 +278,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
+              "@id": "https://www.example.com/#/schema/organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -306,11 +304,11 @@ Note that these are actually two separate graph blocks in reality, that are stit
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -331,7 +329,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
               },
               "name": "Example Product Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -366,8 +364,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                       "position": 3,
                       "item": {
                           "@type": "WebPage",
-                          "@id": "https://www.example.com/products/example-page/",
-                          "name": "Example Product Page"
+                          "@id": "https://www.example.com/products/example-page/"
                       }
                   }
               ]
@@ -395,7 +392,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                       "availability": "https://schema.org/InStock",
                       "url": "https://www.example.com/products/example-page/",
                       "seller": {
-                          "@id": "https://www.example.com/#/schema/organization/abc123"
+                          "@id": "https://www.example.com/#/schema/organization/1"
                       }
                   }
               ],
@@ -481,7 +478,7 @@ One of the main objections to JSON-LD as a format is that it can result in dupli
 
 This is often perceived as a performance concern, and, rightly so. Even with GZIP enabled and configured (which, we can't assume will always be the case), this can cause (albeit minor) overheads on server responses and browser processing.
 
-In the future, we hope to be able to bypass this issue by using [schema.org](http://schema.org) 's [CssSelectorType](https://pending.schema.org/CssSelectorType) or [XPathType](https://pending.schema.org/XPathType) markup. This allows us to target specific containers (or composites/arrays of containers) which represent the content in question, rather than duplicating the text. At the moment, this only supports `webPageElement` and `Speakable` content areas.
+In the future, we hope to be able to bypass this issue by using [schema.org](http://schema.org)'s [CssSelectorType](https://pending.schema.org/CssSelectorType) or [XPathType](https://pending.schema.org/XPathType) markup. This allows us to target specific containers (or composites/arrays of containers) which represent the content in question, rather than duplicating the text. At the moment, this only supports `webPageElement` and `Speakable` content areas.
 
 Until these targeting methods achieve greater support, content should only be duplicated when explicitly required by search engines and external agents. These scenarios are reflected in this document.
 
@@ -496,32 +493,32 @@ Approaches which rely on external scripts and platforms - such as tag management
 Throughout the examples in this document, we generally make a few assumptions about images:
 
 * Even though the core [schema.org](https://schema.org) definitions don't always list image as a required attribute of a piece, Google *does* frequently require an image for almost all piece types (i.e., eligibility for their 'rich snippets' and similar experiences almost always require pages, blog posts, products and other piece entities to have at least one image). **Assume that anywhere where we've included an image parameter, it should be considered to be mandatory.**
-* All image properties should be registered as arrays of `imageObject`  entities, so as to be able to set advanced properties (like caption) where feasible, and to be able to inherit/share images across pieces via ID. This enables ease of sharing of images between related pieces (e.g., where the main/featured image of a `blogPosting`  is often likely to be the same entity as the `primaryImageOfPage`  of the page where the blog post resides).
+* All image properties should be registered as arrays of `imageObject` entities, so as to be able to set advanced properties (like caption) where feasible, and to be able to inherit/share images across pieces via ID. This enables ease of sharing of images between related pieces (e.g., where the main/featured image of a `blogPosting` is often likely to be the same entity as the `primaryImageOfPage` of the page where the blog post resides).
 * Size and format constraints vary by agent, but, common sense should be applied.
 
 ### 4. Using canonical URLs
 `url` attributes should always inherit from the 'true canonical' value of the page where the JSON snippet resides (i.e., if the canonical URL tag has been manually set to reference a different page/URL, the original 'true' canonical value should be used).
 
-For example, if *Page A* has a URL of [https://www.example.com/page-a/](https://www.example.com/page-A/), but includes a canonical URL tag which references *Page B* (at [https://www.example.com/page-b/](https://www.example.com/page-b/) ), then all `url`  parameters which would normally relate to *Page A* should continue to use *Page A* 's 'true' canonical URL.
+For example, if *Page A* has a URL of [https://www.example.com/page-a/](https://www.example.com/page-a/), but includes a canonical URL tag which references *Page B* (at [https://www.example.com/page-b/](https://www.example.com/page-b/)), then all `url`  parameters which would normally relate to *Page A* should continue to use *Page A* 's 'true' canonical URL.
 
 ### 5. Validation tools
 We rely heavily on [Google's Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/u/0/) (or 'SDTT') to evaluate and debug our approach. While other tools exist, we've found that this one consistently provides the most sophisticated parsing, error handling and feedback. Also, as the primary consumer of our structured markup, it makes sense that we position feedback from Google's own tool as our single version of the truth.
 
-That's not to say, however, that it's not without issues, and that we agree completely with their interpretation of schema.org's standards. Read on to explore our  *known issues*.
+That's not to say, however, that it's not without issues, and that we agree completely with their interpretation of schema.org's standards. Read on to explore our *known issues*.
 
 ### 6. Known issues
 There are a number of scenarios where the SDTT deviates from the schema.org definitions. In some cases, we've adapted or compromised our approach to find a solution which applies to both - in others, we've swayed in favor of one or the other, depending on the context.
 
-For example, the SDTT requires that a `recipe`  has an `image`. This isn't a mandatory attribute according to [the schema.org recipe specification](https://schema.org/Recipe), but Google requires it. There are many scenarios like this, where the SDTT reveals Google-specific idiosyncrasies and requirements which are either the product of deliberate 'bending' of the standards to fit their needs, or of somewhat arbitrary decision-making.
+For example, the SDTT requires that a `recipe` has an `image`. This isn't a mandatory attribute according to [the schema.org recipe specification](https://schema.org/Recipe), but Google requires it. There are many scenarios like this, where the SDTT reveals Google-specific idiosyncrasies and requirements which are either the product of deliberate 'bending' of the standards to fit their needs, or of somewhat arbitrary decision-making.
 
 The following are specific scenarios where our approach causes conflicts and issues, where we're petitioning to alter how Google interpret and process our markup.
 
-#### A `Person`  cannot be the `Publisher`  of an `Article`
+#### A `Person` cannot be the `Publisher` of an `Article`
 This is a particularly challenging issue, as a `WebSite` which represents a `Person` (as opposed to one which represents an `Organization`; i.e., a personal website) will naturally 'publish' articles where that `Person` should be considered to be the 'publisher'. This is an extremely common use-case, but one which the STDD flags as invalid.
 
-Additionally, a critical piece of our graph approach relies on identifying the connection between a `WebPage` (or an `Article`) and the `WebSite`  on which it resides. The `Publisher`  is the key connection between these entities, and so, **we've chosen to ignore the error in this case** (but have alerted Google to it).
+Additionally, a critical piece of our graph approach relies on identifying the connection between a `WebPage` (or an `Article`) and the `WebSite` on which it resides. The `Publisher` is the key connection between these entities, and so, **we've chosen to ignore the error in this case** (but have alerted Google to it).
 
-To work around this, we merge the `Person`  with an `Organization`  to create a hybrid type ( `[Person, Organization]` ), which then expects/accepts a `logo`  and other 'Publisher' properties. This validates in the SDTT, but, is an acknowledged 'hack'.
+To work around this, we merge the `Person` with an `Organization` to create a hybrid type (`[Person, Organization]`), which then expects/accepts a `logo` and other 'Publisher' properties. This validates in the SDTT, but, is an acknowledged 'hack'.
 
 #### The SDTT often prefers an array of properties, rather than an `itemList`
 E.g., an array of individual `reviews` must occupy a `review` property, rather than being contained in a `reviews` property. This pattern of 'an array of multiple things in a singular property' is common throughout their requirements. We believe is less semantically rich, and less flexible than alternative approaches.
@@ -531,6 +528,6 @@ We'd typically prefer to use a container as a parent to these items, as this can
 ### 7. Other consumers
 At the time of publishing, it appears that Bing does not support this approach; their 'Markup Validator' tool (part of [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster)) does not detect (and/or parse) markup contained within a `@graph` structure (which forms the backbone of our approach). We're seeking to engage in dialogue with Bing to determine their stance on support.
 
-Social platforms like Facebook, Twitter, Pinterest, etc, have varying levels of support for this markup. Most rely on *Open Graph* markup *(*'OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
+Social platforms like Facebook, Twitter, Pinterest, etc, have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
 
 The support of other search engines (e.g., Baidu, Yandex, others) is unknown; it's our assumption that support will generated be limited, or not exist. We hope that the broad adoption of our approach will encourage these, and other consumers, to expand their support.

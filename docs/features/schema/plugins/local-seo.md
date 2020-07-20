@@ -99,7 +99,7 @@ This example assumes that:
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "potentialAction": {
@@ -119,7 +119,7 @@ This example assumes that:
               "description": "Example post description",
               "keywords": "cats,dogs,cake",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "inLanguage": "en-US",
               "datePublished": "2019-07-10T08:08:40+00:00",
@@ -195,8 +195,8 @@ This example assumes that:
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
               "sameAs": [
-                  "https://www.wikipedia.com/example-organization",
-                  "https://www.linkedin.com/company/1234"
+                  "https://www.wikipedia.com/example-person",
+                  "https://www.facebook.com/example-person"
               ]
           }
       ]
@@ -232,7 +232,7 @@ This example assumes that:
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "potentialAction": {
@@ -251,7 +251,7 @@ This example assumes that:
               "name": "Example local archive name",
               "description": "Example local archive description",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/abc123"
+                  "@id": "https://www.example.com/#/schema/website/1"
               },
               "inLanguage": "en-US",
               "datePublished": "2019-07-10T08:08:40+00:00",

@@ -18,7 +18,7 @@ Should be output on all public pages.
 A valid `Organization` must have the following properties.
 
 * `@id`: The site's home URL appended by `#/schema/organization/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the `organization`).
- * If the `organization` is the publisher of the `WebSite` (i.e., the "*primary organization*", or "*this organization*"), then the value of `{{ID}}` should be `1`.
+  * If the `organization` is the publisher of the `WebSite` (i.e., the "*primary organization*", or "*this organization*"), then the value of `{{ID}}` should be `1`.
 * `logo`: A reference-by-ID to an `image` of the organization's logo.
 * `URL:` The site's home URL.
 * `name`: The name of the `Organization`.
@@ -50,7 +50,8 @@ The `Organization` type may be transformed in the following scenarios.
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
+              "@id": "https://www.example.com/#/schema/organization/1",
+              "url": "https://www.example.com/",
               "logo": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
@@ -69,8 +70,8 @@ The `Organization` type may be transformed in the following scenarios.
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
-              "url": "https://www.example.com/#/schema/organization/",
+              "@id": "https://www.example.com/#/schema/organization/1",
+              "url": "https://www.example.com/",
               "name": "Example organization name",
               "sameAs": [
                   "https://www.wikipedia.com/example-organization",
@@ -86,20 +87,7 @@ The `Organization` type may be transformed in the following scenarios.
                   {
                       "@id": "https://www.example.com/#/schema/image/def456"
                   }
-              ],
-              "email": "example@example.com",
-              "telephone": "01234 567 891",
-              "location": [
-                  {
-                      "@id": "https://www.example.com/#/schema/location/abc123"
-                  },
-                  {
-                      "@id": "https://www.example.com/#/schema/location/def456"
-                  }
-              ],
-              "address": {
-                  "@id": "https://www.example.com/#/schema/address/abc123"
-              }
+              ]
           }
       ]
   }`}

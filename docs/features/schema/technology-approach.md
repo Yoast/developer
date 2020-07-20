@@ -28,17 +28,17 @@ E.g., the following (simplified) JSON snippet defines an `Organization`, and ref
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/abc123",
-              "url": "https://www.example.com/#/schema/organization/",
+              "@id": "https://www.example.com/#/schema/organization/1",
+              "url": "https://www.example.com/",
               "name": "Example organization name"
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               }
           }
       ]

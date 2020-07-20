@@ -17,7 +17,7 @@ A valid `WebSite` must have the following properties.
 
 * `@id`: The site's home URL appended by `#/schema/website/{{ID}}`,
 * where `{{ID}}` is a globally unique, stable identifier.
- * If the `WebSite` is the website being viewed/consumed (i.e., "*this website*"), then the value of `{{ID}}` should be `1`.
+  * If the `WebSite` is the website being viewed/consumed (i.e., "*this website*"), then the value of `{{ID}}` should be `1`.
 * `url`: The site's home URL (excluding a trailing slash).
 * `name`: The name of the website.
 * `publisher`: A reference-by-ID to the `Organization` which publishes the `WebSite` (or an array of `Organization` and `Person` in the case that the website represents an individual).
@@ -49,7 +49,7 @@ The following should be added whenever available and valid:
               "url": "https://www.example.com",
               "name": "Example website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               }
           }
       ]
@@ -64,7 +64,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com",
               "name": "Example website",
               "inLanguage": "en-US",
@@ -74,7 +74,7 @@ The following should be added whenever available and valid:
                   "query-input": "required name=search_term_string"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
+                  "@id": "https://www.example.com/#/schema/organization/1"
               }
           }
       ]

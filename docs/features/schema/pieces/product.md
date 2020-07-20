@@ -77,9 +77,6 @@ The following should be added whenever available and valid:
               "brand": {
                   "@id": "https://www.example.com/#/schema/organization/abc123"
               },
-              "seller": {
-                  "@id": "https://www.example.com/#/schema/organization/def456"
-              },
               "manufacturer": {
                   "@id": "https://www.example.com/#/schema/organization/def456"
               },

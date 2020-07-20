@@ -45,7 +45,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/abc123",
+              "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com",
               "name": "Example website",
               "publisher": {

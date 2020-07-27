@@ -1,7 +1,7 @@
 ---
 id: api
 title: Schema - API documentation
-sidebar_label: API
+sidebar_label: Schema API
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/api.md
 description: Instructions on how to modify our schema output programmatically.
 ---

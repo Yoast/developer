@@ -120,6 +120,10 @@ module.exports = {
 					type: 'doc',
 					id: 'features/link-attributes/functional-specification'
 				},
+                {
+                    type: 'doc',
+                    id: 'features/rss-feeds/functional-specification'
+                },
 				{
 					type: 'doc',
 					id: 'features/http-headers/functional-specification'
@@ -138,11 +142,7 @@ module.exports = {
 						'customization/apis/rest-api',
         				'customization/apis/surfaces-api',
           				'customization/apis/metadata-api',
-                        {
-                            type: 'link',
-                            label: 'Schema.org API',
-                            href: '/features/schema/api'
-                        },
+                        'features/schema/api',
 					],
 				},
 				{

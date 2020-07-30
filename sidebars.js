@@ -118,7 +118,7 @@ module.exports = {
 				},
 
 				'features/link-attributes/functional-specification',
-                'features/rss-feeds/functional-specification',
+				'features/rss-feeds/functional-specification',
 				'features/http-headers/functional-specification',
 			],
 		},

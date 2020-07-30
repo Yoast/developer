@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require( "copy-webpack-plugin" );
 
 const defaultStrategy = {'module.plugins': 'append'};
 
-
 module.exports = ( context, options ) => {
 	return {
 		name: "yoast-docs-assets",

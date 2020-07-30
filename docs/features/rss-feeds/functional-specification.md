@@ -1,5 +1,5 @@
 ---
-id: overview
+id: functional-specification
 title: RSS Feeds - API specification
 sidebar_label: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/rss-feeds/functional-specification.md

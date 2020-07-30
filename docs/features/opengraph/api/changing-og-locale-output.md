@@ -33,13 +33,15 @@ If you would like to remove the `og:locale` you will need to unhook `WPSEO_OpenG
 This code snippet works in most cases, however, it does not work if you are using PHP 5.2 on your server. For the health and safety of your site, we recommend creating a backup of your site and database prior to any code changes, as we are unable to guarantee exactly what would happen on your specific site.
 
 ```php
-add_action( 'template_redirect', function () {
-    global $wpseo_og;
+function remove_locale_presenter( $presenters ) {
+    return array_map( function( $presenter ) {
+        if ( ! $presenter instanceof Yoast\WP\SEO\Presenters\Open_Graph\Locale_Presenter ) {
+            return $presenter;
+        }
+    }, $presenters );
+}
 
-    if ( isset( $wpseo_og ) ) {
-        remove_action( 'wpseo_opengraph', [ $wpseo_og, 'locale' ], 1 );
-    }
-}, 1000 );
+add_action( 'wpseo_frontend_presenters', 'remove_locale_presenter' );
 ```
 
 ## Valid `og:locale` choices

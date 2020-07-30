@@ -1,8 +1,8 @@
 ---
 id: reindex-indexables
-title: Standards - Reindex indexables
+title: WP CLI - Reindex indexables
 sidebar_label: Reindex indexables
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/reindex-indexables.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/wp-cli/reindex-indexables.md
 ---
 
 When you change data for pages on your site, whether that is meta data, content, or URLs, you need to make sure those changes are reflected in the Yoast SEO Indexables tables. To reindex Yoast SEO you can do two things:

@@ -1,8 +1,8 @@
 ---
 id: cheatsheets
-title: Standards - Cheatsheets
+title: Development - Cheatsheets
 sidebar_label: Cheatsheets
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/cheatsheets.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/cheatsheets.md
 ---
 
 Below is a list of handy resources and cheatsheets on a variety of subjects that might come in handy!

@@ -1,8 +1,8 @@
 ---
 id: development-tools
-title: Standards - Development tools
+title: Development - Tools
 sidebar_label: Development tools
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/development-tools.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/development-tools.md
 ---
 
 This page describes the tools used at Yoast when developing the various plugins and libraries.

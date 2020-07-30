@@ -14,8 +14,10 @@ module.exports = {
 		},
 		{
 			type: 'category',
-			label: 'Yoast SEO Features',
+			label: 'Yoast SEO features',
 			items: [
+				'features/yoast-seo-product-sheet',
+
 				{
 					type: 'category',
 					label: 'XML sitemaps',
@@ -89,10 +91,7 @@ module.exports = {
 					],
 				},
 
-				{
-					type: 'doc',
-					id: 'features/twitter/functional-specification',
-				},
+				'features/twitter/functional-specification',
 
 				{
 					type: 'category',
@@ -120,6 +119,16 @@ module.exports = {
 				'features/link-attributes/functional-specification',
 				'features/rss-feeds/functional-specification',
 				'features/http-headers/functional-specification',
+
+				{
+					type: 'category',
+					label: 'WP CLI',
+					items: [
+						'features/wp-cli/reindex-indexables',
+					],
+				},
+
+				'features/installation/using-composer',
 			],
 		},
 		{
@@ -178,21 +187,34 @@ module.exports = {
 		},
 		{
 			type: 'category',
-			label: 'Standards',
+			label: 'Plugin development',
 			items: [
-				'standards/overview',
-				'standards/development-tools',
-				'standards/development-setup',
-				'standards/reindex-indexables',
-				'standards/using-composer',
-				'standards/setting-up-integration-tests-for-the-plugins',
-				'standards/running-unit-tests-code-style-checks-and-linters',
-				'standards/coding-guidelines-and-principles',
-				'standards/version-control-conventions',
-				'standards/productivity-tips-and-tricks',
-				'standards/cheatsheets',
-				'standards/yoast-seo-product-sheet',
-			]
+				'development/overview',
+
+				{
+					type: 'category',
+					label: 'Standards',
+					items: [
+						'development/standards/coding-guidelines-and-principles',
+						'development/standards/version-control-conventions',
+					]
+				},
+
+				{
+					type: 'category',
+					label: 'Environment',
+					items: [
+						'development/environment/setup',
+						'development/environment/setup-plugin-integration-tests',
+						'development/environment/running-unit-tests-code-style-checks-and-linters',
+						'development/environment/tools',
+					]
+				},
+
+				'development/productivity-tips-and-tricks',
+				'development/cheatsheets',
+			],
+
 		},
 	],
 	schemaPluginsSidebar: [

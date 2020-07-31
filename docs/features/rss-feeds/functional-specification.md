@@ -1,7 +1,7 @@
 ---
-id: overview
-title: RSS Feeds - API specification
-sidebar_label: Overview
+id: functional-specification
+title: RSS Feeds - Functional specification
+sidebar_label: RSS Feeds
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/rss-feeds/functional-specification.md
 description: This documentation explains Yoast SEO modifies RSS feeds.
 ---
@@ -9,7 +9,7 @@ This documentation provides technical information about how [Yoast SEO](https://
 
 For any feed(s) of public posts/pages*, Yoast SEO allows the user to automatically prefix and/or append a dynamic content string (for the purposes of branding, attribution or similar).
 
-\*Excluding WordPress' "comment feeds".
+\* Excluding WordPress' "comment feeds".
 
 ## Default settings
 The default prefix setting (_"Content to put before each post in the feed"_) is blank/empty.

@@ -57,8 +57,6 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 | `Type_Presenter` | `<meta property="og:type" content="%s" />` | `wpseo_opengraph_type` |
 | `Url_Presenter` | `<meta property="og:url" content="%s" />` | `wpseo_opengraph_url` |
 | `Image_Presenter` | `<meta property="og:image" content="%s" />` | `wpseo_opengraph_image` |
-| `Image_Presenter` (cntd) | `<meta property="og:image:width" content="%s" />` | n/a |
-| `Image_Presenter` (cntd) | `<meta property="og:image:height" content="%s" />` | n/a |
 
 ### Deprecated Presenters
 | Presenter | Tag format | Filter | Deprecated from |
@@ -73,6 +71,14 @@ To achieve this, Metadata Presenters you should use the relevant filter for the 
 ### Notes on using presenters and filters
 - All these filters expect a _string_ to be returned.
 - Some presenters don't have an associated filter; typically where it makes more sense to programmatically alter the values of the post/page in question (such as with `Article_Published_Time_Presenter`). 
+
+#### Legacy filters
+
+**Please note** These filters will be subject to change in the future as they are not yet represented through a Presenter class.
+
+| Filter | Description |
+|----|----|
+|`wpseo_opengraph_image_size` | Filter to manipulate the image size used for Open Graph sharing. <br /> If used, this defined size will always be enforced. The size is either a string value (i.e. `thumbnail`) or an array of width/height values (i.e. `[ 200, 100 ]`) |
 
 ### Examples
 
@@ -131,7 +137,6 @@ function change_category_title( $title, $presentation ) {
 
 add_filter( 'wpseo_title', 'change_category_title', 10, 2 );
 ```
-
 
 ## Adding meta tags
 Adding your own meta tag(s) is as simple as creating your own class which extends `Abstract_Indexable_Presenter`. To get started, you'll need to understand the following:

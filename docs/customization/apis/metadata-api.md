@@ -10,49 +10,128 @@ For simple websites, or when SEO is not a serious consideration, it's common for
 
 However, more advanced SEO often requires meta tags to have *context*, an awareness of the *other* meta tags on a page, or complicated internal logic. For example, the value of a [canonical URL tag](/features/seo-tags/canonical-urls/overview) might be influenced by the presence or value of a [meta robots tag](/features/seo-tags/meta-robots/overview). For sites running complex or multiple plugins and themes, it's also important to consider standardization and security. Managing these kinds of challenges becomes increasingly cumbersome without a framework.
 
-That's why we introduced a formal way of managing the construction and output of meta tags in the `<head>` of each page. We added *presenters* for each tag, which you can easily modify or extend.
-
-Each meta tag which we output on a page, is managed via a `presenter`. The `presenter` class is an extension of the `Abstract_Indexable_Presenter` class.
+That's why we provide a formal way of managing the construction and output of meta tags in the `<head>` of each page. We use a `presenter` (an extension of the `Abstract_Indexable_Presenter` class) for each tag, which you can easily modify or extend.
 
 ## Available presenters
-By default, Yoast SEO ships with the following presenters that output meta tags
+By default, Yoast SEO ships with the following presenters that output meta tags.
 
 ### Generic presenters
-* Title_Presenter
-* Meta_Description_Presenter
-* Canonical_Presenter
-* Googlebot_Presenter
-* Bingbot_Presenter
-* Meta_Description_Presenter
-* Robots_Presenter
+| Presenter | Tag format | Filter |
+|---|-----|----|
+| `Title_Presenter` | `<title>%s</title>` | `wpseo_title` |
+| `Meta_Description_Presenter` | `<meta name="description" content="%s" />` | `wpseo_metadesc` |
+| `Canonical_Presenter` | `<link rel="canonical" href="%s" />` | `wpseo_canonical` |
+| `Robots_Presenter` | `<meta name="robots" content="%s" />` | `wpseo_robots` |
 
 ### Webmaster presenters
-* Baidu_Presenter
-* Bing_Presenter
-* Google_Presenter
-* Pinterest_Presenter
-* Yandex_Presenter
+| Presenter | Tag format | Filter |
+|---|-----|----|
+| `Baidu_Presenter` | `<meta name="baidu-site-verification" content="%s" />` | n/a |
+| `Bing_Presenter` | `<meta name="msvalidate.01" content="%s" />` | n/a |
+| `Google_Presenter` | `<meta name="google-site-verification" content="%s" />` | n/a |
+| `Pinterest_Presenter` | `<meta name="p:domain_verify" content="%s" />` | n/a |
+| `Yandex_Presenter` | `<meta name="yandex-verification" content="%s" />` | n/a |
 
 ### Twitter presenters
-* Card_Presenter
-* Creator_Presenter
-* Description_Presenter
-* Image_Presenter
-* Site_Presenter
-* Title_Presenter
+| Presenter | Tag format | Filter |
+|---|-----|----|
+| `Card_Presenter` | `<meta name="twitter:card" content="%s" />` | `wpseo_twitter_card_type` |
+| `Creator_Presenter` | `<meta name="twitter:creator" content="%s" />` | n/a |
+| `Description_Presenter` | `<meta name="twitter:description" content="%s" />` | `wpseo_twitter_description` |
+| `Image_Presenter` | `<meta name="twitter:image" content="%s" />` | `wpseo_twitter_image` |
+| `Site_Presenter` | `<meta name="twitter:site" content="%s" />` | `wpseo_twitter_site` |
+| `Title_Presenter` | `<meta name="twitter:title" content="%s" />` | `wpseo_twitter_title` |
 
 ### OpenGraph presenters
-* Article_Author_Presenter
-* Article_Modified_Time_Presenter
-* Article_Published_Time_Presenter
-* Article_Publisher_Presenter
-* Description_Presenter
-* FB_App_ID_Presenter
-* Locale_Presenter
-* Site_Name_Presenter
-* Title_Presenter
-* Type_Presenter
-* Url_Presenter
+| Presenter | Tag format | Filter |
+|---|-----|----|
+| `Article_Author_Presenter` | `<meta property="article:author" content="%s" />` | `wpseo_opengraph_author_facebook` |
+| `Article_Modified_Time_Presenter` | `<meta property="article:modified_time" content="%s" />` | n/a |
+| `Article_Published_Time_Presenter` | `<meta property="article:published_time" content="%s" />` | n/a |
+| `Article_Publisher_Presenter` | `<meta property="article:publisher" content="%s" />` | `wpseo_og_article_publisher` |
+| `Description_Presenter` | `<meta property="og:description" content="%s" />` | `wpseo_opengraph_desc` |
+| `FB_App_ID_Presenter` | `<meta property="fb:app_id" content="%s" />` | n/a |
+| `Locale_Presenter` | `<meta property="og:locale" content="%s" />` | `wpseo_og_locale` |
+| `Site_Name_Presenter` | `<meta property="og:site_name" content="%s" />` | `wpseo_opengraph_site_name` |
+| `Title_Presenter` | `<meta property="og:title" content="%s" />` | `wpseo_opengraph_title` |
+| `Type_Presenter` | `<meta property="og:type" content="%s" />` | `wpseo_opengraph_type` |
+| `Url_Presenter` | `<meta property="og:url" content="%s" />` | `wpseo_opengraph_url` |
+| `Image_Presenter` | `<meta property="og:image" content="%s" />` | `wpseo_opengraph_image` |
+| `Image_Presenter` (cntd) | `<meta property="og:image:width" content="%s" />` | n/a |
+| `Image_Presenter` (cntd) | `<meta property="og:image:height" content="%s" />` | n/a |
+
+### Deprecated Presenters
+| Presenter | Tag format | Filter | Deprecated from |
+|---|-----|---|--|
+| `Googlebot_Presenter` | `<meta name="googlebot" content="%s" />` | `wpseo_googlebot` | Planned |
+| `Bingbot_Presenter` | `<meta name="bingbot" content="%s" />` | `wpseo_bingbot` | Planned |
+
+## Editing existing meta tags
+Sometimes you might run into a situation where you want to edit the output of one of the meta tags which are output by Yoast SEO.
+To achieve this, Metadata Presenters you should use the relevant filter for the presenter in question.
+
+### Notes on using presenters and filters
+- All these filters expect a _string_ to be returned.
+- Some presenters don't have an associated filter; typically where it makes more sense to programmatically alter the values of the post/page in question (such as with `Article_Published_Time_Presenter`). 
+
+### Examples
+
+Below you will find a variety of examples that demonstrate some filters we provide.
+
+#### Manipulate the meta robots tag output
+
+```php
+/**
+ * Changes the max-video-preview to 100.
+ *
+ * @param string $output       The string representation of the original output string.
+ * @param object $presentation The presentation object containing the necessary data.
+ *
+ * @return string The Googlebot meta tag.
+ */
+function change_robots_video_preview_settings( $output, $presentation ) {
+    $robots = $presentation->robots;
+
+    $values = \array_map( function( $item ) {
+        if ( strpos( $item, 'max-video-preview' ) !== false ) {
+            $item = 'max-video-preview:100';
+        }
+
+        return $item;
+    }, $robots );
+
+    return \implode( ', ', $values );
+}
+
+add_filter( 'wpseo_robots', 'change_robots_video_preview_settings', 10, 2 );
+```
+
+#### Appending a string to a category's title
+
+```php
+/**
+ * Changes title for a specific category.
+ *
+ * @param string $title        The current title.
+ * @param object $presentation The presentation object containing the necessary data.
+ *
+ * @return string The altered title tag.
+ */
+function change_category_title( $title, $presentation ) {
+	$categories = \get_the_category( $presentation->model->object_id );
+
+	foreach ( $categories as $category ) {
+		if ( $category->slug === 'books' ) {
+			return sprintf( '%s - %s', $title, $category->name );
+		}
+
+		return $title;
+	}
+}
+
+add_filter( 'wpseo_title', 'change_category_title', 10, 2 );
+```
+
 
 ## Adding meta tags
 Adding your own meta tag(s) is as simple as creating your own class which extends `Abstract_Indexable_Presenter`. To get started, you'll need to understand the following:
@@ -165,95 +244,4 @@ function remove_canonical_presenter( $presenters ) {
 }
 
 add_action( 'wpseo_frontend_presenters', 'remove_canonical_presenter' );
-```
-
-## Editing existing meta tags
-Sometimes you might run into a situation where you want to edit the output of one of the meta tags that are outputted by Yoast SEO.
-To achieve this, Metadata Presenters have each been given a filter that you can hook in to.
-
-_Please note that all these filters expect a string to be returned._
-
-### Available filters
-The following filters are available for you to hook in to:
-
-#### Generic presenters
-* `wpseo_title` - Filter to manipulate the Title_Presenter's output.
-* `wpseo_metadesc` - Filter to manipulate the Meta_Description_Presenter's output.
-* `wpseo_canonical` - Filter to manipulate the Canonical_Presenters's output.
-* `wpseo_googlebot` - Filter to manipulate the Googlebot_Presenter's output.
-* `wpseo_bingbot` - Filter to manipulate the Bingbot_Presenter's output.
-* `wpseo_metadesc` - Filter to manipulate the Meta_Description_Presenter's output.
-
-#### Twitter presenters
-* `wpseo_twitter_card_type` - Filter to manipulate the Card_Presenter's output.
-* `wpseo_twitter_description` - Filter to manipulate the Description_Presenter's output.
-* `wpseo_twitter_image` - Filter to manipulate the Image_Presenter's output.
-* `wpseo_twitter_title` - Filter to manipulate the Title_Presenter's output.
-
-#### OpenGraph presenters
-* `wpseo_opengraph_author_facebook` - Filter to manipulate the Article_Author_Presenter's output.
-* `wpseo_og_article_publisher` - Filter to manipulate the Article_Publisher_Presenter's output.
-* `wpseo_opengraph_desc` - Filter to manipulate the Description_Presenter's output.
-* `wpseo_og_locale` - Filter to manipulate the Locale_Presenter's output.
-* `wpseo_opengraph_site_name` - Filter to manipulate the Site_Name_Presenter's output.
-* `wpseo_opengraph_title` - Filter to manipulate the Title_Presenter's output.
-* `wpseo_opengraph_type` - Filter to manipulate the Type_Presenter's output.
-* `wpseo_opengraph_url` - Filter to manipulate the Url_Presenter's output.
-
-### Examples
-
-Below you will find a variety of examples that demonstrate some filters we provide.
-
-#### Manipulate Googlebot's output
-
-```php
-/**
- * Changes the max-video-preview to 100.
- *
- * @param string $output       The string representation of the original output string.
- * @param object $presentation The presentation object containing the necessary data.
- *
- * @return string The Googlebot meta tag.
- */
-function change_video_preview( $output, $presentation ) {
-    $googlebot = $presentation->googlebot;
-
-    $values = \array_map( function( $item ) {
-        if ( strpos( $item, 'max-video-preview' ) !== false ) {
-            $item = 'max-video-preview:100';
-        }
-
-        return $item;
-    }, $googlebot );
-
-    return \implode( ', ', $values );
-}
-
-add_filter( 'wpseo_googlebot', 'change_video_preview', 10, 2 );
-```
-
-#### Appending a string to a category's title
-
-```php
-/**
- * Changes title for a specific category.
- *
- * @param string $title        The current title.
- * @param object $presentation The presentation object containing the necessary data.
- *
- * @return string The altered title tag.
- */
-function change_category_title( $title, $presentation ) {
-	$categories = \get_the_category( $presentation->model->object_id );
-
-	foreach ( $categories as $category ) {
-		if ( $category->slug === 'books' ) {
-			return sprintf( '%s - %s', $title, $category->name );
-		}
-
-		return $title;
-	}
-}
-
-add_filter( 'wpseo_title', 'change_category_title', 10, 2 );
 ```

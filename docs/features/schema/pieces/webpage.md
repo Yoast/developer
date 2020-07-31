@@ -136,6 +136,12 @@ On search results pages, the *type* property should be altered to an array of `[
                   {
                       "@id": "https://www.example.com/#/schema/video/def456"
                   }
+              ],
+              "potentialAction": [
+                  {
+                      "@type": "ReadAction",
+                      "target": [ "https://www.example.com/example-page/" ]
+                  }
               ]
           }
       ]

@@ -77,3 +77,7 @@ table td {
 table code, table pre {
   word-break: break-word;
 }
+
+table td:first-child > code {
+  white-space: nowrap;
+}

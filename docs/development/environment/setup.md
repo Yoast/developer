@@ -1,5 +1,5 @@
 ---
-id: development-setup
+id: setup
 title: Development - Setup
 sidebar_label: Development setup
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/development-setup.md

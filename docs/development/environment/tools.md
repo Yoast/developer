@@ -1,5 +1,5 @@
 ---
-id: development-tools
+id: tools
 title: Development - Tools
 sidebar_label: Development tools
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/development-tools.md

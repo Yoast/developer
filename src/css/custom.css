@@ -23,6 +23,7 @@
   --ifm-footer-color: #fff;
   --ifm-footer-link-color: var(--ifm-footer-color);
   --ifm-footer-link-hover-color: var(--ifm-footer-color);
+  --ifm-h4-font-size: 20px;
 }
 
 .docusaurus-highlight-code-line {

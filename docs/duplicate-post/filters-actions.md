@@ -117,7 +117,7 @@ add_action( 'duplicate_post_pre_copy', 'my_custom_duplicate_post_pre_copy' );
 
 ### `duplicate_post_post_copy`
 
-This action is called right before cloning of the post or page starts.
+This action is called right after cloning of the post or page starts.
 
 In either your custom plugin or your theme's `functions.php`, add the following code if you want to hook into this action.
 

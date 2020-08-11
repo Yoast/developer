@@ -64,7 +64,7 @@ Optional properties which should only be output when the required criteria are m
 
 ### If there are comments
 * `commentCount`: An integer value of the number of comments associated with the article.
-* `comment`: An array of references-by-ID the `comment` pieces associated with the article.
+* `comment`: An array of references-by-ID to the `comment` pieces associated with the article.
 
 ### If commenting is allowed/enabled
 * `potentialAction`: A `CommentAction` object with values:

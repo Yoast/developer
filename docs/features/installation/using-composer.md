@@ -1,6 +1,6 @@
 ---
 id: using-composer
-title: Yoast SEO - Install using composer
+title: Yoast SEO - Install using Composer
 sidebar_label: Using Composer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/installation/using-composer.md
 ---

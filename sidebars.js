@@ -190,6 +190,7 @@ module.exports = {
 			label: 'Plugin development',
 			items: [
 				'development/overview',
+				'development/yoast-seo-product-sheet',
 
 				{
 					type: 'category',

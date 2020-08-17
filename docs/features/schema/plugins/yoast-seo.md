@@ -131,12 +131,10 @@ The above base script should be altered or extended in the following scenarios.
 * Merge the properties of the `Person` into those of the `Organization`.
 
 ### On single Posts
-* Add an [Article](../pieces/article.md) piece.
-* Add a `mainEntityOfPage` property to the `WebPage`, referencing the ID of the `Article`.
+* Add an [Article](../pieces/article.md) piece, and connect this to the `WebPage` (via a `mainEntityOfPage` property).
 
 ### When a page contains a HowTo block
-* Add a [HowTo](../pieces/howto.md) piece.
-* Add a `mainEntityOfPage` property to the `WebPage` (or the `Article`, if one is present), referencing the ID of the `HowTo` node.
+* Add a [HowTo](../pieces/howto.md) piece, and connect thit to the `WebPage` - or instead to the `Article`, if one is present (via a `mainEntityOfPage` property).
 
 ### When a page contains an FAQ block
 * Construct an `itemList` which contains each [question](../pieces/question.md) piece.

@@ -505,3 +505,10 @@ This example assumes that:
       ]
   }`}
 </YoastSchemaExample>
+
+## More information
+* [LocalBusiness Schema pieces](../pieces/localbusiness.md)
+* [Article Schema pieces](../pieces/article.md)
+* [Organization Schema pieces](../pieces/organization.md)
+* [PostalAddress Schema pieces](../pieces/postaladdress.md)
+* [WebPage Schema pieces](../pieces/webpage.md)

@@ -28,7 +28,7 @@ function isHomepage( currentRoute ) {
 function getSidebar( { currentDocRoute, docsMetadata } ) {
   let sidebarName = 'mainSidebar';
 
-  if ( isValidRoute( currentDocRoute ) ) {
+  if ( isValidRoute( currentDocRoute ) && ! isHomepage( currentDocRoute ) ) {
     sidebarName = docsMetadata.permalinkToSidebar[currentDocRoute.path];
   }
 

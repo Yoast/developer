@@ -19,3 +19,8 @@ For all the post types you've enabled Video SEO for, it will automatically add a
 ### On pages which don't have an `Article`
 * Add the `video` property to the `WebPage`, instead of to the `Article`.
 * Adapt the `mainEntityOfPage` property of the `itemList` to reference the `WebPage`.
+
+## More information
+* [Video Schema pieces](../pieces/video.md)
+* [Article Schema pieces](../pieces/article.md)
+* [WebPage Schema pieces](../pieces/webpage.md)

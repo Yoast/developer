@@ -141,3 +141,14 @@ The above base script should be altered or extended in the following scenarios.
 * Construct an `itemList` which contains each [question](../pieces/question.md) piece.
 * Add an additional `@type` value of `FAQPage` to the `WebPage`.
 * Add a `mainEntityOfPage` property to the `WebPage` (or the `Article`, if one is present), referencing the ID of the `itemList` node.
+
+## More information
+* [Article Schema pieces](../pieces/article.md)
+* [BreadcrumbList Schema pieces](../pieces/breadcrumb.md)
+* [HowTo Schema pieces](../pieces/howto.md)
+* [ImageObject Schema pieces](../pieces/image.md)
+* [Organization Schema pieces](../pieces/organization.md)
+* [Person Schema pieces](../pieces/person.md)
+* [Question Schema pieces](../pieces/question.md)
+* [WebSite Schema pieces](../pieces/website.md)
+* [WebPage Schema pieces](../pieces/webpage.md)

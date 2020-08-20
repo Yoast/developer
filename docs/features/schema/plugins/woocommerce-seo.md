@@ -23,3 +23,13 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.
+
+## More information
+* [Product Schema pieces](../pieces/product.md)
+* [AggregateOffer Schema pieces](../pieces/aggregateoffer.md)
+* [Organization Schema pieces](../pieces/organization.md)
+* [Offer Schema pieces](../pieces/offer.md)
+* [Person Schema pieces](../pieces/person.md)
+* [Review Schema pieces](../pieces/review.md)
+* [WebSite Schema pieces](../pieces/website.md)
+* [WebPage Schema pieces](../pieces/webpage.md)

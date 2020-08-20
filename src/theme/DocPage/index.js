@@ -29,7 +29,7 @@ function getSidebar( { currentDocRoute, docsMetadata } ) {
   let sidebarName = 'mainSidebar';
 
   if ( isValidRoute( currentDocRoute ) && ! isHomepage( currentDocRoute ) ) {
-    sidebarName = docsMetadata.permalinkToSidebar[currentDocRoute.path];
+    sidebarName = docsMetadata.permalinkToSidebar[currentDocRoute.path] || sidebarName;
   }
 
   return docsMetadata.docsSidebars[sidebarName];

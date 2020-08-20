@@ -1,148 +1,190 @@
 /**
- * Copyright (c) 2017-present, Facebook, Inc.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-import React, {useState, useCallback} from 'react';
-import classnames from 'classnames';
-
+import React, {useState, useCallback, useEffect, useRef} from 'react';
+import clsx from 'clsx';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useUserPreferencesContext from '@theme/hooks/useUserPreferencesContext';
+import useLockBodyScroll from '@theme/hooks/useLockBodyScroll';
+import useWindowSize, {windowSizes} from '@theme/hooks/useWindowSize';
+import useLogo from '@theme/hooks/useLogo';
+import useScrollPosition from '@theme/hooks/useScrollPosition';
 import Link from '@docusaurus/Link';
-
+import isInternalUrl from '@docusaurus/isInternalUrl';
 import styles from './styles.module.css';
-
 const MOBILE_TOGGLE_SIZE = 24;
 
-function DocSidebarItem({item, onItemClick, collapsible}) {
-  const {items, href, label, type} = item;
-  const [collapsed, setCollapsed] = useState(item.collapsed);
-  const [prevCollapsedProp, setPreviousCollapsedProp] = useState(null);
+function usePrevious(value) {
+  const ref = useRef(value);
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+} // Compare the 2 paths, ignoring trailing /
 
-  // If the collapsing state from props changed, probably a navigation event
-  // occurred. Overwrite the component's collapsed state with the props'
-  // collapsed value.
-  if (item.collapsed !== prevCollapsedProp) {
-    setPreviousCollapsedProp(item.collapsed);
-    setCollapsed(item.collapsed);
+const isSamePath = (path1, path2) => {
+  const normalize = (str) => (str.endsWith('/') ? str : `${str}/`);
+
+  return normalize(path1) === normalize(path2);
+};
+
+const isActiveSidebarItem = (item, activePath) => {
+  if (item.type === 'link') {
+    return isSamePath(item.href, activePath);
   }
 
-  const handleItemClick = useCallback(e => {
-    e.preventDefault();
-    setCollapsed(state => !state);
-  });
-
-  switch (type) {
-    case 'category':
-
-      const category = collapsible ? <a
-          className={classnames('menu__link', {
-            'menu__link--sublist': collapsible,
-            'menu__link--active': collapsible && !item.collapsed,
-          })}
-          href="#!"
-          onClick={collapsible ? handleItemClick : undefined}>
-        {label}
-      </a> : <span className={styles.sidebarCategoryItem}>{label}</span>;
-
-      return (
-        items.length > 0 && (
-          <li
-            className={classnames('menu__list-item', {
-              'menu__list-item--collapsed': collapsed,
-            })}
-            key={label}>
-
-            {category}
-
-            <ul className="menu__list">
-              {items.map(childItem => (
-                <DocSidebarItem
-                  key={childItem.label}
-                  item={childItem}
-                  onItemClick={onItemClick}
-                  collapsible={collapsible}
-                />
-              ))}
-            </ul>
-          </li>
-        )
-      );
-
-    case 'link':
-    default:
-      return (
-        <li className="menu__list-item" key={label}>
-          <Link
-            activeClassName="menu__link--active"
-            className="menu__link"
-            exact
-            to={href}
-            onClick={onItemClick}>
-            {label}
-          </Link>
-        </li>
-      );
+  if (item.type === 'category') {
+    return item.items.some((subItem) =>
+      isActiveSidebarItem(subItem, activePath),
+    );
   }
-}
 
-// Calculate the category collapsing state when a page navigation occurs.
-// We want to automatically expand the categories which contains the current page.
-function mutateSidebarCollapsingState(item, location) {
-  const {items, href, type} = item;
-  switch (type) {
-    case 'category': {
-      const anyChildItemsActive =
-        items
-          .map(childItem => mutateSidebarCollapsingState(childItem, location))
-          .filter(val => val).length > 0;
-      // eslint-disable-next-line no-param-reassign
-      item.collapsed = !anyChildItemsActive;
-      return anyChildItemsActive;
+  return false;
+};
+
+function DocSidebarItemCategory({
+  item,
+  onItemClick,
+  collapsible,
+  activePath,
+  ...props
+}) {
+
+  const {items, label} = item;
+  const isActive = isActiveSidebarItem(item, activePath);
+  const wasActive = usePrevious(isActive); // active categories are always initialized as expanded
+  // the default (item.collapsed) is only used for non-active categories
+
+  const [collapsed, setCollapsed] = useState(() => {
+    if (!collapsible) {
+      return false;
     }
 
-    case 'link':
-    default:
-      return href === location.pathname.replace(/\/$/, '');
-  }
-}
+    return isActive ? false : item.collapsed;
+  }); // If we navigate to a category, it should automatically expand itself
 
-function DocSidebar(props) {
-  const [showResponsiveSidebar, setShowResponsiveSidebar] = useState(false);
+  useEffect(() => {
+    const justBecameActive = isActive && !wasActive;
 
-  const {
-    docsSidebars,
-    location,
-    sidebar: currentSidebar,
-    sidebarCollapsible,
-  } = props;
+    if (justBecameActive && collapsed) {
+      setCollapsed(false);
+    }
+  }, [isActive, wasActive, collapsed]);
+  const handleItemClick = useCallback(
+    (e) => {
+      e.preventDefault();
+      setCollapsed((state) => !state);
+    },
+    [setCollapsed],
+  );
 
-  if (!currentSidebar) {
+  if (items.length === 0) {
     return null;
   }
 
-  const sidebarData = docsSidebars[currentSidebar];
+  return (
+    <li
+      className={clsx('menu__list-item', {
+        'menu__list-item--collapsed': collapsed,
+      })}
+      key={label}>
+      <a
+        className={clsx('menu__link', {
+          'menu__link--sublist': collapsible,
+          'menu__link--active': collapsible && isActive,
+          [styles.menuLinkText]: !collapsible,
+        })}
+        onClick={collapsible ? handleItemClick : undefined}
+        href={collapsible ? '#!' : undefined}
+        {...props}>
+        {label}
+      </a>
+      <ul className="menu__list">
+        {items.map((childItem) => (
+          <DocSidebarItem
+            tabIndex={collapsed ? '-1' : '0'}
+            key={childItem.label}
+            item={childItem}
+            onItemClick={onItemClick}
+            collapsible={collapsible}
+            activePath={activePath}
+          />
+        ))}
+      </ul>
+    </li>
+  );
+}
 
-  if (!sidebarData) {
-    throw new Error(
-      `Cannot find the sidebar "${currentSidebar}" in the sidebar config!`,
-    );
-  }
+function DocSidebarItemLink({
+  item,
+  onItemClick,
+  activePath,
+  collapsible: _collapsible,
+  ...props
+}) {
+  const {href, label} = item;
+  const isActive = isActiveSidebarItem(item, activePath);
+  return (
+    <li className="menu__list-item" key={label}>
+      <Link
+        className={clsx('menu__link', {
+          'menu__link--active': isActive,
+        })}
+        to={href}
+        {...(isInternalUrl(href)
+          ? {
+              isNavLink: true,
+              exact: true,
+              onClick: onItemClick,
+            }
+          : {
+              target: '_blank',
+              rel: 'noreferrer noopener',
+            })}
+        {...props}>
+        {label}
+      </Link>
+    </li>
+  );
+}
 
-  if (sidebarCollapsible) {
-    sidebarData.forEach(sidebarItem =>
-      mutateSidebarCollapsingState(sidebarItem, location),
-    );
+function DocSidebarItem(props) {
+  switch (props.item.type) {
+    case 'category':
+      return <DocSidebarItemCategory {...props} />;
+
+    case 'link':
+    default:
+      return <DocSidebarItemLink {...props} />;
   }
+}
+
+function DocSidebar({path, sidebar, sidebarCollapsible = true}) {
+  const [showResponsiveSidebar, setShowResponsiveSidebar] = useState(false);
+
+  const {scrollY} = useScrollPosition();
+  useLockBodyScroll(showResponsiveSidebar);
+  const windowSize = useWindowSize();
+  useEffect(() => {
+    if (windowSize === windowSizes.desktop) {
+      setShowResponsiveSidebar(false);
+    }
+  }, [windowSize]);
 
   return (
-    <div className={styles.sidebar}>
+    <div
+      className={clsx(styles.sidebar)}>
+
       <div
-        className={classnames('menu', 'menu--responsive', {
+        className={clsx('menu', 'menu--responsive', styles.menu, {
           'menu--show': showResponsiveSidebar,
         })}>
         <button
           aria-label={showResponsiveSidebar ? 'Close Menu' : 'Open Menu'}
+          aria-haspopup="true"
           className="button button--secondary button--sm menu__button"
           type="button"
           onClick={() => {
@@ -150,7 +192,7 @@ function DocSidebar(props) {
           }}>
           {showResponsiveSidebar ? (
             <span
-              className={classnames(
+              className={clsx(
                 styles.sidebarMenuIcon,
                 styles.sidebarMenuCloseIcon,
               )}>
@@ -158,6 +200,7 @@ function DocSidebar(props) {
             </span>
           ) : (
             <svg
+              aria-label="Menu"
               className={styles.sidebarMenuIcon}
               xmlns="http://www.w3.org/2000/svg"
               height={MOBILE_TOGGLE_SIZE}
@@ -177,14 +220,16 @@ function DocSidebar(props) {
           )}
         </button>
         <ul className="menu__list">
-          {sidebarData.map(item => (
+          {sidebar.map((item) => (
             <DocSidebarItem
               key={item.label}
               item={item}
-              onItemClick={() => {
+              onItemClick={(e) => {
+                e.target.blur();
                 setShowResponsiveSidebar(false);
               }}
               collapsible={sidebarCollapsible}
+              activePath={path}
             />
           ))}
         </ul>

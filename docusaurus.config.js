@@ -21,7 +21,9 @@ const config = {
 			indexName: 'yoast_developer',
 
 		},
-		disableDarkMode: true,
+		colorMode: {
+			disableSwitch: true,
+		},
 		sidebarCollapsible: true,
 		navbar: {
 			title: 'Yoast Developer portal',
@@ -29,7 +31,7 @@ const config = {
 				alt: 'Yoast Developer portal',
 				src: 'img/yoast-logo.png',
 			},
-			links: [],
+			items: [],
 		},
 		footer: {
 			links: [
@@ -89,7 +91,7 @@ const config = {
 	customFields: {
 		docsPath: '../developer-docs/docs',
 	},
-	themes: [ require.resolve( '@docusaurus/theme-search-algolia' ) ],
+	themes: [],
 	presets: [
 		[
 			'@docusaurus/preset-classic',

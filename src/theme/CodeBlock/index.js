@@ -14,7 +14,6 @@ import defaultTheme from 'prism-react-renderer/themes/palenight';
 import Clipboard from 'clipboard';
 import rangeParser from 'parse-numeric-range';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useThemeContext from '@theme/hooks/useThemeContext';
 
 import styles from './styles.module.css';
 
@@ -113,7 +112,7 @@ export default ({children, className: languageClassName, metastring}) => {
   let highlightLines = [];
   let codeBlockTitle = '';
 
-  const {isDarkTheme} = useThemeContext();
+  const {isDarkTheme} = true;
   const lightModeTheme = prism.theme || defaultTheme;
   const darkModeTheme = prism.darkTheme || lightModeTheme;
   const prismTheme = isDarkTheme ? darkModeTheme : lightModeTheme;

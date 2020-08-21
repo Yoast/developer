@@ -238,6 +238,7 @@ module.exports = {
 				'features/schema/pieces/postaladdress',
 				'features/schema/pieces/product',
 				'features/schema/pieces/question',
+				'features/schema/pieces/recipe',
 				'features/schema/pieces/review',
 				'features/schema/pieces/searchaction',
 				'features/schema/pieces/video',

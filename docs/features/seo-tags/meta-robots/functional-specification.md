@@ -53,4 +53,4 @@ In the case of opposing directives, the most restrictive setting should always t
 * `nofollow` over `follow`.
 * `none` over `nofollow` OR `noindex`.
 
-E.g., a combination of `index`, `noindex`, `noimageindex` and `follow` values should result in an output of `noindex, noimageindex, follow` (as `noindex` is more restrictive than `index`, but the other tags are unrelated to each other).
+E.g., a combination of `index`, `noindex`, `noimageindex` and `follow` values should result in an output of `noindex, follow` (as `noindex` is more restrictive than `index`, and `noimageindex` is redundant when combined with `noindex`).

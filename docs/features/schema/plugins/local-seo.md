@@ -15,8 +15,7 @@ The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plug
 * Merge properties from the business' *Primary Location* into the main `Organization` (i.e., the one in the *base script*) to attempt to extend it into a `LocalBusiness`.
 
 ### When a Primary Location is not defined
-* Add any shared/default Location properties (such as `email`, `VAT`, `priceRange` ) to the main `Organization`.
- * Do *not* add `geo` properties, `areasServed` or `priceRange` properties.
+* Add any shared/default Location properties (such as `email`, `VAT`, `priceRange` ) to the main `Organization`, with the exception of `geo`, `areasServed` and `priceRange` properties.
 
 ## Additional scenarios
 
@@ -30,7 +29,7 @@ The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plug
 
 #### In all cases
 * Add a `mainEntityOfPage` property to the `LocalBusiness` piece which references the ID of the `WebPage`.
- * NOTE: In the case of the Primary Location, this should be attached to the main `Organization` / `LocalBusiness` piece in the base script).
+  * NOTE: In the case of the Primary Location, this should be attached to the main `Organization` / `LocalBusiness` piece in the base script).
 
 ## Examples
 
@@ -56,7 +55,9 @@ This example assumes that:
               },
               "priceRange": "$$",
               "areaServed": "Bournemouth, Poole, Dorset",
-              "telephone": "01234 56789",
+              "telephone": ["01234 56789", "02345 67890"],
+              "currenciesAccepted": "EUR, GBP",
+              "paymentAccepted": "Cash, cheque, most major credit cards",
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {
@@ -225,6 +226,9 @@ This example assumes that:
               "faxNumber": "02345 67890",
               "vatID": "abc123",
               "taxID": "def456",
+              "telephone": "01234 56789"
+              "currenciesAccepted": "USD",
+              "paymentAccepted": "Credit card only",
               "name": "Example business name",
               "image": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
@@ -337,6 +341,9 @@ This example assumes that:
               "logo": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
+              "telephone": ["01234 56789", "02345 67890"],
+              "currenciesAccepted": "EUR, GBP, USD",
+              "paymentAccepted": "Cash only",
               "priceRange": "$$",
               "areaServed": [
                   "Bournemouth",
@@ -468,6 +475,7 @@ This example assumes that:
               ],
               "telephone": "01234 56789",
               "faxNumber": "02345 67890",
+              "paymentAccepted": "Cash, cheque",
               "name": "Example business name",
               "openingHoursSpecification": {
                   "@type": "openingHoursSpecification",

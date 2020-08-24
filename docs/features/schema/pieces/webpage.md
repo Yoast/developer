@@ -27,8 +27,6 @@ A valid `WebPage` must have the following properties.
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have declared themselves to be part of the `WebPage` should remove those references (e.g., an `Article` which has a `mainEntityOfPage` property referencing the ID of the `WebPage` should unset that property).
-
 ## Optional properties
 The following should be added whenever available and valid:
 

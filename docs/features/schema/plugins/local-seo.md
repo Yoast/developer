@@ -226,7 +226,6 @@ This example assumes that:
               "faxNumber": "02345 67890",
               "vatID": "abc123",
               "taxID": "def456",
-              "telephone": "01234 56789"
               "currenciesAccepted": "USD",
               "paymentAccepted": "Credit card only",
               "name": "Example business name",
@@ -350,7 +349,6 @@ This example assumes that:
                   "Poole",
                   "Dorset"
               ],
-              "telephone": "01234 56789",
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {

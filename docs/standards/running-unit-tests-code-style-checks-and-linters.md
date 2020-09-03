@@ -73,14 +73,6 @@ When using a linter on our code base, we utilize a combination of various coding
 * PHPCompatibility
 * [YoastCS sniffs](https://github.com/Yoast/yoastcs)
 
-#### Configuring the linter
-To configure the linter to utilize the mentioned coding standards, run the following two commands in your terminal:
-
-1. `composer install`
-1. `composer config-yoastcs`.
-
-If no errors occur, you're ready to start running the linter.
-
 #### Running the linter
 **Free**
 

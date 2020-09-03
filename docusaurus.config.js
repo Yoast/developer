@@ -97,8 +97,7 @@ const config = {
 			'@docusaurus/preset-classic',
 			{
 				docs: {
-					homePageId: 'overview',
-					routeBasePath: '',
+					routeBasePath: '/',
 					get path(){ return config.customFields.docsPath; },
 					sidebarPath: require.resolve('./sidebars.js'),
 				},

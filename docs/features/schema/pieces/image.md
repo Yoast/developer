@@ -21,6 +21,8 @@ A valid `ImageObject` must have the following properties.
 * `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
 
 ## Failure scenarios
+When we cannot ascertain the ID of an image but _can_ ascertain its URL (e.g., in the case of filtering for external media storage), then the `@id` property should be set to the URL of the image.
+
 If any of the required fields are missing or invalid, the node should not be output.
 
 If the node is not output, any entities which would otherwise have declared a relationship with the `Image` (e.g., as the `logo` of an `Organization`) should remove those references.

@@ -18,7 +18,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 A valid `ImageObject` must have the following properties.
 
 * `@id`: The site's home URL appended by `#/schema/image/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the image object).
-* `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
+* `contentUrl`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
 
 ## Failure scenarios
 When we cannot ascertain the ID of an image but _can_ ascertain its URL (e.g., in the case of filtering for external media storage), then the `@id` property should be set to the URL of the image.
@@ -36,7 +36,10 @@ The following should be added whenever available and valid:
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.
 
-#### When both height and width dimensions are known
+### When the image has a HTML 'id' property
+* `url`: The URL of the image in the context of the current page; e.g., the page's canonical URL appended by the HTML `ID` property of the image (such as https://www.example.com/example-page/#image-123).
+
+### When both height and width dimensions are known
 * `height`: The height of the image in pixels
 * `width`: The width of the image in pixels
 

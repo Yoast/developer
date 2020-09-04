@@ -46,7 +46,7 @@ Example:
 
 ```
 WP_DEVELOP_DIR=/Users/<your name>/Documents/Development/wordpress-develop/
-WP_PLUGIN_DIR=/Users/<yourr name>/Documents/Development/plugin-development-docker/plugins
+WP_PLUGIN_DIR=/Users/<your name>/Documents/Development/plugin-development-docker/plugins
 ```
 
 <Alert type="warning">

@@ -42,30 +42,9 @@ sudo ifconfig lo0 alias 10.254.254.254
 
 ## Tying it all together
 The last step is to tie it together with your `wordpress-seo` cloned repository.
-To do this, you'll have to define two environment variables:
 
-* `WP_DEVELOP_DIR` - Refers to the cloned repository of `wordpress-develop`, as it's located on your system.
-* `WP_PLUGIN_DIR` - Refers to the directory where the WordPress plugins are located.
+To do this, please ensure you've followed the steps regarding [setting up PhpUnit](development-setup.md#set-up-phpunit).
 
-Example:
-
-```
-WP_DEVELOP_DIR=/Users/andy/Documents/Development/wordpress-develop/
-WP_PLUGIN_DIR=/Users/andy/Documents/Development/plugin-development-docker/plugins
-```
-
-<Alert type="warning">
-Note the trailing slash in `WP_DEVELOP_DIR` and the absence of it in `WP_PLUGIN_DIR`.
-</Alert>
-
-## Set up PHPUnit
-<Alert>
-If you have `WP_DEVELOP_DIR` and `WP_PLUGIN_DIR` as environment variables, you can skip this section.
-</Alert>
-
-Configure your PHPUnit configuration in PhpStorm by going to `Edit Configurations...` -> `PHPUnit` and ensure it looks similar to the following screenshot:
-
-![](https://lh5.googleusercontent.com/9TJaufyDOzjcM9bGn6ELSVnGTL6tfFOlW8LMoTmmOLoOtvANfN36B5kVZ72iesKy8isliFQHmSq2uMPR58FkHwRVqPCF_O9MvdEAhy4QHK1h53Kp6ppiJ83d70AUNLOSFBDvuxyv)
 
 ## Spin up the containers
 If you've gone through all the above steps, it's time to start the containers!

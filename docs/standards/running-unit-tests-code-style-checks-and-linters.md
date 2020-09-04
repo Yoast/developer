@@ -30,6 +30,9 @@ To configure your system to be able to run with code coverage, follow these step
 1. To run the tests including the coverage, click <img alt="Coverage button in PhpStorm" src="https://user-images.githubusercontent.com/17744553/53946611-714ab580-40c4-11e9-85b6-fde5576e4609.png" /> in the upper right corner of PhpStorm.
 
 ##### Troubleshooting
+
+**XDebug won't load**
+
 If you get an error `"Failed loading /usr/local/Cellar/php@7.1/7.1.26/lib/php/20160303/xdebug.so"` or something similar, it is possible your extension directory needs to be configured so PHP knows where to look for it.
 
 Follow these steps to configure your extension directory:
@@ -42,6 +45,10 @@ Follow these steps to configure your extension directory:
 Sometimes the unit tests will run on a different PHP version than the one used for code coverage. This is because of a quirk in PhpStorm.
 
 To fix this, under `Edit Configurations...` -> `Command line` -> `Interpreter`, you can specify an interpreter. However, running with code coverage always uses the `<Default project interpreter>`, even when you have specified another interpreter. In case you get fatal errors when running with code coverage, take a look at the default project interpreter (`Preferences` -> `Languages & Frameworks` -> `PHP`) and ensure that this one is also properly configured.
+
+**XDebug doesn't have the right SSL permissions**
+
+If you get an error regarding SSL permissions, please run `brew install openssl` and try to install XDebug again.
 
 ### Integration tests
 If you're interested in getting integration tests up and running, make sure to check out our guide on [Setting up integration tests for the plugins](setting-up-integration-tests-for-the-plugins.md).
@@ -107,6 +114,13 @@ To run the tests, including coverage, use the following command in your terminal
 * `yarn test --coverage`
 
 ### Linting
+
+#### Run linter automatically
+To enable this automatic usage, select the `Automatic ESlint configuration` option in the settings by navigating to the following:
+
+`PhpStorm` -> `Preferences` -> `Editor` -> `Inspections` -> `JavaScript` -> `Code quality tools` -> `ESLint`
+ 
+#### Run linter manually
 To run the linter, use the following command in your terminal:
 
 * `grunt eslint`

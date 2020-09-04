@@ -80,6 +80,19 @@ Find the PHP bin directory, which should follow the pattern (or a similar one) b
 export PATH=$PATH:/usr/local/Cellar/php@7.3/7.3.21/bin/ 
 ```
 
+#### Brew PHP Switcher (Optional)
+
+**Please note: Currently only usable with Homebrew.***
+
+[Brew PHP Switcher](https://github.com/philcook/brew-php-switcher) is a simple shell script to switch your Apache and CLI quickly between major versions of PHP. Useful if you support multiple products/projects that are built using either brand new or old legacy PHP functionality.
+
+Assuming you're running the latest version of PHP and want to downgrade to an earlier version, you can do the following:
+
+* Install PHP 7.2 (or older) with `brew install php@7.2`
+* Install Brew PHP Switcher `brew install brew-php-switcher`
+* Switch to PHP 7.2 (or older) `brew-php-switcher 7.2`
+* Reopen your terminal and check the PHP version `php -v`
+
 ### Composer
 Composer is a package manager for PHP and is used in our WordPress plugins to manage code dependencies in an easy way. To install it, run the following command in your terminal:
 

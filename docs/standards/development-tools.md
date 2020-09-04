@@ -65,6 +65,21 @@ brew link gettext --force
 
 ## Project tools
 
+### PHP
+As the plugins are written in PHP, it is necessary to have PHP locally installed.
+
+```bash
+brew install php@7.3
+```
+
+#### PECL
+PHP extensions are distributed through PECL. Pecl is installed with PHP, but you may need to make it accessible on your computer's path.
+Find the PHP bin directory, which should follow the pattern (or a similar one) below:
+
+```bash
+export PATH=$PATH:/usr/local/Cellar/php@7.3/7.3.21/bin/ 
+```
+
 ### Composer
 Composer is a package manager for PHP and is used in our WordPress plugins to manage code dependencies in an easy way. To install it, run the following command in your terminal:
 

@@ -107,6 +107,13 @@ To run the tests, including coverage, use the following command in your terminal
 * `yarn test --coverage`
 
 ### Linting
+
+#### Run linter automatically
+To enable this automatic usage, select the `Automatic ESlint configuration` option in the settings by navigating to the following:
+
+`PhpStorm` -> `Preferences` -> `Editor` -> `Inspections` -> `JavaScript` -> `Code quality tools` -> `ESLint`
+ 
+#### Run linter manually
 To run the linter, use the following command in your terminal:
 
 * `grunt eslint`

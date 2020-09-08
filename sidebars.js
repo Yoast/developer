@@ -187,7 +187,6 @@ module.exports = {
 			label: 'Plugin development',
 			items: [
 				'development/overview',
-				'development/yoast-seo-product-sheet',
 
 				{
 					type: 'category',
@@ -206,6 +205,14 @@ module.exports = {
 						'development/environment/setup-plugin-integration-tests',
 						'development/environment/running-unit-tests-code-style-checks-and-linters',
 						'development/environment/tools',
+					]
+				},
+
+				{
+					type: 'category',
+					label: 'Yoast SEO',
+					items: [
+						'development/yoast-seo/product-sheet',
 					]
 				},
 

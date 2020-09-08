@@ -139,9 +139,9 @@ module.exports = {
 					items: [
 						'customization/apis/overview',
 						'customization/apis/rest-api',
-        				'customization/apis/surfaces-api',
-          				'customization/apis/metadata-api',
-                        'features/schema/api',
+						'customization/apis/surfaces-api',
+						'customization/apis/metadata-api',
+						'features/schema/api',
 					],
 				},
 				{

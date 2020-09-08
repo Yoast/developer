@@ -1,87 +1,108 @@
 /**
- * Copyright (c) 2017-present, Facebook, Inc.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-import React, { useState } from "react";
-import { MDXProvider } from "@mdx-js/react";
-
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import renderRoutes from "@docusaurus/renderRoutes";
-import Layout from "@theme/Layout";
+import React, { useState } from 'react';
+import {MDXProvider} from '@mdx-js/react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import renderRoutes from '@docusaurus/renderRoutes';
+import Layout from '@theme/Layout';
 import SearchBar from "@theme/SearchBar";
-import DocSidebar from "@theme/DocSidebar";
-import MDXComponents from "@theme/MDXComponents";
-import NotFound from "@theme/NotFound";
-import { matchPath } from "@docusaurus/router";
+import DocSidebar from '@theme/DocSidebar';
+import MDXComponents from '@theme/MDXComponents';
+import NotFound from '@theme/NotFound';
+import {matchPath} from '@docusaurus/router';
+import styles from './styles.module.css';
+import Logo from '../Logo';
 
-import styles from "./styles.module.css";
-import Logo from "../Logo";
+function isValidRoute( currentRoute ) {
+  return 'path' in currentRoute;
+}
 
-function DocPage( props ) {
-	const { route: baseRoute, docsMetadata, location, content } = props;
-	const {
-		permalinkToSidebar,
-		docsSidebars,
-		version,
-	} = docsMetadata;
+function isHomepage( currentRoute ) {
+  return isValidRoute( currentRoute ) && currentRoute.path === '/';
+}
 
-	// Get case-sensitive route such as it is defined in the sidebar.
-	const currentRoute = baseRoute.routes.find( ( route ) => {
-		return matchPath( location.pathname, route );
-	} ) || {};
+function getSidebar( { currentDocRoute, docsMetadata } ) {
+  let sidebarName = 'mainSidebar';
 
-	const homePagePath = '/';
-	const isHomePage = currentRoute.path === homePagePath;
+  if ( isValidRoute( currentDocRoute ) && ! isHomepage( currentDocRoute ) ) {
+    sidebarName = docsMetadata.permalinkToSidebar[currentDocRoute.path] || sidebarName;
+  }
 
-	let sidebar = isHomePage
-		? 'mainSidebar'
-		: permalinkToSidebar[currentRoute.path];
+  return docsMetadata.docsSidebars[sidebarName];
+}
 
-	const { siteConfig: { themeConfig = {} } = {}, isClient } = useDocusaurusContext();
-	const { sidebarCollapsible = true } = themeConfig;
-	const [ isSearchBarExpanded, setIsSearchBarExpanded ] = useState( false );
+function getPath( currentRoute ) {
+  if ( ! isValidRoute( currentRoute ) || isHomepage( currentRoute ) ) {
+    return '/';
+  }
 
-	let renderedContent = (
-        <MDXProvider components={ MDXComponents }>
-          { renderRoutes( baseRoute.routes ) }
-        </MDXProvider>
-	);
+  return currentRoute.path;
+}
 
-	if ( !isHomePage && Object.keys( currentRoute ).length === 0 ) {
-		renderedContent = <NotFound { ...props } />;
-		sidebar = 'mainSidebar';
-	}
+function DocPageContent( props ) {
+  const {currentDocRoute, docsMetadata: { version, docsSidebars }, children} = props;
+  const {siteConfig, isClient} = useDocusaurusContext();
 
-	return (
-		<Layout version={ version } key={ isClient }>
-			<div className={ styles.docPage }>
+  let path = getPath( currentDocRoute );
+  let sidebar = getSidebar( props );
+  let content = ( <MDXProvider components={MDXComponents}>{children}</MDXProvider> );
 
-				<aside className={ styles.sidebar }>
-					<Logo/>
-					<div className={ styles.sidebar__menu }>
-						<SearchBar
-							handleSearchBarToggle={ setIsSearchBarExpanded }
-							isSearchBarExpanded={ isSearchBarExpanded }
-						/>
-						<DocSidebar
-							docsSidebars={ docsSidebars }
-							location={ location }
-							sidebar={ sidebar }
-							sidebarCollapsible={ sidebarCollapsible }
-							path={ isHomePage ? homePagePath : currentRoute.path }
-						/>
-					</div>
-				</aside>
+  if ( ! isValidRoute( currentDocRoute ) ) {
+      content = <NotFound {...props} />;
+  }
 
-				<main className={ styles.docMainContainer }>
-                  {renderedContent}
-				</main>
-			</div>
-		</Layout>
-	);
+  const [ isSearchBarExpanded, setIsSearchBarExpanded ] = useState( false );
+
+  return (
+    <Layout version={version} key={isClient}>
+      <div className={styles.docPage}>
+        <div className={styles.docSidebarContainer} role="complementary">
+          <Logo/>
+          <div className={ styles.sidebar__menu }>
+            <SearchBar
+                handleSearchBarToggle={ setIsSearchBarExpanded }
+                isSearchBarExpanded={ isSearchBarExpanded }
+            />
+            <DocSidebar
+                docsSidebars={ docsSidebars }
+                sidebar={sidebar}
+                path={ path }
+                sidebarCollapsible={
+                siteConfig.themeConfig?.sidebarCollapsible ?? true
+              }
+            />
+          </div>
+        </div>
+        <main className={styles.docMainContainer}>
+          {content}
+        </main>
+      </div>
+    </Layout>
+  );
+}
+
+function DocPage(props) {
+  const {
+    route: {routes: docRoutes},
+    docsMetadata,
+    location,
+  } = props;
+
+  const currentDocRoute = docRoutes.find((docRoute) =>
+    matchPath(location.pathname, docRoute),
+  ) || {};
+
+  return (
+    <DocPageContent
+      currentDocRoute={currentDocRoute}
+      docsMetadata={docsMetadata}>
+      {renderRoutes(docRoutes)}
+    </DocPageContent>
+  );
 }
 
 export default DocPage;

@@ -27,8 +27,6 @@ A valid `WebPage` must have the following properties.
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have declared themselves to be part of the `WebPage` should remove those references (e.g., an `Article` which has a `mainEntityOfPage` property referencing the ID of the `WebPage` should unset that property).
-
 ## Optional properties
 The following should be added whenever available and valid:
 
@@ -42,11 +40,13 @@ The following should be added whenever available and valid:
 * `video`: An array of all videos in the page content, referenced by ID.
 * `keywords`: An array of the names of tags attached to the page (e.g., `["cats","dogs","cake"]`).
 * `speakable`: A `SpeakableSpecification` object which identifies any content elements suitable for spoken results.
-* `potentialAction`: A `ReadAction` object with values:
-  * `target`: The unmodified *canonical URL* of the page.
 
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.
+
+### When the page is a a conventional *Page* (and not, e.g., a posts archive, user profile, etc)
+* `potentialAction`: A `ReadAction` object with values:
+  * `target`: The unmodified *canonical URL* of the page.
 
 ### When the page is *authored*
 * `author`: A reference-by-ID to the author of the page. Should *only* be output when the page is explicitly authored (e.g., on a page containing a native *Post* in WordPress).

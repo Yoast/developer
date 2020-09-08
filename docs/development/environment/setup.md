@@ -23,6 +23,8 @@ Generally speaking, we advise people to create a `Yoast` folder in their `Docume
 
 In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the Docker directory and navigate to `<your docker directory>/plugins` where you can clone the various plugin repositories.
 
+## Set up PHPUnit
+
 ### Enabling PHPUnit in PhpStorm
 The setup in PhpStorm can be completed by following the next steps:
 
@@ -34,7 +36,32 @@ The setup in PhpStorm can be completed by following the next steps:
 *   Press the plus icon and select the first option: `PHPUnit Local`. Select `Path to phpunit.phar` and enter the path to the file. It's probably in your `/Cellar` directory. If you do not have a `phpunit.phar` file yet, you can download it here: [https://phar.phpunit.de/](https://phar.phpunit.de/)
 *   Finally, when you return to the `Run/Debug configurations` window, there might be an error message at the bottom. Press the `Fix` button next to it and select PHP as your CLI interpreter. Apply and done!
 
-#### Running multisite tests
+### Configuring PHPUnit to work with WordPress and the plugins
+In order to ensure that unit tests can properly run, you need to add the following two constants:
+
+* `WP_DEVELOP_DIR` - Refers to the cloned repository of `wordpress-develop`, as it's located on your system.
+* `WP_PLUGIN_DIR` - Refers to the directory where the WordPress plugins are located.
+
+Example:
+
+```
+WP_DEVELOP_DIR=/Users/<your name>/Documents/Development/wordpress-develop/
+WP_PLUGIN_DIR=/Users/<your name>/Documents/Development/plugin-development-docker/plugins
+```
+
+<Alert type="warning">
+Note the trailing slash in `WP_DEVELOP_DIR` and the absence of it in `WP_PLUGIN_DIR`.
+</Alert>
+
+<Alert>
+If you have `WP_DEVELOP_DIR` and `WP_PLUGIN_DIR` as environment variables, you can skip the following section.
+</Alert>
+
+Configure your PHPUnit configuration in PhpStorm by going to `Edit Configurations...` -> `PHPUnit` and ensure it looks similar to the following screenshot:
+
+![](https://lh5.googleusercontent.com/9TJaufyDOzjcM9bGn6ELSVnGTL6tfFOlW8LMoTmmOLoOtvANfN36B5kVZ72iesKy8isliFQHmSq2uMPR58FkHwRVqPCF_O9MvdEAhy4QHK1h53Kp6ppiJ83d70AUNLOSFBDvuxyv)
+
+### Running multisite tests
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
 ## Installing the plugins

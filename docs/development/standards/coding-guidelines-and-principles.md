@@ -113,3 +113,15 @@ TDD is a principle when you write tests before writing the actual implementation
 ### Codescout principle
 
 Refactoring should happen primarily through the codescout principle. That means you leave the code better than you found it. When fixing bugs or adding new features, feel free to take some time to improve the functionality that is concerned. Of course, only do this when it is really needed and remember to keep it simple.
+
+## Other
+
+### Try/Catch "random" functionality
+
+Some functionality has a random success factor. For example: when doing API call you can never be certain if the API is available. We don't want our software to break on this. Wrap this kind of functionality in try/catch blocks.
+
+### Minify .js and .css files
+Please make sure you JS and CSS is minified/uglified and the minified versions are loaded in the browser. Most of our repositories have Grunt configured to do it for you. Just run `grunt build` and you'll be fine!
+
+### PHPDocs and commenting
+Make sure all your code is documented by using PHPDoc. Also use inline comments when necessary, for example when describing a difficult piece of code.

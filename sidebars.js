@@ -122,7 +122,7 @@ module.exports = {
 					type: 'category',
 					label: 'WP CLI',
 					items: [
-						'features/wp-cli/indexables-cli',
+						'features/wp-cli/reindex-indexables',
 					],
 				},
 

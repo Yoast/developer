@@ -1,8 +1,8 @@
 ---
-id: indexables-cli
-title: Yoast SEO - Indexables CLI command
-sidebar_label: Indexables CLI command
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/indexables-cli.md
+id: reindex-indexables
+title: WP CLI - Reindex Indexables command
+sidebar_label: Reindex Indexables
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/wp-cli/reindex-indexables.md
 ---
 import Alert from '../../../../developer-site/src/components/Alert';
 

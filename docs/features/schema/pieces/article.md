@@ -64,7 +64,9 @@ Optional properties which should only be output when the required criteria are m
 
 ### If there are comments
 * `commentCount`: An integer value of the number of comments associated with the article.
-* `comment`: An array of references-by-ID the comments associated with the article.
+* `comment`: An array of references-by-ID to the `comment` pieces associated with the article.
+
+### If commenting is allowed/enabled
 * `potentialAction`: A `CommentAction` object with values:
  * `name`: "Comment".
  * `target`: The `url` property of the parent `WebPage`, appended with `#comment`.
@@ -151,6 +153,13 @@ The `Article` type may be transformed in the following scenarios:
                   },
                   {
                       "@id": "https://www.example.com/#/schema/video/def456"
+                  }
+              ],
+              "potentialAction": [
+                  {
+                      "@type": "CommentAction",
+                      "name": "Comment"
+                      "target": [ "https://www.example.com/blog/example-article/#comment" ]
                   }
               ]
           }

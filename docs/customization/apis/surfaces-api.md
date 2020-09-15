@@ -84,7 +84,7 @@ E.g., get the canonical URL value for a post with an ID of *2*.
 YoastSEO()->meta->for_post( 2 )->canonical;
 ```
 
-E.g., get the title of a page with a URL of *https://www.example.com/example-page/*:
+E.g., get the title of a page with a URL of `https://www.example.com/example-page/`:
 ```php
 YoastSEO()->meta->for_url( 'https://www.example.com/example-page/' )->title;
 ```

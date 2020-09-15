@@ -61,20 +61,20 @@ For example, a [HowTo](https://developer.yoast.com/features/schema/pieces/howto/
 Local pieces should include the `{{slug}}` component. Global pieces should not.
 
 **Example global pieces:**
-* https://www.example.com/#/schema/organization/abc123
-* https://www.example.com/#/schema/image/abc123
-* https://www.example.com/#/schema/person/abc123
-* https://www.example.com/#/schema/location/abc123
-* https://www.example.com/#/schema/address/abc123
-* https://www.example.com/#/schema/website/abc123
-* https://www.example.com/#/schema/product/abc123
-* https://www.example.com/#/schema/offer/abc123
+* `https://www.example.com/#/schema/organization/abc123`
+* `https://www.example.com/#/schema/image/abc123`
+* `https://www.example.com/#/schema/person/abc123`
+* `https://www.example.com/#/schema/location/abc123`
+* `https://www.example.com/#/schema/address/abc123`
+* `https://www.example.com/#/schema/website/abc123`
+* `https://www.example.com/#/schema/product/abc123`
+* `https://www.example.com/#/schema/offer/abc123`
 
 **Example local pieces:**
-* https://www.example.com/example-page/#/schema/article/abc123
-* https://www.example.com/example-category/example-post/#/schema/breadcrumb/abc123
-* https://www.example.com/example-category/example-post/#/schema/howto/abc123
-* https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123
+* `https://www.example.com/example-page/#/schema/article/abc123`
+* `https://www.example.com/example-category/example-post/#/schema/breadcrumb/abc123`
+* `https://www.example.com/example-category/example-post/#/schema/howto/abc123`
+* `https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123`
 
 See the relevant [pieces documentation](pieces.md) in each case for the correct structure (where defined).
 

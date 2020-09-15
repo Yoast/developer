@@ -32,7 +32,7 @@ if ( ! wp_installing() ) {
 Because the above example hooks into the `plugins_loaded` hook, WordPress has completedly loaded all activated plugins and our classes are then freely available to use in your own code.
 
 ### Extending YoastSEO.js' dataset
-One of the other APIs we ship, is that of YoastSEO.js. If you're attempting to extend the data that gets passed through this library, make sure you check out the [dedicated page](../customization/yoast-seo/adding-custom-data-analysis.md) we've written for it.
+One of the other APIs we ship, is that of YoastSEO.js. If you're attempting to extend the data that gets passed through this library, make sure you check out the [dedicated page](/customization/yoast-seo/adding-custom-data-analysis.md) we've written for it.
 
 ## PHP Coding Standards
 

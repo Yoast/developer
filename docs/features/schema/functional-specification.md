@@ -2,7 +2,7 @@
 id: functional-specification
 title: Schema - Specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/specification.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/functional-specification.md
 description: This page describes our functional and technical approach to constructing schema.org markup.
 ---
 import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';

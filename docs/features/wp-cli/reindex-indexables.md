@@ -15,7 +15,7 @@ This page describes the command and all its options.
 If you don't know what WP CLI is, you're missing out! It's a command line interface for WordPress that makes loads of tasks easier. [Read all about it on wp-cli.org](https://wp-cli.org/). 
 </Alert>
 
-If you plan on using our [REST API](../apis/rest-api.md) or [our surfaces](../apis/surfaces-api.md), running the CLI command on your website beforehand is very important.
+If you plan on using our [REST API](/customization/apis/rest-api.md) or [our surfaces](/customization/apis/surfaces-api.md), running the CLI command on your website beforehand is very important.
 
 ## Syntax
 

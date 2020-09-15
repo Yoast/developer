@@ -2,7 +2,7 @@
 id: overview
 title: Descriptions - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/titles/overview.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/seo-tags/descriptions/overview.md
 description: This documentation provides technical information about how Yoast SEO generates and/or manages description tags.
 ---
 This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and/or manages description tags.

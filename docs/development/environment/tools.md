@@ -45,7 +45,7 @@ Install git by running `brew install git`
 
 Documentation on how to configure your local Git setup and how to add your SSH key to GitHub can be found [here](https://help.github.com/articles/set-up-git) and [here](https://help.github.com/articles/generating-ssh-keys).
 
-[Add a global git ignore file](version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
+[Add a global git ignore file](/development/standards/version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
 
 ### Docker
 At Yoast, we make use of [Docker](https://docker.com) as the foundation for our development setup. To get developers up and running faster, we created [our own development setup](https://github.com/Yoast/plugin-development-docker), based on Docker, that you can freely use.

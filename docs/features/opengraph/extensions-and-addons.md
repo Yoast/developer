@@ -2,7 +2,7 @@
 id: extensions-and-addons
 title: OpenGraph Tags - Extensions and addons
 sidebar_label: Extensions & addons
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/meta-tags/extensions-and-addons.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/opengraph/extensions-and-addons.md
 description: This documentation provides technical information about which additional meta tags our extensions and addons generate and output.
 ---
 This documentation provides technical information about which additional meta tags our extensions and addons generate and output.

@@ -11,7 +11,7 @@ This page describes the process of how we set up development environments at Yoa
 **Note: These instructions assume you're working with OSX.**
 
 ## Getting started
-Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](development-tools.md) which lists the various tools that need to be used (unless otherwise noted).
+Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](tools.md) which lists the various tools that need to be used (unless otherwise noted).
 
 ## Organizing your projects
 Generally speaking, we advise people to create a `Yoast` folder in their `Documents` directory to keep all things together. After this, you have two flavors:

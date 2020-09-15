@@ -2,7 +2,7 @@
 id: api
 title: XML Sitemaps - API documentation
 sidebar_label: API
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/specification.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/api.md
 description: Coming soon.
 ---
 

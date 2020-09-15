@@ -43,7 +43,7 @@ sudo ifconfig lo0 alias 10.254.254.254
 ## Tying it all together
 The last step is to tie it together with your `wordpress-seo` cloned repository.
 
-To do this, please ensure you've followed the steps regarding [setting up PhpUnit](development-setup.md#set-up-phpunit).
+To do this, please ensure you've followed the steps regarding [setting up PhpUnit](setup.md#set-up-phpunit).
 
 
 ## Spin up the containers

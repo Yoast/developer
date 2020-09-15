@@ -15,9 +15,9 @@ These tools include the following:
 ## PHP
 
 ### Unit tests
-For our PHP code, we make use of PHPUnit to test code for expected behavior. Please make sure you've read the [guide on setting up PHPUnit](development-setup.md#setting-up-phpunit) before running any tests.
+For our PHP code, we make use of PHPUnit to test code for expected behavior. Please make sure you've read the [guide on setting up PHPUnit](setup.md#set-up-phpunit) before running any tests.
 
-Also make sure to read up on the section regarding [running tests in a multisite environment](development-setup.md#running-multisite-tests).
+Also make sure to read up on the section regarding [running tests in a multisite environment](setup.md#running-multisite-tests).
 
 #### Running unit test with code coverage
 Running unit tests with code coverage is very similar to 'just' running unit tests, with one difference: While a test runs, all your code gets analyzed to see what parts of your code base are covered by the tests.
@@ -51,7 +51,7 @@ To fix this, under `Edit Configurations...` -> `Command line` -> `Interpreter`, 
 If you get an error regarding SSL permissions, please run `brew install openssl` and try to install XDebug again.
 
 ### Integration tests
-If you're interested in getting integration tests up and running, make sure to check out our guide on [Setting up integration tests for the plugins](setting-up-integration-tests-for-the-plugins.md).
+If you're interested in getting integration tests up and running, make sure to check out our guide on [Setting up integration tests for the plugins](setup-plugin-integration-tests.md).
 
 #### Other plugins
 Most of our other plugins also contain a variety of tests, written to check the PHP code. To run these tests, use the following command in your terminal:

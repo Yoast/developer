@@ -2,7 +2,7 @@
 id: changing-og-locale-output
 title: OpenGraph Tags - Changing the og:locale output
 sidebar_label: Changing the og:locale output
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/changing-og-locale-output.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/opengraph/api/changing-og-locale-output.md
 ---
 
 When you enable OpenGraph settings in Yoast SEO, it'll output an `og:locale` meta tag. This `og:locale` is based on the language settings for your WordPress install.

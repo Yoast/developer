@@ -5,35 +5,6 @@ sidebar_label: Coding guidelines and principles
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/standards/coding-guidelines-and-principles.md
 ---
 
-## Using Yoast SEO APIs and classes
-
-Yoast SEO ships with a variety of APIs and classes that you can utilize in your own code. 
-However, there are a few things you need to keep in mind when you plan on using these APIs and classes.
-
-### Class `<class name>` doesn't exist
-
-This usually happens whenever you try to use one of the Yoast SEO classes before it has been made available to PHP / WordPress. This is, in part, due to the loading order within WordPress.
-To overcome this, you should load your plugin by hooking into the proper hook. An example of this, is as follows:
-
-```php
-class MyCustomPlugin {
- // Your custom plugin code.
-}
-
-function loadMyCustomPlugin() {
-	new MyCustomPlugin();
-}
-
-if ( ! wp_installing() ) {
-	add_action( 'plugins_loaded', 'loadMyCustomPlugin' );
-}
-```
-
-Because the above example hooks into the `plugins_loaded` hook, WordPress has completedly loaded all activated plugins and our classes are then freely available to use in your own code.
-
-### Extending YoastSEO.js' dataset
-One of the other APIs we ship, is that of YoastSEO.js. If you're attempting to extend the data that gets passed through this library, make sure you check out the [dedicated page](/customization/yoast-seo/adding-custom-data-analysis.md) we've written for it.
-
 ## PHP Coding Standards
 
 The [Yoast PHP coding standards](https://github.com/Yoast/yoastcs) is a PHPCS ruleset which enforces a codestyle for PHP throughout all Yoast PHP code. YoastCS primarily based on the [WordPress Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards). In some cases we diverge from WPCS. Two examples:

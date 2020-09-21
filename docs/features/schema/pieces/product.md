@@ -11,7 +11,6 @@ Describes a product sold by a business.
 
 ## Triggers
 * Should be output on a page which represents a product (e.g., a product page).
-* Should be output on product listing pages (e.g., a product category, or homepage listing products).
 
 ## Required properties
 A valid `Product` must have the following properties.

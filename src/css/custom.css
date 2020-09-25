@@ -82,3 +82,13 @@ table code, table pre {
 table td:first-child > code {
   white-space: nowrap;
 }
+
+body > div {
+  height: auto !important;
+  display: block !important;
+}
+
+#__docusaurus {
+  display: flex;
+  flex-direction: column;
+}

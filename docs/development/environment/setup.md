@@ -96,6 +96,7 @@ If you're developing within the JavaScript code that is part of one of the plugi
 * While running the second command, you might be asked to give up the directory that you've cloned the monorepo to. 
   * If prompted, ensure you give up the *full* path to this directory (i.e. `/Users/<your user account>/<directory of monorepo>` ). Please note that the usage of `~` in the pathname, is not supported.
 * If no errors occur, you should now be able to proceed developing and run commands such as `grunt build` as you normally would.
+* Additionally, you can use `grunt webpack:watch`. This command will watch for changes in the JavaScript files and keep them up-to-date. Please note that there is no development server in use, so you have to refresh the webpage manually.
 
 <Alert>
 

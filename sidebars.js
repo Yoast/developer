@@ -142,6 +142,7 @@ module.exports = {
 						'customization/apis/surfaces-api',
 						'customization/apis/metadata-api',
 						'features/schema/api',
+						'customization/apis/using-apis-classes',
 					],
 				},
 				{

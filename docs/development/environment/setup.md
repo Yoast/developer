@@ -104,9 +104,9 @@ This ensures that Travis uses the correct branches when building.
 </Alert>
 
 ### Working on standalone JavaScript
-If you're planning on only working on the JavaScript code, outside of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things, up and running.
+If you're planning on working on the JavaScript code, _outside_ of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things up and running.
 
-A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) are also available.
+A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) is also available.
 
 ## Now what?
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

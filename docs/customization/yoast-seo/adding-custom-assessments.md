@@ -22,6 +22,9 @@ In this file, you'll have to ensure that, at a minimum, the following is present
 /* global YoastSEO: true, myCustomAssessmentPluginL10n */
 
 class MyCustomAssessmentPlugin {
+    /**
+     * The constructor.
+     */
 	constructor() {
 		// Ensure YoastSEO.js is present and can access the necessary features.
 		if ( typeof YoastSEO === "undefined" || typeof YoastSEO.analysis === "undefined" || typeof YoastSEO.analysis.worker === "undefined" ) {
@@ -79,10 +82,18 @@ class CustomWorker {
 		this._worker = analysisWorker;
 	}
 
+    /**
+     * Registers the worker.
+     */
 	register() {
 		this._worker.registerMessageHandler( "initialize", this.initialize.bind( this ), "MyCustomAssessmentPlugin" );
 	}
 
+    /**
+     * Initializes the worker.
+     *
+     * @param {Object} settings The settings to pass along to the assessment.
+     */
 	initialize( settings ) {
 		this.customAssessment = new CustomAssessment( settings );
 
@@ -104,11 +115,25 @@ Finally, we'll create the assessment itself. In `js/`, create a file named `Cust
 import { AssessmentResult, Assessment } from 'yoastseo';
 
 export default class CustomAssessment extends Assessment {
+	/**
+	 * The constructor.
+	 *
+	 * @param {Object} settings The settings to pass along.
+	 */
 	constructor( settings ) {
 		super();
 		this.settings = settings;
 	}
 
+	/**
+	 * Executes the assessment and return its result.
+	 *
+	 * @param {Paper}      paper      The paper to run this assessment on.
+	 * @param {Researcher} researcher The researcher used for the assessment.
+	 * @param {Object}     i18n       The i18n-object used for parsing translations.
+	 *
+	 * @returns {AssessmentResult} The result of the assessment.
+	 */
 	getResult( paper, researcher, i18n ) {
 
 		// Check for the occurance of the word Yoast in the title.
@@ -124,6 +149,13 @@ export default class CustomAssessment extends Assessment {
 		return assessmentResult;
 	}
 
+	/**
+	 * Determines the score based on the amount of matches.
+	 *
+	 * @param {number} matches The amount of matches.
+	 *
+	 * @returns {Object} The score object.
+	 */
 	score( matches ) {
 
 		if ( matches === 0 ) {
@@ -148,15 +180,13 @@ export default class CustomAssessment extends Assessment {
 }
 ```
 
-The above code is the actual assessment itself. We take an instance of the `Paper` class that gets passed through the webworker, and look at the title of the current post.
+The above code is the actual assessment itself. We take an instance of the `Paper` class, which then gets passed through the webworker that analyzes the Paper's title property.
 Within this title, we look for the word 'Yoast' and count the amount of instances that we can find. Based on this, we return a score (which determines whether a bullet is grey, red, orange or green) and a feedback message so the user knows why the score is what it is.
-
-
 
 ### Registering the plugin with WordPress
 
-The next step to make things work, is to make sure your JavaScript code is properly loaded. To achieve this, we'll have to ensure our plugin is properly registered and loaded by WordPress.
-The main importance is that the above JavaScript file is loaded at the right time. Therefor, it's necessary to implement a chain of hooks that'll run once WordPress loads your plugin.
+Next, we'll have to make sure our custom JavaScript gets loaded. To achieve this, we need to make sure that our custom plugin is registered and loaded by WordPress.
+The main importance is that the above JavaScript file loads at the right time. Therefor, it's necessary to implement a chain of hooks that'll run once WordPress loads your plugin.
 
 Assuming you have a plugin file present (i.e. `MyCustomPlugin.php`), your file might look a little something like this:
 
@@ -177,11 +207,13 @@ class MyCustomPlugin {
 
 	/**
 	 * Enqueues the plugin file.
+     * 
+     * @return void
 	 */
 	public function enqueue_scripts() {
 		global $pagenow;
 
-		if (( $pagenow == 'post.php' ) || (get_post_type() == 'post')) {
+		if ( ( $pagenow == 'post.php' ) || ( get_post_type() == 'post' ) ) {
 			wp_enqueue_script( 'my-custom-assessment-plugin', plugins_url( 'dist/my-custom-assessment.min.js', __FILE__ ), [], '1.0', true );
 			wp_localize_script( 'my-custom-assessment-plugin', 'myCustomAssessmentPluginL10n', $this->localize_extended_script() );
 		}
@@ -213,5 +245,6 @@ if ( ! wp_installing() ) {
 
 ### Test the code
 
-The last step is to test the code. Make sure your plugin is properly loaded and create a new post.
-As a test, you could set your keyword to be the word 'additional' and see that the SEO analysis properly detects it under the 'Keyprashe in introduction' result. 
+The last step is to test the code. Make sure your plugin is installed and enabled, and create a new post.
+Open up the SEO analysis and see that the message "Yoast isn't present in your title" shows up in the analysis results. Now add Yoast to the post's title and see that the analysis results have changed.
+

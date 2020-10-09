@@ -88,7 +88,7 @@ function DocPageContent( props ) {
 function DocPage(props) {
   const {
     route: {routes: docRoutes},
-    docsMetadata,
+    versionMetadata: docsMetadata,
     location,
   } = props;
 

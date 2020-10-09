@@ -84,7 +84,7 @@ table td:first-child > code {
 }
 
 body > div {
-  height: auto !important;
+  height: 100vh !important;
   display: block !important;
 }
 

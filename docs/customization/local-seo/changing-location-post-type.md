@@ -11,7 +11,7 @@ This filter is particularly useful in cases where you have defined a custom post
 
 <Alert>
 
-If you change the post type, please make sure to [reindex Yoast SEO's indexables](../../standards/reindex-indexables).
+If you change the post type, please make sure to [reindex Yoast SEO's indexables](../../features/wp-cli/reindex-indexables.md).
 </Alert>
 
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired post type.

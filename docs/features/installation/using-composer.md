@@ -4,7 +4,7 @@ title: Yoast SEO - Install using Composer
 sidebar_label: Using Composer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/installation/using-composer.md
 ---
-import Alert from '../../../../developer-site/src/components/Alert';
+import Alert from '@site/src/components/Alert';
 
 ## What is Composer?
 [Composer](https://getcomposer.org/) is a dependency manager tool for PHP projects (similar to NPM) and can be run from your terminal.

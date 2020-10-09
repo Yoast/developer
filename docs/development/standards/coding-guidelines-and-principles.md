@@ -69,7 +69,7 @@ The [SOLID principles](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-princ
 
 ### Testing
 
-Whenever writing code, it is important to ensure that it functions in an expected manner. To do this, you should write tests. At Yoast, we use [PHPUnit](https://github.com/sebastianbergmann/phpunit) for PHP and [Jest]() for JavaScript.
+Whenever writing code, it is important to ensure that it functions in an expected manner. To do this, you should write tests. At Yoast, we use [PHPUnit](https://github.com/sebastianbergmann/phpunit) for PHP and [Jest](https://jestjs.io/) for JavaScript.
 
 A few guidelines with regards to testing:
 

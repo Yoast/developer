@@ -10,7 +10,7 @@ This documentation provides technical information about how [Yoast SEO](https://
 ## Resources
 * Our [functional specification](functional-specification.md) describes the logic we use to construct and output meta robots tags in various conditions.
 * Our [API documentation](api.md) [coming soon] provides examples of how technical users and developers can modify the default behavior.
-* You can learn more about the role of meta robots tags in our products on our [feature overview page]() [coming soon].
+* You can learn more about the role of meta robots tags in our products on our [feature overview page](#) [coming soon].
 
 ## Further reading
 * ~~Meta robots feature overview~~ [coming soon]

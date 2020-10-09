@@ -5,7 +5,7 @@ sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/functional-specification.md
 description: This page describes our functional and technical approach to constructing schema.org markup.
 ---
-import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '@site/src/components/YoastSchemaExample';
 
 The core of our approach is to output a "base script" - a `@graph` object rendered in `JSON-LD` - which describes the `WebPage`, the `WebSite`, and the `Organization` (or `Person`, in the case of a website which represents an individual). This is included on every page of a website running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) .
 

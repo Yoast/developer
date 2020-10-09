@@ -19,7 +19,6 @@ const config = {
 		algolia: {
 			apiKey: process.env.DOCSEARCH_KEY,
 			indexName: 'yoast_developer',
-
 		},
 		colorMode: {
 			disableSwitch: true,

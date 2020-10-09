@@ -51,7 +51,7 @@ const config = {
 						},
 						{
 							label: 'Yoast SEO Product sheet',
-							to: '/standards/yoast-seo-product-sheet/',
+							to: '/development/yoast-seo/product-sheet/',
 						},
 					],
 				},

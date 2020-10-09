@@ -111,6 +111,7 @@ const config = {
 		path.resolve(__dirname, './src/plugins/yoast-auto-index'),
 		path.resolve(__dirname, './src/plugins/yoast-docs-assets'),
 	],
+	onBrokenLinks: 'log',
 };
 
 module.exports = config;

@@ -5,7 +5,7 @@ sidebar_label: Technology & approach
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/technology-approach.md
 description: An overview of some of the technical choices and standards used in our schema.org outputs.
 ---
-import YoastSchemaExample from '../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '@site/src/components/YoastSchemaExample';
 
 ## JSON-LD as a preferred format
 Structured markup can be implemented in a number of ways, and via a number of different standards. We're particularly interested in the standards defined by [schema.org](https://schema.org/) , given Google's close adherence to their specifications.

@@ -2,6 +2,7 @@
 id: overview
 title: Overview
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/overview.md
+slug: /
 ---
 
 Welcome to the Yoast Developer portal, the place to find any technical information related to our software.

@@ -151,6 +151,7 @@ module.exports = {
 					items: [
 						'customization/yoast-seo/api-filter-actions-deprecations',
 						'customization/yoast-seo/adding-custom-data-analysis',
+						'customization/yoast-seo/adding-custom-assessments',
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/disabling-yoast-seo',
 					],

@@ -49,7 +49,7 @@ $data['organization'] = [ '@id' => Schema_IDs::ORGANIZATION_HASH ];
 If you want to change the output of a certain piece, hook into our `wpseo_schema_<class>` filter. For instance:
 
 ```php
-add_filter( 'wpseo_schema_article', 'example_change_article' );
+add_filter( 'wpseo_schema_article', 'change_article_to_social_posting' );
 
 /**
  * Changes @type of Article Schema data.

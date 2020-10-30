@@ -9,7 +9,7 @@ The schema output for [News SEO for WordPress](https://yoast.com/wordpress/plugi
 
 ## Core logic
 When a post type has been elected as a *News Article* format, then:
-* Change the the `@type` attribute of the `Article` to a `NewsArticle`.
+* Change the `@type` attribute of the `Article` to an array of `Article` and `NewsArticle`.
 * Add a `copyrightYear` property, with the year of publication.
 * Add a `copyrightHolder` property, which references the publishing `Organization` by ID.
 
@@ -17,7 +17,7 @@ When a post type has been elected as a *News Article* format, then:
 
 ### On 'news pages' which don't have an `Article`
 In some rare cases, a non-post format (e.g., a page, a custom post type, a homepage, a product page, etc) may be elected as a news type. Typically, these page formats won't contain an `Article`.
-In these cases, an `Article` (and dependent pieces) should be added to the graph and upgraded to a `NewsArticle`, as if the page were a conventional *news post*.
+In these cases, an `Article` (and dependent pieces) should be added to the graph and multi-typed into a `Article` and `NewsArticle`, as if the page were a conventional *news post*.
 In the case that this results in multiple entities declaring a `mainEntityOfPage` relationship with the `WebPage` (e.g., when the page already contains a `Product`), then the `mainEntityOfPage` property on the conflicting node(s) (e.g., the `Product` ) should be altered to reference the ID of the `NewsArticle`.
 
 ## More information

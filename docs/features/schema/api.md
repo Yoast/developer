@@ -222,5 +222,5 @@ We also have some more specific filters for convenience:
 * `wpseo_schema_webpage_type` - changes the page type, so could be used to make the above example even simpler.
 * `disable_wpseo_json_ld_search` - disables the search potentialAction that we add on every page if you simply return true on it.
 * `wpseo_json_ld_search_url` - allows you to change the search URL for your site.
-* `wpseo_schema_article_post_type` - allows changing for which post types we output the Article graph piece.
+* `wpseo_schema_article_post_types` - allows changing for which post types we output the Article graph piece.
 * `wpseo_schema_person_user_id` - allows changing the ID of the user we use to represent your site, should your site represent a person.

@@ -53,7 +53,7 @@ Optional properties which should only be output when the required criteria is me
       "@context": "https://schema.org",
       "@graph": [
           {
-              "@type": "videoObject",
+              "@type": "VideoObject",
               "@id": "https://www.example.com/#/schema/video/abc123",
               "name": "Example video",
               "description": "Example video description",
@@ -74,7 +74,7 @@ Optional properties which should only be output when the required criteria is me
       "@graph": [
           {
               "@id": "https://www.example.com/#/schema/video/abc123",
-              "@type": "videoObject",
+              "@type": "VideoObject",
               "contentUrl": "https://www.example.com/videos/video123.mp4",
               "description": "Example video description",
               "duration": "PT1M54S",

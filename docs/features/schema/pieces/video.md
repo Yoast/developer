@@ -19,7 +19,7 @@ A valid `VideoObject` must have the following properties.
 * `name`: The title of the video.
 * `description`: A description of the video (falling back to the `caption`, then to 'No description').
 * `thumbnailUrl`: A reference-by-ID to an `imageObject`.
-* `uploadDate`: The date the video was published, in ISO 8601 format.
+* `uploadDate`: The date the video was published, in ISO 8601 format (e.g., `2020-01-20`).
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
@@ -35,7 +35,7 @@ The following should be added whenever available and valid:
 * `duration`: The duration of the video in ISO 8601 format.
 * `width`: The width of the video in pixels.
 * `height`: The height of the video in pixels.
-* `isFamilyFriendly`: Whether the video should be considered 'family friendly', default to 'yes', may be set to 'no'.
+* `isFamilyFriendly`: Whether the video should be considered 'family friendly', default to `true`, may be set to `false`.
 * `inLanguage`: The language code for the content of the video; e.g., `en-GB`.
 
 ## Conditional properties
@@ -81,12 +81,12 @@ Optional properties which should only be output when the required criteria is me
               "embedUrl": "https://www.example.com/videos/embed/video123/",
               "height": 640,
               "inLanguage": "en-US",
-              "isFamilyFriendly": "yes",
+              "isFamilyFriendly": true,
               "name": "Example video",
               "thumbnailUrl": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
-              "uploadDate": "2016-03-31T08:00:00+08:00",
+              "uploadDate": "2016-03-31",
               "width": 480
           }
       ]

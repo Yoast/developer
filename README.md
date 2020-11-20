@@ -48,19 +48,16 @@ Deployment is fully automatic and thus requires no configuration or user interac
 ## Contributing to Yoast Developer portal
 Howdy! It's really great that you want to contribute to the Yoast developer portal. The development of the portal takes place on GitHub.
 
-There are three main ways to contribute:
+There are two main ways to contribute:
 1. [Contributing to issues](#contributing-to-issues)
-2. [Reviewing pull requests](#reviewing-pull-requests)
-3. [Contributing to code](#contributing-to-code)
+2. [Contributing to code](#contributing-to-code)
 
 ### Contributing to issues
-We use Jira to track changes and improvements to the portal that need to be discussed and completed. The portal related tickets are [in this board](#).
+We use GitHub to track public changes and improvements to the portal that need to be discussed and completed. 
 
-Before creating a ticket, please check if the issue you want to raise have not already received a ticket.
+Before creating an issue, please make sure what you want to raise have not already been mentionned in another one.
 
-Please be as descriptive and succinct as possible in your ticket, and if necessary, to help better understand the issue, add screenshots or video captures.
-
-### Reviewing pull requests
+Please be as descriptive and succinct as possible in your issue, and if necessary, to help better understand the issue, add screenshots or video captures.
 
 ### Contributing to code
 

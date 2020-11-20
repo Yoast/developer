@@ -1,6 +1,6 @@
 # Yoast Developer portal
 
-This portal is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+This portal ([developer.yoast.com](https://developer.yoast.com/)) is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
 ## Installation
 
@@ -11,6 +11,14 @@ $ yarn
 ```
 
 **Please note:** If you decide to clone both repositories into different directories and locations, ensure you edit the `docusaurus.config.js` file and change the `path` property that can be found under the `presets` -> `docs` property so that it points to the correct docs directory. 
+
+
+Next, you must duplicate the `.env.example` file, and rename it to `.env`. The file contains the `DOCSEARCH_KEY` variable which is the key to the Algolia API that powers the search on the portal.
+
+You must therefore have an Algolia account to obtain this key. After having created or you are connected to your Algolia account, go to the "API Keys" menu of your application and copy the value of "Application ID". Paste this value instead of `YOUR_KEY_HERE` in the `.env` file.
+
+That's it, you are ready to use the portal on your local machine.
+
 
 After this, you have the following options:
 
@@ -35,3 +43,27 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 Deployment is fully automatic and thus requires no configuration or user interaction.
+
+
+## Contributing to Yoast Developer portal
+Howdy! It's really great that you want to contribute to the Yoast developer portal. The development of the portal takes place on GitHub.
+
+There are three main ways to contribute:
+1. [Contributing to issues](#contributing-to-issues)
+2. [Reviewing pull requests](#reviewing-pull-requests)
+3. [Contributing to code](#contributing-to-code)
+
+### Contributing to issues
+We use Jira to track changes and improvements to the portal that need to be discussed and completed. The portal related tickets are [in this board](#).
+
+Before creating a ticket, please check if the issue you want to raise have not already received a ticket.
+
+Please be as descriptive and succinct as possible in your ticket, and if necessary, to help better understand the issue, add screenshots or video captures.
+
+### Reviewing pull requests
+
+### Contributing to code
+
+To submit code, please fork the repository and submit a pull request. In your pull request's description, please explain your update and reference the associated issue you're fixing.
+
+After you send your proposed changes, one of the portal maintainers will test and review the pull request. After it's reviewed and the changes are accepted by at least one of the maintainers, someone will merge the pull request.

@@ -6,14 +6,14 @@
  */
 
 .docPage {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   height: 100%;
 }
 
 .docSidebarContainer {
   border-right: 1px solid var(--ifm-contents-border-color);
   box-sizing: border-box;
-  width: 300px;
   position: sticky;
   position: -webkit-sticky;
   max-height: 100vh;

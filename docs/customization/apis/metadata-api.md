@@ -50,7 +50,6 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 | `Article_Published_Time_Presenter` | `<meta property="article:published_time" content="%s" />` | n/a |
 | `Article_Publisher_Presenter` | `<meta property="article:publisher" content="%s" />` | `wpseo_og_article_publisher` |
 | `Description_Presenter` | `<meta property="og:description" content="%s" />` | `wpseo_opengraph_desc` |
-| `FB_App_ID_Presenter` | `<meta property="fb:app_id" content="%s" />` | n/a |
 | `Locale_Presenter` | `<meta property="og:locale" content="%s" />` | `wpseo_og_locale` |
 | `Site_Name_Presenter` | `<meta property="og:site_name" content="%s" />` | `wpseo_opengraph_site_name` |
 | `Title_Presenter` | `<meta property="og:title" content="%s" />` | `wpseo_opengraph_title` |
@@ -63,6 +62,7 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 |---|-----|---|--|
 | `Googlebot_Presenter` | `<meta name="googlebot" content="%s" />` | `wpseo_googlebot` | Planned |
 | `Bingbot_Presenter` | `<meta name="bingbot" content="%s" />` | `wpseo_bingbot` | Planned |
+| `FB_App_ID_Presenter` | `<meta property="fb:app_id" content="%s" />` | Yoast SEO 15.5 (Dec 2020) |
 
 ## Editing existing meta tags
 Sometimes you might run into a situation where you want to edit the output of one of the meta tags which are output by Yoast SEO.

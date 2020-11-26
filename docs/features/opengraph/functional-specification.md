@@ -54,3 +54,4 @@ The following tags used to be output by Yoast SEO, but have been removed in rece
 | `og:image:secure_url` | Defines a (separate) URL for the featured image, available over HTTPS. Unnecessarily duplicates the `og:image` tag when a site is on HTTPS, and, unnecessary/omitted when the site is not. | Yoast SEO v14.0 (Apr 2020) |
 | `og:video:secure_url` | Legacy Facebook / Open Graph tag. As per `og:image:secure_url`, but for the featured video (in our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/)). | Yoast SEO v14.0 (Apr 2020) |
 | `og:image:type` | Defines the image format. Poor value/performance trade-off; especially as we ping Facebook on post publish, at which point they determine and cache this information themselves. | Yoast SEO v14.0 (Apr 2020) |
+| `fb:app_id` | The Facebook App ID. | Yoast SEO v15.5 (Dec 2020) |

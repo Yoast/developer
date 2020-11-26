@@ -62,7 +62,6 @@ The `current_page` surface exposes every bit of data we have on the current page
 | open_graph_article_published_time | string | The article:published_time value. |
 | open_graph_article_modified_time | string | The article:modified_time value. |
 | open_graph_locale | string | The og:locale for the current page. |
-| open_graph_fb_app_id | string | The Facebook App ID. |
 | schema | array | The entire Schema array for the current page. |
 | twitter_card | string | The Twitter card type for the current page. |
 | twitter_title | string | The Twitter card title for the current page. |
@@ -74,6 +73,11 @@ The `current_page` surface exposes every bit of data we have on the current page
 | breadcrumbs | array | The breadcrumbs array for the current page. |
 
 Whether you need the *OpenGraph description* or the *robots array*, this has you covered. Get used to opening your favorite IDE, typing `YoastSEO()->meta->for_current_page()->` and see the type hints for the exact bit of data you need.
+
+## Deprecated properties
+| Variable | Type | Description | Deprecated |
+| --- | --- | --- |
+| open_graph_fb_app_id | string | The Facebook App ID. | Yoast SEO 15.5 (Dec 2020) |
 
 ## For other pages
 Getting data for any page works in almost exactly the same way as getting data for the current page. You just need to provide an ID, or a URL.

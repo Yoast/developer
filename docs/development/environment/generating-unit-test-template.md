@@ -11,7 +11,7 @@ You can create a unit test template by calling the following Composer script in 
 ```shell
 composer generate-unit-test 'Fully\Qualified\Class\Name'
 ```
-This command takes one required argument: the fully qualified class name of the class you want to generate the unit test template for.
+This command takes one required argument: the fully qualified class name of the class you want to generate the unit test template for. Please note that this fully qualified class name should be between quotation marks, to make sure that the command line correctly handles the backslashes.
 
 ## Results of calling the generator
 Calling the generator will result in a new unit test file in the `tests/unit` directory. The file contains a basic unit test. Its setup method creates an instance of the class that is tested and its mocked dependencies. It also sets both on the unit test class, to make them easily available for the to-be-implemented test cases.

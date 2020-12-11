@@ -62,5 +62,25 @@ When you want to stop the containers, you simply can do:
 
 `npm run env:stop`
 
+## Accessing the admin 
+
+Before running the tests, you will need to access the admin of this testing environment, to activate Yoast SEO to ensure all the necessary database tables are created.
+
+By default, the credentials to access the WordPress admin, are:
+
+* Host - `http://localhost:8889/wp-admin`
+* Username - `admin`
+* Password - `password`
+
+## Accessing the database
+
+In case you need to access the database to check something (i.e. whether or not all database tables have been created), you can use the following credentials in your database tool of choice:
+
+* Host - `10.254.254.254`
+* Username - `root`
+* Password - `password`
+* Database - `wordpress_develop`
+* Port - `3306`
+
 ## Troubleshooting
 If you get errors about the database connection, make sure other no MySQL processes are running in the background by running `brew services stop mysql` in your terminal.

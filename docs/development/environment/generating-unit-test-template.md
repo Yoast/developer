@@ -1,6 +1,6 @@
 ---
 id: generating-unit-test-template
-title: Development - Generating a unit test template for WordPress SEO
+title: Development - Generating a unit test template for Yoast SEO
 sidebar_label: Generating a unit test template
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/generating-unit-test-template.md
 ---

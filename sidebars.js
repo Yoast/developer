@@ -209,6 +209,7 @@ module.exports = {
 						'development/environment/setup-plugin-integration-tests',
 						'development/environment/running-unit-tests-code-style-checks-and-linters',
 						'development/environment/tools',
+						'development/environment/generating-unit-test-template'
 					]
 				},
 

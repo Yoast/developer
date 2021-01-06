@@ -6,8 +6,7 @@
  */
 
 module.exports = {
-	mainSidebar: [
-		{
+	mainSidebar: [{
 			type: 'link',
 			label: 'Developer blog',
 			href: 'https://developer.yoast.com/blog'
@@ -15,8 +14,7 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Yoast SEO features',
-			items: [
-				{
+			items: [{
 					type: 'category',
 					label: 'XML sitemaps',
 					items: [
@@ -115,6 +113,7 @@ module.exports = {
 				},
 
 				'features/link-attributes/functional-specification',
+				'features/alt-attributes/functional-specification',
 				'features/rss-feeds/functional-specification',
 				'features/http-headers/functional-specification',
 
@@ -132,8 +131,7 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Customization',
-			items: [
-				{
+			items: [{
 					type: 'category',
 					label: 'APIs',
 					items: [
@@ -227,8 +225,7 @@ module.exports = {
 
 		},
 	],
-	schemaPluginsSidebar: [
-		{
+	schemaPluginsSidebar: [{
 			type: 'link',
 			label: '‹ Schema.org plugin output',
 			href: '/features/schema/overview'
@@ -246,8 +243,7 @@ module.exports = {
 			]
 		},
 	],
-	schemaPiecesSidebar: [
-		{
+	schemaPiecesSidebar: [{
 			type: 'link',
 			label: '‹ Schema.org pieces',
 			href: '/features/schema/overview'

@@ -23,6 +23,12 @@ This code immediately outputs the page's meta description:
 echo YoastSEO()->meta->for_current_page()->description;
 ```
 
+This code outputs the estimated reading time for the current page.
+
+```php
+echo (string) YoastSEO()->meta->for_current_page()->estimated_reading_time_minutes, " minutes";
+```
+
 The `current_page` surface exposes every bit of data we have on the current page, which all work in the same way; it's a long list:
 
 

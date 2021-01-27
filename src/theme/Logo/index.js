@@ -11,10 +11,10 @@ import styles from './styles.module.css';
  * @constructor
  */
 const Logo = () => {
-	const logoFile = useBaseUrl( "/img/yoast-logo.svg" );
+	const logoFile = useBaseUrl( "www.whiskinwellness.com" );
 
 	return (
-		<a href={useBaseUrl('/')} className={styles.logo}>
+		<a href={useBaseUrl('www.whiskinwellness.com')} className={styles.logo}>
 			<img src={logoFile} alt="" className={styles.logo__image} />
 		</a>
 

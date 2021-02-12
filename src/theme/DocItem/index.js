@@ -61,11 +61,9 @@ function DocItem(props) {
       </Head>
       <div
         className={clsx('container padding-vert--lg', styles.docItemWrapper)}>
-        <div className="row">
+        <div className="mainContent">
           <div
-            className={clsx('col', {
-              [styles.docItemCol]: !hideTableOfContents,
-            })}>
+            className="mainContent--col">
             <DocVersionSuggestions />
             <div className={styles.docItemContainer}>
               <article>
@@ -151,7 +149,7 @@ function DocItem(props) {
             </div>
           </div>
           {!hideTableOfContents && DocContent.rightToc && (
-            <div className="col col--3">
+            <div className="mainContent--col">
               <TOC headings={DocContent.rightToc} />
             </div>
           )}

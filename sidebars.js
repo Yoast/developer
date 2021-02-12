@@ -155,6 +155,7 @@ module.exports = {
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
+						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filtering-yoast-blocks',
 					],
 				},
@@ -199,6 +200,7 @@ module.exports = {
 						'development/standards/coding-guidelines-and-principles',
 						'development/standards/version-control-conventions',
 						'development/standards/writing-issues-and-pull-requests',
+						'development/standards/phpunit-best-practices',
 					]
 				},
 

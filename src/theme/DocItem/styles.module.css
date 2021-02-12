@@ -15,12 +15,6 @@
   padding: 0 0.5rem;
 }
 
-@media only screen and (min-width: 997px) {
-  .docItemCol {
-    max-width: 75% !important;
-  }
-}
-
 @media (min-width: 997px) and (max-width: 1320px) {
   .docItemWrapper {
     max-width: calc(

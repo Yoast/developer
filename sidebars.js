@@ -199,6 +199,7 @@ module.exports = {
 					items: [
 						'development/standards/coding-guidelines-and-principles',
 						'development/standards/version-control-conventions',
+						'development/standards/writing-issues-and-pull-requests',
 						'development/standards/phpunit-best-practices',
 					]
 				},

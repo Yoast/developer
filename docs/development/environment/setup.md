@@ -8,7 +8,7 @@ import Alert from '@site/src/components/Alert';
 
 This page describes the process of how we set up development environments at Yoast.
 
-**Note: These instructions assume you're working with OSX.**
+**Note: These instructions assume you're working with OSX and PHP 7.4+.**
 
 ## Getting started
 Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](tools.md) which lists the various tools that need to be used (unless otherwise noted).
@@ -30,7 +30,7 @@ The setup in PhpStorm can be completed by following the next steps:
 
 *   Under the Run menu in PhpStorm, go to `Edit configurations`.
 *   In the following window, press the `+` in the left corner and choose PHPUnit in the options.
-*   Select the option: `Defined in the configuration page` and check the checkbox for `Use alternative configuration file`.
+*   Select the option: `Defined in the configuration file` and check the checkbox for `Use alternative configuration file`.
 *   Behind the checkbox, enter the full path to the `phpunit.xml.dist` file. This file is located in the plugin directory. If the repository contains a `phpunit.xml` file, use that one instead. (i.e wordpress-seo has two types of tests. Use `phpunit-integration.xml.dist` for the 'old' integration tests, and `phpunit.xml.dist` for the BrainMonkey tests.)
 *   Now you've entered the path, press the icon on the far right. This will bring you to the `Test frameworks` window.
 *   Press the plus icon and select the first option: `PHPUnit Local`. Select `Path to phpunit.phar` and enter the path to the file. It's probably in your `/Cellar` directory. If you do not have a `phpunit.phar` file yet, you can download it here: [https://phar.phpunit.de/](https://phar.phpunit.de/)

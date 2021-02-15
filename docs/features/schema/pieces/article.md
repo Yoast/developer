@@ -131,7 +131,7 @@ The `Article` type may be transformed in the following scenarios:
               "datePublished": "2019-07-10T08:08:40+00:00",
               "dateModified": "2019-07-10T08:43:03+00:00",
               "commentCount": 6,
-              "articleSection": "Cats,Dogs,Recipes",
+              "articleSection": ["cats","dogs","cake"],
               "inLanguage": "en-US",
               "author": {
                   "@id": "https://www.example.com/#/schema/person/abc123"

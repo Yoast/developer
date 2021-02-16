@@ -18,7 +18,7 @@ So a conditional check is performed on the return value of the function, and dep
 
 Here is what it looks like in practice:
 
-```
+```php
 <?php
 switch ( wp_get_environment_type() ) {
     case 'local':

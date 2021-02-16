@@ -26,12 +26,10 @@ A better approach to filter out Blocks, is to use a JavaScript implementation. P
 
 wp_enqueue_script( 
 	'my-custom-blocks-filter', 
-	plugins_url( 'js/MyCustomBlocksFilter.js', 
-	__FILE__ ), 
+	plugins_url( 'js/MyCustomBlocksFilter.js', __FILE__ ), 
 	[], 
 	'1.0', 
-	true 
-);
+	true );
 ```
 
 Let's say that you want to only load the FAQ block out of the list of Yoast structured data blocks, and thus want to filter out the How-To block:

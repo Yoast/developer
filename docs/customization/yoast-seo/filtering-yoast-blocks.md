@@ -29,7 +29,8 @@ wp_enqueue_script(
 	plugins_url( 'js/MyCustomBlocksFilter.js', __FILE__ ), 
 	[], 
 	'1.0', 
-	true );
+	true 
+);
 ```
 
 Let's say that you want to only load the FAQ block out of the list of Yoast structured data blocks, and thus want to filter out the How-To block:

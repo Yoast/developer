@@ -174,6 +174,7 @@ module.exports = {
 						'customization/local-seo/changing-location-url-google-maps',
 						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
+						'customization/local-seo/changing-organization-url-in-schema',
 					],
 				}
 			]

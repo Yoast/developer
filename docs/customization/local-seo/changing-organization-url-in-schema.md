@@ -8,14 +8,13 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/custom
 As of version 13.9, you or your developer can change the default URL in the `Organization` piece of the [Schema](https://developer.yoast.com/features/schema/pieces/organization/) with the `yoast-local-seo-schema-organization-url` filter. This filter takes a single parameter: `$url` (required).
 This filter is particularly useful in cases where you have a URL for your organization which does not match the URL of the home page of your website.
 
-
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired URL.
 
 ```php
 /** 
  * Changes URL in the main Organization piece in the Schema. 
  *
- * @param string $url The URL we're replacing
+ * @param string $url The URL we're replacing.
  *
  * @return string The URL for the Organization piece in the Schema.
  */

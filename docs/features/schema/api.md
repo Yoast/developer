@@ -34,7 +34,54 @@ add_filter( 'wpseo_json_ld_output', '__return_false' );
 As [the documentation](plugins/yoast-seo.md) clearly shows we output a lot of graph pieces on some pages. You might want
 to remove some, or better yet, add your own. To do this you should use the `wpseo_schema_graph_pieces` filter.
 
+### Removing graph pieces
+
+In some cases you might want to prevent graph pieces from being outputted. The following example demonstrates how you could exclude the Breadcrumb piece from showing up.
+
+```php
+// functions.php
+add_filter( 'wpseo_schema_graph_pieces', 'remove_breadcrumbs_from_schema', 11, 2 );
+
+/**
+ * Removes the breadcrumb graph pieces from the schema collector.
+ *
+ * @param array  $pieces  The current graph pieces.
+ * @param string $context The current context.
+ *
+ * @return array The remaining graph pieces.
+ */
+function remove_breadcrumbs_from_schema( $pieces, $context ) {
+    return \array_filter( $pieces, function( $piece ) {
+        return ! $piece instanceof \Yoast\WP\SEO\Generators\Schema\Breadcrumb;
+    } );
+}
+```
+
+### Adding graph pieces
 Each of our graph pieces extend a `Abstract_Schema_Piece` class. We pass a `Meta_Tags_Context` object to each of these pieces, which contains a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php).
+
+Taking the above requirements into consideration, adding a new graph piece is rather straightforward:
+
+```php
+// functions.php
+add_filter( 'wpseo_schema_graph_pieces', 'add_custom_schema_piece', 11, 2 );
+
+/**
+ * Adds a custom graph piece to the schema collector.
+ *
+ * @param array  $pieces  The current graph pieces.
+ * @param string $context The current context.
+ *
+ * @return array The graph pieces.
+ */
+function add_custom_schema_piece( $pieces, $context ) {
+   $this->context = $context;
+
+   $pieces[] = new MyCustomSchemaPiece( $context );
+
+   return $pieces;
+}
+```
 
 ## Referencing other graph pieces
 You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the

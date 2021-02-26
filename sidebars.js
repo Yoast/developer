@@ -157,6 +157,7 @@ module.exports = {
 						'customization/yoast-seo/disabling-yoast-seo',
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filtering-yoast-blocks',
+						'customization/yoast-seo/wp-get-environment-type-in-yoast-seo',
 					],
 				},
 				{

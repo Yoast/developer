@@ -43,8 +43,6 @@ Another feature of WordPress, Application Passwords is tied to the value returne
 
 ## How does Yoast SEO use `wp_get_environment_type()`?
 
-First, note that [the original WordPress function](https://github.com/WordPress/wordpress-develop/blob/b44dd453ed4463a7f29e7c890d228e7ca40986ef/src/wp-includes/load.php#L191) has been [slightly adapted](https://github.com/Yoast/wordpress-seo/blob/34c2db2a871181770eec752c2283f56f8b715bbd/inc/wpseo-functions.php#L254) in Yoast SEO to meet the Yoast PHP code standards. The way the function works remains the same.
-
 ### On non-production environments
 
-On sites that are not live - if ( wp_get_environment_type() !== 'production' ) - , several things are not necessary. Thus, in these cases, the plugin [does not fetch Ryte data](https://github.com/Yoast/wordpress-seo/blob/16d4e6a484db396c4ff2fa09d082e980634fd3eb/admin/ryte/class-ryte.php#L124), [does not execute the Ryte Site Health check](https://github.com/Yoast/wordpress-seo/blob/a0263542d3dea46df650aaf48c0bc8af84b0af1e/inc/health-check-ryte.php#L76), [disables data tracking](https://github.com/Yoast/wordpress-seo/blob/dd3dcfb4f773d548c14bf6440fad97b53687249a/admin/tracking/class-tracking.php#L224) and [disables search engine pinging about the XML sitemap](https://github.com/Yoast/wordpress-seo/blob/16d4e6a484db396c4ff2fa09d082e980634fd3eb/inc/sitemaps/class-sitemaps-admin.php#L65).
+On sites that are not live - `if ( wp_get_environment_type() !== 'production' )` - , several things are not necessary. Thus, in these cases, the plugin does not fetch Ryte data, does not execute the Ryte Site Health check, disables data tracking and disables search engine pinging about the XML sitemap.

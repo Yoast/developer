@@ -49,7 +49,6 @@ If no suitable image is found, the node should fail (and adhere to the *Failure 
 The following should be added whenever available and valid:
 
 * `video`: An array of all videos in the article content, referenced by ID.
-* (when greater than 0).
 * `comment`: An array of references by ID to `comment` pieces.
 * `articleSection`: An array of the names of categories which the article belongs to (e.g., `["cats","dogs","cake"]`).
 * `inLanguage`: The language code for the article; e.g., `en-GB`.

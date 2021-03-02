@@ -94,7 +94,7 @@ The following should be added whenever available and valid:
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {
-                  "@type": "openingHoursSpecification",
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                       "Monday",
                       "Tuesday",

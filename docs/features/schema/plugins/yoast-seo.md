@@ -138,9 +138,8 @@ The above base script should be altered or extended in the following scenarios.
 * Add a [HowTo](../pieces/howto.md) piece, and connect thit to the `WebPage` - or instead to the `Article`, if one is present (via a `mainEntityOfPage` property).
 
 ### When a page contains an FAQ block
-* Construct an `itemList` which contains each [question](../pieces/question.md) piece.
 * Add an additional `@type` value of `FAQPage` to the `WebPage`.
-* Add a `mainEntityOfPage` property to the `WebPage` (or the `Article`, if one is present), referencing the ID of the `itemList` node.
+* Add a `mainEntity` property to the `WebPage`, referencing the IDs of each `question` node (in an array).
 
 ## More information
 * [Article Schema pieces](../pieces/article.md)

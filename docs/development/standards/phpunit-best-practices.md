@@ -24,7 +24,7 @@ When writing test methods, a good approach is to only have one assertion per tes
 
 Example:
 
-```
+```php
 /**
  * @covers ClassName::MethodName
  */
@@ -41,7 +41,7 @@ Sometimes you have multiple test methods for the same class method. This isn't n
 A dataprovider is a method, in your test object, where you can specify different values for multiple situations. 
 The provider always returns an array with a subarray containing the test values. These test values are passed as arguments to the test method.
 
-```
+```php
 /**
  * @dataProvider myDataProvider
  * @covers ClassName::MethodName

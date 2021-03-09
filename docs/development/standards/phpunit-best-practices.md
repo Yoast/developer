@@ -58,7 +58,7 @@ public function test_method_name( $expected, $valueToTest, $message ) {
  * [0]: Expected value
  * [1]: Value given to the method
  * [2]: Message given to the assertion. 
- *
+ */
 public function myDataProvider( ) {
    return [
        [ true, ‘MyMethod’, ‘Test 1: The string is MyMethod’ ],

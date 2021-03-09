@@ -45,6 +45,9 @@ The `head` contains the complete meta output for the page. This means the Yoast 
 
 For an example, see this output for [a post here on developer.yoast.com](https://developer.yoast.com/blog/wp-json/yoast/v1/get_head?url=https://developer.yoast.com/blog/upcoming-release-yoast-seo-14-0-indexables/).
 
+### Can I use this API to update data as well?
+The Yoast REST API doesn't currently supports `POST` or `PUT` calls to update the data. Patches adding this functionality are welcome though.
+
 ### The API returns 404 for an existing page?
 If the `status` is not `200` but you're certain the page exists, you'll need to make sure your site is completely indexed. Just hitting save on the backend *should* save the post or page to our Indexables database. Note that Yoast SEO *will* return a head for other statuses too, so you *can* use the output on, for instance, `404` templates.
 

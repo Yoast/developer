@@ -98,7 +98,7 @@ Now, any time you call the `duplicate_post_clone_post_link` in your theme, the o
 
 ### `duplicate_post_enabled_post_types`
 
-If (for some reason) you need to alter the list of post type for which the plugin is enabled, you can use this filter to do so.
+If (for some reason) you need to alter the list of post types for which the plugin is enabled, you can use this filter to do so.
 It is called after the value for the option has been read from the database, so it can be used to override the settings or to enable post types that are not displayed in the Options page.
 
 For example, in either your custom plugin or your theme's `functions.php`, add the following code to enable the plugin for the `product` post type:

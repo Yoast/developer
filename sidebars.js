@@ -156,6 +156,7 @@ module.exports = {
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
 						'customization/yoast-seo/filters/capability-roles-filter',
+						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
 						'customization/yoast-seo/filtering-yoast-blocks',
 					],
 				},

@@ -146,3 +146,9 @@ After this has been installed, you can run various commands in your project's di
 As our repositories use a lot of similar tasks, we ended up [creating a repository](https://github.com/Yoast/plugin-grunt-tasks) to bring these similar tasks together.
 
 Please make sure you also check out the Grunt directory and especially the `aliases.yml` file to see what commands are available.
+
+### Debug Bar
+
+To assist in debugging WordPress (plugins), you can make use of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin.
+
+What this plugin can do for you, is log what queries have run, what environmental parameters are defined and can help you find other obscured (but useful) data.

@@ -6,11 +6,8 @@
  */
 import React, {useState, useCallback, useEffect, useRef} from 'react';
 import clsx from 'clsx';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useUserPreferencesContext from '@theme/hooks/useUserPreferencesContext';
 import useLockBodyScroll from '@theme/hooks/useLockBodyScroll';
 import useWindowSize, {windowSizes} from '@theme/hooks/useWindowSize';
-import useLogo from '@theme/hooks/useLogo';
 import useScrollPosition from '@theme/hooks/useScrollPosition';
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';

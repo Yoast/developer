@@ -180,13 +180,13 @@ module.exports = {
 				},
 				{
 					type: 'category',
-					label: 'My-Yoast',
+					label: 'MyYoast',
 					items: [
 						{
 							type: 'category',
 							label: 'API\'s',
 							items: [
-								'customization/my-yoast/apis/subscription-api',
+								'customization/myYoast/apis/subscription-api',
 							],
 						}
 					],

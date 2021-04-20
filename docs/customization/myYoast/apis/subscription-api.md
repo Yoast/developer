@@ -5,14 +5,18 @@ sidebar_label: Subscription API
 description: For yoast partners to create and manage subscriptions.
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/MyYoast/apis/subscription-api.md
 ---
+import Alert from '@site/src/components/Alert';
 
-The subscription API can be used by Yoast partners to create subscriptions in MyYoast. Subscriptions facilitate passing license checks of yoast plugins.
+The subscription API can be used by Yoast partners to create subscriptions in MyYoast. Subscriptions facilitate passing license checks of Yoast plugins.
+<Alert>
 
+If you wish to become a Yoast partner, please contact [Joost](https://yoast.com/about-us/team/joost-de-valk/) or [Thijs](https://yoast.com/about-us/team/thijs-de-valk/).
+</Alert>
 We have a Swagger document you can use to [explore the API](https://my.yoast.com/provisioning-api/#/). We can provide the credentials to view it.
 
 ## Provisioner
 
-A provisioner is a yoast partner allowed to create subscriptions in MyYoast.
+A provisioner is a Yoast partner allowed to create subscriptions in MyYoast.
 
 We create an account for each provisioner, and with the credentials for that account, the provisioners can call the API endpoints.
 
@@ -79,7 +83,7 @@ If the customer should lose access immediately. you can set `immediately` to `tr
 
 If a subscription's end date has passed, that subscription is due for expiration.
 
-If the subscription's status is `active`, the subscription's status will be set to `expired`, and the subscription is no longer considered a valid license. We have a CRON job in my-yoast responsible for this. This is done automatically every 30 minutes..
+If the subscription's status is `active`, the subscription's status will be set to `expired`, and the subscription is no longer considered a valid license. We have a CRON job in my-yoast responsible for this. This is done automatically every 30 minutes.
 
 The same applies for subscriptions that are `pending-cancel`, and whose end date has passed. These subscriptions will be set to `cancelled`.
 

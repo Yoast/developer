@@ -1,6 +1,6 @@
 ---
 id: subscription-api
-title: My-Yoast - Subscription API
+title: MyYoast - Subscription API
 sidebar_label: Subscription API
 description: For yoast partners to create and manage subscriptions.
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/MyYoast/apis/subscription-api.md

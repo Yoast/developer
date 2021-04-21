@@ -184,9 +184,9 @@ module.exports = {
 					items: [
 						{
 							type: 'category',
-							label: 'API\'s',
+							label: 'APIs',
 							items: [
-								'customization/myYoast/apis/subscription-api',
+								'customization/myyoast/apis/subscription-api',
 							],
 						}
 					],

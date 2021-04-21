@@ -12,6 +12,7 @@ The subscription API can be used by Yoast partners to create subscriptions in My
 
 If you wish to become a Yoast partner, please contact [Joost](https://yoast.com/about-us/team/joost-de-valk/) or [Thijs](https://yoast.com/about-us/team/thijs-de-valk/).
 </Alert>
+
 We have a Swagger document you can use to [explore the API](https://my.yoast.com/provisioning-api/#/). We can provide the credentials to view it.
 
 ## Provisioner

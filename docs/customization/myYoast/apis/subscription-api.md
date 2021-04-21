@@ -94,7 +94,7 @@ The Yoast plugin on the site of the customer sends a request on visiting the plu
 
 A site has a valid license for a product when the site has any connected `active` or `pending-cancel` subscription in MyYoast, that grants access to that product.
 
-The response of the license check will always include a download url for the latest version of the plugins the user has access to.
+The response of the license check will always include a download URL for the latest version of the plugins the user has access to.
 
 ### Connecting a site to subscriptions.
 
@@ -104,7 +104,7 @@ You can connect a site to a subscription on creation of that subscription, or us
 
 After a customer gets a subscription, that customer will get access to the connected product.
 
-Any plugins the customer should get access to can be downloaded. The download URLS for a subscription are always present in any response to the subscription API.
+Any plugins the customer should get access to can be downloaded. The download URLs for a subscription are always present in any response to the subscription API.
 
 If the subscription should give the user access to courses (such as a subscription for the Yoast SEO Premium plugin), these courses can be accessed via MyYoast on the [courses page](https://my.yoast.com/courses).
 We will also send an email to the customer when the customer gets access to any of our courses. If a customer gains access to multiple courses at once, a single email is sent containing a notice of all the courses that are accessible.

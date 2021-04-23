@@ -2,7 +2,7 @@
 id: subscription-api
 title: MyYoast - Subscription API
 sidebar_label: Subscription API
-description: For yoast partners to create and manage subscriptions.
+description: For Yoast partners to create and manage subscriptions.
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/myyoast/apis/subscription-api.md
 ---
 import Alert from '@site/src/components/Alert';
@@ -31,7 +31,7 @@ To assist provisioners we have used [swagger-codegen](https://swagger.io/docs/op
     - [With additional documentation](https://github.com/Yoast/subscription-api-php-client/blob/master/docs/Api/SubscriptionProvisioningApi.md)
 - [javascript client](https://github.com/Yoast/subscription-api-javascript-client)
 
-The readme of these clients should explain how to install and use them.
+The readme of these clients explains how to install and use them.
 
 ## Subscription
 
@@ -84,7 +84,7 @@ If the customer should lose access immediately. you can set `immediately` to `tr
 
 If a subscription's end date has passed, that subscription is due for expiration.
 
-If the subscription's status is `active`, the subscription's status will be set to `expired`, and the subscription is no longer considered a valid license. We have a CRON job in my-yoast responsible for this. This is done automatically every 30 minutes.
+If the subscription's status is `active`, the subscription's status will be set to `expired`, and the subscription is no longer considered a valid license. This is done automatically every 30 minutes.
 
 The same applies for subscriptions that are `pending-cancel`, and whose end date has passed. These subscriptions will be set to `cancelled`.
 

@@ -177,6 +177,19 @@ module.exports = {
 						'customization/local-seo/enhancing-search-results',
 						'customization/local-seo/changing-organization-url-in-schema',
 					],
+				},
+				{
+					type: 'category',
+					label: 'MyYoast',
+					items: [
+						{
+							type: 'category',
+							label: 'APIs',
+							items: [
+								'customization/myyoast/apis/subscription-api',
+							],
+						}
+					],
 				}
 			]
 		},

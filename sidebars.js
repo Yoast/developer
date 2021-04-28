@@ -157,6 +157,7 @@ module.exports = {
 						'customization/yoast-seo/disabling-yoast-seo',
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/cornerstone-post-types-filter',
+						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
 						'customization/yoast-seo/filtering-yoast-blocks',
 						'customization/yoast-seo/wp-get-environment-type-in-yoast-seo',
 					],
@@ -176,6 +177,20 @@ module.exports = {
 						'customization/local-seo/changing-location-url-google-maps',
 						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
+						'customization/local-seo/changing-organization-url-in-schema',
+					],
+				},
+				{
+					type: 'category',
+					label: 'MyYoast',
+					items: [
+						{
+							type: 'category',
+							label: 'APIs',
+							items: [
+								'customization/myyoast/apis/subscription-api',
+							],
+						}
 					],
 				}
 			]

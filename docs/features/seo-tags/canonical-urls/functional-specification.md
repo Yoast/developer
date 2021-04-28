@@ -50,7 +50,7 @@ Some pages may include parent directories in the URL. If the inclusion of those 
 **NOTE**: The Yoast SEO plugin contains functionality to remove the `category/` 'base' component of the path in WordPress. If this is enabled, the `category/` component should also be removed from the `%%path%%`.
 
 #### Ancestor type preference
-It's assumed that in each of these cases that the user has indicated a preference for which ancestors should be used to construct the URL. E.g., in WordPress, a user may define a 'permalink structure', and decide that all posts should be preceded by their *tag*(s) (as opposed to their *categories*), or, by the word 'widgets'.
+It's assumed in each of these cases that the user has indicated a preference for which ancestors should be used to construct the URL. E.g., in WordPress, a user may define a 'permalink structure', and decide that all posts should be preceded by their *tag*(s) (as opposed to their *categories*), or, by the word 'widgets'.
 
 If such a preference is set, then the canonical `%%path%%` should always reflect this.
 

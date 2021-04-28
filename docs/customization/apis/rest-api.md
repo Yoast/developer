@@ -18,7 +18,7 @@ When you're retrieving a post like so:
 For post type archives, when you query the [types endpoint](https://developer.wordpress.org/rest-api/reference/post-types/) the meta is included there, also on the `yoast_head` field. If it is not there, the post type does not have a post type archive enabled.
 
 ## Yoast SEO REST API syntax
-The syntax is very simple, you just `GET` to `/wp-json/yoast/v1/get_head?url=`` with the proper URL, for example:
+The syntax is very simple, you just `GET` to `/wp-json/yoast/v1/get_head?url=` with the proper URL, for example:
 
 ```
 https://example.com/wp-json/yoast/v1/get_head?url=https://example.com/hello-world/

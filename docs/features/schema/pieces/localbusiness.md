@@ -6,6 +6,11 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import Alert from '@site/src/components/Alert';
+
+<Alert>
+This documentation is outdated, and should not be used. It will be updated in the near future.
+</Alert>
 
 Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 
@@ -94,7 +99,7 @@ The following should be added whenever available and valid:
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {
-                  "@type": "openingHoursSpecification",
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                       "Monday",
                       "Tuesday",

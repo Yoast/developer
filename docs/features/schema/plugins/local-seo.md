@@ -61,7 +61,7 @@ This example assumes that:
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {
-                  "@type": "openingHoursSpecification",
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                       "Monday",
                       "Tuesday",
@@ -352,7 +352,7 @@ This example assumes that:
               "faxNumber": "02345 67890",
               "name": "Example business name",
               "openingHoursSpecification": {
-                  "@type": "openingHoursSpecification",
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                       "Monday",
                       "Tuesday",
@@ -476,7 +476,7 @@ This example assumes that:
               "paymentAccepted": "Cash, cheque",
               "name": "Example business name",
               "openingHoursSpecification": {
-                  "@type": "openingHoursSpecification",
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                       "Monday",
                       "Tuesday",

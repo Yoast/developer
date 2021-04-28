@@ -96,6 +96,30 @@ add_filter( 'duplicate_post_clone_post_link', 'my_custom_clone_post_link' );
 
 Now, any time you call the `duplicate_post_clone_post_link` in your theme, the outputted link will _always_ be wrapped in our custom div tag.
 
+### `duplicate_post_enabled_post_types`
+
+If (for some reason) you need to alter the list of post types for which the plugin is enabled, you can use this filter to do so.
+It is called after the value for the option has been read from the database, so it can be used to override the settings or to enable post types that are not displayed in the Options page.
+
+For example, in either your custom plugin or your theme's `functions.php`, add the following code to enable the plugin for the `product` post type:
+
+```php
+/** 
+ * Enable the plugin for the WooCommerce "product" post type, which is unavailable by default.
+ *
+ * @param array $enabled_post_types The array of post type names for which the plugin is enabled.
+ *
+ * @return array The filtered array of post types names.
+ */
+function my_custom_enabled_post_types( $enabled_post_types ) {
+	$enabled_post_types[] = 'product';
+	return $enabled_post_types;
+}
+add_filter('duplicate_post_enabled_post_types', 'my_custom_enabled_post_types');
+```
+
+Now, any time you call the `duplicate_post_clone_post_link` in your theme, the outputted link will _always_ be wrapped in our custom div tag.
+
 ## Actions
 
 ### `duplicate_post_pre_copy`

@@ -18,7 +18,7 @@ When you're retrieving a post like so:
 For post type archives, when you query the [types endpoint](https://developer.wordpress.org/rest-api/reference/post-types/) the meta is included there, also on the `yoast_head` field. If it is not there, the post type does not have a post type archive enabled.
 
 ## Yoast SEO REST API syntax
-The syntax is very simple, you just `GET` to `/wp-json/yoast/v1/get_head?url=`` with the proper URL, for example:
+The syntax is very simple, you just `GET` to `/wp-json/yoast/v1/get_head?url=` with the proper URL, for example:
 
 ```
 https://example.com/wp-json/yoast/v1/get_head?url=https://example.com/hello-world/
@@ -44,6 +44,9 @@ The `head` contains the complete meta output for the page. This means the Yoast 
 * Twitter meta data
 
 For an example, see this output for [a post here on developer.yoast.com](https://developer.yoast.com/blog/wp-json/yoast/v1/get_head?url=https://developer.yoast.com/blog/upcoming-release-yoast-seo-14-0-indexables/).
+
+### Can I use this API to update data as well?
+The Yoast REST API doesn't currently supports `POST` or `PUT` calls to update the data. Patches adding this functionality are welcome though.
 
 ### The API returns 404 for an existing page?
 If the `status` is not `200` but you're certain the page exists, you'll need to make sure your site is completely indexed. Just hitting save on the backend *should* save the post or page to our Indexables database. Note that Yoast SEO *will* return a head for other statuses too, so you *can* use the output on, for instance, `404` templates.

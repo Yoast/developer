@@ -8,7 +8,7 @@ description: This page describes our functional and technical approach to constr
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.
 
 An individual XML sitemap should be constructed for each *content type*. Large sitemaps may be split into individual, paginated files.
-Each XML sitemaps should be listed within an *XML sitemap index*.
+Each XML sitemap should be listed within an *XML sitemap index*.
 
 ## Content types
 XML sitemaps should be created for each of the following content types, providing that the content type is *public* and it contains valid members.

@@ -19,16 +19,16 @@ Also note that the word 'page' is used throughout to indicate any 'non-system' r
 
 | Request type | Notes | Title structure | Example |
 | :--- | :--- | :--- | :--- |
-| Home page | Assumes that the homepage resides at the site root. Otherwise, see Single page. | `%%sitename%% %%page%% %%sep%% %%tagline%%` | Acne Inc - The best widgets in the world |
-| Single page | In WordPress, also considers a single post. E.g. an 'about us' page or a blog post. | `%%postname%% %%page%% %%sep%% %sitename%` | Top 10 widgets - Acne Inc |
-| Taxonomy index page | Any template which lists a selection of posts or pages based on a taxonomy or similar. E.g. a category page or tag page, or a page listing all posts by a particular author. | `%%term_title%% archives %%page%% %%sep%% %sitename%` | Blue widgets archive - Acne Inc |
-| Date index page | Any template which lists a selection of posts or pages filtered by date. E.g, all posts which were published in a certain year, or, all pages which were added on a certain day/date. | `%%date%% %%page%% %%sep%% %sitename%` | 2018 - Acne Inc |
-| Search pages | Any template which lists a selection of posts or pages filtered by a user query. E.g, all posts which are relevant for the word 'widget'. | `You searched for %%search_phrase%% %%page%% %%sep%% %sitename%` | You searched for red widgets - Acne Inc |
-| 404 pages | Any template is served when the user requests a URL which returns a 404 error. | `Page not found %%sep%% %sitename%` | Page not found - Acne Inc |
+| Home page | Assumes that the homepage resides at the site root. Otherwise, see Single page. | `%%sitename%% %%page%% %%sep%% %%tagline%%` | Acme Inc - The best widgets in the world |
+| Single page | In WordPress, also considers a single post. E.g. an 'about us' page or a blog post. | `%%postname%% %%page%% %%sep%% %sitename%` | Top 10 widgets - Acme Inc |
+| Taxonomy index page | Any template which lists a selection of posts or pages based on a taxonomy or similar. E.g. a category page or tag page, or a page listing all posts by a particular author. | `%%term_title%% archive %%page%% %%sep%% %sitename%` | Blue widgets archive - Acme Inc |
+| Date index page | Any template which lists a selection of posts or pages filtered by date. E.g, all posts which were published in a certain year, or, all pages which were added on a certain day/date. | `%%date%% %%page%% %%sep%% %sitename%` | 2018 - Acme Inc |
+| Search pages | Any template which lists a selection of posts or pages filtered by a user query. E.g, all posts which are relevant for the word 'widget'. | `You searched for %%search_phrase%% %%page%% %%sep%% %sitename%` | You searched for red widgets - Acme Inc |
+| 404 pages | Any template is served when the user requests a URL which returns a 404 error. | `Page not found %%sep%% %sitename%` | Page not found - Acme Inc |
 
 Most of these variables should be fairly self-descriptive, and shouldn't need extensive documentation. However, for the avoidance of doubt:
 
-- `%%sitename%%`: The name of the website. E.g., "Acne Inc".
+- `%%sitename%%`: The name of the website. E.g., "Acme Inc".
 - `%%sep%%`: A separator character. E.g., `-`, `|`, or similar.
 - `%%tagline%%`: A short description of the site, or similar. E.g., "The best widgets in the world".
 - `%%postname%%`: The name of a page/post. E.g., "Widget FAQs".

@@ -5,7 +5,7 @@ sidebar_label: Functions & template tags
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/duplicate-post/functions-template-tags.md
 ---
 
-This page contains a list of functions that can be used in template files to interact with Duplicate Posts.
+This page contains a list of functions that can be used in plugins and template files to interact with Duplicate Posts.
 
 ## `duplicate_post_clone_post_link`
 

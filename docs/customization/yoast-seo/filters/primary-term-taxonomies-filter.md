@@ -23,7 +23,7 @@ The example below shows how you can use the filter to add a taxonomy to the list
  *
  * @return mixed The taxonomies that can be used as primary terms.
  */
-function add_additional_primary_term_taxonomies( $taxonomies, $post_type , $all_taxonomies) {
+function add_additional_primary_term_taxonomies( $taxonomies, $post_type, $all_taxonomies ) {
 	if ( $post_type === 'my_custom_post_type' && isset( $all_taxonomies['my_custom_category'] ) ) {
 		$taxonomies['my_custom_category'] = $all_taxonomies['my_custom_category'];
 	}
@@ -49,7 +49,7 @@ The example below shows how you can use the filter to remove a particular taxono
  *
  * @return mixed The taxonomies that can be used as primary terms.
  */
-function remove_primary_term_taxonomies( $taxonomies, $post_type , $all_taxonomies) {
+function remove_primary_term_taxonomies( $taxonomies, $post_type, $all_taxonomies ) {
 	if ( isset( $taxonomies['my_custom_category'] ) ) {
 		unset( $taxonomies['my_custom_category'] );
 	}

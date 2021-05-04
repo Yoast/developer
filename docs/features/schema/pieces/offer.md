@@ -20,12 +20,12 @@ A valid `Offer` must have the following properties.
 * `price`: The price, omitting any currency symbols, and using '.' to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
 * `url`: The canonical URL of the page containing the `Offer`.
-* `priceSpecification`: A `PriceSpecification` object, including a `price`, `priceCurrency`, and `valueAddedTaxIncluded` property.
+* `priceSpecification`: A `PriceSpecification` object, including a `valueAddedTaxIncluded` property (of either `true` or `false`).
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have referenced the `Offer` should remove those references (e.g., when a product references an  `Offer`  by ID).
+If the node is not output, any entities which would otherwise have referenced the `Offer` should remove those references (e.g., when a product references an  `Offer` by ID).
 
 ## Examples
 
@@ -42,8 +42,6 @@ If the node is not output, any entities which would otherwise have referenced th
               "priceValidUntil": "2020-12-31",
               "priceSpecification": {
                   "@type": "PriceSpecification",
-                  "price": "22.00",
-                  "priceCurrency": "GBP",
                   "valueAddedTaxIncluded": "false"
               },
               "priceCurrency": "GBP",

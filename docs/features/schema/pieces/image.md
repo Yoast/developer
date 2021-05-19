@@ -18,6 +18,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 A valid `ImageObject` must have the following properties.
 
 * `@id`: The site's home URL appended by `#/schema/image/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the image object).
+* `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
 * `contentUrl`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
 
 ## Failure scenarios
@@ -31,13 +32,10 @@ If the node is not output, any entities which would otherwise have declared a re
 The following should be added whenever available and valid:
 
 * `caption`: A text string describing the image.
- * Fall back to the image `alt` attribute if no specific `caption` field exists or is defined.
+  * Fall back to the image `alt` attribute if no specific `caption` field exists or is defined.
 
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.
-
-### When the image has a HTML 'id' property
-* `url`: The URL of the image in the context of the current page; e.g., the page's canonical URL appended by the HTML `ID` property of the image (such as https://www.example.com/example-page/#image-123).
 
 ### When both height and width dimensions are known
 * `height`: The height of the image in pixels
@@ -45,6 +43,12 @@ Optional properties which should only be output when the required criteria is me
 
 ### When the image has a caption (or any other text properties)
 * `inLanguage`: The language code for the textual content; e.g., `en-GB`.
+
+## Notes
+### The `contentUrl` and `url` properties are intentionally duplicated.
+The `contentUrl` property more accurately describes/references the actual image resource than the `url` property (which doesn't disambiguate between the URL where the image resource 'resides', vs the location of the asset itself). Given that, we'd prefer to ***not set/use*** the `url` property - or, to reserve it for use in scenarios where it refers to the location of an image (e.g., an anchor/fragment link to part of a webpage).
+
+However, Google’s testing tools throw errors in some scenarios when the `url` property is missing (for `logo` and `primaryImageOfPage` in the SDTT, and `primaryImageOfPage` in the RRT). Therefore, we simply add a `contentUrl` property, with a value of the image URL.
 
 ## Examples
 
@@ -57,6 +61,7 @@ Optional properties which should only be output when the required criteria is me
           {
               "@type": "ImageObject",
               "@id": "https://www.example.com/uploads/example-image.jpg",
+              "url": "https://www.example.com/uploads/example-image.jpg"
               "contentUrl": "https://www.example.com/uploads/example-image.jpg"
           }
       ]

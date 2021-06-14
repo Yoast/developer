@@ -9,7 +9,7 @@ import YoastSchemaExample from '../../../../../developer-site/src/components/Yoa
 import Alert from '@site/src/components/Alert';
 
 <Alert>
-This documentation is subject to change. See "_Notes on previous and future approaches_".
+This documentation is subject to change. See "Notes on previous and future approaches".
 </Alert>
 
 Describes the hierarchical position a `WebPage` within a `WebSite`.

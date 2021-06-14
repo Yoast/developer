@@ -6,35 +6,83 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: Describes the hierarchical position a 'WebPage' within a 'WebSite'.
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import Alert from '@site/src/components/Alert';
+
+<Alert>
+This documentation is subject to change. See "_Notes on previous and future approaches_".
+</Alert>
 
 Describes the hierarchical position a `WebPage` within a `WebSite`.
 
 ## Triggers
-Should be added as top-level node in the graph, as/when required by other nodes.
+Should be added as top-level node in the graph, on all public pages.
 
 ## Required properties
 A valid `BreadcrumbList` must have the following properties.
 
 * `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `itemListElement`: An array of `ListItem` objects, with the following properties:
-  * `position`: An integer (starting at `1`), counting the depth of the page from the homepage.
-  * `item`: A `WebPage` object *stub*, with the following properties:
-    * `@id`: The unmodified *canonical URL* of the page in question.
-    * `url`: The unmodified *canonical URL* of the page in question.
-    * `name`: The name of the page in question, as it appears in the breadcrumb navigation.
+* `itemListElement`: An array of `ListItem` objects, representing the position of the current page in the site hierarchy, each with the following properties:
+  * `position`: An integer (starting at `1`), counting the 'depth' of the page from (including) the homepage.
+  * `name`: The name of the page in question, as it appears in the breadcrumb navigation.
+  * `item`: The unmodified *canonical URL* of the page in question.
+
+**Also note that:**
+- _Paginated states_ should not be included/represented in the list.
+- The final/current 'crumb' should omit the `item` property.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
 If the node is not output, any entities which would otherwise have declared a relationship with the `breadcrumb` should remove those references.
 
-## Conditional properties
-* The `item` representing the current WebPage should omit all properties except for `@id`.
-
 ## Examples
 
 ### Minimum criteria
 
+<YoastSchemaExample>
+{`{
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.example.com/example-section/example-page/#/schema/breadcrumb/abc123",
+              "itemListElement": [
+                  {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.example.com/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Example Section",
+                      "item": "https://www.example.com/example-section/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Example Page"
+                  }
+              ]
+          }
+      ]
+}`}
+</YoastSchemaExample>
+
+## Notes on previous and future approaches
+Previous implementations have used more verbose markup to describe each 'item'; however, this has been temporarily simplified in order to work around various parsing problems exhibited by Google. We may reintroduce more detail here in the future.
+
+### Previous approach
+Each `item`, except for the final/current 'crumb', had the following properties:
+* `@id`: The unmodified *canonical URL* of the page in question.
+* `url`: The unmodified *canonical URL* of the page in question.
+* `name`: The name of the page in question, as it appears in the breadcrumb navigation.
+
+**Additionally:**
+* The `item` representing the current WebPage omitted all properties except for `@id`.
+
+**Previous schema markup:**
 <YoastSchemaExample>
 {`{
       "@context": "https://schema.org",
@@ -73,5 +121,5 @@ If the node is not output, any entities which would otherwise have declared a re
               ]
           }
       ]
-  }`}
+}`}
 </YoastSchemaExample>

@@ -16,7 +16,7 @@ Assuming that the respective admin settings are not disabled, these tags are out
 |---|----|
 | `og:locale` | The page's language. |
 | `og:type` | The type of page/resource. <br /> <br /> _website on the homepage._ <br /> _profile on user profile pages._ <br />_article on all pages/posts and other templates._  |
-| `og:title` | The title of the page. |
+| `og:title` | The title of the page. <br /> <br /> Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook title" value for the page.</li><li>An auto-generated "Social title" from the template in Search Appearance.</li><li>A user-defined "Seo title" for the page.</li><li>An auto-generated "SEO title" from the template in Search Appearance.</li><li>The social title default option (same as the SEO title): `%%title%% %%page%% %%sep%% %%sitename%%`. For Author & Date archives the default is just the page title.</li></ul> |
 | `og:url` | The canonical URL of the page. |
 | `og:site_name` | The name of the site. |
 
@@ -25,12 +25,12 @@ The following tags are only output when their conditions are met:
 
 | Tag | Description | Notes |
 |---|----|---|
-| `og:description` | The description of the page. | Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook description" value for the page.</li><li>A user-defined meta description (or template) for the page.</li><li>A user-defined excerpt for the page.</li><li>An auto-generated excerpt from the page's content.</li></ul> |
+| `og:description` | The description of the page. | Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook description" value for the page.</li><li>An auto-generated "Social description" from the template in Search Appearance.</li><li>A user-defined "Meta description" for the page.</li><li>An auto-generated "Meta description" from the template in Search Appearance.</li><li>A user-defined excerpt for the page (only for posts).</li><li>An auto-generated excerpt from the page's content (for terms: the term description).</li></ul> |
 | `article:publisher` | The Facebook page URL of the publishing organization. | Only populated when a value has been provided by the user. <br /> Only populated on `post` and `page` types. |
 | `article:author` | The URL of the profile page of the author. | Only populated when the user has a valid profile URL. <br /> Only populated on `post` types. |
 | `article:modified_time` | A timestamp of when the page was last modified. | Only populated on `post` and `page` types. |
 | `article:published_time` | A timestamp of when the page was published. | Only populated on the `post` type. Use the `wpseo_opengraph_show_publish_date` filter to add additional posttypes. |
-| `og:image` | The URL of the primary image of the page. | Only populated when the page contains a valid image, based on the following hierarchy: <ul><li>A user-defined image (for a specific platform).</li><li>A 'featured' image.</li><li>A prominent image from the page's content.</li><li>In the case of an author archive template, the user's Gravatar image.</li><li>The site's fallback/default social image.</li></ul> |
+| `og:image` | The URL of the primary image of the page. | Only populated when the page contains a valid image, based on the following hierarchy: <ul><li>A user-defined image "Facebook image" in the Social tab of the Yoast metabox.</li><li>A user-defined "Featured image" for the page (only for posts).</li><li>A prominent image from the page's content.</li><li>Yoast SEO WooCommerce only: Woo SEO adds one more image fallback: the first image in the Woo Product gallery.</li><li>The "Social default image" from the template in Search Apperance.</li><li>The site's fallback/default social image (set at SEO > Social > Facebook > Default iamge).</li></ul> In case of an author archive, the image is based on the following hierarchy: <ul><li>The "Social default image" from the template in Search Apperance.</li><li>The user's Gravatar image.</li><li>The site's fallback/default social image (set at SEO > Social > Facebook > Default iamge).</li></ul> |
 | `og:image:width` | The width in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 | `og:image:height` | The height in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 

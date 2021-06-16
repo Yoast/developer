@@ -155,7 +155,7 @@ module.exports = {
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
-						'customization/yoast-seo/filters/add-opengraph-additional-images-filter',
+						'customization/yoast-seo/filters/wpseo-add-opengraph-additional-images',
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/cornerstone-post-types-filter',
 						'customization/yoast-seo/filters/markdown-enabled-filter',

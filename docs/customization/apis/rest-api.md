@@ -34,6 +34,8 @@ In both of the above approaches, we return our SEO data in two formats.
 
 2. The `yoast_head_json`/`json` properties provide the *raw data*, as a series of key/value pairs (and more complex objects) for each tag.
 
+The `status` property returns a HTTP status code (typically `200` or `404`).
+
 We recommend using the prefabricated approach whenever possible, as it takes advantage of our internal logic to guarantee an optimal combination of tags and values.
 
 When using the *raw* data, we recommend using the *prefabricated* data as a reference to ensure that your implementation is correct.
@@ -56,7 +58,7 @@ In some cases, you may find that the API returns a `404` status for an existing 
 This typically occurs when data for the resource isn't available in our *indexables* system. This can usually be fixed by either:
 
 - Saving/updating the object in the WordPress admin interface, or;
-- Using the "Optimise SEO Data" functionality in the Yoast SEO *Tools* menu.
+- Using the "Optimize SEO Data" functionality in the Yoast SEO *Tools* menu.
 
 Note that Yoast SEO will also return full responses for non-200 scenarios (including legitimate `404` errors), so that you can 'optimize' these scenarios effectively.
 

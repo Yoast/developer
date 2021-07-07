@@ -168,6 +168,7 @@ module.exports = {
 					type: 'category',
 					label: 'Yoast SEO Premium',
 					items: [
+						'customization/yoast-seo-premium/api-filter-actions-deprecations',
 						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
 						'customization/yoast-seo-premium/hiding-version-number',
 					],

@@ -29,7 +29,7 @@ When Yoast SEO is active, we append *two* additional fields to these responses: 
 In some cases, it may be easier or more preferable to query a specific URL (rather than an object identifier). You can do that by making a `GET` request to `/wp-json/yoast/v1/get_head?url=`, for any URL. For example:
 
 ```
-https://yoast.com//wp-json/yoast/v1/get_head?url=https://yoast.com/wordpress-seo/
+https://yoast.com/wp-json/yoast/v1/get_head?url=https://yoast.com/wordpress-seo/
 ```
 
 This queries the URL `https://yoast.com/wordpress-seo/`, and will return the following JSON properties: `html`, `json` and `status`.

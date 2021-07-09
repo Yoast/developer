@@ -21,7 +21,7 @@ Many headless WordPress implementations take advantage of WordPress' native WP R
 
 Typically, this involves making a request to a URL like `https://yoast.com/wp-json/wp/v2/posts/607` (a specific post by `ID`), `https://yoast.com/wp-json/wp/v2/posts?slug=wordpress-seo` (a specific post by `slug`) or `https://yoast.com/wp-json/wp/v2/types/yoast_events` (a specific custom post type archive)*.
 
-* Note that requests for *custom post archives* should use the post type *name*, which may be different to archive *slug* (e.g., `yoast_events` vs `/events/`).*
+*Note that requests for *custom post archives* should use the post type *name*, which may be different to the archive's *slug* (e.g., `yoast_events` vs `/events/`).*
 
 When Yoast SEO is active, we append *two* additional fields to these responses: `yoast_head` and `yoast_head_json`.
 

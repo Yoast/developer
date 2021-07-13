@@ -8,7 +8,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/custom
 import Alert from '@site/src/components/Alert';
 
 <Alert>
-The 'raw' <code>json</code> data format described below is only available in Yoast SEO versions 16.7 and upwards. If you would like to test this functionality, you can download the latest release candidate from <a href="https://github.com/Yoast/wordpress-seo/releases">our GitHub repository</a>.
+The 'raw' <code>json</code> data format described below is only available in Yoast SEO versions 16.7 and upwards.
 </Alert>
 
 Yoast SEO includes a REST API which returns all of the SEO metadata (meta tags, schema.org data, and more) for any URL on a site. This makes it very easy for headless WordPress sites to use Yoast SEO to manage all of their SEO considerations.

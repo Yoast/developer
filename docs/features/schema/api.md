@@ -41,7 +41,7 @@ In some cases you might want to prevent graph pieces from being outputted. The f
 ```php
 // functions.php
 add_filter( 'wpseo_schema_graph_pieces', 'remove_breadcrumbs_from_schema', 11, 2 );
-add_filter( 'wpseo_schema_webpage', 'remove_breadcrumbs_reference_from_webpage', 11, 1 );
+add_filter( 'wpseo_schema_webpage', 'remove_breadcrumbs_property_from_webpage', 11, 1 );
 
 /**
  * Removes the breadcrumb graph pieces from the schema collector.
@@ -64,7 +64,7 @@ function remove_breadcrumbs_from_schema( $pieces, $context ) {
  *
  * @return array The modified WebPage properties.
  */
-function remove_breadcrumbs_from_webpage( $data ) {
+function remove_breadcrumbs_property_from_webpage( $data ) {
     if (array_key_exists('breadcrumb', $data)) {
         unset($data['breadcrumb']);
     }

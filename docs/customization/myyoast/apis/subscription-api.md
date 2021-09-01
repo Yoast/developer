@@ -10,7 +10,7 @@ import Alert from '@site/src/components/Alert';
 The subscription API can be used by Yoast partners to create subscriptions in MyYoast. Subscriptions facilitate passing license checks of Yoast plugins.
 <Alert>
 
-If you wish to become a Yoast partner, please contact [Joost](https://yoast.com/about-us/team/joost-de-valk/) or [Thijs](https://yoast.com/about-us/team/thijs-de-valk/).
+If you wish to become a Yoast partner, please contact [vip@yoast.com](mailto:vip@yoast.com).
 </Alert>
 
 We have a Swagger document you can use to [explore the API](https://my.yoast.com/provisioning-api/#/). We can provide the credentials to view it.

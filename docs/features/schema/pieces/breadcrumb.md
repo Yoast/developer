@@ -15,7 +15,7 @@ This documentation is subject to change. See "Notes on previous and future appro
 Describes the hierarchical position a `WebPage` within a `WebSite`.
 
 ## Triggers
-Should be added as top-level node in the graph, on all public pages.
+Should be added as top-level node in the graph, on all public pages, except for 4xx and 5xx range error pages/scenarios.
 
 ## Required properties
 A valid `BreadcrumbList` must have the following properties.

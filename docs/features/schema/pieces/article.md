@@ -11,7 +11,7 @@ Describes an `Article` on a `WebPage`.
 May be transformed into a more specific type (such as `NewsArticle`) if the required conditions are met.
 
 ## Triggers
-Should only be output on explicitly 'authored' pages. In the case of a standard WordPress setup, this is limited to native *Posts*.
+Should be output on all post types which support _authorship_ and have an author.
 
 ## Required properties
 A valid `Article` must have the following properties.
@@ -25,9 +25,6 @@ A valid `Article` must have the following properties.
 * `dateModified`: The time at which the article was last modified, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `author`: A reference-by-ID to the author of the article.
 * `publisher`: A reference-by-ID to the publisher of the article.
-* `image`: An image object (or array of all images in the article content), referenced by ID.
-   * Must be at least `696` pixels wide.
-   * Must be of the following formats+file extensions: `.jpg`, `.png`, or `.gif`.
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
@@ -37,17 +34,12 @@ If the node is not output, the parent `WebPage` node should be altered to refere
 * `author`
 * `commentCount`
 
-#### Missing images
-If the failure reason is due to the article missing an image, you may fall back to referencing one of the following by ID, providing they're valid candidates (in the following order of precedence):
-
-* The image used in the `primaryImageOfPage` property of the parent `WebPage`.
-* The first image in the `image` array attached to the parent `WebPage`.
-
-If no suitable image is found, the node should fail (and adhere to the *Failure scenarios*).
-
 ## Optional properties
 The following should be added whenever available and valid:
 
+* `image`: An image object (or array of all images in the article content), referenced by ID.
+   * Must be at least `696` pixels wide.
+   * Must be of the following formats+file extensions: `.jpg`, `.png`, `.gif` ,or `.webp`.
 * `video`: An array of all videos in the article content, referenced by ID.
 * `comment`: An array of references by ID to `comment` pieces.
 * `articleSection`: An array of the names of categories which the article belongs to (e.g., `["cats","dogs","cake"]`).

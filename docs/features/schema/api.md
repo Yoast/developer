@@ -298,7 +298,7 @@ function article_schema_for_books( $post_types ) {
 add_filter( 'wpseo_schema_article_post_types', 'article_schema_for_books' );
 ```
 
-Note that for a post type to be able to output Article Schema, the post type needs to support having an Author. You can add that simply by adding this, for a givne post type `book`:
+Note that for a post type to be able to output Article schema, the post type needs to support having an Author. You can add that simply by adding this, for a given post type `book`:
 
 ```php
 add_post_type_support( 'book', 'author' );

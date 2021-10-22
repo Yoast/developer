@@ -279,10 +279,36 @@ function yoast_add_social_profiles( $profiles ) {
 }
 ```
 
+### Output Article schema on custom post types
+By default Yoast SEO doesn't output Article schema on custom post types. The code below changes that:
+
+```php
+/**
+ * Add 'book' to the list of articles post types, so books get Article schema.
+ *
+ * @param  mixed $post_types The current list of post types.
+ *
+ * @return array Array of post types for which Yoast SEO renders Article schema.
+ */
+function article_schema_for_books( $post_types ) {
+	$post_types[] = 'book';
+	return $post_types;
+}
+
+add_filter( 'wpseo_schema_article_post_types', 'article_schema_for_books' );
+```
+
+Note that for a post type to be able to output Article Schema, the post type needs to support having an Author. You can add that simply by adding this, for a givne post type `book`:
+
+```php
+add_post_type_support( 'book', 'author' );
+```
+
+This currently does not work for the `page` post type. We are fixing this.
+
 ### Other filters
 We also have some more specific filters for convenience:
 * `wpseo_schema_webpage_type` - changes the page type, so could be used to make the above example even simpler.
 * `disable_wpseo_json_ld_search` - disables the search potentialAction that we add on every page if you simply return true on it.
 * `wpseo_json_ld_search_url` - allows you to change the search URL for your site.
-* `wpseo_schema_article_post_types` - allows changing for which post types we output the Article graph piece.
 * `wpseo_schema_person_user_id` - allows changing the ID of the user we use to represent your site, should your site represent a person.

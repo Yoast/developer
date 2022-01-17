@@ -266,6 +266,7 @@ module.exports = {
 				'features/schema/plugins/woocommerce-seo',
 				'features/schema/plugins/news-seo',
 				'features/schema/plugins/video-seo',
+				'features/schema/plugins/yoast-seo-shopify',
 			]
 		},
 	],

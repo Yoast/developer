@@ -10,6 +10,15 @@ import YoastSchemaExample from '../../../../../developer-site/src/components/Yoa
 
 This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO for Shopify plugin.
 
+The output is generally consistent with our [https://developer.yoast.com/features/schema/overview](general approach), but has some minor variations due to differences in platform mechanics.
+
+## Structured data and microdata removal
+
+Many Shopify websites and themes include schema 'fragments'; e.g., isolated pieces of inline microdata, disconnected JSON-LD nodes, and thin or duplicate entity descriptions.
+To prevent potential conflicts and errors, **we attempt to remove all existing structured data** (in JSON-LD, and in microdata formats) from theme template when our app is installed.
+
+Most apps which add structured data functionality (e.g., reviews, recipes, etc) shouldn't be affected, provided that they don't place their scripts directly in the theme code.
+
 ## Core logic
 
 Every page should (attempt to) output the following pieces:
@@ -18,7 +27,11 @@ Every page should (attempt to) output the following pieces:
 - Website
 - Webpage
 
-This produces a 'base script', which will typically looks something like the following (a composite of the above _pieces_):
+Note that this is dependent upon the following in the app's schema settings:
+- The Organization's name and logo being defined, and;
+- The respective pieces being enabled.
+
+When these criteria are met, we produce our [https://developer.yoast.com/features/schema/functional-specification](base script). In a Shopify store, this will typically looks something like the following (a composite of the above _pieces_):
 
 <YoastSchemaExample>
 {`{
@@ -38,17 +51,17 @@ This produces a 'base script', which will typically looks something like the fol
                 }
             ],
             "sameAs": [
-                "https:\/\/www.wikipedia.com\/example-organization",
-                "https:\/\/facebook.com\/example-organization",
-                "https:\/\/twitter.com\/example-organization",
-                "https:\/\/www.instagram.com\/example-organization"
+                "https://www.wikipedia.com/example-organization",
+                "https://facebook.com/example-organization",
+                "https://twitter.com/example-organization",
+                "https://www.instagram.com/example-organization"
             ]
         },
         {
             "@type": "ImageObject",
             "@id": "https://www.example.com/#/schema/ImageObject/1234",
-            "url": "https://www.example.com/content/images/1234",
-            "contentUrl": "https://www.example.com/content/images/1234",
+            "url": "https://www.example.com/content/images/image.jpg",
+            "contentUrl": "https://www.example.com/content/images/image.jpg",
             "width": 520,
             "height": 240
         },
@@ -102,10 +115,8 @@ This produces a 'base script', which will typically looks something like the fol
 
 ## On product pages
 
-- Change the `@type` of `WebPage` to `Product`
-- Alter the `Product` piece
-- Add the `mainEntityOfPage` piece to the product
-- Add the `offers` piece
+- Change the `@type` of `WebPage` to `ItemPage`
+- Add a `Product` piece (with an `offers` property)
 
 ### Example
 

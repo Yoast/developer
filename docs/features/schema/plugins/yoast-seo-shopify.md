@@ -10,7 +10,7 @@ import YoastSchemaExample from '../../../../../developer-site/src/components/Yoa
 
 This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO for Shopify plugin.
 
-The output is generally consistent with our [https://developer.yoast.com/features/schema/overview](general approach), but has some minor variations due to differences in platform mechanics.
+The output is generally consistent with our [general approach](https://developer.yoast.com/features/schema/overview), but has some minor variations due to differences in platform mechanics.
 
 ## Structured data and microdata removal
 
@@ -31,7 +31,7 @@ Note that this is dependent upon the following in the app's schema settings:
 - The Organization's name and logo being defined, and;
 - The respective pieces being enabled.
 
-When these criteria are met, we produce our [https://developer.yoast.com/features/schema/functional-specification](base script). In a Shopify store, this will typically looks something like the following (a composite of the above _pieces_):
+When these criteria are met, we produce our [base script](https://developer.yoast.com/features/schema/functional-specification). In a Shopify store, this will typically looks something like the following (a composite of the above _pieces_):
 
 <YoastSchemaExample>
 {`{

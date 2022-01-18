@@ -44,10 +44,7 @@ The following should be added whenever available and valid:
               "@type": "WebSite",
               "@id": "https://www.example.com/#/schema/website/1",
               "url": "https://www.example.com",
-              "name": "Example website",
-              "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
-              }
+              "name": "Example website"
           }
       ]
   }`}

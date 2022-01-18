@@ -55,7 +55,6 @@ The `Organization` type may be transformed in the following scenarios.
               "logo": {
                   "@id": "https://www.example.com/#/schema/image/abc123"
               },
-              "url": "https://www.example.com/#/schema/organization/",
               "name": "Example organization name"
           }
       ]

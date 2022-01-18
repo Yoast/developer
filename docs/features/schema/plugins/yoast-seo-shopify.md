@@ -155,3 +155,6 @@ When these criteria are met, we produce our [base script](https://developer.yoas
     ]
 }`}
 </YoastSchemaExample>
+
+## On blog posts
+- Add an `Article` piece

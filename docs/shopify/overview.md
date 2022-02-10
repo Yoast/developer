@@ -77,6 +77,8 @@ In addition to optimizing the output of the `<head>` section of all templates, w
 
 These changes aim to remove all inline _structured data_ (in `JSON-LD` and `microdata` formats). We remove this code in order to implement [our own schema.org solution](https://developer.yoast.com/features/schema/plugins/yoast-seo-shopify), whilst reducing the risk of conflict and duplication.
 
+Note that our app provides controls which allow you to toggle this behaviour for individual _types_ of schema.org properties. This can be helpful in cases where you wish to maintain custom schema output (e.g., when a theme has bespoke customizations, or another app adds complementary schema.org content).
+
 ## Reverting or removing theme changes
 
 The easiest way to revert our theme changes is to use the dedicated control within the app. This control can be found in the app's settings menu.

@@ -249,6 +249,14 @@ module.exports = {
 			],
 
 		},
+		{
+			type: 'category',
+			label: 'Shopify',
+			items: [
+				'shopify/overview',
+				'features/schema/plugins/yoast-seo-shopify',
+			]
+		}
 	],
 	schemaPluginsSidebar: [
 		{

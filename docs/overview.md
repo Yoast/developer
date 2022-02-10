@@ -24,6 +24,9 @@ Learn how our features work, how to customize the outputs, and how best to integ
   - [Schema pieces](/features/schema/pieces.md)
   - [Output per plugin](/features/schema/plugins.md)
 
+### Yoast SEO for Shopify
+- [Overview](shopify/overview.md)
+
 ## Explore our APIs
 - [REST API](customization/apis/rest-api)
 - [Surfaces API](customization/apis/surfaces-api)

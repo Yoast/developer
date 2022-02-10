@@ -27,7 +27,7 @@ This example shows how part of a store's `theme.liquid` file might look, before 
 
 #### Before
 
-```
+```html
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
@@ -40,7 +40,7 @@ This example shows how part of a store's `theme.liquid` file might look, before 
 
 #### After
 
-```
+```html
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>{% render 'yoast-seo' %}
@@ -61,7 +61,7 @@ In the example above, you can see that we add `{% render 'yoast-seo' %}`, and a 
 
 This approach allows us to apply more sophisticated logic, and to integrate our app's content settings. For example, instead of simply outputting a _canonical URL_ value in the template, we use the following _snippet_ to control the behaviour of the whole tag:
 
-```
+```html
 {%- capture yoast_seo_page_type -%}{%- render 'yoast-seo-page-type' -%}{%- endcapture -%}
 {%- if yoast_seo_page_type != "404" %}
 	{%- capture yoast_canonical_url -%}{%- render "yoast-seo-variable", variable: "canonical_url" -%}{%- endcapture -%}

@@ -3,12 +3,12 @@ id: yoast-seo-shopify
 title: Schema output for Yoast SEO Shopify
 sidebar_label: Shopify Schema
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo-shopify.md
-description: Describes the schema output of the Yoast SEO plugin for Shopify.
+description: Describes the schema output of the Yoast SEO app for Shopify.
 ---
 
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO for Shopify plugin.
+This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO for Shopify app.
 
 The output is generally consistent with our [general approach](https://developer.yoast.com/features/schema/overview), but has some minor variations due to differences in platform mechanics.
 

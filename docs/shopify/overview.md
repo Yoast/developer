@@ -23,7 +23,7 @@ It does this by 'commenting out' the relevant lines in the theme's code, and ren
 
 ### Example
 
-This example shows part of the `theme.liquid` file before and after modification by Yoast SEO.
+This example shows how part of a store's `theme.liquid` file might look, before and after modification by Yoast SEO.
 
 #### Before
 

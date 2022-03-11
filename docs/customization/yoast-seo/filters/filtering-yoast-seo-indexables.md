@@ -20,4 +20,4 @@ Per default, Yoast SEO will continuously create indexables for all the content t
 add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
 ```
 
-This code will prevent Yoast SEO from creating indexables.
+This code will prevent Yoast SEO from storing newly created indexables.

@@ -9,6 +9,8 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/custom
 
 ## Indexables default behavior
 
+Per default, Yoast SEO will continuously create indexables for all the content that can be optimized on a site. This includes posts, pages, custom post types, taxonomies, categories, tags, custom fields, comments, users, terms, attachments and so on. When the `Yoast\WP\SEO\should_index_indexables` filter is set to false, the plugin will stop storing newly created indexables.
+
 ## Filter usage
 
 ### Disabling indexables

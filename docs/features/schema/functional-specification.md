@@ -514,16 +514,11 @@ For example, the SDTT requires that a `recipe` has an `image`. This isn't a mand
 The following are specific scenarios where our approach causes conflicts and issues, where we're petitioning to alter how Google interpret and process our markup.
 
 #### A `Person` cannot be the `Publisher` of an `Article`
-This is a particularly challenging issue, as a `WebSite` which represents a `Person` (as opposed to one which represents an `Organization`; i.e., a personal website) will naturally 'publish' articles where that `Person` should be considered to be the 'publisher'. This is an extremely common use-case, but one which the STDD flags as invalid.
+This is a particularly challenging issue, as a `WebSite` which represents a `Person` (as opposed to one which represents an `Organization`; i.e., a personal website) will naturally 'publish' articles where that `Person` should be considered to be the 'publisher'. This is an extremely common use-case, but one which various Google tools and standards flag as invalid.
 
 Additionally, a critical piece of our graph approach relies on identifying the connection between a `WebPage` (or an `Article`) and the `WebSite` on which it resides. The `Publisher` is the key connection between these entities, and so, **we've chosen to ignore the error in this case** (but have alerted Google to it).
 
 To work around this, we merge the `Person` with an `Organization` to create a hybrid type (`[Person, Organization]`), which then expects/accepts a `logo` and other 'Publisher' properties. This validates in the SDTT, but, is an acknowledged 'hack'.
-
-#### The SDTT often prefers an array of properties, rather than an `itemList`
-E.g., an array of individual `reviews` must occupy a `review` property, rather than being contained in a `reviews` property. This pattern of 'an array of multiple things in a singular property' is common throughout their requirements. We believe is less semantically rich, and less flexible than alternative approaches.
-
-We'd typically prefer to use a container as a parent to these items, as this can then be cross-referenced via ID elsewhere. Placing arrays like this into an `itemList` is valid schema, but the SDTT returns validation errors in many cases where this is used. We vary our approach in these types of scenario, based on how critical it is for us to have a 'parent' element with an addressable ID.
 
 ### 7. Other consumers
 At the time of publishing, it appears that Bing does not support this approach; their 'Markup Validator' tool (part of [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster)) does not detect (and/or parse) markup contained within a `@graph` structure (which forms the backbone of our approach). We're seeking to engage in dialogue with Bing to determine their stance on support.

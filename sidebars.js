@@ -256,6 +256,7 @@ module.exports = {
 			items: [
 				'shopify/overview',
 				'features/schema/plugins/yoast-seo-shopify',
+				'shopify/integrations',
 			]
 		}
 	],

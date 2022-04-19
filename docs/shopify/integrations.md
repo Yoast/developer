@@ -15,9 +15,9 @@ At the moment, Yoast SEO for Shopify integrates with the following services:
 
 ## Changes in the Yoast SEO for Shopify schema
 
-For Loox, Ali Reviews and Opinews integrations, an extra piece `aggregateRating` is addedd to the schema on product pages.
+For Loox, Ali Reviews and Opinews integrations, an extra property `aggregateRating` is added to the schema on product pages.
 
-Here is an example of how the new schema piece looks:
+Here is an example of how the new schema property looks:
 
 <YoastSchemaExample>
 {`{
@@ -31,4 +31,4 @@ Here is an example of how the new schema piece looks:
 
 ## Special case for the Judge.me integration
 
-**Judge.me** add a separate schema piece on the page that connects to Yoast SEO for Shopify product schema via an `@id` reference.
+**Judge.me** add a separate schema property on the page that connects to Yoast SEO for Shopify product schema via an `@id` reference.

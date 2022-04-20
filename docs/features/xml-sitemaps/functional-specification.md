@@ -83,6 +83,7 @@ Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `last
 * **(Optional)** The `lastmod` property should reference the time at which the object was last updated. In the case of archives/similar, this should reflect the time at which the archive members last updated (e.g., for a given category, the last time a post was published in that category)
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
   * A loc property (referencing the absolute URL of the image)
+  * **(Optional)** A `caption` property, referencing the image's title
   * **(Optional)** A `title` property, referencing the image caption
 
 Optional properties may be omitted if unavailable.
@@ -184,6 +185,7 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 * `title` is the post name of the article
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
   * A `loc` property (referencing the absolute URL of the image)
-  * **(Optional)** A `title` property, referencing the image caption
+  * **(Optional)** A `caption` property, referencing the image caption
+  * **(Optional)** A `title` property, referencing the image's title
 
 The news XML sitemap uses a dedicated XSL file.

@@ -17,7 +17,7 @@ Assuming that the respective admin settings are not disabled, these tags are out
 | `og:locale` | The page's language. |
 | `og:type` | The type of page/resource. <br /> <br /> _website on the homepage._ <br /> _profile on user profile pages._ <br />_article on all pages/posts and other templates._  |
 | `og:title` | The title of the page. <br /> <br /> Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook title" value for the page.</li><li>An auto-generated "Social title" from the template in Search Appearance.</li><li>A user-defined "Seo title" for the page.</li><li>An auto-generated "SEO title" from the template in Search Appearance.</li><li>The social title default option (same as the SEO title): `%%title%% %%page%% %%sep%% %%sitename%%`. For Author & Date archives the default is just the page title.</li></ul> |
-| `og:url` | The canonical URL of the page. |
+| `og:url` | The canonical URL of the page (or the series root, in the case of paginated content). |
 | `og:site_name` | The name of the site. |
 
 ## Conditional tags

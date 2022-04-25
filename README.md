@@ -18,4 +18,4 @@ All documentation is written in Markdown and is read by [Docusaurus](https://doc
 
 ## Contribute
 
-Found a typo? Want to add some missing documentation? Feel free to fork this repository, make your desired changes and submit a pull-request.
+Found a typo? Want to add some missing documentation? Feel free to fork this repository, make your desired changes and submit a pull-request...

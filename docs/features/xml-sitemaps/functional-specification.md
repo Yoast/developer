@@ -170,10 +170,6 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
     <news:publication_date>2019-11-15T09:59:38+00:00</news:publication_date>
     <news:title><![CDATA[Example post name]]></news:title>
   </news:news>
-  <image:image>
-    <image:loc>https://www.example.com/example-image.jpg</image:loc>
-    <image:title><![CDATA[Example image title]]></image:title>
-  </image:image>
 </url>
 {…}
 </urlset>

@@ -5,6 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;

@@ -10,3 +10,4 @@ Yoast SEO exposes several APIs, which are designed to help advanced users, devel
 - [Our Rest API](rest-api.md), for accessing Yoast SEO metadata headlessly.
 - [Our Surfaces API](surfaces-api.md), for returning information about (or properties of) a URL or post.
 - [Our Metadata API](metadata-api.md), for adding or altering our meta tag outputs in the `<head>` of a document.
+- [Our Schema API](https://developer.yoast.com/features/schema/api), for altering our schema.org output.

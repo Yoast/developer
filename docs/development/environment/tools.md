@@ -28,7 +28,7 @@ iTerm2 is a replacement for the default terminal application that can be found o
 
 You can install both by running:
 
-*   `brew cask install iterm2`
+*   `brew install --cask iterm2`
 *   `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 After installing both you'll want to change your shell from bsh to zsh by running `chsh -s /bin/zsh`. Otherwise you won't get to see [all those snazzy features](https://github.com/robbyrussell/oh-my-zsh#using-oh-my-zsh) from Oh-My-Zsh.

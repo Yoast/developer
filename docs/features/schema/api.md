@@ -166,12 +166,11 @@ add_filter( 'wpseo_schema_graph', 'change_image_urls_to_cdn', 10, 2 );
  * @return array The altered Schema.org graph.
  */
 function change_image_urls_to_cdn( $data, $context ) {
-    for ( $i = 0; $i < count( $data ), $i++ ) {
-        if ( $data[$i]['@type'] === 'ImageObject' ) {
-            $data[$i]['contentUrl'] = str_replace( 'https://www.mydomain.tld/', 'https://cdn.domain.tld/', $data[$i]['contentUrl'] );
+    foreach ( $data as $key => $value ) {
+        if ( $value['@type'] === 'ImageObject' ) {
+            $data[$key]['contentUrl'] = str_replace( 'http://basic.wordpress.test/', 'https://cdn.domain.tld/', $value['contentUrl'] );
         }
     }
-
     return $data;
 }
 ```

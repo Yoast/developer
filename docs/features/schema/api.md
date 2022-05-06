@@ -151,6 +151,30 @@ function example_change_webpage( $data ) {
 }
 ```
 
+## Perform complex changes to the whole Schema 
+If you need to perform complex operations to the Schema, such as changing values in different parts of the output, you can hook into our `wpseo_schema_graph` filter. For instance:
+
+```php
+add_filter( 'wpseo_schema_graph', 'change_image_urls_to_cdn', 10, 2 );
+
+/**
+ * Replaces hostname in all images with the CDN one.  
+ *
+ * @param array             $data    Schema.org graph.
+ * @param Meta_Tags_Context $context Context object.
+ *
+ * @return array The altered Schema.org graph.
+ */
+function change_image_urls_to_cdn( $data, $context ) {
+    foreach ( $data as $key => $value ) {
+        if ( $value['@type'] === 'ImageObject' ) {
+            $data[$key]['contentUrl'] = str_replace( 'http://basic.wordpress.test/', 'https://cdn.domain.tld/', $value['contentUrl'] );
+        }
+    }
+    return $data;
+}
+```
+
 ## To add images to your Schema
 If you want to add an image to an object programmatically, you can do it as follows. Note that we use the `YoastSEO`
 surface to get both the `canonical` from the `meta` surface as the `helpers` surface to access the `schema->image`

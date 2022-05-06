@@ -69,7 +69,6 @@ Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `last
   <lastmod>2018-04-21T10:00:12+00:00</lastmod>
   <image:image>		 
     <image:loc>https://www.example.com/example-image.jpg</image:loc>
-    <image:title><![CDATA[Example image title]]></image:title>
   </image:image>
   <image:image>		 
     <image:loc>https://www.example.com/another-example-image.jpg</image:loc>
@@ -83,8 +82,6 @@ Each sitemap contains a `<url>` entry for each page, comprised of a `loc`, `last
 * **(Optional)** The `lastmod` property should reference the time at which the object was last updated. In the case of archives/similar, this should reflect the time at which the archive members last updated (e.g., for a given category, the last time a post was published in that category)
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
   * A loc property (referencing the absolute URL of the image)
-  * **(Optional)** A `caption` property, referencing the image's title
-  * **(Optional)** A `title` property, referencing the image caption
 
 Optional properties may be omitted if unavailable.
 
@@ -120,13 +117,12 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
     <video:title><![CDATA[Example Video]]></video:title>
     <video:publication_date>2015-12-15T15:36:03+00:00</video:publication_date>
     <video:description><![CDATA[Example video description]]></video:description>
-    <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/v/abc123</video:player_loc>			 
+    <video:player_loc>https://www.youtube-nocookie.com/v/abc123</video:player_loc>			 
     <video:thumbnail_loc>https://www.example.com/video-thumbnail.jpg</video:thumbnail_loc>
     <video:duration>98</video:duration>
     <video:view_count>367</video:view_count>
     <video:width>640</video:width>
     <video:height>390</video:height>
-    <video:category>Example category</video:category>
     <video:tag>Example tag</video:tag>
     <video:tag>Another example tag</video:tag>
     <video:family_friendly>yes</video:family_friendly>
@@ -145,7 +141,6 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
 * **(Optional)** `duration` is the duration in seconds
 * **(Optional)** `view_count` is the number of views
 * **(Optional)** `width` and `height` are the dimensions of the embedded video in pixels
-* **(Optional)** `category` is the primary category of the page/post in which the video is embedded
 * **(Optional)** `tag` is a series of the tags associated with the page/post in which the video is embedded
 * **(Optional)** `family_friendly` is a boolean value, configured in the video embed UI
 * **(Optional)** `uploader` is the name of the person who uploaded the video, with optional info property referencing a profile/homepage
@@ -181,7 +176,5 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 * `title` is the post name of the article
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:
   * A `loc` property (referencing the absolute URL of the image)
-  * **(Optional)** A `caption` property, referencing the image caption
-  * **(Optional)** A `title` property, referencing the image's title
 
 The news XML sitemap uses a dedicated XSL file.

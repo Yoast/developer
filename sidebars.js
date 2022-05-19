@@ -162,6 +162,7 @@ module.exports = {
 						'customization/yoast-seo/filters/markdown-enabled-filter',
 						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
 						'customization/yoast-seo/filters/yoast-seo-usage-tracking-filter',
+						'customization/yoast-seo/filters/disable-search-engine-pings',
 						'customization/yoast-seo/filtering-yoast-blocks',
 						'customization/yoast-seo/wp-get-environment-type-in-yoast-seo',
 					],

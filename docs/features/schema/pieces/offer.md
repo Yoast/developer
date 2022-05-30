@@ -22,6 +22,11 @@ A valid `Offer` must have the following properties.
 * `url`: The canonical URL of the page containing the `Offer`.
 * `priceSpecification`: A `PriceSpecification` object, including a `valueAddedTaxIncluded` property (of either `true` or `false`).
 
+## Optional properties
+The following should be added whenever available and valid:
+
+* `priceValidUntil`: A date (in YYYY-mm-dd format) representing the end of a current, temporary pricing value (e.g., a sales period with a defined end-date).
+
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
@@ -39,17 +44,13 @@ If the node is not output, any entities which would otherwise have referenced th
               "@type": "Offer",
               "@id": "https://www.example.com/#/schema/offer/abc123",
               "price": "22.00",
-              "priceValidUntil": "2020-12-31",
               "priceSpecification": {
                   "@type": "PriceSpecification",
                   "valueAddedTaxIncluded": "false"
               },
               "priceCurrency": "GBP",
               "availability": "http://schema.org/InStock",
-              "url": "https://www.example.com/example-product-page/",
-              "seller": {
-                  "@id": "https://www.example.com/#/schema/organization/abc123"
-              }
+              "url": "https://www.example.com/example-product-page/"
           }
       ]
   }`}

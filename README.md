@@ -63,4 +63,4 @@ Please be as descriptive and succinct as possible in your issue, and if necessar
 
 To submit code, please fork the repository and submit a pull request. In your pull request's description, please explain your update and reference the associated issue you're fixing.
 
-After you send your proposed changes, one of the portal maintainers will test and review the pull request. After it's reviewed and the changes are accepted by at least one of the maintainers, someone will merge the pull request.
+After you send your proposed changes, one of the portal maintainers will test and review the pull request. After it's reviewed and the changes are accepted by at least one of the maintainers, someone will merge the pull request. 

@@ -5,9 +5,9 @@ sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/opengraph/functional-specification.md
 description: This documentation provides technical information about which OpenGraph tags Yoast SEO generates and outputs.
 ---
-This documentation provides technical information about which OpenGraph tags [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs.
+This documentation provides technical information about which OpenGraph and related tags that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs.
 
-We output a variety of OpenGraph tags in the `<head>` of each page, in order to better inform data consumers about the content of the page in question. OpenGraph is consumed by Facebook, but also by Pinterest, LinkedIn, WhatsApp and even Google.
+We output a variety of OpenGraph and similar tags in the `<head>` of each page, in order to better inform data consumers about the content of the page in question. OpenGraph data is consumed by Facebook, but also by Pinterest, LinkedIn, WhatsApp and even Google.
 
 ## OpenGraph metadata
 Assuming that the respective admin settings are not disabled, these tags are output on all pages (except for _error_ templates, which are described separately).
@@ -33,6 +33,12 @@ The following tags are only output when their conditions are met:
 | `og:image` | The URL of the primary image of the page. | Only populated when the page contains a valid image, based on the following hierarchy: <ul><li>A user-defined image "Facebook image" in the Social tab of the Yoast metabox.</li><li>A user-defined "Featured image" for the page (only for posts).</li><li>A prominent image from the page's content.</li><li>Yoast SEO WooCommerce only: Woo SEO adds one more image fallback: the first image in the Woo Product gallery.</li><li>The "Social default image" from the template in Search Appearance.</li><li>The site's fallback/default social image (set at SEO > Social > Facebook > Default image).</li></ul> In case of an author archive, the image is based on the following hierarchy: <ul><li>The "Social default image" from the template in Search Appearance.</li><li>The user's Gravatar image.</li><li>The site's fallback/default social image (set at SEO > Social > Facebook > Default image).</li></ul> |
 | `og:image:width` | The width in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 | `og:image:height` | The height in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
+
+## Misc related tags
+| Tag | Description | Notes |
+|---|----|---|
+| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on post types with authorship enabled |
+
 
 ## Error templates
 Only output the following tags are output:

@@ -20,6 +20,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
  * Set the `brand` and `manufacturer` properties, based on taxonomy settings.
  * Set the `seller` to the `Organization` (or `Person` ) which is set as the `Publisher` of the `WebSite`.
  * Stitch `offers`, `review` and/or `aggregateRating` values into the graph (when available / as appropriate).
+ * Unset the `datePublished` and `dateModified` values from the `ItemPage`.
 
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.

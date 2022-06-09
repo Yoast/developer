@@ -20,7 +20,7 @@ Assuming that the respective admin settings are not disabled, these tags are out
 | `og:url` | The canonical URL of the page (or the series root, in the case of paginated content). |
 | `og:site_name` | The name of the site. |
 
-## Conditional tags
+### Conditional tags
 The following tags are only output when their conditions are met:
 
 | Tag | Description | Notes |
@@ -34,13 +34,7 @@ The following tags are only output when their conditions are met:
 | `og:image:width` | The width in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 | `og:image:height` | The height in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 
-## Misc related tags
-| Tag | Description | Notes |
-|---|----|---|
-| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on post types with authorship enabled |
-
-
-## Error templates
+### Error templates
 Only output the following tags are output:
 
 | Tag | Value |
@@ -49,7 +43,7 @@ Only output the following tags are output:
 | `og:title` | The site's error title template. |
 | `og:site_name` | The name of the site. |
 
-## Deprecated tags
+### Deprecated tags
 The following tags used to be output by Yoast SEO, but have been removed in recent updates.
 
 | Tag | Description | Deprecated |
@@ -61,3 +55,8 @@ The following tags used to be output by Yoast SEO, but have been removed in rece
 | `og:video:secure_url` | Legacy Facebook / Open Graph tag. As per `og:image:secure_url`, but for the featured video (in our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/)). | Yoast SEO v14.0 (Apr 2020) |
 | `og:image:type` | Defines the image format. Poor value/performance trade-off; especially as we ping Facebook on post publish, at which point they determine and cache this information themselves. | Yoast SEO v14.0 (Apr 2020) |
 | `fb:app_id` | The Facebook App ID. | Yoast SEO v15.5 (Dec 2020) |
+
+## Misc related tags
+| Tag | Description | Notes |
+|---|----|---|
+| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on post types with authorship enabled |

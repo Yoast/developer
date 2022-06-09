@@ -78,6 +78,7 @@ The `current_page` surface exposes every bit of data we have on the current page
 | source | array | The source object for most of this page data. |
 | breadcrumbs | array | The breadcrumbs array for the current page. |
 | estimated_reading_time_minutes | int | The estimated reading time in minutes for the content. | 
+| post_author | string | The name of the post author | 
 
 Whether you need the *OpenGraph description* or the *robots array*, this has you covered. Get used to opening your favorite IDE, typing `YoastSEO()->meta->for_current_page()->` and see the type hints for the exact bit of data you need.
 

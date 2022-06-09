@@ -23,7 +23,7 @@ A valid `Article` must have the following properties.
 * `mainEntityOfPage`: A reference-by-ID to the `WebPage` node.
 * `datePublished`: The time at which the article was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `dateModified`: The time at which the article was last modified, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
-* `author`: A reference-by-ID to the author of the article.
+* `author`: A reference-by-ID to the author of the article, in addition to their `name` property (to better support Pinterest).
 * `publisher`: A reference-by-ID to the publisher of the article.
 
 ## Failure scenarios

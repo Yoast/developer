@@ -52,9 +52,10 @@ Given this capability, we prefer to avoid deep nesting of properties whenever po
 ### Constructing ID parameters
 ID parameters should always adopt the following structure:
 
-`{{website}}/#/schema/{{type}}/{{ID}}` (e.g., `https://www.example.com/#/schema/image/abc123`).
+`{{website}}/#/schema/{{type}}/{{ID}}`
 
-**Example global pieces:**
+E.g:
+
 * `https://www.example.com/#/schema/organization/abc123`
 * `https://www.example.com/#/schema/image/abc123`
 * `https://www.example.com/#/schema/person/abc123`

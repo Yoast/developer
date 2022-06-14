@@ -52,13 +52,7 @@ Given this capability, we prefer to avoid deep nesting of properties whenever po
 ### Constructing ID parameters
 ID parameters should always adopt the following structure:
 
-`{{website}}{{slug}}/#/schema/{{type}}/{{ID}}` (e.g., `https://www.example.com/#/schema/image/abc123`).
-
-[Pieces](https://developer.yoast.com/features/schema/pieces/) may be either *local* or *global*. Local pieces are explicitly related/connect to a WebPage and only exist in the context of page content, whereas global pieces may exist independently of page content.
-
-For example, a [HowTo](https://developer.yoast.com/features/schema/pieces/howto/) piece is an explicit child of the [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) (or [Article](https://developer.yoast.com/features/schema/pieces/article/)) within which it resides. A [Person](https://developer.yoast.com/features/schema/pieces/person/) or an [image](https://developer.yoast.com/features/schema/pieces/image/), however, exists independently of a [WebPage](https://developer.yoast.com/features/schema/pieces/webpage/) or [Article](https://developer.yoast.com/features/schema/pieces/article/) which references it.
-
-Local pieces should include the `{{slug}}` component. Global pieces should not.
+`{{website}}/#/schema/{{type}}/{{ID}}` (e.g., `https://www.example.com/#/schema/image/abc123`).
 
 **Example global pieces:**
 * `https://www.example.com/#/schema/organization/abc123`
@@ -69,19 +63,16 @@ Local pieces should include the `{{slug}}` component. Global pieces should not.
 * `https://www.example.com/#/schema/website/abc123`
 * `https://www.example.com/#/schema/product/abc123`
 * `https://www.example.com/#/schema/offer/abc123`
-
-**Example local pieces:**
-* `https://www.example.com/example-page/#/schema/article/abc123`
-* `https://www.example.com/example-category/example-post/#/schema/breadcrumb/abc123`
-* `https://www.example.com/example-category/example-post/#/schema/howto/abc123`
-* `https://www.example.com/example-category-2/example-post-2/#/schema/itemlist/abc123`
+* `https://www.example.com/#/schema/article/abc123`
+* `https://www.example.com/#/schema/breadcrumb/abc123`
+* `https://www.example.com/#/schema/howto/abc123`
+* `https://www.example.com/#/schema/itemlist/abc123`
 
 See the relevant [pieces documentation](pieces.md) in each case for the correct structure (where defined).
 
 **Notes:**
 * `website` is the `protocol` + `hostname` of the site (e.g., `https://www.example.com`).
 * `type` should always be forced to lowercase, and all spaces/delimiters removed.
-* `slug` is the page/request path (e.g., `/example-category/example-post/`).
 
 ### `{{identifier}}` composition
 The `{{identifier}}` parameter should always be constructed using the following cascade:

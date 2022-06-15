@@ -108,6 +108,8 @@ All `%%path%%` variables, therefore, should conditionally include or exclude a t
 * **Pages do** *not* **resolve when trailing slashes are added**. In this case, `%%path%%` should *not* append a trailing slash.
 * **Requests which end in a trailing represent a different resource** (e.g., `example/page` vs `exammple/folder/`). In this case, the `%%path%%` should only output the trailing slash if this is part of the valid request for the resource (e.g., on `example/folder/`).
 
+Additionally, homepages which reside at the domain root should always include a trailing slash.
+
 ### Pagination
 Some requests may accept additional parameters in order to return a paginated state. E.g., `category/page/3` (or `?category=cats&page=3`).
 When this returns a valid, paginated response, the pagination component should be appended to the `%%path%%` variable. It should *not* be appended in scenarios where the addition of the pagination component does *not* result in paginated results.

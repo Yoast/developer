@@ -502,9 +502,11 @@ Throughout the examples in this document, we generally make a few assumptions ab
 For example, if *Page A* has a URL of [https://www.example.com/page-a/](https://www.example.com/page-a/), but includes a canonical URL tag which references *Page B* (at [https://www.example.com/page-b/](https://www.example.com/page-b/)), then all `url`  parameters which would normally relate to *Page A* should continue to use *Page A* 's 'true' canonical URL.
 
 ### 5. Validation tools
-We rely heavily on [Google's Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool/u/0/) (or 'SDTT') to evaluate and debug our approach. While other tools exist, we've found that this one consistently provides the most sophisticated parsing, error handling and feedback. Also, as the primary consumer of our structured markup, it makes sense that we position feedback from Google's own tool as our single version of the truth.
+We have three preferred tools when testing, evaluating and debugging schema.
 
-That's not to say, however, that it's not without issues, and that we agree completely with their interpretation of schema.org's standards. Read on to explore our *known issues*.
+- [The official schema.org validator](https://validator.schema.org/) checks that for structural and syntax errors.
+- [Google's Rich Results Test](https://search.google.com/test/rich-results) (or 'SDTT') validates whether a given page is eligable for certain types of rich results in Google.
+- [Classy Schema](https://classyschema.org/Visualisation) visualises a page's graph, to ensure that it's cohesive and coherant.
 
 ### 6. Known issues
 There are a number of scenarios where the SDTT deviates from the schema.org definitions. In some cases, we've adapted or compromised our approach to find a solution which applies to both - in others, we've swayed in favor of one or the other, depending on the context.

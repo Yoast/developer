@@ -15,7 +15,8 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `postalAddress` must have the following properties.
 
-* `@id`: The site's home URL appended by `#/schema/address/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `PostalAddress`.
+* `@id`: The site's home URL appended by `#/schema/PostalAddress/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `streetAddress`: The building number and street (e.g., *123 fake road* ).
 * `postalCode`: The postal code.
 * `addressCountry`: The two-digit country-code representing the country (e.g., *US* ).
@@ -42,7 +43,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "PostalAddress",
-              "@id": "https://www.example.com/#/schema/address/abc123",
+              "@id": "https://www.example.com/#/schema/Address/abc123",
               "streetAddress": "123 Fake Street",
               "postalCode": "ABC 123",
               "addressCountry": "US"
@@ -59,7 +60,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "PostalAddress",
-              "@id": "https://www.example.com/#/schema/address/abc123",
+              "@id": "https://www.example.com/#/schema/Address/abc123",
               "streetAddress": "123 Example Street",
               "addressLocality": "Example Town",
               "addressRegion": "Example Region",

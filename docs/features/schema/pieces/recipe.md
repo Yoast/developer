@@ -15,13 +15,15 @@ Should be added as a top-level node in the graph, when the content of a page con
 ## Required properties
 A valid `Recipe` must have the following properties.
 
-* `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/recipe/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `Recipe`.
+* `@id`: The site's home URL appended by `#/schema/Recipe/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `mainEntityOfPage`: Referencing the `WebPage` by ID.
 * `name`: A string describing the recipe.
 * `image`: An image representing the completed recipe, referenced by ID.
 * `recipeIngredient`: An array of strings representing each ingredient and quantity (e.g., "3 apples").
 * `recipeInstructions`: An array of `HowToStep` objects, with the following properties:
-  * `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/recipe-step/{{ID}}`, where `{{ID}}` is a unique identifier.
+  * `@type`: `HowToStep`.
+  * `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/HowToStep/{{ID}}`, where `{{ID}}` is a unique identifier.
   * `url`: A link to a fragment identifier (an 'ID anchor') of the individual step (e.g., `https://www.example.com/example-page/#recipe-step-5`).
   * `text`: The instruction string ("e.g., "Bake at 200*C for 40 minutes, or until golden-brown, stirring periodically throughout").
   * `name` (optional): A short summary of the step (e.g., "Bake").
@@ -73,11 +75,11 @@ The following should be added whenever available and valid:
         {
             "@type": "Recipe",
             "mainEntityOfPage": {
-                "@id": "https://www.example.com/example-page/test/#/schema/article/abc123"
+                "@id": "https://www.example.com/#/schema/Article/abc123"
             },
             "name": "Party Coffee Cake",
             "image": {
-                "@id": "https://www.example.com/#/schema/image/abc123"
+                "@id": "https://www.example.com/#/schema/ImageObject/abc123"
             },
             "recipeIngredient": [
                 "2 cups of flour",
@@ -134,17 +136,17 @@ The following should be added whenever available and valid:
         {
             "@type": "Recipe",
             "mainEntityOfPage": {
-                "@id": "https://www.example.com/example-page/test/#/schema/article/abc123"
+                "@id": "https://www.example.com/#/schema/Article/abc123"
             },
             "name": "Party Coffee Cake",
             "image": {
-                "@id": "https://www.example.com/#/schema/image/abc123"
+                "@id": "https://www.example.com/#/schema/ImageObject/abc123"
             },
             "video": {
-                "@id": "https://www.example.com/#/schema/video/abc123"
+                "@id": "https://www.example.com/#/schema/VideoObject/abc123"
             },
             "author": {
-                "@id": "https://www.example.com/#/schema/person/abc123"
+                "@id": "https://www.example.com/#/schema/Person/abc123"
             },
             "inLanguage": "en-GB",
             "datePublished": "2018-03-10",
@@ -184,7 +186,7 @@ The following should be added whenever available and valid:
                     "text": "Preheat the oven to 350 degrees F. Grease and flour a 9x9 inch pan.",
                     "url": "https://example.com/example-page/test/#recipe-step-1",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/abc123"
+                        "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                     }
                 },
                 {
@@ -193,7 +195,7 @@ The following should be added whenever available and valid:
                     "text": "In a large bowl, combine flour, sugar, baking powder, and salt.",
                     "url": "https://example.com/example-page/test/#recipe-step-2",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/def456"
+                        "@id": "https://www.example.com/#/schema/ImageObject/def456"
                     }
                 },
                 {
@@ -202,7 +204,7 @@ The following should be added whenever available and valid:
                     "text": "Mix in the butter, eggs, and milk.",
                     "url": "https://example.com/example-page/test/#recipe-step-3",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/ghi789"
+                        "@id": "https://www.example.com/#/schema/ImageObject/ghi789"
                     }
                 },
                 {
@@ -211,7 +213,7 @@ The following should be added whenever available and valid:
                     "text": "Spread into the prepared pan.",
                     "url": "https://example.com/example-page/test/#recipe-step-4",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/jkl012"
+                        "@id": "https://www.example.com/#/schema/ImageObject/jkl012"
                     }
                 },
                 {
@@ -220,7 +222,7 @@ The following should be added whenever available and valid:
                     "text": "Bake for 30 to 35 minutes, or until firm.",
                     "url": "https://example.com/example-page/test/#recipe-step-5",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/mno345"
+                        "@id": "https://www.example.com/#/schema/ImageObject/mno345"
                     }
                 },
                 {
@@ -229,7 +231,7 @@ The following should be added whenever available and valid:
                     "text": "Allow to cool and enjoy.",
                     "url": "https://example.com/example-page/test/#recipe-step-6",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/image/pqr678"
+                        "@id": "https://www.example.com/#/schema/ImageObject/pqr678"
                     }
                 }
             ]

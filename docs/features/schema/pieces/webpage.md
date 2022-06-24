@@ -19,6 +19,7 @@ Should be output on all public pages, except for `4xx` and `5xx` range error pag
 ## Required properties
 A valid `WebPage` must have the following properties.
 
+* `@type`: `WebPage`.
 * `@id`: The unmodified *canonical URL* of the page.
 * `URL:` The unmodified *canonical URL* of the page.
 * `name`: The *title* of the page.
@@ -89,7 +90,7 @@ On search results pages, the *type* property should be altered to an array of `[
               "url": "https://www.example.com/example-page/",
               "name": "Example page name",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               }
           }
       ]
@@ -108,33 +109,33 @@ On search results pages, the *type* property should be altered to an array of `[
               "url": "https://www.example.com/example-page/",
               "name": "Example page name",
               "description": "Example page description",
-              "keywords": "cats,dogs,cake",
+              "keywords": ["cats","dogs","cake"],
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               },
               "inLanguage": "en-US",
               "datePublished": "2019-07-10T08:08:40+00:00",
               "dateModified": "2019-07-10T08:43:03+00:00",
               "breadcrumb": {
-                  "@id": "https://www.example.com/example-page/#/schema/breadcrumb/abc123"
+                  "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
               },
               "primaryImageOfPage": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/image/abc123"
+                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/image/def456"
+                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
                   }
               ],
               "video": [
                   {
-                      "@id": "https://www.example.com/#/schema/video/abc123"
+                      "@id": "https://www.example.com/#/schema/VideoObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/video/def456"
+                      "@id": "https://www.example.com/#/schema/VideoObject/def456"
                   }
               ],
               "potentialAction": [

@@ -113,11 +113,11 @@ And that is all, now this code will be output on your team member post type!
 Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) of version 14.0 or higher. Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
 
 ## "My plugin/theme already outputs schema markup"
-Unless you're already adding individual pieces to a `@graph` (and connecting those pieces via `@id`  referencing), you may need to make some changes in order to integrate effectively. If you already use an ID-based approach, you should be able to 'stitch' your pieces into our graph by using [our Schema API](api.md) and by following [our specification](functional-specification.md).
+Unless you're already adding individual pieces to a `@graph` (and connecting those pieces via `@id` referencing), you may need to make some changes in order to integrate effectively. If you already use an ID-based approach, you should be able to 'stitch' your pieces into our graph by using [our Schema API](api.md) and by following [our specification](functional-specification.md).
 
 If you use a different approach (e.g., you output a structured `JSON-LD` tree, or use microdata), there's a risk that the various pieces might have conflicting information, and that the page isn't accurately represented.
 
-In this case, we encourage you to adapt your code to follow our specification. The first step is to identify each individual 'piece' of schema markup which you produce, and to output them as top-level members in a `@graph` (and connect them via unique `@id`  parameters, based on our [our specification](functional-specification.md) ).
+In this case, we encourage you to adapt your code to follow our specification. The first step is to identify each individual 'piece' of schema markup which you produce, and to output them as top-level members in a `@graph` (and connect them via unique `@id` parameters, based on our [our specification](functional-specification.md) ).
 
 Then, if the user is running [Yoast SEO](https://yoast.com/wordpress/plugins/seo/), you can filter and/or extend our output and connect your pieces to our graph via [our Schema API](api.md). When correctly integrated, you should be able to disable your plugin/theme output (as our own logic will manage the construction and output of the completed graph).
 

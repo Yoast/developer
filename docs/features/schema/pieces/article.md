@@ -16,7 +16,8 @@ Should be output on all post types which support _authorship_ and have an author
 ## Required properties
 A valid `Article` must have the following properties.
 
-* `@id`: The unmodified *canonical URL* of the parent `WebPage`, appended by `#/schema/article/{{ID}}`, where `{{ID}}` is a unique identifier for the article in question.
+* `@type`: `Article`.
+* `@id`: The site's home URL appended by `#/schema/Article/{{ID}}`, where `{{ID}}` is a unique identifier for the article in question.
 * `headline`: The headline of the article (falling back to the *title* of the `WebPage` ).
 * `description`: A summary of the article (falling back to the page's meta description content).
 * `isPartOf`: A reference-by-ID to the `WebPage` node.
@@ -57,11 +58,6 @@ Optional properties which should only be output when the required criteria are m
  * `name`: "Comment".
  * `target`: The `url` property of the parent `WebPage`, appended with `#comment`.
 
-## Transformations
-The `Article` type may be transformed in the following scenarios:
-
-* When explicitly nominated as a "news article", the *type* property should be altered to an array of `[Article, NewsArticle]`.
-
 ## Examples
 
 ### Minimum criteria
@@ -72,7 +68,7 @@ The `Article` type may be transformed in the following scenarios:
       "@graph": [
           {
               "@type": "Article",
-              "@id": "https://www.example.com/blog/example-article/#/schema/article/abc123",
+              "@id": "https://www.example.com/#/schema/Article/abc123",
               "headline": "Example article headline",
               "description": "Example article description",
               "isPartOf": {
@@ -84,13 +80,13 @@ The `Article` type may be transformed in the following scenarios:
               "datePublished": "2019-07-10T08:08:40+00:00",
               "dateModified": "2019-07-10T08:43:03+00:00",
               "author": {
-                  "@id": "https://www.example.com/#/schema/person/abc123"
+                  "@id": "https://www.example.com/#/schema/Person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               }
           }
       ]
@@ -105,7 +101,7 @@ The `Article` type may be transformed in the following scenarios:
       "@graph": [
           {
               "@type": "Article",
-              "@id": "https://www.example.com/blog/example-article/#/schema/article/abc123",
+              "@id": "https://www.example.com/#/schema/Article/abc123",
               "headline": "Example article headline",
               "description": "Example article description",
               "isPartOf": {
@@ -120,25 +116,25 @@ The `Article` type may be transformed in the following scenarios:
               "articleSection": ["cats","dogs","cake"],
               "inLanguage": "en-US",
               "author": {
-                  "@id": "https://www.example.com/#/schema/person/abc123"
+                  "@id": "https://www.example.com/#/schema/Person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/image/abc123"
+                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/image/def456"
+                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
                   }
               ],
               "video": [
                   {
-                      "@id": "https://www.example.com/#/schema/video/abc123"
+                      "@id": "https://www.example.com/#/schema/VideoObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/video/def456"
+                      "@id": "https://www.example.com/#/schema/VideoObject/def456"
                   }
               ],
               "potentialAction": [

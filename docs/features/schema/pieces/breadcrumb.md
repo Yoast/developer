@@ -20,7 +20,8 @@ Should be added as top-level node in the graph, on all public pages which have a
 ## Required properties
 A valid `BreadcrumbList` must have the following properties.
 
-* `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/breadcrumb/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `BreadcrumbList`.
+* `@id`: The site's home URL appended by `#/schema/BreadcrumbList/{{ID}}`, where `{{ID}}` is a unique identifier for the 'parent' webpage.
 * `itemListElement`: An array of `ListItem` objects, representing the position of the current page in the site hierarchy, each with the following properties:
   * `position`: An integer (starting at `1`), counting the 'depth' of the page from (including) the homepage.
   * `name`: The name of the page in question, as it appears in the breadcrumb navigation.
@@ -33,7 +34,7 @@ A valid `BreadcrumbList` must have the following properties.
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have declared a relationship with the `breadcrumb` should remove those references.
+If the node is not output, any entities which would otherwise have declared a relationship with the `BreadcrumbList` should remove those references.
 
 ## Examples
 
@@ -45,7 +46,7 @@ If the node is not output, any entities which would otherwise have declared a re
       "@graph": [
           {
               "@type": "BreadcrumbList",
-              "@id": "https://www.example.com/example-section/example-page/#/schema/breadcrumb/abc123",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
               "itemListElement": [
                   {
                       "@type": "ListItem",
@@ -89,7 +90,7 @@ Each `item`, except for the final/current 'crumb', had the following properties:
       "@graph": [
           {
               "@type": "BreadcrumbList",
-              "@id": "https://www.example.com/example-section/example-page/#/schema/breadcrumb/abc123",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
               "itemListElement": [
                   {
                       "@type": "ListItem",

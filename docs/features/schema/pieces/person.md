@@ -17,7 +17,9 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `Person` must have the following properties.
 
-* `@id`: The site's home URL appended by `#/schema/person/{{ID}}`, where `{{ID}}` is a unique identifier. Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
+* `@type`: `Person`.
+* `@id`: The site's home URL appended by `#/schema/Person/{{ID}}`, where `{{ID}}` is a unique identifier.
+  * Note that the `{{ID}}` component should not reveal personally identifiable or sensitive information (e.g., avoid using a username or email address, or hash+salt these values).
 * `name`: The full name of the `Person`.
 
 ### Failure scenarios
@@ -33,7 +35,7 @@ The following should be added whenever available and valid:
 
 * `description`: The user bio, truncated to 250 characters.
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the person (e.g., a Wikipedia page, or Facebook profile).
-* `image`: An array of `images` which represent the person, referenced by ID.
+* `image`: An array of references-by-ID to `ImageObject` nodes which represent the person.
 * `url`: The URL of the users' profile page (if they're affiliated with the site in question), or to their personal homepage/website.
 
 ## Conditional properties
@@ -49,7 +51,7 @@ Optional properties which should only be output when the required criteria is me
       "@graph": [
           {
               "@type": "Person",
-              "@id": "https://www.example.com/#/schema/person/abc123",
+              "@id": "https://www.example.com/#/schema/Person/abc123",
               "name": "Example person name"
           }
       ]
@@ -64,10 +66,10 @@ Optional properties which should only be output when the required criteria is me
       "@graph": [
           {
               "@type": "Person",
-              "@id": "https://www.example.com/#/schema/person/abc123",
+              "@id": "https://www.example.com/#/schema/Person/abc123",
               "name": "Example person name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "sameAs": [
                   "https://www.wikipedia.com/example-person",

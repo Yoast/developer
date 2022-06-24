@@ -15,12 +15,13 @@ Should be added as a top-level node in the graph, when the content of a page con
 ## Required properties
 A valid `HowTo` must have the following properties.
 
-* `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/howto/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `HowTo`.
+* `@id`: The site's home URL appended by `#/schema/HowTo/{{ID}}`, where `{{ID}}` is a unique identifier for the 'how to guide' in question.
 * `mainEntityOfPage`: Referencing the `WebPage` by ID.
 * `name`: A string describing the guide.
-* `step`: An array of `howToStep` objects, with the following properties:
- * `@id`: The unmodified *canonical URL* of the page, appended by `#/schema/howtostep/{{ID}}`, where `{{ID}}` is a unique identifier.
- * `url`: A link to a fragment identifier (an 'ID anchor') of the individual `howToStep` (e.g., `https://www.example.com/example-page/#howtostep-5` ).
+* `step`: An array of `HowToStep` objects, with the following properties:
+ * `@id`: he site's home URL appended by `#/schema/HowToStep/{{ID}}`, where `{{ID}}` is a unique identifier for the 'how to step' in question.
+ * `url`: A link to a fragment identifier (an 'ID anchor') of the individual `HowToStep` (e.g., `https://www.example.com/example-page/#howtostep-5` ).
  * Either a `name` or `text` property (see *Conditional scenarios*).
 
 ## Failure scenarios
@@ -41,16 +42,16 @@ The following should be added whenever available and valid:
 * Alter the `mainEntityOfPage` property to reference the `Article` by ID, (instead of the `WebPage`).
 
 ### When the HowToStep has one or more images
-* `image`: An `imageObject` (or an array of `imageObject`(s)), referenced by ID.
+* `image`: An `imageObject` (or an array of references-by-ID to `ImageObject` nodes).
 
-### When the `howToStep` has a name and description
+### When the `HowToStep` has a name and description
 * `name`: A summary of / title for the step.
 * `itemListElement`: An array of `HowToDirection` objects with a `text` property, for each paragraph in the description.
 
-### When the `howToStep` has a *name*, but no text in its *description*
+### When the `HowToStep` has a *name*, but no text in its *description*
 * `text`: A summary of / title for the step.
 
-### When the `howToStep` has a *description*, but no *name*
+### When the `HowToStep` has a *description*, but no *name*
 * `itemListElement`: An array of `HowToDirection` objects with a `text` property, for each paragraph in the description.
 
 ## Examples
@@ -63,7 +64,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "HowTo",
-              "@id": "https://www.example.com/example-page/#/schema/howto/abc123",
+              "@id": "https://www.example.com/#/schema/HowTo/abc123",
               "mainEntityOfPage": {
                   "@id": "https://www.example.com/example-page/"
               },
@@ -71,7 +72,7 @@ The following should be added whenever available and valid:
               "step": [
                   {
                       "@type": "HowToStep",
-                      "@id": "https://www.example.com/example-page/#/schema/howtostep/abc123",
+                      "@id": "https://www.example.com/#/schema/HowToStep/abc123",
                       "name": "Example step 1",
                       "url": "https://www.example.com/example-page/#how-to-step-1",
                       "itemListElement": [
@@ -100,9 +101,9 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "HowTo",
-              "@id": "https://www.example.com/example-page/#/schema/howto/abc123",
+              "@id": "https://www.example.com/#/schema/HowTo/abc123",
               "mainEntityOfPage": {
-                  "@id": "https://www.example.com/example-page/#/schema/article/abc123"
+                  "@id": "https://www.example.com/#/schema/Article/abc123"
               },
               "name": "HowTo example",
               "description": "HowTo description",
@@ -111,11 +112,11 @@ The following should be added whenever available and valid:
               "step": [
                   {
                       "@type": "HowToStep",
-                      "@id": "https://www.example.com/example-page/#/schema/howtostep/abc123",
+                      "@id": "https://www.example.com/#/schema/HowToStep/abc123",
                       "name": "Example step 1",
                       "url": "https://www.example.com/example-page/#how-to-step-1",
                       "image": {
-                          "@id": "https://www.example.com/#/schema/image/abc123"
+                          "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                       },
                       "itemListElement": [
                           {
@@ -126,16 +127,16 @@ The following should be added whenever available and valid:
                   },
                   {
                       "@type": "HowToStep",
-                      "@id": "https://www.example.com/example-page/#/schema/howtostep/def456",
+                      "@id": "https://www.example.com/#/schema/HowToStep/def456",
                       "text": "Example step 2 (no description)",
                       "url": "https://www.example.com/example-page/#how-to-step-2",
                       "image": {
-                          "@id": "https://www.example.com/#/schema/image/def456"
+                          "@id": "https://www.example.com/#/schema/ImageObject/def456"
                       }
                   },
                   {
                       "@type": "HowToStep",
-                      "@id": "https://www.example.com/example-page/#/schema/howtostep/ghi789",
+                      "@id": "https://www.example.com/#/schema/HowToStep/ghi789",
                       "name": "Example step 3",
                       "url": "https://www.example.com/example-page/#how-to-step-3",
                       "itemListElement": [

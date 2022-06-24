@@ -17,11 +17,12 @@ Should be output on all public pages.
 ## Required properties
 A valid `Organization` must have the following properties.
 
-* `@id`: The site's home URL appended by `#/schema/organization/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier (e.g., a database ID representing the `organization`).
+* `@type`: `Organization`.
+* `@id`: The site's home URL appended by `#/schema/Organization/{{ID}}`, where `{{ID}}` is a unique identifier.
   * If the `organization` is the publisher of the `WebSite` (i.e., the "*primary organization*", or "*this organization*"), then the value of `{{ID}}` should be `1`.
-* `logo`: A reference-by-ID to an `image` of the organization's logo.
+  * `name`: The name of the `Organization`.
 * `URL:` The site's home URL.
-* `name`: The name of the `Organization`.
+* `logo`: A reference-by-ID to an `ImageObject` of the organization's logo.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
@@ -32,7 +33,7 @@ If the node is not output, any entities which would otherwise have declared a re
 The following should be added whenever available and valid:
 
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the organization (e.g., a Wikipedia page, or Facebook profile).
-* `image`: An array of `images` which represent the organization (including the `logo` ), referenced by ID.
+* `image`: An array of references-by-ID to `ImageObject` nodes which represent the organization (including the `logo` ).
 
 ## Transformations
 The `Organization` type may be transformed in the following scenarios.
@@ -50,10 +51,10 @@ The `Organization` type may be transformed in the following scenarios.
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/abc123",
               "url": "https://www.example.com/",
               "logo": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "name": "Example organization name"
           }
@@ -69,7 +70,7 @@ The `Organization` type may be transformed in the following scenarios.
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/abc123",
               "url": "https://www.example.com/",
               "name": "Example organization name",
               "sameAs": [
@@ -77,14 +78,14 @@ The `Organization` type may be transformed in the following scenarios.
                   "https://www.linkedin.com/company/1234"
               ],
               "logo": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/image/abc123"
+                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/image/def456"
+                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
                   }
               ]
           }

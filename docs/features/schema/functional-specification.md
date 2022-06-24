@@ -22,17 +22,17 @@ The following is a simplified representation of the graph which we construct on 
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/1",
               "url": "https://www.example.com/",
               "name": "Example organization name"
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               }
           },
           {
@@ -42,7 +42,7 @@ The following is a simplified representation of the graph which we construct on 
               "name": "Example page name",
               "description": "Example page description",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               }
           }
       ]
@@ -63,7 +63,7 @@ The following examples demonstrate how our base script may be extended and alter
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -77,23 +77,23 @@ The following examples demonstrate how our base script may be extended and alter
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/image/abc123",
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
                   "url": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               }
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -108,10 +108,10 @@ The following examples demonstrate how our base script may be extended and alter
               "inLanguage": "en-US",
               "name": "Example Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               },
               "about": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -128,7 +128,7 @@ The following examples demonstrate how our base script may be extended and alter
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -142,23 +142,23 @@ The following examples demonstrate how our base script may be extended and alter
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/image/abc123",
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
                   "url": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               }
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -172,11 +172,11 @@ The following examples demonstrate how our base script may be extended and alter
               "url": "https://www.example.com/blog/example-article/",
               "inLanguage": "en-US",
               "breadcrumb": {
-                  "@id": "https://www.example.com/blog/example-article/#/schema/breadcrumb/abc123"
+                  "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
               },
               "name": "Example Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -184,7 +184,7 @@ The following examples demonstrate how our base script may be extended and alter
           },
           {
               "@type": "Article",
-              "@id": "https://www.example.com/blog/example-article/#/schema/article/abc123",
+              "@id": "https://www.example.com/#/schema/Article/abc123",
               "headline": "Example article headline",
               "description": "Example article description",
               "isPartOf": {
@@ -196,36 +196,36 @@ The following examples demonstrate how our base script may be extended and alter
               "datePublished": "2019-07-10T08:08:40+00:00",
               "dateModified": "2019-07-10T08:43:03+00:00",
               "commentCount": 6,
-              "articleSection": "Cats,Dogs,Recipes",
+              "articleSection": ["Cats","Dogs","Recipes"],
               "author": {
-                  "@id": "https://www.example.com/#/schema/person/abc123"
+                  "@id": "https://www.example.com/#/schema/Person/abc123"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/image/abc123"
+                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/image/def456"
+                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
                   }
               ],
               "video": [
                   {
-                      "@id": "https://www.example.com/#/schema/video/abc123"
+                      "@id": "https://www.example.com/#/schema/VideoObject/abc123"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/video/def456"
+                      "@id": "https://www.example.com/#/schema/VideoObject/def456"
                   }
               ]
           },
           {
               "@type": "Person",
-              "@id": "https://www.example.com/#/schema/person/abc123",
+              "@id": "https://www.example.com/#/schema/Person/abc123",
               "name": "Example person name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "sameAs": [
                   "https://www.wikipedia.com/example-organization",
@@ -234,7 +234,7 @@ The following examples demonstrate how our base script may be extended and alter
           },
           {
               "@type": "BreadcrumbList",
-              "@id": "https://www.example.com/blog/example-article/#/schema/breadcrumb/abc123",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
               "itemListElement": [
                   {
                       "@type": "ListItem",
@@ -278,7 +278,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/1",
               "name": "Example Orgnaization",
               "url": "https://www.example.com/",
               "sameAs": [
@@ -292,23 +292,23 @@ Note that these are actually two separate graph blocks in reality, that are stit
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/image/abc123",
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
                   "url": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               }
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com/",
               "name": "Example Website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "potentialAction": {
                   "@type": "SearchAction",
@@ -325,11 +325,11 @@ Note that these are actually two separate graph blocks in reality, that are stit
               "url": "https://www.example.com/products/example-page/",
               "inLanguage": "en-US",
               "breadcrumb": {
-                  "@id": "https://www.example.com/products/example-page/#/schema/breadcrumb/abc123"
+                  "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
               },
               "name": "Example Product Page",
               "isPartOf": {
-                  "@id": "https://www.example.com/#/schema/website/1"
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
               },
               "datePublished": "2015-09-14T08:13:22+00:00",
               "dateModified": "2019-03-28T12:46:37+00:00",
@@ -337,7 +337,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
           },
           {
               "@type": "BreadcrumbList",
-              "@id": "https://www.example.com/products/example-page/#/schema/breadcrumb/abc123",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
               "itemListElement": [
                   {
                       "@type": "ListItem",
@@ -371,10 +371,10 @@ Note that these are actually two separate graph blocks in reality, that are stit
           },
           {
               "@type": "Product",
-              "@id": "https://www.example.com/#/schema/product/abc123",
+              "@id": "https://www.example.com/#/schema/Product/abc123",
               "name": "Vneck Tshirt",
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
               "sku": 83,
@@ -392,7 +392,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                       "availability": "https://schema.org/InStock",
                       "url": "https://www.example.com/products/example-page/",
                       "seller": {
-                          "@id": "https://www.example.com/#/schema/organization/1"
+                          "@id": "https://www.example.com/#/schema/Organization/1"
                       }
                   }
               ],
@@ -403,7 +403,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
               },
               "review": [
                   {
-                      "@id": "https://www.example.com/#/schema/review/abc123",
+                      "@id": "https://www.example.com/#/schema/Review/abc123",
                       "datePublished": "2019-04-09T09:10:12+00:00",
                       "description": "What a nice turtle shirt.",
                       "reviewRating": {
@@ -416,7 +416,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                       }
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/review/def456",
+                      "@id": "https://www.example.com/#/schema/Review/def456",
                       "datePublished": "2019-04-09T09:10:29+00:00",
                       "description": "Awesome shirt",
                       "reviewRating": {

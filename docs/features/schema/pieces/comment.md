@@ -15,7 +15,8 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid  `Comment` must have the following properties.
 
-* `@id`: The unmodified *canonical URL* of the parent `WebPage`, appended by `#/schema/comment/{{ID}}`, where `{{ID}}` is a unique identifier for the comment in question.
+* `@type`: `Comment`.
+* `@id`: The site's home URL appended by `#/schema/Comment/{{ID}}`, where `{{ID}}` is a unique identifier for the comment in question.
 * `about`: A reference by ID to the parent `Article` (or `WebPage`, when no Article is `present`).
 * `text`: The textual content of the comment, stripping HTML tags.
 * `author`: A reference by ID to the `Person` who wrote the comment.
@@ -26,7 +27,7 @@ If any of the required fields are missing or invalid, the node should not be out
 ## Optional properties
 The following should be added whenever available and valid:
 
-* `url`: The unmodified *canonical URL* of the parent `WebPage`, appended by `comment-{{NUM}}`, where `{{NUM}}` is the database ID of the comment.
+* `url`: The unmodified *canonical URL* of the parent `WebPage`, appended by `#comment-{{NUM}}`, where `{{NUM}}` is the database ID of the comment.
 
 ## Examples
 
@@ -38,13 +39,13 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "Comment",
-              "@id": "https://www.example.com/blog/example-article/#/schema/comment/abc123",
+              "@id": "https://www.example.com/#/schema/Comment/abc123",
               "about": {
                   "@id": "https://www.example.com/blog/example-article/"
               },
               "text": "Example comment content",
               "author": {
-                  "@id": "https://www.example.com/#/schema/person/abc123"
+                  "@id": "https://www.example.com/#/schema/Person/abc123"
               }
           }
       ]

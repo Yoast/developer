@@ -151,7 +151,7 @@ function example_change_webpage( $data ) {
 }
 ```
 
-## Perform complex changes to the whole Schema 
+## Perform complex changes to the whole Schema
 If you need to perform complex operations to the Schema, such as changing values in different parts of the output, you can hook into our `wpseo_schema_graph` filter. For instance:
 
 ```php

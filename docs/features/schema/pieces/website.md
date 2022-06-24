@@ -15,7 +15,8 @@ Should be output on all public pages.
 ## Required properties
 A valid `WebSite` must have the following properties.
 
-* `@id`: The site's home URL appended by `#/schema/website/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier.
+* `@type`: `WebSite`.
+* `@id`: The site's home URL appended by `#/schema/WebSite/{{ID}}`, where `{{ID}}` is a globally unique, stable identifier.
   * If the `WebSite` is the website being viewed/consumed (i.e., "*this website*"), then the value of `{{ID}}` should be `1`.
 * `url`: The site's home URL (excluding a trailing slash).
 * `name`: The name of the website.
@@ -26,7 +27,7 @@ If any of the required fields are missing or invalid, the node should not be out
 ## Optional properties
 The following should be added whenever available and valid:
 
-* `publisher`: A reference-by-ID to the `Organization` which publishes the `WebSite` (or an array of `Organization` and `Person` in the case that the website represents an individual).
+* `publisher`: A reference-by-ID to the node representing the entity which publishes the `WebSite`.
 * `potentialAction`: A `SearchAction` object describing the site's internal search.
 * `inLanguage`: The language code for the WebSite; e.g., `en-GB`.
  * If the website is available in multiple languages, then output an array of `inLanguage` values.
@@ -42,7 +43,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com",
               "name": "Example website"
           }
@@ -58,7 +59,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com",
               "name": "Example website",
               "inLanguage": "en-US",
@@ -68,7 +69,7 @@ The following should be added whenever available and valid:
                   "query-input": "required name=search_term_string"
               },
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               }
           }
       ]

@@ -24,8 +24,8 @@ May be transformed into a more specific type (such as `library`), or extend an e
 ## Required properties
 A valid `LocalBusiness` must have the following properties.
 
-* `@type`: Should always be an array of  `Organization`,  `Place`, and the most specific sub-type selected (e.g.,  `['Organization','Place','Dentist']` ).
-* `ID`: The site's home URL appended by `#/schema/organization/{{ID}}`, where `{{ID}}` is a unique identifier (e.g., the *Post ID* ).
+* `@type`: An array of `Organization`, `Place`, and the most specific sub-type selected (e.g., `['Organization', 'Place', 'Dentist']` ).
+* `@id`: The site's home URL appended by `#/schema/Organization/{{ID}}`, where `{{ID}}` is a unique identifier for the organization in question.
 * `name`: The name of the business.
 * `image`: A reference-by-ID to an `imageObject` which represents the business.
 * `address`: A reference-by-ID to an `PostalAddress` piece.
@@ -61,13 +61,13 @@ The following should be added whenever available and valid:
                   "Place",
                   "Dentist"
               ],
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/abc123",
               "name": "Example business name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "address": {
-                  "@id": "https://www.example.com/#/schema/address/abc123"
+                  "@id": "https://www.example.com/#/schema/Address/abc123"
               }
           }
       ]
@@ -86,7 +86,7 @@ The following should be added whenever available and valid:
                   "Place",
                   "Dentist"
               ],
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/abc123",
               "url": "https://www.example.com/example-business-page/",
               "email": "example@example.com",
               "priceRange": "$$",
@@ -120,10 +120,10 @@ The following should be added whenever available and valid:
               "vatID": "abc123",
               "taxID": "def456",
               "image": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "address": {
-                  "@id": "https://www.example.com/#/schema/address/abc123"
+                  "@id": "https://www.example.com/#/schema/Address/abc123"
               }
           }
       ]

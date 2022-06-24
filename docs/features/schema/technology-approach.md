@@ -20,7 +20,7 @@ In theory, this allows us to avoid having to duplicate or repeat shared properti
 
 Unfortunately, the level of  *cross-page* support for this technique is limited - Google's documentation is vague, and there's ambiguity around the relationship between IDs and URIs (anecdotally, they "can't extract structured data from other pages" [*verbatim*]). Given this constraint, we require that every page output all of the relevant pieces, and cross-reference these through `hasPart`, `isPartOf`, `mainEntityOfPage` and similar lookup mechanisms.
 
-E.g., the following (simplified) JSON snippet defines an `Organization`, and references that `Organization` as the `Publisher` of a `Website`:
+E.g., the following (simplified) JSON snippet defines an `Organization`, and references that `Organization` as the `Publisher` of a `WebSite`:
 
 <YoastSchemaExample>
 {`{
@@ -28,17 +28,17 @@ E.g., the following (simplified) JSON snippet defines an `Organization`, and ref
       "@graph": [
           {
               "@type": "Organization",
-              "@id": "https://www.example.com/#/schema/organization/1",
+              "@id": "https://www.example.com/#/schema/Organization/1",
               "url": "https://www.example.com/",
               "name": "Example organization name"
           },
           {
               "@type": "WebSite",
-              "@id": "https://www.example.com/#/schema/website/1",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
               "url": "https://www.example.com/",
               "name": "Example website",
               "publisher": {
-                  "@id": "https://www.example.com/#/schema/organization/1"
+                  "@id": "https://www.example.com/#/schema/Organization/1"
               }
           }
       ]
@@ -94,10 +94,9 @@ These are also documented in their various [pieces documentation](https://develo
 When the node is a hybrid type (i.e., `@type` is an array of values, such as `['Organization', 'Person']`), then:
 
 * The `{{type}}` value should concatenate the `@type` values in alphabetical order, separated by a hyphen (e.g., `organization-person`), and;
-* The `{{identifier}}`value should concatenate the `{{identifier}}` values from each member, in alphabetical order by `@type` (e.g., `1-abc123` for an `organization` with ID `1` and a `person` with ID `abc123`).
 
 ## Primary entities
-Our model assumes that every URL should represent a *primary entity*- be it an organization, a product, a blog post (or collection of blog posts), a person, or some other *thing*.
+Our model assumes that every URL should represent a *primary entity* - be it an organization, a product, a blog post (or collection of blog posts), a person, or some other *thing*.
 
 We always aim for that 'primary entity' to be at the centre of the network graph on each page. This mental model aligns closely to how we want search engines to understand our networks; it allows us to articulate our content in ways such as, "This *URL* represents a `Recipe`, which is part of an `Article`, which was written by a `Person`, on a `WebPage`, which is part of a `WebSite`, which is operated by an `Organization`".
 

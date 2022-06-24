@@ -15,7 +15,8 @@ Describes an offer for a `Product` (typically prices, stock availability, etc).
 ## Required properties
 A valid `Offer` must have the following properties.
 
-* `ID`: The site's home URL appended by `#/schema/offer/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `Offer`.
+* `@id`: The site's home URL appended by `#/schema/Offer/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `availability`: A schema.org URL representing a schema `itemAvailability` value (e.g., *https://schema.org/OutOfStock*).
 * `price`: The price, omitting any currency symbols, and using '.' to indicate a decimal place.
 * `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
@@ -42,7 +43,7 @@ If the node is not output, any entities which would otherwise have referenced th
       "@graph": [
           {
               "@type": "Offer",
-              "@id": "https://www.example.com/#/schema/offer/abc123",
+              "@id": "https://www.example.com/#/schema/Offer/abc123",
               "price": "22.00",
               "priceSpecification": {
                   "@type": "PriceSpecification",

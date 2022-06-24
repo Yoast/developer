@@ -22,7 +22,7 @@ Collectively, these nodes (and their derivatives) form the core of any graph we 
 Components which relate to the structure of a website, page or content.
 
 * [Breadcrumb](pieces/breadcrumb.md)
-* [Site search](pieces/searchaction.md) (searchAction)
+* [Site search](pieces/searchaction.md) (SearchAction)
 
 ### Entities
 Components which identify a *thing*.
@@ -42,9 +42,9 @@ Components which describe the content of/in a page.
 * [Comment](pieces/comment.md)
 
 #### Media
-* [Image](pieces/image.md) (imageObject)
-* [Video](pieces/video.md) (videoObject)
+* [Image](pieces/image.md) (ImageObject)
+* [Video](pieces/video.md) (VideoObject)
 
 #### Local
-* [Local business](pieces/localbusiness.md) (localBusiness)
+* [Local business](pieces/localbusiness.md) (LocalBusiness)
 * [Address](pieces/postaladdress.md) (PostalAddress)

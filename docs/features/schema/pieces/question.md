@@ -15,9 +15,10 @@ Should be added as top-level nodes in the graph, when the content of a page cont
 ## Required properties
 A valid `Question` must have the following properties.
 
-* `@id`: The unmodified  *canonical URL*  of the page, appended by `#/schema/question/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `Question`.
+* `@id`: The site's home URL appended by `#/schema/Question/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The text content of the question.
-* `acceptedAnswer`: An `answer` object, with a `text` property which contains the answer to the question.
+* `acceptedAnswer`: An `Answer` object, with a `text` property which contains the answer to the question.
 
 ## Failure scenarios
 If any of the required fields of the `Question` are missing or invalid, the node should not be output.
@@ -39,7 +40,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "Question",
-              "@id": "https://www.example.com/example-page/#/schema/question/abc123",
+              "@id": "https://www.example.com/#/schema/Question/abc123",
               "name": "What is the return policy?",
               "acceptedAnswer": {
                   "@type": "Answer",

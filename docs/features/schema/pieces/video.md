@@ -15,16 +15,17 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `VideoObject` must have the following properties.
 
-* `@id`: The site's home URL appended by `#/schema/video/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@type`: `VideoObject`.
+* `@id`: The site's home URL appended by `#/schema/VideoObject/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The title of the video.
 * `description`: A description of the video (falling back to the `caption`, then to 'No description').
-* `thumbnailUrl`: A reference-by-ID to an `imageObject`.
+* `thumbnail`: A reference-by-ID to an `ImageObject` representing the video content.
 * `uploadDate`: The date the video was published, in ISO 8601 format (e.g., `2020-01-20`).
 
 ## Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.
 
-If the node is not output, any entities which would otherwise have declared a relationship with the `Video` (e.g., as a part of an `Article`) should remove those references.
+If the node is not output, any entities which would otherwise have declared a relationship with the `VideoObject` (e.g., as a part of an `Article`) should remove those references.
 
 ## Optional properties
 The following should be added whenever available and valid:
@@ -54,11 +55,11 @@ Optional properties which should only be output when the required criteria is me
       "@graph": [
           {
               "@type": "VideoObject",
-              "@id": "https://www.example.com/#/schema/video/abc123",
+              "@id": "https://www.example.com/#/schema/VideoObject/abc123",
               "name": "Example video",
               "description": "Example video description",
               "thumbnailUrl": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "uploadDate": "2016-03-31T08:00:00+08:00"
           }
@@ -73,7 +74,7 @@ Optional properties which should only be output when the required criteria is me
       "@context": "https://schema.org",
       "@graph": [
           {
-              "@id": "https://www.example.com/#/schema/video/abc123",
+              "@id": "https://www.example.com/#/schema/VideoObject/abc123",
               "@type": "VideoObject",
               "contentUrl": "https://www.example.com/videos/video123.mp4",
               "description": "Example video description",
@@ -83,8 +84,8 @@ Optional properties which should only be output when the required criteria is me
               "inLanguage": "en-US",
               "isFamilyFriendly": true,
               "name": "Example video",
-              "thumbnailUrl": {
-                  "@id": "https://www.example.com/#/schema/image/abc123"
+              "thumbnail": {
+                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
               },
               "uploadDate": "2016-03-31",
               "width": 480

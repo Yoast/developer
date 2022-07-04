@@ -27,6 +27,7 @@ A valid `Offer` must have the following properties.
 The following should be added whenever available and valid:
 
 * `priceValidUntil`: A date (in YYYY-mm-dd format) representing the end of a current, temporary pricing value (e.g., a sales period with a defined end-date).
+* `seller`: A reference-by-ID to the `WebSite`'s publishing `Organization`.
 
 ### Failure scenarios
 If any of the required fields are missing or invalid, the node should not be output.

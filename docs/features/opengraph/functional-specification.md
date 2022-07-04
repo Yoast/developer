@@ -59,4 +59,4 @@ The following tags used to be output by Yoast SEO, but have been removed in rece
 ## Misc related tags
 | Tag | Description | Notes |
 |---|----|---|
-| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on post types with authorship enabled |
+| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on `post` types. |

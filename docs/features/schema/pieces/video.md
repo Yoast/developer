@@ -59,7 +59,7 @@ Optional properties which should only be output when the required criteria is me
               "name": "Example video",
               "description": "Example video description",
               "thumbnailUrl": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "uploadDate": "2016-03-31T08:00:00+08:00"
           }
@@ -85,7 +85,7 @@ Optional properties which should only be output when the required criteria is me
               "isFamilyFriendly": true,
               "name": "Example video",
               "thumbnail": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "uploadDate": "2016-03-31",
               "width": 480

@@ -77,14 +77,15 @@ The following examples demonstrate how our base script may be extended and alter
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
+                  "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
+                  "contentURL": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/images/example.jp"
               }
           },
           {
@@ -142,14 +143,15 @@ The following examples demonstrate how our base script may be extended and alter
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
+                  "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
+                  "contentURL": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/images/example.jpg"
               }
           },
           {
@@ -205,10 +207,10 @@ The following examples demonstrate how our base script may be extended and alter
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                      "@id": "https://www.example.com/images/example-2.jpg"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                      "@id": "https://www.example.com/images/example-3.jpg"
                   }
               ],
               "video": [
@@ -225,7 +227,7 @@ The following examples demonstrate how our base script may be extended and alter
               "@id": "https://www.example.com/#/schema/Person/abc123",
               "name": "Example person name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/images/example-4.jpg"
               },
               "sameAs": [
                   "https://www.wikipedia.com/example-organization",
@@ -292,14 +294,15 @@ Note that these are actually two separate graph blocks in reality, that are stit
               ],
               "logo": {
                   "@type": "ImageObject",
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123",
+                  "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
+                  "contentURL": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/images/example.jpg"
               }
           },
           {
@@ -374,7 +377,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
               "@id": "https://www.example.com/#/schema/Product/abc123",
               "name": "Vneck Tshirt",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/images/example-2.jpg"
               },
               "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
               "sku": 83,

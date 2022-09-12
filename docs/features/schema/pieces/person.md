@@ -69,7 +69,7 @@ Optional properties which should only be output when the required criteria is me
               "@id": "https://www.example.com/#/schema/Person/abc123",
               "name": "Example person name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "sameAs": [
                   "https://www.wikipedia.com/example-person",

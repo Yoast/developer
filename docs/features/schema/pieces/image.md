@@ -18,13 +18,11 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 A valid `ImageObject` must have the following properties.
 
 * `@type`: `ImageObject`.
-* `@id`: The site's home URL appended by `#/schema/ImageObject/{{ID}}`, where `{{ID}}` is a unique identifier for the image in question.
-* `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
-* `contentUrl`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg`).
+* `@id`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg?size=large`).
+* `url`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg?size=large`).
+* `contentUrl`: The fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg?size=large`).
 
 ## Failure scenarios
-When we cannot ascertain the ID of an image but _can_ ascertain its URL (e.g., in the case of filtering for external media storage), then the `@id` property should be set to the URL of the image.
-
 If any of the required fields are missing or invalid, the node should not be output.
 
 If the node is not output, any entities which would otherwise have declared a relationship with the `Image` (e.g., as the `logo` of an `Organization`) should remove those references.
@@ -61,7 +59,7 @@ However, Google’s testing tools throw errors in some scenarios when the `url` 
       "@graph": [
           {
               "@type": "ImageObject",
-              "@id": "https://www.example.com/#/schema/ImageObject/abc123",
+              "@id": "https://www.example.com/uploads/example-image.jpg",
               "url": "https://www.example.com/uploads/example-image.jpg"
               "contentUrl": "https://www.example.com/uploads/example-image.jpg"
           }
@@ -77,7 +75,7 @@ However, Google’s testing tools throw errors in some scenarios when the `url` 
       "@graph": [
           {
               "@type": "ImageObject",
-              "@id": "https://www.example.com/#/schema/ImageObject/abc123",
+              "@id": "https://www.example.com/uploads/example-image.jpg",
               "url": "https://www.example.com/uploads/example-image.jpg",
               "contentUrl": "https://www.example.com/uploads/example-image.jpg",
               "caption": "Example caption",

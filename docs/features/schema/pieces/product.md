@@ -50,7 +50,7 @@ The following should be added whenever available and valid:
               "@id": "https://www.example.com/#/schema/Product/abc123",
               "name": "Example Product",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               }
           }
       ]
@@ -69,7 +69,7 @@ The following should be added whenever available and valid:
               "name": "Example Product",
               "description": "Example product description",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "offers": {
                   "@id": "https://www.example.com/#/schema/Offer/abc123"

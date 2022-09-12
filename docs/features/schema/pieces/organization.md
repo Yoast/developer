@@ -54,7 +54,7 @@ The `Organization` type may be transformed in the following scenarios.
               "@id": "https://www.example.com/#/schema/Organization/abc123",
               "url": "https://www.example.com/",
               "logo": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "name": "Example organization name"
           }
@@ -78,14 +78,14 @@ The `Organization` type may be transformed in the following scenarios.
                   "https://www.linkedin.com/company/1234"
               ],
               "logo": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                      "@id": "https://www.example.com/uploads/example-image.jpg"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                      "@id": "https://www.example.com/uploads/example-image-2.jpg"
                   }
               ]
           }

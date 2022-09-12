@@ -86,7 +86,7 @@ Optional properties which should only be output when the required criteria are m
                   "@id": "https://www.example.com/#/schema/Organization/1"
               },
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               }
           }
       ]
@@ -123,10 +123,10 @@ Optional properties which should only be output when the required criteria are m
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                      "@id": "https://www.example.com/uploads/example-image.jpg"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                      "@id": "https://www.example.com/uploads/example-image-2.jpg"
                   }
               ],
               "video": [

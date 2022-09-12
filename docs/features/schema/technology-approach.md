@@ -80,7 +80,7 @@ See the relevant [pieces documentation](pieces.md) in each case for the correct 
 ### `{{identifier}}` composition
 The `{{identifier}}` parameter should always be constructed using the following cascade:
 
-* A globally unique, stable system ID (e.g., the database ID of an `image`).
+* A globally unique, stable system ID (e.g., the database ID of an object).
 * A globally unique, stable ID synthesized from context (e.g., `abc123-3` for the third `offer` associated with a `product` having ID `abc123`).
 * A sequential integer local to the `WebPage` in which the entity resides (e.g., `4` for the fourth `itemlist` on a given page).
 

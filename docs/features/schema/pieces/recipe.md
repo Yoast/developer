@@ -79,7 +79,7 @@ The following should be added whenever available and valid:
             },
             "name": "Party Coffee Cake",
             "image": {
-                "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                "@id": "https://www.example.com/uploads/example-image.jpg"
             },
             "recipeIngredient": [
                 "2 cups of flour",
@@ -140,7 +140,7 @@ The following should be added whenever available and valid:
             },
             "name": "Party Coffee Cake",
             "image": {
-                "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                "@id": "https://www.example.com/uploads/example-image.jpg"
             },
             "video": {
                 "@id": "https://www.example.com/#/schema/VideoObject/abc123"
@@ -186,7 +186,7 @@ The following should be added whenever available and valid:
                     "text": "Preheat the oven to 350 degrees F. Grease and flour a 9x9 inch pan.",
                     "url": "https://example.com/example-page/test/#recipe-step-1",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                        "@id": "https://www.example.com/uploads/example-image-2.jpg"
                     }
                 },
                 {
@@ -195,7 +195,7 @@ The following should be added whenever available and valid:
                     "text": "In a large bowl, combine flour, sugar, baking powder, and salt.",
                     "url": "https://example.com/example-page/test/#recipe-step-2",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                        "@id": "https://www.example.com/uploads/example-image-3.jpg"
                     }
                 },
                 {
@@ -204,7 +204,7 @@ The following should be added whenever available and valid:
                     "text": "Mix in the butter, eggs, and milk.",
                     "url": "https://example.com/example-page/test/#recipe-step-3",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/ghi789"
+                        "@id": "https://www.example.com/uploads/example-image-4.jpg"
                     }
                 },
                 {
@@ -213,7 +213,7 @@ The following should be added whenever available and valid:
                     "text": "Spread into the prepared pan.",
                     "url": "https://example.com/example-page/test/#recipe-step-4",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/jkl012"
+                        "@id": "https://www.example.com/uploads/example-image-5.jpg"
                     }
                 },
                 {
@@ -222,7 +222,7 @@ The following should be added whenever available and valid:
                     "text": "Bake for 30 to 35 minutes, or until firm.",
                     "url": "https://example.com/example-page/test/#recipe-step-5",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/mno345"
+                        "@id": "https://www.example.com/uploads/example-image-6.jpg"
                     }
                 },
                 {
@@ -231,7 +231,7 @@ The following should be added whenever available and valid:
                     "text": "Allow to cool and enjoy.",
                     "url": "https://example.com/example-page/test/#recipe-step-6",
                     "image": {
-                        "@id": "https://www.example.com/#/schema/ImageObject/pqr678"
+                        "@id": "https://www.example.com/uploads/example-image-7.jpg"
                     }
                 }
             ]

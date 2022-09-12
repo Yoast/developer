@@ -50,14 +50,13 @@ In this example, we know that the `publisher` of the website is the same as the 
 Given this capability, we prefer to avoid deep nesting of properties whenever possible and prefer to break out individual pieces, as in the examples which follow. This keeps the code readable, modularized, and extensible.
 
 ### Constructing ID parameters
-ID parameters should always adopt the following structure:
+ID parameters should generally adopt the following structure, with the exceptions listed below:
 
 `{{website}}/#/schema/{{type}}/{{ID}}`
 
 E.g:
 
 * `https://www.example.com/#/schema/organization/abc123`
-* `https://www.example.com/#/schema/image/abc123`
 * `https://www.example.com/#/schema/person/abc123`
 * `https://www.example.com/#/schema/location/abc123`
 * `https://www.example.com/#/schema/address/abc123`
@@ -70,6 +69,9 @@ E.g:
 * `https://www.example.com/#/schema/itemlist/abc123`
 
 See the relevant [pieces documentation](pieces.md) in each case for the correct structure (where defined).
+
+#### Exceptions
+* The ID of _images_ (`ImageObject`) should be the fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg?size=large`).
 
 **Notes:**
 * `website` is the `protocol` + `hostname` of the site (e.g., `https://www.example.com`).

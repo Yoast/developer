@@ -64,7 +64,7 @@ The following should be added whenever available and valid:
               "@id": "https://www.example.com/#/schema/Organization/abc123",
               "name": "Example business name",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "address": {
                   "@id": "https://www.example.com/#/schema/Address/abc123"
@@ -120,7 +120,7 @@ The following should be added whenever available and valid:
               "vatID": "abc123",
               "taxID": "def456",
               "image": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "address": {
                   "@id": "https://www.example.com/#/schema/Address/abc123"

@@ -120,14 +120,14 @@ On search results pages, the *type* property should be altered to an array of `[
                   "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
               },
               "primaryImageOfPage": {
-                  "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                  "@id": "https://www.example.com/uploads/example-image.jpg"
               },
               "image": [
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                      "@id": "https://www.example.com/uploads/example-image.jpg"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                      "@id": "https://www.example.com/uploads/example-image-2.jpg"
                   }
               ],
               "video": [

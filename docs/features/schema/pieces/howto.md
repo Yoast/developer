@@ -116,7 +116,7 @@ The following should be added whenever available and valid:
                       "name": "Example step 1",
                       "url": "https://www.example.com/example-page/#how-to-step-1",
                       "image": {
-                          "@id": "https://www.example.com/#/schema/ImageObject/abc123"
+                          "@id": "https://www.example.com/uploads/example-image.jpg"
                       },
                       "itemListElement": [
                           {
@@ -131,7 +131,7 @@ The following should be added whenever available and valid:
                       "text": "Example step 2 (no description)",
                       "url": "https://www.example.com/example-page/#how-to-step-2",
                       "image": {
-                          "@id": "https://www.example.com/#/schema/ImageObject/def456"
+                          "@id": "https://www.example.com/uploads/example-image-2.jpg"
                       }
                   },
                   {

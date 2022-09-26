@@ -5,7 +5,7 @@ sidebar_label: Article
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/article.md
 description: Describes an 'Article' on a 'WebPage'.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes an `Article` on a `WebPage`.
 May be transformed into a more specific type (such as `NewsArticle`) if the required conditions are met.

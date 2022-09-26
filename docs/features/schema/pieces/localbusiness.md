@@ -5,7 +5,7 @@ sidebar_label: LocalBusiness
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/localbusiness.md
 description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 import Alert from '@site/src/components/Alert';
 
 <Alert>

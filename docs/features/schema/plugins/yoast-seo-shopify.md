@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/featur
 description: Describes the schema output of the Yoast SEO app for Shopify.
 ---
 
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO for Shopify app.
 

@@ -5,7 +5,7 @@ sidebar_label: Breadcrumb
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/breadcrumb.md
 description: Describes the hierarchical position a 'WebPage' within a 'WebSite'.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 import Alert from '@site/src/components/Alert';
 
 <Alert>

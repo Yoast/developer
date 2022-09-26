@@ -5,7 +5,7 @@ sidebar_label: Local SEO for WordPress
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/local-seo.md
 description: Describes the schema output of Yoast's "Local SEO" plugin for WordPress.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plugins/local-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
 

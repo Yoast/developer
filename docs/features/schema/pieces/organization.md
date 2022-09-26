@@ -5,7 +5,7 @@ sidebar_label: Organization
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/organization.md
 description: Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a 'WebSite'.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a `WebSite`.
 

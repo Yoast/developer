@@ -5,7 +5,7 @@ sidebar_label: Offer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/offer.md
 description: Describes an offer for a 'Product' (typically prices, stock availability, etc).
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes an offer for a `Product` (typically prices, stock availability, etc).
 

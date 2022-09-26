@@ -5,7 +5,7 @@ sidebar_label: Integrations
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/shopify/integrations.md
 description: Details about how Yoast SEO for Shopify integrates with apps and services
 ---
-import YoastSchemaExample from '../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../src/components/YoastSchemaExample';
 
 At the moment, Yoast SEO for Shopify integrates with the following services:
 - [Judge.me](https://apps.shopify.com/judgeme)

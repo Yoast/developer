@@ -5,7 +5,7 @@ sidebar_label: AggregateOffer
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/aggregateoffer.md
 description: Describes a group of 'offers' for a 'Product', typically due to variations in attributes (colors, sizes, prices).
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes a group of `offers` for a `Product`, typically due to variations in attributes (colors, sizes, prices).
 

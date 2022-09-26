@@ -5,7 +5,7 @@ sidebar_label: Recipe
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/recipe.md
 description: Describes a 'Recipe', which contains a series of instructions, ingredients, and optional fields.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes a `Recipe`, which contains a series of instructions, ingredients, and optional fields.
 

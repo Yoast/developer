@@ -5,7 +5,7 @@ sidebar_label: Yoast SEO
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo.md
 description: Describes the schema output of the Yoast SEO plugin for WordPress.
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO plugin. More information about our API, integration mechanics, and methodology can be found [here](../overview.md).
 

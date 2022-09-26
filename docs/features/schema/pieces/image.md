@@ -5,7 +5,7 @@ sidebar_label: Image (ImageObject)
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/image.md
 description: Describes an individual image (usually in the context of an embedded media object).
 ---
-import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
+import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes an individual image (usually in the context of an embedded media object).
 

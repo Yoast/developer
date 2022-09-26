@@ -9,7 +9,7 @@ To use the Alert component in your Markdown files, ensure you have properly incl
 ```jsx
 // This is where you doc header would end...
 
-import Alert from '../../../../developer-site/src/components/Alert';
+import Alert from '../../../src/components/Alert';
 
 // ...
 

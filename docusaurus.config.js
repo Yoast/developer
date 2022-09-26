@@ -88,7 +88,7 @@ const config = {
 		},
 	},
 	customFields: {
-		docsPath: '../developer-docs/docs',
+		docsPath: 'docs',
 	},
 	themes: [],
 	presets: [

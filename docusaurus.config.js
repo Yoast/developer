@@ -17,7 +17,8 @@ const config = {
 	],
 	themeConfig: {
 		algolia: {
-			apiKey: process.env.DOCSEARCH_KEY,
+			appId: process.env.ALGOLIA_APPID,
+			apiKey: process.env.ALGOLIA_KEY,
 			indexName: 'yoast_developer',
 		},
 		colorMode: {

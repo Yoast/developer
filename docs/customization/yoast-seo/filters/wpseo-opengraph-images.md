@@ -1,10 +1,10 @@
 ---
 id: wpseo-opengraph-images
 title: Yoast SEO - Filters for changing the OpenGraph images output by Yoast SEO
-sidebar_label: Alter an existing OpenGraph image
+sidebar_label: Alter OpenGraph images output
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/filters/add-wpseo-opengraph-images-filter.md
 ---
-These filter allow altering an existing OpenGraph image and/or adding images to the output. 
+These filters allow altering an existing OpenGraph image and/or adding images to the output. 
 
 ## Usage
 

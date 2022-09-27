@@ -17,7 +17,6 @@ const config = {
 	],
 	themeConfig: {
 		algolia: {
-			appId: process.env.ALGOLIA_APPID,
 			apiKey: process.env.ALGOLIA_KEY,
 			indexName: 'yoast_developer',
 		},

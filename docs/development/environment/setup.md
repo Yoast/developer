@@ -14,7 +14,7 @@ This page describes the process of how we set up development environments at Yoa
 Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](tools.md) which lists the various tools that need to be used (unless otherwise noted).
 
 ## Organizing your projects
-Generally speaking, we advise people to create a `Yoast` folder in their `Documents` directory to keep all things together. After this, you have two flavors:
+Generally speaking, we advise people to create a `~/Projects/Yoast` folder to keep all things together. Note: don't create a Yoast folder in Documents, Desktop or Downloads; this will likely cause an error. After this, you have two flavors:
 
 *   Clone plugins on an environment-by-environment basis, which allows you to have various versions of the same plugin on your system, without them (possibly) conflicting.
 *   Clone all plugins into a single directory and symlink them to the development environments. This results in the same version (branch) running across all development environments that were linked.

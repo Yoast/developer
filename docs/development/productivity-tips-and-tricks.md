@@ -37,7 +37,7 @@ It opens two files. Edit the one on the right (It's specific for your user). Add
 ### Natural Text Editing
 In normal text editors on your mac, you can navigate through text quickly using `⌥ + ←` or `⌥ + →`. To enable this in your terminal, go to `iTerm 2` → `Preferences` → `Profiles` → `keys`, Click `Load Preset...` and select `Natural Text Editing`.
 
-`⌘ + ←` and `⌘ + →` enables you to switch to the next or previous tab if you have multiple open at once. If you want to have these shortcuts jump to the beginning or end of a line, follow these instructions https://elweb.co/making-iterm-2-work-with-normal-mac-osx-keyboard-shortcuts/ (you can skip the instructions for the `⌥ + arrow` shortcuts, as the previous step already took care of that)
+`⌘ + ←` and `⌘ + →` enables you to switch to the next or previous tab if you have multiple open at once. If you want to have these shortcuts jump to the beginning or end of a line, follow these instructions https://gcollazo.com/making-iterm-2-work-with-normal-mac-osx-keyboard-shortcuts/ (you can skip the instructions for the `⌥ + arrow` shortcuts, as the previous step already took care of that)
 
 ## Git
 

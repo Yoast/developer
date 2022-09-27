@@ -60,7 +60,7 @@ However, Google’s testing tools throw errors in some scenarios when the `url` 
           {
               "@type": "ImageObject",
               "@id": "https://www.example.com/uploads/example-image.jpg",
-              "url": "https://www.example.com/uploads/example-image.jpg"
+              "url": "https://www.example.com/uploads/example-image.jpg",
               "contentUrl": "https://www.example.com/uploads/example-image.jpg"
           }
       ]

@@ -33,7 +33,7 @@ The setup in PhpStorm can be completed by following the next steps:
 *   Select the option: `Defined in the configuration file` and check the checkbox for `Use alternative configuration file`.
 *   Behind the checkbox, enter the full path to the `phpunit.xml.dist` file. This file is located in the plugin directory. If the repository contains a `phpunit.xml` file, use that one instead. (i.e wordpress-seo has two types of tests. Use `phpunit-integration.xml.dist` for the 'old' integration tests, and `phpunit.xml.dist` for the BrainMonkey tests.)
 *   Now you've entered the path, press the icon on the far right. This will bring you to the `Test frameworks` window.
-*   Press the plus icon and select the first option: `PHPUnit Local`. Select `Path to phpunit.phar` and enter the path to the file. It's probably in your `/Cellar` directory. If you do not have a `phpunit.phar` file yet, you can download it here: [https://phar.phpunit.de/](https://phar.phpunit.de/)
+*   Press the plus icon and select the first option: `PHPUnit Local`. Select `Use Composer autoloader`, which will autofill the `Path to script` to a path that ends with `/vendor/autoload.php`. This selection will prompt PhpStorm to use the version as retrieved via Composer.
 *   Finally, when you return to the `Run/Debug configurations` window, there might be an error message at the bottom. Press the `Fix` button next to it and select PHP as your CLI interpreter. Apply and done!
 
 ### Configuring PHPUnit to work with WordPress and the plugins

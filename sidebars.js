@@ -156,6 +156,10 @@ module.exports = {
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
+						'customization/yoast-seo/filters/alter-wpseo-opengraph-images-filter',
+						'customization/yoast-seo/filters/wpseo-add-opengraph-images',
+						'customization/yoast-seo/filters/wpseo-add-opengraph-images-filter',
+						'customization/yoast-seo/filters/yoast-seo-usage-tracking-filter',
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/change-metabox-prio-filter',
 						'customization/yoast-seo/filters/cornerstone-post-types-filter',
@@ -173,6 +177,7 @@ module.exports = {
 					type: 'category',
 					label: 'Yoast SEO Premium',
 					items: [
+						'customization/yoast-seo-premium/api-filter-actions-deprecations',
 						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
 						'customization/yoast-seo-premium/hiding-version-number',
 					],

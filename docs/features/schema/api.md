@@ -207,6 +207,29 @@ function example_change_article( $data ) {
 Instead of `YoastSEO()->helpers->schema->image->generate_from_attachment_id()` you can also use
 `YoastSEO()->helpers->schema->image->generate_from_url()` which takes, as you've guessed, a URL as input.
 
+## Replace domain name in the breadcrumb schema
+If you want to replace the domain name in the breadcrumb schema, you can use the `wpseo_schema_breadcrumb` filter to hook into the breadcrumb schema piece individually.
+
+```php
+add_filter('wpseo_schema_breadcrumb', 'replace_domain_name_to_breadcrumb_schema', 11, 2);
+/**
+ * Replace domain name in the breadcrumb schema piece individually.
+ * 
+ * @param array $piece Schema.org Breadcrumb data array.
+ * 
+ * @return array Altered Schema.org Breadcrumb data array.
+ */
+function replace_domain_name_to_breadcrumb_schema( $piece ) {
+    $piece['@id'] = str_replace( 'olddomain.tld', 'newdomain.tld', $piece['@id'] );
+    foreach ( $piece['itemListElement'] as &$list ) {
+        if ( $list['item'] ) {
+            $list['item'] = str_replace( 'olddomain.tld', 'newdomain.tld', $list['item'] );
+        }
+    }
+    return $piece;
+}
+```
+
 ## Schema for Gutenberg blocks
 If you're writing blocks for the block editor (sometimes known as "Gutenberg") you'll want to add Schema output too.
 There are two useful hooks for you that make this possible.

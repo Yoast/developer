@@ -152,10 +152,21 @@ module.exports = {
 						'customization/yoast-seo/api-filter-actions-deprecations',
 						'customization/yoast-seo/adding-custom-data-analysis',
 						'customization/yoast-seo/adding-custom-assessments',
+						'customization/yoast-seo/adding-custom-language-analysis',
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
+						'customization/yoast-seo/filters/wpseo-opengraph-images',
+						'customization/yoast-seo/filters/yoast-seo-usage-tracking-filter',
 						'customization/yoast-seo/filters/capability-roles-filter',
+						'customization/yoast-seo/filters/change-metabox-prio-filter',
+						'customization/yoast-seo/filters/cornerstone-post-types-filter',
+						'customization/yoast-seo/filters/filtering-yoast-seo-indexables',
+						'customization/yoast-seo/filters/markdown-enabled-filter',
+						'customization/yoast-seo/filters/assessment-markers-filter',
+						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
+						'customization/yoast-seo/filters/yoast-seo-usage-tracking-filter',
+						'customization/yoast-seo/filters/disable-search-engine-pings',
 						'customization/yoast-seo/filtering-yoast-blocks',
 						'customization/yoast-seo/wp-get-environment-type-in-yoast-seo',
 					],
@@ -164,6 +175,7 @@ module.exports = {
 					type: 'category',
 					label: 'Yoast SEO Premium',
 					items: [
+						'customization/yoast-seo-premium/api-filter-actions-deprecations',
 						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
 						'customization/yoast-seo-premium/hiding-version-number',
 					],
@@ -175,6 +187,20 @@ module.exports = {
 						'customization/local-seo/changing-location-url-google-maps',
 						'customization/local-seo/changing-location-post-type',
 						'customization/local-seo/enhancing-search-results',
+						'customization/local-seo/changing-organization-url-in-schema',
+					],
+				},
+				{
+					type: 'category',
+					label: 'MyYoast',
+					items: [
+						{
+							type: 'category',
+							label: 'APIs',
+							items: [
+								'customization/myyoast/apis/subscription-api',
+							],
+						}
 					],
 				}
 			]
@@ -230,6 +256,15 @@ module.exports = {
 			],
 
 		},
+		{
+			type: 'category',
+			label: 'Shopify',
+			items: [
+				'shopify/overview',
+				'features/schema/plugins/yoast-seo-shopify',
+				'shopify/integrations',
+			]
+		}
 	],
 	schemaPluginsSidebar: [
 		{
@@ -247,6 +282,7 @@ module.exports = {
 				'features/schema/plugins/woocommerce-seo',
 				'features/schema/plugins/news-seo',
 				'features/schema/plugins/video-seo',
+				'features/schema/plugins/yoast-seo-shopify',
 			]
 		},
 	],

@@ -17,7 +17,7 @@ const config = {
 	],
 	themeConfig: {
 		algolia: {
-			apiKey: process.env.DOCSEARCH_KEY,
+			apiKey: process.env.ALGOLIA_KEY,
 			indexName: 'yoast_developer',
 		},
 		colorMode: {
@@ -88,7 +88,7 @@ const config = {
 		},
 	},
 	customFields: {
-		docsPath: '../developer-docs/docs',
+		docsPath: './docs',
 	},
 	themes: [],
 	presets: [

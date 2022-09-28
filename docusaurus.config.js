@@ -69,7 +69,7 @@ const config = {
 					},
 					items: [
 						{
-							href: "https://yoast.com/developer-blog/",
+							href: "https://developer.yoast.com/blog/",
 							label: "Developer blog",
 							position: "left"
 						},

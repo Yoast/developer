@@ -2,7 +2,7 @@
 id: functions-template-tags
 title: Yoast Duplicate Post - Functions and template tags
 sidebar_label: Functions & template tags
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/duplicate-post/functions-template-tags.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/duplicate-post/functions-template-tags.md
 ---
 
 This page contains a list of functions that can be used in plugins and template files to interact with Duplicate Posts.

@@ -2,7 +2,7 @@
 id: productivity-tips-and-tricks
 title: Development - Productivity tips and tricks
 sidebar_label: Productivity tips & tricks
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/productivity-tips-and-tricks.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/productivity-tips-and-tricks.md
 ---
 
 Here's a few things you could do or learn to make your life a bit easier when it comes to software development. This is an ever-growing list; feel free to add to it!

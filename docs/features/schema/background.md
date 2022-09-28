@@ -2,7 +2,7 @@
 id: background
 title: Schema - Background information
 sidebar_label: Background
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/background.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/background.md
 description: Information about our approach, rationale, and considerations when it comes to schema.org markup.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.

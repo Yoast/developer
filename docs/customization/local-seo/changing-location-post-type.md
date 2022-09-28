@@ -2,7 +2,7 @@
 id: changing-location-post-type
 title: Local SEO - Changing the default Location post type
 sidebar_label: Changing the default Location post type
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/local-seo/changing-location-post-type.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/local-seo/changing-location-post-type.md
 ---
 import Alert from '@site/src/components/Alert';
 

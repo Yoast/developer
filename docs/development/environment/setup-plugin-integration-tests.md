@@ -2,7 +2,7 @@
 id: setup-plugin-integration-tests
 title: Development - Setting up integration tests for the plugins
 sidebar_label: Setting up integration tests
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/setup-plugin-integration-tests.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/environment/setup-plugin-integration-tests.md
 description: When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part.
 ---
 import Alert from '@site/src/components/Alert';

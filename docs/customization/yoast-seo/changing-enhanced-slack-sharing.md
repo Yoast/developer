@@ -2,7 +2,7 @@
 id: changing-enhanced-slack-sharing
 title: Yoast SEO - Changing the Enhanced Slack sharing output
 sidebar_label: Enhanced Slack sharing
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/changing-enhanced-slack-sharing.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/changing-enhanced-slack-sharing.md
 ---
 
 As of Yoast SEO 15.2 we've added the option to enhance the way URLs are displayed when they're shared on Slack. For more info on that feature, 

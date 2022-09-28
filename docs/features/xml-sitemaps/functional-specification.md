@@ -2,7 +2,7 @@
 id: functional-specification
 title: XML Sitemaps - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/xml-sitemaps/functional-specification.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/xml-sitemaps/functional-specification.md
 description: This page describes our functional and technical approach to constructing XML Sitemaps.
 ---
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.

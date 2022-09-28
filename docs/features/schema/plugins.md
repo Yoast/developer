@@ -2,7 +2,7 @@
 id: plugins
 title: Schema - Output per plugin
 sidebar_label: Output per plugin
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/plugins.md
 description: An overview of how our schema output varies across (and is enriched by) each of our plugins
 ---
 

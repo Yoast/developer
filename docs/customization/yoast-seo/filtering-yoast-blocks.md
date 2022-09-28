@@ -2,7 +2,7 @@
 id: filtering-yoast-blocks
 title: Yoast SEO - Filtering Yoast Blocks
 sidebar_label: Filtering Yoast Blocks
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/filtering-yoast-blocks
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/filtering-yoast-blocks
 ---
 As of [Yoast SEO 8.2](https://yoast.com/yoast-seo-8-2/), we've added our first two structured data blocks: The FAQ block and the How-To block.
 

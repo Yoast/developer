@@ -2,7 +2,7 @@
 id: overview
 title: Yoast SEO for Shopify - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/shopify/overview.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/shopify/overview.md
 description: An overview of how Yoast SEO for Shopify works
 ---
 

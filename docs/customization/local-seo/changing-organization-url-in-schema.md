@@ -2,7 +2,7 @@
 id: changing-organization-url-in-schema
 title: Local SEO - Changing the Organization URL in the Schema
 sidebar_label: Changing the Organization URL in the Schema
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/local-seo/changing-organization-url-in-schema.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/local-seo/changing-organization-url-in-schema.md
 ---
 
 As of version 13.9, you or your developer can change the default URL in the `Organization` piece of the [Schema](https://developer.yoast.com/features/schema/pieces/organization/) with the `yoast-local-seo-schema-organization-url` filter. This filter takes a single parameter: `$url` (required).

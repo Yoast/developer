@@ -2,7 +2,7 @@
 id: running-unit-tests-code-style-checks-and-linters
 title: Development - Running unit tests, code style checks and linters
 sidebar_label: Running unit tests, code style checks & linters
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/running-unit-tests-code-style-checks-and-linters.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/environment/running-unit-tests-code-style-checks-and-linters.md
 ---
 At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs.
 

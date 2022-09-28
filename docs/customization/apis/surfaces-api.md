@@ -3,7 +3,7 @@ id: surfaces-api
 title: Yoast SEO - Surfaces API
 sidebar_label: Surfaces API
 description: Retrieve metadata from a post or URL, seamlessly.
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/apis/surfaces-api.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/apis/surfaces-api.md
 ---
 
 In Yoast SEO 14.0 we introduced a formal way of integrating Yoast SEO into your code. We've added what's called a *surface*, called `YoastSEO()`. This surface gives easy access to lots of the features Yoast SEO has to offer.

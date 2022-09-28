@@ -2,7 +2,7 @@
 id: local-seo
 title: Schema output for Local SEO for WordPress
 sidebar_label: Local SEO for WordPress
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/local-seo.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/plugins/local-seo.md
 description: Describes the schema output of Yoast's "Local SEO" plugin for WordPress.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

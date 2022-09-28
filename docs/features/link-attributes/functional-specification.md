@@ -2,7 +2,7 @@
 id: functional-specification
 title: Link Attributes - Functional specification
 sidebar_label: Link attributes
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/link-attributes/functional-specification.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/link-attributes/functional-specification.md
 description: This documentation provides technical information about Yoast SEO manages link attributes.
 ---
 This documentation provides technical information about [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) manages link attributes.

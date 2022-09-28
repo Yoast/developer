@@ -2,7 +2,7 @@
 id: webpage
 title: Schema piece - WebPage
 sidebar_label: WebPage
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/webpage.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/webpage.md
 Description: Describes a single page on a 'WebSite'. Acts as a container for sub-page elements (such as 'Article').
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

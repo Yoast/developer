@@ -2,7 +2,7 @@
 id: technology-approach
 title: Schema - Technology and approach
 sidebar_label: Technology & approach
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/technology-approach.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/technology-approach.md
 description: An overview of some of the technical choices and standards used in our schema.org outputs.
 ---
 import YoastSchemaExample from '@site/src/components/YoastSchemaExample';

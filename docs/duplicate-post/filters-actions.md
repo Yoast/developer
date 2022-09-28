@@ -2,7 +2,7 @@
 id: filters-actions
 title: Yoast Duplicate Post - Filters and actions
 sidebar_label: Filters & actions
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/duplicate-post/filters-actions.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/duplicate-post/filters-actions.md
 ---
 
 ## Filters

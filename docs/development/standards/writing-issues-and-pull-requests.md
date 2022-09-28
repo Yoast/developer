@@ -2,7 +2,7 @@
 id: writing-issues-and-pull-requests
 title: Standards - Writing issues and pull requests
 sidebar_label: Writing issues and pull requests
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/standards/writing-issues-and-pull-requests.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/standards/writing-issues-and-pull-requests.md
 ---
 
 A very important aspect of working in teams, is proper communication. This isn't limited to just team members, but also everyone involved (i.e. customers, managers, developers etc.).

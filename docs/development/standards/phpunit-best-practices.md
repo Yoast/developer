@@ -2,7 +2,7 @@
 id: phpunit-best-practices
 title: Standards - PhpUnit Best Practices
 sidebar_label: PhpUnit Best Practices
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/standards/phpunit-best-practices.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/standards/phpunit-best-practices.md
 ---
 
 In addition to writing good code according to certain coding guidelines and principles, it is also important to adhere to certain guidelines while writing tests.

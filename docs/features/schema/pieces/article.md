@@ -2,7 +2,7 @@
 id: article
 title: Schema piece - Article
 sidebar_label: Article
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/article.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/article.md
 description: Describes an 'Article' on a 'WebPage'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

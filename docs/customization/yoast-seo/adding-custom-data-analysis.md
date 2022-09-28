@@ -1,7 +1,7 @@
 ---
 id: adding-custom-data-analysis
 title: Adding custom data to the page analysis
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/adding-custom-data-analysis.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/adding-custom-data-analysis.md
 ---
 
 Yoast SEO comes featured with a powerful set of tools to not only help you improve your SEO, but to also help you write better texts by analyzing the content of the post or page that you're working on.

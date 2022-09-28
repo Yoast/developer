@@ -2,7 +2,7 @@
 id: reindex-indexables
 title: WP CLI - Reindex Indexables command
 sidebar_label: Reindex Indexables
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/wp-cli/reindex-indexables.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/wp-cli/reindex-indexables.md
 ---
 import Alert from '@site/src/components/Alert';
 

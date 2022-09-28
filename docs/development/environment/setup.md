@@ -2,7 +2,7 @@
 id: setup
 title: Development - Setup
 sidebar_label: Development setup
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/development/environment/setup.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/environment/setup.md
 ---
 import Alert from '@site/src/components/Alert';
 

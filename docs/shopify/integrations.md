@@ -2,7 +2,7 @@
 id: integrations
 title: Yoast SEO for Shopify - Integrations
 sidebar_label: Integrations
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/shopify/integrations.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/shopify/integrations.md
 description: Details about how Yoast SEO for Shopify integrates with apps and services
 ---
 import YoastSchemaExample from '../../src/components/YoastSchemaExample';

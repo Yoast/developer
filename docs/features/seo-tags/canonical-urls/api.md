@@ -2,7 +2,7 @@
 id: api
 title: Canonical URLs - API documentation
 sidebar_label: API
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/seo-tags/canonical-urls/api.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/seo-tags/canonical-urls/api.md
 description: Instructions on how to modify our canonical URL values programmatically.
 ---
 

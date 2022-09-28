@@ -2,7 +2,7 @@
 id: website
 title: Schema piece - WebSite
 sidebar_label: WebSite
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/website.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/website.md
 description: Describes a 'WebSite'. Parent to 'WebPage'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

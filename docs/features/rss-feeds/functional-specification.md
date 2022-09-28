@@ -2,7 +2,7 @@
 id: functional-specification
 title: RSS Feeds - Functional specification
 sidebar_label: RSS Feeds
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/rss-feeds/functional-specification.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/rss-feeds/functional-specification.md
 description: This documentation explains Yoast SEO modifies RSS feeds.
 ---
 This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) modifies RSS feeds.

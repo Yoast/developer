@@ -2,7 +2,7 @@
 id: functional-specification
 title: Canonical URLs - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/seo-tags/canonical-urls/functional-specification.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/seo-tags/canonical-urls/functional-specification.md
 description: An overview of how canonical URLs work in Yoast SEO.
 ---
 Any valid, indexable page (i.e., a request which returns a 200 HTTP status, and which does *not* have a *noindex* directive) should include a canonical URL tag in the `<head>` of the document.

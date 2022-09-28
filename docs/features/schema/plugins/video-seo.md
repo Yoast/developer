@@ -2,7 +2,7 @@
 id: video-seo
 title: Schema output for Video SEO for WordPress
 sidebar_label: Video SEO for WordPress
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/video-seo.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/plugins/video-seo.md
 description: Describes the schema output of Yoast's "Video SEO" plugin for WordPress.
 ---
 The schema output for our [Video SEO plugin](https://yoast.com/wordpress/plugins/video-seo/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about embedded videos.

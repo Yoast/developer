@@ -2,7 +2,7 @@
 id: disabling-yoast-seo
 title: Yoast SEO - Disabling Yoast SEO output for a specific page
 sidebar_label: Disabling Yoast SEO output
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/disabling-yoast-seo.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/disabling-yoast-seo.md
 ---
 As of Yoast SEO 14.0, we've changed the way you can interact with the output of Yoast SEO. 
 However, in some cases, you might want to disable the output coming from Yoast SEO on a specific post.

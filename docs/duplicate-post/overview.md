@@ -2,7 +2,7 @@
 id: overview
 title: Yoast Duplicate Post
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/duplicate-post/overview.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/duplicate-post/overview.md
 ---
 
 The Yoast Duplicate Post plugin has:

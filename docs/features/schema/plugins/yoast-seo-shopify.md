@@ -2,7 +2,7 @@
 id: yoast-seo-shopify
 title: Schema output for Yoast SEO Shopify
 sidebar_label: Shopify Schema
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/plugins/yoast-seo-shopify.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/plugins/yoast-seo-shopify.md
 description: Describes the schema output of the Yoast SEO app for Shopify.
 ---
 

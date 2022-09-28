@@ -2,7 +2,7 @@
 id: hiding-version-number
 title: Yoast SEO Premium - Hiding the version number
 sidebar_label: Hiding the version number
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo-premium/hiding-version-number.md
+custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo-premium/hiding-version-number.md
 ---
 
 We added a filter in Yoast SEO Premium version 2.3.3 to allow hiding of the version number in your HTML source code.

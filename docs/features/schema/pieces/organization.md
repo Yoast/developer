@@ -2,7 +2,6 @@
 id: organization
 title: Schema piece - Organization
 sidebar_label: Organization
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/organization.md
 description: Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a 'WebSite'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

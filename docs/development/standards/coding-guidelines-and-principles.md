@@ -2,7 +2,6 @@
 id: coding-guidelines-and-principles
 title: Standards - Coding guidelines and principles
 sidebar_label: Coding guidelines and principles
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/standards/coding-guidelines-and-principles.md
 ---
 
 ## PHP Coding Standards

@@ -1,7 +1,6 @@
 ---
 id: overview
-title: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/overview.md
+title: Yoast developer portal
 slug: /
 ---
 
@@ -31,8 +30,4 @@ Learn how our features work, how to customize the outputs, and how best to integ
 - [REST API](customization/apis/rest-api)
 - [Surfaces API](customization/apis/surfaces-api)
 - [Metadata API](customization/apis/metadata-api)
-
-## Looking for something else?
-- [Our official website](https://yoast.com)
-- [Our GitHub](https://github.com/Yoast)
-  - [Yoast SEO](https://github.com/Yoast/wordpress-seo)
+- [Schema API](features/schema/api)

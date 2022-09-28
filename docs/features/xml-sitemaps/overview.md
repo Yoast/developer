@@ -2,7 +2,6 @@
 id: overview
 title: XML Sitemaps - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/xml-sitemaps/overview.md
 description: An overview of the XML sitemap functionality in Yoast SEO
 ---
 This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and/or manages XML sitemaps.

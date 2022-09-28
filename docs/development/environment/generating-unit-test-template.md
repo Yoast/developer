@@ -2,7 +2,6 @@
 id: generating-unit-test-template
 title: Development - Generating a unit test template for Yoast SEO
 sidebar_label: Generating a unit test template
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/environment/generating-unit-test-template.md
 ---
 Every class in the `src` folder should have an accompanying unit test in the `tests/unit` folder. Since setting up a new unit test file requires some boilerplate code, we created a handy tool that creates a unit test template for you.
 

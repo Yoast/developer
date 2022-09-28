@@ -4,7 +4,6 @@ title: Yoast SEO - REST API
 sidebar_label: REST API
 description: Get all of the metadata for a post or URL in a single request, and as part of WordPress' WP-JSON response.
 image: https://yoast.com/app/uploads/sites/9/2021/07/access_yoast_metadata.jpg
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/apis/rest-api.md
 ---
 import Alert from '@site/src/components/Alert';
 

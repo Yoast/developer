@@ -2,7 +2,6 @@
 id: person
 title: Schema piece - Person
 sidebar_label: Person
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/person.md
 description: Describes an individual person. Most commonly used to identify the 'author' of a piece of content.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

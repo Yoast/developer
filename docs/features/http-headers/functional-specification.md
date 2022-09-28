@@ -2,7 +2,6 @@
 id: functional-specification
 title: HTTP Headers - Functional specification
 sidebar_label: HTTP headers
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/http-headers/functional-specification.md
 description: An overview of how HTTP headers work in Yoast SEO.
 ---
 Yoast SEO constructs and optimizes various HTTP headers, in order to manage indexing, assist with debugging, and compliment other functionality.

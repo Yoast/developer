@@ -2,7 +2,6 @@
 id: overview
 title: Schema - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/overview.md
 description: This documentation describes how we construct and output schema.org data in the Yoast SEO plugin(s).
 ---
 This documentation describes how we construct and output [schema.org](http://schema.org/) data in [Yoast SEO](https://yoast.com/wordpress/plugins/seo/), as well as our broader approach to structured data.

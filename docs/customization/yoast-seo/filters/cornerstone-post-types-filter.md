@@ -2,7 +2,6 @@
 id: cornerstone-post-types-filter
 title: Yoast SEO - Altering Yoast SEO cornerstone post types
 sidebar_label: Altering Yoast SEO cornerstone post types
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/filters/cornerstone-post-types-filter.md
 ---
 Yoast SEO allows you to mark public (custom) post types as cornerstone content. In some cases, you might want to limit what can be marked.
 The `wpseo_cornerstone_post_types` filter allows you to alter what post types will be able to be marked as cornerstone content.

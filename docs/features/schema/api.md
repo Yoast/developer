@@ -2,7 +2,6 @@
 id: api
 title: Schema - API documentation
 sidebar_label: Schema API
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/api.md
 description: Instructions on how to modify our schema output programmatically.
 ---
 import Alert from '@site/src/components/Alert';

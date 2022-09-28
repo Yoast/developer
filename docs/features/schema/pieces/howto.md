@@ -2,7 +2,6 @@
 id: howto
 title: Schema piece - HowTo
 sidebar_label: HowTo
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/howto.md
 description: Describes a 'HowTo' guide, which contains a series of 'steps'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

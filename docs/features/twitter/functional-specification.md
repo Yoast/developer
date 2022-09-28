@@ -2,7 +2,6 @@
 id: functional-specification
 title: Twitter Tags - Functional specification
 sidebar_label: Twitter
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/twitter/functional-specification.md
 description: This documentation provides technical information about which twitter tags Yoast SEO generates and outputs.
 
 ---

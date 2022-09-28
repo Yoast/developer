@@ -2,7 +2,6 @@
 id: question
 title: Schema piece - Question
 sidebar_label: Question
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/question.md
 description: Describes a 'Question'. Most commonly used in 'FAQPage' or 'QAPage' content.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

@@ -2,7 +2,6 @@
 id: overview
 title: OpenGraph Tags - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/opengraph/overview.md
 description: This documentation provides technical information about how Yoast SEO generates and/or manages OpenGraph tags.
 ---
 This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and/or manages OpenGraph tags.

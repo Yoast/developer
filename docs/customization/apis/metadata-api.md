@@ -3,7 +3,6 @@ id: metadata-api
 title: Yoast SEO - Metadata API
 sidebar_label: Metadata API
 description: Add, alter or remove metadata for a post or URL.
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/apis/metadata-api.md
 ---
 
 For simple websites, or when SEO is not a serious consideration, it's common for plugins and themes to simply output or echo meta tags into the `<head>` of a document.

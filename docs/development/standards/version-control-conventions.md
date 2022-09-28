@@ -2,7 +2,6 @@
 id: version-control-conventions
 title: Standards - Version control conventions
 sidebar_label: Version control conventions
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/standards/version-control-conventions.md
 ---
 
 Because we heavily rely on Git for our version control, it is necessary to enforce a strict set of rules when managing code.

@@ -2,7 +2,6 @@
 id: product-sheet
 title: Yoast SEO - Product sheet
 sidebar_label: Product sheet
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/yoast-seo/product-sheet.md
 description: This document is a living document, describing the functionality of Yoast SEO for any platform.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';

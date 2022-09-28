@@ -2,7 +2,6 @@
 id: using-composer
 title: Yoast SEO - Install using Composer
 sidebar_label: Using Composer
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/installation/using-composer.md
 ---
 import Alert from '@site/src/components/Alert';
 

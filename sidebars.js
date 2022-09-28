@@ -8,9 +8,9 @@
 module.exports = {
 	mainSidebar: [
 		{
-			type: 'link',
-			label: 'Developer blog',
-			href: 'https://developer.yoast.com/blog'
+			type: 'doc',
+			label: 'Home',
+			id: 'overview'
 		},
 		{
 			type: 'category',

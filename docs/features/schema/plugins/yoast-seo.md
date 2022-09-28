@@ -9,10 +9,10 @@ import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO plugin. More information about our API, integration mechanics, and methodology can be found [here](../).
 
 ## Core logic
-Every page should (attempt to) output the following [pieces](../pieces/):
-* [Organization](../pieces/organization.md)
-* [WebSite](../pieces/website.md)
-* [WebPage](../pieces/webpage.md)
+Every page should (attempt to) output the following [pieces](/features/schema/pieces/):
+* [Organization](/features/schema/pieces/organization.md)
+* [WebSite](/features/schema/pieces/website.md)
+* [WebPage](/features/schema/pieces/webpage.md)
 
 This produces a 'base script', which will typically looks something like the following (a composite of the above *pieces*):
 

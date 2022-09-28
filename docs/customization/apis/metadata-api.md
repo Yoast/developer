@@ -7,7 +7,7 @@ description: Add, alter or remove metadata for a post or URL.
 
 For simple websites, or when SEO is not a serious consideration, it's common for plugins and themes to simply output or echo meta tags into the `<head>` of a document.
 
-However, more advanced SEO often requires meta tags to have *context*, an awareness of the *other* meta tags on a page, or complicated internal logic. For example, the value of a [canonical URL tag](/features/seo-tags/canonical-urls/overview) might be influenced by the presence or value of a [meta robots tag](/features/seo-tags/meta-robots/overview). For sites running complex or multiple plugins and themes, it's also important to consider standardization and security. Managing these kinds of challenges becomes increasingly cumbersome without a framework.
+However, more advanced SEO often requires meta tags to have *context*, an awareness of the *other* meta tags on a page, or complicated internal logic. For example, the value of a [canonical URL tag](/features/seo-tags/canonical-urls/) might be influenced by the presence or value of a [meta robots tag](/features/seo-tags/meta-robots/). For sites running complex or multiple plugins and themes, it's also important to consider standardization and security. Managing these kinds of challenges becomes increasingly cumbersome without a framework.
 
 That's why we provide a formal way of managing the construction and output of meta tags in the `<head>` of each page. We use a `presenter` (an extension of the `Abstract_Indexable_Presenter` class) for each tag, which you can easily modify or extend.
 

@@ -86,11 +86,6 @@ table td:first-child > code {
   white-space: nowrap;
 }
 
-body > div {
-  height: 100vh !important;
-  display: block !important;
-}
-
 #__docusaurus {
   display: flex;
   flex-direction: column;

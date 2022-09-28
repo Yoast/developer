@@ -5,11 +5,12 @@ sidebar_label: REST API
 description: Get all of the metadata for a post or URL in a single request, and as part of WordPress' WP-JSON response.
 image: https://yoast.com/app/uploads/sites/9/2021/07/access_yoast_metadata.jpg
 ---
-import Alert from '@site/src/components/Alert';
 
-<Alert>
+:::caution
+
 The 'raw' <code>json</code> data format described below is only available in Yoast SEO versions 16.7 and upwards.
-</Alert>
+
+:::
 
 Yoast SEO includes a REST API which returns all of the SEO metadata (meta tags, schema.org data, and more) for any URL on a site. This makes it very easy for headless WordPress sites to use Yoast SEO to manage all of their SEO considerations.
 

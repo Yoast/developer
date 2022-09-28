@@ -161,7 +161,7 @@ const config = {
 					copyright: `Copyright © ${new Date().getFullYear()} Yoast BV. Built with Docusaurus.`,
 				},
 				prism: {
-					additionalLanguages: ['php'],
+					additionalLanguages: ['php','json'],
 					theme: lightCodeTheme,
 					darkTheme: darkCodeTheme,
 				},

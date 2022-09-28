@@ -3,15 +3,15 @@ id: changing-location-post-type
 title: Local SEO - Changing the default Location post type
 sidebar_label: Changing the default Location post type
 ---
-import Alert from '@site/src/components/Alert';
 
 As of version 13.2, you or your developer can change the default locations post type with the `wpseo_local_post_type` filter. This filter takes a single parameter: `$post_type` (required).
 This filter is particularly useful in cases where you have defined a custom post type that you're using for your locations.
 
-<Alert>
+:::caution
 
 If you change the post type, please make sure to [reindex Yoast SEO's indexables](../../features/wp-cli/reindex-indexables.md).
-</Alert>
+
+:::
 
 In either your custom plugin or your theme's `functions.php`, add the following line and change the default value to your desired post type.
 

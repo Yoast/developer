@@ -3,7 +3,6 @@ id: using-composer
 title: Yoast SEO - Install using Composer
 sidebar_label: Using Composer
 ---
-import Alert from '@site/src/components/Alert';
 
 ## What is Composer?
 [Composer](https://getcomposer.org/) is a dependency manager tool for PHP projects (similar to NPM) and can be run from your terminal.
@@ -38,8 +37,9 @@ composer update
 
 After that, the updated `composer.lock` file needs to be committed into version control.
 
-<Alert type="warning">
+:::caution
 
 Please note that updating dependencies is somewhat of a delicate process and doing so might result in breakage. 
 Always properly test before committing an updated version of `composer.json` and `composer.lock`. 
-</Alert>
+
+:::

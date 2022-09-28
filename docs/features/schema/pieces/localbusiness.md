@@ -5,11 +5,10 @@ sidebar_label: LocalBusiness
 description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
-import Alert from '@site/src/components/Alert';
 
-<Alert>
+:::caution
 This documentation is outdated, and should not be used. It will be updated in the near future.
-</Alert>
+:::
 
 Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 

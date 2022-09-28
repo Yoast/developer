@@ -5,11 +5,10 @@ sidebar_label: Breadcrumb
 description: Describes the hierarchical position a 'WebPage' within a 'WebSite'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
-import Alert from '@site/src/components/Alert';
 
-<Alert>
+:::caution
 This documentation is subject to change. See "Notes on previous and future approaches".
-</Alert>
+:::
 
 Describes the hierarchical position a `WebPage` within a `WebSite`.
 

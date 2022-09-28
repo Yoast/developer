@@ -1,5 +1,5 @@
 import React from "react";
-import CodeBlock from "@theme/CodeBlock";
+import CodeBlock from '@theme/CodeBlock';
 import styles from "./styles.module.css";
 import classnames from "classnames";
 
@@ -27,12 +27,12 @@ const YoastSchemaExample = ( props ) => {
 
 	return (
 		<div className={ styles.schemaExample }>
-			<form action="https://search.google.com/structured-data/testing-tool" method="post" target="_blank">
+			<form action="https://validator.schema.org/" method="post" target="_blank">
 				<input className={ classnames( "button", "button--secondary", styles.modifyButton ) } type="submit"
-				       value="Test &amp; modify in the Google Structured Data Testing Tool"/>
+				       value="Test &amp; modify in the Schema.org Validator"/>
 				<textarea name="code" className={ styles.codeArea } value={ cleaned } readOnly></textarea>
 			</form>
-			<CodeBlock className="json">{ props.children }</CodeBlock>
+			<CodeBlock className="language-json">{ props.children }</CodeBlock>
 		</div>
 	);
 }

@@ -4,13 +4,12 @@ title: MyYoast - Subscription API
 sidebar_label: Subscription API
 description: For Yoast partners to create and manage subscriptions.
 ---
-import Alert from '@site/src/components/Alert';
 
 The subscription API can be used by Yoast partners to create subscriptions in MyYoast. Subscriptions facilitate passing license checks of Yoast plugins.
-<Alert>
 
+:::tip
 If you wish to become a Yoast partner, please contact [partners@yoast.com](mailto:partners@yoast.com).
-</Alert>
+:::
 
 We have a Swagger document you can use to [explore the API](https://my.yoast.com/provisioning-api/#/). We can provide the credentials to view it.
 

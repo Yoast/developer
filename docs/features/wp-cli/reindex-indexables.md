@@ -3,16 +3,15 @@ id: reindex-indexables
 title: WP CLI - Reindex Indexables command
 sidebar_label: Reindex Indexables
 ---
-import Alert from '@site/src/components/Alert';
+
 
 With the introduction of Yoast SEO 14.0, we've introduced new database tables in which we combine all the metadata for indexable objects on a site. 
 However, these database tables also need to be filled with data before they can be properly used. To do this efficiently on large sites, we've introduced a WP CLI command.
 This page describes the command and all its options.
 
-<Alert>
-
+:::tip
 If you don't know what WP CLI is, you're missing out! It's a command line interface for WordPress that makes loads of tasks easier. [Read all about it on wp-cli.org](https://wp-cli.org/). 
-</Alert>
+:::
 
 If you plan on using our [REST API](/customization/apis/rest-api.md) or [our surfaces](/customization/apis/surfaces-api.md), running the CLI command on your website beforehand is very important.
 

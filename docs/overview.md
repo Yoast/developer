@@ -4,6 +4,10 @@ title: Yoast developer portal
 slug: /
 ---
 
+<head>
+<title>Yoast developer portal</title>
+</head>
+
 Welcome to the Yoast Developer portal, the place to find any technical information related to our software.
 
 This documentation is aimed at advanced end-users, developers, plugin/theme authors, and those curious about the mechanics of search engine optimization.

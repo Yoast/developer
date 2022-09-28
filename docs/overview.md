@@ -15,22 +15,23 @@ This documentation is aimed at advanced end-users, developers, plugin/theme auth
 ## Browse technical specifications
 Learn how our features work, how to customize the outputs, and how best to integrate into or out of other systems.
 
-- [XML sitemaps](features/xml-sitemaps/overview.md)
-- [SEO tags](features/seo-tags/canonical-urls/overview.md)
-  - [Title tags](features/seo-tags/titles/overview.md)
-  - [Meta description tags](features/seo-tags/descriptions/overview.md)
-  - [Canonical URLs](features/seo-tags/canonical-urls/overview.md)
-  - [Meta robots tags](features/seo-tags/meta-robots/overview.md)
-- [OpenGraph tags](features/opengraph/overview.md)
+- [XML sitemaps](features/xml-sitemaps/)
+- [SEO tags](features/seo-tags/canonical-urls/)
+  - [Title tags](features/seo-tags/titles/)
+  - [Meta description tags](features/seo-tags/descriptions/)
+  - [Canonical URLs](features/seo-tags/canonical-urls/)
+  - [Meta robots tags](features/seo-tags/meta-robots/)
+- [OpenGraph tags](features/opengraph/)
 - [Twitter tags](features/twitter/functional-specification.md)
-- [Schema.org markup](features/schema/overview.md)
-  - [Schema pieces](/features/schema/pieces.md)
-  - [Output per plugin](/features/schema/plugins.md)
+- [Schema.org markup](features/schema/)
+  - [Schema pieces](/features/schema/pieces/)
+  - [Output per plugin](/features/schema/plugins/)
 
 ### Yoast SEO for Shopify
 - [Overview](shopify/overview.md)
 
 ## Explore our APIs
+
 - [REST API](customization/apis/rest-api)
 - [Surfaces API](customization/apis/surfaces-api)
 - [Metadata API](customization/apis/metadata-api)

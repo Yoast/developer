@@ -28,12 +28,7 @@ After cloning this repository navigate to the directory where this repository is
 $ yarn
 ```
 
-Next, you must duplicate the `.env.example` file, and rename it to `.env`. The file contains the `DOCSEARCH_KEY` variable which is the key to the Algolia API that powers the search on the portal.
-
-You must therefore have an Algolia account to obtain this key. After having created or you are connected to your Algolia account, go to the "API Keys" menu of your application and copy the value of "Application ID". Paste this value instead of `YOUR_KEY_HERE` in the `.env` file.
-
-That's it, you are ready to use the portal on your local machine.
-
+That's it! You are ready to use the portal on your local machine.
 
 After this, you have the following options:
 

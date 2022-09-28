@@ -448,7 +448,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
 </YoastSchemaExample>
 
 ### Other examples
-Our [technical documentation](overview.md) contains more extensive and varied examples, as well details on how [Yoast SEO software](https://yoast.com/wordpress/plugins/seo/) determines what to output in various scenarios.
+Our [technical documentation](technology-approach.md) contains more extensive and varied examples, as well details on how [Yoast SEO software](https://yoast.com/wordpress/plugins/seo/) determines what to output in various scenarios.
 
 ## Altering or extending our graphs
 All of our output can be altered, extended or disabled (by *piece* or in totality) via a full API. The documentation for this is available [here](api.md).
@@ -456,12 +456,12 @@ All of our output can be altered, extended or disabled (by *piece* or in totalit
 In scenarios where third-party plugins, themes or systems result in 'un-stitching' of the graph, duplicate/conflated properties, or shared ID spaces, we recommend adopting our framework and [utilizing our APIs](api.md) (or encouraging the relevant solution authors to do so).
 
 ## Use in Yoast software
-This specification forms the basis of our [schema.org](http://schema.org/) / JSON-LD output from [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) version 11.0 onwards. Specific information on how our software utilizes and extends this specification can be found [here](overview.md) .
+This specification forms the basis of our [schema.org](http://schema.org/) / JSON-LD output from [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) version 11.0 onwards. Specific information on how our software utilizes and extends this specification can be found [here](plugins/yoast-seo.md) .
 
 ## Support and feedback
 This spec is a continual work in progress, and, we're always keen to assist others in adoption, extension or refinement. If you have questions about the mechanics described here, or if you'd like to apply the spec to your own theme/plugin(s), feel free to create an issue on [our GitHub repository](https://github.com/Yoast/wordpress-seo/).
 
-Don't forget that we also have [technical documentation](overview.md), and [an API for modifying our schema output](api.md)!
+Don't forget that we also have [technical documentation](technology-approach.md), and [an API for modifying our schema output](api.md)!
 
 ## Appendix
 

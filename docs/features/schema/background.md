@@ -4,7 +4,6 @@ title: Schema - Background information
 sidebar_label: Background
 description: Information about our approach, rationale, and considerations when it comes to schema.org markup.
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl'; // Add to the top of the file below the front matter.
 
 This page provides information about our approach, rationale, and considerations. It describes the key underlying principles, design decisions, and methodologies.
 
@@ -19,7 +18,7 @@ Beyond the immediate marketing applications, structured markup will enable futur
 
 Platforms such as Google, Bing and Facebook are continually rolling out support for new features and formats, which rely on structured markup.
 
-<img src={useBaseUrl( 'img/larry-page.png' )} alt='Knowledge graph panel of Larry Page' />
+![Knowledge graph panel of Larry Page](./larry-page.png)
 
 ## Why have we created a new standard/approach?
 Many content management systems, platforms, themes and plugins already provide some level of structured markup. However, the implementations are frequently incomplete, inconsistent, conflicting, or incorrect.

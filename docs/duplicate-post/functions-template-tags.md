@@ -14,7 +14,7 @@ It is modeled after [`edit_post_link()`](https://codex.wordpress.org/Function_Re
 ### Usage
 
 ```php
-<?php duplicate_post_clone_post_link( $link, $before, $after, $id ); ?>
+duplicate_post_clone_post_link( $link, $before, $after, $id );
 ```
 
 ### Parameters
@@ -34,7 +34,7 @@ It is modeled after [`get_post()`](https://codex.wordpress.org/Function_Referenc
 ### Usage
 
 ```php
-<?php $original_post = duplicate_post_get_original( $post, $output ); ?>
+$original_post = duplicate_post_get_original( $post, $output );
 ```
 
 ### Parameters
@@ -49,8 +49,7 @@ Creates a duplicate of the post object passed as the first parameter, according 
 ### Usage
 
 ```php
-<?php $new_post_id = duplicate_post_create_duplicate( $post, $status, $parent_id ); ?>
-
+$new_post_id = duplicate_post_create_duplicate( $post, $status, $parent_id );
 ```
 
 ### Parameters

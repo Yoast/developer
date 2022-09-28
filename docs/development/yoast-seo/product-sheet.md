@@ -4,7 +4,6 @@ title: Yoast SEO - Product sheet
 sidebar_label: Product sheet
 description: This document is a living document, describing the functionality of Yoast SEO for any platform.
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This document is a living document, describing the functionality of Yoast SEO for any platform.
 
@@ -15,7 +14,7 @@ The following standards must be met, automatically and without user intervention
 
 ### URLs
 * The site needs to support and use 'pretty permalinks' (human-readable, structured URLs).
-* System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/overview.md).
+* System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/).
 
 ### Meta tags
 All pages should output meta tags in line with the following standards:
@@ -70,16 +69,16 @@ It contains a 'snippet editor', which generates previews of how the page will (p
 It also contains an editor in which users can edit the page's title, URL and meta description intuitively.
 
 Example of the SEO & accessibility checks
-<img src={useBaseUrl( 'img/seo-analysis.png' )} alt='Example of the SEO & accessibility checks' />
+![Example of the SEO & accessibility checks](./seo-analysis.png)
 
 Example of the readability checks
-<img src={useBaseUrl( 'img/readability.png' )} alt='Example of the SEO & accessibility checks' />
+![Example of the readability checks](./readability.png)
 
 Snippet editor (desktop)
-<img src={useBaseUrl( 'img/desktop-preview.png' )} alt='Snippet editor (desktop)' />
+![Snippet editor (desktop)](./desktop-preview.png)
 
 Snippet editor (mobile)
-<img src={useBaseUrl( 'img/mobile-preview.png' )} alt='Snippet editor (mobile)' />
+![Snippet editor (mobile)](./mobile-preview.png)
 
 These UI elements should be integrated into the content editing experience and should update in a real-time or semi-realtime manner. For inspiration, implementors are recommended to take a look at how these elements are integrated into [Yoast SEO for WordPress](https://wordpress.org/plugins/wordpress-seo/).
 

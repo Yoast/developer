@@ -9,7 +9,7 @@ This page contains a list of functions that can be used in plugins and template 
 ## `duplicate_post_clone_post_link`
 
 Displays a link to clone the current post, if a user is logged in and allowed to copy the post. Can be used within [The Loop](https://codex.wordpress.org/The_Loop) or outside of it. If outside the loop, you’ll need to pass the post ID.
-It is modeled after [`edit_post_link()`](https://codex.wordpress.org/Function_Reference/edit_post_link).
+It is modeled after [`edit_post_link()`](https://developer.wordpress.org/reference/functions/edit_post_link/).
 
 ### Usage
 
@@ -29,7 +29,7 @@ duplicate_post_clone_post_link( $link, $before, $after, $id );
 Returns the original post, either as a post object, an associative array or a numeric array (depending on the `$output` parameter). If no original post can be found, it returns `null`.
 
 It relies on the `_dp_original` custom field, which is set to the original ID every time the plugin creates a copy.
-It is modeled after [`get_post()`](https://codex.wordpress.org/Function_Reference/get_post).
+It is modeled after [`get_post()`](https://developer.wordpress.org/reference/functions/get_post/).
 
 ### Usage
 

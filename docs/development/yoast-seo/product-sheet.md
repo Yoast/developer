@@ -14,15 +14,15 @@ The following standards must be met, automatically and without user intervention
 
 ### URLs
 * The site needs to support and use 'pretty permalinks' (human-readable, structured URLs).
-* System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/).
+* System permalinks should refer to their human-readable equivalents through [canonical URL tags](/features/seo-tags/canonical-urls/).
 
 ### Meta tags
 All pages should output meta tags in line with the following standards:
-* [Title tags](features/seo-tags/titles/functional-specification.md)
-* [Description tags](features/seo-tags/descriptions/functional-specification.md)
-* [Canonical URL tags](features/seo-tags/canonical-urls/functional-specification.md)
-* [Meta robots tags](features/seo-tags/meta-robots/functional-specification.md)
-* [Open Graph tags](features/opengraph/functional-specification.md)
+* [Title tags](/features/seo-tags/titles/functional-specification.md)
+* [Description tags](/features/seo-tags/descriptions/functional-specification.md)
+* [Canonical URL tags](/features/seo-tags/canonical-urls/functional-specification.md)
+* [Meta robots tags](/features/seo-tags/meta-robots/functional-specification.md)
+* [Open Graph tags](/features/opengraph/functional-specification.md)
 
 ### Structured data
 All pages should output structured data in line with the following standards:

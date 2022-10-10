@@ -34,6 +34,7 @@ The following tags are only output when their conditions are met:
 
 ## "Enhanced Slack sharing" tags
 We utilize Twitter's "label/data" meta tag format to add additional data, which is shown when sharing URLs on Slack.
+Note that this should only be output if the "Enhanced Slack sharing" setting is enabled for the site.
 | Tag | Description | Notes |
 |---|----|---|
 | `<meta name="twitter:label1" content="Est. reading time" />` | Only output on `post` and `page` types. |

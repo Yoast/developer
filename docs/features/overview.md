@@ -1,7 +1,6 @@
 ---
 id: overview
 title: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/overview.md
 description: A placeholder which acts as a hub for all of the technical documentation and specifications of the Yoast SEO product suite.
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -15,7 +14,7 @@ The following standards must be met, automatically and without user intervention
 
 ### URLs
 * The site needs to support and use 'pretty permalinks' (human-readable, structured URLs).
-* System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/overview.md).
+* System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/).
 
 ### Meta tags
 All pages should output metadata in line with the following standards:

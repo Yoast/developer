@@ -16,6 +16,7 @@ module.exports = {
 			type: 'category',
 			label: 'Yoast SEO features',
 			items: [
+				'features/overview',
 				{
 					type: 'category',
 					label: 'Analysis',
@@ -253,15 +254,7 @@ module.exports = {
 						'development/environment/generating-unit-test-template'
 					]
 				},
-
-				{
-					type: 'category',
-					label: 'Yoast SEO',
-					items: [
-						'development/yoast-seo/product-sheet',
-					]
-				},
-
+				
 				'development/productivity-tips-and-tricks',
 				'development/cheatsheets',
 			],

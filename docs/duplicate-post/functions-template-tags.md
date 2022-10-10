@@ -2,7 +2,6 @@
 id: functions-template-tags
 title: Yoast Duplicate Post - Functions and template tags
 sidebar_label: Functions & template tags
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/duplicate-post/functions-template-tags.md
 ---
 
 This page contains a list of functions that can be used in plugins and template files to interact with Duplicate Posts.
@@ -10,12 +9,12 @@ This page contains a list of functions that can be used in plugins and template 
 ## `duplicate_post_clone_post_link`
 
 Displays a link to clone the current post, if a user is logged in and allowed to copy the post. Can be used within [The Loop](https://codex.wordpress.org/The_Loop) or outside of it. If outside the loop, you’ll need to pass the post ID.
-It is modeled after [`edit_post_link()`](https://codex.wordpress.org/Function_Reference/edit_post_link).
+It is modeled after [`edit_post_link()`](https://developer.wordpress.org/reference/functions/edit_post_link/).
 
 ### Usage
 
 ```php
-<?php duplicate_post_clone_post_link( $link, $before, $after, $id ); ?>
+duplicate_post_clone_post_link( $link, $before, $after, $id );
 ```
 
 ### Parameters
@@ -30,12 +29,12 @@ It is modeled after [`edit_post_link()`](https://codex.wordpress.org/Function_Re
 Returns the original post, either as a post object, an associative array or a numeric array (depending on the `$output` parameter). If no original post can be found, it returns `null`.
 
 It relies on the `_dp_original` custom field, which is set to the original ID every time the plugin creates a copy.
-It is modeled after [`get_post()`](https://codex.wordpress.org/Function_Reference/get_post).
+It is modeled after [`get_post()`](https://developer.wordpress.org/reference/functions/get_post/).
 
 ### Usage
 
 ```php
-<?php $original_post = duplicate_post_get_original( $post, $output ); ?>
+$original_post = duplicate_post_get_original( $post, $output );
 ```
 
 ### Parameters
@@ -50,8 +49,7 @@ Creates a duplicate of the post object passed as the first parameter, according 
 ### Usage
 
 ```php
-<?php $new_post_id = duplicate_post_create_duplicate( $post, $status, $parent_id ); ?>
-
+$new_post_id = duplicate_post_create_duplicate( $post, $status, $parent_id );
 ```
 
 ### Parameters

@@ -2,8 +2,7 @@
 id: api
 title: XML Sitemaps - API documentation
 sidebar_label: API
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/xml-sitemaps/api.md
-description: Coming soon.
+description: The API to change the XML sitemap Yoast SEO puts out.
 ---
 
 Whilst Yoast SEO provides sensible default behaviors for XML sitemaps (and UI controls for inclusion/exclusion), custom themes or plugins sometimes need to alter our markup or logic.

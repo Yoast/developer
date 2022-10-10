@@ -2,7 +2,6 @@
 id: wp-get-environment-type-in-yoast-seo
 title: Yoast SEO - wp_get_environment_type() in Yoast SEO
 sidebar_label: wp_get_environment_type() in Yoast SEO
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/wp-get-environment-type-in-yoast-seo.md
 ---
 Since WordPress 5.5, the new [`wp_get_environment_type()`](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) function can be used to retrieve the current environment of a site. Among other things, this allows authors of themes and plugins to easily find the environment of a site, and possibly to propose specific features for each type of environment.
 

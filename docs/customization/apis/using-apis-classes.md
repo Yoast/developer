@@ -2,7 +2,6 @@
 id: using-apis-classes
 title: Yoast SEO - Using APIs and classes
 sidebar_label: Using APIs and classes
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/apis/using-apis-classes.md
 ---
 
 Yoast SEO ships with a variety of APIs and classes that you can utilize in your own code. 

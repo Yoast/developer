@@ -2,9 +2,7 @@
 id: setup
 title: Development - Setup
 sidebar_label: Development setup
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/environment/setup.md
 ---
-import Alert from '@site/src/components/Alert';
 
 This page describes the process of how we set up development environments at Yoast.
 
@@ -49,13 +47,13 @@ WP_DEVELOP_DIR=/Users/<your name>/Documents/Development/wordpress-develop/
 WP_PLUGIN_DIR=/Users/<your name>/Documents/Development/plugin-development-docker/plugins
 ```
 
-<Alert type="warning">
+:::caution
 Note the trailing slash in `WP_DEVELOP_DIR` and the absence of it in `WP_PLUGIN_DIR`.
-</Alert>
+:::
 
-<Alert>
+:::info
 If you have `WP_DEVELOP_DIR` and `WP_PLUGIN_DIR` as environment variables, you can skip the following section.
-</Alert>
+:::
 
 Configure your PHPUnit configuration in PhpStorm by going to `Edit Configurations...` -> `PHPUnit` and ensure it looks similar to the following screenshot:
 
@@ -98,11 +96,10 @@ If you're developing within the JavaScript code that is part of one of the plugi
 * If no errors occur, you should now be able to proceed developing and run commands such as `grunt build` as you normally would.
 * Additionally, you can use `grunt webpack:watch`. This command will watch for changes in the JavaScript files and keep them up-to-date. Please note that there is no development server in use, so you have to refresh the webpage manually.
 
-<Alert>
-
+:::caution
 If your pull-request requires a specific branch from the monorepo, please ensure that you create a branch on the monorepo with the *exact* same name as the branch on the plugin's repository.
 This ensures that Travis uses the correct branches when building. 
-</Alert>
+:::
 
 ### Working on standalone JavaScript
 If you're planning on working on the JavaScript code, _outside_ of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things up and running.

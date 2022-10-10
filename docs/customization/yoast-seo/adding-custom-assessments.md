@@ -1,7 +1,6 @@
 ---
 id: adding-custom-assessments
 title: Adding custom assessments to the page analysis
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/customization/yoast-seo/adding-custom-assessments.md
 ---
 
 In addition to adding your own input fields to the pre-existing assessments that are available in Yoast SEO, it is also possible to write your own assessments that can analyze various aspects of a post, page or term. 

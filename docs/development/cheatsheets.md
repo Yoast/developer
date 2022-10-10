@@ -2,7 +2,6 @@
 id: cheatsheets
 title: Development - Cheatsheets
 sidebar_label: Cheatsheets
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/cheatsheets.md
 ---
 
 Below is a list of handy resources and cheatsheets on a variety of subjects that might come in handy!

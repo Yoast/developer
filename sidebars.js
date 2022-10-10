@@ -8,13 +8,18 @@
 module.exports = {
 	mainSidebar: [
 		{
-			type: 'link',
-			label: 'Developer blog',
-			href: 'https://yoast.com/developer-blog/'
+			type: 'doc',
+			label: 'Home',
+			id: 'overview'
 		},
 		{
 			type: 'category',
 			label: 'Yoast SEO features',
+			link: {
+				type: 'generated-index',
+				description: 'Learn about the most important Yoast SEO features!',
+				slug: '/features',
+			},
 			items: [
 				'features/overview',
 				{
@@ -34,8 +39,12 @@ module.exports = {
 				{
 					type: 'category',
 					label: 'XML sitemaps',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation provides technical information about how Yoast SEO generates and/or manages XML sitemaps.',
+						slug: '/features/xml-sitemaps/',
+					},
 					items: [
-						'features/xml-sitemaps/overview',
 						'features/xml-sitemaps/functional-specification',
 						'features/xml-sitemaps/api',
 					],
@@ -44,23 +53,34 @@ module.exports = {
 				{
 					type: 'category',
 					label: 'SEO tags',
+					link: {
+						type: 'generated-index',
+						description: 'Learn which tags Yoast SEO outputs and how to change them.',
+						slug: '/features/seo-tags/',
+					},
 					items: [
-
 						{
 							type: 'category',
 							label: 'Titles',
+							link: {
+								type: 'generated-index',
+								description: 'This documentation provides technical information about how Yoast SEO generates and/or manages title tags.',
+								slug: '/features/seo-tags/titles/',
+							},
 							items: [
-								'features/seo-tags/titles/overview',
 								'features/seo-tags/titles/functional-specification',
 								'features/seo-tags/titles/api',
 							],
 						},
-
 						{
 							type: 'category',
 							label: 'Descriptions',
+							link: {
+								type: 'generated-index',
+								description: 'This documentation provides technical information about how Yoast SEO generates and/or manages description tags.',
+								slug: '/features/seo-tags/descriptions/',
+							},
 							items: [
-								'features/seo-tags/descriptions/overview',
 								'features/seo-tags/descriptions/functional-specification',
 								'features/seo-tags/descriptions/api',
 							],
@@ -68,8 +88,12 @@ module.exports = {
 						{
 							type: 'category',
 							label: 'Canonical URLs',
+							link: {
+								type: 'generated-index',
+								description: 'This documentation provides technical information about how Yoast SEO generates and/or manages canonical URL values and tags.',
+								slug: '/features/seo-tags/canonical-urls/',
+							},
 							items: [
-								'features/seo-tags/canonical-urls/overview',
 								'features/seo-tags/canonical-urls/functional-specification',
 								'features/seo-tags/canonical-urls/api',
 							],
@@ -78,8 +102,12 @@ module.exports = {
 						{
 							type: 'category',
 							label: 'Meta robots',
+							link: {
+								type: 'generated-index',
+								description: 'This documentation provides technical information about how Yoast SEO generates and/or manages meta robots tags.',
+								slug: '/features/seo-tags/meta-robots/',
+							},
 							items: [
-								'features/seo-tags/meta-robots/overview',
 								'features/seo-tags/meta-robots/functional-specification',
 								{
 									type: 'link',
@@ -94,41 +122,89 @@ module.exports = {
 				{
 					type: 'category',
 					label: 'OpenGraph',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation provides technical information about how Yoast SEO generates and/or manages OpenGraph tags.',
+						slug: '/features/opengraph/',
+					},
 					items: [
-						'features/opengraph/overview',
 						'features/opengraph/functional-specification',
 						{
 							type: 'category',
 							label: 'API',
+							link: {
+								type: 'generated-index',
+								description: 'This documentation explains how to use the Yoast SEO API to influence the values of, and which OpenGraph tags Yoast SEO generates and outputs.',
+								slug: '/features/opengraph/api/',
+							},
 							items: [
-								'features/opengraph/api/overview',
 								'features/opengraph/api/changing-og-locale-output',
+								'features/opengraph/api/wpseo-opengraph-images',
 							]
 						},
 					],
 				},
-
 				'features/twitter/functional-specification',
-
 				{
 					type: 'category',
 					label: 'Schema.org markup',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation describes how we construct and output schema.org data in the Yoast SEO plugin(s).',
+						slug: '/features/schema/',
+					},
 					items: [
-						'features/schema/overview',
 						'features/schema/background',
 						'features/schema/technology-approach',
 						'features/schema/functional-specification',
 						'features/schema/integration-guidelines',
 						'features/schema/api',
 						{
-							type: 'link',
+							type: 'category',
 							label: 'Schema.org pieces',
-							href: '/features/schema/pieces'
+							link: {
+								type: 'generated-index',
+								description: 'This documentation describes how we construct and output schema.org data in the Yoast SEO plugin(s).',
+								slug: '/features/schema/pieces',
+							},
+							items: [
+								'features/schema/pieces/aggregateoffer',
+								'features/schema/pieces/article',
+								'features/schema/pieces/breadcrumb',
+								'features/schema/pieces/comment',
+								'features/schema/pieces/howto',
+								'features/schema/pieces/image',
+								'features/schema/pieces/localbusiness',
+								'features/schema/pieces/offer',
+								'features/schema/pieces/organization',
+								'features/schema/pieces/person',
+								'features/schema/pieces/postaladdress',
+								'features/schema/pieces/product',
+								'features/schema/pieces/question',
+								'features/schema/pieces/recipe',
+								'features/schema/pieces/review',
+								'features/schema/pieces/searchaction',
+								'features/schema/pieces/video',
+								'features/schema/pieces/webpage',
+								'features/schema/pieces/website'
+							]
 						},
 						{
-							type: 'link',
+							type: 'category',
 							label: 'Output per plugin',
-							href: '/features/schema/plugins'
+							link: {
+								type: 'generated-index',
+								description: 'Our own plugins use and build upon our Schema API and documentation, as detailed here.',
+								slug: '/features/schema/plugins',
+							},
+							items: [
+								'features/schema/plugins/yoast-seo',
+								'features/schema/plugins/local-seo',
+								'features/schema/plugins/woocommerce-seo',
+								'features/schema/plugins/news-seo',
+								'features/schema/plugins/video-seo',
+								'features/schema/plugins/yoast-seo-shopify',
+							]
 						},
 					],
 				},
@@ -155,8 +231,12 @@ module.exports = {
 				{
 					type: 'category',
 					label: 'APIs',
+					link: {
+						type: 'generated-index',
+						description: 'Yoast SEO exposes several APIs, which are designed to help advanced users, developers, and integrators to access and manipulate our data and outputs.',
+						slug: '/customization/apis',
+					},
 					items: [
-						'customization/apis/overview',
 						'customization/apis/rest-api',
 						'customization/apis/surfaces-api',
 						'customization/apis/metadata-api',
@@ -175,7 +255,6 @@ module.exports = {
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',
-						'customization/yoast-seo/filters/wpseo-opengraph-images',
 						'customization/yoast-seo/filters/yoast-seo-usage-tracking-filter',
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/change-metabox-prio-filter',
@@ -261,7 +340,7 @@ module.exports = {
 						'development/environment/generating-unit-test-template'
 					]
 				},
-
+				
 				'development/productivity-tips-and-tricks',
 				'development/cheatsheets',
 			],
@@ -275,59 +354,6 @@ module.exports = {
 				'features/schema/plugins/yoast-seo-shopify',
 				'shopify/integrations',
 			]
-		}
-	],
-	schemaPluginsSidebar: [
-		{
-			type: 'link',
-			label: '‹ Schema.org plugin output',
-			href: '/features/schema/overview'
-		},
-		'features/schema/plugins',
-		{
-			type: 'category',
-			label: 'Plugins',
-			items: [
-				'features/schema/plugins/yoast-seo',
-				'features/schema/plugins/local-seo',
-				'features/schema/plugins/woocommerce-seo',
-				'features/schema/plugins/news-seo',
-				'features/schema/plugins/video-seo',
-				'features/schema/plugins/yoast-seo-shopify',
-			]
-		},
-	],
-	schemaPiecesSidebar: [
-		{
-			type: 'link',
-			label: '‹ Schema.org pieces',
-			href: '/features/schema/overview'
-		},
-		'features/schema/pieces',
-		{
-			type: 'category',
-			label: 'Schema pieces',
-			items: [
-				'features/schema/pieces/aggregateoffer',
-				'features/schema/pieces/article',
-				'features/schema/pieces/breadcrumb',
-				'features/schema/pieces/comment',
-				'features/schema/pieces/howto',
-				'features/schema/pieces/image',
-				'features/schema/pieces/localbusiness',
-				'features/schema/pieces/offer',
-				'features/schema/pieces/organization',
-				'features/schema/pieces/person',
-				'features/schema/pieces/postaladdress',
-				'features/schema/pieces/product',
-				'features/schema/pieces/question',
-				'features/schema/pieces/recipe',
-				'features/schema/pieces/review',
-				'features/schema/pieces/searchaction',
-				'features/schema/pieces/video',
-				'features/schema/pieces/webpage',
-				'features/schema/pieces/website',
-			],
 		}
 	],
 };

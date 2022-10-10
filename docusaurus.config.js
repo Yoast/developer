@@ -1,116 +1,172 @@
-const path = require('path');
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-require('dotenv').config();
+const lightCodeTheme = require( "prism-react-renderer/themes/github" );
+const darkCodeTheme = require( "prism-react-renderer/themes/dracula" );
 
+/** @type {import("@docusaurus/types").Config} */
 const config = {
-	title: 'Yoast Developer portal',
-	tagline: 'Yoast - SEO for everyone',
-	url: 'https://developer.yoast.com',
-	baseUrl: '/',
-	favicon: 'img/favicon.png',
-	organizationName: 'Yoast', // Usually your GitHub org/user name.
-	projectName: 'yoast-developer-site', // Usually your repo name.
-	scripts: [
-		{
-			src: "/js/google-tag-manager.js",
-		},
-	],
-	themeConfig: {
-		algolia: {
-			apiKey: process.env.ALGOLIA_KEY,
-			indexName: 'yoast_developer',
-		},
-		colorMode: {
-			disableSwitch: true,
-		},
-		sidebarCollapsible: true,
-		navbar: {
-			title: 'Yoast Developer portal',
-			logo: {
-				alt: 'Yoast Developer portal',
-				src: 'img/yoast-logo.png',
-			},
-			items: [],
-		},
-		footer: {
-			links: [
-				{
-					title: 'Docs',
-					items: [
-						{
-							label: 'XML sitemaps',
-							to: '/features/xml-sitemaps/overview/',
-						},
-						{
-							label: 'Canonical URLs',
-							to: 'features/seo-tags/canonical-urls/overview/',
-						},
-						{
-							label: 'Schema.org markup',
-							to: '/features/schema/overview/',
-						},
-						{
-							label: 'Yoast SEO Product sheet',
-							to: '/development/yoast-seo/product-sheet/',
-						},
-					],
-				},
-				{
-					title: 'Yoast',
-					items: [
-						{
-							label: 'About us',
-							href: 'https://yoast.com/about-us/',
-						},
-						{
-							label: 'Work at Yoast',
-							href: 'https://yoast.com/jobs/',
-						},
-						{
-							label: 'Developer blog',
-							href: 'https://yoast.com/developer-blog/',
-						},
-						{
-							label: 'Security program',
-							href: 'https://yoast.com/security-program/',
-						},
-						{
-							label: 'Twitter',
-							href: 'https://twitter.com/yoastdev',
-						},
-					],
-				},
-			],
-			copyright: `Copyright © ${new Date().getFullYear()} Yoast · Built with Docusaurus.`,
-		},
-		prism: {
-			additionalLanguages: ['php'],
-		},
+	title: "Yoast developer portal",
+//	tagline: "Dinosaurs are cool",
+	url: "https://developer.yoast.com",
+	baseUrl: "/",
+	trailingSlash: true,
+	onBrokenLinks: "throw",
+	onBrokenMarkdownLinks: "warn",
+	favicon: "img/favicon.png",
+
+	// GitHub pages deployment config.
+	// If you aren't using GitHub pages, you don't need these.
+	organizationName: "yoast", // Usually your GitHub org/user name.
+	projectName: "developer", // Usually your repo name.
+
+	// Even if you don't use internalization, you can use this field to set useful
+	// metadata like html lang. For example, if your site is Chinese, you may want
+	// to replace "en" with "zh-Hans".
+	i18n: {
+		defaultLocale: "en",
+		locales: ["en"],
 	},
-	customFields: {
-		docsPath: './docs',
-	},
-	themes: [],
+
 	presets: [
 		[
-			'@docusaurus/preset-classic',
-			{
-				docs: {
-					routeBasePath: '/',
-					get path(){ return config.customFields.docsPath; },
-					sidebarPath: require.resolve('./sidebars.js'),
-				},
-				theme: {
-					customCss: require.resolve('./src/css/custom.css'),
-				},
-			},
+			"classic",
+			/** @type {import("@docusaurus/preset-classic").Options} */
+			(
+				{
+					docs: {
+						routeBasePath: "/",
+						sidebarPath: require.resolve( "./sidebars.js" ),
+						// Please change this to your repo.
+						// Remove this to remove the "edit this page" links.
+						editUrl:
+							"https://github.com/yoast/developer/tree/main/",
+					},
+					blog: false,
+					theme: {
+						customCss: require.resolve( "./src/css/custom.css" ),
+					},
+				}
+			),
 		],
 	],
-	plugins: [
-		path.resolve(__dirname, './src/plugins/yoast-auto-index'),
-		path.resolve(__dirname, './src/plugins/yoast-docs-assets'),
-	],
-	onBrokenLinks: 'log',
+
+	themeConfig:
+	/** @type {import("@docusaurus/preset-classic").ThemeConfig} */
+		(
+			{
+				algolia: {
+					appId: "0R87BDTWP9",
+					apiKey: "a54375ed2042cef542e507421d5b8564",
+					indexName: "yoast_developer",
+				},
+				navbar: {
+					style: "primary",
+					logo: {
+						height: "50px",
+						alt: "Yoast Logo",
+						src: "img/yoast-logo.svg",
+					},
+					items: [
+						{
+							href: "https://developer.yoast.com/blog/",
+							label: "Developer blog",
+							position: "left"
+						},
+						{
+							href: "https://github.com/yoast",
+							label: "GitHub",
+							position: "right",
+						},
+						{
+							type: "search",
+							position: "right",
+						},					],
+				},
+				footer: {
+					style: "dark",
+					links: [
+						{
+							title: "Yoast elsewhere",
+							items: [
+								{
+									label: "SEO blog",
+									href: "https://yoast.com/seo-blog/",
+								},
+								{
+									label: "About us",
+									href: "https://yoast.com/about-us/",
+								},
+								{
+									label: "Work at Yoast",
+									href: "https://yoast.com/jobs/",
+								},
+								{
+									label: "Help center",
+									href: "https://yoast.com/help/",
+								},
+								{
+									label: "SEO training",
+									href: "https://yoast.com/academy/",
+								},
+							],
+						},
+						{
+							title: "Products",
+							items: [
+								{
+									label: "Yoast SEO for WordPress",
+									href: "https://yoast.com/wordpress/plugins/seo/",
+								},
+								{
+									label: "Yoast SEO for Shopify",
+									href: "https://yoast.com/shopify/apps/yoast-seo/",
+								},
+								{
+									label: "Local SEO for WordPress",
+									href: "https://yoast.com/wordpress/plugins/local-seo/",
+								},
+								{
+									label: "News SEO for WordPress",
+									href: "https://yoast.com/wordpress/plugins/news-seo/",
+								},
+								{
+									label: "Video SEO for WordPress",
+									href: "https://yoast.com/wordpress/plugins/video-seo/",
+								},
+								{
+									label: "WooCommerce SEO for WordPress",
+									href: "https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/",
+								},
+							],
+						},
+						{
+							title: "Legal",
+							items: [
+								{
+									label: "Terms of Service",
+									href: "https://yoast.com/terms-of-service/",
+								},
+								{
+									label: "Privacy policy",
+									href: "https://yoast.com/privacy-policy/",
+								},
+								{
+									label: "Refund policy",
+									href: "https://yoast.com/refund-policy/",
+								},
+							],
+						}
+					],
+					copyright: `Copyright © ${new Date().getFullYear()} Yoast BV. Built with Docusaurus.`,
+				},
+				prism: {
+					additionalLanguages: ['php','json'],
+					theme: lightCodeTheme,
+					darkTheme: darkCodeTheme,
+				},
+			}
+		),
 };
 
 module.exports = config;

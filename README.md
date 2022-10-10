@@ -7,11 +7,11 @@ All documentation is written in Markdown and is read by [Docusaurus](https://doc
 
 ### Do...
 * ...ensure files always contain a proper Docusaurus header. Otherwise, the file will not properly show up.
-* ...ensure you edit the `editUrl` property to point to the exact path of the file on this repository.
 * ...check that files are grouped logically (i.e. a category or feature) to ensure users can easily find information.
 * ...use headings.
 * ...split up large bodies of text in smaller files, if possible.
 * ...test (newly added) links before submitting a PR to ensure we keep 404's at bay.
+* ...Use [admonitions](https://docusaurus.io/docs/markdown-features/admonitions) for tips, highlights and cautionary alerts. 
 
 ### Don't...
 * ...hesitate to ask for help if something is unclear in how this project should work.
@@ -28,12 +28,7 @@ After cloning this repository navigate to the directory where this repository is
 $ yarn
 ```
 
-Next, you must duplicate the `.env.example` file, and rename it to `.env`. The file contains the `DOCSEARCH_KEY` variable which is the key to the Algolia API that powers the search on the portal.
-
-You must therefore have an Algolia account to obtain this key. After having created or you are connected to your Algolia account, go to the "API Keys" menu of your application and copy the value of "Application ID". Paste this value instead of `YOUR_KEY_HERE` in the `.env` file.
-
-That's it, you are ready to use the portal on your local machine.
-
+That's it! You are ready to use the portal on your local machine.
 
 After this, you have the following options:
 
@@ -68,7 +63,7 @@ There are two main ways to contribute:
 2. [Contributing to code](#contributing-to-code)
 
 ### Contributing to issues
-We use GitHub to track public changes and improvements to the portal that need to be discussed and completed. 
+We use GitHub to track public changes and improvements to the portal that need to be discussed and completed.
 
 Before creating an issue, please make sure what you want to raise have not already been mentionned in another one.
 

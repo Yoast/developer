@@ -16,7 +16,6 @@
   --ifm-code-background: #e8e8e8;
   --ifm-code-font-size: 95%;
   --ifm-font-size-base: 1em;
-  --ifm-navbar-height: 0;
   --ifm-footer-background-color: var(--ifm-color-primary-darkest);
   --ifm-footer-padding-vertical: 24px;
   --ifm-footer-padding-horizontal: 24px;
@@ -24,6 +23,10 @@
   --ifm-footer-link-color: var(--ifm-footer-color);
   --ifm-footer-link-hover-color: var(--ifm-footer-color);
   --ifm-h4-font-size: 20px;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #cf3a89;
 }
 
 .docusaurus-highlight-code-line {
@@ -81,11 +84,6 @@ table code, table pre {
 
 table td:first-child > code {
   white-space: nowrap;
-}
-
-body > div {
-  height: 100vh !important;
-  display: block !important;
 }
 
 #__docusaurus {

@@ -2,7 +2,6 @@
 id: review
 title: Schema piece - Review
 sidebar_label: Review
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/review.md
 description: Describes a 'Review'. Usually in the context of a 'Product' or an 'Organization'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

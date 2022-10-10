@@ -2,7 +2,6 @@
 id: comment
 title: Schema piece - Comment
 sidebar_label: Comment
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/pieces/comment.md
 description: Describes a review. Usually in the context of an 'Article' or a 'WebPage'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

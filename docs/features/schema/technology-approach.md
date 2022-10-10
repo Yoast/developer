@@ -2,7 +2,6 @@
 id: technology-approach
 title: Schema - Technology and approach
 sidebar_label: Technology & approach
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/schema/technology-approach.md
 description: An overview of some of the technical choices and standards used in our schema.org outputs.
 ---
 import YoastSchemaExample from '@site/src/components/YoastSchemaExample';
@@ -68,7 +67,7 @@ E.g:
 * `https://www.example.com/#/schema/howto/abc123`
 * `https://www.example.com/#/schema/itemlist/abc123`
 
-See the relevant [pieces documentation](pieces.md) in each case for the correct structure (where defined).
+See the relevant [pieces documentation](/features/schema/pieces/) in each case for the correct structure (where defined).
 
 #### Exceptions
 * The ID of _images_ (`ImageObject`) should be the fully-qualified, absolute URL of the image file (e.g., `https://www.example.com/images/cat.jpg?size=large`).
@@ -85,7 +84,7 @@ The `{{identifier}}` parameter should always be constructed using the following 
 * A sequential integer local to the `WebPage` in which the entity resides (e.g., `4` for the fourth `itemlist` on a given page).
 
 ### Exceptions
-These are also documented in their various [pieces documentation](https://developer.yoast.com/features/schema/pieces/), but bear repeating here.
+These are also documented in their various [pieces documentation](/features/schema/pieces/), but bear repeating here.
 
 * The ID of a `WebPage` should always be the unmodified canonical URL of the page (i.e. the *permalink*).
 * The `{{identifier}}` fragment of the `Organization` which represents the site should always be `1` (e.g., https://www.example.com/#/schema/organization/1).

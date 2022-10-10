@@ -17,7 +17,7 @@ Community made patches, reports and contributions are very welcome and help make
 When contributing please ensure you follow the guidelines below so that we can keep on top of things.
 
 ### Submitting an issue you found
-Make sure your problem does not exist as an issue already by searching through [the existing issues](https://github.com/Yoast/developer-docs/issues). If you cannot find anything which resembles your problem, please [create a new issue](https://github.com/Yoast/developer-docs/issues/new).
+Make sure your problem does not exist as an issue already by searching through [the existing issues](https://github.com/Yoast/developer/issues). If you cannot find anything which resembles your problem, please [create a new issue](https://github.com/Yoast/developer/issues/new).
 
 ### Fixing an issue
 

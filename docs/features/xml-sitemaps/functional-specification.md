@@ -2,8 +2,7 @@
 id: functional-specification
 title: XML Sitemaps - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/xml-sitemaps/functional-specification.md
-description: This page describes our functional and technical approach to constructing XML Sitemaps.
+description: Description of Yoast SEO's functional and technical approach to constructing XML Sitemaps.
 ---
 Any page which the user wishes to be discovered and indexed by search engines should be listed in an XML sitemap.
 
@@ -178,3 +177,11 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
   * A `loc` property (referencing the absolute URL of the image)
 
 The news XML sitemap uses a dedicated XSL file.
+
+:::info
+
+Some further reading:
+* A guide to [what XML sitemaps are (and why should you have one)](https://yoast.com/what-is-an-xml-sitemap-and-why-should-you-have-one/)
+* A guide on [how to submit your XML sitemap to search engines](https://kb.yoast.com/kb/submit-sitemap-search-engines/) .
+
+:::

@@ -2,12 +2,11 @@
 id: changing-og-locale-output
 title: OpenGraph Tags - Changing the og:locale output
 sidebar_label: Changing the og:locale output
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/opengraph/api/changing-og-locale-output.md
 ---
 
 When you enable OpenGraph settings in Yoast SEO, it'll output an `og:locale` meta tag. This `og:locale` is based on the language settings for your WordPress install.
 
-So, if you want it to output `nl_NL` instead of the default `en_US`, you simply switch your WordPress installs' language to `nl_NL`. You can read [how to do that on the WordPress codex](http://codex.wordpress.org/WordPress_in_Your_Language).
+So, if you want it to output `nl_NL` instead of the default `en_US`, you simply switch your WordPress installs' language to `nl_NL`. You can read [more about that on the Make WordPress polyglots page](https://make.wordpress.org/polyglots/teams/).
 
 ## Change the `og:locale` tag
 If you don't want to change the language of your WordPress install but _do_ want to change the locale output of Yoast SEO, you can do so by filtering the output. You should add code that looks like this to your theme's `functions.php`:
@@ -45,7 +44,7 @@ add_action( 'wpseo_frontend_presenters', 'remove_locale_presenter' );
 ```
 
 ## Valid `og:locale` choices
-OpenGraph has a [limited list of supported `og:locale` designations](https://developers.facebook.com/docs/internationalization#locales). If your locale is not in this list, our plugin will output the best match for your language.
+OpenGraph has a [limited list of supported `og:locale` designations](https://developers.facebook.com/docs/javascript/internationalization#locales). If your locale is not in this list, our plugin will output the best match for your language.
 
 As of July 2018, the following are [valid `og:locale` choices](https://developers.facebook.com/docs/reference/opengraph/object-type/article/):
 

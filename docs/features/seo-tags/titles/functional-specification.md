@@ -2,7 +2,6 @@
 id: functional-specification
 title: Titles - Functional specification
 sidebar_label: Specification
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/seo-tags/titles/functional-specification.md
 description: An overview of how title tags work in Yoast SEO.
 ---
 

@@ -26,6 +26,13 @@ module.exports = {
 				},
 				{
 					type: 'category',
+					label: 'Controls',
+					items: [
+						'features/controls/overview',
+					],
+				},
+				{
+					type: 'category',
 					label: 'XML sitemaps',
 					items: [
 						'features/xml-sitemaps/overview',
@@ -254,7 +261,7 @@ module.exports = {
 						'development/environment/generating-unit-test-template'
 					]
 				},
-				
+
 				'development/productivity-tips-and-tricks',
 				'development/cheatsheets',
 			],

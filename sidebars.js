@@ -21,7 +21,6 @@ module.exports = {
 				slug: '/features',
 			},
 			items: [
-				'features/overview',
 				{
 					type: 'category',
 					label: 'Analysis',
@@ -341,6 +340,7 @@ module.exports = {
 					]
 				},
 				
+				'development/integrating',
 				'development/productivity-tips-and-tricks',
 				'development/cheatsheets',
 			],

@@ -45,3 +45,4 @@ For each page, the user should be able to preview and control their SEO settings
 Tools must be provided to allow users to manage:
 * [Link attributes](features/link-attributes/functional-specification.md)
 * [RSS feeds](features/rss-feeds/functional-specification.md)
+* [Robots.txt file](features/robots-txt/functional-specification.md)

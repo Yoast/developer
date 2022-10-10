@@ -21,6 +21,9 @@ XML sitemaps should be created for each of the following content types, providin
 
 In addition to the individual XML sitemaps, an *XML sitemap index* should be created, which references each of these sitemaps.
 
+## Pinging Google
+Whenever an XML sitemap is updated (as a result of a post, page, or URL being created/updated), then the system should ping https://www.google.com/ping?sitemap=FULL_URL_OF_SITEMAP.
+
 ## Exclusions & empty sitemaps
 The following conditions should lead to a page being excluded from (the appropriate) XML sitemap:
 

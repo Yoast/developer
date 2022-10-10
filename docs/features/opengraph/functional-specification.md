@@ -14,9 +14,9 @@ Assuming that the respective admin settings are not disabled, these tags are out
 
 | Tag | Description |
 |---|----|
-| `og:locale` | The page's language. |
-| `og:type` | The type of page/resource. <br /> <br /> _website on the homepage._ <br /> _profile on user profile pages._ <br />_article on all pages/posts and other templates._  |
-| `og:title` | The title of the page. <br /> <br /> Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook title" value for the page.</li><li>An auto-generated "Social title" from the template in Search Appearance.</li><li>A user-defined "Seo title" for the page.</li><li>An auto-generated "SEO title" from the template in Search Appearance.</li><li>The social title default option (same as the SEO title): `%%title%% %%page%% %%sep%% %%sitename%%`. For Author & Date archives the default is just the page title.</li></ul> |
+| `og:locale` | The page's language and target territory, falling back to language only. E.g., `en_US`, or simply `en`. |
+| `og:type` | The type of page/resource. <br /><br />`website` on the homepage. <br />`profile` on user profile pages. <br />`article` on all pages/posts and other templates.  |
+| `og:title` | The title of the page. <br /> <br /> Outputs a value based on the following hierarchy: <ul><li>A user-defined "Facebook title" value for the page.</li><li>An auto-generated "Social title" from the template in Search Appearance.</li><li>A user-defined "SEO title" for the page.</li><li>An auto-generated "SEO title" from the template in Search Appearance.</li><li>The social title default option (same as the SEO title): `%%title%% %%page%% %%sep%% %%sitename%%`. For Author & Date archives the default is just the page title.</li></ul> |
 | `og:url` | The canonical URL of the page (or the series root, in the case of paginated content). |
 | `og:site_name` | The name of the site. |
 
@@ -34,16 +34,22 @@ The following tags are only output when their conditions are met:
 | `og:image:width` | The width in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 | `og:image:height` | The height in pixels of the `og:image`. | Only populated when an `og:image` is set, and its width and height are known. |
 
+### Additional conditional tags
+Though not strictly open graph tags, these should be evaluated and output as part of this set of requirements.
+| Tag | Description | Notes |
+|---|----|---|
+| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on `post` types. |
+
 ### Error templates
 Only output the following tags are output:
 
 | Tag | Value |
 |---|----|
-| `og:locale` | The page's language. |
-| `og:title` | The site's error title template. |
+| `og:locale` | The page's language and target territory, falling back to language only. E.g., `en_US`, or simply `en`. |
+| `og:title` | The site's error page title template value. |
 | `og:site_name` | The name of the site. |
 
-### Deprecated tags
+## Deprecated tags
 The following tags used to be output by Yoast SEO, but have been removed in recent updates.
 
 | Tag | Description | Deprecated |
@@ -55,8 +61,3 @@ The following tags used to be output by Yoast SEO, but have been removed in rece
 | `og:video:secure_url` | Legacy Facebook / Open Graph tag. As per `og:image:secure_url`, but for the featured video (in our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/)). | Yoast SEO v14.0 (Apr 2020) |
 | `og:image:type` | Defines the image format. Poor value/performance trade-off; especially as we ping Facebook on post publish, at which point they determine and cache this information themselves. | Yoast SEO v14.0 (Apr 2020) |
 | `fb:app_id` | The Facebook App ID. | Yoast SEO v15.5 (Dec 2020) |
-
-## Misc related tags
-| Tag | Description | Notes |
-|---|----|---|
-| `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on `post` types. |

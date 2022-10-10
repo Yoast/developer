@@ -2,7 +2,6 @@
 id: overview
 title: Controls - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/controls/overview.md
 description: This documentation provides information about the types of controls that Yoast SEO provides.
 ---
 This documentation provides information about the tyoes of controls that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) provides.
@@ -45,4 +44,4 @@ For each page, the user should be able to preview and control their SEO settings
 Tools must be provided to allow users to manage:
 * [Link attributes](features/link-attributes/functional-specification.md)
 * [RSS feeds](features/rss-feeds/functional-specification.md)
-* [Robots.txt file](features/robots-txt/functional-specification.md)
+

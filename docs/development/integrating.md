@@ -1,7 +1,6 @@
 ---
 id: integrating
 title: Integrating Yoast SEO
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/integrating.md
 description: A hub for describing all of the technical specifications and requirements for integrating Yoast SEO.
 ---
 
@@ -16,7 +15,7 @@ The following standards must be met, automatically and without user intervention
 * The site must output a complete and valid [XML Sitemap](features/xml-sitemaps/functional-specification.md)
 * Any content [RSS feeds](features/rss-feeds/functional-specification.md) (or equivalent formats) must 
 ### Integrations
-* Creating, updating or publishing content should ping [IndexNow](features/indexnow/functional-specification.md) (and ping the [XML Sitemap](features/xml-sitemaps/functional-specification.md) to Google)
+* Creating, updating or publishing content should ping [IndexNow](features/indexnow/overview.md) (and ping the [XML Sitemap](features/xml-sitemaps/functional-specification.md) to Google)
 ## Metadata & output
 ### Meta tags
 All pages should output metadata in line with the following standards:
@@ -36,4 +35,4 @@ All pages should output structured data in line with the following standards:
 For all posts, pages and content types, users must:
 * Be able to [Analyze](features/analysis/overview.md) their content
 * Be provided with [Controls](features/controls/overview.md)
-* Be able to control [Link Attributes](features/link-attributes/overview.md)
+* Be able to control [Link Attributes](features/link-attributes/functional-specification.md)

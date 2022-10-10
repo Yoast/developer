@@ -13,7 +13,7 @@ Welcome to the Yoast Developer portal, the place to find any technical informati
 This documentation is aimed at advanced end-users, developers, plugin/theme authors, and those curious about the mechanics of search engine optimization.
 
 ## Explore core features
-- [Overview](features/overview.md)
+- [Overview](features/)
 - [Analysis](features/analysis/overview.md)
 - [Controls](features/controls/overview.md)
 
@@ -25,7 +25,7 @@ Learn how our features work, how to customize the outputs, and how best to integ
   - [Title tags](features/seo-tags/titles/)
   - [Meta description tags](features/seo-tags/descriptions/)
   - [Canonical URLs](features/seo-tags/canonical-urls/)
-  - [Meta robots tags](features/seo-tags/meta-robots/)
+  - [Meta robots tags](features/seo-tags/meta-robots/overview.md)
 - [OpenGraph tags](features/opengraph/)
 - [Twitter tags](features/twitter/functional-specification.md)
 - [Schema.org markup](features/schema/)

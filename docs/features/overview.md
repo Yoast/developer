@@ -3,7 +3,6 @@ id: overview
 title: Overview
 description: A placeholder which acts as a hub for all of the technical documentation and specifications of the Yoast SEO product suite.
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This document is a living document, describing the functionality of [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) product suite.
 

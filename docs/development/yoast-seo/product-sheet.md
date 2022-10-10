@@ -19,7 +19,7 @@ The following standards must be met, automatically and without user intervention
 * System permalinks should refer to their human-readable equivalents through [canonical URL tags](features/seo-tags/canonical-urls/overview.md).
 
 ### Meta tags
-All pages should output meta tags in line with the following standards:
+All pages should output metadata in line with the following standards:
 * [Title tags](features/seo-tags/titles/functional-specification.md)
 * [Description tags](features/seo-tags/descriptions/functional-specification.md)
 * [Canonical URL tags](features/seo-tags/canonical-urls/functional-specification.md)
@@ -64,43 +64,4 @@ For each template (and/or content) type, the user should be able to set:
 | *Meta robots values* | Crawling/indexing controls which deviate from the defaults | One or more of `index`, `noindex`, `follow`, `nofollow`, `noodp`, `noimageindex`, `noarchive`, `nosnippet` |
 
 ## Page-level controls
-
-### Content analysis & meta controls
-Our JavaScript content analysis tool, [YoastSEO.js](https://github.com/Yoast/javascript/tree/master/packages/yoastseo), is able to analyze content for a whole range of SEO, accessibility and readability checks.
-It contains a 'snippet editor', which generates previews of how the page will (probably) be displayed in Google desktop or mobile search.
-It also contains an editor in which users can edit the page's title, URL and meta description intuitively.
-
-Example of the SEO & accessibility checks
-<img src={useBaseUrl( 'img/seo-analysis.png' )} alt='Example of the SEO & accessibility checks' />
-
-Example of the readability checks
-<img src={useBaseUrl( 'img/readability.png' )} alt='Example of the SEO & accessibility checks' />
-
-Snippet editor (desktop)
-<img src={useBaseUrl( 'img/desktop-preview.png' )} alt='Snippet editor (desktop)' />
-
-Snippet editor (mobile)
-<img src={useBaseUrl( 'img/mobile-preview.png' )} alt='Snippet editor (mobile)' />
-
-These UI elements should be integrated into the content editing experience and should update in a real-time or semi-realtime manner. For inspiration, implementors are recommended to take a look at how these elements are integrated into [Yoast SEO for WordPress](https://wordpress.org/plugins/wordpress-seo/).
-
-### Advanced page controls
-Users should also be able to define the following for any given page:
-
-| Setting | Behavior |
-| ---- | -- |
-| Whether search engines should show the page in search results (yes / no) | Sets a *meta robots* value of *noindex* |
-| Whether search engines should follow links on the page (yes / no) | Sets a *meta robots* value of *nofollow* |
-| Advanced meta robots directives | Allows users to select additional (valid) *meta robots* values |
-| Breadcrumbs title | Defines the title of the page as/when used in breadcrumbs (markup and structured data) |
-| Canonical URL | Allows users to define a custom canonical URL value |
-
-## For Magento
-* Magento's standard CMS functionality can be somewhat compared to WordPress in terms of content management because content is edited in one field only. Therefore the Yoast content analysis will be easy to integrate in the standard CMS functionality.
-* Nice to have: there are a lot of modules that extend Magento's basic CMS functionality. Some add custom fields to the content editing experience. It would be nice to integrate with the most used amongst these modules.
-* Products are not part of Magento's CMS functionality. These are in fact built up out of a pretty much endless set of fields. To integrate the content analysis for product detail pages, the approach that was chosen is to create a template for analysis in which we load a standard set of fields in logical positions. The template is then fed to the content analysis and analyzed for SEO and readability.
-* Product category pages can be content only, product only (often with content widgets) or contain both content and a list of products. We should probably only integrate our content analysis for product category pages that contain content.
-* Every variant to a product can have its own page or only be visible through a product page of a configurable product (a product with many variants i.e. different sizes and colors) or a bundle. One could think of a red XL shirt which is a separate product but is only shown on the product page for "shirt" as a variant.
-* In case a product that is a variant to a configurable product does have its own page, should it canonicalize to the configurable product's page?
-* It would probably be a good idea to add structured metadata for [Product](https://schema.org/Product). The idea is to only add properties that Google actually looks at. `offers` and `review` seem like good candidates. What else?
-* Magento is licensed under OSL. We should check if there are any compatibility issues with GPLv3 that might bite us.
+For each page, the user should be able to preview and control their SEO settings via our [analysis tools](https://developer.yoast.com/features/analysis/overview)

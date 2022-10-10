@@ -18,6 +18,13 @@ module.exports = {
 			items: [
 				{
 					type: 'category',
+					label: 'Analysis',
+					items: [
+						'features/analysis/overview',
+					],
+				},
+				{
+					type: 'category',
 					label: 'XML sitemaps',
 					items: [
 						'features/xml-sitemaps/overview',
@@ -66,7 +73,11 @@ module.exports = {
 							items: [
 								'features/seo-tags/meta-robots/overview',
 								'features/seo-tags/meta-robots/functional-specification',
-								'features/seo-tags/meta-robots/api',
+								{
+									type: 'link',
+									label: 'API',
+									href: '/customization/apis/metadata-api'
+								},
 							],
 						},
 					],

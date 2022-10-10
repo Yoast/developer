@@ -5,28 +5,21 @@ sidebar_label: Specification
 custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/seo-tags/meta-robots/functional-specification.md
 description: An overview of how meta robots tags work in Yoast SEO.
 ---
-When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines, we output a meta robots tag in the `<head>` of that page.
+Yoast SEO always outputs a _meta robots_ tag in the `<head>` of every page. When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines, we alter the content of that tag.
 
-The tag takes the following format: `<meta name="{{agent}}" content="{{values}}" />`, where:
-
-* `{{agent}}` identifies which agent(s) the rules should apply to (with a default of 'robots', which matches all agents).
-* `{{values}}` may be a single value, or a comma-separated list of values.
+The tag takes the following format: `<meta name="robots" content="{{values}}" />`.
 
 ## Constructing {{values}}
 Given that a meta robots tag may have multiple (potentially conflicting) values, and that multiple overlapping conditions may apply, then:
 
 * All conditions should be evaluated and the resultant tag values combined additively, for each agent, using the rules defined below (see _Resolving conflict_).
 * The final set of values should be de-duplicated and reconciled.
-An up-to-date list of all possible meta robots values and their relationships is maintained [here](https://yoast.com/robots-meta-tags/) .
+An up-to-date list of all possible meta robots values and their relationships is maintained [here](https://yoast.com/robots-meta-tags/).
 
 ## Standard structure
-Yoast SEO outputs *three* meta robots tags by default on each (public) page, with the following structure:
+Yoast SEO outputs the following meta robots tas by default on each (public) page, with the following structure:
 
-```html
-<meta name="robots" content="{{values}}" />
-<meta name="googlebot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="bingbot" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-```
+`<meta name="robots" content="{{values}}, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`
 
 This provides generic instructions to all robots, and, opts users into Google and Bing's specific handling of snippet/media restrictions.
 
@@ -35,7 +28,7 @@ Unless otherwise defined by the user (or via page/template/filtering logic), `{{
 ## Scenarios
 
 ### On non-public pages
-Any 'non-public' page - i.e., a page, post or archive type which the user has determined should *not* appear in search results (e.g., via our Search Appearance settings) - should return `noindex` and `follow` properties, and omit the `googlebot` and `bingbot` tags. E.g.,
+Any 'non-public' page - i.e., a page, post or archive type which the user has determined should *not* appear in search results (e.g., via our Search Appearance settings) - should return `noindex` and `follow` properties. E.g.,
 `<meta name="robots" content="noindex, follow" />`
 
 ### Custom controls per-post/page
@@ -53,4 +46,4 @@ In the case of opposing directives, the most restrictive setting should always t
 * `nofollow` over `follow`.
 * `none` over `nofollow` OR `noindex`.
 
-E.g., a combination of `index`, `noindex`, `noimageindex` and `follow` values should result in an output of `noindex, follow` (as `noindex` is more restrictive than `index`, and `noimageindex` is redundant when combined with `noindex`).
+E.g., a combination of `index`, `noindex`, `noimageindex` and `follow` values should result in an output of `noindex, follow` (as `noindex` is more restrictive than `index`, and `noimageindex` is redundant when combined with `noindex`; see [docs](https://yoast.com/robots-meta-tags/) for a full overview of value relationships).

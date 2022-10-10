@@ -16,12 +16,12 @@ to point you to their replacements.
 You can now always filter the Twitter image on any page, including a taxonomy page through the `wpseo_twitter_image` filter.
 
 #### `wpseo_twitter_metatag_key`
-We removed this filter without a replacement. Please add a new meta data presenter per [this documentation](https://developer.yoast.com/blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
+We removed this filter without a replacement. Please add a new meta data presenter per [this documentation](https://yoast.com/developer-blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
 
 ### Actions
 
 #### `wpseo_opengraph`
-We removed this action without a replacement. Please add a new meta data presenter per [this documentation](https://developer.yoast.com/blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
+We removed this action without a replacement. Please add a new meta data presenter per [this documentation](https://yoast.com/developer-blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
 
 #### `wpseo_twitter`
-We removed this action without a replacement. Please add a new meta data presenter per [this documentation](https://developer.yoast.com/blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.
+We removed this action without a replacement. Please add a new meta data presenter per [this documentation](https://yoast.com/developer-blog/yoast-seo-14-0-adding-metadata/) if you need to add more values.

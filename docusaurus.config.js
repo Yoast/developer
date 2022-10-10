@@ -68,7 +68,7 @@ const config = {
 						},
 						{
 							label: 'Developer blog',
-							href: 'https://developer.yoast.com/blog/',
+							href: 'https://yoast.com/developer-blog/',
 						},
 						{
 							label: 'Security program',

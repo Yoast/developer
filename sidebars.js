@@ -10,7 +10,7 @@ module.exports = {
 		{
 			type: 'link',
 			label: 'Developer blog',
-			href: 'https://developer.yoast.com/blog'
+			href: 'https://yoast.com/developer-blog/'
 		},
 		{
 			type: 'category',

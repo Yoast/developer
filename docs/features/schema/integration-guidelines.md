@@ -19,7 +19,7 @@ You should start by reading [our specification](functional-specification.md), an
 
 ## Migration guide
 If you've made use of the `WPSEO_Graph_Piece` interface in the past, you may have noticed a deprecation message since upgrading to 14.0. In this release, we introduced a new abstract class to deal with custom graph pieces, that you need to migrate to.
-To quickly see what changed, make sure you check out [our blogpost](https://developer.yoast.com/blog/yoast-seo-14-0-changing-the-yoast-schema-api/) and adapt your own code, accordingly.
+To quickly see what changed, make sure you check out [our blogpost](https://yoast.com/developer-blog/yoast-seo-14-0-changing-the-yoast-schema-api/) and adapt your own code, accordingly.
 
 ## An example use-case
 Yoast SEO software already creates a large, structured graph, but there are content types which we don't (currently) support. You might want to add support for a specific content type. For example, you might want to add `Person` output to team profile pages, like we have here at Yoast. To do that, you should output a custom `Person` piece and stitch it into the main graph.

@@ -1,10 +1,9 @@
 ---
-id: overview
-title: Overview
+id: integrating
+title: Integrating Yoast SEO
 custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/development/integrating.md
 description: A hub for describing all of the technical specifications and requirements for integrating Yoast SEO.
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 description: A hub for describing all of the technical specifications and requirements for integrating [Yoast SEO](https://yoast.com/wordpress/plugins/seo/).
 

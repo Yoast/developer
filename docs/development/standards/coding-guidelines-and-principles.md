@@ -43,7 +43,7 @@ if ( $foo == 'bar' ) {
 
 ## JavaScript coding standards
 
-Our [JavaScript coding standards](https://github.com/Yoast/javascript/tree/master/packages/eslint) are recorded in an ESLint ruleset. There are some differences between our JavaScript and PHP rules. For example, we use CamelCase for class-, function, method- and variable names. Nowadays we only write ES6 code which we compile with tools like Webpack and Babel for backwards compatibility.
+Our [JavaScript coding standards](https://github.com/Yoast/javascript/tree/main/packages/eslint) are recorded in an ESLint ruleset. There are some differences between our JavaScript and PHP rules. For example, we use CamelCase for class-, function, method- and variable names. Nowadays we only write ES6 code which we compile with tools like Webpack and Babel for backwards compatibility.
 
 ## Naming guidelines
 

@@ -46,9 +46,9 @@ In normal text editors on your mac, you can navigate through text quickly using 
 Add this line to your `~/.bash_profile` or `~/.zshrc` file. Use the latter only if you're using Z-shell (or `echo $SHELL` outputs something like `/bin/zsh`).
 
 ```shell script
-alias delete-merged='git branch --merged | grep -v "\*" | grep -v master | grep -v trunk | grep -v develop | xargs -n 1 git branch -d'
+alias delete-merged='git branch --merged | grep -v "\*" | grep -v main | grep -v trunk | grep -v develop | xargs -n 1 git branch -d'
 ```
-You can now use `delete-merged` in the terminal in any git repository to delete branches which have been merged to either trunk, develop or master.
+You can now use `delete-merged` in the terminal in any git repository to delete branches which have been merged to either trunk, develop or main.
 
 ### Aliases tips
 This is a nice post about git aliases: https://haacked.com/archive/2014/07/28/github-flow-aliases/

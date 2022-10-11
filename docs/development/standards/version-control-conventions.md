@@ -9,24 +9,24 @@ Because we heavily rely on Git for our version control, it is necessary to enfor
 ## Branches
 Our repositories contain a few of special branches:
 
-| Branch | Description |
-|--------|-------------|
-| `master` | This is the branch that holds the latest released version. It should not contain any code that hasn't been properly reviewed and tested. |
-| `develop` * | This is the branch that holds code that is in active development and which will be published in the next release. Whenever creating a new branch, this branch should be used. |
+| Branch        | Description |
+|---------------|-------------|
+| `main`        | This is the branch that holds the latest released version. It should not contain any code that hasn't been properly reviewed and tested. |
+| `develop` *   | This is the branch that holds code that is in active development and which will be published in the next release. Whenever creating a new branch, this branch should be used. |
 | `release/*.*` | This is the branch that's created when making a Release Candidate to ensure development can continue on `trunk`. |
-| `hotfix/*.*` | This is the branch used for creating patches for the latest release. This branch is always based on `master`, not on trunk.
+| `hotfix/*.*`  | This is the branch used for creating patches for the latest release. This branch is always based on `main`, not on trunk.
 
 **\* In some repositories, `develop` is still called `trunk`. This is something we will be changing in the future.**
 
 ### Exceptions
-The only exception in which commiting directly to `master` is permitted, is in the case of a high priority bugfix or security patch. Once a release is planned, `develop` will be used to create an Release Candidate (RC) and will eventually be merged into `master`.
+The only exception in which commiting directly to `main` is permitted, is in the case of a high priority bugfix or security patch. Once a release is planned, `develop` will be used to create an Release Candidate (RC) and will eventually be merged into `main`.
 
-The My Yoast project makes use of a different setup where feature branches are merged directly to `master` if they pass all the requirements. Therefore, there is no `develop` branch on that repository.
+The My Yoast project makes use of a different setup where feature branches are merged directly to `main` if they pass all the requirements. Therefore, there is no `develop` branch on that repository.
 
 ### Creating branches
 Whenever you start working on an issue, it is important that you use a separate branch to commit to. This ensures that code that isn't complete (or possibly broken), isn't being spread to everyones development environment.
 
-All these different branches contain the "truth" with regard to what __is__ shipped (`master`), what __can__ be shipped (`develop`), and what __will__ eventually be shipped (feature branches).
+All these different branches contain the "truth" with regard to what __is__ shipped (`main`), what __can__ be shipped (`develop`), and what __will__ eventually be shipped (feature branches).
 
 **Please refrain from branching off a branch that has not been merged. This is actually counter-productive. If you need a branched merged before being able to continue with an other issue, please request a code-review and acceptance test from one of your fellow team members.**
 
@@ -44,7 +44,7 @@ In the past we used an alternative convention that also contained your initials,
 Schematically our Git tree should look like this:
 
 ```
-master
+main
   |
   |-123-fix-typo
   |-132-xss-in-metabox
@@ -63,7 +63,7 @@ Please try to use clear commit messages and keep your commits as small as possib
 ## Pull Requests
 
 #### Preparing your branch
-Once your branch is ready, make sure you merge the latest version of the parent branch (`master`, `trunk` or a feature branch) in your current branch. This can be done by executing:
+Once your branch is ready, make sure you merge the latest version of the parent branch (`main`, `trunk` or a feature branch) in your current branch. This can be done by executing:
 
 ```shell script
 git checkout {parent_branch}
@@ -86,7 +86,7 @@ Three golden rules:
 ### Creating the PR
 When filing a PR, please make sure your branch is compared with the right parent branch. For some repositories this is `trunk` by default, but you can change this at the top of your screen:
 
-![branch_comparison](https://cloud.githubusercontent.com/assets/1488816/4550557/e621840a-4e67-11e4-8880-2cabd973bb33.png)
+![branch_comparison](./branch-comparison.png)
 
 Indicate what issue is fixed by adding `Fixes #{issuenumber}`. This will ensure the issue is automatically closed once the PR is merged.
 

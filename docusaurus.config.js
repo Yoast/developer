@@ -66,7 +66,7 @@ const config = {
 			{
 				algolia: {
 					appId: "0R87BDTWP9",
-					apiKey: "a54375ed2042cef542e507421d5b8564",
+					apiKey: "4f4eb76a39bbb0612d03c89be0723e75",
 					indexName: "yoast_developer",
 				},
 				navbar: {

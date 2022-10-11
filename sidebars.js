@@ -209,9 +209,20 @@ module.exports = {
 				},
 
 				'features/link-attributes/functional-specification',
-				'features/rss-feeds/functional-specification',
+				{
+					type: 'category',
+					label: 'Alternate content formats',
+					link: {
+						type: 'generated-index',
+						description: 'Learn how Yoast SEO handles alternate content formats.',
+						slug: '/features/alternate-formats/',
+					},
+					items: [
+						'features/alternate-formats/embedded',
+						'features/alternate-formats/rss-feeds',
+					],
+				},
 				'features/http-headers/functional-specification',
-
 				{
 					type: 'category',
 					label: 'WP CLI',
@@ -219,8 +230,6 @@ module.exports = {
 						'features/wp-cli/reindex-indexables',
 					],
 				},
-
-				'features/installation/using-composer',
 			],
 		},
 		{
@@ -339,7 +348,7 @@ module.exports = {
 						'development/environment/generating-unit-test-template'
 					]
 				},
-				
+				'development/installation/using-composer',
 				'development/integrating',
 				'development/productivity-tips-and-tricks',
 				'development/cheatsheets',

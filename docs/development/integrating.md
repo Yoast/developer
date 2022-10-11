@@ -30,11 +30,12 @@ All pages and content types should output metadata in line with the following st
 ### Structured data
 All pages should output structured data in line with the following standards:
 
-* [Schema specification](features/schema/functional-specification.md) (general/foundational behavior)
-* [Schema specification for Yoast SEO](features/schema/plugins/yoast-seo.md) (Yoast-specific behavior)
+* [Schema specification](features/schema/functional-specification.md) (general/foundational behavior).
+* [Schema specification for Yoast SEO](features/schema/plugins/yoast-seo.md) (Yoast-specific behavior).
+
 ## Controls & Analysis
 For all posts, pages and content types, users must:
 
-* Be able to [Analyze](features/analysis/overview.md) their content
-* Be provided with [Controls](features/controls/overview.md)
-* Be able to edit page titles and descriptions in bulk (without needing to visit/open each individual page)
+* Be able to [Analyze](features/analysis/overview.md) their content.
+* Be provided with [Controls](features/controls/overview.md).
+* Be able to edit page titles and descriptions in bulk (without needing to visit/open each individual page).

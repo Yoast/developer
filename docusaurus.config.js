@@ -28,6 +28,15 @@ const config = {
 		locales: ["en"],
 	},
 
+	plugins: [
+		[
+			require.resolve('docusaurus-gtm-plugin'),
+			{
+				id: 'GTM-NHRB36F', // GTM Container ID
+			}
+		]
+	],
+
 	presets: [
 		[
 			"classic",

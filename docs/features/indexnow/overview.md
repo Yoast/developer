@@ -2,7 +2,6 @@
 id: overview
 title: IndexNow - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/index-now/overview.md
 description: This documentation provides information about how Yoast SEO integrates with IndexNow.
 ---
 This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) integrates with [IndexNow](https://www.indexnow.org/).

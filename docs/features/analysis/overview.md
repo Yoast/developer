@@ -2,7 +2,6 @@
 id: overview
 title: Analysis - Overview
 sidebar_label: Overview
-custom_edit_url: https://github.com/Yoast/developer/edit/main/docs/features/analysis/overview.md
 description: This documentation provides information about how Yoast SEO analyzes content.
 ---
 This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) analyzes content.

@@ -36,4 +36,8 @@ Users should also be able to define the following for any given page:
 | Breadcrumbs title | Defines the title of the page as/when used in breadcrumbs (markup and structured data) |
 | Canonical URL | Allows users to define a custom canonical URL value |
 
-
+## Schema controls
+| Setting | Behavior |
+| -- | ---- |
+| Page type | The type(s) of `WebPage` that should be used in the schema graph |
+| Article type | The type(s) of `Article` that should be used in the schema graph. Only available on 'post' types. |

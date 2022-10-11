@@ -26,7 +26,7 @@ The API uses basic auth. If you are a provisioner and do not yet have the proper
 To assist provisioners we have used [swagger-codegen](https://swagger.io/docs/open-source-tools/swagger-codegen/) to generate clients for the API. There's:
 
 - [PHP client](https://github.com/Yoast/subscription-api-php-client)
-    - [With additional documentation](https://github.com/Yoast/subscription-api-php-client/blob/master/docs/Api/SubscriptionProvisioningApi.md)
+    - [With additional documentation](https://github.com/Yoast/subscription-api-php-client/blob/main/docs/Api/SubscriptionProvisioningApi.md)
 - [javascript client](https://github.com/Yoast/subscription-api-javascript-client)
 
 The readme of these clients explains how to install and use them.

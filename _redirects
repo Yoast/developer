@@ -1,0 +1,2 @@
+/blog/* https://yoast.com/developer-blog/:splat 301
+/development/yoast-seo/product-sheet/ /features/ 301

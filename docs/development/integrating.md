@@ -38,3 +38,26 @@ For all posts, pages and content types, users must:
 * Be able to [Analyze](features/analysis/overview.md) their content
 * Be provided with [Controls](features/controls/overview.md)
 * Be able to edit page titles and descriptions in bulk (without needing to visit/open each individual page)
+
+## Integrating our Analysis tools
+At the moment, much of our analysis is tied deeply into either our WordPress or Shopify integrations. In the (near) future, we hope to increasingly de-couple our analysis tools from their respective back-ends, and to create a 'standalone' editor. 
+We aim to make this easy to implement in any content editing context, simply by "pointing" it at the relevant fields (and "hooking up" relevant back-end behaviour based on user settings and controls).
+
+We encourage integrators to pursue this method, rather than (re)building our analysis tools from scratch in their own context.
+
+### Resources
+
+* A simple example [standalone app](https://github.com/Yoast/wordpress-seo/tree/feature/agnostic-analysis/apps/seo-integration), which includes readability and SEO analysis (for multiple keyphrases and synonyms) as well as a working snippet preview (with replacemant variables)
+  * Note that this currently excludes our *inclusive language*, *formality*, *insights*, and *social previews* checks/features
+* [Documentation](https://github.com/Yoast/wordpress-seo/tree/feature/agnostic-analysis/packages/seo-integration) on how to configure and integrate the standalone app
+
+Note that these resources should be considered a work in progress, and might not be stable in production environments.
+If you encounter problems or errors, we encourage you to create issues on the respective repositories, and/or to contribute fixes and patches. 
+
+### Rough roadmap
+Whilst we can't provide specific timeframes on our roadmap, we *can* outline some of the key steps that we still need to undertake in order to release a stable production version of our 'agnostic' tools.
+This may be subject to change.
+
+* Convert NPM packages to built code
+* Restructure various Yoast GitHub repositories (de-coupling/moving various modules)
+* Formal testing and release

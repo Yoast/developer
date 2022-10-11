@@ -45,9 +45,10 @@ For each page, the user should be able to preview and control their SEO settings
 ## Misc Tools
 Tools must be provided to allow users to manage:
 
-* [Link attributes](features/link-attributes/functional-specification.md)
+* [Link attributes](features/controls/link-attributes.md)
 * [RSS feeds](features/alternate-formats/rss-feeds.md)
 * [robots.txt](features/robots-txt/functional-specification.md)
+* [Integrations](/features/integrations/)
 
 ## Feature controls
 It must be possible to enable/disable the following features (when available):

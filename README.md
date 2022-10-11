@@ -33,6 +33,7 @@ That's it! You are ready to use the portal on your local machine.
 After this, you have the following options:
 
 ### Local Development
+Just run:
 
 ```
 $ yarn start
@@ -43,15 +44,20 @@ This command starts a local development server and open up a browser window. Mos
 **Please note:** If you don't want to keep reopening a new tab, ensure you run `yarn start --no-open`. You can also combine this command with `BROWSER=<your preferred browser>` to force Docusaurus to open in a different browser than Chrome.
 
 ### Build
+Just run:
 
 ```
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the `build` directory and can be served using any static contents hosting service, and tested using `yarn serve`.
+
+**Note:** the build will fail when there are broken internal links, so running this to test before you commit is a good idea. 
+
+### Adding redirects
+To add redirects, add them to the [_redirects](_redirects) file. The pattern used is the Cloudflare pages [redirects format](https://developers.cloudflare.com/pages/platform/redirects/), which includes support for splats and placeholders. 
 
 ### Deployment
-
 Deployment is fully automatic and thus requires no configuration or user interaction.
 
 

@@ -31,8 +31,14 @@ module.exports = {
 				{
 					type: 'category',
 					label: 'Controls',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation provides information about the types of controls that Yoast SEO provides to users.',
+						slug: 'features/controls/',
+					},
 					items: [
 						'features/controls/overview',
+						'features/controls/link-attributes',
 					],
 				},
 				{
@@ -144,6 +150,20 @@ module.exports = {
 					],
 				},
 				'features/twitter/functional-specification',
+				'features/robots-txt/functional-specification',
+				{
+					type: 'category',
+					label: 'Integrations',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation describes how Yoast SEO integrates with external systems.',
+						slug: '/features/integrations/'
+					},
+					items: [
+						'features/integrations/indexnow',
+						'features/integrations/site-connections',
+					],
+				},
 				{
 					type: 'category',
 					label: 'Schema.org markup',
@@ -207,8 +227,6 @@ module.exports = {
 						},
 					],
 				},
-
-				'features/link-attributes/functional-specification',
 				{
 					type: 'category',
 					label: 'Alternate content formats',

@@ -86,7 +86,7 @@ Three golden rules:
 ### Creating the PR
 When filing a PR, please make sure your branch is compared with the right parent branch. For some repositories this is `trunk` by default, but you can change this at the top of your screen:
 
-![branch_comparison](https://cloud.githubusercontent.com/assets/1488816/4550557/e621840a-4e67-11e4-8880-2cabd973bb33.png)
+![branch_comparison](./branch-comparison.png)
 
 Indicate what issue is fixed by adding `Fixes #{issuenumber}`. This will ensure the issue is automatically closed once the PR is merged.
 

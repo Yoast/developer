@@ -10,6 +10,7 @@ This documentation provides information about the tyoes of controls that [Yoast 
 As a site owner, I want to be able to set the following metadata globally.
 
 ### Default meta options
+
 | Option | Description | Values |
 | --- | ----- | --- |
 | `og:site_name` | The name of the site for when shared in social platforms | `string` |
@@ -18,13 +19,14 @@ As a site owner, I want to be able to set the following metadata globally.
 | *Title separator* | The character used to delimit a page's 'name' and brand components in the *title* tag | `char` |
 
 ### Publisher information
+
 | Option | Description | Values |
 | --- | ----- | --- |
 | *Publisher type* | Whether the site represents a user or organization | `user` or `organization` |
-| `organization.name` | The name of the organization which publishes the site. Only used if the user chose `organization`. | `string` |
-| `organization.logo` | An image representing the organization which publishes the site. Only used if the user chose `organization`. | `string` |
-| `person.name` | The name (and identity, e.g., a user ID/profile) of the person who publishes the site. Only used if the user chose `person`. | `string` |
-| `person.logo` | An image representing the person who publishes the site. Only used if the user chose `person`. | `string` |
+| `organization.name` | The name of the organization which publishes the site. | `string` |
+| `organization.logo` | An image representing the organization which publishes the site. | `string` |
+| `person.name` | The name (and identity, e.g., a user ID/profile) of the person who publishes the site. | `string` |
+| `person.logo` | An image representing the person who publishes the site. | `string` |
 
 NB: Only values for *one* of `organization` or `person` fields are required, depending on the *Publisher type*.
 
@@ -42,6 +44,25 @@ For each page, the user should be able to preview and control their SEO settings
 
 ## Misc Tools
 Tools must be provided to allow users to manage:
-* [Link attributes](features/link-attributes/functional-specification.md)
-* [RSS feeds](features/rss-feeds/functional-specification.md)
 
+* [Link attributes](features/link-attributes/functional-specification.md)
+* [RSS feeds](features/alternate-formats/rss-feeds.md)
+* [robots.txt](features/robots-txt/functional-specification.md)
+
+## Feature controls
+It must be possible to enable/disable the following features (when available):
+
+* SEO analysis
+* Readability analysis
+* Inclusive language analysis
+* Cornerstone content
+* Text link counter
+* Insights
+* Link suggestions
+* XML sitemaps
+* Admin bar menu
+* Security controls ("no advanced or schema settings for authors")
+* Usage tracking
+* REST API
+* Enhanced Slack sharing
+* IndexNow

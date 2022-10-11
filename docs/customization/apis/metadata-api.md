@@ -34,7 +34,6 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 ### Twitter presenters
 | Presenter | Tag format | Filter |
 |---|-----|----|
-| `Card_Presenter` | `<meta name="twitter:card" content="%s" />` | `wpseo_twitter_card_type` |
 | `Creator_Presenter` | `<meta name="twitter:creator" content="%s" />` | n/a |
 | `Description_Presenter` | `<meta name="twitter:description" content="%s" />` | `wpseo_twitter_description` |
 | `Image_Presenter` | `<meta name="twitter:image" content="%s" />` | `wpseo_twitter_image` |
@@ -59,9 +58,10 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 ### Deprecated Presenters
 | Presenter | Tag format | Filter | Deprecated from |
 |---|-----|---|--|
-| `Googlebot_Presenter` | `<meta name="googlebot" content="%s" />` | `wpseo_googlebot` | Planned |
-| `Bingbot_Presenter` | `<meta name="bingbot" content="%s" />` | `wpseo_bingbot` | Planned |
+| `Googlebot_Presenter` | `<meta name="googlebot" content="%s" />` | `wpseo_googlebot` | |
+| `Bingbot_Presenter` | `<meta name="bingbot" content="%s" />` | `wpseo_bingbot` | |
 | `FB_App_ID_Presenter` | `<meta property="fb:app_id" content="%s" />` | Yoast SEO 15.5 (Dec 2020) |
+| `Card_Presenter` | `<meta name="twitter:card" content="%s" />` | `wpseo_twitter_card_type` | Yoast SEO 19.8 (Oct 2022) |
 
 ## Editing existing meta tags
 Sometimes you might run into a situation where you want to edit the output of one of the meta tags which are output by Yoast SEO.

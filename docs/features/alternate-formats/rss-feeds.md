@@ -1,5 +1,5 @@
 ---
-id: functional-specification
+id: rss-feeds
 title: RSS Feeds - Functional specification
 sidebar_label: RSS Feeds
 description: This documentation explains Yoast SEO modifies RSS feeds.
@@ -25,3 +25,9 @@ The following variables are available, and are automatically replaced in the gen
 | `%%POSTLINK%%` | A link to the post, with the _title_ as anchor text. |
 | `%%BLOGLINK%%` | A link to your site, with your _site's name_ as anchor text. |
 | `%%BLOGDESCLINK%%` | A link to your site, with the _site's name and description_ as anchor text. |
+
+## Indexing & canonical URLs
+Depending on the type of feed, additional HTTP headers must be set:
+
+* Feeds representing *content* (posts, pages or taxonomies) should set a canonical URL of the 'parent' URL, via a `link` header.
+* Feeds represending *comments* on content should set a meta robots directive of `noindex, follow`, via an `x-robots-tag` header.

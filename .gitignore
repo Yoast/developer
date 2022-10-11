@@ -25,7 +25,5 @@ yarn-error.log*
 debug.log
 
 package.json
-
 package-lock.json
-
 yarn.lock

@@ -1,7 +1,7 @@
 ---
-id: overview
-title: IndexNow - Overview
-sidebar_label: Overview
+id: indexnow
+title: Integrations - IndexNow
+sidebar_label: IndexNow
 description: This documentation provides information about how Yoast SEO integrates with IndexNow.
 ---
 This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) integrates with [IndexNow](https://www.indexnow.org/).

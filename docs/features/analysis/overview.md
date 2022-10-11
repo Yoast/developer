@@ -7,7 +7,7 @@ description: This documentation provides information about how Yoast SEO analyze
 This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) analyzes content.
 
 ## Content analysis & meta controls
-Our JavaScript content analysis tool, [YoastSEO.js](https://github.com/Yoast/javascript/tree/master/packages/yoastseo), is able to analyze content for a whole range of SEO, accessibility and readability checks.
+Our JavaScript content analysis tool, [YoastSEO.js](https://github.com/Yoast/javascript/tree/main/packages/yoastseo), is able to analyze content for a whole range of SEO, accessibility and readability checks.
 It contains a 'snippet editor', which generates previews of how the page will (probably) be displayed in Google desktop or mobile search.
 It also contains an editor in which users can edit the page's title, URL and meta description intuitively.
 

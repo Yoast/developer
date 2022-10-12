@@ -5,7 +5,8 @@ slug: /
 ---
 
 <head>
-<title>Yoast developer portal</title>
+  <title>Yoast developer portal</title>
+  <meta property="og:title" content="Yoast developer portal">
 </head>
 
 Welcome to the Yoast Developer portal, the place to find any technical information related to our software.

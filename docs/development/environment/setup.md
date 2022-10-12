@@ -81,20 +81,12 @@ Additional plugins:
 
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
 
-## Linking repositories via Yarn
-Due to the way we have structured most of our JavaScript / React code in the form of a monorepo, it is necessary to use Yarn's [linking](https://yarnpkg.com/lang/en/docs/cli/link/) feature if you plan on working on the JavaScript code. 
-
 ### Working on JavaScript used in the plugins
 If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:
 
-* Ensure you've cloned the JavaScript monorepo to somewhere on your machine.
-* Navigate to your WordPress development environment and are in the correct plugin's directory (i.e. `/plugins/wordpress-seo` or `/plugins/wordpress-seo-premium`).
-* Checkout your desired branch in the plugin's directory (or create a new one).
-* Run `yarn`, followed by `yarn link-monorepo`.
-* While running the second command, you might be asked to give up the directory that you've cloned the monorepo to. 
-  * If prompted, ensure you give up the *full* path to this directory (i.e. `/Users/<your user account>/<directory of monorepo>` ). Please note that the usage of `~` in the pathname, is not supported.
-* If no errors occur, you should now be able to proceed developing and run commands such as `grunt build` as you normally would.
-* Additionally, you can use `grunt webpack:watch`. This command will watch for changes in the JavaScript files and keep them up-to-date. Please note that there is no development server in use, so you have to refresh the webpage manually.
+* Run `yarn` to install dependencies.
+* Run `grunt build:js` to build JavaScript manually.
+* Run `grunt shell:webpack-watch` (Free) or `grunt webpack:watch` (Premium) to watch and build JavaScript automatically.
 
 :::caution
 If your pull-request requires a specific branch from the monorepo, please ensure that you create a branch on the monorepo with the *exact* same name as the branch on the plugin's repository.

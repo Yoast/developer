@@ -97,6 +97,8 @@ The `Organization` type may be transformed in the following scenarios.
 To change the `Organization` schema Yoast SEO outputs, you can use our `wpseo_schema_organization` filter, for instance as follows:
 
 ```php
+add_filter( 'wpseo_schema_organization', 'change_organization_schema', 11, 2 );
+
 /**
  * Changes the Yoast organization URL to always be https://yoast.com even on subdomains.
  *
@@ -105,7 +107,7 @@ To change the `Organization` schema Yoast SEO outputs, you can use our `wpseo_sc
  *
  * @return array $data The Schema Organization data.
  */
-public function change_organization( array $data, Meta_Tags_Context $context ): array {
+function change_organization_schema( $data, $context ) {
 	$data['@type'] = [
 		'Organization',
 		'Brand',

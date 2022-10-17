@@ -78,7 +78,7 @@ The following examples demonstrate how our base script may be extended and alter
                   "@type": "ImageObject",
                   "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
-                  "contentURL": "https://www.example.com/images/example.jpg",
+                  "contentUrl": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
@@ -144,7 +144,7 @@ The following examples demonstrate how our base script may be extended and alter
                   "@type": "ImageObject",
                   "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
-                  "contentURL": "https://www.example.com/images/example.jpg",
+                  "contentUrl": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
@@ -240,29 +240,19 @@ The following examples demonstrate how our base script may be extended and alter
                   {
                       "@type": "ListItem",
                       "position": 1,
-                      "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/",
-                          "url": "https://www.example.com/",
-                          "name": "Home"
-                      }
+                      "name": "Home",
+                      "item": "https://www.example.com/"
                   },
                   {
                       "@type": "ListItem",
                       "position": 2,
-                      "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/blog/",
-                          "url": "https://www.example.com/blog/",
-                          "name": "Example page"
-                      }
+                      "name": "Blog",
+                      "item": "https://www.example.com/blog/"
                   },
                   {
                       "@type": "ListItem",
                       "position": 3,
-                      "item": {
-                          "@id": "https://www.example.com/blog/example-article/"
-                      }
+                      "name": "Example Article"
                   }
               ]
           }
@@ -295,7 +285,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                   "@type": "ImageObject",
                   "@id": "https://www.example.com/images/example.jpg",
                   "url": "https://www.example.com/images/example.jpg",
-                  "contentURL": "https://www.example.com/images/example.jpg",
+                  "contentUrl": "https://www.example.com/images/example.jpg",
                   "width": 120,
                   "height": 120,
                   "caption": "Example Image"
@@ -344,30 +334,19 @@ Note that these are actually two separate graph blocks in reality, that are stit
                   {
                       "@type": "ListItem",
                       "position": 1,
-                      "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/",
-                          "url": "https://www.example.com/",
-                          "name": "Home"
-                      }
+                      "name": "Home",
+                      "item": "https://www.example.com/"
                   },
                   {
                       "@type": "ListItem",
                       "position": 2,
-                      "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/products/",
-                          "url": "https://www.example.com/products/",
-                          "name": "Example page"
-                      }
+                      "name": "Products",
+                      "item": "https://www.example.com/products/"
                   },
                   {
                       "@type": "ListItem",
                       "position": 3,
-                      "item": {
-                          "@type": "WebPage",
-                          "@id": "https://www.example.com/products/example-page/"
-                      }
+                      "name": "Example Page"
                   }
               ]
           },
@@ -383,14 +362,14 @@ Note that these are actually two separate graph blocks in reality, that are stit
               "offers": [
                   {
                       "@type": "Offer",
+                      "@id": "https://www.example.com/#/schema/Offer/abc123",
                       "price": "18.00",
-                      "priceValidUntil": "2020-12-31",
                       "priceSpecification": {
+                          "@type": "PriceSpecification",
                           "price": "18.00",
                           "priceCurrency": "EUR",
                           "valueAddedTaxIncluded": "false"
                       },
-                      "priceCurrency": "EUR",
                       "availability": "https://schema.org/InStock",
                       "url": "https://www.example.com/products/example-page/",
                       "seller": {
@@ -405,6 +384,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
               },
               "review": [
                   {
+                      "@type": "Review",
                       "@id": "https://www.example.com/#/schema/Review/abc123",
                       "datePublished": "2019-04-09T09:10:12+00:00",
                       "description": "What a nice turtle shirt.",
@@ -418,6 +398,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                       }
                   },
                   {
+                      "@type": "Review",
                       "@id": "https://www.example.com/#/schema/Review/def456",
                       "datePublished": "2019-04-09T09:10:29+00:00",
                       "description": "Awesome shirt",

@@ -105,6 +105,7 @@ If you want to change the output of a certain piece, hook into our `wpseo_schema
 
 * [Article](pieces/article.md#api)
 * [Breadcrumb](pieces/breadcrumb.md#api)
+* [Organization](pieces/organization.md#api)
 * [Webpage](pieces/webpage.md#api)
 * [Website](pieces/website.md#api)
 

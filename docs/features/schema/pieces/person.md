@@ -79,7 +79,7 @@ Optional properties which should only be output when the required criteria is me
   }`}
 </YoastSchemaExample>
 
-## API: Change Organization Schema output {#api}
+## WordPress API: Change Organization Schema output {#api}
 
 To change the `Person` schema Yoast SEO outputs, you can use our `wpseo_schema_person` filter, for instance as follows:
 

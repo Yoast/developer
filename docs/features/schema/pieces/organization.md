@@ -92,7 +92,7 @@ The `Organization` type may be transformed in the following scenarios.
   }`}
 </YoastSchemaExample>
 
-## API: Change Organization Schema output {#api}
+## WordPress API: Change Organization Schema output {#api}
 
 To change the `Organization` schema Yoast SEO outputs, you can use our `wpseo_schema_organization` filter, for instance as follows:
 

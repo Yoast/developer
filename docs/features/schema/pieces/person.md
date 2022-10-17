@@ -78,3 +78,73 @@ Optional properties which should only be output when the required criteria is me
       ]
   }`}
 </YoastSchemaExample>
+
+## API: Change Organization Schema output {#api}
+
+To change the `Person` schema Yoast SEO outputs, you can use our `wpseo_schema_person` filter, for instance as follows:
+
+### Change person output
+```php
+add_filter( 'wpseo_schema_person', 'schema_change_person', 11, 2 );
+
+/**
+ * Changes the Yoast SEO Person schema.
+ *
+ * @param array             $data    The Schema Person data.
+ * @param Meta_Tags_Context $context Context value object.
+ *
+ * @return array $data The Schema Person data.
+ */
+function schema_change_person( $data, $context ) {
+	if ( isset( $data['worksFor'] ) && $data['worksFor'] === 'Yoast' ) {
+		// Make references to "Yoast" actually reference the organization's graph piece.
+		$data['worksFor'] = [ '@id' => $context->site_url . Schema_IDs::ORGANIZATION_HASH ];
+	}
+
+	return $data;
+}
+```
+
+### Change person being output
+
+If you want to change the person being output in the schema, you can filter it like this:
+
+```php
+add_filter( 'wpseo_schema_person_user_id', 'change_schema_person_id' );
+
+/**
+ * Changes the Yoast SEO Person schema.
+ *
+ * @param int $person_id The Schema Person ID.
+ *
+ * @return int $person_id The (possibly altered) person ID.
+ */
+function change_schema_person_id( $person_id ) {
+    if ( $person_id === 12 ) {
+        return 3; // Make sure this is a valid user ID.
+    }
+    return $person_id;
+}
+```
+
+### Social profiles
+If you want to change which profiles to show on `Person` output in the `sameAs` array, you can hook into our `wpseo_schema_person_social_profiles` filter. We do this on yoast.com to add people's GitHub and WordPress profile as well as their personal sites to their sameAs output:
+
+```php
+add_filter( 'wpseo_schema_person_social_profiles', 'yoast_add_social_profiles' );
+
+/**
+ * Adds social profiles to our sameAs array.
+ *
+ * @param array $profiles Social profiles.
+ *
+ * @return array Social profiles.
+ */
+function yoast_add_social_profiles( $profiles ) {
+    array_push( $profiles, 'github', 'personal', 'wordpress' );
+
+    return $profiles;
+}
+```
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

@@ -6,7 +6,7 @@ description: Describes a 'WebSite'. Parent to 'WebPage'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes a `WebSite`. Parent to `WebPage`.
+Describes a `WebSite`. Parent to [`WebPage`](webpage.md).
 
 ## Triggers
 Should be output on all public pages.
@@ -27,7 +27,7 @@ If any of the required fields are missing or invalid, the node should not be out
 The following should be added whenever available and valid:
 
 * `publisher`: A reference-by-ID to the node representing the entity which publishes the `WebSite`.
-* `potentialAction`: A `SearchAction` object describing the site's internal search.
+* `potentialAction`: A [`SearchAction`](searchaction.md) object describing the site's internal search.
 * `inLanguage`: The language code for the WebSite; e.g., `en-GB`.
  * If the website is available in multiple languages, then output an array of `inLanguage` values.
 * `description`: A description of the website (e.g., the site's tagline).
@@ -97,5 +97,7 @@ function example_change_website( $data ) {
     return $data;
 }
 ```
+
+To change the [`SearchAction`](searchaction.md) output, please see [its API documentation](searchaction.md#api).
 
 To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

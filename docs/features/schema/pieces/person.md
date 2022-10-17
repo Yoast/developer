@@ -127,4 +127,24 @@ function change_schema_person_id( $person_id ) {
 }
 ```
 
+### Social profiles
+If you want to change which profiles to show on `Person` output in the `sameAs` array, you can hook into our `wpseo_schema_person_social_profiles` filter. We do this on yoast.com to add people's GitHub and WordPress profile as well as their personal sites to their sameAs output:
+
+```php
+add_filter( 'wpseo_schema_person_social_profiles', 'yoast_add_social_profiles' );
+
+/**
+ * Adds social profiles to our sameAs array.
+ *
+ * @param array $profiles Social profiles.
+ *
+ * @return array Social profiles.
+ */
+function yoast_add_social_profiles( $profiles ) {
+    array_push( $profiles, 'github', 'personal', 'wordpress' );
+
+    return $profiles;
+}
+```
+
 To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

@@ -65,6 +65,18 @@ function remove_breadcrumbs_property_from_webpage( $data ) {
 }
 ```
 
+#### Enable / disabling graph pieces by filter
+Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
+
+```php
+add_filter( 'wpseo_schema_needs_person', '__return_true' );
+add_filter( 'wpseo_schema_person_user_id', function() {
+    return 1; // Make sure 1 is a valid User ID.
+} );
+```
+
+It really is as simple as returning true on that to always show it, but you can of course also hook a function there with more precise logic. The second filter is needed to provide a user ID that should be used for the Person to show, as otherwise it won't work as the code doesn't know which user to show.
+
 ### Adding graph pieces
 Each of our graph pieces extend a `Abstract_Schema_Piece` class. We pass a `Meta_Tags_Context` object to each of these pieces, which contains a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php).
 
@@ -107,9 +119,9 @@ If you want to change the output of a certain piece, hook into our `wpseo_schema
 * [Breadcrumb](pieces/breadcrumb.md#api)
 * [Organization](pieces/organization.md#api)
 * [Person](pieces/person.md#api)
+* [SearchAction](pieces/searchaction.md#api)
 * [Webpage](pieces/webpage.md#api)
 * [Website](pieces/website.md#api)
-
 
 ## Perform complex changes to the whole Schema
 If you need to perform complex operations to the Schema, such as changing values in different parts of the output, you can hook into our `wpseo_schema_graph` filter. For instance:
@@ -196,42 +208,3 @@ public function render_joost_block_schema( $graph, $block, $context ) {
 	return $graph;
 }
 ```
-
-## More specific filters
-
-### Enable / disabling graph pieces by filter
-Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
-
-```php
-add_filter( 'wpseo_schema_needs_person', '__return_true' );
-add_filter( 'wpseo_schema_person_user_id', function() {
-    return 1; // Make sure 1 is a valid User ID.
-} );
-```
-
-It really is as simple as returning true on that to always show it, but you can of course also hook a function there with more precise logic. The second filter is needed to provide a user ID that should be used for the Person to show, as otherwise it won't work as the code doesn't know which user to show.
-
-### Social profiles
-If you want to change which profiles to show on an author page, you can hook into our `wpseo_schema_person_social_profiles` filter. We do this on yoast.com to add people's GitHub and WordPress profile as well as their personal sites to their sameAs output:
-
-```php
-add_filter( 'wpseo_schema_person_social_profiles', 'yoast_add_social_profiles' );
-
-/**
- * Adds social profiles to our sameAs array.
- *
- * @param array $profiles Social profiles.
- *
- * @return array Social profiles.
- */
-function yoast_add_social_profiles( $profiles ) {
-    array_push( $profiles, 'github', 'personal', 'wordpress' );
-
-    return $profiles;
-}
-```
-
-### Other filters
-We also have some more specific filters for convenience:
-* `disable_wpseo_json_ld_search` - disables the search potentialAction that we add on every page if you simply return true on it.
-* `wpseo_json_ld_search_url` - allows you to change the search URL for your site.

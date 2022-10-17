@@ -6,7 +6,7 @@ description: Describes an organization (a company, business or institution). Mos
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a `WebSite`.
+Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a [`WebSite`](website.md).
 
 May be transformed into a more specific type (such as  `Corporation` or `LocalBusiness` ) if the required conditions are met.
 

@@ -6,9 +6,9 @@ Description: Describes a single page on a 'WebSite'. Acts as a container for sub
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes a single page on a `WebSite`. Acts as a container for sub-page elements (such as `Article`).
+Describes a single page on a [`WebSite`](website.md). Acts as a container for sub-page elements (such as [`Article`](article.md)).
 
-Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the `Organization`).
+Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the [`Organization`](organization.md)).
 
 May be transformed into a more specific type (such as `FAQPage` ) if the required conditions are met.
 

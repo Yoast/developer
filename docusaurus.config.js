@@ -37,6 +37,23 @@ const config = {
 		]
 	],
 
+	themes: [
+		[
+			require.resolve("@easyops-cn/docusaurus-search-local"),
+			{
+				// ... Your options.
+				// `hashed` is recommended as long-term-cache of index file is possible.
+				hashed: true,
+				indexBlog: false,
+				docsRouteBasePath: "/",
+				// For Docs using Chinese, The `language` is recommended to set to:
+				// ```
+				// language: ["en", "zh"],
+				// ```
+			},
+		],
+	],
+
 	presets: [
 		[
 			"classic",
@@ -64,11 +81,6 @@ const config = {
 	/** @type {import("@docusaurus/preset-classic").ThemeConfig} */
 		(
 			{
-				algolia: {
-					appId: "0R87BDTWP9",
-					apiKey: "a54375ed2042cef542e507421d5b8564",
-					indexName: "yoast_developer",
-				},
 				navbar: {
 					style: "primary",
 					logo: {

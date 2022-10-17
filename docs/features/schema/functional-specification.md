@@ -363,7 +363,6 @@ Note that these are actually two separate graph blocks in reality, that are stit
                   {
                       "@type": "Offer",
                       "@id": "https://www.example.com/#/schema/Offer/abc123",
-                      "price": "18.00",
                       "priceSpecification": {
                           "@type": "PriceSpecification",
                           "price": "18.00",

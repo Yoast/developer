@@ -148,7 +148,7 @@ On search results pages, the *type* property should be altered to an array of `[
   }`}
 </YoastSchemaExample>
 
-## API: Change Webpage Schema output {#api}
+## WordPress API: Change Webpage Schema output {#api}
 
 To change the `Webpage` schema Yoast SEO outputs, you can use our `wpseo_schema_webpage` filter, for instance as follows:
 

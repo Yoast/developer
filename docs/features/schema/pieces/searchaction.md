@@ -43,7 +43,7 @@ If any of the required fields are missing or invalid, the node should not be out
   }`}
 </YoastSchemaExample>
 
-## API: Change SearchAction Schema output {#api}
+## WordPress API: Change SearchAction Schema output {#api}
 
 To change the `SearchAction` schema Yoast SEO outputs, you can use the following filters:
 

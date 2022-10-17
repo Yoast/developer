@@ -76,7 +76,7 @@ The following should be added whenever available and valid:
   }`}
 </YoastSchemaExample>
 
-## API: Change Website Schema output {#api}
+## WordPress API: Change Website Schema output {#api}
 
 To change the `Website` schema Yoast SEO outputs, you can use our `wpseo_schema_website` filter, for instance as follows:
 

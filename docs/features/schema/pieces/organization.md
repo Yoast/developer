@@ -91,3 +91,60 @@ The `Organization` type may be transformed in the following scenarios.
       ]
   }`}
 </YoastSchemaExample>
+
+## API: Change Organization Schema output {#api}
+
+To change the `Organization` schema Yoast SEO outputs, you can use our `wpseo_schema_organization` filter, for instance as follows:
+
+```php
+/**
+ * Changes the Yoast organization URL to always be https://yoast.com even on subdomains.
+ *
+ * @param array             $data    The Schema Organization data.
+ * @param Meta_Tags_Context $context Context value object.
+ *
+ * @return array $data The Schema Organization data.
+ */
+public function change_organization( array $data, Meta_Tags_Context $context ): array {
+	$data['@type'] = [
+		'Organization',
+		'Brand',
+	];
+	$data['founder'] = [
+		'@type'  => 'Person',
+		'name'   => 'Joost de Valk',
+		'url'    => 'https://yoast.com/about-us/team/joost-de-valk/',
+		'sameAs' => 'https://yoast.com/about-us/team/joost-de-valk/',
+	];
+	$data['foundingDate']       = '2010-05-01';
+	$data['numberOfEmployees']  = (int) wp_count_posts( 'yoast_employees' )->publish;
+	$data['slogan']             = 'SEO for Everyone';
+	$data['description']        = 'Yoast helps you with your website optimization, whether it be through our widely used SEO software or our online SEO courses: we&#039;re here to help.';
+	$data['url']                = 'https://yoast.com/';
+	$data['legalName']          = 'Yoast BV';
+	$data['parentOrganization'] = [
+		'@type'       => 'Organization',
+		'name'        => 'Newfold Digital',
+		'description' => 'Newfold Digital is a leading web presence solutions provider serving millions of small-to-medium businesses globally.',
+		'url'         => 'https://newfold.com/',
+		'sameAs'      => [
+			'https://newfold.com/',
+		],
+		'logo'        => 'https://yoast.com/app/uploads/2022/01/newfold-logo.png',
+	];
+	$data['memberOf']           = [
+		'@type'       => 'Organization',
+		'name'        => 'World Wide Web Consortium (W3C)',
+		'description' => 'The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web.',
+		'url'         => 'https://w3.org/',
+		'sameAs'      => [
+			'https://w3.org/',
+		],
+		'logo'        => 'https://www.w3.org/Icons/w3c_main.png',
+	];
+
+	return $data;
+}
+```
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

@@ -44,14 +44,17 @@ If the node is not output, any entities which would otherwise have referenced th
           {
               "@type": "Offer",
               "@id": "https://www.example.com/#/schema/Offer/abc123",
-              "price": "22.00",
               "priceSpecification": {
                   "@type": "PriceSpecification",
-                  "valueAddedTaxIncluded": "false"
+                  "price": "22.00",
+                  "valueAddedTaxIncluded": "false"              
+                  "priceCurrency": "GBP",
               },
-              "priceCurrency": "GBP",
               "availability": "http://schema.org/InStock",
-              "url": "https://www.example.com/example-product-page/"
+              "url": "https://www.example.com/example-product-page/",
+              "seller": {
+                  "@id": "https://www.example.com/#/schema/Organization/1"
+              }
           }
       ]
   }`}

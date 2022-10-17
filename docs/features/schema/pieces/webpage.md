@@ -147,3 +147,32 @@ On search results pages, the *type* property should be altered to an array of `[
       ]
   }`}
 </YoastSchemaExample>
+
+## API: Change Webpage Schema output {#api}
+
+To change the `Webpage` schema Yoast SEO outputs, you can use our `wpseo_schema_webpage` filter, for instance as follows:
+
+```php
+add_filter( 'wpseo_schema_webpage', 'example_change_webpage' );
+
+/**
+ * Changes @type of Webpage Schema data.
+ *
+ * @param array $data Schema.org Webpage data array.
+ *
+ * @return array Schema.org Webpage data array.
+ */
+function example_change_webpage( $data ) {
+    if ( ! is_page( 'about' ) ) {
+        return $data;
+    }
+
+    $data['@type'] = 'AboutPage';
+
+    return $data;
+}
+```
+
+We also have a more specific filter for convenience: `wpseo_schema_webpage_type` - changes the page type, so could be used to make the above example even simpler.
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

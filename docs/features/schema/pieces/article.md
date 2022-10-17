@@ -147,3 +147,85 @@ Optional properties which should only be output when the required criteria are m
       ]
   }`}
 </YoastSchemaExample>
+
+## API: Change Article Schema output {#api}
+
+To change the `Article` schema Yoast SEO outputs, you can use our `wpseo_schema_article` filter, for instance as follows:
+
+```php
+add_filter( 'wpseo_schema_article', 'change_article_to_social_posting' );
+
+/**
+ * Changes @type of Article Schema data.
+ *
+ * @param array $data Schema.org Article data array.
+ *
+ * @return array Schema.org Article data array.
+ */
+function change_article_to_social_posting( $data ) {
+    $data['@type'] = 'SocialMediaPosting';
+
+    return $data;
+}
+```
+
+### Output Article schema on custom post types
+By default Yoast SEO doesn't output Article schema on custom post types. The code below changes that:
+
+```php
+/**
+ * Add 'book' to the list of articles post types, so books get Article schema.
+ *
+ * @param  mixed $post_types The current list of post types.
+ *
+ * @return array Array of post types for which Yoast SEO renders Article schema.
+ */
+function article_schema_for_books( $post_types ) {
+	$post_types[] = 'book';
+	return $post_types;
+}
+
+add_filter( 'wpseo_schema_article_post_types', 'article_schema_for_books' );
+```
+
+Note that for a post type to be able to output Article schema, the post type needs to support having an Author. You can add that simply by adding this, for a given post type `book`:
+
+```php
+add_post_type_support( 'book', 'author' );
+```
+
+This currently does not work for the `page` post type. We are fixing this.
+
+### Add images to your Article Schema
+If you want to add an image to an object programmatically, you can do it as follows. Note that we use the `YoastSEO`
+surface to get both the `canonical` from the `meta` surface as the `helpers` surface to access the `schema->image`
+functionality.
+
+```php
+add_filter( 'wpseo_schema_article', 'example_change_article' );
+
+/**
+ * Adds images to Article Schema data.
+ *
+ * @param array $data Schema.org Article data array.
+ *
+ * @return array Schema.org Article data array.
+ */
+function example_change_article( $data ) {
+    // This is the attachment ID for our image.
+    $attachment_id = 12345;
+
+    // We're going to create a graph piece for our image. Every graph piece always needs a Schema ID, so it can
+    // be referenced by other graph pieces, best practice is to base that on the canonical adding an ID that's
+    // always going to be unique.
+    $schema_id     = YoastSEO()->meta->for_current_page()->canonical . '#/schema/image/' . $attachment_id;                 
+    $data['image'] = new WPSEO_Schema_Image( $schema_id );
+
+    return $data;
+}
+```
+
+Instead of `YoastSEO()->helpers->schema->image->generate_from_attachment_id()` you can also use
+`YoastSEO()->helpers->schema->image->generate_from_url()` which takes, as you've guessed, a URL as input.
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

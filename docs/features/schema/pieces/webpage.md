@@ -6,9 +6,9 @@ Description: Describes a single page on a 'WebSite'. Acts as a container for sub
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes a single page on a `WebSite`. Acts as a container for sub-page elements (such as `Article`).
+Describes a single page on a [`WebSite`](website.md). Acts as a container for sub-page elements (such as [`Article`](article.md)).
 
-Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the `Organization`).
+Acts as a connector from a page's content to the parent `WebSite` (and in turn, to the [`Organization`](organization.md)).
 
 May be transformed into a more specific type (such as `FAQPage` ) if the required conditions are met.
 
@@ -147,3 +147,32 @@ On search results pages, the *type* property should be altered to an array of `[
       ]
   }`}
 </YoastSchemaExample>
+
+## API: Change Webpage Schema output {#api}
+
+To change the `Webpage` schema Yoast SEO outputs, you can use our `wpseo_schema_webpage` filter, for instance as follows:
+
+```php
+add_filter( 'wpseo_schema_webpage', 'example_change_webpage' );
+
+/**
+ * Changes @type of Webpage Schema data.
+ *
+ * @param array $data Schema.org Webpage data array.
+ *
+ * @return array Schema.org Webpage data array.
+ */
+function example_change_webpage( $data ) {
+    if ( ! is_page( 'about' ) ) {
+        return $data;
+    }
+
+    $data['@type'] = 'AboutPage';
+
+    return $data;
+}
+```
+
+We also have a more specific filter for convenience: `wpseo_schema_webpage_type` - changes the page type, so could be used to make the above example even simpler.
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

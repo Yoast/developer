@@ -65,6 +65,18 @@ function remove_breadcrumbs_property_from_webpage( $data ) {
 }
 ```
 
+#### Enable / disabling graph pieces by filter
+Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
+
+```php
+add_filter( 'wpseo_schema_needs_person', '__return_true' );
+add_filter( 'wpseo_schema_person_user_id', function() {
+    return 1; // Make sure 1 is a valid User ID.
+} );
+```
+
+It really is as simple as returning true on that to always show it, but you can of course also hook a function there with more precise logic. The second filter is needed to provide a user ID that should be used for the Person to show, as otherwise it won't work as the code doesn't know which user to show.
+
 ### Adding graph pieces
 Each of our graph pieces extend a `Abstract_Schema_Piece` class. We pass a `Meta_Tags_Context` object to each of these pieces, which contains a lot of context variables. A good example of that can be found in our [example use case](integration-guidelines.md#an-example-use-case), and deeper examples can be found [here on Github](https://github.com/Yoast/wordpress-seo/blob/trunk/src/generators/schema/author.php).
 
@@ -103,46 +115,13 @@ $data['organization'] = [ '@id' => Schema_IDs::ORGANIZATION_HASH ];
 ## Change a graph pieces' data
 If you want to change the output of a certain piece, hook into our `wpseo_schema_<class>` filter. For instance:
 
-```php
-add_filter( 'wpseo_schema_article', 'change_article_to_social_posting' );
-
-/**
- * Changes @type of Article Schema data.
- *
- * @param array $data Schema.org Article data array.
- *
- * @return array Schema.org Article data array.
- */
-function change_article_to_social_posting( $data ) {
-    $data['@type'] = 'SocialMediaPosting';
-
-    return $data;
-}
-```
-
-In most cases, you're probably going to want to include some conditional logic to determine where and when you change or
-set your own values. In those cases, you can use standard WordPress filtering and functions, like so:
-
-```php
-add_filter( 'wpseo_schema_webpage', 'example_change_webpage' );
-
-/**
- * Changes @type of Webpage Schema data.
- *
- * @param array $data Schema.org Webpage data array.
- *
- * @return array Schema.org Webpage data array.
- */
-function example_change_webpage( $data ) {
-    if ( ! is_page( 'about' ) ) {
-        return $data;
-    }
-
-    $data['@type'] = 'AboutPage';
-
-    return $data;
-}
-```
+* [Article](pieces/article.md#api)
+* [Breadcrumb](pieces/breadcrumb.md#api)
+* [Organization](pieces/organization.md#api)
+* [Person](pieces/person.md#api)
+* [SearchAction](pieces/searchaction.md#api)
+* [Webpage](pieces/webpage.md#api)
+* [Website](pieces/website.md#api)
 
 ## Perform complex changes to the whole Schema
 If you need to perform complex operations to the Schema, such as changing values in different parts of the output, you can hook into our `wpseo_schema_graph` filter. For instance:
@@ -165,61 +144,6 @@ function change_image_urls_to_cdn( $data, $context ) {
         }
     }
     return $data;
-}
-```
-
-## To add images to your Schema
-If you want to add an image to an object programmatically, you can do it as follows. Note that we use the `YoastSEO`
-surface to get both the `canonical` from the `meta` surface as the `helpers` surface to access the `schema->image`
-functionality.
-
-```php
-add_filter( 'wpseo_schema_article', 'example_change_article' );
-
-/**
- * Adds images to Article Schema data.
- *
- * @param array $data Schema.org Article data array.
- *
- * @return array Schema.org Article data array.
- */
-function example_change_article( $data ) {
-    // This is the attachment ID for our image.
-    $attachment_id = 12345;
-
-    // We're going to create a graph piece for our image. Every graph piece always needs a Schema ID, so it can
-    // be referenced by other graph pieces, best practice is to base that on the canonical adding an ID that's
-    // always going to be unique.
-    $schema_id     = YoastSEO()->meta->for_current_page()->canonical . '#/schema/image/' . $attachment_id;                 
-    $data['image'] = new WPSEO_Schema_Image( $schema_id );
-
-    return $data;
-}
-```
-
-Instead of `YoastSEO()->helpers->schema->image->generate_from_attachment_id()` you can also use
-`YoastSEO()->helpers->schema->image->generate_from_url()` which takes, as you've guessed, a URL as input.
-
-## Replace domain name in the breadcrumb schema
-If you want to replace the domain name in the breadcrumb schema, you can use the `wpseo_schema_breadcrumb` filter to hook into the breadcrumb schema piece individually.
-
-```php
-add_filter('wpseo_schema_breadcrumb', 'replace_domain_name_to_breadcrumb_schema', 11, 2);
-/**
- * Replace domain name in the breadcrumb schema piece individually.
- * 
- * @param array $piece Schema.org Breadcrumb data array.
- * 
- * @return array Altered Schema.org Breadcrumb data array.
- */
-function replace_domain_name_to_breadcrumb_schema( $piece ) {
-    $piece['@id'] = str_replace( 'olddomain.tld', 'newdomain.tld', $piece['@id'] );
-    foreach ( $piece['itemListElement'] as &$list ) {
-        if ( $list['item'] ) {
-            $list['item'] = str_replace( 'olddomain.tld', 'newdomain.tld', $list['item'] );
-        }
-    }
-    return $piece;
 }
 ```
 
@@ -284,71 +208,3 @@ public function render_joost_block_schema( $graph, $block, $context ) {
 	return $graph;
 }
 ```
-
-## More specific filters
-
-### Enable / disabling graph pieces by filter
-Sometimes you might want to enable or disable a graph piece based on other variables then the graph piece itself can determine. For instance, you might always want to show a Person on your site. You can do this by hooking into the `wpseo_schema_needs_<class-name>` filter. In this particular case, the code would look like this:
-
-```php
-add_filter( 'wpseo_schema_needs_person', '__return_true' );
-add_filter( 'wpseo_schema_person_user_id', function() {
-    return 1; // Make sure 1 is a valid User ID.
-} );
-```
-
-It really is as simple as returning true on that to always show it, but you can of course also hook a function there with more precise logic. The second filter is needed to provide a user ID that should be used for the Person to show, as otherwise it won't work as the code doesn't know which user to show.
-
-### Social profiles
-If you want to change which profiles to show on an author page, you can hook into our `wpseo_schema_person_social_profiles` filter. We do this on yoast.com to add people's GitHub and WordPress profile as well as their personal sites to their sameAs output:
-
-```php
-add_filter( 'wpseo_schema_person_social_profiles', 'yoast_add_social_profiles' );
-
-/**
- * Adds social profiles to our sameAs array.
- *
- * @param array $profiles Social profiles.
- *
- * @return array Social profiles.
- */
-function yoast_add_social_profiles( $profiles ) {
-    array_push( $profiles, 'github', 'personal', 'wordpress' );
-
-    return $profiles;
-}
-```
-
-### Output Article schema on custom post types
-By default Yoast SEO doesn't output Article schema on custom post types. The code below changes that:
-
-```php
-/**
- * Add 'book' to the list of articles post types, so books get Article schema.
- *
- * @param  mixed $post_types The current list of post types.
- *
- * @return array Array of post types for which Yoast SEO renders Article schema.
- */
-function article_schema_for_books( $post_types ) {
-	$post_types[] = 'book';
-	return $post_types;
-}
-
-add_filter( 'wpseo_schema_article_post_types', 'article_schema_for_books' );
-```
-
-Note that for a post type to be able to output Article schema, the post type needs to support having an Author. You can add that simply by adding this, for a given post type `book`:
-
-```php
-add_post_type_support( 'book', 'author' );
-```
-
-This currently does not work for the `page` post type. We are fixing this.
-
-### Other filters
-We also have some more specific filters for convenience:
-* `wpseo_schema_webpage_type` - changes the page type, so could be used to make the above example even simpler.
-* `disable_wpseo_json_ld_search` - disables the search potentialAction that we add on every page if you simply return true on it.
-* `wpseo_json_ld_search_url` - allows you to change the search URL for your site.
-* `wpseo_schema_person_user_id` - allows changing the ID of the user we use to represent your site, should your site represent a person.

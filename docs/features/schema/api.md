@@ -106,6 +106,7 @@ If you want to change the output of a certain piece, hook into our `wpseo_schema
 * [Article](pieces/article.md#api)
 * [Breadcrumb](pieces/breadcrumb.md#api)
 * [Organization](pieces/organization.md#api)
+* [Person](pieces/person.md#api)
 * [Webpage](pieces/webpage.md#api)
 * [Website](pieces/website.md#api)
 
@@ -234,4 +235,3 @@ function yoast_add_social_profiles( $profiles ) {
 We also have some more specific filters for convenience:
 * `disable_wpseo_json_ld_search` - disables the search potentialAction that we add on every page if you simply return true on it.
 * `wpseo_json_ld_search_url` - allows you to change the search URL for your site.
-* `wpseo_schema_person_user_id` - allows changing the ID of the user we use to represent your site, should your site represent a person.

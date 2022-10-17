@@ -65,3 +65,5 @@ function schema_change_search_url() {
     return 'https://example.com/search/?q={search_term_string}';
 }
 ```
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

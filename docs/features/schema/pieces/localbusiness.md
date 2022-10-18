@@ -6,10 +6,6 @@ description: Describes a business which allows public visitation. Typically used
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-:::caution
-This documentation is outdated, and should not be used. It will be updated in the near future.
-:::
-
 Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 
 May be transformed into a more specific type (such as `library`), or extend an existing `Organization` if the required conditions are met.

@@ -1,7 +1,9 @@
+let title = '';
 class TitleHandler {
 	element(element) {
-		const title = encodeURIComponent( element.text );
-		element.after(`<meta property="og:image" content="https://yoast.com/shared-assets/opengraph/image.php?title=${title}" />`, { html: true })
+		let encodedTitle = encodeURIComponent( title );
+		console.log( title );
+		element.after(`<meta property="og:image" content="https://yoast.com/shared-assets/opengraph/image.php?title=${encodedTitle}" />`, { html: true })
 	}
 }
 
@@ -10,5 +12,13 @@ export const onRequestGet = async ({ next }) => {
 	const response = await next()
 
 	// Then, using HTMLRewriter, we transform `form` elements with a `data-static-form-name` attribute, to tell them to POST to the current page
-	return new HTMLRewriter().on('title', new TitleHandler()).transform(response)
+	return new HTMLRewriter()
+		.on( 'title', {
+			text(text) {
+				title += text.text;
+				console.log( title );
+			},
+		} )
+		.onEndTag( 'title', new TitleHandler() )
+		.transform(response)
 }

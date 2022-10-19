@@ -1,3 +1,3 @@
-/blog/* https://yoast.com/developer-blog/:splat 301
 /development/yoast-seo/product-sheet/ /features/ 301
 /customization/yoast-seo/indexables-cli/ /features/wp-cli/reindex-indexables/ 301
+/blog/* https://yoast.com/developer-blog/:splat 301

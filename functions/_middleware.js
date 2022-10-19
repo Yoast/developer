@@ -1,7 +1,7 @@
 class TitleHandler {
 	element(element) {
-		const title = encodeURIComponent( element.innerhtml );
-		element.append(`<meta property="og:image" content="https://yoast.com/shared-assets/opengraph/image.php?title=${title}" />`, { html: true })
+		const title = encodeURIComponent( element.text );
+		element.after(`<meta property="og:image" content="https://yoast.com/shared-assets/opengraph/image.php?title=${title}" />`, { html: true })
 	}
 }
 

@@ -29,6 +29,7 @@ const config = {
 	},
 
 	plugins: [
+		'./src/plugins/og-site-name',
 		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{

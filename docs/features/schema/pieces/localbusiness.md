@@ -1,6 +1,7 @@
 ---
 id: localbusiness
 title: Schema piece - LocalBusiness
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20LocalBusiness
 sidebar_label: LocalBusiness
 description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---

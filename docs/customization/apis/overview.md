@@ -1,6 +1,7 @@
 ---
 id: overview
 title: Yoast SEO - API overview
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20API%20overview
 sidebar_label: Overview
 ---
 

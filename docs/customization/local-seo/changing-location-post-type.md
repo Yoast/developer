@@ -1,6 +1,7 @@
 ---
 id: changing-location-post-type
 title: Local SEO - Changing the default Location post type
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Local%20SEO%20-%20Changing%20the%20default%20Location%20post%20type
 sidebar_label: Changing the default Location post type
 ---
 

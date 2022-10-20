@@ -1,6 +1,7 @@
 ---
 id: indexnow
 title: Integrations - IndexNow
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Integrations%20-%20IndexNow
 sidebar_label: IndexNow
 description: This documentation provides information about how Yoast SEO integrates with IndexNow.
 ---

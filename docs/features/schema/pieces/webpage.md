@@ -1,6 +1,7 @@
 ---
 id: webpage
 title: Schema piece - WebPage
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20WebPage
 sidebar_label: WebPage
 Description: Describes a single page on a 'WebSite'. Acts as a container for sub-page elements (such as 'Article').
 ---

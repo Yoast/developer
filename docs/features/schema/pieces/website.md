@@ -1,6 +1,7 @@
 ---
 id: website
 title: Schema piece - WebSite
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20WebSite
 sidebar_label: WebSite
 description: Describes a 'WebSite'. Parent to 'WebPage'.
 ---

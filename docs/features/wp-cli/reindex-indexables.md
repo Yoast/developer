@@ -1,6 +1,7 @@
 ---
 id: reindex-indexables
 title: WP CLI - Reindex Indexables command
+image: https://yoast.com/shared-assets/opengraph/image.php?title=WP%20CLI%20-%20Reindex%20Indexables%20command
 sidebar_label: Reindex Indexables
 ---
 

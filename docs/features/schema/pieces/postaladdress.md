@@ -1,6 +1,7 @@
 ---
 id: postaladdress
 title: Schema piece - PostalAddress
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20PostalAddress
 sidebar_label: Postal Address
 description: Describes the postal address of a place; usually in the context of a 'LocalBusiness'.
 ---

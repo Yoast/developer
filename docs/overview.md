@@ -1,6 +1,7 @@
 ---
 id: overview
 title: Yoast developer portal
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20developer%20portal
 slug: /
 ---
 

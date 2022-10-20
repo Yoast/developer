@@ -1,6 +1,7 @@
 ---
 id: api
 title: Schema - API documentation
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20-%20API%20documentation
 sidebar_label: Schema API
 description: Instructions on how to modify our schema output programmatically.
 ---

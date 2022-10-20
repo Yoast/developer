@@ -1,6 +1,7 @@
 ---
 id: hiding-version-number
 title: Yoast SEO Premium - Hiding the version number
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20Premium%20-%20Hiding%20the%20version%20number
 sidebar_label: Hiding the version number
 ---
 

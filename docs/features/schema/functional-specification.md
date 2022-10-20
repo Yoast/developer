@@ -1,6 +1,7 @@
 ---
 id: functional-specification
 title: Schema - Specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20-%20Specification
 sidebar_label: Specification
 description: This page describes our functional and technical approach to constructing schema.org markup.
 ---

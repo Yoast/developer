@@ -1,6 +1,7 @@
 ---
 id: organization
 title: Schema piece - Organization
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Organization
 sidebar_label: Organization
 description: Describes an organization (a company, business or institution). Most commonly used to identify the publisher of a 'WebSite'.
 ---

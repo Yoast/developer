@@ -1,6 +1,7 @@
 ---
 id: overview
 title: Meta robots - Overview
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Meta%20robots%20-%20Overview
 sidebar_label: Overview
 description: This documentation provides technical information about how Yoast SEO generates and/or manages meta robots tags.
 ---

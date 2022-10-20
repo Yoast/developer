@@ -1,6 +1,7 @@
 ---
 id: filtering-yoast-seo-indexables
 title: Yoast SEO - Filtering Yoast SEO Indexables
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Filtering%20Yoast%20SEO%20Indexables
 sidebar_label: Filtering Yoast SEO Indexables
 ---
 

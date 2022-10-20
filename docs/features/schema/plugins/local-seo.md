@@ -1,6 +1,7 @@
 ---
 id: local-seo
 title: Schema output for Local SEO for WordPress
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20Local%20SEO%20for%20WordPress
 sidebar_label: Local SEO for WordPress
 description: Describes the schema output of Yoast's "Local SEO" plugin for WordPress.
 ---

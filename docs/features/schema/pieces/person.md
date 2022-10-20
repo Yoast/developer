@@ -1,6 +1,7 @@
 ---
 id: person
 title: Schema piece - Person
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Person
 sidebar_label: Person
 description: Describes an individual person. Most commonly used to identify the 'author' of a piece of content.
 ---

@@ -1,6 +1,7 @@
 ---
 id: functional-specification
 title: Twitter Tags - Functional specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Twitter%20Tags%20-%20Functional%20specification
 sidebar_label: Twitter
 description: This documentation provides technical information about which twitter tags Yoast SEO generates and outputs.
 

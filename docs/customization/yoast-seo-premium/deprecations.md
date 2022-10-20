@@ -1,6 +1,7 @@
 ---
 id: api-filter-actions-deprecations
 title: Yoast SEO Premium - Deprecated filters and actions
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20Premium%20-%20Deprecated%20filters%20and%20actions
 sidebar_label: Deprecated filters & actions
 ---
 

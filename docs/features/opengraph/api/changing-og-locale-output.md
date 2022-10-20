@@ -1,6 +1,7 @@
 ---
 id: changing-og-locale-output
 title: OpenGraph Tags - Changing the og:locale output
+image: https://yoast.com/shared-assets/opengraph/image.php?title=OpenGraph%20Tags%20-%20Changing%20the%20og:locale%20output
 sidebar_label: Changing the og:locale output
 ---
 

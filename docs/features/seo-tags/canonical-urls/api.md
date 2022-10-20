@@ -1,6 +1,7 @@
 ---
 id: api
 title: Canonical URLs - API documentation
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Canonical%20URLs%20-%20API%20documentation
 sidebar_label: API
 description: Instructions on how to modify our canonical URL values programmatically.
 ---

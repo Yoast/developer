@@ -1,6 +1,7 @@
 ---
 id: changing-enhanced-slack-sharing
 title: Yoast SEO - Changing the Enhanced Slack sharing output
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Changing%20the%20Enhanced%20Slack%20sharing%20output
 sidebar_label: Enhanced Slack sharing
 ---
 

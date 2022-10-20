@@ -1,6 +1,7 @@
 ---
 id: coding-guidelines-and-principles
 title: Standards - Coding guidelines and principles
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Standards%20-%20Coding%20guidelines%20and%20principles
 sidebar_label: Coding guidelines and principles
 ---
 

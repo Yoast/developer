@@ -1,6 +1,7 @@
 ---
 id: functional-specification
 title: HTTP Headers - Functional specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=HTTP%20Headers%20-%20Functional%20specification
 sidebar_label: HTTP headers
 description: An overview of how HTTP headers work in Yoast SEO.
 ---

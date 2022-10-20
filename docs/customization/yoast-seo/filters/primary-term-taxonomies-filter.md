@@ -1,6 +1,7 @@
 ---
 id: primary-term-taxonomies-filter
 title: Yoast SEO - Altering Yoast SEO primary terms
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Altering%20Yoast%20SEO%20primary%20terms
 sidebar_label: Altering Yoast SEO primary terms
 ---
 Yoast SEO allows you to set categories as a primary term for posts and pages. In some cases, you might want to allow your users to use additional, custom taxonomies to be used as a primary term.

@@ -1,6 +1,7 @@
 ---
 id: phpunit-best-practices
 title: Standards - PhpUnit Best Practices
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Standards%20-%20PhpUnit%20Best%20Practices
 sidebar_label: PhpUnit Best Practices
 ---
 

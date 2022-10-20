@@ -1,6 +1,7 @@
 ---
 id: functional-specification
 title: Canonical URLs - Functional specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Canonical%20URLs%20-%20Functional%20specification
 sidebar_label: Specification
 description: An overview of how canonical URLs work in Yoast SEO.
 ---

@@ -1,6 +1,7 @@
 ---
 id: disable-search-engine-pings
 title: Yoast SEO - Disabling search engine pings
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Disabling%20search%20engine%20pings
 sidebar_label: Disable search engine pings
 ---
 By default, Yoast SEO pings Google and Bing when you publish a new post with the URL of your XML sitemap. By doing this, the search engine can easily find the new URL and index it. If publishing on your site is disconnected from the URL being accessible live on the site, you will want to disable this functionality and do your own pings.

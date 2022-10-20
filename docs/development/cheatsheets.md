@@ -1,6 +1,7 @@
 ---
 id: cheatsheets
 title: Development - Cheatsheets
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Cheatsheets
 sidebar_label: Cheatsheets
 ---
 

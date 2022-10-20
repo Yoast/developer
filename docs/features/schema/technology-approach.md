@@ -1,6 +1,7 @@
 ---
 id: technology-approach
 title: Schema - Technology and approach
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20-%20Technology%20and%20approach
 sidebar_label: Technology & approach
 description: An overview of some of the technical choices and standards used in our schema.org outputs.
 ---

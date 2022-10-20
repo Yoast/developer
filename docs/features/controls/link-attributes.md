@@ -1,6 +1,7 @@
 ---
 id: link-attributes
 title: Link Attributes - Functional specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Link%20Attributes%20-%20Functional%20specification
 sidebar_label: Link attributes
 description: This documentation provides technical information about Yoast SEO manages link attributes.
 ---

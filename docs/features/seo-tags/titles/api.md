@@ -1,6 +1,7 @@
 ---
 id: api
 title: Titles - API documentation
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Titles%20-%20API%20documentation
 sidebar_label: API
 description: Instructions on how to modify our title values programmatically.
 ---

@@ -1,6 +1,7 @@
 ---
 id: disabling-yoast-seo
 title: Yoast SEO - Disabling Yoast SEO output for a specific page
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Disabling%20Yoast%20SEO%20output%20for%20a%20specific%20page
 sidebar_label: Disabling Yoast SEO output
 ---
 As of Yoast SEO 14.0, we've changed the way you can interact with the output of Yoast SEO. 

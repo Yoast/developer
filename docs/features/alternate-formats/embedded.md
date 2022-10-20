@@ -1,6 +1,7 @@
 ---
 id: embedded
 title: Embedded content - Functional specification
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Embedded%20content%20-%20Functional%20specification
 sidebar_label: Embedded content
 description: This documentation explains how Yoast SEO modifies embedded content formats.
 ---

@@ -1,6 +1,7 @@
 ---
 id: tools
 title: Development - Tools
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Tools
 sidebar_label: Development tools
 ---
 

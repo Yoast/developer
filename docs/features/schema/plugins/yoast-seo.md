@@ -1,6 +1,7 @@
 ---
 id: yoast-seo
 title: Schema output for Yoast SEO
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20Yoast%20SEO
 sidebar_label: Yoast SEO
 description: Describes the schema output of the Yoast SEO plugin for WordPress.
 ---

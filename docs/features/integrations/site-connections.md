@@ -1,6 +1,7 @@
 ---
 id: site-connections
 title: Integrations - Site Connections
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Integrations%20-%20Site%20Connections
 sidebar_label: Site Connections
 description: This documentation provides information about how Yoast SEO integrates with various search engine's tools and portals.
 ---

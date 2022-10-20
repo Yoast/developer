@@ -1,6 +1,7 @@
 ---
 id: question
 title: Schema piece - Question
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Question
 sidebar_label: Question
 description: Describes a 'Question'. Most commonly used in 'FAQPage' or 'QAPage' content.
 ---

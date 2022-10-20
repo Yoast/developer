@@ -1,6 +1,7 @@
 ---
 id: running-unit-tests-code-style-checks-and-linters
 title: Development - Running unit tests, code style checks and linters
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Running%20unit%20tests, code style checks and linters
 sidebar_label: Running unit tests, code style checks & linters
 ---
 At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs.

@@ -1,6 +1,7 @@
 ---
 id: productivity-tips-and-tricks
 title: Development - Productivity tips and tricks
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Productivity%20tips%20and%20tricks
 sidebar_label: Productivity tips & tricks
 ---
 

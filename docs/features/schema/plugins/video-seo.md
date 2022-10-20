@@ -1,6 +1,7 @@
 ---
 id: video-seo
 title: Schema output for Video SEO for WordPress
+image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20Video%20SEO%20for%20WordPress
 sidebar_label: Video SEO for WordPress
 description: Describes the schema output of Yoast's "Video SEO" plugin for WordPress.
 ---

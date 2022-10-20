@@ -1,7 +1,7 @@
 ---
 id: aggregateoffer
-title: Schema piece - AggregateOffer
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20AggregateOffer
+title: "Schema piece - AggregateOffer"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEAggregateOffer
 sidebar_label: AggregateOffer
 description: Describes a group of 'offers' for a 'Product', typically due to variations in attributes (colors, sizes, prices).
 ---

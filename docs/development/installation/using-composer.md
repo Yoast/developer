@@ -1,7 +1,7 @@
 ---
 id: using-composer
-title: Yoast SEO - Install using Composer
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20Install%20using%20Composer
+title: "Yoast SEO: Install using Composer"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEInstall%20using%20Composer
 sidebar_label: Using Composer
 ---
 

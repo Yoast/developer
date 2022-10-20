@@ -1,8 +1,8 @@
 ---
 id: yoast-seo-shopify
-title: Schema output for Yoast SEO Shopify
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20Yoast%20SEO%20Shopify
-sidebar_label: Shopify Schema
+title: "Yoast SEO Shopify: Schema output"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20Shopify:NEWLINESchema%20output
+sidebar_label: Yoast SEO for Shopify
 description: Describes the schema output of the Yoast SEO app for Shopify.
 ---
 
@@ -23,9 +23,9 @@ Most apps which add structured data functionality (e.g., reviews, recipes, etc) 
 
 Every page should (attempt to) output the following pieces:
 
-- Organization (see https://developer.yoast.com/features/schema/pieces/organization)
-- Website (see https://developer.yoast.com/features/schema/pieces/website)
-- Webpage (see https://developer.yoast.com/features/schema/pieces/webpage)
+- [Organization](https://developer.yoast.com/features/schema/pieces/organization)
+- [Website](https://developer.yoast.com/features/schema/pieces/website)
+- [Webpage](https://developer.yoast.com/features/schema/pieces/webpage)
 
 Note that this is dependent upon the following in the app's schema settings:
 - The Organization's name and logo being defined, and;
@@ -115,8 +115,8 @@ When these criteria are met, we produce our [base script](https://developer.yoas
 
 ## On product pages
 
-- Change the `@type` of `WebPage` to `ItemPage`
-- Add a `Product` piece (with an `offers` property); see https://developer.yoast.com/features/schema/pieces/product/ and https://developer.yoast.com/features/schema/pieces/offer/
+- Change the `@type` of [`WebPage`](../pieces/webpage.md) to `ItemPage`
+- Add a [`Product`](../pieces/product.md) piece (with an [`offers`](../pieces/offer.md) property).
 
 ### Example
 
@@ -157,4 +157,4 @@ When these criteria are met, we produce our [base script](https://developer.yoas
 </YoastSchemaExample>
 
 ## On blog posts
-- Add an `Article` piece (see https://developer.yoast.com/features/schema/pieces/article)
+- Add an [`Article`](https://developer.yoast.com/features/schema/pieces/article) piece

@@ -1,7 +1,7 @@
 ---
 id: breadcrumb
-title: Schema piece - Breadcrumb
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Breadcrumb
+title: "Schema piece - Breadcrumb"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEBreadcrumb
 sidebar_label: Breadcrumb
 description: Describes the hierarchical position a 'WebPage' within a 'WebSite'.
 ---

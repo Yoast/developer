@@ -1,7 +1,7 @@
 ---
 id: version-control-conventions
-title: Standards - Version control conventions
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Standards%20-%20Version%20control%20conventions
+title: "Yoast standards - Version control conventions"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20standards:NEWLINEVersion%20control%20conventions
 sidebar_label: Version control conventions
 ---
 

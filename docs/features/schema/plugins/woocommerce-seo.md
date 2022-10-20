@@ -1,7 +1,7 @@
 ---
 id: woocommerce-seo
-title: Schema output for WooCommerce SEO
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20WooCommerce%20SEO
+title: "Yoast WooCommerce SEO: Schema output"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20WooCommerce%20SEO:NEWLINESchema%20output
 sidebar_label: WooCommerce SEO
 description: Describes the schema output of Yoast's "WooCommerce SEO" plugin for WordPress.
 ---

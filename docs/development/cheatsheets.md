@@ -1,7 +1,7 @@
 ---
 id: cheatsheets
-title: Development - Cheatsheets
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Cheatsheets
+title: "Yoast development - Cheatsheets"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20development:NEWLINECheatsheets
 sidebar_label: Cheatsheets
 ---
 

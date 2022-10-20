@@ -1,7 +1,7 @@
 ---
 id: rest-api
-title: Yoast SEO - REST API
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20REST%20API
+title: "Yoast SEO: REST API"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20REST%20API
 sidebar_label: REST API
 description: Get all of the metadata for a post or URL in a single request, and as part of WordPress' WP-JSON response.
 ---

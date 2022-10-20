@@ -1,7 +1,7 @@
 ---
 id: recipe
-title: Schema piece - Recipe
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Recipe
+title: "Schema piece - Recipe"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINERecipe
 sidebar_label: Recipe
 description: Describes a 'Recipe', which contains a series of instructions, ingredients, and optional fields.
 ---

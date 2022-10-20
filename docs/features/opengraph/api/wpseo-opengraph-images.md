@@ -1,7 +1,7 @@
 ---
 id: wpseo-opengraph-images
-title: Yoast SEO - change the OpenGraph image output
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20SEO%20-%20change%20the%20OpenGraph%20image%20output
+title: "Yoast SEO: change the OpenGraph image output"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINEChange%20OpenGraph%20image%20output
 sidebar_label: Alter OpenGraph images output
 ---
 These filters allow altering an existing OpenGraph image and/or adding images to the output. 

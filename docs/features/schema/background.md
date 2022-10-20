@@ -1,7 +1,7 @@
 ---
 id: background
-title: Schema - Background information
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20-%20Background%20information
+title: "Schema - Background information"
+image: https://yoast.com/shared-assets/opengraph/?title=Schema%20-%20Background%20information
 sidebar_label: Background
 description: Information about our approach, rationale, and considerations when it comes to schema.org markup.
 ---

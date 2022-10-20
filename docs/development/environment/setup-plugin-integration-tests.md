@@ -1,7 +1,7 @@
 ---
 id: setup-plugin-integration-tests
-title: Development - Setting up integration tests for the plugins
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Setting%20up%20integration%20tests%20for%20the%20plugins
+title: "Yoast SEO Development: Set up integration tests"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Development:NEWLINESet%20up%20integration%20tests
 sidebar_label: Setting up integration tests
 description: When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part.
 ---

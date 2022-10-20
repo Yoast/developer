@@ -1,7 +1,7 @@
 ---
 id: functional-specification
-title: OpenGraph Tags - Functional specification
-image: https://yoast.com/shared-assets/opengraph/image.php?title=OpenGraph%20Tags%20-%20Functional%20specification
+title: "Yoast SEO OpenGraph Tags: Functional specification"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEOpenGraph%20tags%20-NEWLINEFunctional%20specification
 sidebar_label: Specification
 description: This documentation provides technical information about which OpenGraph tags Yoast SEO generates and outputs.
 ---

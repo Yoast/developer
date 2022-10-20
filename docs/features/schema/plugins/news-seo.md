@@ -1,7 +1,7 @@
 ---
 id: news-seo
-title: Schema output for News SEO for WordPress
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20output%20for%20News%20SEO%20for%20WordPress
+title: "Yoast News SEO for WordPress: Schema output"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20News%20SEO%20for%20WordPress:NEWLINESchema%20output
 sidebar_label: News SEO for WordPress
 description: Describes the schema output of Yoast's "News SEO" plugin for WordPress.
 ---

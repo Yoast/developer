@@ -1,7 +1,7 @@
 ---
 id: filters-actions
-title: Yoast Duplicate Post - Filters and actions
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Yoast%20Duplicate%20Post%20-%20Filters%20and%20actions
+title: "Yoast Duplicate Post - Filters and actions"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20Duplicate%20PostNEWLINEFilters%20and%20actions
 sidebar_label: Filters & actions
 ---
 

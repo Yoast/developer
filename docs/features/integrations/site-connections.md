@@ -1,8 +1,8 @@
 ---
 id: site-connections
-title: Integrations - Site Connections
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Integrations%20-%20Site%20Connections
-sidebar_label: Site Connections
+title: "Site connections - Yoast SEO integrations"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20integrations:NEWLINESite%20connections
+sidebar_label: Site connections
 description: This documentation provides information about how Yoast SEO integrates with various search engine's tools and portals.
 ---
 This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) integrates with various search engine's tools and portals.

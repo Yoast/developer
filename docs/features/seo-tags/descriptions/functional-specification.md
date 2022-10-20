@@ -1,7 +1,7 @@
 ---
 id: functional-specification
-title: Descriptions - Functional specification
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Descriptions%20-%20Functional%20specification
+title: "Descriptions - Functional specification"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINEMeta%20descriptions:NEWLINEFunctional%20specification
 sidebar_label: Specification
 description: An overview of how description tags work in Yoast SEO.
 ---

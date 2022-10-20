@@ -1,7 +1,7 @@
 ---
 id: tools
-title: Development - Tools
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Tools
+title: "Yoast SEO Development: Tools"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Development:NEWLINETools
 sidebar_label: Development tools
 ---
 

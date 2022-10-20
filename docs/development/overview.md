@@ -1,7 +1,7 @@
 ---
 id: overview
-title: Development - Overview
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Development%20-%20Overview
+title: "Development - Overview"
+image: https://yoast.com/shared-assets/opengraph/?title=Development%20-%20Overview
 sidebar_label: Overview
 ---
 This page lists a variety of procedures, techniques and standards that we use during development here at Yoast.

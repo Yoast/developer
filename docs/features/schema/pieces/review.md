@@ -1,7 +1,7 @@
 ---
 id: review
-title: Schema piece - Review
-image: https://yoast.com/shared-assets/opengraph/image.php?title=Schema%20piece%20-%20Review
+title: "Schema piece - Review"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEReview
 sidebar_label: Review
 description: Describes a 'Review'. Usually in the context of a 'Product' or an 'Organization'.
 ---

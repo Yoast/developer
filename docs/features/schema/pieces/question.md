@@ -1,6 +1,7 @@
 ---
 id: question
-title: Schema piece - Question
+title: "Schema piece - Question"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEQuestion
 sidebar_label: Question
 description: Describes a 'Question'. Most commonly used in 'FAQPage' or 'QAPage' content.
 ---

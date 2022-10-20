@@ -1,6 +1,7 @@
 ---
 id: adding-custom-assessments
-title: Adding custom assessments to the page analysis
+title: "Yoast SEO: Adding custom assessments to the page analysis"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEAdding%20custom%20assessmentsNEWLINEto%20the%20page%20analysis
 ---
 
 In addition to adding your own input fields to the pre-existing assessments that are available in Yoast SEO, it is also possible to write your own assessments that can analyze various aspects of a post, page or term. 

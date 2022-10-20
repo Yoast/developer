@@ -1,6 +1,7 @@
 ---
 id: integrations
-title: Yoast SEO for Shopify - Integrations
+title: "Yoast SEO for Shopify: Integrations"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20ShopifyNEWLINEIntegrations
 sidebar_label: Integrations
 description: Details about how Yoast SEO for Shopify integrates with apps and services
 ---

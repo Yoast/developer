@@ -1,12 +1,13 @@
 ---
 id: article
-title: Schema piece - Article
+title: "Schema piece - Article"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEArticle
 sidebar_label: Article
 description: Describes an 'Article' on a 'WebPage'.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes an `Article` on a `WebPage`.
+Describes an `Article` on a [`WebPage`](webpage.md).
 May be transformed into a more specific type (such as `NewsArticle`) if the required conditions are met.
 
 ## Triggers
@@ -46,7 +47,7 @@ Optional properties which should only be output when the required criteria are m
 
 ### If copyright information is available
 * `copyrightYear`: The year from which the article holds copyright status.
-* `copyrightHolder`: A reference-by-ID to the `Organization` or `Person` who holds the copyright.
+* `copyrightHolder`: A reference-by-ID to the [`Organization`](organization.md) or [`Person`](person.md) who holds the copyright.
 
 ### If there are comments
 * `commentCount`: An integer value of the number of comments associated with the article.
@@ -170,7 +171,7 @@ function change_article_to_social_posting( $data ) {
 ```
 
 ### Output Article schema on custom post types
-By default Yoast SEO doesn't output Article schema on custom post types. The code below changes that:
+By default, Yoast SEO doesn't output Article schema on custom post types. The code below changes that:
 
 ```php
 /**
@@ -188,7 +189,8 @@ function article_schema_for_books( $post_types ) {
 add_filter( 'wpseo_schema_article_post_types', 'article_schema_for_books' );
 ```
 
-Note that for a post type to be able to output Article schema, the post type needs to support having an Author. You can add that simply by adding this, for a given post type `book`:
+Note that for a post type to be able to output `Article` schema, the post type needs to support having an Author. 
+You can add that simply by adding this, for a given post type `book`:
 
 ```php
 add_post_type_support( 'book', 'author' );

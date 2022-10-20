@@ -1,6 +1,7 @@
 ---
 id: overview
-title: Yoast Duplicate Post
+title: "Yoast Duplicate Post"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20Duplicate%20Post
 sidebar_label: Overview
 ---
 

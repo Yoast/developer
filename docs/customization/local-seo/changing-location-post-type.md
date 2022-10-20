@@ -1,7 +1,8 @@
 ---
 id: changing-location-post-type
-title: Local SEO - Changing the default Location post type
-sidebar_label: Changing the default Location post type
+title: "Local SEO: Change the default Location post type"
+image: https://yoast.com/shared-assets/opengraph/?title=Local%20SEO%20:NEWLINEChange%20the%20default%20Location%20post%20type
+sidebar_label: Change the default Location post type
 ---
 
 As of version 13.2, you or your developer can change the default locations post type with the `wpseo_local_post_type` filter. This filter takes a single parameter: `$post_type` (required).

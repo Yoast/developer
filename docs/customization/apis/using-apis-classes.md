@@ -1,6 +1,7 @@
 ---
 id: using-apis-classes
-title: Yoast SEO - Using APIs and classes
+title: "Yoast SEO: Using APIs and classes"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEUsing%20APIs%20and%20classes
 sidebar_label: Using APIs and classes
 ---
 

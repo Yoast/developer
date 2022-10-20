@@ -1,6 +1,7 @@
 ---
 id: website
-title: Schema piece - WebSite
+title: "Schema piece - WebSite"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEWebSite
 sidebar_label: WebSite
 description: Describes a 'WebSite'. Parent to 'WebPage'.
 ---

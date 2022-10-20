@@ -1,6 +1,7 @@
 ---
 id: phpunit-best-practices
-title: Standards - PhpUnit Best Practices
+title: "Yoast standards - PhpUnit Best Practices"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20standards:NEWLINEPhpUnit%20Best%20Practices
 sidebar_label: PhpUnit Best Practices
 ---
 

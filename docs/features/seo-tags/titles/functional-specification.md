@@ -1,6 +1,7 @@
 ---
 id: functional-specification
-title: Titles - Functional specification
+title: "Yoast SEO titles - Functional specification"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20titles:NEWLINEFunctional%20specification
 sidebar_label: Specification
 description: An overview of how title tags work in Yoast SEO.
 ---

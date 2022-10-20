@@ -1,7 +1,8 @@
 ---
 id: filtering-yoast-seo-indexables
-title: Yoast SEO - Filtering Yoast SEO Indexables
-sidebar_label: Filtering Yoast SEO Indexables
+title: "Yoast SEO: Filter Yoast SEO Indexables"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEFilter%20Yoast%20SEO%20Indexables
+sidebar_label: Filter Yoast SEO Indexables
 ---
 
 [Indexables were introduced in Yoast SEO 14.0](https://yoast.com/innovations/indexables/) as a single source of truth for all of the pages that can be optimized on a site. Yoast SEO 18.2 introduced a new filter (`Yoast\WP\SEO\should_index_indexables`) to programmatically enable or disable the creation of indexables.

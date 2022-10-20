@@ -1,6 +1,7 @@
 ---
 id: integrating
-title: Integrating Yoast SEO
+title: "Integrating Yoast SEO"
+image: https://yoast.com/shared-assets/opengraph/?title=Integrating%20Yoast%20SEO
 description: A hub for describing the technical specifications and requirements for integrating Yoast SEO.
 ---
 This documentation is a hub for describing the technical specifications and requirements for integrating [Yoast SEO](https://yoast.com/wordpress/plugins/seo/).

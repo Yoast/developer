@@ -1,7 +1,8 @@
 ---
 id: enhancing-search-results
-title: Local SEO - Enhancing search results
-sidebar_label: Enhancing search results
+title: "Local SEO: Enhance search results"
+image: https://yoast.com/shared-assets/opengraph/?title=Local%20SEO:NEWLINEEnhance%20search%20results
+sidebar_label: Enhance search results
 ---
 One of the hidden features of the Local SEO plugin is enhancing your website's internal search results with your location content. In rare cases, the enhanced search results can conflict with other plugin or theme features. Therefore, Local SEO version 7.1 introduced developer filters to disable these enhancements.
 

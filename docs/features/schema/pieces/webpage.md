@@ -1,6 +1,7 @@
 ---
 id: webpage
-title: Schema piece - WebPage
+title: "Schema piece - WebPage"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEWebPage
 sidebar_label: WebPage
 Description: Describes a single page on a 'WebSite'. Acts as a container for sub-page elements (such as 'Article').
 ---

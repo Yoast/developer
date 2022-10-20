@@ -1,7 +1,8 @@
 ---
 id: yoast-seo
-title: Schema output for Yoast SEO
-sidebar_label: Yoast SEO
+title: "Yoast SEO for WordPress: Schema output"
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20WordPress:NEWLINESchema%20output
+sidebar_label: Yoast SEO for WordPress
 description: Describes the schema output of the Yoast SEO plugin for WordPress.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';

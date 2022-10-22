@@ -1,7 +1,7 @@
 ---
 id: comment
 title: "Schema piece - Comment"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEComment
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20Comment
 sidebar_label: Comment
 description: Describes a review. Usually in the context of an 'Article' or a 'WebPage'.
 ---

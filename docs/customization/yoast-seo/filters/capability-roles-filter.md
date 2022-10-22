@@ -1,7 +1,7 @@
 ---
 id: capability-roles-filter
 title: "Yoast SEO: Alter Yoast SEO capabilities for roles"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEAlter%20Yoast%20SEO%20capabilitiesNEWLINEfor%20roles
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20Alter%20Yoast%20SEO%20capabilities%20for%20roles
 sidebar_label: Alter Yoast SEO capabilities for roles
 ---
 Yoast SEO ships with a variety of custom capabilities that are assigned to various roles, which allow for granular control over what features are available for a particular role. However, in some cases you might want to expand or limit these capabilities. To support this, we’ve introduced a filter named `{$capability}_roles`, where `{$capability}` needs to be replaced with the name of one of the capabilities	that is registered by Yoast SEO.

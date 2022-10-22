@@ -1,7 +1,7 @@
 ---
 id: yoast-seo-shopify
 title: "Yoast SEO Shopify: Schema output"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20Shopify:NEWLINESchema%20output
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20Shopify:%20Schema%20output
 sidebar_label: Yoast SEO for Shopify
 description: Describes the schema output of the Yoast SEO app for Shopify.
 ---

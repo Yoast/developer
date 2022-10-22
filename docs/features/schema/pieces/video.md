@@ -1,7 +1,7 @@
 ---
 id: video
 title: "Schema piece - VideoObject"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEVideoObject
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20VideoObject
 sidebar_label: Video (VideoObject)
 description: Describes an individual video (usually in the context of an embedded media object).
 ---

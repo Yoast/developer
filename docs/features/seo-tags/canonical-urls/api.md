@@ -1,7 +1,7 @@
 ---
 id: api
 title: "Yoast SEO Canonical URLs - API documentation"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINECanonical%20URLs:NEWLINEAPI%20documentation
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Canonical%20URLs:%20API%20documentation
 sidebar_label: API
 description: Instructions on how to modify our canonical URL values programmatically.
 ---

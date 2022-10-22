@@ -1,7 +1,7 @@
 ---
 id: rss-feeds
 title: "RSS Feeds - Functional specification"
-image: https://yoast.com/shared-assets/opengraph/?title=RSS%20Feeds:NEWLINEFunctional%20specification
+image: https://yoast.com/shared-assets/opengraph/?title=RSS%20Feeds:%20Functional%20specification
 sidebar_label: RSS Feeds
 description: This documentation explains Yoast SEO modifies RSS feeds.
 ---

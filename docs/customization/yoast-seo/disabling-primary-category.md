@@ -1,7 +1,7 @@
 ---
 id: disabling-primary-category
 title: "Yoast SEO - Disabling the Primary category feature"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEDisabling%20Primary%20category%20feature
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20Disabling%20Primary%20category%20feature
 sidebar_label: Disabling the Primary category feature
 ---
 As of Yoast SEO 3.1, we've added the ability to [set a Primary category for a post](https://yoast.com/help/how-to-select-a-primary-category/). 

@@ -1,7 +1,7 @@
 ---
 id: person
 title: "Schema piece - Person"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEPerson
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20Person
 sidebar_label: Person
 description: Describes an individual person. Most commonly used to identify the 'author' of a piece of content.
 ---

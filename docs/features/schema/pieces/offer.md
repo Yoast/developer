@@ -1,7 +1,7 @@
 ---
 id: offer
 title: "Schema piece - Offer"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEOffer
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20Offer
 sidebar_label: Offer
 description: Describes an offer for a 'Product' (typically prices, stock availability, etc).
 ---

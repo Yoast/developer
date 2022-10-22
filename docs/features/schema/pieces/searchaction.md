@@ -1,7 +1,7 @@
 ---
 id: searchaction
 title: "Schema piece - SearchAction"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINESearchAction
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20SearchAction
 sidebar_label: SearchAction
 description: Describes a 'SearchAction' on a 'WebSite'.
 ---

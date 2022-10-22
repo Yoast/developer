@@ -1,7 +1,7 @@
 ---
 id: functional-specification
 title: "Yoast SEO Meta robots: Functional specification"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINEMeta%20robots:NEWLINEFunctional%20specification
+image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Meta%20robots:%20Functional%20specification
 sidebar_label: Specification
 description: An overview of how meta robots tags work in Yoast SEO.
 ---

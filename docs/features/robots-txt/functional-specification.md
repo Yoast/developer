@@ -1,7 +1,6 @@
 ---
 id: functional-specification
 title: "Yoast SEO: robots.txt - functional specification"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Robots.txt%20-%20Functional%20specification
 sidebar_label: robots.txt
 description: This documentation explains how Yoast SEO modifies robots.txt files.
 ---

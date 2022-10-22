@@ -1,7 +1,6 @@
 ---
 id: overview
 title: "Yoast SEO for Shopify: Overview"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20for%20Shopify:%20Overview
 sidebar_label: Overview
 description: An overview of how Yoast SEO for Shopify works
 ---

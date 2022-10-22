@@ -1,7 +1,6 @@
 ---
 id: subscription-api
 title: "MyYoast: Subscription API"
-image: https://yoast.com/shared-assets/opengraph/?title=MyYoast:%20Subscription%20API
 sidebar_label: Subscription API
 description: For Yoast partners to create and manage subscriptions.
 ---

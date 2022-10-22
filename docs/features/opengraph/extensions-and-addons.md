@@ -1,7 +1,6 @@
 ---
 id: extensions-and-addons
 title: "Yoast SEO OpenGraph tags: extensions and addons"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20OpenGraph%20tags%20-%20extensions%20and%20addons
 sidebar_label: Extensions & addons
 description: This documentation provides technical information about which additional meta tags our extensions and addons generate and output.
 ---

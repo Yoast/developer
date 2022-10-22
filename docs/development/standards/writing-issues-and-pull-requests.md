@@ -1,7 +1,6 @@
 ---
 id: writing-issues-and-pull-requests
 title: "Yoast standards - Writing issues and pull requests"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20standards:%20Writing%20issues%20and%20pull%20requests
 sidebar_label: Writing issues and pull requests
 ---
 

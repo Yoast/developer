@@ -1,7 +1,6 @@
 ---
 id: generating-unit-test-template
 title: "Yoast SEO development: Generating a unit test template"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20development:%20Generating%20a%20unit%20test%20template
 sidebar_label: Generating a unit test template
 ---
 Every class in the `src` folder should have an accompanying unit test in the `tests/unit` folder. Since setting up a new unit test file requires some boilerplate code, we created a handy tool that creates a unit test template for you.

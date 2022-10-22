@@ -1,7 +1,6 @@
 ---
 id: image
 title: "Schema piece - ImageObject"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20ImageObject
 sidebar_label: Image (ImageObject)
 description: Describes an individual image (usually in the context of an embedded media object).
 ---

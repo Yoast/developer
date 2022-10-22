@@ -1,7 +1,6 @@
 ---
 id: api
 title: "Yoast SEO Meta descriptions: API documentation"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Meta%20descriptions:%20API%20documentation
 sidebar_label: API
 description: Instructions on how to modify our description values programmatically.
 ---

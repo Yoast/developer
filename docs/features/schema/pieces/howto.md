@@ -1,7 +1,6 @@
 ---
 id: howto
 title: "Schema piece - HowTo"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:%20HowTo
 sidebar_label: HowTo
 description: Describes a 'HowTo' guide, which contains a series of 'steps'.
 ---

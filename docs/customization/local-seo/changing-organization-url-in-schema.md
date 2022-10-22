@@ -1,7 +1,6 @@
 ---
 id: changing-organization-url-in-schema
 title: "Local SEO: Change the Organization URL in the Schema"
-image: https://yoast.com/shared-assets/opengraph/?title=Local%20SEO:%20Change%20the%20Organization%20URL%20in%20the%20Schema
 sidebar_label: Change the Organization URL in the Schema
 ---
 

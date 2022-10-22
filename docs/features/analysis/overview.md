@@ -1,7 +1,6 @@
 ---
 id: overview
 title: "Yoast SEO Content analysis: Overview"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Content%20analysis:%20Overview
 sidebar_label: Overview
 description: This documentation provides information about how Yoast SEO analyzes content.
 ---

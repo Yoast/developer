@@ -1,7 +1,6 @@
 ---
 id: api
 title: "Yoast SEO Titles - API documentation"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINETitles:%20API%20documentation
 sidebar_label: API
 description: Instructions on how to modify our title values programmatically.
 ---

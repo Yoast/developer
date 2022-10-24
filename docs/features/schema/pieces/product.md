@@ -1,7 +1,6 @@
 ---
 id: product
 title: "Schema piece - Product"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEProduct
 sidebar_label: Product
 description: Describes a product sold by a business.
 ---

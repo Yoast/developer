@@ -1,7 +1,6 @@
 ---
 id: filtering-yoast-blocks
 title: "Yoast SEO: Filtering Yoast Blocks"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEFiltering%20Yoast%20Blocks
 sidebar_label: Filter Yoast Blocks
 ---
 As of [Yoast SEO 8.2](https://yoast.com/yoast-seo-8-2/), we've added our first two structured data blocks: The FAQ block and the How-To block.

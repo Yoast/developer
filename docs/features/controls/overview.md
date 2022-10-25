@@ -1,7 +1,6 @@
 ---
 id: overview
 title: "Controls - Overview"
-image: https://yoast.com/shared-assets/opengraph/?title=Controls%20-%20Overview
 sidebar_label: Overview
 description: This documentation provides information about the types of controls that Yoast SEO provides.
 ---

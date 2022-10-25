@@ -1,7 +1,6 @@
 ---
 id: functions-template-tags
 title: "Yoast Duplicate Post - Functions and template tags"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20Duplicate%20PostNEWLINEFunctions%20and%20template%20tags
 sidebar_label: Functions & template tags
 ---
 

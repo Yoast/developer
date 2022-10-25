@@ -1,7 +1,6 @@
 ---
 id: functional-specification
 title: "Yoast SEO XML Sitemaps: Functional specification"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINEXML%20SitemapsNEWLINEFunctional%20specification
 sidebar_label: Specification
 description: Description of Yoast SEO's functional and technical approach to constructing XML Sitemaps.
 ---

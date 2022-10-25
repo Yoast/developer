@@ -1,7 +1,6 @@
 ---
 id: running-unit-tests-code-style-checks-and-linters
 title: "Yoast SEO Development: Unit tests, code style and linters"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Development:NEWLINEUnit%20tests,%20code%20style%20and%20linters
 sidebar_label: Unit tests, code style & linters
 ---
 At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs.

@@ -1,7 +1,6 @@
 ---
 id: localbusiness
 title: "Schema piece - LocalBusiness"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINELocalBusiness
 sidebar_label: LocalBusiness
 description: Describes a business which allows public visitation. Typically used to represent the business 'behind' the website, or on a page about a specific business.
 ---

@@ -1,7 +1,6 @@
 ---
 id: article
 title: "Schema piece - Article"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Schema%20piece:NEWLINEArticle
 sidebar_label: Article
 description: Describes an 'Article' on a 'WebPage'.
 ---

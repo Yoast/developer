@@ -1,7 +1,6 @@
 ---
 id: metadata-api
 title: "Yoast SEO: Metadata API"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20Metadata%20API
 sidebar_label: Metadata API
 description: Add, alter or remove metadata for a post or URL.
 ---

@@ -18,7 +18,7 @@ For example, in WordPress, posts stored in the database _don't get stored with a
 
 But processing overheads aren't the only challenge here - there are also scenarios where it's not clear what we mean by 'page'.
 
-### But what's a page?
+### But what's a page?  
 Beyond what we might concieve to be a conventional 'page' on a website, we might also have _archive_ views (e.g., all posts published by a given author), _alternate content_ formats (e.g., RSS feeds), _taxonomies_ (e.g., tags and categories) _error templates_ (e.g., 404 pages), _paginated_ results, and other esoteric types of content. These are all 'pages', as far as search engines are concerned.
 
 From an SEO perspective, each of these scenarios must be handled differently - each with its own rules and conditions. Even a simple blog post may have _dozens_ of values that we need to consider and evaluate. These range from crawling and indexing controls, to content evaluation scores, keywords, presentation settings, media, and beyond. We must consider all of these fields and the relationships between them, in the process of determining what SEO metadata should be output on the page.
@@ -34,7 +34,7 @@ Knowing what _is_ and _isn't_ an _indexable_ is key to performant metadata manag
 ### What's an indexable?
 An _indexable_ is any resource that can (theoretically) be _indexed_ by a search engine, against a given URL. That includes many content types beyond just 'pages' - like categories, author archives, paginated states of date archives, media files, and more.
 
-It _excludes_ any resource which does not have a public URL, as well as resources which return errors.
+We intentionally _exclude_ any non-public pages, as well as pages which return errors.
 
 ## Yoast SEO's Indexables table(s) in WordPress
 Yoast SEO creates and manages indexables in WordPress with a dedicated database table. This stores all of the information we might need from an SEO perspective, about every indexable we know about. That means that when we want to query a given page to determine what the SEO metadata should be, we can do so extremely efficiently.
@@ -44,6 +44,22 @@ This process operates silently in the background, and seamlessly syncronises wit
 The table also automatically populates and updates itself. When we encounter an indexable that we _don't_ know about, we create a new record, so that the data is available on subsequent requests. We also provide a (re)indexing process in our admin tools, which proactively builds our indexables table from the site's database.
 
 With the indexables table in place, we have an 'SEO-centric' view of the website, which is focused on _URLs_ (and the metadata which should be output on them) rather than _posts_.
+
+### What types of indexables does Yoast SEO store?
+Types of indexables we store include:
+
+* All public* posts and taxonomies
+* The homepage
+* Author archives (for authors with published, public posts)
+
+We also store several 'patterns' which represent _template_ and content types where it isn't valuable or necessary to include discreet indexables for every possible permutation. These include:
+
+* Date archive templates
+* Post type archive templates
+* Error templates
+* Search results templates
+
+*We consider a page to be 'public' when the `publicly_queryable` attribute is set to `true` (either explicitly, or when inherited when `public` is `true`), via `register_post_type`/`register_taxonomy`.
 
 ## Altering indexables behaviuor
 Most users won't ever need to interact directly with the indexables table or logic. However, advanced users may wish to customize the behaviour to fit their needs.

@@ -8,9 +8,9 @@ description: An overview of how Indexables work in Yoast SEO.
 Yoast SEO's "Indexables" framework provides an abstraction layer for interacting with post metadata relating to SEO.
 
 ## A page-centric model of the web
-A large part of what our software does is store, manage, and evaluate information relating to _pages_. We also provide controls which act at _template level_ or _site level_, but these are still just bundles of _pages_. And each of these pages have a unique _URL_.
+A large part of what our software does is store, manage, and evaluate information relating to _pages_. Each of these pages has a unique _URL_.
 
-This mental model is in line with how most search engines and systems think about the web. We're interested in (the content of) pages, and we can build a _map_ of those pages based on their URLs. When we have that map, we can easily check, update, and manage information about a given page.
+This is how most search engines and systems 'think' about the web. They build a _map_ of all the pages they know about, based on their URLs. We do the same thing. When we have that map, we can easily check, update, and manage information about a given page.
 
 On the surface, this seems like a straightforward concept. But words like 'page' have hidden complexity and nuance - especially in the context of WordPress.
 

@@ -10,7 +10,7 @@ Yoast SEO's "Indexables" framework provides an abstraction layer for interacting
 ## A page-centric model of the web
 A large part of what our software does is store, manage, and evaluate information relating to _pages_. We also provide controls which act at _template level_ or _site level_, but these are still just bundles of _pages_. And each of these pages have a unique _URL_.
 
-This mental model is in line with how most search engines and systems think about the web; we're interested in (the content of) pages, and we can build a _map_ of those pages based on their URLs. When we have that map, we can easily check, update, and manage information about a given page.
+This mental model is in line with how most search engines and systems think about the web. We're interested in (the content of) pages, and we can build a _map_ of those pages based on their URLs. When we have that map, we can easily check, update, and manage information about a given page.
 
 On the surface, this seems like a straightforward concept. But words like 'page' have hidden complexity and nuance - especially in the context of WordPress.
 
@@ -49,9 +49,10 @@ With the indexables table in place, we have an 'SEO-centric' view of the website
 
 ## Altering indexables behaviuor
 Most users won't ever need to interact directly with the indexables table or logic. However, advanced users may wish to customize the behaviour to fit their needs.
-To enable this, we provide a range of filters:
+To enable this, we provide a range of filters to alter the default behaviour or interact with the table:
 
 * You can [disable the creation of new indexables](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/).
 * You can exclude a specific _post type_ (by filtering an array of excluded types) via `wpseo_indexable_excluded_post_types`.
 * You can exclude a specific _taxonomy type_ (by filtering an array of excluded types) via `wpseo_indexable_excluded_taxonomies`.
+* You [force a (re)indexing process](https://developer.yoast.com/features/wp-cli/reindex-indexables/) via WP CLI.
 

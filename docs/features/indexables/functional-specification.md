@@ -36,7 +36,7 @@ An _indexable_ is any resource that can (theoretically) be _indexed_ by a search
 
 It _excludes_ any resource which does not have a public URL, as well as resources which return errors.
 
-## The Indexables table(s) in WordPress
+## Yoast SEO's Indexables table(s) in WordPress
 Yoast SEO creates and manages indexables in WordPress with a dedicated database table. This stores all of the information we might need from an SEO perspective, about every indexable we know about. That means that when we want to query a given page to determine what the SEO metadata should be, we can do so extremely efficiently.
 
 This process operates silently in the background, and seamlessly syncronises with WordPress' native metadata fields and processes. 

@@ -34,6 +34,8 @@ The following should be added whenever available and valid:
 
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the organization (e.g., a Wikipedia page, or Facebook profile).
 * `image`: An array of references-by-ID to `ImageObject` nodes which represent the organization (including the `logo` ).
+* `alternateName`: An alternate (usually _shorter_) name for the organization.
+
 
 ## Transformations
 The `Organization` type may be transformed in the following scenarios.
@@ -73,6 +75,7 @@ The `Organization` type may be transformed in the following scenarios.
               "@id": "https://www.example.com/#/schema/Organization/abc123",
               "url": "https://www.example.com/",
               "name": "Example organization name",
+              "alternateName": "Short org name",
               "sameAs": [
                   "https://www.wikipedia.com/example-organization",
                   "https://www.linkedin.com/company/1234"
@@ -101,7 +104,7 @@ To change the `Organization` schema Yoast SEO outputs, you can use our `wpseo_sc
 add_filter( 'wpseo_schema_organization', 'change_organization_schema', 11, 2 );
 
 /**
- * Changes the Yoast organization URL to always be https://yoast.com even on subdomains.
+ * Add extra properties to the Yoast SEO Organization
  *
  * @param array             $data    The Schema Organization data.
  * @param Meta_Tags_Context $context Context value object.
@@ -125,6 +128,7 @@ function change_organization_schema( $data, $context ) {
 	$data['description']        = 'Yoast helps you with your website optimization, whether it be through our widely used SEO software or our online SEO courses: we&#039;re here to help.';
 	$data['url']                = 'https://yoast.com/';
 	$data['legalName']          = 'Yoast BV';
+	$data['alternateName']      = 'Yoast';
 	$data['parentOrganization'] = [
 		'@type'       => 'Organization',
 		'name'        => 'Newfold Digital',

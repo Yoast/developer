@@ -32,6 +32,7 @@ The following should be added whenever available and valid:
 * `inLanguage`: The language code for the WebSite; e.g., `en-GB`.
  * If the website is available in multiple languages, then output an array of `inLanguage` values.
 * `description`: A description of the website (e.g., the site's tagline).
+* `alternateName`: An alternate (usually _shorter_) name for the website.
 
 ## Examples
 

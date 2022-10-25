@@ -14,14 +14,12 @@ This is how most search engines and systems 'think' about the web. They build a 
 
 On the surface, this seems like a straightforward concept. But words like 'page' have hidden complexity and nuance - especially in the context of WordPress.
 
-Things get surprisingly muddy when we start to ask questions like, "what _is_ a page" (and what _isn't_), or, "what's the URL of _that particular_ page"?
-
 For example, in WordPress, posts stored in the database _don't get stored with a URL_. Every time the system needs to know the URL of a page, it has to be _calculated_ (based on the user-defined URL structure settings for the site). That's computationally expensive.
 
 But processing overheads aren't the only challenge here - there are also scenarios where it's not clear what we mean by 'page'.
 
 ### But what's a page?
-Beyond what we might concieve to be a conventional 'page' on a website, we might also have _archive_ views (e.g., all posts published by a given author), _alternate content_ formats (e.g., RSS feeds), _taxonomies_ (e.g., tags and categories) _error templates_ (e.g., 404 pages), _paginated_ results, and other esoteric types of content.
+Beyond what we might concieve to be a conventional 'page' on a website, we might also have _archive_ views (e.g., all posts published by a given author), _alternate content_ formats (e.g., RSS feeds), _taxonomies_ (e.g., tags and categories) _error templates_ (e.g., 404 pages), _paginated_ results, and other esoteric types of content. These are all 'pages', as far as search engines are concerned.
 
 From an SEO perspective, each of these scenarios must be handled differently - each with its own rules and conditions. Even a simple blog post may have _dozens_ of values that we need to consider and evaluate. These range from crawling and indexing controls, to content evaluation scores, keywords, presentation settings, media, and beyond. We must consider all of these fields and the relationships between them, in the process of determining what SEO metadata should be output on the page.
 

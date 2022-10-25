@@ -54,10 +54,10 @@ Types of indexables we store include:
 
 We also store several 'patterns' which represent _template_ and content types where it isn't valuable or necessary to include discreet indexables for every possible permutation. These include:
 
-* Date archive templates
-* Post type archive templates
-* Error templates
-* Search results templates
+* Date archives
+* Post type archives
+* Error pages
+* Search results
 
 *We consider a page to be 'public' when the `publicly_queryable` attribute is set to `true` (either explicitly, or when inherited when `public` is `true`), via `register_post_type`/`register_taxonomy`.
 

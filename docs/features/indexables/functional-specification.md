@@ -59,7 +59,7 @@ We also store several 'patterns' which represent _template_ and content types wh
 * Error pages
 * Search results
 
-*We consider a page to be 'public' when the `publicly_queryable` attribute is set to `true` (either explicitly, or when inherited when `public` is `true`), via `register_post_type`/`register_taxonomy`.
+*We consider a page to be 'public' when the `public` attribute for the post/taxonomy type is set to `true` in `register_post_type`/`register_taxonomy`.
 
 ## Altering indexables behaviuor
 Most users won't ever need to interact directly with the indexables table or logic. However, advanced users may wish to customize the behaviour to fit their needs.

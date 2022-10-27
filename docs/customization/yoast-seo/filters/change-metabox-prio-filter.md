@@ -3,9 +3,10 @@ id: change-metabox-prio-filter
 title: "Yoast SEO: Change metabox priority"
 sidebar_label: Change metabox priority
 ---
-By default, the Yoast SEO metabox has a `high` priority. This means it will be displayed just below the editor. When needed, the priority can be lowered so it will be displayed below other metaboxes.
+By default, the Yoast SEO metabox has a `high` priority. This means it will be displayed just below the editor. If 
+needed, the priority can be lowered, so it will be displayed below other metaboxes.
 
-Accepted values for metabox priority are (in order of appearance):
+Accepted values for metabox priority are (in order of appearance)[^1]:
 
 * `high` 
 * `core`
@@ -31,3 +32,5 @@ function lower_yoast_metabox_priority( $priority ) {
   return 'core';
 }
 ```
+
+[^1]: Per the docs for [`add_meta_box`](https://developer.wordpress.org/reference/functions/add_meta_box/).

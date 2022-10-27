@@ -1,7 +1,6 @@
 ---
 id: api
 title: "Yoast SEO XML Sitemaps: API documentation"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEONEWLINEXML%20SitemapsNEWLINEAPI%20documentation
 sidebar_label: API
 description: The API to change the XML sitemap Yoast SEO puts out.
 ---

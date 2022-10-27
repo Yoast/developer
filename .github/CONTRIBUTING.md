@@ -37,7 +37,8 @@ Make sure your problem does not exist as an issue already by searching through [
 * When committing, reference your issue and include a note about the fix.
 * Push the changes to your fork and submit a pull request to this repository.
 
-We will review your pull request and merge when everything is in order. We will help you to make sure the code complies with the standards described above.
+We will review your pull request and merge when everything is in order. We will 
+help you to make sure the code complies with the standards described above.
 
 #### Additional Resources
 * [General GitHub Documentation](https://help.github.com/)

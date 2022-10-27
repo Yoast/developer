@@ -1,7 +1,6 @@
 ---
 id: adding-custom-data-analysis
 title: "Yoast SEO: Adding custom data to the page analysis"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEAdding%20custom%20dataNEWLINEto%20the%20page%20analysis
 ---
 
 Yoast SEO comes featured with a powerful set of tools to not only help you improve your SEO, but to also help you write better texts by analyzing the content of the post or page that you're working on.

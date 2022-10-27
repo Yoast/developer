@@ -1,7 +1,6 @@
 ---
 id: surfaces-api
 title: "Yoast SEO: Surfaces API"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:%20Surfaces%20API
 sidebar_label: Surfaces API
 description: Retrieve metadata from a post or URL, seamlessly.
 ---

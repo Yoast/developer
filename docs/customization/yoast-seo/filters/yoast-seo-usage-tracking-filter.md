@@ -1,7 +1,6 @@
 ---
 id: yoast-seo-usage-tracking-filter
 title: "Yoast SEO: Enable usage tracking"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEEnable%20usage%20tracking
 sidebar_label: Enable usage tracking
 ---
 Yoast SEO has a usage tracking feature to track basic site and server data, the plugin usage and the other plugins on the site as well as the theme used on the site.

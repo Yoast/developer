@@ -1,7 +1,6 @@
 ---
 id: setup
 title: "Yoast SEO development setup"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20Development%20setup
 sidebar_label: Development setup
 ---
 

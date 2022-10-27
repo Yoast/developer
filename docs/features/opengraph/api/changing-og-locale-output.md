@@ -1,7 +1,6 @@
 ---
 id: changing-og-locale-output
 title: "Yoast SEO OpenGraph Tags: Change the og:locale output"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO%20OpenGraph%20Tags:NEWLINEChange%20the%20og:locale%20output
 sidebar_label: Changing the og:locale output
 ---
 

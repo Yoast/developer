@@ -1,7 +1,6 @@
 ---
 id: integration-guidelines
 title: "Schema - Integration guidelines"
-image: https://yoast.com/shared-assets/opengraph/?title=Schema%20-%20Integration%20guidelines
 sidebar_label: Integration guidelines
 description: Integrating with Yoast's structured data framework is easy, and, we encourage all plugin/theme/software authors to consider adopting and extending our approach.
 ---

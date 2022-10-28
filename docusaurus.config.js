@@ -31,6 +31,26 @@ const config = {
 	plugins: [
 		'./src/plugins/og-site-name',
 		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				blogTitle: 'Yoast SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features in every release',
+				blogSidebarCount: 'ALL',
+				blogSidebarTitle: 'Yoast SEO changelog',
+				routeBasePath: '/changelog',
+				showReadingTime: false,
+				postsPerPage: 20,
+				archiveBasePath: null,
+				feedOptions: {
+					type: 'all',
+					title: 'Yoast SEO changelog',
+					description: 'Keep yourself up-to-date about new features in every release',
+					copyright: `Copyright © ${new Date().getFullYear()} Yoast, BV.`,
+					language: 'en',
+				},
+			},
+		],
+		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{
 				id: 'GTM-NHRB36F', // GTM Container ID

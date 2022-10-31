@@ -164,6 +164,7 @@ module.exports = {
 						'features/integrations/site-connections',
 					],
 				},
+				'features/indexables/functional-specification',
 				{
 					type: 'category',
 					label: 'Schema.org markup',

@@ -31,38 +31,21 @@ function processSection(section) {
 	if (!title) {
 		return null;
 	}
+
+	let matches = section.match(/^Release date: (\d{4}-\d{2}-\d{2})$/m);
+	let date = matches[1] +'T20:00';
+
 	const content = section
 		.replace(/\n## .*/, '')
-		.trim()
-		.replace('running_woman', 'running');
-
-	let authors = content.match(/## Committers: \d.*/s);
-	if (authors) {
-		authors = authors[0]
-			.match(/- .*/g)
-			.map(
-				(line) =>
-					line.match(
-						/- (?:(?<name>.*?) \()?\[@(?<alias>.*)\]\((?<url>.*?)\)\)?/,
-					).groups,
-			)
-			.map((author) => ({
-				...author,
-				name: author.name ?? author.alias,
-				imageURL: `https://github.com/${author.alias}.png`,
-			}))
-			.sort((a, b) => a.url.localeCompare(b.url));
-
-		authors.forEach((author) => {
-			authorsMap[author.alias] = author;
-		});
-	}
-	let hour = 20;
+		.replace( /Release date: (\d{4}-\d{2}-\d{2})/, '' )
+		.trim();
 
 	return {
 		title: title.replace(/ \(.*\)/, ''),
 		content: `---
 title: ${title}
+tags: [yoast-seo]
+date: ${date}
 ---
 
 # ${title.replace(/ \(.*\)/, '')}
@@ -86,7 +69,7 @@ async function ChangelogPlugin(context, options) {
 		blogListComponent: '@theme/ChangelogList',
 		blogPostComponent: '@theme/ChangelogPage',
 	});
-	const changelogPath = path.join(__dirname, '../../../wordpress-seo-changelog.md');
+	const changelogPath = path.join(__dirname, '../../../changelogs/wordpress-seo-changelog.md');
 	return {
 		...blogPlugin,
 		name: 'changelog-plugin',

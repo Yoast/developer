@@ -1,7 +1,6 @@
 ---
 id: functional-specification
 title: "Indexables - Functional specification"
-image: https://yoast.com/shared-assets/opengraph/?title=Yoast%20SEO:NEWLINEHTTP%20HeadersNEWLINEFunctional%20specification
 sidebar_label: Indexables
 description: An overview of how Indexables work in Yoast SEO.
 ---

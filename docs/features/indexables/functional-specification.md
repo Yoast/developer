@@ -67,12 +67,11 @@ Types of indexables we store include:
 * The homepage
 * Author archives (for authors with published, public posts)
 
-We also store several 'patterns' which represent _template_ and content types where it isn't valuable or necessary to include discreet indexables for every possible permutation. These include:
+We also store several 'patterns' which represent _template_ and content types where it isn't valuable or necessary to include discrete indexables for every possible permutation. These include:
 
-* Date archives
-* Post type archives
+* Post type, taxonomy and date archives
 * Error pages
-* Search results
+* Internal search results
 
 *We consider a page to be 'public' when the `public` attribute for the post/taxonomy type is set to `true` in `register_post_type`/`register_taxonomy`.
 ## Use-cases

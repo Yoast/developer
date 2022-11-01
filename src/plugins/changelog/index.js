@@ -22,8 +22,9 @@ const authorsMap = {};
 
 /**
  * @param {string} section
+ * @param tag
  */
-function processSection(section) {
+function processSection(section, tag) {
 	const title = section
 		.match(/\n## .*/)?.[0]
 		.trim()
@@ -33,6 +34,9 @@ function processSection(section) {
 	}
 
 	let matches = section.match(/^Release date: (\d{4}-\d{2}-\d{2})$/m);
+	if ( matches === null || typeof matches === 'undefined' ) {
+		console.log( section );
+	}
 	let date = matches[1] +'T20:00';
 
 	const content = section
@@ -44,15 +48,17 @@ function processSection(section) {
 		title: title.replace(/ \(.*\)/, ''),
 		content: `---
 title: ${title}
-tags: [yoast-seo]
+sidebar_label: ${title}
+tags: [${tag}]
 date: ${date}
 ---
 
 # ${title.replace(/ \(.*\)/, '')}
 
-<!-- truncate -->
+<!--truncate-->
 
-${content.replace(/####/g, '##')}`,
+${content.replace(/####/g, '##')}
+`,
 	};
 }
 
@@ -64,12 +70,18 @@ async function ChangelogPlugin(context, options) {
 	const generateDir = path.join(context.siteDir, 'changelog/source');
 	const blogPlugin = await pluginContentBlog.default(context, {
 		...options,
-		path: generateDir,
-		id: 'changelog',
+		archiveBasePath: null,
+		showReadingTime: false,
+		postsPerPage: 50,
+		blogSidebarCount: 10,
+		blogSidebarTitle: 'Recent releases',
 		blogListComponent: '@theme/ChangelogList',
 		blogPostComponent: '@theme/ChangelogPage',
+		routeBasePath: 'changelog/'+options.id,
+		path: './changelog/source/'+options.id,
+		feedOptions: false,
 	});
-	const changelogPath = path.join(__dirname, '../../../changelogs/wordpress-seo-changelog.md');
+	const changelogPath = path.join(__dirname, '../../../changelogs/'+options.id+'.md');
 	return {
 		...blogPlugin,
 		name: 'changelog-plugin',
@@ -77,12 +89,14 @@ async function ChangelogPlugin(context, options) {
 			const fileContent = await fs.readFile(changelogPath, 'utf-8');
 			const sections = fileContent
 				.split(/(?=\n## )/)
-				.map(processSection)
+				.map(
+					section => processSection( section, options.id )
+				)
 				.filter(Boolean);
 			await Promise.all(
 				sections.map((section) =>
 					fs.outputFile(
-						path.join(generateDir, `${section.title}.md`),
+						path.join(generateDir, `${options.id}/${section.title}.md`),
 						section.content,
 					),
 				),
@@ -103,7 +117,7 @@ async function ChangelogPlugin(context, options) {
 			const pluginDataDirRoot = path.join(
 				context.generatedFilesDir,
 				'changelog-plugin',
-				'default',
+				options.id,
 			);
 			// Redirect the metadata path to our folder
 			config.module.rules[0].use[1].options.metadataPath = (mdxPath) => {

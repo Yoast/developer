@@ -33,21 +33,49 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
+				id: 'yoast-seo',
 				blogTitle: 'Yoast SEO changelog',
-				blogDescription: 'Keep yourself up-to-date about new features in every release',
-				blogSidebarCount: 'ALL',
-				blogSidebarTitle: 'Yoast SEO changelog',
-				routeBasePath: '/changelog',
-				showReadingTime: false,
-				postsPerPage: 20,
-				archiveBasePath: null,
-				feedOptions: {
-					type: 'all',
-					title: 'Yoast SEO changelog',
-					description: 'Keep yourself up-to-date about new features in every release',
-					copyright: `Copyright © ${new Date().getFullYear()} Yoast, BV.`,
-					language: 'en',
-				},
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for WordPress.',
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'yoast-seo-premium',
+				blogTitle: 'Yoast SEO Premium changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO Premium.',
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'local-seo',
+				blogTitle: 'Yoast Local SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Local SEO plugin for WordPress.',
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'news-seo',
+				blogTitle: 'Yoast News SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast News SEO plugin for WordPress.',
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'video-seo',
+				blogTitle: 'Yoast Video SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Video SEO plugin for WordPress.',
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'woocommerce-seo',
+				blogTitle: 'Yoast WooCommerce SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast WooCommerce SEO plugin.',
 			},
 		],
 		[

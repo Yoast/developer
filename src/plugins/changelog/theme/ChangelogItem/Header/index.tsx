@@ -29,7 +29,6 @@ export default function ChangelogItemHeader(): JSX.Element {
     <header>
       <ChangelogTitle />
       <BlogPostItemHeaderInfo />
-      <ChangelogItemHeaderAuthors />
     </header>
   );
 }

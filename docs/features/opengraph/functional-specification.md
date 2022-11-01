@@ -35,6 +35,7 @@ The following tags are only output when their conditions are met:
 
 ### Additional conditional tags
 Though not strictly open graph tags, these should be evaluated and output as part of this set of requirements.
+
 | Tag | Description | Notes |
 |---|----|---|
 | `<meta name="author" content="%NAME%" />` | The name of the post author | Only populated on `post` types. |

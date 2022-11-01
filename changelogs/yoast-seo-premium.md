@@ -2,7 +2,7 @@
 
 Release date: 2022-10-25
 
-Yoast SEO Premium 19.4 is out now. In this release, we've improved our Premium analysis with a new check for site titles. We've also added a new option to the crawl settings to manage the crawling of internal site search URLs. Plus, we've added several enhancements, fixes, and other improvements. Check it out! Read more about what's new in Yoast SEO Premium 19.4 in [https://yoa.st/release-25-10-22](our release post in English) or [https://yoa.st/release-25-10-22-spanish](our release post in Spanish)!
+Yoast SEO Premium 19.4 is out now. In this release, we've improved our Premium analysis with a new check for site titles. We've also added a new option to the crawl settings to manage the crawling of internal site search URLs. Plus, we've added several enhancements, fixes, and other improvements. Check it out! Read more about what's new in Yoast SEO Premium 19.4 in [our release post in English](https://yoa.st/release-25-10-22) or [our release post in Spanish](https://yoa.st/release-25-10-22-spanish)!
 
 #### Enhancements
 
@@ -24,7 +24,7 @@ Yoast SEO Premium 19.4 is out now. In this release, we've improved our Premium a
 
 Release date: 2022-09-20
 
-Today, we’re releasing Yoast SEO Premium 19.3. We’ve rolled out some general enhancements, bug fixes, and security improvements in this release. Update now! Read more about what's new in Yoast SEO Premium 19.3 in [https://yoa.st/release-20-9-22](our release post in English) or [https://yoa.st/release-20-9-22-spanish](our release post in Spanish)!
+Today, we’re releasing Yoast SEO Premium 19.3. We’ve rolled out some general enhancements, bug fixes, and security improvements in this release. Update now! Read more about what's new in Yoast SEO Premium 19.3 in [our release post in English](https://yoa.st/release-20-9-22) or [our release post in Spanish](https://yoa.st/release-20-9-22-spanish)!
 
 #### Enhancements
 
@@ -47,7 +47,7 @@ Release date: 2022-08-31
 
 Release date: 2022-08-23
 
-In Yoast SEO Premium 19.2, we’re introducing a new inclusive language analysis. This will help you get feedback on words that might exclude part of your audience and get inclusive alternatives. This is a beta launch and is only available in English for now. Plus, it is opt-in. Try it out! Read more about what's new in Yoast SEO Premium 19.2 in [https://yoa.st/release-23-8-22](our release post in English) or [https://yoa.st/release-23-8-22-spanish](our release post in Spanish)!
+In Yoast SEO Premium 19.2, we’re introducing a new inclusive language analysis. This will help you get feedback on words that might exclude part of your audience and get inclusive alternatives. This is a beta launch and is only available in English for now. Plus, it is opt-in. Try it out! Read more about what's new in Yoast SEO Premium 19.2 in [our release post in English](https://yoa.st/release-23-8-22) or [our release post in Spanish](https://yoa.st/release-23-8-22-spanish)!
 
 #### Enhancements
 
@@ -68,7 +68,7 @@ In Yoast SEO Premium 19.2, we’re introducing a new inclusive language analysis
 
 Release date: 2022-08-09
 
-Yoast SEO Premium 19.1 is out today! We're introducing another new feature in this release: the front-end SEO Inspector. It's a tool that lets you check your SEO settings and metadata, right from the front-end of your website. Try it out! And read more about what's new in Yoast SEO Premium 19.1 in [https://yoa.st/release-9-8-22](our release post in English) or [https://yoa.st/release-9-8-22-spanish](our release post in Spanish)!
+Yoast SEO Premium 19.1 is out today! We're introducing another new feature in this release: the front-end SEO Inspector. It's a tool that lets you check your SEO settings and metadata, right from the front-end of your website. Try it out! And read more about what's new in Yoast SEO Premium 19.1 in [our release post in English](https://yoa.st/release-9-8-22) or [our release post in Spanish](https://yoa.st/release-9-8-22-spanish)!
 
 #### Enhancements
 
@@ -96,7 +96,7 @@ Release date: 2022-07-28
 
 Release date: 2022-07-26
 
-In Yoast SEO Premium 19.0, we’re introducing a tool that lets you add emojis to your meta title and meta description. Check it out! Next to that, we're adding more languages to the word complexity assessment. But these are not the only things coming in this release. Read more about what's new in Yoast SEO Premium 19.0 in [https://yoast.com/yoast-seo-july-26-2022/](our release post in English) or [https://yoast.com/es/yoast-seo-julio-26-2022/](our release post in Spanish)!
+In Yoast SEO Premium 19.0, we’re introducing a tool that lets you add emojis to your meta title and meta description. Check it out! Next to that, we're adding more languages to the word complexity assessment. But these are not the only things coming in this release. Read more about what's new in Yoast SEO Premium 19.0 in [our release post in English](https://yoast.com/yoast-seo-july-26-2022/) or [our release post in Spanish](https://yoast.com/es/yoast-seo-julio-26-2022/)!
 
 #### Enhancements
 
@@ -117,7 +117,7 @@ In Yoast SEO Premium 19.0, we’re introducing a tool that lets you add emojis t
 
 Release date: 2022-07-12
 
-In Yoast SEO Premium 18.9, we’re introducing a new word complexity assessment. This will help you get actionable feedback on your use of difficult words. This is a beta launch and is only available in English for now. Try it out! Read more about what's new in Yoast SEO Premium 18.9 in [https://yoast.com/yoast-seo-july-12-2022/](our release post in English) or [https://yoast.com/es/yoast-seo-julio-12-2022/](our release post in Spanish)!
+In Yoast SEO Premium 18.9, we’re introducing a new word complexity assessment. This will help you get actionable feedback on your use of difficult words. This is a beta launch and is only available in English for now. Try it out! Read more about what's new in Yoast SEO Premium 18.9 in [our release post in English](https://yoast.com/yoast-seo-july-12-2022/) or [our release post in Spanish](https://yoast.com/es/yoast-seo-julio-12-2022/)!
 
 #### Enhancements
 
@@ -135,7 +135,7 @@ In Yoast SEO Premium 18.9, we’re introducing a new word complexity assessment.
 
 Release date: 2022-06-28
 
-In Yoast SEO Premium 18.8, we’re expanding our recently introduced crawl settings with search spam blockers and URL parameters cleanup. In addition, we’re adding an integration with IndexNow to instantly ping search engines like Microsoft Bing whenever you publish or update content. Check it out! Read more about what's new in Yoast SEO Premium 18.8 in [https://yoast.com/yoast-seo-june-28-2022/](our release post in English) or [https://yoast.com/es/yoast-seo-junio-28-2022/](our release post in Spanish)!
+In Yoast SEO Premium 18.8, we’re expanding our recently introduced crawl settings with search spam blockers and URL parameters cleanup. In addition, we’re adding an integration with IndexNow to instantly ping search engines like Microsoft Bing whenever you publish or update content. Check it out! Read more about what's new in Yoast SEO Premium 18.8 in [our release post in English](https://yoast.com/yoast-seo-june-28-2022/) or [our release post in Spanish](https://yoast.com/es/yoast-seo-junio-28-2022/)!
 
 #### Enhancements
 
@@ -151,7 +151,7 @@ In Yoast SEO Premium 18.8, we’re expanding our recently introduced crawl setti
 
 Release date: 2022-06-14
 
-In Yoast SEO Premium 18.7, we’re expanding our recently introduced crawl settings. These features will let you turn off different things WordPress automatically adds to your site. Hardly anyone uses these, but these do add overhead to your site. You now have much more control over what you want search engines to crawl on your WordPress site. Check it out! Read more about what's new in Yoast SEO Premium 18.7 in [https://yoa.st/release-14-6-22](our release post in English) or [https://yoa.st/release-14-6-22-spanish](our release post in Spanish)!
+In Yoast SEO Premium 18.7, we’re expanding our recently introduced crawl settings. These features will let you turn off different things WordPress automatically adds to your site. Hardly anyone uses these, but these do add overhead to your site. You now have much more control over what you want search engines to crawl on your WordPress site. Check it out! Read more about what's new in Yoast SEO Premium 18.7 in [our release post in English](https://yoa.st/release-14-6-22) or [our release post in Spanish](https://yoa.st/release-14-6-22-spanish)!
 
 #### Enhancements
 
@@ -171,7 +171,7 @@ In Yoast SEO Premium 18.7, we’re expanding our recently introduced crawl setti
 
 Release date: 2022-05-31
 
-Say hi to Yoast SEO Premium 18.6! In this release, we’re introducing more ways to control crawling on your site. We’re starting with a small addition to manage post comment feeds, but we’re expanding that in the coming releases. The feature is in beta, so we welcome your feedback! Read more about what's new in Yoast SEO Premium 18.6 in [https://yoa.st/release-31-5-22](our release post in English) or [https://yoa.st/release-31-5-22-spanish](our release post in Spanish)!
+Say hi to Yoast SEO Premium 18.6! In this release, we’re introducing more ways to control crawling on your site. We’re starting with a small addition to manage post comment feeds, but we’re expanding that in the coming releases. The feature is in beta, so we welcome your feedback! Read more about what's new in Yoast SEO Premium 18.6 in [our release post in English](https://yoa.st/release-31-5-22) or [our release post in Spanish](https://yoa.st/release-31-5-22-spanish)!
 
 #### Enhancements
 
@@ -186,7 +186,7 @@ Say hi to Yoast SEO Premium 18.6! In this release, we’re introducing more ways
 
 Release date: 2022-05-17
 
-Meet Yoast SEO Premium 18.5: This release includes some changes to make the Premium plugin work well with the new First-time configuration and some more fixes and enhancements to enjoy! Read more about what's new in Yoast SEO Premium 18.5 in [https://yoa.st/release-17-5-22](our release post in English) or [https://yoa.st/release-17-5-22-spanish](our release post in Spanish)!
+Meet Yoast SEO Premium 18.5: This release includes some changes to make the Premium plugin work well with the new First-time configuration and some more fixes and enhancements to enjoy! Read more about what's new in Yoast SEO Premium 18.5 in [our release post in English](https://yoa.st/release-17-5-22) or [our release post in Spanish](https://yoa.st/release-17-5-22-spanish)!
 
 #### Bugfixes
 
@@ -201,7 +201,7 @@ Meet Yoast SEO Premium 18.5: This release includes some changes to make the Prem
 
 Release date: 2022-04-19
 
-Meet Yoast SEO Premium 18.4: a small Yoast SEO update, fixing a number of bugs, including several bugs related to the Wincher integration. With the Wincher integration, you can track the rankings of your articles in the search results. If you haven’t checked that feature out, please do so! We’ve also improved compatibility with PHP 8.1. Read more about what's new in Yoast SEO Premium 18.4 in [https://yoa.st/release-19-4-22](our release post in English) or [https://yoa.st/release-19-4-22-spanish](our release post in Spanish)!
+Meet Yoast SEO Premium 18.4: a small Yoast SEO update, fixing a number of bugs, including several bugs related to the Wincher integration. With the Wincher integration, you can track the rankings of your articles in the search results. If you haven’t checked that feature out, please do so! We’ve also improved compatibility with PHP 8.1. Read more about what's new in Yoast SEO Premium 18.4 in [our release post in English](https://yoa.st/release-19-4-22) or [our release post in Spanish](https://yoa.st/release-19-4-22-spanish)!
 
 #### Other
 
@@ -213,7 +213,7 @@ Meet Yoast SEO Premium 18.4: a small Yoast SEO update, fixing a number of bugs, 
 
 Release date: 2022-04-05
 
-Say hi to Yoast SEO Premium 18.3! You'll find a number of fixes and enhancements. We've also included more improvements to the rebuild of the AIOSEO importer, and we fixed a bug that prohibited us to display the text in the estimated reading time block in the site language. Happy updating! Read more about what's new in Yoast SEO Premium 18.3 in [https://yoa.st/release-5-4-22](our release post in English) or [https://yoa.st/release-5-4-22-spanish](our release post in Spanish)!
+Say hi to Yoast SEO Premium 18.3! You'll find a number of fixes and enhancements. We've also included more improvements to the rebuild of the AIOSEO importer, and we fixed a bug that prohibited us to display the text in the estimated reading time block in the site language. Happy updating! Read more about what's new in Yoast SEO Premium 18.3 in [our release post in English](https://yoa.st/release-5-4-22) or [our release post in Spanish](https://yoa.st/release-5-4-22-spanish)!
 #### Bugfixes
 
 * Fixes a bug where the word 'minute/minutes' would be in the user language, instead of the site language, for the estimated reading time block in the frontend.
@@ -249,7 +249,7 @@ Release date: 2022-03-22
 
 Release date: 2022-02-22
 
-Yoast SEO Premium 18.1 is out today! This release includes more fixes and enhancements to enjoy. We’ve improved word form recognition for the Turkish language. Happy optimizing! Read more about what's new in Yoast SEO 18.1 in [https://yoa.st/release-22-2-22](our release post in English) or [https://yoa.st/release-22-2-22-spanish](our release post in Spanish)!
+Yoast SEO Premium 18.1 is out today! This release includes more fixes and enhancements to enjoy. We’ve improved word form recognition for the Turkish language. Happy optimizing! Read more about what's new in Yoast SEO 18.1 in [our release post in English](https://yoa.st/release-22-2-22) or [our release post in Spanish](https://yoa.st/release-22-2-22-spanish)!
 
 #### Enhancements
 
@@ -271,7 +271,7 @@ Yoast SEO Premium 18.1 is out today! This release includes more fixes and enhanc
 
 Release date: 2022-02-08
 
-Yoast SEO Premium 18.0 is out today! This new release brings another round of bug fixes, plus a new way for us to handle the translations in our plugin — leading to a smaller plugin size for you to install. Plus: improved compatibility with WordPress 5.9. Read more about what's new in Yoast SEO Premium 18.0 in [https://yoa.st/release-8-2-22](our release post in English) or [https://yoa.st/release-8-2-22-spanish](our release post in Spanish)!
+Yoast SEO Premium 18.0 is out today! This new release brings another round of bug fixes, plus a new way for us to handle the translations in our plugin — leading to a smaller plugin size for you to install. Plus: improved compatibility with WordPress 5.9. Read more about what's new in Yoast SEO Premium 18.0 in [our release post in English](https://yoa.st/release-8-2-22) or [our release post in Spanish](https://yoa.st/release-8-2-22-spanish)!
 
 #### Other
 
@@ -285,7 +285,7 @@ Yoast SEO Premium 18.0 is out today! This new release brings another round of bu
 
 Release date: 2022-01-11
 
-Yoast SEO 17.9 is now available! Yoast SEO now comes with a keyphrase tracking tool powered by Wincher that lets you monitor your keyphrases, straight from the plugin! Make sure to try out this new keyphrase tracking feature and let us know what you think. Read more about what's new in Yoast SEO 17.9 in [https://yoa.st/release-17-9](our release post in English) or [https://yoa.st/release-17-9-spanish](our release post in Spanish)!
+Yoast SEO 17.9 is now available! Yoast SEO now comes with a keyphrase tracking tool powered by Wincher that lets you monitor your keyphrases, straight from the plugin! Make sure to try out this new keyphrase tracking feature and let us know what you think. Read more about what's new in Yoast SEO 17.9 in [our release post in English](https://yoa.st/release-17-9) or [our release post in Spanish](https://yoa.st/release-17-9-spanish)!
 
 #### Enhancements
 
@@ -304,7 +304,7 @@ Yoast SEO 17.9 is now available! Yoast SEO now comes with a keyphrase tracking t
 
 Release date: 2021-12-14
 
-Yoast SEO 17.8 is out now and ready for you to download. In this release, we fix a number of bugs and added a few enhancements for you to enjoy! Read more about what's new in Yoast SEO 17.8 in [https://yoa.st/release-17-8](our release post in English) or [https://yoa.st/release-17-8-spanish](our release post in Spanish)!
+Yoast SEO 17.8 is out now and ready for you to download. In this release, we fix a number of bugs and added a few enhancements for you to enjoy! Read more about what's new in Yoast SEO 17.8 in [our release post in English](https://yoa.st/release-17-8) or [our release post in Spanish](https://yoa.st/release-17-8-spanish)!
 
 #### Enhancements
 
@@ -322,7 +322,7 @@ Yoast SEO 17.8 is out now and ready for you to download. In this release, we fix
 
 Release date: 2021-11-30
 
-Meet Yoast SEO 17.7! This release introduces a new configuration workout to help you set up the Yoast SEO plugin properly from the get-go. Get the basic settings right in Yoast SEO and create a solid foundation for your SEO! Read more about what's new in Yoast SEO 17.7 in [https://yoa.st/release-17-7](our release post in English) or [https://yoa.st/release-17-7-spanish](our release post in Spanish)!
+Meet Yoast SEO 17.7! This release introduces a new configuration workout to help you set up the Yoast SEO plugin properly from the get-go. Get the basic settings right in Yoast SEO and create a solid foundation for your SEO! Read more about what's new in Yoast SEO 17.7 in [our release post in English](https://yoa.st/release-17-7) or [our release post in Spanish](https://yoa.st/release-17-7-spanish)!
 
 #### Enhancements
 
@@ -336,7 +336,7 @@ Meet Yoast SEO 17.7! This release introduces a new configuration workout to help
 
 Release date: 2021-11-16
 
-Yoast SEO 17.6 is out today! This new release brings several fixes and enhancements to improve how the plugin works. And we’re getting it ready for the upcoming WordPress 5.9 release. Go check it out! Read more about what's new in Yoast SEO 17.6 in [https://yoa.st/release-17-6](our release post in English) or [https://yoa.st/release-17-6-spanish](our release post in Spanish)!
+Yoast SEO 17.6 is out today! This new release brings several fixes and enhancements to improve how the plugin works. And we’re getting it ready for the upcoming WordPress 5.9 release. Go check it out! Read more about what's new in Yoast SEO 17.6 in [our release post in English](https://yoa.st/release-17-6) or [our release post in Spanish](https://yoa.st/release-17-6-spanish)!
 
 #### Bugfixes
 
@@ -353,7 +353,7 @@ Yoast SEO 17.6 is out today! This new release brings several fixes and enhanceme
 
 Release date: 2021-11-02
 
-Say hello to Yoast SEO 17.5! Or maybe γεια would fit better, as this release introduces full Greek language support. Plus: you’ll also be able to find | and ~ title separators again. Happy updating! Read more about what's new in Yoast SEO 17.5 in [https://yoa.st/release-17-5](our release post in English) or [https://yoa.st/release-17-5-spanish](our release post in Spanish)!
+Say hello to Yoast SEO 17.5! Or maybe γεια would fit better, as this release introduces full Greek language support. Plus: you’ll also be able to find | and ~ title separators again. Happy updating! Read more about what's new in Yoast SEO 17.5 in [our release post in English](https://yoa.st/release-17-5) or [our release post in Spanish](https://yoa.st/release-17-5-spanish)!
 
 #### Enhancements
 
@@ -367,7 +367,7 @@ Say hello to Yoast SEO 17.5! Or maybe γεια would fit better, as this release
 
 Release date: 2021-10-19
 
-Yoast SEO 17.4 is out today! This release comes with several fixes and enhancements to help database performance on larger sites by cleaning up data and streamlining retrieval. Happy updating! Read more about what’s new in Yoast SEO 17.4 in [https://yoa.st/release-17-4](our release post in English) or [https://yoa.st/release-17-4-spanish](our release post in Spanish)!
+Yoast SEO 17.4 is out today! This release comes with several fixes and enhancements to help database performance on larger sites by cleaning up data and streamlining retrieval. Happy updating! Read more about what’s new in Yoast SEO 17.4 in [our release post in English](https://yoa.st/release-17-4) or [our release post in Spanish](https://yoa.st/release-17-4-spanish)!
 
 #### Enhancements
 
@@ -406,7 +406,7 @@ Yoast SEO 17.3 is out today! We’ve revamped the two available SEO workouts. It
 
 Release date: 2021-09-21
 
-Yoast SEO 17.2 is out now! Yoast SEO comes with many powerful tools that will help you write SEO-proof and readable texts. And as of today, you can also work on your readability in the Farsi language. Readable content is awesome content! Read more about what’s new in Yoast SEO 17.2 in [https://yoa.st/release-17-2](our release post)!
+Yoast SEO 17.2 is out now! Yoast SEO comes with many powerful tools that will help you write SEO-proof and readable texts. And as of today, you can also work on your readability in the Farsi language. Readable content is awesome content! Read more about what’s new in Yoast SEO 17.2 in [our release post](https://yoa.st/release-17-2)!
 
 #### Enhancements
 
@@ -438,7 +438,7 @@ Bugfixes:
 
 Release date: 2021-09-07
 
-Yoast SEO 17.1 is out today! In this release, you’ll find a couple of small changes that’ll help you write great titles that stand up to Google’s scrutiny. It also includes some behind-the-scenes improvements, including several fixes for our indexables data management. For now, please enjoy Yoast SEO and write the best possible content in the language of your choice! Read more about what’s new in Yoast SEO 17.1 in [https://yoa.st/release-17-1](our release post)!
+Yoast SEO 17.1 is out today! In this release, you’ll find a couple of small changes that’ll help you write great titles that stand up to Google’s scrutiny. It also includes some behind-the-scenes improvements, including several fixes for our indexables data management. For now, please enjoy Yoast SEO and write the best possible content in the language of your choice! Read more about what’s new in Yoast SEO 17.1 in [our release post](https://yoa.st/release-17-1)!
 
 #### Enhancements
 
@@ -456,7 +456,7 @@ Yoast SEO 17.1 is out today! In this release, you’ll find a couple of small ch
 
 Release date: 2021-08-24
 
-Say hello to Yoast SEO 17.0! This release includes some behind-the-scenes improvements, like an improved Spanish word form feature and several fixes for our indexables data management. For now, please enjoy Yoast SEO and write the best possible content in the language of your choice! Read more about what’s new in Yoast SEO 17.0 in [https://yoa.st/release-17-0](our release post)!
+Say hello to Yoast SEO 17.0! This release includes some behind-the-scenes improvements, like an improved Spanish word form feature and several fixes for our indexables data management. For now, please enjoy Yoast SEO and write the best possible content in the language of your choice! Read more about what’s new in Yoast SEO 17.0 in [our release post](https://yoa.st/release-17-0)!
 
 #### Enhancements
 
@@ -479,7 +479,7 @@ Say hello to Yoast SEO 17.0! This release includes some behind-the-scenes improv
 
 Release date: 2021-08-10
 
-Meet Yoast SEO 16.9: This release comes with a brand-new SEO workout that helps you make sure that your content is findable! It shows you if your website is suffering from orphaned content problems and helps you fix them. Moreover, the plugin now comes with two image SEO assessments and improved performance. Read more about what’s new in Yoast SEO 16.9 in [https://yoa.st/release-16-9](our release post)!
+Meet Yoast SEO 16.9: This release comes with a brand-new SEO workout that helps you make sure that your content is findable! It shows you if your website is suffering from orphaned content problems and helps you fix them. Moreover, the plugin now comes with two image SEO assessments and improved performance. Read more about what’s new in Yoast SEO 16.9 in [our release post](https://yoa.st/release-16-9)!
 
 #### Enhancements
 
@@ -499,7 +499,7 @@ Meet Yoast SEO 16.9: This release comes with a brand-new SEO workout that helps 
 
 Release date: 2021-07-27
 
-Yoast SEO 16.8 is out today! This release comes with an updated readability analysis with support for two new languages: Norwegian and Slovak. Slovak doesn’t just get full readability support but also support for our word forms feature. This Premium language feature helps you improve your content in a much more natural way. Did you know that Yoast SEO is nearing language support for twenty languages? Read more about what’s new in Yoast SEO 16.8 in [https://yoa.st/release-16-8](our release post)!
+Yoast SEO 16.8 is out today! This release comes with an updated readability analysis with support for two new languages: Norwegian and Slovak. Slovak doesn’t just get full readability support but also support for our word forms feature. This Premium language feature helps you improve your content in a much more natural way. Did you know that Yoast SEO is nearing language support for twenty languages? Read more about what’s new in Yoast SEO 16.8 in [our release post](https://yoa.st/release-16-8)!
 
 #### Enhancements
 
@@ -514,11 +514,11 @@ Yoast SEO 16.8 is out today! This release comes with an updated readability anal
 
 Release date: 2021-07-13
 
-Meet Yoast SEO Premium 16.7! This release comes with extended support for headless WordPress. And the new Premium Algolia integration will improve the quality of your site search and help users find your most important content! Read more about what’s new in Yoast SEO 16.7 in [https://yoa.st/release-16-7](our release post)!
+Meet Yoast SEO Premium 16.7! This release comes with extended support for headless WordPress. And the new Premium Algolia integration will improve the quality of your site search and help users find your most important content! Read more about what’s new in Yoast SEO 16.7 in [our release post](https://yoa.st/release-16-7)!
 
 #### Enhancements
 
-* Introduces an integration with the [https://wordpress.org/plugins/wp-search-with-algolia/](Algolia plugin by WebDevStudios). This will improve the quality of your site search if you use Algolia!
+* Introduces an integration with the [Algolia plugin by WebDevStudios](https://wordpress.org/plugins/wp-search-with-algolia/). This will improve the quality of your site search if you use Algolia!
 
 #### Bugfixes
 
@@ -530,7 +530,7 @@ Meet Yoast SEO Premium 16.7! This release comes with extended support for headle
 
 Release date: 2021-06-29
 
-Make working on your SEO easy as ABC! Yoast SEO 16.6 introduces SEO workouts to help your site keep fit. In this first SEO workout we’ll help you improve your internal linking based on the cornerstone approach. This SEO workflow will make this crucial process insightful for you and improve your SEO fitness! Read more about what’s new in Yoast SEO 16.6 in [https://yoa.st/release-16-6](our release post)!
+Make working on your SEO easy as ABC! Yoast SEO 16.6 introduces SEO workouts to help your site keep fit. In this first SEO workout we’ll help you improve your internal linking based on the cornerstone approach. This SEO workflow will make this crucial process insightful for you and improve your SEO fitness! Read more about what’s new in Yoast SEO 16.6 in [our release post](https://yoa.st/release-16-6)!
 
 #### Enhancements
 
@@ -541,14 +541,14 @@ Make working on your SEO easy as ABC! Yoast SEO 16.6 introduces SEO workouts to 
 
 #### Bugfixes
 
-* Fixes a bug where activating Yoast SEO would result in a fatal error on all admin pages, when Yoast SEO Premium was installed through Composer but not activated. Props to [https://github.com/andyblackwell](andyblackwell).
+* Fixes a bug where activating Yoast SEO would result in a fatal error on all admin pages, when Yoast SEO Premium was installed through Composer but not activated. Props to [andyblackwell](https://github.com/andyblackwell).
 * Fixes a bug where Premium users with an inactive Premium subscription would be prompted indefinitely to restart their SEO data optimization. We now show an error message informing them how to activate their subscription.
 
 ## 16.5
 
 Release date: 2021-06-15
 
-Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s social media features: the Social Appearance Templates. With these templates, you can set a default social template for every page, custom post type, taxonomy, and archive. No more ugly images, weird titles or meta descriptions for you! Read more about what’s new in Yoast SEO 16.5 in [https://yoa.st/release-16-5](our release post)!
+Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s social media features: the Social Appearance Templates. With these templates, you can set a default social template for every page, custom post type, taxonomy, and archive. No more ugly images, weird titles or meta descriptions for you! Read more about what’s new in Yoast SEO 16.5 in [our release post](https://yoa.st/release-16-5)!
 
 #### Enhancements
 
@@ -575,7 +575,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 
 Release date: 2021-06-01
 
-Meet Yoast SEO 16.4: This brand-new version of Yoast SEO Premium comes with a rewritten language analysis, plus a newly supported language: Czech. People who write in this language can now fully use our tools to improve their content. We hope you enjoy this update! Read more about what’s new in Yoast SEO 16.4 in [https://yoa.st/release-16-4](our release post)!
+Meet Yoast SEO 16.4: This brand-new version of Yoast SEO Premium comes with a rewritten language analysis, plus a newly supported language: Czech. People who write in this language can now fully use our tools to improve their content. We hope you enjoy this update! Read more about what’s new in Yoast SEO 16.4 in [our release post](https://yoa.st/release-16-4)!
 
 #### Enhancements
 
@@ -590,7 +590,7 @@ Meet Yoast SEO 16.4: This brand-new version of Yoast SEO Premium comes with a re
 
 Release date: 2021-05-18
 
-Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of modern SEO: Structured data. Yoast SEO 16.3 comes with a lot of enhancements for the Schema.org implementation. You can now enhance your personal profile in Schema, for instance! Read more about what’s new in Yoast SEO 16.3 in [https://yoa.st/release-16-3](our release post)!
+Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of modern SEO: Structured data. Yoast SEO 16.3 comes with a lot of enhancements for the Schema.org implementation. You can now enhance your personal profile in Schema, for instance! Read more about what’s new in Yoast SEO 16.3 in [our release post](https://yoa.st/release-16-3)!
 
 #### Enhancements
 
@@ -615,7 +615,7 @@ Release date: 2021-04-28
 
 Release date: 2021-04-06
 
-Yoast SEO Premium 16.1 is out today! It features several fixes that make the plugin chug along nicely. Happy updating! Read more about what’s new in Yoast SEO Premium 16.1 in [https://yoa.st/release-16-1](our release post)!
+Yoast SEO Premium 16.1 is out today! It features several fixes that make the plugin chug along nicely. Happy updating! Read more about what’s new in Yoast SEO Premium 16.1 in [our release post](https://yoa.st/release-16-1)!
 
 #### Bugfixes
 
@@ -652,14 +652,14 @@ Release date: 2021-03-16
 
 Release date: 2021-03-16
 
-Yoast SEO 16.0: The Sweet Sixteen release is out! It comes with several fixes and improvements. Happy updating and thank you for using Yoast SEO Premium! Read more about what’s new in Yoast SEO 16.0 in [https://yoa.st/release-16-0](our release post)!
+Yoast SEO 16.0: The Sweet Sixteen release is out! It comes with several fixes and improvements. Happy updating and thank you for using Yoast SEO Premium! Read more about what’s new in Yoast SEO 16.0 in [our release post](https://yoa.st/release-16-0)!
 
 #### Other
 
 * Yoast SEO Premium now requires Yoast SEO to be installed and activated. The first time you upgrade to Yoast SEO Premium 16.0, Yoast SEO 16.0 will automatically be installed and activated for you.
 * Hides the 'deactivate' button for Yoast SEO on the Plugins page, as long as Yoast SEO Premium is active, because Yoast SEO Premium cannot function properly without Yoast SEO. When Yoast SEO Premium is deactivated, the 'deactivate' button for Yoast SEO will reappear.
 * Sets the minimum supported WordPress version to 5.6.
-* Includes every change in Yoast SEO core 16.0. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 16.0. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.9.2
 
@@ -672,25 +672,25 @@ Release date: 2021-03-11
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.9.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.9.2. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.9.1
 
 Release date: 2021-03-04
 
-Welcome to Yoast SEO 15.9.1! This release contains an improvement for the FAQ block schema output, and makes sure the plugin is compatible with WordPress Core's auto-update feature and `robots` changes. Read more about those changes in [https://yoa.st/release-15-9-1](our post about Yoast SEO 15.9.1 and WordPress 5.7)!
+Welcome to Yoast SEO 15.9.1! This release contains an improvement for the FAQ block schema output, and makes sure the plugin is compatible with WordPress Core's auto-update feature and `robots` changes. Read more about those changes in [our post about Yoast SEO 15.9.1 and WordPress 5.7](https://yoa.st/release-15-9-1)!
 
 #### Other
 
 * Adds a notification to prompt users to enable auto-updates for Yoast SEO Premium, in case they also have auto-updates for WordPress Core enabled.
 * Enables/disables auto-updates for the Yoast Woocommerce, News, Video and Local SEO plugins when auto-updates for Yoast SEO Premium are enabled/disabled.
-* Includes every change in Yoast SEO core 15.9.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.9.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.9
 
 Release date: 2021-02-23
 
-Yoast SEO 15.9 is out! This release comes with performance improvements and general enhancements. Happy updating and thanks for using Yoast SEO Premium! Read more about what’s new in Yoast SEO 15.9 in [https://yoa.st/release-15-9](our release post)!
+Yoast SEO 15.9 is out! This release comes with performance improvements and general enhancements. Happy updating and thanks for using Yoast SEO Premium! Read more about what’s new in Yoast SEO 15.9 in [our release post](https://yoa.st/release-15-9)!
 
 #### Enhancements
 
@@ -703,7 +703,7 @@ Yoast SEO 15.9 is out! This release comes with performance improvements and gene
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.9. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.9. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.8.2
 
@@ -725,7 +725,7 @@ Release date: 2021-02-12
 
 Release date: 2021-02-10
 
-Say hi to Yoast SEO 15.8! This release comes with a brand-new breadcrumbs block for the block editor. Try it out and guide your users - and Google! Read more about what’s new in Yoast SEO 15.8 in [https://yoa.st/release-15-8](our release post)!
+Say hi to Yoast SEO 15.8! This release comes with a brand-new breadcrumbs block for the block editor. Try it out and guide your users - and Google! Read more about what’s new in Yoast SEO 15.8 in [our release post](https://yoa.st/release-15-8)!
 
 #### Enhancements
 
@@ -738,13 +738,13 @@ Say hi to Yoast SEO 15.8! This release comes with a brand-new breadcrumbs block 
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.8. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.8. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.7
 
 Release date: 2021-01-26
 
-Meet Yoast SEO 15.7! Do you already use the state-of-the-art Premium analysis in Yoast SEO? Great! It now also comes with full language support for Turkish! Read more about what’s new in Yoast SEO 15.7 in [https://yoa.st/release-15-7](our release post)!
+Meet Yoast SEO 15.7! Do you already use the state-of-the-art Premium analysis in Yoast SEO? Great! It now also comes with full language support for Turkish! Read more about what’s new in Yoast SEO 15.7 in [our release post](https://yoa.st/release-15-7)!
 
 #### Enhancements
 
@@ -758,7 +758,7 @@ Meet Yoast SEO 15.7! Do you already use the state-of-the-art Premium analysis in
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.7. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.7. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.6.2
 
@@ -766,7 +766,7 @@ Release date: 2021-01-12
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.6.2 See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.6.2 See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.6.1
 
@@ -774,13 +774,13 @@ Release date: 2021-01-12
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.6.1 See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.6.1 See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.6
 
 Release date: 2021-01-12
 
-Say hi to Yoast SEO 15.6! You can now add an Estimated reading time block to your posts! You can also find the estimated reading time in the Insights Tab on your posts/pages. Plus: Word form support for Norwegian writers! Read more about what’s new in Yoast SEO 15.6 in [https://yoa.st/release-15-6](our release post)!
+Say hi to Yoast SEO 15.6! You can now add an Estimated reading time block to your posts! You can also find the estimated reading time in the Insights Tab on your posts/pages. Plus: Word form support for Norwegian writers! Read more about what’s new in Yoast SEO 15.6 in [our release post](https://yoa.st/release-15-6)!
 
 #### Enhancements
 
@@ -795,13 +795,13 @@ Say hi to Yoast SEO 15.6! You can now add an Estimated reading time block to you
 #### Other
 
 * Reduces JavaScript bundle sizes, which should result in slightly faster page loads of the editor.
-* Includes every change in Yoast SEO core 15.6. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.6. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.5
 
 Release date: 2020-12-15
 
-Out now: Yoast SEO 15.5! In this release, you’ll find full language support for Hungarian!<br />This means that Yoast SEO recognizes different word forms of your focus keyphrase. Helping for better readability and for you to rank better! Read more about what’s new in Yoast SEO 15.5 in [https://yoa.st/release-15-5](our release post)!
+Out now: Yoast SEO 15.5! In this release, you’ll find full language support for Hungarian!<br />This means that Yoast SEO recognizes different word forms of your focus keyphrase. Helping for better readability and for you to rank better! Read more about what’s new in Yoast SEO 15.5 in [our release post](https://yoa.st/release-15-5)!
 
 #### Enhancements
 
@@ -809,23 +809,23 @@ Out now: Yoast SEO 15.5! In this release, you’ll find full language support fo
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.5. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.5. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.4
 
 Release date: 2020-12-02
 
-It’s here: Yoast SEO 15.4! In this release, you’ll find a seamless, easy-to-use integration of Yoast SEO with Elementor. Building websites and optimizing content for the search engines now in one workflow! Read more about what’s new in Yoast SEO 15.4 in [https://yoa.st/release-15-4](our release post)!
+It’s here: Yoast SEO 15.4! In this release, you’ll find a seamless, easy-to-use integration of Yoast SEO with Elementor. Building websites and optimizing content for the search engines now in one workflow! Read more about what’s new in Yoast SEO 15.4 in [our release post](https://yoa.st/release-15-4)!
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.3
 
 Release date: 2020-11-17
 
-Out now: Yoast SEO 15.3! In this release, you’ll find the new Zapier integration that makes it easy as ABC to share your content. Use zaps to automatically share your published posts! You’ll also find full language support for Hebrew in our analysis, helping you write high-quality content! Read more about what’s new in Yoast SEO 15.3 in [https://yoa.st/release-15-3](our release post)!
+Out now: Yoast SEO 15.3! In this release, you’ll find the new Zapier integration that makes it easy as ABC to share your content. Use zaps to automatically share your published posts! You’ll also find full language support for Hebrew in our analysis, helping you write high-quality content! Read more about what’s new in Yoast SEO 15.3 in [our release post](https://yoa.st/release-15-3)!
 
 #### Enhancements
 
@@ -834,7 +834,7 @@ Out now: Yoast SEO 15.3! In this release, you’ll find the new Zapier integrati
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.2.1
 
@@ -842,7 +842,7 @@ Release date: 2020-11-02
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.2.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.2.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.2
 
@@ -863,7 +863,7 @@ Release date: 2020-10-27
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.2. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.1.2
 
@@ -871,7 +871,7 @@ Release date: 2020-10-15
 
 #### Other
 
-* Includes every change in Yoast SEO core 15.1.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.1.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.1.1
 
@@ -899,7 +899,7 @@ Release date: 2020-10-14
 #### Other
 
 * Integrates the internal linking suggestions indexing tool on the tools page into the general indexing tool of Yoast SEO.
-* Includes every change in Yoast SEO core 15.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 15.0
 
@@ -919,7 +919,7 @@ Release date: 2020-09-29
 #### Other
 
 * Removes the feedback link underneath the focus keyphrase input field.
-* Includes every change in Yoast SEO core 15.0. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 15.0. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.9
 
@@ -936,7 +936,7 @@ Release date: 2020-09-01
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.9. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.9. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.8.1
 
@@ -944,7 +944,7 @@ Release date: 2020-08-25
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.8.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.8.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.8
 
@@ -963,7 +963,7 @@ Release date: 2020-08-18
 #### Other
 
 * Sets minimum supported WordPress version to 5.4.
-* Includes every change in Yoast SEO core 14.8. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.8. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.7
 
@@ -989,7 +989,7 @@ Release date: 2020-08-05
 #### Other
 
 * Enables tracking when activating premium. Previously tracking was always on. It can now be disabled in the configuration wizard.
-* Includes every change in Yoast SEO core 14.7. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.7. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.6.1
 
@@ -997,7 +997,7 @@ Release date: 2020-07-21
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.6.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.6.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.6
 
@@ -1017,7 +1017,7 @@ Release date: 2020-07-21
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.6. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.6. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.5
 
@@ -1033,7 +1033,7 @@ Release date: 2020-07-08
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.5. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.5. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.4.1
 
@@ -1041,7 +1041,7 @@ Release date: 2020-06-23
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.4.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.4.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.4
 
@@ -1055,7 +1055,7 @@ Release date: 2020-06-23
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.3
 
@@ -1078,7 +1078,7 @@ Release date: 2020-06-09
 
 * Adds a feedback link underneath the focus keyphrase input field to allow users to report problems with keyphrase recognition for languages with rudimentary morphology support.
 * Improves security for AJAX routes used in the social previews.
-* Includes every change in Yoast SEO core 14.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.2
 
@@ -1098,7 +1098,7 @@ Release date: 2020-05-26
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.2. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.1
 
@@ -1116,7 +1116,7 @@ Release date: 2020-05-13
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.0.4
 
@@ -1124,7 +1124,7 @@ Release date: 2020-04-30
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.0.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.0.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.0.3
 
@@ -1132,7 +1132,7 @@ Release date: 2020-04-30
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.0.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.0.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.0.2
 
@@ -1140,7 +1140,7 @@ Release date: 2020-04-29
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.0.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.0.2. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.0.1
 
@@ -1148,7 +1148,7 @@ Release date: 2020-04-28
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.0.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.0.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 14.0
 
@@ -1156,7 +1156,7 @@ Release date: 2020-04-28
 
 #### Other
 
-* Includes every change in Yoast SEO core 14.0. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 14.0. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 13.5
 
@@ -1172,7 +1172,7 @@ Release date: 2020-04-14
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.5. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 13.5. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 13.4.1
 
@@ -1180,7 +1180,7 @@ Release date: 2020-04-01
 
 Bugfixes:
 
-* Replaces the use of the deprecated `category_link` filter by `term_link`. Props to [https://github.com/Chouby](Chouby)
+* Replaces the use of the deprecated `category_link` filter by `term_link`. Props to [Chouby](https://github.com/Chouby)
 
 ## 13.4
 
@@ -1192,7 +1192,7 @@ Release date: 2020-03-31
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 13.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 13.3
 
@@ -1200,7 +1200,7 @@ Release date: 2020-03-17
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 13.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 13.2
 
@@ -1208,7 +1208,7 @@ Release date: 2020-03-03
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog.)
+* Includes every change in Yoast SEO core 13.2. See the [core changelog.](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow)
 
 ## 13.1
 
@@ -1216,7 +1216,7 @@ Release date: 2020-02-18
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog.)
+* Includes every change in Yoast SEO core 13.1. See the [core changelog.](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow)
 
 ## 13.0
 
@@ -1228,7 +1228,7 @@ Bugfixes:
 
 #### Other
 
-* Includes every change in Yoast SEO core 13.0. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 13.0. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.9.2
 
@@ -1244,7 +1244,7 @@ Release date: 2020-01-21
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.9.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog.)
+* Includes every change in Yoast SEO core 12.9.1. See the [core changelog.](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow)
 
 ## 12.9
 
@@ -1256,7 +1256,7 @@ Release date: 2020-01-21
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.9. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog.)
+* Includes every change in Yoast SEO core 12.9. See the [core changelog.](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow)
 
 ## 12.8.1
 
@@ -1268,7 +1268,7 @@ Release date: 2020-01-15
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.8.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog).
+* Includes every change in Yoast SEO core 12.8.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow).
 
 ## 12.8
 
@@ -1281,7 +1281,7 @@ Bugfixes:
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.8. See the [https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow](core changelog).
+* Includes every change in Yoast SEO core 12.8. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers" rel="nofollow).
 
 ## 12.7.1
 
@@ -1289,7 +1289,7 @@ Release date: 2019-12-12
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.7.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.7.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.7
 
@@ -1297,7 +1297,7 @@ Release date: 2019-12-10
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.7. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.7. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.6.1
 
@@ -1305,7 +1305,7 @@ Release date: 2019-11-27
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.6.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.6.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.6
 
@@ -1321,7 +1321,7 @@ Release date: 2019-11-26
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.6. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.6. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.5.1
 
@@ -1329,7 +1329,7 @@ Release date: 2019-11-21
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.5.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.5.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.5
 
@@ -1337,7 +1337,7 @@ Release date: 2019-11-13
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.5. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.5. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.4
 
@@ -1345,7 +1345,7 @@ Release date: 2019-10-29
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.3
 
@@ -1357,7 +1357,7 @@ Release date: 2019-10-15
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.2
 
@@ -1366,7 +1366,7 @@ Release date: 2019-10-01
 #### Other
 
 * Enables the tracking of diagnostic data.
-* Includes every change in Yoast SEO core 12.2. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.2. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.1
 
@@ -1374,7 +1374,7 @@ Release date: 2019-09-17
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 12.0.1
 
@@ -1390,7 +1390,7 @@ Release date: 2019-09-03
 
 #### Other
 
-* Includes every change in Yoast SEO core 12.0. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 12.0. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.9
 
@@ -1403,7 +1403,7 @@ Release date: 2019-08-20
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.9. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.9. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.8
 
@@ -1415,7 +1415,7 @@ Bugfixes:
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.8. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.8. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.7
 
@@ -1435,7 +1435,7 @@ Release date: 2019-07-23
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.7. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.7. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.6
 
@@ -1451,7 +1451,7 @@ Bugfixes
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.6. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.6. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.5
 
@@ -1463,7 +1463,7 @@ Release date: 2019-06-25
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.5. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.5. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.4
 
@@ -1471,7 +1471,7 @@ Release date: 2019-06-12
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.4. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.4. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.3
 
@@ -1484,7 +1484,7 @@ Release date: 2019-05-28
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.3. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.3. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.2.1
 
@@ -1492,7 +1492,7 @@ Release date: 2019-05-16
 
 #### Other
 
-* Includes every change in Yoast SEO core 11.2.1. See the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 11.2.1. See the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 11.2.0
 
@@ -1549,7 +1549,7 @@ Release date: 2019-04-30
 
 Release date: 2019-Release Date: April-16
 
-We've made huge changes to the schema.org markup we output, adding multiple different types of Schema. Be sure to check [https://yoa.st/schema-release-post](our posts on yoast.com about this release)!
+We've made huge changes to the schema.org markup we output, adding multiple different types of Schema. Be sure to check [our posts on yoast.com about this release](https://yoa.st/schema-release-post)!
 
 #### Enhancements
 
@@ -1602,7 +1602,7 @@ Release date: 2019-04-02
 #### Other
 
 * Removes all functionality that has been deprecated before Yoast SEO 6.1.
-* Includes every change in [Yoast SEO 10.1.0](/changelog/yoast-seo/10.1.0/).
+* Includes every change in [Yoast SEO 10.1.0](/changelog/yoast-seo/10.1/).
 
 ## 10.0.1
 
@@ -1623,7 +1623,7 @@ Release date: 2019-03-12
 
 #### Other
 
-* Includes every change in [Yoast SEO 10.0.0](/changelog/yoast-seo/10.0.0/).
+* Includes every change in [Yoast SEO 10.0.0](/changelog/yoast-seo/10.0/).
 
 ## 9.7.0
 
@@ -1639,7 +1639,7 @@ Release date: 2019-02-26
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.7.0](/changelog/yoast-seo/9.7.0/).
+* Includes every change in [Yoast SEO 9.7.0](/changelog/yoast-seo/9.7/).
 
 ## 9.6.1
 
@@ -1660,7 +1660,7 @@ Release date: 2019-02-12
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.6.0](/changelog/yoast-seo/9.6.0/).
+* Includes every change in [Yoast SEO 9.6.0](/changelog/yoast-seo/9.6/).
 
 ## 9.5.0
 
@@ -1674,7 +1674,7 @@ Release date: 2019-01-22
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.5.0](/changelog/yoast-seo/9.5.0/).
+* Includes every change in [Yoast SEO 9.5.0](/changelog/yoast-seo/9.5/).
 
 ## 9.4.2
 
@@ -1711,7 +1711,7 @@ Content analysis recalibration (beta):
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.4.0](/changelog/yoast-seo/9.4.0/).
+* Includes every change in [Yoast SEO 9.4.0](/changelog/yoast-seo/9.4/).
 
 ## 9.3.0
 
@@ -1723,7 +1723,7 @@ Release date: 2018-12-18
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.3.0](/changelog/yoast-seo/9.3.0/).
+* Includes every change in [Yoast SEO 9.3.0](/changelog/yoast-seo/9.3/).
 
 ## 9.2.1
 
@@ -1763,7 +1763,7 @@ Release date: 2018-11-06
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.1.0](/changelog/yoast-seo/9.1.0/).
+* Includes every change in [Yoast SEO 9.1.0](/changelog/yoast-seo/9.1/).
 
 ## 9.0.3
 
@@ -1834,7 +1834,7 @@ Release date: 2018-10-09
 #### Other
 
 * Adds the `wpseo_premium_include_automatic_redirection_post_types` filter to allow users to include more post types to create automatic redirects for.
-* Includes every change in [Yoast SEO 8.4.0](/changelog/yoast-seo/8.4.0/).
+* Includes every change in [Yoast SEO 8.4.0](/changelog/yoast-seo/8.4/).
 
 ## 8.3.0
 
@@ -1847,7 +1847,7 @@ Release date: 2018-09-25
 
 #### Other
 
-* Includes every change in [Yoast SEO 8.3.0](/changelog/yoast-seo/8.3.0/).
+* Includes every change in [Yoast SEO 8.3.0](/changelog/yoast-seo/8.3/).
 
 ## 8.2.2
 
@@ -1871,11 +1871,11 @@ Release date: 2018-09-11
 
 #### Enhancements
 
-* Adds Polish Insights and Linking Suggestions. Props [https://github.com/tmotyl](@tmotyl) and [https://github.com/oskardydo](@oskardydo) from [https://github.com/macopedia](@macopedia).
+* Adds Polish Insights and Linking Suggestions. Props [@tmotyl](https://github.com/tmotyl) and [@oskardydo](https://github.com/oskardydo) from [@macopedia](https://github.com/macopedia).
 
 #### Other
 
-* Includes every change in [Yoast SEO 8.2.0](/changelog/yoast-seo/8.2.0/).
+* Includes every change in [Yoast SEO 8.2.0](/changelog/yoast-seo/8.2/).
 
 ## 8.1.2
 
@@ -1897,7 +1897,7 @@ Release date: 2018-08-28
 
 #### Other
 
-* Includes every change in [Yoast SEO 8.1.0](/changelog/yoast-seo/8.1.0/).
+* Includes every change in [Yoast SEO 8.1.0](/changelog/yoast-seo/8.1/).
 
 ## 8.0.0
 
@@ -1917,8 +1917,8 @@ Release date: 2018-08-14
 
 * Adds the Internal Linking section to the Gutenberg sidebar.
 * Adds the Insights section to the Gutenberg sidebar.
-* Improved plugin performance by lazy loading the `WPSEO_Redirects_Option` instead of instantiating that on every request. Props to [https://github.com/stayallive](stayallive)
-* Includes every change in [Yoast SEO 8.0.0](/changelog/yoast-seo/8.0.0/).
+* Improved plugin performance by lazy loading the `WPSEO_Redirects_Option` instead of instantiating that on every request. Props to [stayallive](https://github.com/stayallive)
+* Includes every change in [Yoast SEO 8.0.0](/changelog/yoast-seo/8.0/).
 
 ## 7.9.1
 
@@ -1938,7 +1938,7 @@ Release date: 2018-07-24
 
 #### Other
 
-* Includes every change in [Yoast SEO 7.9.0](/changelog/yoast-seo/7.9.0/).
+* Includes every change in [Yoast SEO 7.9.0](/changelog/yoast-seo/7.9/).
 
 ## 7.8.1
 
@@ -1964,11 +1964,11 @@ Release date: 2018-07-10
 
 * Fixes a bug where advertisements were being displayed next to video tutorials.
 * Fixes a bug where redirected URLs would show up in the sitemap.
-* Filters out prominent word combinations ending in 's in English. Props to [https://github.com/swekkiekekkie](swekkiekekkie).
+* Filters out prominent word combinations ending in 's in English. Props to [swekkiekekkie](https://github.com/swekkiekekkie).
 
 #### Other
 
-* Includes every change in [Yoast SEO 7.8.0](/changelog/yoast-seo/7.8.0/).
+* Includes every change in [Yoast SEO 7.8.0](/changelog/yoast-seo/7.8/).
 
 ## 7.7.3
 
@@ -2019,13 +2019,13 @@ Release date: 2018-06-05
 
 * Fixes a bug where the link to run the internal linking count for orphaned content did not work.
 * Fixes a bug where unpublished posts and password protected posts where taken into account in the orphaned content overview and notifications.
-* Includes every change in [Yoast SEO 7.6.0](/changelog/yoast-seo/7.6.0/).
+* Includes every change in [Yoast SEO 7.6.0](/changelog/yoast-seo/7.6/).
 
 ## 7.5.3
 
 Release date: 2018-05-30
 
-* Includes every change in [Yoast SEO 7.5.3](/changelog/yoast-seo/7.5.3/).
+* Includes every change in Yoast SEO 7.5.3.
 
 ## 7.5.2
 
@@ -2076,14 +2076,14 @@ Release date: 2018-05-02
 
 Release date: 2018-05-01
 
-* Includes every change in [Yoast SEO 7.4.0](/changelog/yoast-seo/7.4.0/).
+* Includes every change in [Yoast SEO 7.4.0](/changelog/yoast-seo/7.4/).
 
 ## 7.3.0
 
 Release date: 2018-04-17
 
 * Fixes a bug where the pagination overlaps the orphaned content information message, on post overview pages in combination with low resolutions.
-* Includes every change in [Yoast SEO 7.3.0](/changelog/yoast-seo/7.3.0/).
+* Includes every change in [Yoast SEO 7.3.0](/changelog/yoast-seo/7.3/).
 
 ## 7.2.0
 
@@ -2092,7 +2092,7 @@ Release date: 2018-04-03
 * Fixes an issue where no new redirect was created after a parent/child relationship of a page was changed.
 * Fixes an issue where reverting the parent/child relationship of two pages could result in a redirect loop.
 * Removes plugin suggestions from the dashboard.
-* Includes every change in [Yoast SEO 7.2.0](/changelog/yoast-seo/7.2.0/).
+* Includes every change in [Yoast SEO 7.2.0](/changelog/yoast-seo/7.2/).
 
 ## 7.1.1
 
@@ -2108,11 +2108,11 @@ Release date: 2018-03-20
 
 #### Enhancements
 
-* Adds Portuguese Insights and Linking suggestions. Props to [https://github.com/amesdigital](amesdigital).
+* Adds Portuguese Insights and Linking suggestions. Props to [amesdigital](https://github.com/amesdigital).
 
 #### Others
 
-* Includes every change in [Yoast SEO 7.1.0](/changelog/yoast-seo/7.1.0/).
+* Includes every change in [Yoast SEO 7.1.0](/changelog/yoast-seo/7.1/).
 
 ## 7.0.3
 
@@ -2145,7 +2145,7 @@ Release date: 2018-03-06
 
 #### Other
 
-* Includes every change in [Yoast SEO 7.0.0](/changelog/yoast-seo/7.0.0/).
+* Includes every change in [Yoast SEO 7.0.0](/changelog/yoast-seo/7.0/).
 * Removes the deprecated `WPSEO_Premium:: add_admin_pages` method.
 
 ## 6.3.1
@@ -2171,13 +2171,13 @@ Release date: 2018-02-13
 
 #### Other
 
-* Includes every change in [Yoast SEO 6.3.0](/changelog/yoast-seo/6.3.0/).
+* Includes every change in [Yoast SEO 6.3.0](/changelog/yoast-seo/6.3/).
 
 ## 6.2.0
 
 Release date: 2018-01-23
 
-* Includes every change in [Yoast SEO 6.2.0](/changelog/yoast-seo/6.2.0/).
+* Includes every change in [Yoast SEO 6.2.0](/changelog/yoast-seo/6.2/).
 
 ## 6.1.2
 
@@ -2197,14 +2197,14 @@ Release date: 2018-01-09
 
 * Fixes a bug in the redirects where an url decoded origin isn't found when the request uri isn't decoded.
 * Fixes a bug where on certain servers (using FastCGI) redirects could not be filtered.
-* Includes every change in [Yoast SEO 6.1.0](/changelog/yoast-seo/6.1.0/).
+* Includes every change in [Yoast SEO 6.1.0](/changelog/yoast-seo/6.1/).
 
 ## 6.0.0
 
 Release date: 2017-12-20
 
 * Converts the list of post types to a format which is compatible with the REST API format.
-* Includes every change in [Yoast SEO 6.0.0](/changelog/yoast-seo/6.0.0/).
+* Includes every change in [Yoast SEO 6.0.0](/changelog/yoast-seo/6.0/).
 
 ## 5.9.4
 
@@ -2235,13 +2235,13 @@ Release date: 2017-12-05
 Release date: 2017-12-05
 
 * Insights are now shown in a separate section below the text analysis.
-* Includes every change in [Yoast SEO 5.9.0](/changelog/yoast-seo/5.9.0/).
+* Includes every change in [Yoast SEO 5.9.0](/changelog/yoast-seo/5.9/).
 
 ## 5.8.0
 
 Release date: 2017-11-15
 
-* Includes every change in [Yoast SEO 5.8.0](/changelog/yoast-seo/5.8.0/).
+* Includes every change in [Yoast SEO 5.8.0](/changelog/yoast-seo/5.8/).
 
 ## 5.7.1
 
@@ -2304,7 +2304,7 @@ Release date: 2017-09-20
 Release date: 2017-09-06
 
 * Adds importing of exported redirects in CSV format via `SEO &gt; Tools &gt; import and export &gt; import redirects`.
-* Includes every change in [Yoast SEO 5.4.0](/changelog/yoast-seo/5.4.0/).
+* Includes every change in [Yoast SEO 5.4.0](/changelog/yoast-seo/5.4/).
 
 ## 5.3.3
 
@@ -2338,7 +2338,7 @@ Release date: 2017-08-08
 
 * Adds a watcher for private posts to be redirected correctly after trashing them.
 * Adds collecting technical environment data to send to Yoast.
-* Includes every change in [Yoast SEO 5.4.0](/changelog/yoast-seo/5.4.0/).
+* Includes every change in [Yoast SEO 5.4.0](/changelog/yoast-seo/5.4/).
 
 ## 5.1.0
 
@@ -2346,7 +2346,7 @@ Release date: 2017-07-25
 
 * Adds Italian Insights and Linking Suggestions, props Abramo Tesoro.
 * Fixes a bug where multiple redirect notices pop up when having WooCommerce Tab Manager installed.
-* Includes every change in [Yoast SEO 5.1.0](/changelog/yoast-seo/5.1.0/).
+* Includes every change in [Yoast SEO 5.1.0](/changelog/yoast-seo/5.1/).
 
 ## 5.0.2
 
@@ -2365,14 +2365,14 @@ Release date: 2017-07-06
 Release date: 2017-07-06
 
 * Fixes a bug where the redirect notice popped up unnecessarily.
-* Introduces insights and linking suggestions for French, props Sylvain Perret and [https://github.com/evoqueio](Evoque).
-* Includes every change in [Yoast SEO 5.0.0](/changelog/yoast-seo/5.0.0/).
+* Introduces insights and linking suggestions for French, props Sylvain Perret and [Evoque](https://github.com/evoqueio).
+* Includes every change in [Yoast SEO 5.0.0](/changelog/yoast-seo/5.0/).
 
 ## 4.9.0
 
 Release date: 2017-06-07
 
-* Includes every change in [Yoast SEO 4.9.0](/changelog/yoast-seo/4.9.0/).
+* Includes every change in [Yoast SEO 4.9.0](/changelog/yoast-seo/4.9/).
 
 ## 4.8.0
 
@@ -2396,7 +2396,7 @@ Release date: 2017-05-02
 * Fixes a bug where 410 redirects could not be imported from `.htaccess`.
 * Fixes a bug where the 'email support tab' did not work on the edit post page.
 * Adds the slug of a deleted post to the redirect notification.
-* Includes every change in [Yoast SEO 4.7.0](/changelog/yoast-seo/4.7.0/).
+* Includes every change in [Yoast SEO 4.7.0](/changelog/yoast-seo/4.7/).
 
 ## 4.6.0
 
@@ -2406,14 +2406,14 @@ Release date: 2017-04-11
 * Fixes a bug where the post_modified was updated whenever the prominent words were calculated.
 * Fixes a bug where a JavaScript error was thrown when creating a new taxonomy with a custom field plugin active.
 * Fixes a bug where websites ran into timeouts due to a big query when calculating the prominent words.
-* Includes every change in [Yoast SEO 4.6.0](/changelog/yoast-seo/4.6.0/).
+* Includes every change in [Yoast SEO 4.6.0](/changelog/yoast-seo/4.6/).
 
 ## 4.5.0
 
 Release date: 2017-03-21
 
 * Fixes a bug where the SEO score wouldn’t be saved correctly, resulting in gray bullets on the post overview screen.
-* Includes every change in [Yoast SEO 4.5.0](/changelog/yoast-seo/4.5.0/).
+* Includes every change in [Yoast SEO 4.5.0](/changelog/yoast-seo/4.5/).
 
 ## 4.4.0
 
@@ -2422,7 +2422,7 @@ Release date: 2017-02-28
 * Adds redirect types in the Search Console settings page.
 * Checks for links that are already used in the text when suggesting links.
 * Change links to shortlinks in premium translation promo box.
-* Includes every change in [Yoast SEO 4.4.0](/changelog/yoast-seo/4.4.0/).
+* Includes every change in [Yoast SEO 4.4.0](/changelog/yoast-seo/4.4/).
 
 ## 4.3.2
 
@@ -2445,7 +2445,7 @@ Release date: 2017-02-14
 * Adds a warning when there are posts or pages that need to be analyzed for link suggestions.
 * Improves the site wide calculation of the prominent words for the link suggestions.
 * Fixes a bug where the rendering of the columns in the post overview was incorrect.
-* Includes every change in [Yoast SEO 4.3.0](/changelog/yoast-seo/4.3.0/).
+* Includes every change in [Yoast SEO 4.3.0](/changelog/yoast-seo/4.3/).
 
 ## 4.2.1
 
@@ -2458,7 +2458,7 @@ Release date: 2017-02-02
 Release date: 2017-01-31
 
 * Adds link suggestions and insights for Dutch.
-* Includes every change in [Yoast SEO 4.2.0](/changelog/yoast-seo/4.2.0/).
+* Includes every change in [Yoast SEO 4.2.0](/changelog/yoast-seo/4.2/).
 
 ## 4.1.0
 
@@ -2502,7 +2502,7 @@ Release date: 2016-12-13
 * Fixes a bug where post format archives showed up in sitemap when disabled.
 * Fixes a bug where an old update notice would not be removed.
 * Fixes a bug where keywords with periods where not highlighted in the snippet.
-* Includes every change in [Yoast SEO 4.0.0](/changelog/yoast-seo/4.0.0/).
+* Includes every change in [Yoast SEO 4.0.0](/changelog/yoast-seo/4.0/).
 
 ## 3.9.0
 
@@ -2510,16 +2510,16 @@ Release date: 2016-11-29
 
 * Improves the title updates in the social previews.
 * Fixes a bug where the wrong URLs were used in redirect notices.
-* Includes every change in [Yoast SEO 3.9.0](/changelog/yoast-seo/3.9.0/).
+* Includes every change in [Yoast SEO 3.9.0](/changelog/yoast-seo/3.9/).
 
 ## 3.8.0
 
 Release date: 2016-11-08
 
 * Fixes a bug where keyword tabs didn't have a correct screen reader text.
-* Fixes a bug where certain translations weren't translatable, props [https://github.com/pedro-mendonca](Pedro Mendonça)
+* Fixes a bug where certain translations weren't translatable, props [Pedro Mendonça](https://github.com/pedro-mendonca)
 * Removes React debugging tools from eventual build JavaScript files.
-* Includes every change in [Yoast SEO 3.8.0](/changelog/yoast-seo/3.8.0/).
+* Includes every change in [Yoast SEO 3.8.0](/changelog/yoast-seo/3.8/).
 
 ## 3.7.2
 
@@ -2544,7 +2544,7 @@ Release date: 2016-10-11
 * Makes the redirects new rows action links translatable.
 * Fixes a PHP Warning when hitting 301 redirect on subdomain multisites.
 * Fixes a bug where the Twitter preview would no longer work when Facebook is disabled in Social.
-* Includes every change in [Yoast SEO 3.7.0](/changelog/yoast-seo/3.7.0/).
+* Includes every change in [Yoast SEO 3.7.0](/changelog/yoast-seo/3.7/).
 
 ## 3.6.1
 
@@ -2558,7 +2558,7 @@ Release date: 2016-10-03
 
 Release date: 2016-09-27
 
-* Includes every change in [Yoast SEO 3.6.0](/changelog/yoast-seo/3.6.0/).
+* Includes every change in [Yoast SEO 3.6.0](/changelog/yoast-seo/3.6/).
 
 ## 3.5.2
 
@@ -2577,7 +2577,7 @@ Release date: 2016-09-07
 Release date: 2016-09-07
 
  
-* Includes every change in [Yoast SEO 3.5.0](/changelog/yoast-seo/3.5.0/).
+* Includes every change in [Yoast SEO 3.5.0](/changelog/yoast-seo/3.5/).
 * Fixes the slug change and redirects in the quick edit for posts and terms.
 * Fixes title on the redirect settings page.
 
@@ -2597,7 +2597,7 @@ Release date: 2016-08-02
 
 Release date: 2016-07-19
 
-* Includes every change in [Yoast SEO 3.4.0](/changelog/yoast-seo/3.4.0/).
+* Includes every change in [Yoast SEO 3.4.0](/changelog/yoast-seo/3.4/).
 * Visually improves the redirect dialog by using an overlay.
 * Fixes a bug where a trailing slash was added when redirecting to a file.
 * Fixes a fatal JavaScript error for the featured image on attachment edit pages.
@@ -2606,7 +2606,7 @@ Release date: 2016-07-19
 
 Release date: 2016-06-30
 
-* Includes every change in Yoast SEO core 3.3.3 and 3.3.4, see the [https://wordpress.org/plugins/wordpress-seo/#developers](core changelog).
+* Includes every change in Yoast SEO core 3.3.3 and 3.3.4, see the [core changelog](https://wordpress.org/plugins/wordpress-seo/#developers).
 
 ## 3.3.2
 
@@ -2618,7 +2618,7 @@ Release date: 2016-06-21
 
 Release date: 2016-06-15
 
-* Fixes a bug with redirects on a subsite in a multisite installation, props [https://github.com/nicholas-eden](nicholas-eden).
+* Fixes a bug with redirects on a subsite in a multisite installation, props [nicholas-eden](https://github.com/nicholas-eden).
 * Fixes a bug where the tabs inside the metabox weren't aligned properly.
 * Includes every change in [Yoast SEO 3.3.1](/changelog/yoast-seo/3.3.1/).
 
@@ -2631,7 +2631,7 @@ Release date: 2016-06-14
 * Fixes a bug where the redirects couldn't be saved to the .htaccess in certain scenarios.
 * Fixes a bug where subdomains would be stripped from target URLs in the redirects.
 * Fixes a bug where the Redirection import wasn't present.
-* Includes every change in [Yoast SEO 3.3.0](/changelog/yoast-seo/3.3.0/).
+* Includes every change in [Yoast SEO 3.3.0](/changelog/yoast-seo/3.3/).
 
 ## 3.2.5
 
@@ -2673,7 +2673,7 @@ Release date: 2016-04-20
 * Fixes a bug where Yoast SEO Premium would fatal when activating while Yoast SEO was active.
 * Fixes a bug where the home URL wasn't correctly stripped from the redirect old URL.
 * Fixes a bug where clicking the 'Update now' button on the plugin page didn't update correctly.
-* Includes every change in [Yoast SEO 3.2.0](/changelog/yoast-seo/3.2.0/).
+* Includes every change in [Yoast SEO 3.2.0](/changelog/yoast-seo/3.2/).
 
 ## 3.1.3
 

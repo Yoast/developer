@@ -9,6 +9,7 @@ import React from 'react';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
+import {useLocation} from "@docusaurus/router";
 
 function TwitterLink() {
   return (
@@ -33,10 +34,12 @@ function TwitterLink() {
 }
 
 function RssLink() {
+    const {pathname} = useLocation();
+    let rssLink = 'pathname://' + pathname.replace( /\/page\/\d+\//, '/' ) + 'rss.xml';
   return (
-    <Link href="pathname:///changelog/rss.xml" className={styles.rss}>
+    <Link to={rssLink} className={styles.rss}>
       <b>
-        <Translate id="changelog.description.rssLink">RSS feeds</Translate>
+        <Translate id="changelog.description.rssLink">RSS feed</Translate>
       </b>
       <svg
         style={{
@@ -72,7 +75,7 @@ export default function ChangelogListHeader({
             rssLink: <RssLink />,
           }}>
           {
-            'Subscribe through {rssLink} or follow us on {twitterLink} to stay up-to-date with new releases!'
+            'Subscribe through this plugin\'s {rssLink} or follow us on {twitterLink} to stay up-to-date with new releases!'
           }
         </Translate>
       </p>

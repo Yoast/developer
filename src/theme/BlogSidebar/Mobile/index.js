@@ -49,7 +49,7 @@ function BlogSidebarMobileSecondaryMenu({sidebar}) {
         Video SEO changelog</Link>
     </li>
     <li className={styles.sidebarItem}>
-      <Link isNavLink to="/changelog/video-seo/"
+      <Link isNavLink to="/changelog/woocommerce-seo/"
             className="menu__link"
             activeClassName="menu__link--active">
         Yoast WooCommerce SEO changelog</Link>

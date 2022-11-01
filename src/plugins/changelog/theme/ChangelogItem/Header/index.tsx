@@ -10,7 +10,6 @@ import {useBlogPost} from '@docusaurus/theme-common/internal';
 
 import BlogPostItemHeaderTitle from '@theme/BlogPostItem/Header/Title';
 import BlogPostItemHeaderInfo from '@theme/BlogPostItem/Header/Info';
-import ChangelogItemHeaderAuthors from '@theme/ChangelogItem/Header/Authors';
 
 import styles from './styles.module.css';
 

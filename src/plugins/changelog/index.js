@@ -79,7 +79,6 @@ async function ChangelogPlugin(context, options) {
 		blogPostComponent: '@theme/ChangelogPage',
 		routeBasePath: 'changelog/'+options.id,
 		path: './changelog/source/'+options.id,
-		feedOptions: false,
 	});
 	const changelogPath = path.join(__dirname, '../../../changelogs/'+options.id+'.md');
 	return {
@@ -102,6 +101,7 @@ async function ChangelogPlugin(context, options) {
 				),
 			);
 			const content = await blogPlugin.loadContent();
+
 			content.blogPosts.forEach((post, index) => {
 				const pageIndex = Math.floor(index / options.postsPerPage);
 				post.metadata.listPageLink = normalizeUrl([

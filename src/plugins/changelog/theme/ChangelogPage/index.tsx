@@ -20,11 +20,8 @@ import type {Props} from '@theme/BlogPostPage';
 import type {BlogSidebar} from '@docusaurus/plugin-content-blog';
 
 function BackToIndexLink() {
-  const {metadata} = useBlogPost();
-  // @ts-expect-error: we injected this
-  const {listPageLink} = metadata;
   return (
-    <Link to={listPageLink}>
+    <Link to="../">
       <Translate id="changelog.backLink">← Back to index page</Translate>
     </Link>
   );

@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require( "prism-react-renderer/themes/github" );
 const darkCodeTheme = require( "prism-react-renderer/themes/dracula" );
+const year = new Date().getFullYear();
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
@@ -20,14 +21,6 @@ const config = {
 	organizationName: "yoast", // Usually your GitHub org/user name.
 	projectName: "developer", // Usually your repo name.
 
-	// Even if you don't use internalization, you can use this field to set useful
-	// metadata like html lang. For example, if your site is Chinese, you may want
-	// to replace "en" with "zh-Hans".
-	i18n: {
-		defaultLocale: "en",
-		locales: ["en"],
-	},
-
 	plugins: [
 		'./src/plugins/og-site-name',
 		[
@@ -36,6 +29,13 @@ const config = {
 				id: 'yoast-seo',
 				blogTitle: 'Yoast SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[
@@ -44,6 +44,13 @@ const config = {
 				id: 'yoast-seo-premium',
 				blogTitle: 'Yoast SEO Premium changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO Premium.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO Premium changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[
@@ -52,6 +59,13 @@ const config = {
 				id: 'local-seo',
 				blogTitle: 'Yoast Local SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Local SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Local SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[
@@ -60,6 +74,13 @@ const config = {
 				id: 'news-seo',
 				blogTitle: 'Yoast News SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast News SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast News SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[
@@ -68,6 +89,13 @@ const config = {
 				id: 'video-seo',
 				blogTitle: 'Yoast Video SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Video SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Video SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[
@@ -76,6 +104,13 @@ const config = {
 				id: 'woocommerce-seo',
 				blogTitle: 'Yoast WooCommerce SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast WooCommerce SEO plugin.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast WooCommerce SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
 			},
 		],
 		[

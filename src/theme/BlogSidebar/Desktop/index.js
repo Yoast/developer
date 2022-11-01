@@ -56,7 +56,7 @@ export default function BlogSidebarDesktop({sidebar}) {
                       Video SEO changelog</Link>
               </li>
               <li className={styles.sidebarItem}>
-                  <Link isNavLink to="/changelog/video-seo/"
+                  <Link isNavLink to="/changelog/woocommerce-seo/"
                         className={styles.sidebarItemLink}
                         activeClassName={styles.sidebarItemLinkActive}>
                       Yoast WooCommerce SEO changelog</Link>

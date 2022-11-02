@@ -48,7 +48,6 @@ function processSection(section, tag) {
 		title: title.replace(/ \(.*\)/, ''),
 		content: `---
 title: ${title}
-sidebar_label: ${title}
 tags: [${tag}]
 date: ${date}
 ---
@@ -89,7 +88,7 @@ async function ChangelogPlugin(context, options) {
 			const sections = fileContent
 				.split(/(?=\n## )/)
 				.map(
-					section => processSection( section, options.id )
+					section => processSection( section, options.blogTitle.replace( ' changelog', '' ) )
 				)
 				.filter(Boolean);
 			await Promise.all(

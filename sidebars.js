@@ -380,6 +380,42 @@ module.exports = {
 				'features/schema/plugins/yoast-seo-shopify',
 				'shopify/integrations',
 			]
+		},
+		{
+			type: 'category',
+			label: 'Changelogs',
+			items: [
+				{
+					type: 'link',
+					label: 'Yoast SEO',
+					href: '/changelog/yoast-seo/',
+				},
+				{
+					type: 'link',
+					label: 'Yoast SEO Premium',
+					href: '/changelog/yoast-seo-premium/',
+				},
+				{
+					type: 'link',
+					label: 'Local SEO',
+					href: '/changelog/local-seo/',
+				},
+				{
+					type: 'link',
+					label: 'News SEO',
+					href: '/changelog/news-seo/',
+				},
+				{
+					type: 'link',
+					label: 'Video SEO',
+					href: '/changelog/video-seo/',
+				},
+				{
+					type: 'link',
+					label: 'WooCommerce SEO',
+					href: '/changelog/woocommerce-seo/',
+				},
+			]
 		}
 	],
 };

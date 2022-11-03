@@ -192,6 +192,7 @@ module.exports = {
 								'features/schema/pieces/article',
 								'features/schema/pieces/breadcrumb',
 								'features/schema/pieces/comment',
+								'features/schema/pieces/event',								
 								'features/schema/pieces/howto',
 								'features/schema/pieces/image',
 								'features/schema/pieces/localbusiness',

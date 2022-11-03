@@ -219,6 +219,21 @@ const config = {
 			},
 		],
 		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'duplicate-post',
+				blogTitle: 'Yoast Duplicate Post changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Duplicate Post plugin.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Duplicate Post changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{
 				id: 'GTM-NHRB36F', // GTM Container ID

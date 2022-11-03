@@ -54,6 +54,12 @@ function BlogSidebarMobileSecondaryMenu({sidebar}) {
             activeClassName="menu__link--active">
         Yoast WooCommerce SEO changelog</Link>
     </li>
+    <li className={styles.sidebarItem}>
+      <Link isNavLink to="/changelog/duplicate-post/"
+            className={styles.sidebarItemLink}
+            activeClassName={styles.sidebarItemLinkActive}>
+        Yoast Duplicate Post changelog</Link>
+    </li>
   </ul>
   <div className={clsx(styles.sidebarItemTitle, 'margin-bottom--md')}>
     Recent releases

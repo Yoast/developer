@@ -1545,9 +1545,9 @@ Release date: 2019-04-30
 
 * Includes every change in [Yoast SEO 11.1](/changelog/yoast-seo/11.1/).
 
-<h2 class="11.0.0">11.0.0</h2>
+## 11.0
 
-Release date: 2019-Release Date: April-16
+Release date: 2019-04-16
 
 We've made huge changes to the schema.org markup we output, adding multiple different types of Schema. Be sure to check [our posts on yoast.com about this release](https://yoa.st/schema-release-post)!
 
@@ -1612,7 +1612,7 @@ Release date: 2019-03-19
 
 * Includes every change in [Yoast SEO 10.0.1](/changelog/yoast-seo/10.0.1/).
 
-## 10.0.0
+## 10.0
 
 Release date: 2019-03-12
 
@@ -1623,7 +1623,7 @@ Release date: 2019-03-12
 
 #### Other
 
-* Includes every change in [Yoast SEO 10.0.0](/changelog/yoast-seo/10.0/).
+* Includes every change in [Yoast SEO 10.0](/changelog/yoast-seo/10/).
 
 ## 9.7.0
 
@@ -1816,7 +1816,7 @@ Release date: 2018-10-23
 
 #### Other
 
-* Includes every change in [Yoast SEO 9.0](/changelog/yoast-seo/9.0/).
+* Includes every change in [Yoast SEO 9.0](/changelog/yoast-seo/9/).
 
 ## 8.4.0
 
@@ -1899,7 +1899,7 @@ Release date: 2018-08-28
 
 * Includes every change in [Yoast SEO 8.1.0](/changelog/yoast-seo/8.1/).
 
-## 8.0.0
+## 8.0
 
 Release date: 2018-08-14
 
@@ -1918,7 +1918,7 @@ Release date: 2018-08-14
 * Adds the Internal Linking section to the Gutenberg sidebar.
 * Adds the Insights section to the Gutenberg sidebar.
 * Improved plugin performance by lazy loading the `WPSEO_Redirects_Option` instead of instantiating that on every request. Props to [stayallive](https://github.com/stayallive)
-* Includes every change in [Yoast SEO 8.0.0](/changelog/yoast-seo/8.0/).
+* Includes every change in [Yoast SEO 8.0](/changelog/yoast-seo/8/).
 
 ## 7.9.1
 
@@ -2145,7 +2145,7 @@ Release date: 2018-03-06
 
 #### Other
 
-* Includes every change in [Yoast SEO 7.0.0](/changelog/yoast-seo/7.0/).
+* Includes every change in [Yoast SEO 7.0.0](/changelog/yoast-seo/7/).
 * Removes the deprecated `WPSEO_Premium:: add_admin_pages` method.
 
 ## 6.3.1
@@ -2204,7 +2204,7 @@ Release date: 2018-01-09
 Release date: 2017-12-20
 
 * Converts the list of post types to a format which is compatible with the REST API format.
-* Includes every change in [Yoast SEO 6.0.0](/changelog/yoast-seo/6.0/).
+* Includes every change in [Yoast SEO 6.0.0](/changelog/yoast-seo/6/).
 
 ## 5.9.4
 
@@ -2360,13 +2360,13 @@ Release date: 2017-07-06
 
 * Includes every change in [Yoast SEO 5.0.1](/changelog/yoast-seo/5.0.1/).
 
-## 5.0.0
+## 5.0
 
 Release date: 2017-07-06
 
 * Fixes a bug where the redirect notice popped up unnecessarily.
 * Introduces insights and linking suggestions for French, props Sylvain Perret and [Evoque](https://github.com/evoqueio).
-* Includes every change in [Yoast SEO 5.0.0](/changelog/yoast-seo/5.0/).
+* Includes every change in [Yoast SEO 5.0](/changelog/yoast-seo/5/).
 
 ## 4.9.0
 
@@ -2488,7 +2488,7 @@ Release date: 2016-12-14
 * Adds link suggestions meta box to pages.
 * Fixes a bug where prominent words would be saved too often when editing a post.
 
-## 4.0.0
+## 4.0
 
 Release date: 2016-12-13
 
@@ -2502,7 +2502,7 @@ Release date: 2016-12-13
 * Fixes a bug where post format archives showed up in sitemap when disabled.
 * Fixes a bug where an old update notice would not be removed.
 * Fixes a bug where keywords with periods where not highlighted in the snippet.
-* Includes every change in [Yoast SEO 4.0.0](/changelog/yoast-seo/4.0/).
+* Includes every change in [Yoast SEO 4.0](/changelog/yoast-seo/4/).
 
 ## 3.9.0
 
@@ -2772,7 +2772,7 @@ Release date: 2015-11-18
 
 Release date: 2015-11-18
 
-* Merge with [Yoast SEO 3.0](/changelog/yoast-seo/3.0/), including the realtime content analysis tool and social settings for taxonomies.
+* Merge with [Yoast SEO 3.0](/changelog/yoast-seo/3/), including the realtime content analysis tool and social settings for taxonomies.
 * Added possibility to analyze multiple keywords per post/page.
 * Added support beacon to all the Yoast SEO settings pages, allowing users to ask for support straight from their WordPress backends.
 

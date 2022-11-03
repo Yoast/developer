@@ -10,7 +10,7 @@ description: An overview of how we decide to build indexables.
 ### Posts
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#D49AB9', 'edgeLabelBackground':'#D49AB9', 'stroke':'#000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#D49AB9', 'edgeLabelBackground':'#FFF', 'stroke':'#000'}}}%%
  flowchart TD
   A(Post) --> B{Post type registered?}
   B -- Yes -->C{Post type public?}
@@ -32,7 +32,7 @@ description: An overview of how we decide to build indexables.
 ### Users
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#D49AB9', 'edgeLabelBackground':'#D49AB9', 'stroke':'#000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#D49AB9', 'edgeLabelBackground':'#FFF', 'stroke':'#000'}}}%%
  flowchart TD
   A(User) --> B{Has published, public posts?}
   B -- Yes -->C([Create an indexable])

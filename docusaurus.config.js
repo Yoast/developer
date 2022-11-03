@@ -268,18 +268,8 @@ const config = {
 				// ... Your options.
 				// `hashed` is recommended as long-term-cache of index file is possible.
 				hashed: true,
-				indexBlog: true,
+				indexBlog: false,
 				docsRouteBasePath: "/",
-				blogRouteBasePath: [
-					'changelog/yoast-seo/',
-					'changelog/yoast-seo-premium/',
-					'changelog/local-seo/',
-					'changelog/video-seo/',
-					'changelog/news-seo/',
-					'changelog/woocommerce-seo/',
-					'changelog/duplicate-post/',
-					'changelog/shopify/',
-				],
 				// For Docs using Chinese, The `language` is recommended to set to:
 				// ```
 				// language: ["en", "zh"],

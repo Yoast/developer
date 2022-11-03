@@ -100,7 +100,7 @@ If a node is not output, any entities which would otherwise have declared a rela
                 "@id": "https://www.example.com/#/schema/Event/abc123"
             },
             "name": "My birthday party",
-            "description": "We're all getting together in at Example Venue in Fake Town to celebrate my special day!"
+            "description": "We're all getting together in at Example Venue in Fake Town to celebrate my special day!",
             "location": {
                 "@type": "Place",
                 "name": "Example Venue",
@@ -124,8 +124,8 @@ If a node is not output, any entities which would otherwise have declared a rela
                 "priceSpecification": {
                     "@type": "PriceSpecification",
                     "price": "22.00",
-                    "valueAddedTaxIncluded": "false"              
-                    "priceCurrency": "GBP",
+                    "valueAddedTaxIncluded": "false",
+                    "priceCurrency": "GBP"
                 },
                 "availability": "http://schema.org/InStock",
                 "url": "https://www.example.com/example-product-page/",

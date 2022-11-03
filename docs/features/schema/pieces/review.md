@@ -14,6 +14,7 @@ Should be added as top-level nodes in the graph, as/when required by other nodes
 ## Required properties
 A valid `Review` must have the following properties.
 
+* `@type`: `Review`.
 * `@id`: The site's home URL appended by `#/schema/Review/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: The name of the entity being reviewed.
 * `author`: A reference-by-ID to the `Person` who wrote the review.

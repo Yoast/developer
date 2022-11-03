@@ -18,7 +18,7 @@ May be transformed into a more specific type (such as `library`), or extend an e
 ## Required properties
 A valid `LocalBusiness` must have the following properties.
 
-* `@type`: An array of `Organization`, `Place`, and the most specific sub-type selected (e.g., `['Organization', 'Place', 'Dentist']` ).
+* `@type`: An array of `Organization`, `Place`, and the most specific sub-type selected (e.g., `['Organization', 'Place', 'Dentist']`).
 * `@id`: The site's home URL appended by `#/schema/Organization/{{ID}}`, where `{{ID}}` is a unique identifier for the organization in question.
 * `name`: The name of the business.
 * `image`: A reference-by-ID to an `imageObject` which represents the business.

@@ -1,34 +1,64 @@
-.sidebar {
-  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  overflow-y: auto;
-  position: sticky;
-  top: calc(var(--ifm-navbar-height) + 2rem);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media (min-width: 997px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    padding-top: var(--ifm-navbar-height);
+    width: var(--doc-sidebar-width);
+    transition: opacity 50ms ease;
+  }
+
+  .sidebarWithHideableNavbar {
+    padding-top: 0;
+  }
+
+  .sidebarHidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+
+  .sidebarItemList {
+    font-size: 0.9rem;
+  }
+
+  .sidebarItem {
+    margin-top: 0.7rem;
+  }
+
+  .sidebarItemTitle {
+    font-size: var(--ifm-h3-font-size);
+    font-weight: var(--ifm-font-weight-bold);
+  }
+
+  .sidebarItemLink {
+    color: var(--ifm-font-color-base);
+    display: block;
+  }
+
+  .sidebarItemLink:hover {
+    text-decoration: none;
+  }
+
+  .sidebarItemLinkActive {
+    color: var(--ifm-color-primary) !important;
+  }
 }
 
-.sidebarItemTitle {
-  font-size: var(--ifm-h3-font-size);
-  font-weight: var(--ifm-font-weight-bold);
-}
-
-.sidebarItemList {
-  font-size: 0.9rem;
-}
-
-.sidebarItem {
-  margin-top: 0.7rem;
-}
-
-.sidebarItemLink {
-  color: var(--ifm-font-color-base);
-  display: block;
-}
-
-.sidebarItemLink:hover {
-  text-decoration: none;
-}
-
-.sidebarItemLinkActive {
-  color: var(--ifm-color-primary) !important;
+.sidebarLogo {
+  display: none;
 }
 
 @media (max-width: 996px) {

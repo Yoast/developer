@@ -23,9 +23,10 @@ import type {Props} from '@theme/BlogListPage';
 function ChangelogListMetadata(props: Props): JSX.Element {
   const {metadata} = props;
   const {blogTitle, blogDescription} = metadata;
+  const image = "https://yoast.com/shared-assets/opengraph/?title=" + encodeURIComponent( blogTitle + 's: Features, enhancements and bugfixes' );
   return (
     <>
-      <PageMetadata title={blogTitle} description={blogDescription} />
+      <PageMetadata title={blogTitle} description={blogDescription} image={image} />
       <SearchMetadata tag="blog_posts_list" />
     </>
   );

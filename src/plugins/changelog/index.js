@@ -52,7 +52,7 @@ tags: [${tag}]
 date: ${date}
 ---
 
-# ${title.replace(/ \(.*\)/, '')}
+# ${tag} ${title.replace(/ \(.*\)/, '')}
 
 <!--truncate-->
 

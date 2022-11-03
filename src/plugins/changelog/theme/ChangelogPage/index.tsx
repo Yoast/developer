@@ -5,16 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// @ts-ignore
 import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
+// @ts-ignore
 import {BlogPostProvider, useBlogPost} from '@docusaurus/theme-common/internal';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
+// @ts-ignore
 import BlogLayout from '@theme/BlogLayout';
+// @ts-ignore
 import ChangelogItem from '@theme/ChangelogItem';
+// @ts-ignore
 import ChangelogPaginator from '@theme/ChangelogPaginator';
+// @ts-ignore
 import TOC from '@theme/TOC';
 import type {Props} from '@theme/BlogPostPage';
 import type {BlogSidebar} from '@docusaurus/plugin-content-blog';

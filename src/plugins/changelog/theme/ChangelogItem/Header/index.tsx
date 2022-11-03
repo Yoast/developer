@@ -10,7 +10,6 @@ import {useBlogPost} from '@docusaurus/theme-common/internal';
 
 import BlogPostItemHeaderTitle from '@theme/BlogPostItem/Header/Title';
 import BlogPostItemHeaderInfo from '@theme/BlogPostItem/Header/Info';
-
 import styles from './styles.module.css';
 
 // Reduce changelog title size, but only on list view

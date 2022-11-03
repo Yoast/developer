@@ -1,12 +1,12 @@
 ---
-id: recipe
+id: event
 title: "Schema piece - Event"
 sidebar_label: Event
 description: Describes an 'Event', which may have information about the date/time, location, and attendence options.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-Describes a `Recipe`, which contains a series of instructions, ingredients, and optional fields.
+Describes an `Event`, which occurs at a time and in a place, with optional extra information.
 
 ## Triggers
 Should be added as a top-level node in the graph, when the content of a page describes an event.

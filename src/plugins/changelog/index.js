@@ -35,7 +35,7 @@ function processSection(section, tag) {
 		return null;
 	}
 
-	let slug = title.replace( / /g, '-' ).replace( ':','' ).replace( '.','-' );
+	let slug = title.replace( / /g, '-' ).replace( ':','' );
 
 	let matches = section.match(/^Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?$/m);
 	if ( matches === null || typeof matches === 'undefined' ) {

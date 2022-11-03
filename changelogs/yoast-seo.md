@@ -1402,7 +1402,7 @@ Get ready for a brand new version of Yoast SEO! In this version you'll find new 
 * Improves all keyphrase-based assessments for Arabic by filtering function words and by allowing keyphrases to be recognized in a text when preceded by a prefix (e.g., "ل" or "ب").
 * Adds the following assessments for Indonesian: sentence beginnings, transition words and passive voice.
 * Adds the following assessments for Portuguese: Flesch reading ease and passive voice.
-* Cleans up Schema @type values:
+* Cleans up Schema @type values:
 
 * If it's an array with multiple values, only output unique values.
 * If it's a single value, output it as a string instead of an array.
@@ -1497,7 +1497,7 @@ We have a new release for you: Yoast SEO 14.6. This release has some pretty cool
 * Removes functions, class variables and classes that were deprecated prior to version 11.5.
 * Adds a quick cache, which caches the result for 1 minute, so we don't do the same call the my.yoast.com twice on a pageload.
 * Introduces the `--skip-confirmation` argument to run our wp-cli reindex command without confirmation prompt.
-* Yoast SEO had many scripts that relied on many localized objects. In an effort to improve maintainability we have combined all those objects into one: `wpseoScriptData`. `wpseoPostScraperL10n` and `wpseoTermScraperL10n` remain available for backward compatibility. Plugins that tap into our objects will need to update their code.
+* Yoast SEO had many scripts that relied on many localized objects. In an effort to improve maintainability we have combined all those objects into one: `wpseoScriptData`. `wpseoPostScraperL10n` and `wpseoTermScraperL10n` remain available for backward compatibility. Plugins that tap into our objects will need to update their code.
 
 ## 14.5
 
@@ -1884,7 +1884,7 @@ Release date: 2020-01-21
 
 #### Other
 
-* Renames the 'Snippet preview' to 'Google preview'.
+* Renames the 'Snippet preview' to 'Google preview'.
 * Replaces the Google preview mode switcher toggle with radio buttons.
 
 ## 12.8.1
@@ -1900,12 +1900,12 @@ Release date: 2020-01-15
 
 Release date: 2020-01-07
 
-Welcome to another year of helping you achieve your goals with your site! Today, it’s time for the first in a long line of releases planned for 2020: Yoast SEO 12.8. In this release, you’ll find a number of bug fixes and performance enhancements. Find out more about this release in [our 12.8 release post](https://yoa.st/release-12-8" rel="nofollow)!
+Welcome to another year of helping you achieve your goals with your site! Today, it’s time for the first in a long line of releases planned for 2020: Yoast SEO 12.8. In this release, you’ll find a number of bug fixes and performance enhancements. Find out more about this release in [our 12.8 release post](https://yoa.st/release-12-8" rel="nofollow)!
 
 #### Bugfixes
 
 * Fixes a bug where clicking the notification center buttons would result in an incorrect icon and a misplaced focus style for the dismiss and restore buttons.
-* Fixes a bug where `create` and `update` actions would be done twice on multisite environments in combination with MultilingualPress.
+* Fixes a bug where `create` and `update` actions would be done twice on multisite environments in combination with MultilingualPress.
 * Fixes a bug where an empty page title would cause the breadcrumbs schema to set a wrong url.
 * Fixes a bug where author archives for authors without post would show up in the search results, even though the "Show archives for authors without posts in search results?" option was enabled.
 * Fixes a bug where the styling was missing from admin error notices in WordPress 5.3.
@@ -1913,13 +1913,13 @@ Welcome to another year of helping you achieve your goals with your site! Today,
 
 #### Enhancements
 
-* Optimizes the options retrieval processes. Props to [Alex Bouma](https://alex.bouma.dev/" rel="nofollow) for his testing and suggestions.
+* Optimizes the options retrieval processes. Props to [Alex Bouma](https://alex.bouma.dev/) for his testing and suggestions.
 * Adds the possibility to declare an identifier when integrating with the Schema output.
 
 #### Other
 
-* Fixes the documentation in the Schema HowTo file. Props to [timvaniersel](https://github.com/timvaniersel).
-* Fixes the documentation in the Breadcrumbs file. Props to [alfiosalanitri](https://github.com/alfiosalanitri).
+* Fixes the documentation in the Schema HowTo file. Props to [timvaniersel](https://github.com/timvaniersel).
+* Fixes the documentation in the Breadcrumbs file. Props to [alfiosalanitri](https://github.com/alfiosalanitri).
 * Moves the paginated comments notice from the dashboard to WordPress' Site Health screen.
 
 ## 12.7.1
@@ -2187,9 +2187,9 @@ Yoast SEO 11.6 is out today. Of course, we did the regular round of bug fixing, 
 
 #### Bugfixes
 
-* Fixes a bug where the Schema `@id` for `Person` would be incorrect on posts when author archives where disabled.
-* Fixes a bug where the Schema would contain `WebPage` instead of `CollectionPage` for a latest posts homepage and the static posts page type.
-* Fixes a bug where the `Organization` and `Article` Schema nodes would incorrectly be output when a website had not set their organization's name and/or logo.
+* Fixes a bug where the Schema `@id` for `Person` would be incorrect on posts when author archives where disabled.
+* Fixes a bug where the Schema would contain `WebPage` instead of `CollectionPage` for a latest posts homepage and the static posts page type.
+* Fixes a bug where the `Organization` and `Article` Schema nodes would incorrectly be output when a website had not set their organization's name and/or logo.
 * Fixes a bug where the eye marker tooltips would break out of the metabox, which would hide the last part of the tooltip text.
 * Fixes a bug where instances of unfiltered HTML would be allowed in term descriptions where they shouldn't be.
 

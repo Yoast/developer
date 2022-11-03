@@ -29,6 +29,10 @@ const config = {
 		locales: ["en"],
 	},
 
+	markdown: {
+		mermaid: true,
+	},
+
 	headTags: [
 		{
 			tagName: 'meta',
@@ -257,14 +261,25 @@ const config = {
 	],
 
 	themes: [
+		require.resolve( '@docusaurus/theme-mermaid' ),
 		[
 			require.resolve("@easyops-cn/docusaurus-search-local"),
 			{
 				// ... Your options.
 				// `hashed` is recommended as long-term-cache of index file is possible.
 				hashed: true,
-				indexBlog: false,
+				indexBlog: true,
 				docsRouteBasePath: "/",
+				blogRouteBasePath: [
+					'changelog/yoast-seo/',
+					'changelog/yoast-seo-premium/',
+					'changelog/local-seo/',
+					'changelog/video-seo/',
+					'changelog/news-seo/',
+					'changelog/woocommerce-seo/',
+					'changelog/duplicate-post/',
+					'changelog/shopify/',
+				],
 				// For Docs using Chinese, The `language` is recommended to set to:
 				// ```
 				// language: ["en", "zh"],
@@ -287,7 +302,6 @@ const config = {
 						editUrl:
 							"https://github.com/yoast/developer/tree/main/",
 					},
-					blog: false,
 					theme: {
 						customCss: require.resolve( "./src/css/custom.css" ),
 					},

@@ -417,6 +417,16 @@ module.exports = {
 					label: 'WooCommerce SEO',
 					href: '/changelog/woocommerce-seo/',
 				},
+				{
+					type: 'link',
+					label: 'Duplicate Post',
+					href: '/changelog/duplicate-post/',
+				},
+				{
+					type: 'link',
+					label: 'Yoast SEO for Shopify',
+					href: '/changelog/shopify/',
+				},
 			]
 		}
 	],

@@ -12,10 +12,10 @@ Describes an `Event`, which occurs at a time and in a place, with optional extra
 Should be added as a top-level node in the graph, when the content of a page describes an event.
 
 ## Required properties
-A valid `Recipe` must have the following properties.
+A valid `Event` must have the following properties.
 
 * `@type`: `Event`.
-* `@id`: The site's home URL appended by `#/schema/Recipe/{{ID}}`, where `{{ID}}` is a unique identifier.
+* `@id`: The site's home URL appended by `#/schema/Event/{{ID}}`, where `{{ID}}` is a unique identifier.
 * `name`: A string naming the event.
 * `location`: Either a `Place` or `VirtualLocation` node, describing where the event will take place.
 * `startDate`: The start date and time of the event in [ISO-8601 format](https://en.wikipedia.org/wiki/ISO_8601) (including the UTC timezone offset).
@@ -26,7 +26,7 @@ The following should be added whenever available and valid:
 * `description`: A text string describing or summarizing the event.
 * `endDate`: The end date and time of the event in [ISO-8601 format](https://en.wikipedia.org/wiki/ISO_8601) (including the UTC timezone offset).
 * `eventAttendanceMode`: An `EventAttendanceModeEnumeration`, reflecting the attendance mode of the event (either `OfflineEventAttendanceMode`, `OnlineEventAttendanceMode` or `MixedEventAttendanceMode`).
-* `image`: An `imageObject` (or an array of `imageObject`s) representing the completed recipe, referenced by ID.
+* `image`: An `imageObject` (or an array of `imageObject`s) representing the event, referenced by ID.
 * `organizer`: The `Organization` or `Person` responsible for organizing the event.
 * `performer`: A `Person` (or an array of `Person`s) performing at the event.
 

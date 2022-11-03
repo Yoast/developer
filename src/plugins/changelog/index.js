@@ -18,7 +18,6 @@ const publishTimes = new Set();
 /**
  * @type {Record<string, {name: string, url: string,alias: string, imageURL: string}>}
  */
-const authorsMap = {};
 
 /**
  * @param {string} section
@@ -28,26 +27,43 @@ function processSection(section, tag) {
 	const title = section
 		.match(/\n## .*/)?.[0]
 		.trim()
-		.replace('## ', '');
+		.replace('## ', '')
+		.replace( /\//g, '-' )
+		.replace( '(UTC)', '' )
+		.trim();
 	if (!title) {
 		return null;
 	}
 
-	let matches = section.match(/^Release date: (\d{4}-\d{2}-\d{2})$/m);
+	let slug = title.replace( / /g, '-' ).replace( ':','' ).replace( '.','-' );
+
+	let matches = section.match(/^Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?$/m);
 	if ( matches === null || typeof matches === 'undefined' ) {
 		console.log( section );
 	}
-	let date = matches[1] +'T20:00';
+	let date = matches[1];
+	let hour = 20;
+	if ( date.indexOf( ':' ) === -1 ) {
+		while (publishTimes.has(`${date}T${hour}:00`)) {
+			hour -= 1;
+		}
+		date = date + 'T' + hour + ':00';
+	} else {
+		date = date.replace( ' ', 'T' );
+	}
+
+	publishTimes.add( date );
 
 	const content = section
 		.replace(/\n## .*/, '')
-		.replace( /Release date: (\d{4}-\d{2}-\d{2})/, '' )
+		.replace( /Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?/, '' )
 		.trim();
 
 	return {
 		title: title.replace(/ \(.*\)/, ''),
 		content: `---
 title: ${title}
+slug: ${slug}
 tags: [${tag}]
 date: ${date}
 ---

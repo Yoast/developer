@@ -22,7 +22,7 @@ export default function BlogSidebarDesktop({sidebar}) {
               </li>
           </ul>
           <div className={clsx(styles.sidebarItemTitle, 'margin-bottom--md')}>
-              Plugin changelogs
+              Changelogs
           </div>
           <ul className={clsx(styles.sidebarItemList, 'clean-list')}>
               <li className={styles.sidebarItem}>
@@ -66,6 +66,12 @@ export default function BlogSidebarDesktop({sidebar}) {
                         className={styles.sidebarItemLink}
                         activeClassName={styles.sidebarItemLinkActive}>
                       Yoast Duplicate Post changelog</Link>
+              </li>
+              <li className={styles.sidebarItem}>
+                  <Link isNavLink to="/changelog/shopify/"
+                        className={styles.sidebarItemLink}
+                        activeClassName={styles.sidebarItemLinkActive}>
+                      Yoast SEO for Shopify changelog</Link>
               </li>
           </ul>
 

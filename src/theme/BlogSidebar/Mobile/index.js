@@ -60,6 +60,12 @@ function BlogSidebarMobileSecondaryMenu({sidebar}) {
             activeClassName={styles.sidebarItemLinkActive}>
         Yoast Duplicate Post changelog</Link>
     </li>
+    <li className={styles.sidebarItem}>
+      <Link isNavLink to="/changelog/shopify/"
+            className={styles.sidebarItemLink}
+            activeClassName={styles.sidebarItemLinkActive}>
+        Yoast SEO for Shopify changelog</Link>
+    </li>
   </ul>
   <div className={clsx(styles.sidebarItemTitle, 'margin-bottom--md')}>
     Recent releases

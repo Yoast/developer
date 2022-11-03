@@ -234,6 +234,21 @@ const config = {
 			},
 		],
 		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'shopify',
+				blogTitle: 'Yoast SEO for Shopify changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for Shopify.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO for Shopify changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{
 				id: 'GTM-NHRB36F', // GTM Container ID

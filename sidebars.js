@@ -164,7 +164,14 @@ module.exports = {
 						'features/integrations/site-connections',
 					],
 				},
-				'features/indexables/functional-specification',
+				{
+					type: 'category',
+					label: 'Indexables',
+					items: [
+						'features/indexables/functional-specification',
+						'features/indexables/technical-specification',
+					]
+				},
 				{
 					type: 'category',
 					label: 'Schema.org markup',
@@ -192,7 +199,7 @@ module.exports = {
 								'features/schema/pieces/article',
 								'features/schema/pieces/breadcrumb',
 								'features/schema/pieces/comment',
-								'features/schema/pieces/event',								
+								'features/schema/pieces/event',
 								'features/schema/pieces/howto',
 								'features/schema/pieces/image',
 								'features/schema/pieces/localbusiness',

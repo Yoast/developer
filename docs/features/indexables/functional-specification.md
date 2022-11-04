@@ -1,7 +1,7 @@
 ---
 id: functional-specification
 title: "Indexables - Functional specification"
-sidebar_label: Indexables
+sidebar_label: Functional specification
 description: An overview of how Indexables work in Yoast SEO.
 ---
 Yoast SEO's "Indexables" framework provides an abstraction layer for interacting with post metadata relating to SEO.

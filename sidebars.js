@@ -295,7 +295,6 @@ module.exports = {
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/change-metabox-prio-filter',
 						'customization/yoast-seo/filters/cornerstone-post-types-filter',
-						'customization/yoast-seo/filters/filtering-yoast-seo-indexables',
 						'customization/yoast-seo/filters/markdown-enabled-filter',
 						'customization/yoast-seo/filters/assessment-markers-filter',
 						'customization/yoast-seo/filters/primary-term-taxonomies-filter',

@@ -85,8 +85,7 @@ When we have a robust understanding of all of the public pages on a site, we can
 Most users won't ever need to interact directly with the indexables table or logic. However, advanced users may wish to customize the behaviour to fit their needs.
 To enable this, we provide a range of filters to alter the default behaviour or interact with the table:
 
-* You can [disable the creation of new indexables](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/).
-* You can exclude a specific _post type_ (by filtering an array of excluded types) via `wpseo_indexable_excluded_post_types`.
-* You can exclude a specific _taxonomy type_ (by filtering an array of excluded types) via `wpseo_indexable_excluded_taxonomies`.
+* You can [disable the creation of new indexables](/features/indexables/indexables-filters/#disabling-indexables-completely).
+* You can [exclude specific _post type_ and _taxonomies_](/features/indexables/indexables-filters/#excluding-content).
 * You [force a (re)indexing process](https://developer.yoast.com/features/wp-cli/reindex-indexables/) via WP CLI.
 

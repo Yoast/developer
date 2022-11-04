@@ -170,6 +170,7 @@ module.exports = {
 					items: [
 						'features/indexables/functional-specification',
 						'features/indexables/technical-specification',
+						'features/indexables/indexables-filters',
 					]
 				},
 				{

@@ -26,12 +26,12 @@ considered indexable objects. Of course a post has to _exist_ to be a valid Inde
 %%{init: {'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#ffffff', 'stroke':'#000'}}}%%
  flowchart TD
   Input([Post]) --> PTRegistered{Post <em>type</em> registered?}
-  PTRegistered == Yes ==>PTExcluded{Post <em>type</em> excluded<br/><a href='/filter/exclude-post-type-indexables/'>through filter</a>?}
+  PTRegistered == Yes ==>PTExcluded{Post <em>type</em> excluded<br/><a href='/features/indexables/indexables-filters/#post_types'>through filter</a>?}
   PTRegistered -- No -->NoIndexable([Do <strong>not</strong> create an indexable])
   PTExcluded -- Yes -->NoIndexable
   PTExcluded == No ==>PTPublic{Is the<br/>post <em>type</em> <code>public</code>?}
   PTPublic == Yes ==>PTAttachment{Is the post<br/><em>type</em> <code>attachment</code>?}
-  PTAttachment -- Yes -->AttDisabled{Are attachment URLs<br/>disabled in Yoast SEO?}
+  PTAttachment -- Yes -->AttDisabled{Are <a href='https://yoast.com/features/redirect-attachment-urls/'>attachment URLs<br/> disabled</a> in Yoast SEO?}
   AttDisabled -- Yes -->NoIndexable
   AttDisabled == No ==>PSRegistered{Post <em>status</em> registered?}
   PTAttachment == No ==>PSRegistered
@@ -71,7 +71,7 @@ A term has to be part of a registered, public taxonomy to be an indexable object
 %%{init: {'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#ffffff', 'stroke':'#000'}}}%%
  flowchart TD
   Input([Term]) --> TaxRegistered{<em>Taxonomy</em> registered?}
-  TaxRegistered == Yes ==> TaxExcluded{Is the <em>taxonomy</em><br>excluded <a href='/filter/exclude-taxonomy-indexables/'>through filter</a>?}
+  TaxRegistered == Yes ==> TaxExcluded{Is the <em>taxonomy</em><br>excluded <a href='/features/indexables/indexables-filters/#taxonomies'>through filter</a>?}
   TaxRegistered -- No -->NoIndexable([Do <strong>not</strong> create an indexable])
   TaxExcluded -- Yes -->NoIndexable
   TaxExcluded == No ==>TaxPublic{Is the<br><em>taxonomy</em> public?}

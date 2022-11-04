@@ -1,6 +1,6 @@
 ---
 id: functional-specification
-title: "Indexables - Functional specification"
+title: "Indexables: Functional specification"
 sidebar_label: Functional specification
 description: An overview of how Indexables work in Yoast SEO.
 ---

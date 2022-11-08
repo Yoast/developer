@@ -92,8 +92,6 @@ async function ChangelogPlugin(context, options) {
 		blogSidebarTitle: 'Recent releases',
 		blogListComponent: '@theme/ChangelogList',
 		blogPostComponent: '@theme/ChangelogPage',
-		routeBasePath: 'changelog/'+options.id,
-		path: './changelog/source/'+options.id,
 	});
 	const changelogPath = path.join(__dirname, '../../../changelogs/'+options.id+'.md');
 	return {
@@ -110,7 +108,7 @@ async function ChangelogPlugin(context, options) {
 			await Promise.all(
 				sections.map((section) =>
 					fs.outputFile(
-						path.join(generateDir, `${options.id}/${section.title}.md`),
+						path.join(options.path, `${section.title}.md`),
 						section.content,
 					),
 				),

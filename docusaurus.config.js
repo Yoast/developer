@@ -135,7 +135,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'yoast-seo',
+				id: 'wordpress-seo',
+				routeBasePath: 'changelog/yoast-seo/',
+				path: './changelog/source/yoast-seo/',
 				blogTitle: 'Yoast SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for WordPress.',
 				feedOptions: {
@@ -150,7 +152,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'yoast-seo-premium',
+				id: 'wordpress-seo-premium',
+				routeBasePath: 'changelog/yoast-seo-premium/',
+				path: './changelog/source/yoast-seo-premium/',
 				blogTitle: 'Yoast SEO Premium changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO Premium.',
 				feedOptions: {
@@ -165,7 +169,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'local-seo',
+				id: 'wordpress-seo-local',
+				routeBasePath: 'changelog/local-seo/',
+				path: './changelog/source/local-seo/',
 				blogTitle: 'Yoast Local SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Local SEO plugin for WordPress.',
 				feedOptions: {
@@ -180,7 +186,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'news-seo',
+				id: 'wpseo-news',
+				routeBasePath: 'changelog/news-seo/',
+				path: './changelog/source/news-seo/',
 				blogTitle: 'Yoast News SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast News SEO plugin for WordPress.',
 				feedOptions: {
@@ -195,7 +203,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'video-seo',
+				id: 'wpseo-video',
+				routeBasePath: 'changelog/video-seo/',
+				path: './changelog/source/video-seo/',
 				blogTitle: 'Yoast Video SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Video SEO plugin for WordPress.',
 				feedOptions: {
@@ -210,7 +220,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'woocommerce-seo',
+				id: 'wpseo-woocommerce',
+				routeBasePath: 'changelog/woocommerce-seo/',
+				path: './changelog/source/woocommerce-seo/',
 				blogTitle: 'Yoast WooCommerce SEO changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast WooCommerce SEO plugin.',
 				feedOptions: {
@@ -226,6 +238,8 @@ const config = {
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
 				id: 'duplicate-post',
+				routeBasePath: 'changelog/duplicate-post/',
+				path: './changelog/source/duplicate-post/',
 				blogTitle: 'Yoast Duplicate Post changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Duplicate Post plugin.',
 				feedOptions: {
@@ -240,7 +254,9 @@ const config = {
 		[
 			require.resolve('./src/plugins/changelog/index.js'),
 			{
-				id: 'shopify',
+				id: 'shopify-seo',
+				routeBasePath: 'changelog/shopify/',
+				path: './changelog/source/shopify/',
 				blogTitle: 'Yoast SEO for Shopify changelog',
 				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for Shopify.',
 				feedOptions: {

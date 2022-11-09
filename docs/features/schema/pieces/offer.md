@@ -45,8 +45,8 @@ If the node is not output, any entities which would otherwise have referenced th
               "priceSpecification": {
                   "@type": "PriceSpecification",
                   "price": "22.00",
-                  "valueAddedTaxIncluded": "false"              
-                  "priceCurrency": "GBP",
+                  "valueAddedTaxIncluded": "false",
+                  "priceCurrency": "GBP"
               },
               "availability": "http://schema.org/InStock",
               "url": "https://www.example.com/example-product-page/",

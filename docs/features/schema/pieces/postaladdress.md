@@ -42,7 +42,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "PostalAddress",
-              "@id": "https://www.example.com/#/schema/Address/abc123",
+              "@id": "https://www.example.com/#/schema/PostalAddress/abc123",
               "streetAddress": "123 Fake Street",
               "postalCode": "ABC 123",
               "addressCountry": "US"
@@ -59,7 +59,7 @@ The following should be added whenever available and valid:
       "@graph": [
           {
               "@type": "PostalAddress",
-              "@id": "https://www.example.com/#/schema/Address/abc123",
+              "@id": "https://www.example.com/#/schema/PostalAddress/abc123",
               "streetAddress": "123 Example Street",
               "addressLocality": "Example Town",
               "addressRegion": "Example Region",

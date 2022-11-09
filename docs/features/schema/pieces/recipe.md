@@ -9,14 +9,13 @@ import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 Describes a `Recipe`, which contains a series of instructions, ingredients, and optional fields.
 
 ## Triggers
-Should be added as a top-level node in the graph, when the content of a page contains a *Recipe block*.
+Should be added as a top-level node in the graph, when the content of a page describes a recipe.
 
 ## Required properties
 A valid `Recipe` must have the following properties.
 
 * `@type`: `Recipe`.
 * `@id`: The site's home URL appended by `#/schema/Recipe/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `mainEntityOfPage`: Referencing the `WebPage` by ID.
 * `name`: A string describing the recipe.
 * `image`: An image representing the completed recipe, referenced by ID.
 * `recipeIngredient`: An array of strings representing each ingredient and quantity (e.g., "3 apples").
@@ -52,6 +51,9 @@ The following should be added whenever available and valid:
 
 ## Conditional properties
 
+### When the recipe is the 'main entity' of the page
+* `mainEntityOfPage`: Referencing the `WebPage` by ID.
+
 ### When only one of `cookTime` or `prepTime` is specified
 * Alter the property in question to `totalTime`.
 
@@ -65,6 +67,7 @@ The following should be added whenever available and valid:
 * `author`: A reference to the `Article`'s author by ID.
 
 ## Examples
+
 ### Minimum criteria
 
 <YoastSchemaExample>

@@ -1,3 +1,17 @@
+## 14.7
+
+Release date: 2022-11-08
+
+#### Bugfixes
+
+Fixes a bug where location-specific assessments would also appear under the Readability analysis tab when the Cornerstone content toggle would be switched on.
+
+#### Other
+
+* Bumps the Yoast SEO minimum required version to 19.10.
+* Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
+* Sets the WordPress “tested up to” version to 6.1.
+
 ## 14.6
 
 Release date: 2022-08-09

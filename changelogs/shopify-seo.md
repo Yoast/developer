@@ -1,3 +1,11 @@
+## 07/11/2022 10:30 (UTC)
+
+Release date: 2022-11-07 10:30
+
+#### Enhancements
+
+* Introduces a new page to show an order summary before Shopify’s subscription page.
+
 ## 26/10/2022 09:53 (UTC)
 
 Release date: 2022-10-26 09:53

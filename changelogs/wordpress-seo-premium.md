@@ -1,8 +1,25 @@
+## 19.5
+
+Release date: 2022-11-08
+
+Yoast SEO Premium 19.5 is out now. This release mostly consists of bug fixes and enhancements. In addition, we’re getting 
+our WordPress plugins ready for the upcoming High Performance Order Storage feature in WooCommerce 7.1+. Check it out! 
+Read more about what’s new in Yoast SEO Premium 19.5 in our release post in English or our release post in Spanish!
+
+#### Other
+
+* Bumps the Yoast SEO minimum required version to 19.10.
+* Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
+* Sets the WordPress tested up to version to 6.1.
+
 ## 19.4
 
 Release date: 2022-10-25
 
-Yoast SEO Premium 19.4 is out now. In this release, we've improved our Premium analysis with a new check for site titles. We've also added a new option to the crawl settings to manage the crawling of internal site search URLs. Plus, we've added several enhancements, fixes, and other improvements. Check it out! Read more about what's new in Yoast SEO Premium 19.4 in [our release post in English](https://yoa.st/release-25-10-22) or [our release post in Spanish](https://yoa.st/release-25-10-22-spanish)!
+Yoast SEO Premium 19.4 is out now. In this release, we've improved our Premium analysis with a new check for site titles. 
+We've also added a new option to the crawl settings to manage the crawling of internal site search URLs. Plus, we've 
+added several enhancements, fixes, and other improvements. Check it out! Read more about what's new in Yoast SEO Premium 
+19.4 in [our release post in English](https://yoa.st/release-25-10-22) or [our release post in Spanish](https://yoa.st/release-25-10-22-spanish)!
 
 #### Enhancements
 

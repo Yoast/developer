@@ -1,3 +1,11 @@
+## 10/11/2022 12:27 (UTC)
+
+Release Date: 2022-11-10
+
+#### Bugfixes
+
+* Fixes a bug where the SKU variable would not be replaced in the Google Preview.
+
 ## 07/11/2022 10:30 (UTC)
 
 Release date: 2022-11-07 10:30

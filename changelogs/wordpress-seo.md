@@ -1,5 +1,3 @@
-For an overview of all changes specific to the [Yoast SEO Premium plugin](https://yoast.com/wordpress/plugins/seo/), check out the [Premium changelog](https://yoast.com/wordpress/plugins/seo/change-log/).
-
 ## 19.10
 
 Release date: 2022-11-08

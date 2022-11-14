@@ -4,8 +4,9 @@ import {useBlogPost} from '@docusaurus/theme-common/internal';
 
 export default function BlogPostPageMetadata() {
   const {metadata} = useBlogPost();
-  const {date, tags} = metadata;
-  const blogTitle = tags[0].label;
+  const {date} = metadata;
+
+  const blogTitle = metadata.frontMatter.keywords;
   const description = 'This is the changelog for version ' + metadata.title + ' of ' + blogTitle + '.';
   const title = blogTitle + ' ' + metadata.title + ' changelog';
   const image = "https://yoast.com/shared-assets/opengraph/?title=" + encodeURIComponent( blogTitle + ' ' + metadata.title );
@@ -13,7 +14,8 @@ export default function BlogPostPageMetadata() {
     <PageMetadata
       title={title}
       description={description}
-      image={image}>
+      image={image}
+    >
       <meta property="og:type" content="article" />
       <meta property="article:published_time" content={date} />
     </PageMetadata>

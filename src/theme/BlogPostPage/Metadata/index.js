@@ -1,0 +1,21 @@
+import React from 'react';
+import {PageMetadata} from '@docusaurus/theme-common';
+import {useBlogPost} from '@docusaurus/theme-common/internal';
+
+export default function BlogPostPageMetadata() {
+  const {metadata} = useBlogPost();
+  const {date, tags} = metadata;
+  const blogTitle = tags[0].label;
+  const description = 'This is the changelog for version ' + metadata.title + ' of ' + blogTitle + '.';
+  const title = blogTitle + ' ' + metadata.title + ' changelog';
+  const image = "https://yoast.com/shared-assets/opengraph/?title=" + encodeURIComponent( blogTitle + ' ' + metadata.title );
+  return (
+    <PageMetadata
+      title={title}
+      description={description}
+      image={image}>
+      <meta property="og:type" content="article" />
+      <meta property="article:published_time" content={date} />
+    </PageMetadata>
+  );
+}

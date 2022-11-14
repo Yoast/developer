@@ -1,6 +1,6 @@
 ## 10/11/2022 12:27 (UTC)
 
-Release Date: 2022-11-10
+Release date: 2022-11-10 12:27
 
 #### Bugfixes
 

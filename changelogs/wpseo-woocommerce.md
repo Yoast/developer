@@ -2,11 +2,13 @@
 
 Release date: 2022-11-08
 
-Adds a `material` property to product pages’ schema.
+#### Enhancements
+
+* Adds a `material` property to product pages’ schema.
 
 #### Bugfixes
 
-Fixes a bug where the Product description assessment would also appear under the Readability analysis tab when the Cornerstone content toggle would be switched on.
+* Fixes a bug where the Product description assessment would also appear under the Readability analysis tab when the Cornerstone content toggle would be switched on.
 
 #### Other
 

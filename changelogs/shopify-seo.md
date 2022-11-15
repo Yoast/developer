@@ -1,6 +1,15 @@
+## 14/11/2022 09:11 (UTC)
+
+Release date: 2022-11-14 09:11
+
+#### Enhancements
+
+* Enhances the discount code form with translated feedback.
+* Informs all free users about the removal of our free plan and provides the means to continue using the app.
+
 ## 10/11/2022 12:27 (UTC)
 
-Release Date: 2022-11-10
+Release date: 2022-11-10 12:27
 
 #### Bugfixes
 

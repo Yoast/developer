@@ -256,7 +256,7 @@ Yoast SEO 19.2 is out today! In this release, we've rolled out some improvements
 
 * Renames the 'Keyphrase in title' SEO assessment to 'Keyphrase in SEO title'.
 
-## 19.1
+## 19.1.0
 
 Release date: 2022-06-14
 

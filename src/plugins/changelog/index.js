@@ -21,16 +21,17 @@ const publishTimes = new Set();
 
 /**
  * @param {string} section
- * @param tag
+ * @param {string} plugin
  */
-function processSection(section, tag) {
+function processSection(section, plugin) {
 	const title = section
-		.match(/\n## .*/)?.[0]
+		.match(/(\n|^)## (.*)\n/)?.[0]
 		.trim()
 		.replace('## ', '')
 		.replace( /\//g, '-' )
 		.replace( '(UTC)', '' )
 		.trim();
+
 	if (!title) {
 		return null;
 	}
@@ -55,20 +56,19 @@ function processSection(section, tag) {
 	publishTimes.add( date );
 
 	const content = section
-		.replace(/\n## .*/, '')
+		.replace(/(\n|^)## .*/, '')
 		.replace( /Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?/, '' )
 		.trim();
 
 	return {
 		title: title.replace(/ \(.*\)/, ''),
 		content: `---
-title: ${title}
-slug: ${slug}
-tags: [${tag}]
+title: "${title}"
+keywords: ["${plugin}"]
 date: ${date}
 ---
 
-# ${tag} ${title.replace(/ \(.*\)/, '')}
+# ${plugin} ${title.replace(/ \(.*\)/, '')}
 
 <!--truncate-->
 
@@ -100,7 +100,7 @@ async function ChangelogPlugin(context, options) {
 		async loadContent() {
 			const fileContent = await fs.readFile(changelogPath, 'utf-8');
 			const sections = fileContent
-				.split(/(?=\n## )/)
+				.split(/(?=(^|\n)## )/)
 				.map(
 					section => processSection( section, options.blogTitle.replace( ' changelog', '' ) )
 				)
@@ -123,6 +123,7 @@ async function ChangelogPlugin(context, options) {
 					pageIndex === 0 ? '/' : `/page/${pageIndex + 1}`,
 				]);
 			});
+
 			return content;
 		},
 		configureWebpack(...args) {

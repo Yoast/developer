@@ -10,8 +10,9 @@ import ChangelogReadMoreLink from './ReadMoreLink';
 import styles from './styles.module.css';
 
 export default function ChangelogItemFooter() {
-    const {metadata, isBlogPostPage} = useBlogPost();
+    const {metadata, isBlogPostPage, frontMatter} = useBlogPost();
     const {tags, title, editUrl, hasTruncateMarker} = metadata;
+    let changelogTitle = frontMatter.keywords + ' ' + title;
     // A post is truncated if it's in the "list view" and it has a truncate marker
     const truncatedPost = !isBlogPostPage && hasTruncateMarker;
     const tagsExists = tags.length > 0;
@@ -25,7 +26,7 @@ export default function ChangelogItemFooter() {
 
             {truncatedPost && (
                 <div className='col text--right'>
-                    <ChangelogReadMoreLink blogPostTitle={title} to={metadata.permalink} />
+                    <ChangelogReadMoreLink changelogTitle={changelogTitle} to={metadata.permalink} />
                 </div>
             )}
         </footer>

@@ -7,10 +7,10 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 export default function ChangelogReadMoreLink(props) {
-    const {blogPostTitle, ...linkProps} = props;
+    const {changelogTitle, ...linkProps} = props;
     return (
         <Link {...linkProps}>
-            Read the full changelog for {blogPostTitle} &raquo;
+            Read the full changelog for {changelogTitle} &raquo;
         </Link>
     );
 }

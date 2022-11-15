@@ -7,16 +7,33 @@
 
 import React from 'react';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
-
-import BlogPostItemHeaderTitle from '@theme/BlogPostItem/Header/Title';
+import Link from '@docusaurus/Link';
 import BlogPostItemHeaderInfo from '@theme/BlogPostItem/Header/Info';
 import styles from './styles.module.css';
+import clsx from "clsx";
+
+function ChangelogItemHeaderTitle({className}) {
+    const {metadata, frontMatter, isBlogPostPage} = useBlogPost();
+    const {permalink, title} = metadata;
+    const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
+    return (
+        <TitleHeading className={clsx(styles.title, className)}>
+            {isBlogPostPage ? (
+                frontMatter.keywords + ' ' + title
+            ) : (
+                <Link to={permalink}>
+                    {frontMatter.keywords} {title}
+                </Link>
+            )}
+        </TitleHeading>
+    );
+}
 
 // Reduce changelog title size, but only on list view
 function ChangelogTitle() {
   const {isBlogPostPage} = useBlogPost();
   return (
-    <BlogPostItemHeaderTitle
+    <ChangelogItemHeaderTitle
       className={isBlogPostPage ? undefined : styles.changelogItemTitleList}
     />
   );

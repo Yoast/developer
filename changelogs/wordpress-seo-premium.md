@@ -4,7 +4,8 @@ Release date: 2022-11-08
 
 Yoast SEO Premium 19.5 is out now. This release mostly consists of bug fixes and enhancements. In addition, we’re getting 
 our WordPress plugins ready for the upcoming High Performance Order Storage feature in WooCommerce 7.1+. Check it out! 
-Read more about what’s new in Yoast SEO Premium 19.5 in our release post in English or our release post in Spanish!
+Read more about what’s new in Yoast SEO Premium 19.5 in our [release post in English](https://yoa.st/release-8-11-22) or 
+our [release post in Spanish](https://yoa.st/release-8-11-22-spanish)!
 
 #### Other
 

@@ -58,6 +58,8 @@ function processSection(section, plugin) {
 	const content = section
 		.replace(/(\n|^)## .*/, '')
 		.replace( /Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?/, '' )
+		.replace( /####/, "<!--truncate-->\n##" )
+		.replace( /####/g, '##' )
 		.trim();
 
 	return {
@@ -70,9 +72,7 @@ date: ${date}
 
 # ${plugin} ${title.replace(/ \(.*\)/, '')}
 
-<!--truncate-->
-
-${content.replace(/####/g, '##')}
+${content}
 `,
 	};
 }

@@ -1,3 +1,11 @@
+## 17/11/2022 13:10 (UTC)
+
+Release date: 2022-11-17
+
+#### Enhancements
+
+* Adds the included trial days on the subscription offer when a merchant is still eligible for a trial.
+
 ## 14/11/2022 09:11 (UTC)
 
 Release date: 2022-11-14 09:11

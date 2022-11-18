@@ -22,7 +22,7 @@ function ChangelogItemHeaderTitle({className}) {
                 frontMatter.keywords + ' ' + title
             ) : (
                 <Link to={permalink}>
-                    {frontMatter.keywords} {title}
+                        {title}
                 </Link>
             )}
         </TitleHeading>

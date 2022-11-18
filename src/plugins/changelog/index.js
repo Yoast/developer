@@ -55,12 +55,17 @@ function processSection(section, plugin) {
 
 	publishTimes.add( date );
 
-	const content = section
+	let content = section
 		.replace(/(\n|^)## .*/, '')
 		.replace( /Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?/, '' )
-		.replace( /####/, "<!--truncate-->\n##" )
-		.replace( /####/g, '##' )
 		.trim();
+
+	if ( content.length < 1000 ) {
+		content = content.replace( /####/g, '###' )
+	} else {
+		content = content.replace( /####/, "<!--truncate-->\n##" )
+		content = content.replace( /####/g, "##" )
+	}
 
 	return {
 		title: title.replace(/ \(.*\)/, ''),

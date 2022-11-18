@@ -60,7 +60,7 @@ Release date: 2022-10-19 07:56
 Release date: 2022-10-10 08:44
 
 #### Enhancements
-* 
+
 * Updated to the latest Shopify App Bridge version.
 * Adds support for the new Shopify admin domain  `admin.shopify.com `.
 * Adds support for visiting and sharing the app url to go to specific pages inside the app.
@@ -71,7 +71,7 @@ Release date: 2022-10-10 08:44
 
 #### Bugfixes
 
-* Adds support of  `&lt;br/&gt; ` tags in content optimization editor.
+* Adds support of `<br/> ` tags in content optimization editor.
 
 ## 07/10/2022 07:39 (UTC)
 
@@ -120,7 +120,7 @@ Release date: 2022-09-14 11:31
 
 #### Enhancements
 
-* Improves  `Offers ` /  `priceSpecification ` Schema output to match Google’s recent changes to their guidelines.
+* Improves `Offers` / `priceSpecification` Schema output to match Google’s recent changes to their guidelines.
 
 ## 09/09/2022 08:01 (UTC)
 
@@ -152,7 +152,7 @@ Release date: 2022-09-02 12:26
 
 #### Enhancements
 
-* Enhances the SEO output by adding a  `og:price:standard_amount ` for discounted products. This is something that Pinterest could use to enhance their product pins.
+* Enhances the SEO output by adding a `og:price:standard_amount` for discounted products. This is something that Pinterest could use to enhance their product pins.
 
 ## 30/08/2022 18:39 (UTC)
 
@@ -188,7 +188,7 @@ Release date: 2022-08-09 08:32
 
 #### Bugfixes
 
-* Fixes a bug where  `style ` tags with a  `type ` attribute in the content would result in an empty content editor in the Optimize module.
+* Fixes a bug where `style` tags with a `type` attribute in the content would result in an empty content editor in the Optimize module.
 
 ## 29/07/2022 10:00 (UTC)
 
@@ -250,8 +250,8 @@ Release date: 2022-07-13 07:59
 #### Bugfixes
 
 * Fixes a bug where items in lists were not excluded for the readability assessment that checks whether consecutive sentences do not begin with the same words in Collections, Posts and Pages.
-* Fixes a bug where some words were not correctly recognized when preceded or followed by a non-breaking space ( `&nbsp; `).
-* Fixes a bug which caused the Spanish transition word  `para ilustrar ` to not be recognized transition words assessment.
+* Fixes a bug where some words were not correctly recognized when preceded or followed by a non-breaking space (`&nbsp;`).
+* Fixes a bug which caused the Spanish transition word `para ilustrar` to not be recognized transition words assessment.
 
 #### Other
 
@@ -279,7 +279,7 @@ Release date: 2022-06-15 14:15
 
 #### Enhancements
 
-* Enhances the Schema.org graph by adding the  `gtin ` property to the  `Offer ` piece to provide the product (variant) barcode.
+* Enhances the Schema.org graph by adding the `gtin` property to the `Offer` piece to provide the product (variant) barcode.
 
 ## 15/06/2022 09:25 (UTC)
 
@@ -295,7 +295,7 @@ Release date: 2022-06-09 12:29
 
 #### Bugfixes
 
-* Fixes a bug in our theme SEO improvement service by ignoring Liquid code in between  `{% raw %} ` and  `{% endraw %} ` tags.
+* Fixes a bug in our theme SEO improvement service by ignoring Liquid code in between `{% raw %}` and `{% endraw %}` tags.
 
 ## 08/06/2022 13:21 (UTC)
 
@@ -460,9 +460,9 @@ Release date: 2022-03-24 13:04
 
 #### Enhancements
 
-* Adds  `Price: Maximum ` ( `%%price_max%% `) replacement variable to products.
-* Adds  `Price: Minimum ` ( `%%price_min%% `) replacement variable to products.
-* Adds  `Price ` ( `%%price%% `) replacement variable to products.
+* Adds `Price: Maximum` (`%%price_max%%`) replacement variable to products.
+* Adds `Price: Minimum` (`%%price_min%%`) replacement variable to products.
+* Adds `Price` (`%%price%%`) replacement variable to products.
 
 ## 15/03/2022 14:42 (UTC)
 
@@ -470,7 +470,7 @@ Release date: 2022-03-15 14:42
 
 #### Bugfixes
 
-* Fixes a bug where we're stripping  `script ` and  `style ` tags from the HTML of the content.
+* Fixes a bug where we're stripping `script` and `style` tags from the HTML of the content.
 
 ## 15/03/2022 11:45 (UTC)
 
@@ -575,7 +575,7 @@ Release date: 2022-02-16 09:08
 #### Enhancements
 
 * The Yoast SEO breadcrumbs on the default product view no longer show the default variant.
-* Improves the  `%%title%% ` replacement on the default product view to no longer include the default variant.
+* Improves the `%%title%%` replacement on the default product view to no longer include the default variant.
 * Allows the WebPage and Website schema parts to be managed by Yoast even if the Organization part is not being managed by Yoast.
 
 ## 14/02/2022 15:39 (UTC)
@@ -618,7 +618,7 @@ Release date: 2022-02-10 09:00
 
 #### Bugfixes
 
-* Fixes a bug where the  `myshopify ` domain instead of the primary domain was used in the internal links assessment and the Google preview.
+* Fixes a bug where the `myshopify` domain instead of the primary domain was used in the internal links assessment and the Google preview.
 * Excludes URLs from the characters count in Japanese.
 * Improves stemming of Turkish word forms with an apostrophe.
 
@@ -667,4 +667,4 @@ Release date: 2022-01-18 17:45
 #### Bugfixes
 
 * Fixes a bug where fetching the list of products filtered by scores would exceed the Shopify API limits, when only few products have been indexed for a shop.
-* Ensures that  `WebSite ` and  `WebPage ` schema pieces will always be output (providing that they're valid).
+* Ensures that `WebSite` and `WebPage` schema pieces will always be output (providing that they're valid).

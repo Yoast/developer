@@ -17,9 +17,26 @@ Generally speaking, we advise people to create a `~/Projects/Yoast` folder to ke
 *   Clone plugins on an environment-by-environment basis, which allows you to have various versions of the same plugin on your system, without them (possibly) conflicting.
 *   Clone all plugins into a single directory and symlink them to the development environments. This results in the same version (branch) running across all development environments that were linked.
 
-**Note: The first option is preferable, as there's a lower chance of messing things up.**
+:::note
+The first option is preferable, as there's a lower chance of messing things up.
+:::
 
-In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the Docker directory and navigate to `<your docker directory>/plugins` where you can clone the various plugin repositories.
+### Cloning plugins on an environment-by-environment basis
+If you use Local as your development environment of choice, you can follow these steps to clone the plugins to your Local site's plugins directory.
+
+:::note
+These steps assume that you have already [installed Local, and have set up a site within Local to use for plugin development](./docs/development/environment/tools/#local).
+:::
+
+#### On Mac
+* Clone the plugin(s) you want to develop to `~/Applications/Local\ Sites/<site-name>/app/public/wp-contents/plugins`, where `<site-name>` is the name of the Local site you want to use for plugin development.
+
+### Cloning plugins into a single directory and symlinking them
+If you use Local as your development environment of choice, you can follow these steps to clone the plugins to a separate directory and 
+
+#### On Mac
+* Clone the plugins that you want to develop to a single folder of choice.
+* [Symlink this folder](https://www.howtogeek.com/297721/how-to-create-and-use-symbolic-links-aka-symlinks-on-a-mac/) to the `~/Applications/Local\ Sites/<site-name>/app/public/wp-contents/plugins` folder, where `<site-name>` is the name of the Local site you want to use for plugin development. 
 
 ## Set up PHPUnit
 

@@ -46,8 +46,13 @@ Documentation on how to configure your local Git setup and how to add your SSH k
 
 [Add a global git ignore file](/development/standards/version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
 
-### Docker
-At Yoast, we make use of [Docker](https://docker.com) as the foundation for our development setup. To get developers up and running faster, we created [our own development setup](https://github.com/Yoast/plugin-development-docker), based on Docker, that you can freely use.
+### Local
+At Yoast, we make use of [Local](https://localwp.com/) as the foundation for our development setup. 
+
+* Go to Flywheel's preferences » Advanced » Router Mode and set it to "Site Domains".
+* Create a new site, call it basic.wordpress.test.
+* Optional: make sure your browser / system trusts the SSL certificate of the newly created site.
+  * For macOS that needs a few steps, [docs here](https://localwp.com/help-docs/ssl/managing-local-sites-ssl-certificate-in-macos/).
 
 ### Sequel Pro
 To manage and search your database in an easy and quick way, Sequel Pro is the tool to use. You can download the latest version from: [https://www.sequelpro.com/](https://www.sequelpro.com/)

@@ -32,7 +32,7 @@ These steps assume that you have already [installed Local, and have set up a sit
 * Clone the plugin(s) you want to develop to `~/Applications/Local\ Sites/<site-name>/app/public/wp-contents/plugins`, where `<site-name>` is the name of the Local site you want to use for plugin development.
 
 ### Cloning plugins into a single directory and symlinking them
-If you use Local as your development environment of choice, you can follow these steps to clone the plugins to a separate directory and 
+If you use Local as your development environment of choice, you can follow these steps to clone the plugins to a separate directory and symlink them to your Local site's plugin directory.
 
 #### On Mac
 * Clone the plugins that you want to develop to a single folder of choice.

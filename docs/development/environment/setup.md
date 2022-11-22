@@ -102,17 +102,6 @@ All our publicly accessible repositories can be [found on GitHub](https://github
 * Install [the Yoast Test helper plugin](https://wordpress.org/plugins/yoast-test-helper/).
 * Enable "Development mode" in Yoast Test helper's settings. This will enable Indexable indexation.
 
-### Generating fake data for testing
-You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
-
-* Make use of the _Open site shell_ button in Local by Flywheel.
-* Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
-* Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
-  * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
-    * (See [how to run a WP-CLI command on one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
-* Optional: follow [the _WooCommerce_ instructions](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
-* To exit the shell use: `exit`.
-
 ### Working on JavaScript used in the plugins
 If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:
 
@@ -129,6 +118,17 @@ This ensures that Travis uses the correct branches when building.
 If you're planning on working on the JavaScript code, _outside_ of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things up and running.
 
 A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) is also available.
+
+## Generating fake data for testing
+You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
+
+* Make use of the _Open site shell_ button in Local by Flywheel.
+* Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
+* Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
+  * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
+    * (See [how to run a WP-CLI command on one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
+* Optional: follow [the _WooCommerce_ instructions](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
+* To exit the shell use: `exit`.
 
 ## Now what?
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

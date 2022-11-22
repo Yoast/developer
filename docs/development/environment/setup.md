@@ -109,8 +109,8 @@ You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to gener
 * Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
 * Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
   * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
-    * (See [how to run a WP-CLI command one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
-* Optional: follow [the _WooCommerce_ instruction](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
+    * (See [how to run a WP-CLI command on one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
+* Optional: follow [the _WooCommerce_ instructions](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
 * To exit the shell use: `exit`.
 
 ### Working on JavaScript used in the plugins

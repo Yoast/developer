@@ -25,7 +25,7 @@ The first option is preferable, as there's a lower chance of messing things up.
 If you use Local as your development environment of choice, you can follow these steps to clone the plugins to your Local site's plugins directory.
 
 :::note
-These steps assume that you have already [installed Local, and have set up a site within Local to use for plugin development](./docs/development/environment/tools/#local).
+These steps assume that you have already [installed Local, and have set up a site within Local to use for plugin development](tools.md#local).
 :::
 
 #### On Mac

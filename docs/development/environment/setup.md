@@ -80,7 +80,7 @@ Configure your PHPUnit configuration in PhpStorm by going to `Edit Configuration
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
 ## Installing the plugins
-To have the complete set of Yoast plugins, clone the following repositories in your: `/plugins/` folder.
+To have the complete set of Yoast plugins, clone the following repositories in your `/plugins/` folder.
 
 Yoast SEO with the addons:
 
@@ -98,11 +98,14 @@ Additional plugins:
 
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
 
-### Generating fake data for testing
+### Enable indexable indexation
+* Install [the Yoast Test helper plugin](https://wordpress.org/plugins/yoast-test-helper/).
+* Enable "Development mode" in Yoast Test helper's settings. This will enable Indexable indexation.
 
+### Generating fake data for testing
 You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
 
-* Make use of the Open site shell button in Local by Flywheel.
+* Make use of the _Open site shell_ button in Local by Flywheel.
 * Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
 * Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
   * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.

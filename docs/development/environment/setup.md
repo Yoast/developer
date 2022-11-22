@@ -80,7 +80,7 @@ Configure your PHPUnit configuration in PhpStorm by going to `Edit Configuration
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
 ## Installing the plugins
-To have the complete set of Yoast plugins, clone the following repositories in your: `<your docker directory/plugins/` folder.
+To have the complete set of Yoast plugins, clone the following repositories in your: `/plugins/` folder.
 
 Yoast SEO with the addons:
 
@@ -97,6 +97,18 @@ Additional plugins:
 *   [https://github.com/Yoast/yoastseo-amp](https://github.com/Yoast/yoastseo-amp) - Provide additional functionality for The [AMP plugin](https://nl.wordpress.org/plugins/amp/)
 
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
+
+### Generating fake data for testing
+
+You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
+
+* Make use of the Open site shell button in Local by Flywheel.
+* Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
+* Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
+  * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
+    * (See [how to run a WP-CLI command one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
+* Optional: follow [the _WooCommerce_ instruction](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
+* To exit the shell use: `exit`.
 
 ### Working on JavaScript used in the plugins
 If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:

@@ -1,4 +1,4 @@
-## 19.10
+= 19.10 =
 
 Release date: 2022-11-08
 
@@ -20,7 +20,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
-## 19.9
+= 19.9 =
 
 Release date: 2022-10-25
 
@@ -48,7 +48,7 @@ Yoast SEO 19.9 is out today. Yoast SEO already supports the Schema necessary for
 * Adds a `wpseo_primary_category_admin_pages` filter to enable the use of the primary category in the post URL of additional admin pages besides the default ones. Props to [@ssvet](https://github.com/ssvet).
 * Reinstates the `wpseo_twitter_card_type` filter that was wrongly deprecated in 19.8.
 
-## 19.8
+= 19.8 =
 
 Release date: 2022-10-11
 
@@ -76,7 +76,7 @@ Yoast SEO 19.8 is out now! In this release, we’ve mainly focused on enhancemen
 
 * Deprecates the `wpseo_twitter_card_type` filter.
 
-## 19.7.2
+= 19.7.2 =
 
 Release date: 2022-10-05
 
@@ -84,7 +84,7 @@ Release date: 2022-10-05
 
 * Removes the cURL minimal version check from the Site Health page, as it was causing issues.
 
-## 19.7.1
+= 19.7.1 =
 
 Release date: 2022-09-20
 
@@ -96,7 +96,7 @@ Release date: 2022-09-20
 
 * Changes the copy in the `robots.txt` comment.
 
-## 19.7
+= 19.7 =
 
 Release date: 2022-09-20
 
@@ -116,7 +116,7 @@ Yoast SEO 19.7 is out today! We’ve rolled out some general enhancements, bug f
 
 * Adds new disabled toggles to the Crawl settings tab in the General page.
 
-## 19.6.1
+= 19.6.1 =
 
 Release date: 2022-08-31
 
@@ -124,7 +124,7 @@ Release date: 2022-08-31
 
 * Fixes compliance with the wordpress.org plugin guidelines.
 
-## 19.6
+= 19.6 =
 
 Release date: 2022-08-23
 
@@ -141,7 +141,7 @@ Yoast SEO 19.6 is out today! In this release, we’ve rolled out some general en
 * Adds a "Search engines discouraged" notification in the Yoast SEO dashboard when the "Discourage search engines from indexing this site" WordPress setting is turned on.
 * Removes the Ryte integration and deprecates all the relevant classes. More information about this can be found at [yoa.st/ryte-deprecation](https://yoa.st/ryte-deprecation).
 
-## 19.5.1
+= 19.5.1 =
 
 Release date: 2022-08-09
 
@@ -149,7 +149,7 @@ Release date: 2022-08-09
 
 * Fixes a bug where a fatal error would be thrown on the front-end when Yoast SEO 19.5 was used with an older version of Yoast SEO Premium.
 
-## 19.5
+= 19.5 =
 
 Release date: 2022-08-09
 
@@ -173,7 +173,7 @@ Yoast SEO 19.5 is out today! This release includes more fixes and enhancements t
 * Hides the \"Save changes\" button in the \"Integrations\" tab in the \"Yoast SEO &gt; General\" page.
 * Sets the minimum supported WordPress version to 5.9.
 
-## 19.4
+= 19.4 =
 
 Release date: 2022-07-26
 
@@ -194,7 +194,7 @@ Yoast SEO 19.4 is out today! In this release, we’ve rolled out some improvemen
 * Fixes a bug where a notice was shown indicating that the Flesch reading ease score has moved from the readability analysis to the Insights for languages that do not have Flesch reading ease support.
 * Fixes a bug where an `Undefined index: SERVER_NAME` warning would be triggered in cronjobs or WP CLI commands.
 
-## 19.3
+= 19.3 =
 
 Release date: 2022-07-12
 
@@ -221,7 +221,7 @@ Yoast SEO 19.3 is out today! In this release, we’ve rolled out some improvemen
 * Fixes a bug where the desktop preview would show a truncated title, while the title length progress bar and title width assessment would indicate that the title length was still within the limits.
 * Fixes a bug where the keyphrase density assessment errors, or fails to mark the found keyphrases in the text, when using keyphrases that include some regular expression control characters, for example brackets.
 
-## 19.2
+= 19.2 =
 
 Release date: 2022-06-28
 
@@ -256,7 +256,7 @@ Yoast SEO 19.2 is out today! In this release, we've rolled out some improvements
 
 * Renames the 'Keyphrase in title' SEO assessment to 'Keyphrase in SEO title'.
 
-## 19.1.0
+= 19.1.0 =
 
 Release date: 2022-06-14
 
@@ -280,7 +280,7 @@ Yoast SEO 19.1 is out today! In this release, we've rolled out some improvements
 * Adds new disabled toggles to the Crawl settings tab in the General page.
 * Improves handling of OAuth errors in the Wincher integration and clears refresh tokens that seem to be invalid.
 
-## 19.0
+= 19.0 =
 
 Release date: 2022-05-31
 
@@ -309,7 +309,7 @@ Say hi to Yoast SEO 19.0! This release helps make your sitemaps available to Bin
 * Deprecates the configuration workout classes.
 * Sets the WordPress tested up to version to 6.0.
 
-## 18.9
+= 18.9 =
 
 Release date: 2022-05-17
 
@@ -333,7 +333,7 @@ Yoast SEO 18.9 is out now! In this release, we have improved the first experienc
 * Adds a `Premium` badge to the Workouts menu item.
 * Updates the look of the Accounts tab in the Social page.
 
-## 18.8
+= 18.8 =
 
 Release date: 2022-05-06
 
@@ -343,7 +343,7 @@ Did you catch the latest update from Google? Today they made some small changes 
 
 * Removes XML sitemap image properties `title` and `caption` following deprecation by Google.
 
-## 18.7
+= 18.7 =
 
 Release date: 2022-05-03
 
@@ -360,7 +360,7 @@ Meet Yoast SEO 18.7: a small Yoast SEO update, fixing several bugs and adding en
 * Fixes a bug in the Schema where the `thumbnailUrl` attribute of the `Article` object would be wrong if the post had an Open Graph or Twitter image.
 * Fixes typos of several types in brand names and the word metadata. Props to [NekoJonez](https://github.com/NekoJonez).
 
-## 18.6
+= 18.6 =
 
 Release date: 2022-04-19
 
@@ -377,7 +377,7 @@ Meet Yoast SEO 18.6: a small Yoast SEO update, fixing a number of bugs, includin
 
 * Adds a disabled Wincher integration toggle to the Network admin/Multisite `Integrations` tab.
 
-## 18.5.1
+= 18.5.1 =
 
 Release date: 2022-04-05
 
@@ -386,7 +386,7 @@ Release date: 2022-04-05
 * Fixes a bug where a fatal error would occur on the site health page if WordFence was installed and active.
 * Fixes a bug where a fatal error would occur on PHP 5.6.
 
-## 18.5
+= 18.5 =
 
 Release date: 2022-04-05
 
@@ -411,7 +411,7 @@ Say hi to Yoast SEO 18.5! You'll find a number of fixes and enhancements. We've 
 
 * Sets the minimum required WordPress version to 5.8.
 
-## 18.4.1
+= 18.4.1 =
 
 Release date: 2022-03-22
 
@@ -419,7 +419,7 @@ Release date: 2022-03-22
 
 * Reverts the 18.4 release due to errors in the WordProof integration.
 
-## 18.4
+= 18.4 =
 
 Release date: 2022-03-22
 
@@ -438,7 +438,7 @@ In Yoast SEO 18.4, we're launching a new integration with an innovative new serv
 
 * Sets the minimum required WordPress version to 5.8.
 
-## 18.3
+= 18.3 =
 
 Release date: 2022-03-08
 
@@ -461,7 +461,7 @@ Meet Yoast SEO 18.3! For this release, we did another round of fixes and improve
 
 * Fixes an incompatibility with Elementor 3.6.0 where the React contents of the Yoast tab in Elementor were not rendered.
 
-## 18.2
+= 18.2 =
 
 Release date: 2022-02-22
 
@@ -482,7 +482,7 @@ Yoast SEO 18.2 is out today! This release includes more fixes and enhancements t
 * Adds a filter to enable/disable creating indexables: `Yoast\WP\SEO\should_index_indexables`
 * Adds an `__isset` magic method to ease working with helper surfaces. Props to @nlemoine.
 
-## 18.1
+= 18.1 =
 
 Release date: 2022-02-08
 
@@ -502,7 +502,7 @@ Yoast SEO 18.1 is out today! This new release brings another round of bug fixes,
 
 * Switches from packaged script translations to those from wordpress.org in order to reduce ZIP size and disk usage.
 
-## 18.0
+= 18.0 =
 
 Release date: 2022-01-25
 
@@ -530,7 +530,7 @@ Yoast SEO 18.0 is out now! This release contains a number of bug fixes and a cou
 * Sets the WordPress tested up to version to 5.9.
 * Sets WooCommerce tested up to version to 6.1.
 
-## 17.9
+= 17.9 =
 
 Release date: 2022-01-11
 
@@ -567,7 +567,7 @@ Yoast SEO 17.9 is now available! Yoast SEO now comes with a keyphrase tracking t
 * Reverts the removal of the deprecated `WPSEO_Frontend` class.
 * Changes the font size of the alerts from 14px to 13px.
 
-## 17.8
+= 17.8 =
 
 Release date: 2021-12-14
 
@@ -593,7 +593,7 @@ Yoast SEO 17.8 is out now and ready for you to download. In this release, we fix
 * Prevents SEO managers from changing the site description in the configuration workout.
 * Optimizes and compresses several .png images to reduce their size. Props to [lowwebtech](https://github.com/lowwebtech).
 
-## 17.7.1
+= 17.7.1 =
 
 Release date: 2021-12-01
 
@@ -603,7 +603,7 @@ Release date: 2021-12-01
 * Fixes a bug where Yoast addons would not inherit the auto-update settings from Yoast SEO.
 * Fixes a bug where changing the auto-update settings of another plugin could stop Yoast addons from being auto-updated.
 
-## 17.7
+= 17.7 =
 
 Release date: 2021-11-30
 
@@ -621,7 +621,7 @@ Meet Yoast SEO 17.7! This release introduces a new configuration workout to help
 * Fixes a bug where some post types would cause a PHP warning about custom fields.
 * Fixes a bug where memory issues could occur when indexing a site with large amounts of terms assigned to many posts.
 
-## 17.6
+= 17.6 =
 
 Release date: 2021-11-16
 
@@ -643,7 +643,7 @@ Yoast SEO 17.6 is out today! This new release brings several fixes and enhanceme
 * The plugin will no longer block installation on PHP 8.0+ when installed via Composer.
 * Deprecates the `wpseo_schema_article_post_types` filter.
 
-## 17.5
+= 17.5 =
 
 Release date: 2021-11-02
 
@@ -662,7 +662,7 @@ Say hello to Yoast SEO 17.5! Or maybe γεια would fit better, as this release
 * Fixes a bug where the analysis highlight button would be visible on tags, categories, and custom taxonomies even though we don't support highlighting for those types.
 * Fixes a bug where links to items on the same page were incorrectly identified as links to other pages, leading to an incorrect result on the Link keyphrase assessment.
 
-## 17.4
+= 17.4 =
 
 Release date: 2021-10-19
 
@@ -678,7 +678,7 @@ Yoast SEO 17.4 is out today! This release comes with several fixes and enhanceme
 * Fixes a bug where a duplicate canonical tag was output for web stories created with the Web Stories plugin. Props to [swissspidey](https://github.com/swissspidy).
 * Fixes a bug where a race condition could occur that caused the rewrite rules to be flushed on every page request when using a persistent cache like Redis. This may speed up your site’s load times if it’s using persistent caching.
 
-## 17.3
+= 17.3 =
 
 Release date: 2021-10-05
 
@@ -699,7 +699,7 @@ Yoast SEO 17.3 is out today! This release includes general bug fixes to some SEO
 
 * Adds version management to our indexables framework; this makes the SEO Optimization process more robust, and prepares for future features.
 
-## 17.2.1
+= 17.2.1 =
 
 Release date: 2021-09-28
 
@@ -707,7 +707,7 @@ Release date: 2021-09-28
 
 * Fixes a bug that could lead to a fatal error in the breadcrumbs block for auto-draft posts.
 
-## 17.2
+= 17.2 =
 
 Release date: 2021-09-21
 
@@ -727,7 +727,7 @@ Yoast SEO 17.2 is out now! Yoast SEO comes with many powerful tools that will he
 
 * Loads our help beacon on the workouts page.
 
-## 17.1
+= 17.1 =
 
 Release date: 2021-09-07
 
@@ -742,7 +742,7 @@ Yoast SEO 17.1 is out today! In this release, you’ll find a couple of small ch
 * Stops warning users when they have short titles, because concise, specific titles are less likely to be altered by Google.
 * Removes the `|` and `~` separator options from titles, because Google frequently replaces these in search results.
 
-## 17.0
+= 17.0 =
 
 Release date: 2021-08-24
 
@@ -763,7 +763,7 @@ Say hello to Yoast SEO 17.0! This release includes some behind-the-scenes improv
 
 * Updates the message that recommends you to install WooCommerce SEO when WooCommerce is installed.
 
-## 16.9
+= 16.9 =
 
 Release date: 2021-08-10
 
@@ -783,7 +783,7 @@ Meet Yoast SEO 16.9: This release comes with two new image SEO assessments and i
 
 * Fixes a bug where the `robots` meta tag could have incorrect values if users called the `wp_robots` filter to set certain values to `false`. Props to [Roy-Orbison](https://github.com/Roy-Orbison).
 
-## 16.8
+= 16.8 =
 
 Release date: 2021-07-27
 
@@ -804,7 +804,7 @@ Yoast SEO 16.8 is out today! This release comes with an updated readability anal
 * Fixes a bug where paginated static frontpages would fail to output a valid breadcrumb.
 * Fixes a bug where the image selectors in the search appearance and social settings did not have a screen reader text.
 
-## 16.7
+= 16.7 =
 
 Release date: 2021-07-13
 
@@ -820,7 +820,7 @@ Meet Yoast SEO 16.7! This release comes with extended support for headless WordP
 * Fixes a bug where the SEO optimization could run indefinitely when the database contained at least 25 faulty indexables without a permalink.
 * Fixes a bug where the Advanced section and Schema tab wouldn't be visible in the metabox for Editors. Props to [jordif](https://github.com/jordif).
 
-## 16.6.1
+= 16.6.1 =
 
 Release date: 2021-07-01
 
@@ -828,7 +828,7 @@ Release date: 2021-07-01
 
 * Fixes a bug where many Premium editor features would not work if Yoast SEO was updated to version 16.6 while Yoast SEO Premium was still on version 16.5 or lower.
 
-## 16.6
+= 16.6 =
 
 Release date: 2021-06-29
 
@@ -849,7 +849,7 @@ Yoast SEO 16.6 comes with a new round of improvements and fixes. We’ve updated
 * Fixes a bug where using the `wpseo_schema_{@type}` filter would result in a fatal error.
 * Fixes a bug where the last breadcrumb item was stripped in breadcrumb Schema output on subsequent pages of a static posts page.
 
-## 16.5
+= 16.5 =
 
 Release date: 2021-06-15
 
@@ -878,7 +878,7 @@ Yoast SEO 16.5 is out today! This release comes with a number of fixes and enhan
 
 * Moves the 'Force rewrite titles' toggle into a separate paper in the General Search Appearance settings.
 
-## 16.4
+= 16.4 =
 
 Release date: 2021-06-01
 
@@ -904,7 +904,7 @@ Meet Yoast SEO 16.4: This brand-new version of Yoast SEO comes with a rewritten 
 
 * Adds a missing space to the feedback text in the keyphrase in introduction assessment.
 
-## 16.3
+= 16.3 =
 
 Release date: 2021-05-18
 
@@ -936,7 +936,7 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.
 
-## 16.2
+= 16.2 =
 
 Release date: 2021-04-28
 
@@ -961,7 +961,7 @@ Say hi to Yoast SEO 16.2! This release focuses on improving stability and fixing
 
 * Adds the `'wpseo_enable_editor_features_' . $post_type` filter to allow users to show the Yoast SEO metabox on non-public post types if these are accessible. Props to [jondcampbell](https://github.com/jondcampbell).
 
-## 16.1.1
+= 16.1.1 =
 
 Release date: 2021-04-06
 
@@ -969,7 +969,7 @@ Release date: 2021-04-06
 
 * Fixes a bug where a fatal error would be thrown when creating a new Elementor template or editing an existing one.
 
-## 16.1
+= 16.1 =
 
 Release date: 2021-04-06
 
@@ -995,7 +995,7 @@ Yoast SEO 16.1 is out today! It features several enhancements and fixes that mak
 * Fixes a bug where the breadcrumbs aren't updated properly when editing a post via the quick edit.
 * Fixes a bug where the rewrite rules would not always be flushed on plugin activation.
 
-## 16.0.2
+= 16.0.2 =
 
 Release date: 2021-03-18
 
@@ -1003,7 +1003,7 @@ Release date: 2021-03-18
 
 * Changes the deactivation prevention text on the Plugins page from ‘Deactivate Yoast SEO Premium first’ to ‘Required by Yoast SEO Premium’ to avoid confusion.
 
-## 16.0.1
+= 16.0.1 =
 
 Release date: 2021-03-16
 
@@ -1011,7 +1011,7 @@ Release date: 2021-03-16
 
 * Fixes a bug where in rare cases incorrect usage of `WP_Query` could lead to incorrect SEO data.
 
-## 16.0
+= 16.0 =
 
 Release date: 2021-03-16
 
@@ -1027,7 +1027,7 @@ Yoast SEO 16.0: The Sweet Sixteen release is out! It comes with several fixes an
 
 * Sets the WordPress tested up to version to 5.7 and minimum supported WordPress version to 5.6.
 
-## 15.9.2
+= 15.9.2 =
 
 Release date: 2021-03-11
 
@@ -1035,7 +1035,7 @@ Release date: 2021-03-11
 
 * Fixes a bug where the order of the robots values was suboptimal when running WordPress 5.7. Note that the order has no effect on how the values are interpreted.
 
-## 15.9.1
+= 15.9.1 =
 
 Release date: 2021-03-04
 
@@ -1056,7 +1056,7 @@ Welcome to Yoast SEO 15.9.1! This release contains an improvement for the FAQ bl
 * Ensures compatibility with WordPress Core's `robots` meta tag by hooking into the `wp_robots` filter and using our settings there.
 * Enables/disables auto-updates for the Yoast Woocommerce, News, Video and Local SEO plugins when auto-updates for Yoast SEO are enabled/disabled.
 
-## 15.9
+= 15.9 =
 
 Release date: 2021-02-23
 
@@ -1072,7 +1072,7 @@ Yoast SEO 15.9 is out! This release comes with performance improvements and gene
 
 * Fixes a bug where the disabled style of the switch toggles didn't look right.
 
-## 15.8
+= 15.8 =
 
 Release date: 2021-02-10
 
@@ -1094,7 +1094,7 @@ Say hi to Yoast SEO 15.8! This release comes with a brand-new breadcrumbs block 
 * Fixes a bug where paginated WooCommerce shop pages did not have the right canonical.
 * Fixes a bug where custom capabilities could malfunction due to a race condition. Props to [Jerome Charaoui](https://github.com/jcharaoui).
 
-## 15.7
+= 15.7 =
 
 Release date: 2021-01-26
 
@@ -1121,7 +1121,7 @@ Meet Yoast SEO 15.7! For this release, we thought we’d remind you of the power
 * Changes the wording on the `my.yoast.com` connect error shown in Health Check when a Yoast premium plugin is enabled, to lead with what the user's problem is.
 * Removes the release notification as the added benefit of having it is minimal.
 
-## 15.6.2
+= 15.6.2 =
 
 Release date: 2021-01-12
 
@@ -1129,7 +1129,7 @@ Release date: 2021-01-12
 
 * Fixes a bug where notifications in the notification center would not be dismissible on sites using FastCGI.
 
-## 15.6.1
+= 15.6.1 =
 
 Release date: 2021-01-12
 
@@ -1141,7 +1141,7 @@ Release date: 2021-01-12
 
 * Adjusts the default words per minute for the estimated reading time from 250 words per minute to 200 words per minute.
 
-## 15.6
+= 15.6 =
 
 Release date: 2021-01-12
 
@@ -1169,7 +1169,7 @@ Say hi to Yoast SEO 15.6! In the latest version of Yoast SEO, you’ll find a nu
 * Fixes the URL to the Travis badge on our open source GitHub repository. Props to [rodrigoprime](https://github.com/rodrigoprimo).
 * Makes the integration with Web Stories for WordPress more robust. Props to [swissspidy](https://github.com/swissspidy).
 
-## 15.5
+= 15.5 =
 
 Release date: 2020-12-15
 
@@ -1200,7 +1200,7 @@ Out now: Yoast SEO 15.5! You can easily check if you are doing a great job in te
 * Removes support for the Facebook App ID, as Facebook has indicated this feature is deprecated on their side.
 * Adds a notification that tells the user to install and activate the Yoast SEO Multilingual plugin when the WPML plugin is installed and activated.
 
-## 15.4
+= 15.4 =
 
 Release date: 2020-12-02
 
@@ -1225,7 +1225,7 @@ It’s here: Yoast SEO 15.4! In this release, you’ll find a seamless, easy-to-
 * Provides `YoastSEO-&gt;helpers-&gt;options-&gt;get_title_separator()` as an alternative for the previously removed `get_title_separator` method.
 * Adds a `wpseo_previously_used_keyword_active` filter to deactivate the Previously Used Keyword analysis assessment.
 
-## 15.3
+= 15.3 =
 
 Release date: 2020-11-17
 
@@ -1257,7 +1257,7 @@ Out now: Yoast SEO 15.3! In this release, you’ll find full language support fo
 
 * Prevents the SEO optimization process from restarting automatically when the optimization tool is started via the link in the dashboard notification and the Yoast SEO Tools page is reloaded during indexing.
 
-## 15.2.1
+= 15.2.1 =
 
 Release date: 2020-11-02
 
@@ -1265,7 +1265,7 @@ Release date: 2020-11-02
 
 * Fixes a bug where AMP and W3C validation would break because Twitter meta tags would contain 'value' attributes instead of 'content' attributes.
 
-## 15.2
+= 15.2 =
 
 Release date: 2020-10-27
 
@@ -1294,7 +1294,7 @@ Today, we are releasing Yoast SEO 15.2 into the wild. In this release, we've add
 * Removes the "Remind me in 7 days" link from the SEO data optimization notification on the Yoast SEO dashboard, which was shown for large sites with more than 2500 unindexed indexables. The notification can still be hidden by clicking the default dismiss button.
 * Adds the `wpseo_image_data` filter to enable the filtering of image metadata. Props to [spacedmonkey](https://github.com/spacedmonkey).
 
-## 15.1.1
+= 15.1.1 =
 
 Release date: 2020-10-15
 
@@ -1302,7 +1302,7 @@ Release date: 2020-10-15
 
 * Fixes a bug where the indexing button on the Tools page would keep showing up because certain objects would be detected as requiring indexing but would not actually be indexed during the indexing process.
 
-## 15.1
+= 15.1 =
 
 Release date: 2020-10-14
 
@@ -1337,7 +1337,7 @@ Wouldn’t it be cool if you could get keyword data while working on your conten
 
 * Adds a filter (`wpseo_dynamic_permalinks_enabled`) to enable the dynamic permalink fallback. When this fallback is enabled, the indexable-based output of the `permalink` property is overridden by a permalink that is calculated on the fly. Using this is detrimental for performance but may be needed for some site setups.
 
-## 15.0
+= 15.0 =
 
 Release date: 2020-09-29
 
@@ -1368,7 +1368,7 @@ Today, we’re launching Yoast SEO 15.0. This release features some awesome new 
 
 * Adds the `wpseo_sitemap_index_links` filter to enable adding links to the sitemap index. Props to [Joseph Paul](https://github.com/jsphpl).
 
-## 14.9
+= 14.9 =
 
 Release date: 2020-09-01
 
@@ -1399,7 +1399,7 @@ Release date: 2020-09-01
 * Adds the weekly cron schedule to the `cron_schedules` filter to prevent overwriting the one WordPress adds. Props to [peter-webbird](https://github.com/peter-webbird).
 * Merges the googlebot and bingbot meta tag values into the robots meta tag value and deprecates the `Googlebot_Presenter` and `Bingbot_Presenter`.
 
-## 14.8.1
+= 14.8.1 =
 
 Release date: 2020-08-25
 
@@ -1407,7 +1407,7 @@ Release date: 2020-08-25
 
 * Fixes a bug in WordPress itself where script concatenation was causing JavaScript errors, which in turn led to Yoast SEO malfunctioning. This bug was introduced in WordPress 5.5. We’re fixing it by disabling script concatenation entirely.
 
-## 14.8
+= 14.8 =
 
 Release date: 2020-08-18
 
@@ -1439,7 +1439,7 @@ Get ready for a brand new version of Yoast SEO! In this version you'll find new 
 * Sets the minimum WP version to 5.4.
 * Optimizes the logic involved in default filters for our options. This should lead to a very small increase in performance as well as avoiding an edge case where the default filter would be removed.
 
-## 14.7
+= 14.7 =
 
 Release date: 2020-08-05
 
@@ -1473,7 +1473,7 @@ Say hi to Yoast SEO 14.7, chock-full of enhancements to help you with your site'
 * Removes the setting to show the date in the Google Preview. The date will now always be shown in post-type previews.
 * Moves the running of the SEO data indexing process to the Yoast Tools page.
 
-## 14.6.1
+= 14.6.1 =
 
 Release date: 2020-07-21
 
@@ -1485,7 +1485,7 @@ Release date: 2020-07-21
 
 * Fixes a bug where the where all methods were removed from `xmlrpc.php` due to incorrect usage of `add_action` as opposed to `add_filter`.
 
-## 14.6
+= 14.6 =
 
 Release date: 2020-07-21
 
@@ -1519,7 +1519,7 @@ We have a new release for you: Yoast SEO 14.6. This release has some pretty cool
 * Introduces the `--skip-confirmation` argument to run our wp-cli reindex command without confirmation prompt.
 * Yoast SEO had many scripts that relied on many localized objects. In an effort to improve maintainability we have combined all those objects into one: `wpseoScriptData`. `wpseoPostScraperL10n` and `wpseoTermScraperL10n` remain available for backward compatibility. Plugins that tap into our objects will need to update their code.
 
-## 14.5
+= 14.5 =
 
 Release date: 2020-07-08
 
@@ -1536,7 +1536,7 @@ Yoast SEO 14.5 is out today! In this release, we made some changes regarding our
 * Fixes a bug where the WordPress dashboard was slower for very large sites, by caching the number of unindexed posts, terms and post type archives.
 * Fixes a bug where inline link functionality in custom blocks could be missing.
 
-## 14.4.1
+= 14.4.1 =
 
 Release date: 2020-06-23
 
@@ -1545,7 +1545,7 @@ Release date: 2020-06-23
 * Fixes a bug where existing links were no longer editable with Yoast SEO active.
 * Fixes a bug where the editor wouldn't remember `rel` values set on a link after refresh.
 
-## 14.4
+= 14.4 =
 
 Release date: 2020-06-23
 
@@ -1574,7 +1574,7 @@ Sometimes, you have releases that start out small and end up with a substantial 
 
 * Adds headers to the main plugin file for the minimum supported WordPress version and minimum supported PHP version. WordPress will not activate the plugin anymore if incompatibilities are found. Props to [spacedmonkey](https://github.com/spacedmonkey)
 
-## 14.3
+= 14.3 =
 
 Release date: 2020-06-09
 
@@ -1586,7 +1586,7 @@ In every release of Yoast SEO, we fix bugs and find other ways to enhance our co
 * Fixes a bug where the filters `wpseo_metadesc` and `wpseo_title` weren't called with the right argument, which could lead to errors.
 * Fixes a bug where our global CSS variables could conflict with global CSS variables of themes.
 
-## 14.2
+= 14.2 =
 
 Release date: 2020-05-26
 
@@ -1604,7 +1604,7 @@ In today's release, we’ve fixed several issues with breadcrumbs. One of these 
 
 * Optimizes the query used to check if a focus keyphrase has been previously used, by running it against our indexable table.
 
-## 14.1
+= 14.1 =
 
 Release date: 2020-05-13
 
@@ -1654,7 +1654,7 @@ Despite weeks and weeks of testing Yoast SEO 14.0, there were still some people 
 
 * Deletes the unnecessarily created indexables of private taxonomies.
 
-## 14.0.4
+= 14.0.4 =
 
 Release date: 2020-04-30
 
@@ -1662,7 +1662,7 @@ Release date: 2020-04-30
 
 * Fixes a bug where robots meta values defaulted to 0 instead of null because of a [bug in WPDB](https://core.trac.wordpress.org/ticket/12819). This could result in incorrect values for `noindex`, `nofollow` , `noarchive`, `noimageindex` and/or `nosnippet`. In order to purge the wrong data, we need to truncate our tables again. This means you will have to go through the indexing process again. We’re very sorry. For sites with more than 10,000 posts, we advise using the [WP CLI command to do the indexing on the server](https://yoa.st/wp-cli-index).
 
-## 14.0.3
+= 14.0.3 =
 
 Release date: 2020-04-30
 
@@ -1681,7 +1681,7 @@ Release date: 2020-04-30
 
 * Adds the `wpseo_frontend_presentation` filter that can be used by third-party plugins to easily alter all our meta output with 1 single filter.
 
-## 14.0.2
+= 14.0.2 =
 
 Release date: 2020-04-29
 
@@ -1704,7 +1704,7 @@ Because we’ve changed the underlying framework of our Indexables technology, w
 
 * Removes all usages of `PDO` and `mysqli` directly and uses `wpdb` everywhere. This should prevent a lot of errors for database installations that have different encodings or configurations than what is generally seen.
 
-## 14.0.1
+= 14.0.1 =
 
 Release date: 2020-04-28
 
@@ -1724,7 +1724,7 @@ Release date: 2020-04-28
 
 * Yoast SEO needs to have the right to create a database index. If you have restricted the creation of database indexes on your setup, please make sure to temporarily allow Yoast SEO to create indexes before updating.
 
-## 14.0
+= 14.0 =
 
 Release date: 2020-04-28
 
@@ -1781,7 +1781,7 @@ Today is a special day. Today, a project we’ve been working on for a year sees
 * Adds the `/wp-json/yoast/v1/get_head` endpoint to get the our head for an URL. This endpoint takes a single parameter, `url` which should be the absolute URL of the page to get the head for.
 * Removes the minimum and maximum size requirements when outputting `og:image` meta tags.
 
-## 13.5
+= 13.5 =
 
 Release date: 2020-04-14
 
@@ -1796,7 +1796,7 @@ While we’re working on getting [Yoast SEO 14.0](https://yoa.st/3zs) ready for 
 
 * Sets minimum supported WordPress version to 5.3.
 
-## 13.4.1
+= 13.4.1 =
 
 Release date: 2020-04-01
 
@@ -1804,7 +1804,7 @@ Release date: 2020-04-01
 
 * Replaces the use of the deprecated category_link filter by term_link. Props to [Chouby](https://github.com/Chouby)
 
-## 13.4
+= 13.4 =
 
 Release date: 2020-03-31
 
@@ -1815,7 +1815,7 @@ In Yoast SEO 9.0, we launched an innovative new way to analyze your English lang
 * Fixes a bug where the host part of URLs could contain reserved characters, like spaces and brackets. Props to [stodorovic](https://github.com/stodorovic).
 * Fixes a bug where form fields were validated inconsistently.
 
-## 13.3
+= 13.3 =
 
 Release date: 2020-03-17
 
@@ -1836,7 +1836,7 @@ Our current string of releases focusing on improving our code is continuing with
 
 * Changes the cURL Health Check category from `recommended` to `critical`.
 
-## 13.2
+= 13.2 =
 
 Release date: 2020-03-03
 
@@ -1857,7 +1857,7 @@ In Yoast SEO 13.2, you’ll find a number of checks moved to the WordPress Site 
 
 * Removes the "Check headers"-tool from the Yoast Admin bar menu, as it is no longer available.
 
-## 13.1
+= 13.1 =
 
 Release date: 2020-02-18
 
@@ -1879,7 +1879,7 @@ Yoast SEO 13.1 is out today! In this plugin, you’ll find several fixes and enh
 
 * Removes the Search Console item from the admin menu and the toolbar menu.
 
-## 13.0
+= 13.0 =
 
 Release date: 2020-02-04
 
@@ -1890,7 +1890,7 @@ Today, we’re releasing Yoast SEO 13.0. This release is one in a series of rele
 * Hides the Facebook settings when Open Graph is disabled.
 * Adds a success state to the paginated comments Health Check. This means the paginated comments check will also be shown when the paginated comments are set up correctly.
 
-## 12.9.1
+= 12.9.1 =
 
 Release date: 2020-01-21
 
@@ -1898,7 +1898,7 @@ Release date: 2020-01-21
 
 * Fixes a bug where a notification would be shown that Gutenberg was outdated when the latest version of Gutenberg was already installed.
 
-## 12.9
+= 12.9 =
 
 Release date: 2020-01-21
 
@@ -1907,7 +1907,7 @@ Release date: 2020-01-21
 * Renames the 'Snippet preview' to 'Google preview'.
 * Replaces the Google preview mode switcher toggle with radio buttons.
 
-## 12.8.1
+= 12.8.1 =
 
 Release date: 2020-01-15
 
@@ -1916,7 +1916,7 @@ Release date: 2020-01-15
 * Fixes a bug where the Yoast SEO metabox would not be shown on custom post types and taxonomies when the settings of our plugin were never saved before.
 * Fixes a bug where the default titles for custom post types and taxonomies were not shown in the Search Appearance settings when the settings of our plugin were never saved before.
 
-## 12.8
+= 12.8 =
 
 Release date: 2020-01-07
 
@@ -1942,7 +1942,7 @@ Welcome to another year of helping you achieve your goals with your site! Today,
 * Fixes the documentation in the Breadcrumbs file. Props to [alfiosalanitri](https://github.com/alfiosalanitri).
 * Moves the paginated comments notice from the dashboard to WordPress' Site Health screen.
 
-## 12.7.1
+= 12.7.1 =
 
 Release date: 2019-12-12
 
@@ -1950,7 +1950,7 @@ Release date: 2019-12-12
 
 * Fixes a bug where the metabox would be broken when a relative URL was configured as `WP_CONTENT_URL`. Props to [FPCSJames](https://github.com/FPCSJames).
 
-## 12.7
+= 12.7 =
 
 Release date: 2019-12-10
 
@@ -1966,7 +1966,7 @@ Yoast SEO 12.7 is out today — signaling the last release of 2019. This release
 
 * Improves security by adding output escaping.
 
-## 12.6.2
+= 12.6.2 =
 
 Release date: 2019-11-28
 
@@ -1974,7 +1974,7 @@ Release date: 2019-11-28
 
 * Removes the Black Friday banner.
 
-## 12.6.1
+= 12.6.1 =
 
 Release date: 2019-11-27
 
@@ -1983,7 +1983,7 @@ Release date: 2019-11-27
 * Fixes a bug where a fatal error would be thrown when Yoast SEO was used in combination with another plugin or theme containing a class named `Date_Helper`.
 * Fixes a bug where a fatal error would be thrown when an empty string would be passed to the `WPSEO_Date_Helper-&gt;format` method. Props to [@mpolek](https://github.com/mpolek).
 
-## 12.6
+= 12.6 =
 
 Release date: 2019-11-26
 
@@ -2005,7 +2005,7 @@ In Yoast SEO 12.6, we’re activating our new beacon for help documentation. Thi
 * Sets the minimum required WordPress version to 5.2, and the minimum PHP version to 5.6.20.
 * Adds a notification to encourage Internet Explorer 11 users to use another browser as we are no longer supporting that browser.
 
-## 12.5.1
+= 12.5.1 =
 
 Release date: 2019-11-21
 
@@ -2013,7 +2013,7 @@ Release date: 2019-11-21
 
 * Fixes a bug where the time in the `article:published_time` and `article:modified_time` meta tag output and in the `datePublished` and `dateModified` schema output was incorrect.
 
-## 12.5
+= 12.5 =
 
 Release date: 2019-11-13
 
@@ -2028,7 +2028,7 @@ These last couple of months here at Yoast SEO HQ have all been about building be
 
 * Deprecates the Google Search Console.
 
-## 12.4
+= 12.4 =
 
 Release date: 2019-10-29
 
@@ -2049,7 +2049,7 @@ After releasing several updates to our snippet preview in previous releases, Yoa
 * Fixes a bug where a nested paragraph would be present in the "noindex" metabox warning.
 * Fixes a bug where Google+ data would still be exported in the settings export.
 
-## 12.3
+= 12.3 =
 
 Release date: 2019-10-15
 
@@ -2068,7 +2068,7 @@ While some of our checks are independent of languages, Yoast SEO has special ski
 
 * Removes the notification that would be thrown if add-ons with a lower version number than the plugin were installed. The `yoast_plugin_compatibility_notification` method has been deprecated.
 
-## 12.2
+= 12.2 =
 
 Release date: 2019-10-01
 
@@ -2089,7 +2089,7 @@ Yoast SEO 12.2 is a release full of the regular bug fixes and enhancements, but 
 * Combines the 'Newsletter' and 'You might like' steps in the configuration wizard to a step called 'Continue learning'.
 * Removes the colon from the form labels at the settings pages.
 
-## 12.1
+= 12.1 =
 
 Release date: 2019-09-17
 
@@ -2121,7 +2121,7 @@ Yoast SEO 12.1 is out today! It features a couple of changes in order to match t
 * Removes the AMP Glue plugin suggestion from the SEO dashboard when AMP and Yoast SEO are installed. The AMP Glue plugin by Yoast will be discontinued soon.
 * Removes the `Courses` menu-item.
 
-## 12.0
+= 12.0 =
 
 Release date: 2019-09-03
 
@@ -2142,7 +2142,7 @@ Contrary to what the version number might suggest, Yoast SEO 12.0 isn’t a huge
 
 * Fixes a bug where a 404 error would be shown for the second sitemap (and up) of the author sitemaps in case of multiple author sitemaps.
 
-## 11.9
+= 11.9 =
 
 Release date: 2019-08-20
 
@@ -2157,7 +2157,7 @@ Are you ready for another exciting release to round up the Yoast SEO 11 cycle? B
 * Fixes a bug where the image from the configuration wizard notification was missing an empty alt attribute.
 * Fixes a bug where some translations would be missing in the metabox, sidebar, configuration wizard and the help center.
 
-## 11.8
+= 11.8 =
 
 Release date: 2019-08-06
 
@@ -2176,7 +2176,7 @@ Release history tells us that the releases in the months of July and August are 
 * Fixes a bug where the checkbox in the customizer about showing the blog page in the breadcrumbs would do exactly the opposite of what it promised. Props to [@garrett-eclipse](https://github.com/garrett-eclipse).
 * Fixes a bug where the snippet title and meta description fields would still be left-to-right when the site was set to a right-to-left language.
 
-## 11.7
+= 11.7 =
 
 Release date: 2019-07-23
 
@@ -2192,7 +2192,7 @@ By now you probably know the 11.x releases of Yoast SEO are all about Schema. In
 
 * Fixes a bug where the avatar in the knowledge graph settings would incorrectly overwrite the default user profile picture.
 
-## 11.6
+= 11.6 =
 
 Release date: 2019-07-09
 
@@ -2213,7 +2213,7 @@ Yoast SEO 11.6 is out today. Of course, we did the regular round of bug fixing, 
 * Fixes a bug where the eye marker tooltips would break out of the metabox, which would hide the last part of the tooltip text.
 * Fixes a bug where instances of unfiltered HTML would be allowed in term descriptions where they shouldn't be.
 
-## 11.5
+= 11.5 =
 
 Release date: 2019-06-25
 
@@ -2228,7 +2228,7 @@ Yoast SEO 11.5 is out today. This release features a big change that gives you a
 
 * Fixes missing trailing slash for the homepage on post sitemap. Props to [stodorovic](https://github.com/stodorovic).
 
-## 11.4
+= 11.4 =
 
 Release date: 2019-06-12
 
@@ -2257,7 +2257,7 @@ Yoast SEO 11.4 is out today. This release features loads of structured data impr
 
 * Removes a redundant caching call for primary terms.
 
-## 11.3
+= 11.3 =
 
 Release date: 2019-05-28
 
@@ -2283,7 +2283,7 @@ High-time for another release, namely Yoast SEO 11.3. This release features enha
 * Removes redundant `name` attribute from `author` in `Article` schema markup piece.
 * Increases the MyYoast API request timeout from 1 to 5 seconds, to give servers with a less optimal connection to our services more room to fetch the data.
 
-## 11.2.1
+= 11.2.1 =
 
 Release date: 2019-05-16
 
@@ -2296,7 +2296,7 @@ Release date: 2019-05-16
 
 * Introduces a notification that encourages updating to the latest WordPress version.
 
-## 11.2
+= 11.2 =
 
 Release date: 2019-05-15
 
@@ -2321,7 +2321,7 @@ Release date: 2019-05-15
 * Removes the `add_opengraph_namespace` filter because the OGP.me HTML namespace is not used anymore.
 * Decouples the sitemap debug information from the general `WP_DEBUG` development flag and introduces the `YOAST_SEO_DEBUG_SITEMAPS` flag to better control this functionality.
 
-## 11.1.1
+= 11.1.1 =
 
 Release date: 2019-05-06
 
@@ -2335,7 +2335,7 @@ Release date: 2019-05-06
 * Adds a notification to explain why users’ Google Search Console reports are no longer showing any entries. [Read more about the reasons behind this](https://yoa.st/gsc-dep-changelog).
 * Removes the Google Search Console step from the configuration wizard.
 
-## 11.1
+= 11.1 =
 
 Release date: 2019-04-30
 
@@ -2351,7 +2351,7 @@ Release date: 2019-04-30
 * Fixes a bug where the position of the buttons in the FAQ and How-To structured data blocks was compromised when running the development build of Gutenberg.
 * Fixed a bug where social profile settings would be empty because it was relying on the user choosing whether the site represents a company or a person.
 
-## 11.0
+= 11.0 =
 
 Release date: 2019-04-16
 
@@ -2372,7 +2372,7 @@ We've made huge changes to the schema.org markup we output, adding multiple diff
 
 * Fixes an issue where the metabox would not display on term edit pages when running the development build of Gutenberg.
 
-## 10.1.3
+= 10.1.3 =
 
 Release date: 2019-04-04
 
@@ -2384,7 +2384,7 @@ Release date: 2019-04-04
 * Fixes a bug where the server could experience a high load when using external object cache.
 * Fixes the bug where Yoast SEO would contact Yoast.com for license checks on specific Yoast-pages even when no Yoast addons are installed.
 
-## 10.1.2
+= 10.1.2 =
 
 Release date: 2019-04-03
 
@@ -2392,7 +2392,7 @@ Release date: 2019-04-03
 
 * Fixes the bug where Yoast SEO would contact Yoast.com for license checks even when no Yoast addons are installed.
 
-## 10.1.1
+= 10.1.1 =
 
 Release date: 2019-04-02
 
@@ -2400,7 +2400,7 @@ Release date: 2019-04-02
 
 * Fixes a bug where a fatal error can occur on license requests which return an unexpected result.
 
-## 10.1
+= 10.1 =
 
 Release date: 2019-04-02
 
@@ -2428,7 +2428,7 @@ Release date: 2019-04-02
 
 * Removes all functionality that has been deprecated before Yoast SEO 6.1.
 
-## 10.0.1
+= 10.0.1 =
 
 Release date: 2019-03-19
 
@@ -2436,7 +2436,7 @@ Release date: 2019-03-19
 
 * Fixes a bug where network-wide settings were not saved on multisite environments.
 
-## 10.0
+= 10.0 =
 
 Release date: 2019-03-12
 
@@ -2455,7 +2455,7 @@ Release date: 2019-03-12
 * Fixes a bug where backslashes and consecutive double quotes would be removed from the focus keyphrase when saving a post or term.
 * Fixes a bug where backslashes would be removed from the breadcrumb title, focus keyphrase, title or meta description when saving a term.
 
-## 9.7
+= 9.7 =
 
 Release date: 2019-02-26
 
@@ -2476,7 +2476,7 @@ Release date: 2019-02-26
 * Fixes a bug where 'undefined index' warnings would be given when saving a Facebook image.
 * Fixes a bug where the Recalibration Beta could not be loaded in combination with specific server configurations.
 
-## 9.6
+= 9.6 =
 
 Release date: 2019-02-12
 
@@ -2504,7 +2504,7 @@ Content analysis recalibration (beta):
 * Props to [Kingdutch](https://github.com/Kingdutch) for helping improve our open source content analysis library.
 * Improves the redirect upsell when creating redirects in the search console overview.
 
-## 9.5
+= 9.5 =
 
 Release date: 2019-01-22
 
@@ -2529,7 +2529,7 @@ Deprecated:
 
 * Adds a Courses Page showing an overview of the available online courses offered by Yoast Academy.
 
-## 9.4
+= 9.4 =
 
 Release date: 2019-01-08
 
@@ -2574,7 +2574,7 @@ Content analysis recalibration (beta):
 * The browser console now shows more descriptive error messages when something went wrong during analyses in the web worker.
 * Avoids irrelevant warning and error in the WPEngine PHP Compatibility plugin.
 
-## 9.3
+= 9.3 =
 
 Release date: 2018-12-18
 
@@ -2602,7 +2602,7 @@ Release date: 2018-12-18
 
 * Implemented performance optimizations in FAQ and How To blocks.
 
-## 9.2.1
+= 9.2.1 =
 
 Release date: 2018-11-21
 
@@ -2610,7 +2610,7 @@ Release date: 2018-11-21
 
 * Fixes a bug where the title and meta description field’s cursor would jump to the start when typing.
 
-## 9.2
+= 9.2 =
 
 Release date: 2018-11-20
 
@@ -2650,7 +2650,7 @@ Release date: 2018-11-20
 * Refactor SEO assessment filenames and exports. Props to [Kingdutch](https://github.com/Kingdutch)
 * Deprecates the `Yoast_Modal` class.
 
-## 9.1
+= 9.1 =
 
 Release date: 2018-11-06
 
@@ -2677,7 +2677,7 @@ Release date: 2018-11-06
 * Changes the reference in the admin bar menu from "AdWords External" to "Google Ads".
 * Removes non-functioning eye-markers for the link keyphrase assessment.
 
-## 9.0.3
+= 9.0.3 =
 
 Release date: 2018-10-30
 
@@ -2687,7 +2687,7 @@ Release date: 2018-10-30
 * Fixes a bug where the Chrome browser tab would crash on Windows when a French or Italian text contains sentences in passive voice, props [CarloCannas](https://github.com/CarloCannas).
 * Fixes a bug where the Yoast SEO analysis would error if used together with the DelightfulDownloads plugin.
 
-## 9.0.2
+= 9.0.2 =
 
 Release date: 2018-10-24
 
@@ -2696,7 +2696,7 @@ Release date: 2018-10-24
 * Fixes a bug where it was impossible to change the profile in the Search Console integration step in the configuration wizard.
 * Fixes a bug where the primary taxonomy picker was not shown in Gutenberg (v4.1).
 
-## 9.0.1
+= 9.0.1 =
 
 Release date: 2018-10-23
 
@@ -2704,7 +2704,7 @@ Release date: 2018-10-23
 
 * Fixes error with using `$` in wp-seo-admin-media.js. Now we use `jQuery` instead.
 
-## 9.0
+= 9.0 =
 
 Release date: 2018-10-23
 
@@ -2754,7 +2754,7 @@ Release date: 2018-10-23
 * Deprecates the WPSEO_Cornerstone class.
 * Deprecates the assessment that checks if stopwords are used within the keyphrase.
 
-## 8.4
+= 8.4 =
 
 Release date: 2018-10-09
 
@@ -2768,7 +2768,7 @@ Release date: 2018-10-09
 * Introduces the `wpseo_taxonomy_content_fields` filter to add additional fields to the taxonomy metabox.
 * Adds a margin below select fields so there's space between taxonomy settings for breadcrumbs. Props to [@emilyatmobtown](https://github.com/emilyatmobtown)
 
-## 8.3
+= 8.3 =
 
 Release date: 2018-09-25
 
@@ -2802,7 +2802,7 @@ Release date: 2018-09-25
 * Nests the `Question` objects in the newly introduced `mainEntity` property in the FAQ block's structured data output.
 * Removes the superfluous `position` property from the How-To block's structured data output.
 
-## 8.2.1
+= 8.2.1 =
 
 Release date: 2018-09-20
 
@@ -2810,7 +2810,7 @@ Release date: 2018-09-20
 
 * Fixes a bug where the Chrome or Opera browser tab would crash on Windows when a Polish text contains sentences in passive voice.
 
-## 8.2
+= 8.2 =
 
 Release date: 2018-09-11
 
@@ -2836,7 +2836,7 @@ Release date: 2018-09-11
 * Fixes a bug where switching off the SEO analysis would stop the readability analysis from loading.
 * Fixes a fatal error on the Term and Post edit pages when the server is running on PHP 5.2.
 
-## 8.1.2
+= 8.1.2 =
 
 Release date: 2018-09-05
 
@@ -2844,7 +2844,7 @@ Release date: 2018-09-05
 
 * Fixes a bug where our JavaScript memory usage would increase indefinitely. This could result in a browser crash after a long enough period.
 
-## 8.1.1
+= 8.1.1 =
 
 Release date: 2018-09-03
 
@@ -2855,7 +2855,7 @@ Release date: 2018-09-03
 * Fixes a bug where the `og:url` would not be set to the canonical URL if the canonical URL is explicitly set on Post types, Terms or Tags.
 * Fixes a bug on the Term page when editting the `slug`, it would not be updated in the Snippet Preview directly.
 
-## 8.1
+= 8.1 =
 
 Release date: 2018-08-28
 
@@ -2875,7 +2875,7 @@ Release date: 2018-08-28
 * Fixes a bug where the editor would not be usable when deferred or async loading of JavaScript is being forced.
 * Fixes a bug where the analysis for previously used keywords would only be triggered if the keyword was changed, resulting in an incorrect SEO score.
 
-## 8.0
+= 8.0 =
 
 Release date: 2018-08-14
 
@@ -2900,7 +2900,7 @@ Release date: 2018-08-14
 
 * Moves the network's Restore Site functionality into its own tab.
 
-## 7.9.1
+= 7.9.1 =
 
 Release date: 2018-08-07
 
@@ -2925,7 +2925,7 @@ Release date: 2018-08-07
 
 * Corrects the WP_Filesystem() initialization call to support settings import for non-default FS_METHOD definitions. Props to [ptbello](https://github.com/ptbello).
 
-## 7.9
+= 7.9 =
 
 Release date: 2018-07-24
 
@@ -2956,7 +2956,7 @@ Release date: 2018-07-24
 * Changes feedback in the keyword density assessment to make it more explicit that synonyms are not taken into consideration when calculating the score.
 * Shows a notification with the message that you should check your post type archive settings when these are possibly reset to their defaults in 7.7 or 7.8.
 
-## 7.8
+= 7.8 =
 
 Release date: 2018-07-10
 
@@ -2982,7 +2982,7 @@ Release date: 2018-07-10
 * Adds a reminder message to create a redirect if a user deletes a category or tag.
 * Removes a banner spot in the admin.
 
-## 7.7.3
+= 7.7.3 =
 
 Release date: 2018-07-02
 
@@ -2992,7 +2992,7 @@ Release date: 2018-07-02
 * Fixes text directionality for the title and description fields in the snippet editor for right-to-left languages.
 * Fixes a bug where the snippet title and description values were saved to the database if they did match the post-type template.
 
-## 7.7.2
+= 7.7.2 =
 
 Release date: 2018-06-29
 
@@ -3003,7 +3003,7 @@ Release date: 2018-06-29
 * Fixes a bug where the 'insert snippet variable' button placement was inconsistent.
 * Migrates WooCommerce Product archive settings to the Shop page, if present and not already set on the Shop page.
 
-## 7.7.1
+= 7.7.1 =
 
 Release date: 2018-06-27
 
@@ -3016,7 +3016,7 @@ Release date: 2018-06-27
 
 * Restores `currentyear` as a snippet variable.
 
-## 7.7
+= 7.7 =
 
 Release date: 2018-06-26
 
@@ -3059,7 +3059,7 @@ Release date: 2018-06-26
 * Changes the timing on which the capability filter is run to better time when notifications should be initialized.
 * Adds X-Redirect-By header to all redirects, making the origin of redirects much easier to debug.
 
-## 7.6.1
+= 7.6.1 =
 
 Release date: 2018-06-07
 
@@ -3068,7 +3068,7 @@ Release date: 2018-06-07
 * Fixes a bug where a JavaScript error was thrown on the post-edit page when certain plugins are active.
 * Fixes a bug where stylesheet definitions would impact form fields of metaboxes on the post-edit pages. The definitions have been contained in a Yoast-selector.
 
-## 7.6
+= 7.6 =
 
 Release date: 2018-06-05
 
@@ -3092,7 +3092,7 @@ Release date: 2018-06-05
 * Fixes typo in $field_defs parameter description for wpseo_metabox_entries filter.
 * Restores the warning for using unsupported replacement variables on the search appearance settings page.
 
-## 7.5.1
+= 7.5.1 =
 
 Release date: 2018-05-16
 
@@ -3100,7 +3100,7 @@ Release date: 2018-05-16
 
 * Fixes a bug where the auto-generating of the slug did not work as expected due to persisting of the post name too agressively.
 
-## 7.5
+= 7.5 =
 
 Release date: 2018-05-15
 
@@ -3117,7 +3117,7 @@ Release date: 2018-05-15
 * Fixes a bug where the sitemap styling could not be loaded when the Site domain differs from the Admin domain.
 * Fixes a bug where the admin bar still used old copy: Dashboard has been renamed to General.
 
-## 7.4.2
+= 7.4.2 =
 
 Release date: 2018-05-03
 
@@ -3126,7 +3126,7 @@ Release date: 2018-05-03
 * Fixes automatic image size detection for OpenGraph images. When an image was used that was too large, we wouldn't output the `og:image` tag. That is now fixed.
 * Fixes a bug where portrait images where not allowed for the OpenGraph image.
 
-## 7.4.1
+= 7.4.1 =
 
 Release date: 2018-05-02
 
@@ -3136,7 +3136,7 @@ Release date: 2018-05-02
 * Fixes an unintended backwards incompatible change which caused "Warning: Illegal string offset ‘url’ in".
 * Fixes an unintended change which caused SVGs to be included in consideration for the `og:image` tag. SVG images are not allowed by Facebook, so these should never be used in the `og:image` tag.
 
-## 7.4
+= 7.4 =
 
 Release date: 2018-05-01
 
@@ -3159,7 +3159,7 @@ Release date: 2018-05-01
 * Introduces a message, warning about dropping of PHP 5.2 support in an upcoming version.
 * Alters the configuration service text in the Configuration Wizard when a user is already running Yoast SEO Premium. Previously the text contained a reference to getting a bundled copy of Premium, even if the user was already running Premium.
 
-## 7.3
+= 7.3 =
 
 Release date: 2018-04-17
 
@@ -3195,7 +3195,7 @@ Release date: 2018-04-17
 * Minor internationalization improvements.
 * Security hardening.
 
-## 7.2
+= 7.2 =
 
 Release date: 2018-04-03
 
@@ -3216,7 +3216,7 @@ Release date: 2018-04-03
 * Fixes a bug where attachments connected to password-protected parents are included in the sitemaps. Props [Scott Carter](https://gobarrelroll.com).
 * Fixes alignment of the `Go Premium` notice.
 
-## 7.1
+= 7.1 =
 
 Release date: 2018-03-20
 
@@ -3243,7 +3243,7 @@ Release date: 2018-03-20
 * Fixes a bug where the Yoast logo in the Configuration Wizard was showing the old version.
 * Removes the backfill hooks when calling `WPSEO_Optionsget()` to improve performance.
 
-## 7.0.3
+= 7.0.3 =
 
 Release date: 2018-03-12
 
@@ -3252,7 +3252,7 @@ Release date: 2018-03-12
 * Fixes a bug where the option settings that needs to be migrated are backfilled prematurely, resulting in settings not being migrated as expected.
 * Fixes a bug where adding a `wpseo_sitemap_entries_per_page` is not being applied as expected.
 
-## 7.0.2
+= 7.0.2 =
 
 Release date: 2018-03-08
 
@@ -3263,7 +3263,7 @@ Release date: 2018-03-08
 * Fixes a bug where RSS `before` and `after` content settings were being cleaned too aggressively.
 * Fixes the problem that other plugins are depending on the options we've removed. This patch adds those options as backfills to make them available again.
 
-## 7.0.1
+= 7.0.1 =
 
 Release date: 2018-03-06
 
@@ -3271,7 +3271,7 @@ Release date: 2018-03-06
 
 * Fixes a bug where the some settings are not properly migrated after upgrading to 7.0.
 
-## 7.0
+= 7.0 =
 
 Release date: 2018-03-06
 
@@ -3330,7 +3330,7 @@ Release date: 2018-03-06
 
 * Fixes a security issue where importing of the values of ini files were being parsed for dynamic content.
 
-## 6.3.1
+= 6.3.1 =
 
 Release date: 2018-02-19
 
@@ -3338,7 +3338,7 @@ Release date: 2018-02-19
 
 * Fixes a bug where a non-existing JavaScript `chunk` file was loaded, causing a console error. This only affected users using a locale different than `en_US`.
 
-## 6.3
+= 6.3 =
 
 Release date: 2018-02-13
 
@@ -3371,7 +3371,7 @@ Release date: 2018-02-13
 * Removes the "Other" tab from the Titles &amp; Metas settings screen, as all options have been moved or removed.
 * Security hardening.
 
-## 6.2
+= 6.2 =
 
 Release date: 2018-01-23
 
@@ -3390,7 +3390,7 @@ Release date: 2018-01-23
 * Fixes a bug where Premium users would be shown ads when following a certain path through the SEO menu.
 * Fixes a bug where the method of setting the title and meta description templates for the WooCommerce shop page would not work anymore.
 
-## 6.1.1
+= 6.1.1 =
 
 Release date: 2018-01-10
 
@@ -3398,7 +3398,7 @@ Release date: 2018-01-10
 
 * Fixes a bug where sitemaps could not be generated when there one or more galleries in the content.
 
-## 6.1
+= 6.1 =
 
 Release date: 2018-01-09
 
@@ -3417,7 +3417,7 @@ Release date: 2018-01-09
 * Added support support for 3-letter language codes (example: rhg) - Props [Peeter Marvet](https://github.com/petskratt).
 * Fixes a JavaScript compatibility issue by prefixing the webpack jsonP function with `yoast` - Props [Raitis Sevelis from Visual Composer](https://visualcomposer.io/).
 
-## 6.0
+= 6.0 =
 
 Release date: 2017-12-20
 
@@ -3435,7 +3435,7 @@ Release date: 2017-12-20
 * Hides the mark buttons when the WYSIWYG editor is not loaded or the filter `wpseo_enable_assessment_markers` returns false.
 * Security hardening through stricter code checks.
 
-## 5.9.3
+= 5.9.3 =
 
 Release date: 2017-12-11
 
@@ -3443,7 +3443,7 @@ Release date: 2017-12-11
 
 * Fixes an issue where a part of the excerpt would be leaked on password protected posts when used as a replacement variable. Such as `%%excerpt%%` and `%%excerpt_only%%`. Props to [Rolands Umbrovskis](https://profiles.wordpress.org/rolandinsh) for reporting this issue to us.
 
-## 5.9.2
+= 5.9.2 =
 
 Release date: 2017-12-11
 
@@ -3453,7 +3453,7 @@ Release date: 2017-12-11
 * Fixes a bug where the Yoast Metabox wouldn't be shown for posts set to `noindex`, therefore making it impossible to change it back to `index`, view Readability scores and not being able to optimize a post, before allowing it to be indexed.
 * Fixes a bug where translations wouldn't be applied in the Yoast SEO Metabox for SEO and Readability scores.
 
-## 5.9.1
+= 5.9.1 =
 
 Release date: 2017-12-05
 
@@ -3461,7 +3461,7 @@ Release date: 2017-12-05
 
 * Fixes a bug where the configuration wizard could not be loaded, caused by a missing JavaScript dependency.
 
-## 5.9
+= 5.9 =
 
 Release date: 2017-12-05
 
@@ -3485,7 +3485,7 @@ Release date: 2017-12-05
 * Makes the 'Next' and 'Back' buttons in the Onboarding Wizard focusable.
 * Adds grouping of feedback within the content analysis, in the following categories: 'errors', 'problems', 'needs improvement', 'considerations', and 'good'. Each category can be expanded and collapsed.
 
-## 5.8
+= 5.8 =
 
 Release date: 2017-11-15
 
@@ -3521,7 +3521,7 @@ Maintenance:
 * Cleaned up codebase by removing old Knowledge Base Search code.
 * Improved the codebase to make it comply with the latest WordPress Coding Standards.
 
-## 5.7.1
+= 5.7.1 =
 
 Release date: 2017-10-25
 
@@ -3534,7 +3534,7 @@ Release date: 2017-10-25
 
 * Adds a plugin suggestion for WooCommerce SEO when WooCommerce is installed.
 
-## 5.7
+= 5.7 =
 
 Release date: 2017-10-24
 
@@ -3551,7 +3551,7 @@ Release date: 2017-10-24
 * Fixes a bug where the text link counter doesn't count links for scheduled posts when they get published.
 * Fixes a bug where the internal link count is not updated when a post is removed permanently.
 
-## 5.6.1
+= 5.6.1 =
 
 Release date: 2017-10-13
 
@@ -3559,7 +3559,7 @@ Release date: 2017-10-13
 
 * Fixes a bug where the SEO Manager role was not being able to save SEO settings.
 
-## 5.6
+= 5.6 =
 
 Release date: 2017-10-10
 
@@ -3576,7 +3576,7 @@ Release date: 2017-10-10
 * Fixes a bug where the internal link count is not updated when there are no links to that page or post anymore.
 * Fixes the `Cornerstone content` filter to behave consistently with existing WordPress filters.
 
-## 5.5.1
+= 5.5.1 =
 
 Release date: 2017-09-28
 
@@ -3586,7 +3586,7 @@ Release date: 2017-09-28
 * Changes
 * Change Yoast Blog feed to new endpoint.
 
-## 5.5
+= 5.5 =
 
 Release date: 2017-09-26
 
@@ -3604,7 +3604,7 @@ Release date: 2017-09-26
 * Fixed a bug where certain options (`site_type`, `environment_type` and `has_multiple_authors`) would be reset to their default value whenever one of the feature toggles were changed.
 * Ensured that `has_multiple_authors` gets validated.
 
-## 5.4.2
+= 5.4.2 =
 
 Release date: 2017-09-21
 
@@ -3612,7 +3612,7 @@ Release date: 2017-09-21
 
 * Replace unsupported query `prepare` placeholder `%1$d` with `%d` to fix broken queries. Fixes compatibility issue with WordPress 4.8.2.
 
-## 5.4.1
+= 5.4.1 =
 
 Release date: 2017-09-20
 
@@ -3620,7 +3620,7 @@ Release date: 2017-09-20
 
 * Replace unsupported query `prepare` placeholder `%1$s` with `%d` to fix broken queries. Fixes compatibility issue with WordPress 4.8.2.
 
-## 5.4
+= 5.4 =
 
 Release date: 2017-09-06
 
@@ -3637,7 +3637,7 @@ Release date: 2017-09-06
 * Escapes all input when generating links for the RSS feed.
 * Apply the `wp_get_attachment_url` filter to Sitemap images.
 
-## 5.3.3
+= 5.3.3 =
 
 Release date: 2017-08-28
 
@@ -3645,7 +3645,7 @@ Release date: 2017-08-28
 
 * Fixes a bug where table listings were not giving expected content, props [Kyle B. Johnson](https://github.com/kjohnson).
 
-## 5.3.2
+= 5.3.2 =
 
 Release date: 2017-08-23
 
@@ -3653,7 +3653,7 @@ Release date: 2017-08-23
 
 * Fixes a bug where an invalid license notification could be shown in certain situations.
 
-## 5.3.1
+= 5.3.1 =
 
 Release date: 2017-08-22
 
@@ -3662,7 +3662,7 @@ Release date: 2017-08-22
 * Fixes a bug where "mark as fixed" on the search console page didn't work.
 * Fixes a bug where the configuration wizard JavaScript file was too large.
 
-## 5.3
+= 5.3 =
 
 Release date: 2017-08-22
 
@@ -3682,7 +3682,7 @@ Release date: 2017-08-22
 * Initialize the providers on hook `after_theme_setup` to make sure custom providers are added properly, props: [stodorovic](https://github.com/stodorovic)
 * Changes the label of the "Bad" score to "Needs improvement" while filtering on SEO or readability scores.
 
-## 5.2
+= 5.2 =
 
 Release date: 2017-08-08
 
@@ -3699,7 +3699,7 @@ Release date: 2017-08-08
 
 * Removes JQMIGRATE JavaScript warnings.
 
-## 5.1
+= 5.1 =
 
 Release date: 2017-07-25
 
@@ -3721,7 +3721,7 @@ Release date: 2017-07-25
 * Fixes a performance issue related to calculating text link counts when saving a post.
 * Fixes a typo in the readme.txt, props [Raymond Rutjes](https://github.com/rayrutjes)
 
-## 5.0.2
+= 5.0.2 =
 
 Release date: 2017-07-13
 
@@ -3730,13 +3730,13 @@ Release date: 2017-07-13
 * Fixes a compatibility issue with WordPress 4.6.
 * Fixes an issue where the link columns would disappear after quick-editing a post.
 
-## 5.0.1
+= 5.0.1 =
 
 Release date: 2017-07-06
 
 * Fixes a fatal error that could occur when trying to save a post that has ``-tags with invalid URLs in it.
 
-## 5.0
+= 5.0 =
 
 Release date: 2017-07-06
 
@@ -3759,7 +3759,7 @@ Release date: 2017-07-06
 * Introduces a database table to keep track of the linking structure. If the table cannot be created, a notification will be shown.
 * When there are posts or pages to reindex, a notice will be shown.
 
-## 4.9
+= 4.9 =
 
 Release date: 2017-06-07
 
@@ -3776,7 +3776,7 @@ Release date: 2017-06-07
 * Removes the noodp advanced robots meta value as it is no longer used.
 * Loads the translations only when the configuration wizard endpoint is called, instead of every time `rest_api_init` is called.
 
-## 4.8
+= 4.8 =
 
 Release date: 2017-05-23
 
@@ -3789,7 +3789,7 @@ Release date: 2017-05-23
 * Optimizes the way the cornerstone flag is saved.
 * Analyzes the content using cornerstone assessors when a post or page is cornerstone content.
 
-## 4.7.1
+= 4.7.1 =
 
 Release date: 2017-05-09
 
@@ -3797,7 +3797,7 @@ Release date: 2017-05-09
 
 * Fixes a bug where the analysis wouldn't work on Internet Explorer.
 
-## 4.7
+= 4.7 =
 
 Release date: 2017-05-02
 
@@ -3812,7 +3812,7 @@ Release date: 2017-05-02
 * Fixes a bug where style and script elements were parsed for the prominent words.
 * Fixes a bug where the cursor pointer was in front of the metabox.
 
-## 4.6
+= 4.6 =
 
 Release date: 2017-04-11
 
@@ -3826,7 +3826,7 @@ Release date: 2017-04-11
 
 * Fixes an issue in combination with WooCommerce 3.0 where the plugins would load incompatible select2 versions.
 
-## 4.5
+= 4.5 =
 
 Release date: 2017-03-21
 
@@ -3843,7 +3843,7 @@ Release date: 2017-03-21
 * Improves copy about Yoast SEO Premium benefits.
 * Adds link to our knowledge base article about connecting your website to Google Search Console.
 
-## 4.4
+= 4.4 =
 
 Release date: 2017-02-28
 
@@ -3858,7 +3858,7 @@ Release date: 2017-02-28
 * Improves styling of tables so they are viewable on mobile.
 * Changes the links into shortlinks for the extensions page, helpcenter, facebook settings and premium popup.
 
-## 4.3
+= 4.3 =
 
 Release date: 2017-02-14
 
@@ -3871,7 +3871,7 @@ Release date: 2017-02-14
 
 * Improves feedback text for subheading too long assessment.
 
-## 4.2.1
+= 4.2.1 =
 
 Release date: 2017-02-02
 
@@ -3887,7 +3887,7 @@ Release date: 2017-02-02
 * Improves the styling of the notification center.
 * Improves the styling of the title separators.
 
-## 4.2
+= 4.2 =
 
 Release date: 2017-01-31
 
@@ -3903,7 +3903,7 @@ Release date: 2017-01-31
 * Removes unused heading from the meta box.
 * Improves responsiveness for settings pages.
 
-## 4.1
+= 4.1 =
 
 Release date: 2017-01-17
 
@@ -3919,7 +3919,7 @@ Release date: 2017-01-17
 * Removes review banner from mobile, props [abhinavkumar940](https://github.com/abhinavkumar940).
 * Adds labels to redirect checkboxes in the search console to improve accessibility.
 
-## 4.0.2
+= 4.0.2 =
 
 Release date: 2016-12-20
 
@@ -3928,7 +3928,7 @@ Release date: 2016-12-20
 * Fixes a bug where shortcodes would be kept in the content that would be analyzed, which would result in incorrect results.
 * Fixes a bug where the user language would be used to analyze the content instead of the site language.
 
-## 4.0
+= 4.0 =
 
 Release date: 2016-12-13
 
@@ -3954,7 +3954,7 @@ Release date: 2016-12-13
 * Fixes a bug where keywords with periods where not highlighted in the snippet.
 * Fixes a bug where the title of the metabox wasn't displayed correctly.
 
-## 3.9
+= 3.9 =
 
 Release date: 2016-11-29
 
@@ -3970,7 +3970,7 @@ Release date: 2016-11-29
 * Fixes a bug that prevented bulk actions to work in the Google Search Console.
 * Fixed incorrect timezone for zero offset case (Atlantic/Azores instead of UTC).
 
-## 3.8
+= 3.8 =
 
 Release date: 2016-11-08
 
@@ -3986,7 +3986,7 @@ Release date: 2016-11-08
 * Fixes a bug where the category picker would become slow with 1000+ categories, props Ron Willemse
 * Fixes a bug with VoiceOver on the readability and keyword tabs.
 
-## 3.7.1
+= 3.7.1 =
 
 Release date: 2016-10-20
 
@@ -3994,7 +3994,7 @@ Release date: 2016-10-20
 
 * Fixes a bug where the configuration wizard couldn't go to the next step if PUT requests were disabled on the server.
 
-## 3.7
+= 3.7 =
 
 Release date: 2016-10-11
 
@@ -4012,7 +4012,7 @@ Release date: 2016-10-11
 * Fixes a bug where the Google Search Console integration wasn't working well on multisite.
 * Fixes a bug where the newsletter signup always did a http request, causing mixed content errors on https sites.
 
-## 3.6.1
+= 3.6.1 =
 
 Release date: 2016-10-03
 
@@ -4020,7 +4020,7 @@ Release date: 2016-10-03
 
 * Fixes a bug where the admin bar would still show advanced settings when the advanced settings were disabled.
 
-## 3.6
+= 3.6 =
 
 Release date: 2016-09-27
 
@@ -4050,7 +4050,7 @@ Release date: 2016-09-27
 * Fixes sorting the table in sitemaps.
 * Fixes a bug where keywords with a $ where not recognized.
 
-## 3.5
+= 3.5 =
 
 Release date: 2016-09-07
 
@@ -4091,7 +4091,7 @@ Release date: 2016-09-07
 * Fixes a bug where the `og:image` tag would be omitted.
 * Fixes a bug for canonicals for search pages with empty search queries.
 
-## 3.4.2
+= 3.4.2 =
 
 Release date: 2016-08-08
 
@@ -4099,7 +4099,7 @@ Release date: 2016-08-08
 
 * Fixes a bug where apostrophes would be stripped from the focus keyword.
 
-## 3.4.1
+= 3.4.1 =
 
 Release date: 2016-08-02
 
@@ -4107,7 +4107,7 @@ Release date: 2016-08-02
 
 * Fixes a stored XSS issue in the Yoast SEO metabox. Thanks [Hammad Shamsi](https://twitter.com/hammadshamsii) for reporting and responsibly disclosing this issue.
 
-## 3.4
+= 3.4 =
 
 Release date: 2016-07-19
 
@@ -4173,13 +4173,13 @@ Release date: 2016-07-19
 * Fixes the generation of permalinks for new posts by ignoring the permalink sample and generating the permalink from the posttitle, props [Robert Korulczyk](https://github.com/rob006).
 * Fixes getting the incorrect primary category when getting the permalink, props [pawawat](https://github.com/pawawat).
 
-## 3.3.4
+= 3.3.4 =
 
 Release date: 2016-06-30
 
 * Fixed a bug in the 3.3.3 release that caused the release folder to not have a fix.
 
-## 3.3.3
+= 3.3.3 =
 
 Release date: 2016-06-30
 
@@ -4188,7 +4188,7 @@ Release date: 2016-06-30
 * Fixes a bug where the focus keyword is not shown for posts created using WordPress SEO 2.x.
 * Fixes a bug where changing the title in the bulk editor could be used to trigger JavaScript for the current user.
 
-## 3.3.2
+= 3.3.2 =
 
 Release date: 2016-06-21
 
@@ -4201,7 +4201,7 @@ Release date: 2016-06-21
 
 * Fix issue where the settings export zip file could be read from the uploads folder after doing an export.
 
-## 3.3.1
+= 3.3.1 =
 
 Release date: 2016-06-15
 
@@ -4219,7 +4219,7 @@ Release date: 2016-06-15
 * Fixes a bug where reading server variables using `filter_input` returns an empty result.
 * Fixes a bug where the passive voice and transition words would be shown on non-english language
 
-## 3.3
+= 3.3 =
 
 Release date: 2016-06-14
 
@@ -4273,7 +4273,7 @@ Release date: 2016-06-14
 * Removes recalculation because there were too many issues with integration missing that can only be added on the actual post edit admin page.
 * Removes `json_encode` wrapper, it was only necessary for older WordPress versions.
 
-## 3.2.5
+= 3.2.5 =
 
 Release date: 2016-05-06
 
@@ -4285,7 +4285,7 @@ Release date: 2016-05-06
 * Fixes a warning in the sitemap index when no post types are shown and a last modified date is being requested.
 * Adds missing capability checks in AJAX request responses.
 
-## 3.2.4
+= 3.2.4 =
 
 Release date: 2016-04-28
 
@@ -4294,7 +4294,7 @@ Release date: 2016-04-28
 * Fixes a regression where the post URL would be numerical when no post title was set.
 * Fixes an issue that would cause notifications not to be dismissed even though they should be.
 
-## 3.2.3
+= 3.2.3 =
 
 Release date: 2016-04-21
 
@@ -4303,21 +4303,21 @@ Release date: 2016-04-21
 * Fixes a bug where the update notification cannot be dismissed
 * Fixes a bug where the notifications can be shown multiple times
 
-## 3.2.2
+= 3.2.2 =
 
 Release date: 2016-04-21
 
 * Bugfix:
 * Fixes a bug where the text analysis was broken in certain languages in certain cases.
 
-## 3.2.1
+= 3.2.1 =
 
 Release date: 2016-04-20
 
 * Bugfix:
 * Fixes bug where settings of the Advanced tabs "permalinks" and "rss" were no longer saved.
 
-## 3.2
+= 3.2 =
 
 Release date: 2016-04-20
 
@@ -4379,7 +4379,7 @@ Release date: 2016-04-20
 * Fixes a bug where rewrite rules wouldn't be flushed correctly on plugin activation.
 * Fixes a bug where the GlotPress banner wouldn't load on HTTPS sites.
 
-## 3.1.2
+= 3.1.2 =
 
 Release date: 2016-03-23
 
@@ -4394,7 +4394,7 @@ Release date: 2016-03-23
 * Fixes a JS error on the post edit page that was caused when the WP slugeditor wasn't present.
 * Fixes an issue where our indexability check would fail on installs with WordFence that have the "block fake Google crawlers" setting enabled.
 
-## 3.1.1
+= 3.1.1 =
 
 Release date: 2016-03-08
 
@@ -4403,7 +4403,7 @@ Release date: 2016-03-08
 * Fixes a bug where part of the Yoast SEO metabox was no longer translated.
 * Fixes a bug where the post slug would be overwritten with the post ID in case a post was autosaved and did not have a title yet.
 
-## 3.1
+= 3.1 =
 
 Release date: 2016-03-01
 
@@ -4454,7 +4454,7 @@ Release date: 2016-03-01
 * Fixes a bug where sitemap caches were not properly cleared for sites that use external object caching.
 * Fixes a bug where stopwords were no longer stripped from the slug that was generated by WordPress.
 
-## 3.0.7
+= 3.0.7 =
 
 Release date: 2015-12-23
 
@@ -4462,7 +4462,7 @@ Release date: 2015-12-23
 * Removes email notifications for OnPage.org indexability check. It caused more issues than it solved.
 * Adds several UX improvements to the snippet editor, making it more clear it is editable.
 
-## 3.0.6
+= 3.0.6 =
 
 Release date: 2015-12-01
 
@@ -4470,7 +4470,7 @@ Release date: 2015-12-01
 
 * Fixes the recalculate tool that was broken with the Localized Flesch Reading ease change...
 
-## 3.0.5
+= 3.0.5 =
 
 Release date: 2015-12-01
 
@@ -4485,7 +4485,7 @@ Release date: 2015-12-01
 * Fixes several issues with keyword recognition for keywords which contain punctuation.
 * Fixes an issue where keywords containing diacritics were not recognized in alt tags.
 
-## 3.0.4
+= 3.0.4 =
 
 Release date: 2015-11-25
 
@@ -4499,7 +4499,7 @@ Release date: 2015-11-25
 * Fixes an issue where html tags were not stripped properly from taxonomy descriptions for custom taxonomies.
 * Fixes possible "URI too long" errors when parsing shortcodes in the content before it is analyzed.
 
-## 3.0.3
+= 3.0.3 =
 
 Release date: 2015-11-19
 
@@ -4507,7 +4507,7 @@ Release date: 2015-11-19
 
 * Fixes a bug where the snippet preview was broken.
 
-## 3.0.2
+= 3.0.2 =
 
 Release date: 2015-11-19
 
@@ -4525,7 +4525,7 @@ Release date: 2015-11-19
 #### Enhancements
 * Fixes caching problems. We've versioned file names for assets that have changed to circumvent caching strategies that consider preventing regular cache busting a good idea...
 
-## 3.0.1
+= 3.0.1 =
 
 Release date: 2015-11-18
 
@@ -4536,7 +4536,7 @@ Release date: 2015-11-18
 * Fixes an edgecase where the indexability check would go wrong for sites that filter the home url.
 * Fixes a bug where the admin email that was sent to report the current indexability status was not rendered as HTML.
 
-## 3.0
+= 3.0 =
 
 Release date: 2015-11-18
 
@@ -4576,7 +4576,7 @@ Release date: 2015-11-18
 * `wpseo_linkdex_results`. Alternative: [Content Checks API](https://github.com/Yoast/YoastSEO.js).
 * `wpseo_snippet`. Functionality removed.
 
-## 2.3.5
+= 2.3.5 =
 
 Release date: 2015-09-16
 
@@ -4586,7 +4586,7 @@ Release date: 2015-09-16
 * Removes all tests directories from the release. Props [Edward Beckett](https://github.com/EdwardBeckett) for reporting.
 * Updated the minimum required version of WordPress to 4.0.
 
-## 2.3.4
+= 2.3.4 =
 
 Release date: 2015-08-06
 
@@ -4594,7 +4594,7 @@ Release date: 2015-08-06
 
 * Fixes a bug where the focus keyword test in the Yoast SEO metabox was broken as a regression of removing the autocomplete functionality.
 
-## 2.3.3
+= 2.3.3 =
 
 Release date: 2015-08-06
 
@@ -4616,7 +4616,7 @@ Release date: 2015-08-06
 * Fixes a bug where the Google Search Console issues table was giving errors on installs running on PHP 5.2.
 * Fixes a bug where the sitemap caches were no longer being cleared when running Yoast SEO in the upcoming 4.3 release of WordPress.
 
-## 2.3.2
+= 2.3.2 =
 
 Release date: 2015-07-23
 
@@ -4625,7 +4625,7 @@ Release date: 2015-07-23
 * Fixes a bug where non-admin users were no longer able to update their profile with Yoast SEO active.
 * Fixes a bug where all labels in the Yoast SEO admin were bold.
 
-## 2.3.1
+= 2.3.1 =
 
 Release date: 2015-07-22
 
@@ -4634,7 +4634,7 @@ Release date: 2015-07-22
 * Makes sure authors and editors cannot submit advanced metadata on a post when the advanced tab in the metabox has been disabled for them. Thanks Peter Allor from IBM for finding and reporting this issue.
 * Fixes a bug where upgrading to version 2.3 would occasionally cause WSOD's on both admin and frontend. We were unable to pinpoint the exact conflicting plugins and themes, but we are quite confident it was caused by us using, and others hooking into, WP_Query too early.
 
-## 2.3
+= 2.3 =
 
 Release date: 2015-07-21
 
@@ -4668,13 +4668,13 @@ Release date: 2015-07-21
 * Added multiple checks to prevent plugin compatibility issue between Yoast SEO and old versions of Google Analytics by Yoast.
 * Updated the banners with new designs.
 
-## 2.2.1
+= 2.2.1 =
 
 Release date: 2015-06-11
 
 * Makes sure users can close the tour by circumventing possible JavaScript caching issues that might occur.
 
-## 2.2
+= 2.2 =
 
 Release date: 2015-06-10
 
@@ -4713,7 +4713,7 @@ Release date: 2015-06-10
 * Security:
 * Fixes a possible XSS vulnerability in the snippet preview. Thanks [Charles Neill](https://twitter.com/ccneill) and [Mazen Gamal](https://twitter.com/mazengamal) for discovering and responsibly disclosing this issue.
 
-## 2.1.1
+= 2.1.1 =
 
 Release date: 2015-04-21
 
@@ -4723,7 +4723,7 @@ Release date: 2015-04-21
 * Fixes a compatibility issue with Video SEO and WooCommerce SEO add-ons causing WSOD on the frontend for video's and WooCommerce products.
 * Fixes a compatibility issue with BBPress caused by hooking `current_user_can` too early.
 
-## 2.1
+= 2.1 =
 
 Release date: 2015-04-20
 
@@ -4752,7 +4752,7 @@ Release date: 2015-04-20
 * Security:
 * Fixes a possible XSS vulnerability. Thanks [Johannes Schmitt](https://github.com/schmittjoh) from [Scrutinizer CI](https://scrutinizer-ci.com/) for discovering and responsibly disclosing this issue.
 
-## 2.0.1
+= 2.0.1 =
 
 Release date: 2015-04-01
 
@@ -4762,7 +4762,7 @@ Release date: 2015-04-01
 * Fixes a broken link in the Dutch translation, causing the Pinterest tab on the Social settings page to overflow into the Google+ tab.
 * Fixes a small typo on the about page.
 
-## 2.0
+= 2.0 =
 
 Release date: 2015-03-26
 
@@ -4789,13 +4789,13 @@ Release date: 2015-03-26
 * Deprecated a large amount of form methods and moved them to the `Yoast_Form` class. Click [here](https://github.com/Yoast/wordpress-seo/blob/add975664d1f160eed262b02327a93bda5488f8b/admin/class-config.php#L172) for the list of deprecated methods.
 * Deprecated a large amount of utility functions and moved them to the `WPSEO_Utils` class. Click [here](https://github.com/Yoast/wordpress-seo/blob/add975664d1f160eed262b02327a93bda5488f8b/inc/wpseo-functions.php#L496) for the list of deprecated functions.
 
-## 1.7.4
+= 1.7.4 =
 
 Release date: 2015-03-11
 
 * Security fix: fixed possible CSRF and blind SQL injection vulnerabilities in bulk editor. Added strict sanitation to order_by and order params. Added extra nonce checks on requests sending additional parameters. Minimal capability needed to access the bulk editor is now Editor. Thanks [Ryan Dewhurst](https://github.com/ethicalhack3r) from WPScan for discovering and responsibly disclosing this issue.
 
-## 1.7.3.3
+= 1.7.3.3 =
 
 Release date: 2015-02-23
 
@@ -4803,7 +4803,7 @@ Release date: 2015-02-23
 
 * Repair missing dependencies...
 
-## 1.7.3.2
+= 1.7.3.2 =
 
 Release date: 2015-02-23
 
@@ -4812,7 +4812,7 @@ Release date: 2015-02-23
 * Fixes a bug where the rel="next" and rel="prev" links were broken for all taxonomies.
 * Removes an obsolete quote from the html for the seo metabox.
 
-## 1.7.3.1
+= 1.7.3.1 =
 
 Release date: 2015-02-19
 
@@ -4821,7 +4821,7 @@ Release date: 2015-02-19
 * Fixes a bug where the keyword analysis was broken.
 * Fixes a bug where our plugin raised a fatal error in the wpseo_admin bar when the $wpseo_front global was used.
 
-## 1.7.3
+= 1.7.3 =
 
 Release date: 2015-02-17
 
@@ -4829,7 +4829,7 @@ Release date: 2015-02-17
 
 * Fixes a bug where the translations were corrupted due to an issue with out glotpress grunt task.
 
-## 1.7.2
+= 1.7.2 =
 
 Release date: 2015-02-17
 
@@ -4856,13 +4856,13 @@ Release date: 2015-02-17
 * Fixes at least a large part of the keyword density 0% issues.
 * Corrected price on WooCommerce SEO banner.
 
-## 1.7.1
+= 1.7.1 =
 
 Release date: 2014-11-26
 
 * Security fix: fixed possible cross scripting issue with encoded entities in a post title. This could potentially allow an author on your site to execute JavaScript when you visit that posts edit page, allowing them to do rights expansion or otherwise. Thanks to [Joe Hoyle](https://profiles.wordpress.org/joehoyle/) for responsibly disclosing this issue.
 
-## 1.7
+= 1.7 =
 
 Release date: 2014-11-18
 
@@ -4896,7 +4896,7 @@ Release date: 2014-11-18
 * Fixes a bug wher SEO-score heading made the table row jump on hover because there wasn't enough place left for the down arrow.
 * Removed a couple of languages that were not up to date.
 
-## 1.6.3
+= 1.6.3 =
 
 Release date: 2014-10-08
 
@@ -4904,7 +4904,7 @@ Release date: 2014-10-08
 
 * Revert earlier logic change that broke taxonomy sitemaps.
 
-## 1.6.2
+= 1.6.2 =
 
 Release date: 2014-10-08
 
@@ -4921,7 +4921,7 @@ Release date: 2014-10-08
 * Fix typo in tour, props @markjaquith.
 * Code optimization in the replace vars functionality, props @dannyvankooten.
 
-## 1.6.1
+= 1.6.1 =
 
 Release date: 2014-09-16
 
@@ -4937,7 +4937,7 @@ Release date: 2014-09-16
 * Introduced a filter for the JSON+LD output: `wpseo_json_ld_search_output`
 * For developers: the [GitHub version](https://github.com/Yoast/wordpress-seo) now contains a full Grunt implementation for many actions.
 
-## 1.6
+= 1.6 =
 
 Release date: 2014-09-09
 
@@ -4958,7 +4958,7 @@ This update removes more code than it adds, because Google stopped support for r
 * i18n
 * Updated da_DK, fa_IR, fr_FR, hr, hu_HU, nl_NL, pt_BR and tr_RK
 
-## 1.5.6
+= 1.5.6 =
 
 Release date: 2014-08-26
 
@@ -4982,7 +4982,7 @@ Release date: 2014-08-26
 * Other:
 * Removing html-sitemap shortcode, it'll reappear in WordPress SEO Premium when it actually works.
 
-## 1.5.5.3
+= 1.5.5.3 =
 
 Release date: 2014-08-14
 
@@ -4991,7 +4991,7 @@ Release date: 2014-08-14
 * Prevent dying on edit post page for new posts / pages without focus keyword.
 * Fix replacement of `%%excerpt%%` in snippet preview.
 
-## 1.5.5.2
+= 1.5.5.2 =
 
 Release date: 2014-08-14
 
@@ -5004,7 +5004,7 @@ Release date: 2014-08-14
 * Add role specific removal from XML Author sitemap
 * Add option to exclude user from XML Author sitemap on user profile page
 
-## 1.5.5.1
+= 1.5.5.1 =
 
 Release date: 2014-08-14
 
@@ -5023,7 +5023,7 @@ Release date: 2014-08-14
 * updated ar, cs_CZ, fr_FR, hr, pl_PL, pt_BR and ru_RU
 * new .pot file based off of the 1.5.5 version
 
-## 1.5.5
+= 1.5.5 =
 
 Release date: 2014-08-12
 
@@ -5062,7 +5062,7 @@ Release date: 2014-08-12
 * Other:
 * Remove references to deprecated Video Manual plugin.
 
-## 1.5.4.2
+= 1.5.4.2 =
 
 Release date: 2014-07-16
 
@@ -5080,7 +5080,7 @@ Release date: 2014-07-16
 * Improve code styling to match WordPress code standard even more strictly, props [Jrf](http://profiles.wordpress.org/jrf).
 * Add button to copy home meta description to home OpenGraph description.
 
-## 1.5.4.1
+= 1.5.4.1 =
 
 Release date: 2014-07-15
 
@@ -5089,7 +5089,7 @@ Release date: 2014-07-15
 * Properly minified the metabox JS file, fixing snippet preview, props [Jrf](http://profiles.wordpress.org/jrf).
 * Format unix timestamp to string in sitemap, fixes possible fatal error in XML sitemap.
 
-## 1.5.4
+= 1.5.4 =
 
 Release date: 2014-07-15
 
@@ -5142,7 +5142,7 @@ Release date: 2014-07-15
 * Security improvement: As the .htaccess / robots.txt files are site-wide files, on a multi-site WP installation they will no longer be available for editing to individual site owners. For super-admins, the 'SEO -&gt; Edit Files' admin page will now be accessible through the Network Admin.
 * We've added server specific info to our tracking class. Most notably, we're tracking whether a number of PHP extensions are enabled for our users now.
 
-## 1.5.3.3
+= 1.5.3.3 =
 
 Release date: 2014-06-02
 
@@ -5164,7 +5164,7 @@ Release date: 2014-06-02
 
 * Make sure extensions menu is fully i18n compatible.
 
-## 1.5.3.2
+= 1.5.3.2 =
 
 Release date: 2014-05-16
 
@@ -5174,7 +5174,7 @@ Release date: 2014-05-16
 * Enhancement
 * Reintroduced the 'Strip the category base (usually /category/) from the category URL.' option.
 
-## 1.5.3.1
+= 1.5.3.1 =
 
 Release date: 2014-05-15
 
@@ -5186,7 +5186,7 @@ Release date: 2014-05-15
 * All remaining not replaced title vars are now stripped from the title.
 * Added a fallback to post_date in the sitemap 'mod' property for when a post is lacking the post_date_gmt value.
 
-## 1.5.3
+= 1.5.3 =
 
 Release date: 2014-05-12
 
@@ -5207,7 +5207,7 @@ Release date: 2014-05-12
 * Load of improvements to banners and licenses page.
 * Update snippet preview to use latest Google design changes - props [paulwilde](https://github.com/paulwilde).
 
-## 1.5.2.8
+= 1.5.2.8 =
 
 Release date: 2014-04-25
 
@@ -5224,7 +5224,7 @@ Release date: 2014-04-25
 * i18n
 * Updated el_GR, hu_HU, nl_NL and pl_PL
 
-## 1.5.2.7
+= 1.5.2.7 =
 
 Release date: 2014-04-15
 
@@ -5235,7 +5235,7 @@ Release date: 2014-04-15
 * Updated el_GR, fa_IR, hu, it_IT, pt_PT, ru_RU, tr_TK and zh_CN
 * Added Malay
 
-## 1.5.2.6
+= 1.5.2.6 =
 
 Release date: 2014-04-04
 
@@ -5251,7 +5251,7 @@ Release date: 2014-04-04
 * Enhancement
 * Fix PHP warnings when post_type is an array.
 
-## 1.5.2.5
+= 1.5.2.5 =
 
 Release date: 2014-03-21
 
@@ -5261,7 +5261,7 @@ Release date: 2014-03-21
 * Only show the breadcrumbs-blog-remove option if user uses page_for_posts as it's not applicable otherwise and can cause confusion.
 * Clean up url query vars after use in our settings page to avoid actions being executed twice - props [Jrf](http://profiles.wordpress.org/jrf).
 
-## 1.5.2.4
+= 1.5.2.4 =
 
 Release date: 2014-03-21
 
@@ -5276,7 +5276,7 @@ Release date: 2014-03-21
 * Enhancement
 * Enhanced validation of webmaster verification keys to prevent invalidating incorrect input which does contain a key as reported by [TheZoker](https://github.com/TheZoker) in [issue #864](https://github.com/Yoast/wordpress-seo/issues/864) - props [Jrf](http://profiles.wordpress.org/jrf).
 
-## 1.5.2.3
+= 1.5.2.3 =
 
 Release date: 2014-03-20
 
@@ -5314,7 +5314,7 @@ Release date: 2014-03-20
 * Other
 * Refactored the breadcrumb class - props [Jrf](http://profiles.wordpress.org/jrf).
 
-## 1.5.2.2
+= 1.5.2.2 =
 
 Release date: 2014-03-14
 
@@ -5330,7 +5330,7 @@ Release date: 2014-03-14
 
 * Added composer support - props [codekipple](https://github.com/codekipple) and [Rarst](https://github.com/Rarst).
 
-## 1.5.2.1
+= 1.5.2.1 =
 
 Release date: 2014-03-12
 
@@ -5359,7 +5359,7 @@ Release date: 2014-03-12
 * Added ko
 * Updated .pot file.
 
-## 1.5.2
+= 1.5.2 =
 
 Release date: 2014-03-11
 
@@ -5367,7 +5367,7 @@ Release date: 2014-03-11
 
 * If `mbstring` extension isn't loaded, fatal error was thrown.
 
-## 1.5
+= 1.5 =
 
 Release date: 2014-03-11
 
@@ -5461,7 +5461,7 @@ This version also incorporates the [SEO Extended](http://wordpress.org/plugins/s
 * Removed some old (commented out) code
 * Deprecated category rewrite functionality
 
-## 1.4.25
+= 1.4.25 =
 
 Release date: 2014-02-26
 
@@ -5477,7 +5477,7 @@ Release date: 2014-02-26
 * i18n
 * Updated cs_CZ, de_DE, fr_FR &amp; tr_TK
 
-## 1.4.24
+= 1.4.24 =
 
 Release date: 2014-01-19
 
@@ -5501,7 +5501,7 @@ Release date: 2014-01-19
 * Added gitignores to prevent incorrect commits (Cross platform collab) - props [cfoellmann](https://github.com/cfoellmann).
 * Adding filters to individual sitemap url entries - props [mboynes](https://github.com/mboynes).
 
-## 1.4.23
+= 1.4.23 =
 
 Release date: 2014-01-12
 
@@ -5513,7 +5513,7 @@ Release date: 2014-01-12
 * i18n
 * Updated cs_CZ, fa_IR, fr_FR, hu, hu_HU, pl_PL, ru_RU &amp; zh_CN
 
-## 1.4.22
+= 1.4.22 =
 
 Release date: 2013-12-20
 
@@ -5525,7 +5525,7 @@ Release date: 2013-12-20
 * Enhancement
 * No longer save empty meta post variables, issue [#463](https://github.com/Yoast/wordpress-seo/issues/463). Clean up of DB is coming in future release, if you want to clean your DB now, see that issue for SQL queries.
 
-## 1.4.21
+= 1.4.21 =
 
 Release date: 2013-12-16
 
@@ -5534,7 +5534,7 @@ Release date: 2013-12-16
 * Fix notice for `ICL_LANGUAGE_CODE` not being defined.
 * Fix missing function in install by adding a require.
 
-## 1.4.20
+= 1.4.20 =
 
 Release date: 2013-12-16
 
@@ -5565,7 +5565,7 @@ Release date: 2013-12-16
 * Updated es_ES, pt_BR &amp; ru_RU
 * Added sk_SK
 
-## 1.4.19
+= 1.4.19 =
 
 Release date: 2013-10-30
 
@@ -5593,7 +5593,7 @@ Release date: 2013-10-30
 
 * Updated ru_RU, tr_TK and Hr
 
-## 1.4.18
+= 1.4.18 =
 
 Release date: 2013-10-30
 
@@ -5606,13 +5606,13 @@ Release date: 2013-10-30
 * i18n
 * Updated pt_PT
 
-## 1.4.17
+= 1.4.17 =
 
 Release date: 2013-09-20
 
 * Missed a line in the commit of the option to stop stop words cleaning.
 
-## 1.4.16
+= 1.4.16 =
 
 Release date: 2013-09-20
 
@@ -5625,7 +5625,7 @@ Release date: 2013-09-20
 * i18n
 * Updated de_DE, fa_IR, fi, hu_HU, it_IT, pl_PL, sv_SE and tr_TK
 
-## 1.4.15
+= 1.4.15 =
 
 Release date: 2013-08-22
 
@@ -5640,7 +5640,7 @@ Release date: 2013-08-22
 * Fix edge cases issue for keyword in first paragraph test not working.
 * Revert change in 1.4.14 that did a `do_shortcode` while in the `head` to retrieve images from posts, as too many plugins crash then, instead added `wpseo_pre_analysis_post_content` filter there as well.
 
-## 1.4.14
+= 1.4.14 =
 
 Release date: 2013-08-22
 
@@ -5698,7 +5698,7 @@ This release contains tons and tons of bugfixes, thanks in _large_ part to [Jrf]
 * Added language hi_IN
 * Updated wordpress-seo.pot file
 
-## 1.4.13
+= 1.4.13 =
 
 Release date: 2013-07-03
 
@@ -5724,7 +5724,7 @@ Release date: 2013-07-03
 * When remove replytocom is checked in the permalink settings, these are now also redirected out.
 * Added filters to OpenGraph output functions that didn't have them yet.
 
-## 1.4.12
+= 1.4.12 =
 
 Release date: 2013-06-28
 
@@ -5734,7 +5734,7 @@ Release date: 2013-06-28
 * SEO Title now calculates length correctly.
 * Force rewrite titles should no longer reset wrongly on update.
 
-## 1.4.11
+= 1.4.11 =
 
 Release date: 2013-06-27
 
@@ -5757,7 +5757,7 @@ Release date: 2013-06-27
 * Make twitter:domain use WordPress site name instead of domain name.
 * Added more output filters in the Twitter class.
 
-## 1.4.10
+= 1.4.10 =
 
 Release date: 2013-06-21
 
@@ -5769,7 +5769,7 @@ Release date: 2013-06-21
 * Added option to disable author sitemap.
 * If author pages are disabled, author sitemaps are now automatically disabled.
 
-## 1.4.9
+= 1.4.9 =
 
 Release date: 2013-06-21
 
@@ -5805,7 +5805,7 @@ Release date: 2013-06-21
 * Add support for Facebooks new OG tags for media publishers.
 * Allow authorship to be removed per post type.
 
-## 1.4.7
+= 1.4.7 =
 
 Release date: 2013-06-14
 
@@ -5815,13 +5815,13 @@ Release date: 2013-06-14
 * Where possible, use larger images for Facebook Opengraph.
 * Add several filters and actions around social settings.
 
-## 1.4.6
+= 1.4.6 =
 
 Release date: 2013-04-05
 
 * Fix a possible fatal error in tracking.
 
-## 1.4.5
+= 1.4.5 =
 
 Release date: 2013-04-05
 
@@ -5835,7 +5835,7 @@ Release date: 2013-04-05
 * Added a check on focus keyword in the page analysis functionality, checking whether a focus keyword has already been used before.
 * Update how the tracking class calculates users to improve speed.
 
-## 1.4.4
+= 1.4.4 =
 
 Release date: 2013-03-19
 
@@ -5847,7 +5847,7 @@ Release date: 2013-03-19
 * i18n
 * Updated es_ES, id_ID, he_IL.
 
-## 1.4.3
+= 1.4.3 =
 
 Release date: 2013-03-13
 
@@ -5858,7 +5858,7 @@ Release date: 2013-03-13
 * Make site tracking use the site hash consistently between plugins.
 * Improve popup pointer removal.
 
-## 1.4.2
+= 1.4.2 =
 
 Release date: 2013-03-07
 
@@ -5871,7 +5871,7 @@ Release date: 2013-03-07
 * i18n
 * Updated bs_BA, cs_CZ, da_DK, de_DE, fa_IR, fr_FR, he_IL, hu_HU, id_ID, it_IT, nl_NL, pl_PL, pt_BR, ru_RU and tr_TR
 
-## 1.4.1
+= 1.4.1 =
 
 Release date: 2013-02-28
 
@@ -5887,7 +5887,7 @@ Release date: 2013-02-28
 #### Enhancements
 * Don't show banners for plugins you already have.
 
-## 1.4
+= 1.4 =
 
 Release date: 2013-02-27
 
@@ -5912,7 +5912,7 @@ Release date: 2013-02-27
 * Changed design of meta box, moving much of the help text out in favor of clicking on a help icon.
 * Removed Linkdex branding from page analysis functionality.
 
-## 1.3.4.4
+= 1.3.4.4 =
 
 Release date: 2013-01-14
 
@@ -5927,26 +5927,26 @@ Release date: 2013-01-14
 * updated Czech (cs_CZ)
 * added Japanese (ja)
 
-## 1.3.4.3
+= 1.3.4.3 =
 
 Release date: 2013-01-07
 
 * Regex annoyances anyone? Sigh. Bug fixed.
 
-## 1.3.4.2
+= 1.3.4.2 =
 
 Release date: 2013-01-07
 
 * Added missing filter for meta box priority.
 * Fixed bug in JS encoding.
 
-## 1.3.4.1
+= 1.3.4.1 =
 
 Release date: 2013-12-17
 
 * Bug in page analysis regex.
 
-## 1.3.4
+= 1.3.4 =
 
 Release date: 2013-12-17
 
@@ -5957,7 +5957,7 @@ Release date: 2013-12-17
 * Prevent notice for images without alt tags.
 * Use mb_string when possible.
 
-## 1.3.3
+= 1.3.3 =
 
 Release date: 2013-12-12
 
@@ -5969,7 +5969,7 @@ Release date: 2013-12-12
 * Fix the weird addition of `noindex, nofollow` on URLs with ?replytocom that was added in 3.5.
 * Force XML sitemap to be displayed on the proper domain URL, so XSLT works.
 
-## 1.3.2
+= 1.3.2 =
 
 Release date: 2013-12-11
 
@@ -5989,20 +5989,20 @@ Release date: 2013-12-11
 * Properly detect new versions of Facebook plugin too.
 * Allow changing of the number of posts per XML sitemap, to prevent memory issues on certain installs.
 
-## 1.3.1.1
+= 1.3.1.1 =
 
 Release date: 2012-12-10
 
 * Some of that escaping was too aggressive.
 
-## 1.3.1
+= 1.3.1 =
 
 Release date: 2012-12-08
 
 * Fix somewhat too aggressive escaping of content.
 * Added notice text for non-existing .htaccess file / robots.txt file.
 
-## 1.3
+= 1.3 =
 
 Release date: 2012-12-07
 
@@ -6011,13 +6011,13 @@ Release date: 2012-12-07
 * Updated Danish (da_DK), Indonesian (id_ID), Chinese (zh_CN), Russian (ru_RU), Norwegian (nb_NO), Turkish (tr_TK), Hebrew (he_IL) and Persian (fa_IR).
 * Added Arabic (ar), Catalan (ca) and Romanian (ro_RO).
 
-## 1.2.8.7
+= 1.2.8.7 =
 
 Release date: 2012-10-12
 
 * Fixed %%category%% and %%tag%% and some other variables that weren't working since 1.2.8.6.
 
-## 1.2.8.6
+= 1.2.8.6 =
 
 Release date: 2012-10-08
 
@@ -6025,7 +6025,7 @@ Release date: 2012-10-08
 * Fix a tracking timeout.
 * Fix a bunch of notices throughout variables functions.
 
-## 1.2.8.5
+= 1.2.8.5 =
 
 Release date: 2012-09-27
 
@@ -6035,7 +6035,7 @@ Release date: 2012-09-27
 * Added a `wpseo_robots` filter for the robots meta tag.
 * Fixed integration with the [Facebook plugin](https://wordpress.org/plugins/facebook).
 
-## 1.2.8.4
+= 1.2.8.4 =
 
 Release date: 2012-09-09
 

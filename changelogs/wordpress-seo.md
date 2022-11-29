@@ -1,3 +1,29 @@
+## 19.11
+
+Release date: 2022-11-29
+
+Yoast SEO 19.11 is out now. We're optimizing the Yoast SEO plugin to use fewer resources. This helps make your site faster and more efficient. In this release, we're doing this by streamlining your database. Find out more about what's new in Yoast SEO 19.11 in [our release post](https://yoa.st/release-29-11-22)!
+ 
+#### Enhancements
+
+* Adds a WP-CLI command to clean up unused data from our custom database tables: `wp yoast cleanup`.
+* Performs a cleanup of indexables when a public post type (or taxonomy) becomes non-public.
+* Notifies users to run the SEO optimization when a non-public post type (or taxonomy) becomes public.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown when the SEO optimization was run after a post type had been manually excluded via a filter.
+* Fixes a bug where an entry would be added to our indexables table when saving, updating, or accessing a post (or term) for a non-public post type (or taxonomy).
+* Fixes a bug where duplicate indexable records would be created for the same object.
+* Fixes a bug where indexables for users would not get removed when a user did not have any publicly viewable posts anymore.
+* Fixes a bug where indexables for users would not get removed when author archives were disabled.
+* Fixes a bug where indexables would be created for users when author archives were disabled.
+* Fixes a bug where indexables would be created for users who did not have any publicly viewable posts.
+
+#### Other
+
+* Introduces the `wpseo_indexable_excluded_taxonomies` filter, to allow manually excluding taxonomies from being indexed.
+
 ## 19.10
 
 Release date: 2022-11-08
@@ -16,7 +42,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 
 #### Other
 
-* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEO\admin_author_archives_meta, Yoast\WP\SEO\admin_date_archives_meta, Yoast\WP\SEO\admin_post_types_beforearchive, Yoast\WP\SEO\admin_post_types_archive, Yoast\WP\SEO\admin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
+* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEOdmin_author_archives_meta, Yoast\WP\SEOdmin_date_archives_meta, Yoast\WP\SEOdmin_post_types_beforearchive, Yoast\WP\SEOdmin_post_types_archive, Yoast\WP\SEOdmin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
@@ -929,9 +955,9 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 
 * Adds the `yoast_display_gutenberg_compat_notification` filter to allow disabling the Gutenberg compatibility notification.
 * Adds the `wpseo_schema_person_data` filter to enable the filtering of `Person` Schema by the user's ID.
-* Adds the `Yoast\WP\SEO\admin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
-* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEO\admin_post_types_beforearchive` action.
-* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEO\admin_taxonomies_meta` action.
+* Adds the `Yoast\WP\SEOdmin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
+* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEOdmin_post_types_beforearchive` action.
+* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEOdmin_taxonomies_meta` action.
 * Improves the layout of the Search Appearance collapsibles.
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.

@@ -17,9 +17,26 @@ Generally speaking, we advise people to create a `~/Projects/Yoast` folder to ke
 *   Clone plugins on an environment-by-environment basis, which allows you to have various versions of the same plugin on your system, without them (possibly) conflicting.
 *   Clone all plugins into a single directory and symlink them to the development environments. This results in the same version (branch) running across all development environments that were linked.
 
-**Note: The first option is preferable, as there's a lower chance of messing things up.**
+:::note
+The first option is preferable, as there's a lower chance of messing things up.
+:::
 
-In your terminal, `cd` to the newly created `Yoast` directory. In there, you should locate the Docker directory and navigate to `<your docker directory>/plugins` where you can clone the various plugin repositories.
+### Cloning plugins on an environment-by-environment basis
+If you use Local as your development environment of choice, you can follow these steps to clone the plugins to your Local site's plugins directory.
+
+:::note
+These steps assume that you have already [installed Local, and have set up a site within Local to use for plugin development](tools.md#local).
+:::
+
+#### On Mac
+* Clone the plugin(s) you want to develop to `~/Applications/Local\ Sites/<site-name>/app/public/wp-contents/plugins`, where `<site-name>` is the name of the Local site you want to use for plugin development.
+
+### Cloning plugins into a single directory and symlinking them
+If you use Local as your development environment of choice, you can follow these steps to clone the plugins to a separate directory and symlink them to your Local site's plugin directory.
+
+#### On Mac
+* Clone the plugins that you want to develop to a single folder of choice.
+* [Symlink this folder](https://www.howtogeek.com/297721/how-to-create-and-use-symbolic-links-aka-symlinks-on-a-mac/) to the `~/Applications/Local\ Sites/<site-name>/app/public/wp-contents/plugins` folder, where `<site-name>` is the name of the Local site you want to use for plugin development. 
 
 ## Set up PHPUnit
 
@@ -63,7 +80,7 @@ Configure your PHPUnit configuration in PhpStorm by going to `Edit Configuration
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
 ## Installing the plugins
-To have the complete set of Yoast plugins, clone the following repositories in your: `<your docker directory/plugins/` folder.
+To have the complete set of Yoast plugins, clone the following repositories in your `/plugins/` folder.
 
 Yoast SEO with the addons:
 
@@ -81,6 +98,10 @@ Additional plugins:
 
 All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
 
+### Enable indexable indexation
+* Install [the Yoast Test helper plugin](https://wordpress.org/plugins/yoast-test-helper/).
+* Enable "Development mode" in Yoast Test helper's settings. This will enable Indexable indexation.
+
 ### Working on JavaScript used in the plugins
 If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:
 
@@ -97,6 +118,17 @@ This ensures that Travis uses the correct branches when building.
 If you're planning on working on the JavaScript code, _outside_ of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things up and running.
 
 A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) is also available.
+
+## Generating fake data for testing
+You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
+
+* Make use of the _Open site shell_ button in Local by Flywheel.
+* Follow [the _Install as WordPress package_ instructions](https://github.com/Yoast/wp-cli-faker#install-as-wordpress-package) to get the package.
+* Follow [the _Core_ instructions](https://github.com/Yoast/wp-cli-faker#core) to generate the fake data.
+  * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
+    * (See [how to run a WP-CLI command on one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
+* Optional: follow [the _WooCommerce_ instructions](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
+* To exit the shell use: `exit`.
 
 ## Now what?
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require( "prism-react-renderer/themes/github" );
 const darkCodeTheme = require( "prism-react-renderer/themes/dracula" );
+const year = new Date().getFullYear();
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
@@ -26,6 +27,10 @@ const config = {
 	i18n: {
 		defaultLocale: "en",
 		locales: ["en"],
+	},
+
+	markdown: {
+		mermaid: true,
 	},
 
 	headTags: [
@@ -126,8 +131,143 @@ const config = {
 					   '}'
 		},
 	],
-
 	plugins: [
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wordpress-seo',
+				routeBasePath: 'changelog/yoast-seo/',
+				path: './changelog/source/yoast-seo/',
+				blogTitle: 'Yoast SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wordpress-seo-premium',
+				routeBasePath: 'changelog/yoast-seo-premium/',
+				path: './changelog/source/yoast-seo-premium/',
+				blogTitle: 'Yoast SEO Premium changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO Premium.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO Premium changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wordpress-seo-local',
+				routeBasePath: 'changelog/local-seo/',
+				path: './changelog/source/local-seo/',
+				blogTitle: 'Yoast Local SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Local SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Local SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wpseo-news',
+				routeBasePath: 'changelog/news-seo/',
+				path: './changelog/source/news-seo/',
+				blogTitle: 'Yoast News SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast News SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast News SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wpseo-video',
+				routeBasePath: 'changelog/video-seo/',
+				path: './changelog/source/video-seo/',
+				blogTitle: 'Yoast Video SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Video SEO plugin for WordPress.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Video SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'wpseo-woocommerce',
+				routeBasePath: 'changelog/woocommerce-seo/',
+				path: './changelog/source/woocommerce-seo/',
+				blogTitle: 'Yoast WooCommerce SEO changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast WooCommerce SEO plugin.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast WooCommerce SEO changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'duplicate-post',
+				routeBasePath: 'changelog/duplicate-post/',
+				path: './changelog/source/duplicate-post/',
+				blogTitle: 'Yoast Duplicate Post changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of the Yoast Duplicate Post plugin.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast Duplicate Post changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
+		[
+			require.resolve('./src/plugins/changelog/index.js'),
+			{
+				id: 'shopify-seo',
+				routeBasePath: 'changelog/shopify/',
+				path: './changelog/source/shopify/',
+				blogTitle: 'Yoast SEO for Shopify changelog',
+				blogDescription: 'Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast SEO for Shopify.',
+				feedOptions: {
+					type: 'rss',
+					title: 'Yoast SEO for Shopify changelog',
+					description: 'Stay up-to-date about new bugfixes and features in every release.',
+					copyright: 'Copyright © ' + year + ' Yoast BV',
+					language: 'en',
+				},
+			},
+		],
 		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{
@@ -137,6 +277,7 @@ const config = {
 	],
 
 	themes: [
+		require.resolve( '@docusaurus/theme-mermaid' ),
 		[
 			require.resolve("@easyops-cn/docusaurus-search-local"),
 			{
@@ -167,7 +308,6 @@ const config = {
 						editUrl:
 							"https://github.com/yoast/developer/tree/main/",
 					},
-					blog: false,
 					theme: {
 						customCss: require.resolve( "./src/css/custom.css" ),
 					},

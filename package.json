@@ -16,6 +16,7 @@
   "dependencies": {
     "@docusaurus/core": "^2.2.0",
     "@docusaurus/preset-classic": "^2.2.0",
+    "@docusaurus/theme-mermaid": "^2.2.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.5",
     "@mdx-js/react": "^1.6.22",
     "classnames": "^2.3.2",
@@ -28,7 +29,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.1.0"
+    "@docusaurus/module-type-aliases": "^2.2.0"
   },
   "browserslist": {
     "production": [
@@ -41,6 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "mermaid": "9.1.7"
   },
   "engines": {
     "node": ">=16.14"

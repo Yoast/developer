@@ -164,7 +164,15 @@ module.exports = {
 						'features/integrations/site-connections',
 					],
 				},
-				'features/indexables/functional-specification',
+				{
+					type: 'category',
+					label: 'Indexables',
+					items: [
+						'features/indexables/functional-specification',
+						'features/indexables/technical-specification',
+						'features/indexables/indexables-filters',
+					]
+				},
 				{
 					type: 'category',
 					label: 'Schema.org markup',
@@ -192,7 +200,7 @@ module.exports = {
 								'features/schema/pieces/article',
 								'features/schema/pieces/breadcrumb',
 								'features/schema/pieces/comment',
-								'features/schema/pieces/event',								
+								'features/schema/pieces/event',
 								'features/schema/pieces/howto',
 								'features/schema/pieces/image',
 								'features/schema/pieces/localbusiness',
@@ -287,7 +295,6 @@ module.exports = {
 						'customization/yoast-seo/filters/capability-roles-filter',
 						'customization/yoast-seo/filters/change-metabox-prio-filter',
 						'customization/yoast-seo/filters/cornerstone-post-types-filter',
-						'customization/yoast-seo/filters/filtering-yoast-seo-indexables',
 						'customization/yoast-seo/filters/markdown-enabled-filter',
 						'customization/yoast-seo/filters/assessment-markers-filter',
 						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
@@ -382,6 +389,52 @@ module.exports = {
 				'shopify/overview',
 				'features/schema/plugins/yoast-seo-shopify',
 				'shopify/integrations',
+			]
+		},
+		{
+			type: 'category',
+			label: 'Changelogs',
+			items: [
+				{
+					type: 'link',
+					label: 'Yoast SEO',
+					href: '/changelog/yoast-seo/',
+				},
+				{
+					type: 'link',
+					label: 'Yoast SEO Premium',
+					href: '/changelog/yoast-seo-premium/',
+				},
+				{
+					type: 'link',
+					label: 'Local SEO',
+					href: '/changelog/local-seo/',
+				},
+				{
+					type: 'link',
+					label: 'News SEO',
+					href: '/changelog/news-seo/',
+				},
+				{
+					type: 'link',
+					label: 'Video SEO',
+					href: '/changelog/video-seo/',
+				},
+				{
+					type: 'link',
+					label: 'WooCommerce SEO',
+					href: '/changelog/woocommerce-seo/',
+				},
+				{
+					type: 'link',
+					label: 'Duplicate Post',
+					href: '/changelog/duplicate-post/',
+				},
+				{
+					type: 'link',
+					label: 'Yoast SEO for Shopify',
+					href: '/changelog/shopify/',
+				},
 			]
 		}
 	],

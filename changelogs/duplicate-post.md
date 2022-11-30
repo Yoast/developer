@@ -1,4 +1,4 @@
-## 4.5
+= 4.5 =
 
 Release date: 2022-06-28
 
@@ -14,7 +14,7 @@ Release date: 2022-06-28
 
 * Sets the WordPress tested up to version to 6.0.
 
-## 4.4
+= 4.4 =
 
 Release date: 2022-01-25
 
@@ -32,7 +32,7 @@ Release date: 2022-01-25
 
 * Sets the WordPress tested up to version to 5.9.
 
-## 4.3
+= 4.3 =
 
 Release date: 2021-12-14
 
@@ -40,7 +40,7 @@ Release date: 2021-12-14
 
 * Fixes a bug where Rewrite & Republish copies could be displayed and queried in the front end.
 
-## 4.2
+= 4.2 =
 
 Release date: 2021-11-18
 
@@ -57,7 +57,7 @@ Release date: 2021-11-18
 * Improved sort order of the taxonomies list on the options page.
 * Most plugin files have been renamed. If you extend this plugin of include any of the files from the plugin from within your own plugin, you may need to adjust the file name used in the `include`/`require` statement.
 
-## 4.1.2
+= 4.1.2 =
 
 Release date: 2021-03-23
 
@@ -71,7 +71,7 @@ Release date: 2021-03-23
 * Fixes a bug where a post type enabled by filter couldn't be copied.
 * Fixes a bug where the "Show links in" settings were reset to the default value on version upgrade.
 
-## 4.1.1
+= 4.1.1 =
 
 Release date: 2021-01-27
 
@@ -79,7 +79,7 @@ Release date: 2021-01-27
 
 * Fixes a bug where editing posts with Elementor could trigger a fatal error.
 
-## 4.1
+= 4.1 =
 
 Release date: 2021-01-27
 
@@ -96,7 +96,7 @@ Release date: 2021-01-27
 
 * Disables the plugin for WooCommerce products and introduces filter for enabled post types.
 
-## 4.0.2
+= 4.0.2 =
 
 Release date: 2021-01-14
 
@@ -104,7 +104,7 @@ Release date: 2021-01-14
 
 * Fixes a bug where errors or notices could be triggered when using the plugin with some other plugins or custom code.
 
-## 4.0.1
+= 4.0.1 =
 
 Release date: 2021-01-12
 
@@ -112,7 +112,7 @@ Release date: 2021-01-12
 
 * Fixes a bug that caused a fatal error when used with some plugins.
 
-## 4.0
+= 4.0 =
 
 Release date: 2021-01-12
 
@@ -122,7 +122,7 @@ Release date: 2021-01-12
 * Introduces an integration with the Block Editor.
 * Introduces new settings to individually enable/disable the `New Draft`, `Clone` and `Rewrite & Republish` links.
 
-## 3.2.6
+= 3.2.6 =
 
 Release date: 2020-09-17
 
@@ -133,7 +133,7 @@ Release date: 2020-09-17
 * Updated template tag documentation link
 * Added missing gettext to "Subscribe" button
 
-## 3.2.5
+= 3.2.5 =
 
 Release date: 2020-07-07
 
@@ -143,7 +143,7 @@ Release date: 2020-07-07
 * Accessibility improvements to the "Show original item" check box in Quick Edit
 * duplicate_post_blacklist_filter deprecated in favor of duplicate_post_excludelist_filter
 
-## 3.2.4
+= 3.2.4 =
 
 Release date: 2019-12-10
 
@@ -151,7 +151,7 @@ Release date: 2019-12-10
 * Accessibility improvements
 * Small other fixes
 
-## 3.2.3
+= 3.2.3 =
 
 Release date: 2019-07-10
 
@@ -159,7 +159,7 @@ Release date: 2019-07-10
 * Now roles without edit_posts capability but having equivalent capability for custom post types can be allowed to copy
 * Small other fixes to bugs that could lead to incompatibilities with WPML and others
 
-## 3.2.2
+= 3.2.2 =
 
 Release date: 2018-04-13
 
@@ -167,7 +167,7 @@ Release date: 2018-04-13
 * Option for "Slug" not set by default on new installations
 * Better display of icon in the Admin bar on small screens
 
-## 3.2.1
+= 3.2.1 =
 
 Release date: 2017-11-25
 
@@ -176,7 +176,7 @@ Release date: 2017-11-25
 * Improved compatibility with WPML + page builders, thanks to WPML team
 * Prevents creating a revision immediately after the cloning
 
-## 3.2
+= 3.2 =
 
 Release date: 2017-04-04
 
@@ -187,19 +187,19 @@ Release date: 2017-04-04
 * improved security with nonces
 * various small fixes
 
-## 3.1.2
+= 3.1.2 =
 
 Release date: 2016-12-13
 
 * Fix for custom fields not copied
 
-## 3.1.1
+= 3.1.1 =
 
 Release date: 2016-12-13
 
 * Fix for nasty update nag (plus a failsafe checkbox)
 
-## 3.1
+= 3.1 =
 
 Release date: 2016-12-13
 
@@ -212,7 +212,7 @@ Release date: 2016-12-13
 * Probable fix for repeated clone bug
 * Other minor bugs fixed
 
-## 3.0.3
+= 3.0.3 =
 
 Release date: 2016-10-29
 
@@ -221,7 +221,7 @@ Release date: 2016-10-29
 * Uses site options for version and notice
 * Minor fixes
 
-## 3.0.2
+= 3.0.2 =
 
 Release date: 2016-10-18
 
@@ -230,13 +230,13 @@ Release date: 2016-10-18
 * New "Donate" button
 * Fixes for minor bugs and typos
 
-## 3.0.1
+= 3.0.1 =
 
 Release date: 2016-10-09
 
 * Fixes the issues for people upgrading from an older version
 
-## 3.0
+= 3.0 =
 
 Release date: 2016-10-09
 
@@ -249,7 +249,7 @@ Release date: 2016-10-09
 * Translations removed to use WP.org's official translation project
 * Checked PHP 7 compatibility
 
-## 2.6
+= 2.6 =
 
 Release date: 2014-04-27
 
@@ -259,7 +259,7 @@ Release date: 2014-04-27
 * Updated and added translations
 * Tested up to WP 3.8.1
 
-## 2.4.1
+= 2.4.1 =
 
 Release date: 2014-02-22
 
@@ -267,7 +267,7 @@ Release date: 2014-02-22
 * Fixed bug with guid
 * Don't clone to_ping and pinged (maybe there will be an option about those later)
 
-## 2.4
+= 2.4 =
 
 Release date: 2012-04-29
 
@@ -277,7 +277,7 @@ Release date: 2012-04-29
 * Fixed bug with prefix/suffix
 * Translation project moved to GlotPress
 
-## 2.3
+= 2.3 =
 
 Release date: 2012-04-06
 
@@ -286,7 +286,7 @@ Release date: 2012-04-06
 * Fix for untranslated user roles
 * Some other fixes (missing checks, PHP warnings and errors, etc.)
 
-## 2.2
+= 2.2 =
 
 Release date: 2012-02-01
 
@@ -294,13 +294,13 @@ Release date: 2012-02-01
 * Fix for multiple _dp_original field
 * Removed deprecated parameter when adding options
 
-## 2.1.1
+= 2.1.1 =
 
 Release date: 2012-01-04
 
 * Can't rely on activation hook for upgrade, this caused problems with new options
 
-## 2.1
+= 2.1 =
 
 Release date: 2012-01-03
 
@@ -311,7 +311,7 @@ Release date: 2012-01-03
 * duplicate_post_get_original template tag
 * Settings link in plugin list, 'Donate' and 'Translate' link in option page
 
-## 2.0.2
+= 2.0.2 =
 
 Release date: 2011-12-12
 
@@ -319,14 +319,14 @@ Release date: 2011-12-12
 * Two links on posts list: clone immediately or copy to a new draft to edit.
 * Tested on multisite mode.
 
-## 2.0.1
+= 2.0.1 =
 
 Release date: 2011-12-08
 
 * Fixed bug for action filters
 * New option: you can choose if cloning from the posts list must copy the post status (draft, published, pending) too.
 
-## 2.0
+= 2.0 =
 
 Release date: 2011-12-08
 
@@ -338,14 +338,14 @@ Release date: 2011-12-08
 * Added suffix option
 * Added template tag
 
-## 1.1.2
+= 1.1.2 =
 
 Release date: 2011-04-08
 
 * WP 3.1.1 compatibility (still not tested against multiblog feature, so beware)
 * Added complete Polish language files
 
-## 1.1.1
+= 1.1.1 =
 
 Release date: 2010-06-30
 
@@ -353,7 +353,7 @@ Release date: 2010-06-30
 * Fix conflicts with a few other plugins
 * Added Dutch language files
 
-## 1.1
+= 1.1 =
 
 Release date: 2010-06-24
 
@@ -361,7 +361,7 @@ Release date: 2010-06-24
 * Option page: minimum user level, title prefix, fields not to be copied, copy post/page date also
 * Added German, Swedish, Romanian, Hebrew, Catalan (incomplete) and Polish (incomplete) language files
 
-## 1.0
+= 1.0 =
 
 Release date: 2010-06-15
 
@@ -370,13 +370,13 @@ Release date: 2010-06-15
 * Added French and Spanish language files
 * Dropped WP 2.6.5 compatibility
 
-## 0.6.1
+= 0.6.1 =
 
 Release date: 2009-12-03
 
 * Tested WP 2.9 compatibility
 
-## 0.6
+= 0.6 =
 
 Release date: 2009-07-21
 
@@ -384,20 +384,20 @@ Release date: 2009-07-21
 * WPMU compatibility
 * Internationalization (Italian and Japanese language files shipped)
 
-## 0.5
+= 0.5 =
 
 Release date: 2009-01-09
 
 * Fix for post-meta
 * WP2.7 compatibility
 
-## 0.4
+= 0.4 =
 
 Release date: 2008-11-23
 
 * Support for new WP post revision feature
 
-## 0.3
+= 0.3 =
 
 Release date: 2008-03-01
 

@@ -25,9 +25,11 @@ const publishTimes = new Set();
  */
 function processSection(section, plugin) {
 	const title = section
-		.match(/(\n|^)## (.*)\n/)?.[0]
+		.match(/(\n|^)(##|=)(.*)(=)?\n/)?.[0]
 		.trim()
 		.replace('## ', '')
+		.replace( '= ', '' )
+		.replace( ' =', '' )
 		.replace( /\//g, '-' )
 		.replace( '(UTC)', '' )
 		.trim();
@@ -57,6 +59,7 @@ function processSection(section, plugin) {
 
 	let content = section
 		.replace(/(\n|^)## .*/, '')
+		.replace(/(\n|^)= .* =/, '')
 		.replace( /Release date: (\d{4}-\d{2}-\d{2})( \d{2}:\d{2})?/, '' )
 		.trim();
 
@@ -105,7 +108,7 @@ async function ChangelogPlugin(context, options) {
 		async loadContent() {
 			const fileContent = await fs.readFile(changelogPath, 'utf-8');
 			const sections = fileContent
-				.split(/(?=(^|\n)## )/)
+				.split(/(?=(^|\n)(##|=) )/)
 				.map(
 					section => processSection( section, options.blogTitle.replace( ' changelog', '' ) )
 				)

@@ -1,3 +1,13 @@
+## 01/12/2022 11:49 (UTC)
+
+Release date: 2022-12-01
+
+#### Enhancements
+
+* Adds \"seller\" property to \"offer\" schema.
+* Add support for \"checkoutPageURLTemplate\" in \"offers\" schema.
+* Improves the style of the marker buttons in the analysis reports to align with the rest of the UI.
+
 ## 17/11/2022 13:10 (UTC)
 
 Release date: 2022-11-17

@@ -21,6 +21,7 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 | `Meta_Description_Presenter` | `<meta name="description" content="%s" />` | `wpseo_metadesc` |
 | `Canonical_Presenter` | `<link rel="canonical" href="%s" />` | `wpseo_canonical` |
 | `Robots_Presenter` | `<meta name="robots" content="%s" />` | `wpseo_robots` |
+| `Meta_Author_Presenter` | `<meta name="author" content="%s" />` | `wpseo_meta_author` |
 
 ### Webmaster presenters
 | Presenter | Tag format | Filter |

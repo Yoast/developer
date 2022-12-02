@@ -1,3 +1,13 @@
+## 01/12/2022 11:49 (UTC)
+
+Release date: 2022-12-01
+
+#### Enhancements
+
+* Adds "seller" property to "offer" schema.
+* Add support for "checkoutPageURLTemplate" in "offers" schema.
+* Removed support for BlackFriday code.
+
 ## 17/11/2022 13:10 (UTC)
 
 Release date: 2022-11-17

@@ -64,9 +64,7 @@ If a node is not output, any entities which would otherwise have declared a rela
     "@graph": [
         {
             "@type": "Event",
-            "mainEntityOfPage": {
-                "@id": "https://www.example.com/#/schema/Event/abc123"
-            },
+            "@id": "https://www.example.com/#/schema/Event/abc123",
             "name": "My awesome party",
             "location": {
                 "@type": "Place",
@@ -96,9 +94,7 @@ If a node is not output, any entities which would otherwise have declared a rela
     "@graph": [
         {
             "@type": "Event",
-            "mainEntityOfPage": {
-                "@id": "https://www.example.com/#/schema/Event/abc123"
-            },
+            "@id": "https://www.example.com/#/schema/Event/abc123",
             "name": "My birthday party",
             "description": "We're all getting together in at Example Venue in Fake Town to celebrate my special day!",
             "location": {

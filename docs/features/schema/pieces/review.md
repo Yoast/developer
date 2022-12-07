@@ -16,7 +16,6 @@ A valid `Review` must have the following properties.
 
 * `@type`: `Review`.
 * `@id`: The site's home URL appended by `#/schema/Review/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `name`: The name of the entity being reviewed.
 * `author`: A reference-by-ID to the `Person` who wrote the review.
 * `reviewRating`: A `Rating` object, with a `ratingValue` property. If the scale is not from 1 to 5, also add `bestRating` and `worstRating` properties.
 
@@ -30,6 +29,7 @@ The following should be added whenever available and valid:
 
 * `reviewBody`: The text content of the review.
 * `name`: A title for the review.
+* `datePublished`: The date the review was published, in ISO 8601 date format.
 
 ## Examples
 
@@ -42,7 +42,6 @@ The following should be added whenever available and valid:
           {
               "@type": "Review",
               "@id": "https://www.example.com/#/schema/Review/abc123",
-              "name": "Example Product",
               "author": {
                   "@id": "https://www.example.com/#/schema/Person/abc123"
               },
@@ -74,7 +73,8 @@ The following should be added whenever available and valid:
                   "bestRating": 10,
                   "worstRating": 1
               },
-              "reviewBody": "Example review body"
+              "reviewBody": "Example review body",
+              "datePublished": "2022-07-21"
           }
       ]
   }`}

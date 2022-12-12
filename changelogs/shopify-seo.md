@@ -1,3 +1,11 @@
+## 12/12/2022 12:21 (UTC)
+
+Release date: 2022-12-12
+
+#### Enhancements
+
+* Adds support for Shopify standard review metafield to the `aggregateRating` schema output.
+
 ## 01/12/2022 11:49 (UTC)
 
 Release date: 2022-12-01

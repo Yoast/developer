@@ -1,3 +1,29 @@
+## 19.6
+
+Release date: 2022-12-13
+
+Yoast SEO Premium 19.6 is out today. In this release, we've mostly focused on smaller improvements. We've also made the inclusive language analysis available to all users of Yoast SEO. Haven't tried it yet? Please do; it can help you expand your audience. Read more about what’s new in Yoast SEO Premium 19.6 in [our release post](https://yoa.st/release-13-12-22)!
+
+#### Enhancements
+
+* Adds the `Internal linking suggestions` collapsible to the Yoast metabox.
+* Removes a box in the Redirects page that prompts users to help with translating the plugin in their site language.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown in the Classic editor when Yoast SEO Premium is used in combination with plugins that misuse metabox hooks.
+* Fixes a bug where enabling the removal of unregistered URL parameters would trigger errors in the Block editor and would make the customizer and the Divi builder unusable.
+* Fixes a bug where the `Internal linking suggestions` collapsible would be displayed wrongly when editing posts through the Classic editor.
+
+#### Other
+
+* Bumps the Yoast SEO minimum required version to 19.12.
+* Reduces noise from PHP 8.1 deprecations.
+* Improves compatibility with PHP 8.2.
+* Disallows setting or unsetting any dynamic properties on the `Helpers_Surface`.
+* Removes the beta badge from the _word complexity_ assessment.
+* Removes the inclusive language analysis from Yoast SEO Premium as it has been moved to Yoast SEO.
+
 ## 19.5
 
 Release date: 2022-11-08
@@ -575,7 +601,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 
 #### Bugfixes
 
-* Fixes a bug where the `Yoast\WP\SEO\enable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
+* Fixes a bug where the `Yoast\WP\SEOnable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
 
 #### Other
 
@@ -584,7 +610,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 * Deprecates the `Yoast\WP\SEO\Helpers\Prominent_Words_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Prominent_Words_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Helpers\Zapier_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Zapier_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Conditionals\Zapier_Enabled_Conditional` class in favor of the `Yoast\WP\SEO\Premium\Conditionals\Zapier_Enabled_Conditional` class.
-* Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Elementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Elementor_Premium` class.
+* Deprecates the `Yoast\WP\SEO\Integrations\Third_Partylementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Partylementor_Premium` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Classic_Editor` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Classic_Editor` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Trigger` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Trigger` class.

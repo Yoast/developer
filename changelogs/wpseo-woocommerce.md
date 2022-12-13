@@ -1,3 +1,16 @@
+## 15.4
+
+Release date: 2022-12-13
+
+#### Enhancements
+
+* Removes a box in the WooCommerce SEO page that prompts users to help with translating the plugin in their site language.
+
+#### Other
+
+* Removes the beta badge from the _word complexity_ assessment.
+* Sets the minimum required Yoast SEO version to 19.12.
+
 ## 15.3
 
 Release date: 2022-11-08

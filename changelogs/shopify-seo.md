@@ -1,3 +1,17 @@
+## 14/12/2022 10:37 (UTC)
+
+Release date: 2022-12-14
+
+#### Enhancements
+
+* Adds an Inclusive language analysis for products, blog posts, blogs, collections and pages.
+* Improves the _subheading distribution_ assessment by adding highlighting and also targeting long content before the first subheading.
+* Improves the _transition words_ assessment for Arabic by removing some transition words.
+
+#### Other
+
+* Removes the beta badge from the _word complexity_ assessment.
+
 ## 12/12/2022 12:21 (UTC)
 
 Release date: 2022-12-12

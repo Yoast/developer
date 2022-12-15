@@ -1,3 +1,12 @@
+## 15/12/2022 07:34 (UTC)
+
+Release date: 2022-12-15
+
+#### Bugfixes
+
+* Fixes a bug where highlighting would not be removed from the text after the analysis is updated and the present highlighting has become irrelevant.
+* Only marks the subheading when a subheading text is too long in subheading distribution assessment.
+
 ## 14/12/2022 10:37 (UTC)
 
 Release date: 2022-12-14

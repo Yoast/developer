@@ -2,6 +2,10 @@
 
 Release date: 2022-12-20
 
+#### Enhancements
+
+* Adds a new tab with additional insights about the content.
+
 #### Bugfixes
 
 * Adjust styling of Inclusive Language analysis to fit other analysis sections.

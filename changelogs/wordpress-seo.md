@@ -1,3 +1,13 @@
+= 19.13 =
+
+Release date: 2022-12-20
+
+Yoast SEO 19.13 proactively fixes an issue we found in the upcoming release of the Gutenberg editor. This release of the block editor breaks the link functionality when used in conjunction with Yoast SEO. The Yoast SEO release works around that so users can keep adding and changing links. Find out more about what's new in Yoast SEO 19.13 in [our release post](https://yoa.st/release-20-12-22)!
+
+#### Enhancements
+
+* Prevents an incompatibility with the upcoming Gutenberg 14.8.0.
+
 = 19.12 =
 
 Release date: 2022-12-13

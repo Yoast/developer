@@ -1,3 +1,11 @@
+## 20/12/2022 13:05 (UTC)
+
+Release date: 2022-12-20
+
+#### Bugfixes
+
+* Adjust styling of Inclusive Language analysis to fit other analysis sections.
+
 ## 15/12/2022 07:34 (UTC)
 
 Release date: 2022-12-15

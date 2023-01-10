@@ -1,3 +1,14 @@
+## 10/01/2023 09:30 (UTC)
+
+Release date: January  10th, 2023
+
+#### Bugfixes
+
+* Fixes a bug where merchants with a long myshopify.com domain would not be able to install and use our app.
+* Fixes a bug where parts of the content would disappear in the editor when user writes it fast inside content editor.
+* Fixes a bug where the AggregateRating piece would be added to the schema graph when there was no rating data.
+* Fixes a bug where the default analysis was previously used to analyze content in a language that we support when a variant of that language is used in the store. Now, when the store language is set to e.g. British English or Portuguese (Brazil), the content will be analyzed using the main variant's language-specific analysis.
+
 ## 20/12/2022 13:05 (UTC)
 
 Release date: 2022-12-20

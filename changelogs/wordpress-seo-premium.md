@@ -1,3 +1,22 @@
+## 19.7
+
+Release date: 2023-01-10
+
+The latest version of Yoast SEO Premium, 19.7, includes the first set of improvements to the inclusive language analysis feature. These updates make the analysis more effective at identifying terms used in specific contexts and provide better feedback to writers. Give it a try! Read more about what’s new in Yoast SEO Premium 19.7 in [our release post](https://yoa.st/release-10-1-23)!
+
+#### Enhancements
+
+* Improves the prominent words section in _Insights_ and the _internal linking suggestions_ by excluding URLs and email addresses from the prominent words.
+
+#### Bugfixes
+
+* Fixes a redirect loop in the search cleanup, when search includes encoded characters.
+
+#### Other
+
+* Bumps the Yoast SEO minimum required version to 19.14.
+* Sets minimum WP version to 6.0.
+
 ## 19.6
 
 Release date: 2022-12-13

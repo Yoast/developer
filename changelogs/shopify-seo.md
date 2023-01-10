@@ -1,6 +1,6 @@
 ## 10/01/2023 09:30 (UTC)
 
-Release date: January  10th, 2023
+Release date: 2023-01-10
 
 #### Bugfixes
 

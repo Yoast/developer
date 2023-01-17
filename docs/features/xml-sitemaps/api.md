@@ -77,7 +77,7 @@ function sitemap_exclude_authors( $users ) {
     } );
 }
 
-add_filter( 'wpseo_sitemap_exclude_author', 'sitemap_exclude_authors', 10, 1 );
+add_filter( 'wpseo_sitemap_exclude_author', 'sitemap_exclude_authors' );
 ```
 
 ### Exclude a taxonomy term
@@ -93,7 +93,7 @@ function sitemap_exclude_terms( $terms ) {
     return [ 3, 11 ];
 }
 
-add_filter( 'wpseo_exclude_from_sitemap_by_term_ids', 'sitemap_exclude_terms', 10, 1 );
+add_filter( 'wpseo_exclude_from_sitemap_by_term_ids', 'sitemap_exclude_terms' );
 ```
 
 ## Adding content
@@ -102,6 +102,8 @@ add_filter( 'wpseo_exclude_from_sitemap_by_term_ids', 'sitemap_exclude_terms', 1
 ```php
 /**
  * Adds an XML sitemap for a custom post type.
+ * 
+ * @return void
  */
 function enable_custom_sitemap() {
     global $wpseo_sitemaps;
@@ -169,4 +171,30 @@ add_filter( 'wpseo_xml_sitemap_post_url', 'sitemap_post_url', 10, 2 );
 }
 
 add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap' );
+```
+
+### Add extra properties to the <video:video> container 
+```php
+/**
+ * Adds an example <video:live> property to a <video:video> container for a particular post
+ *
+ * @param string $property A placeholder for a custom property.
+ * @param int    $post_id  The post ID.
+ * 
+ * @return string The property to add.
+ */
+ function add_video_live_property( $property = '', $post_id ) {
+
+    // Bail if this isn't the example post we want to modify.
+    if ( $post_id !== 12345 ) {
+        return $property;
+    }
+
+    // Set our custom property.
+    $property = '<video:live>yes</video:live>';
+
+    return $property;
+}
+
+add_filter( 'wpseo_video_item', 'add_video_live_property', 10, 2 );
 ```

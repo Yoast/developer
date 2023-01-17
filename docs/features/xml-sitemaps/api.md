@@ -183,7 +183,7 @@ add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap', 10, 0 )
  * 
  * @return string The property to add
  */
- function add_video_live_property($property = '', $post_id ) {
+ function add_video_live_property( $property = '', $post_id ) {
 
     // Bail if this isn't the example post we want to modify.
     if ( $post_id !== 12345 ) {
@@ -196,5 +196,5 @@ add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap', 10, 0 )
     return $property;
 }
 
-add_filter( 'wpseo_video_item', 'add_video_live_property' );
+add_filter( 'wpseo_video_item', 'add_video_live_property', 10, 2 );
 ```

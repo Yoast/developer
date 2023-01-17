@@ -1,3 +1,15 @@
+## 17/01/2023 09:09 (UTC)
+
+Release date: 2023-01-17
+
+#### Enhancements
+
+* Improves Japanese character count by excluding all spaces from the character count.
+* Improves the inclusive language analysis by expanding the number of non-inclusive phrases recognized as well as by improving the feedback, for example by adding more inclusive alternatives or fixing inconsistencies. Specifically, this includes the following changes:
+* Improves the prominent words section in Insights by excluding URLs and email addresses from the prominent words.
+* Improves the style of the marker buttons in the analysis reports to align with the rest of the UI.
+* Improves the way we calculate text length of Japanese texts, for example by excluding all spaces from the character count. This improves the accuracy of many assessments in Japanese, such as the text length assessment or the sentence length assessment.
+
 ## 10/01/2023 09:30 (UTC)
 
 Release date: 2023-01-10

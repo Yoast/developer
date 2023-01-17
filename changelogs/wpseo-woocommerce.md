@@ -1,3 +1,15 @@
+## 15.5
+
+Release date: 2023-01-17
+
+#### Enhancements
+
+* Improves the Schema output for `Product`, including a fix for a bug affecting setups where prices are inserted without taxes but displayed with taxes or viceversa.
+
+#### Other
+
+*  Sets the minimum required version of Yoast SEO to 19.14.
+
 ## 15.4
 
 Release date: 2022-12-13

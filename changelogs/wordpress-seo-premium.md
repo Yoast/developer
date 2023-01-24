@@ -1,3 +1,13 @@
+## 20.0
+
+Release date: 2023-01-24
+
+Yoast SEO 20.0 Premium comes with a brand new settings interface, which we've put in a lot of effort to make visually pleasing and functional. You'll find it a breeze to work on your SEO, and it's just the start of many amazing developments. Check it out! Find out more about what's new in Yoast SEO 20.0 Premium in [our release post](https://yoa.st/release-24-1-23)!
+
+#### Other
+
+* Bumps the Yoast SEO minimum required version to 20.0.
+
 ## 19.7
 
 Release date: 2023-01-10

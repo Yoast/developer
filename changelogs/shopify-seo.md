@@ -1,3 +1,11 @@
+## 01/02/2023 08:01 (UTC)
+
+Release date: 2023-02-01
+
+#### Enhancements
+
+* Adds extra information on upgrade page about date of first charge after Trial.
+
 ## 17/01/2023 09:09 (UTC)
 
 Release date: 2023-01-17

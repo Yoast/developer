@@ -1,3 +1,13 @@
+## 03/02/2023 09:16 (UTC)
+
+Release date: 2023-02-03
+
+#### Bugfixes
+
+* Fixes a bug where a button to discard unsaved data would not show clearly as such an impactful button.
+* Fixes a bug where the deactivation button would not show clearly as an impactful button that removes functionality.
+* Fixes a bug where the loading animation would not show up during the deactivation process.
+
 ## 01/02/2023 08:01 (UTC)
 
 Release date: 2023-02-01

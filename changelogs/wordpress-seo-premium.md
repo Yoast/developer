@@ -1,3 +1,18 @@
+## 20.1
+
+Release date: 2023-02-07
+
+In Yoast SEO 20.1, we're launching an integration with Mastodon, the decentralized social network. Among other things, this makes it easy for Yoast SEO Premium users to verify their profile link. Additionally, we've improved our inclusive language analysis to help you reach a wider audience with your content. Upgrade now! Find out more about what's new in Yoast SEO 20.1 Premium in [our release post](https://yoa.st/release-7-2-23)!
+
+#### Enhancements
+
+* Adds an integration to easily verify the link to your website on your Mastodon profile.
+* Adds an integration with Easy Digital Downloads to improve its Schema output and connect it to the Yoast Schema graph.
+
+#### Other
+
+* Bumps minimum required version of Yoast SEO to 20.1.
+
 ## 20.0
 
 Release date: 2023-01-24

@@ -173,7 +173,7 @@ The sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL 
 ```
 
 * `publication.name` is the *Site Title* (e.g., "Yoast")
-* **(Optional)** `publication.language` is the language code of the article (in [ISO 639](http://www.loc.gov/standards/iso639-2/php/code_list.php) format)
+* `publication.language` is the language code of the article (in [ISO 639](http://www.loc.gov/standards/iso639-2/php/code_list.php) format)
 * `publication_date` is the date in [W3C format](https://www.w3.org/TR/NOTE-datetime)
 * `title` is the post name of the article
 * **(Optional)** An `image:image` property should be output for each image in / associated with a page, with:

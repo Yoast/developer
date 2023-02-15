@@ -1,3 +1,15 @@
+## 15/02/2023 08:25 (UTC)
+
+Release date: 2023-02-15
+
+#### Enhancements
+
+* Adds the site name to the Google preview for mobile.
+
+#### Bugfixes
+
+* Fixes a bug where the `yoastmark` tags broke the HTML when applied to inline HTML attributes.
+
 ## 03/02/2023 09:16 (UTC)
 
 Release date: 2023-02-03

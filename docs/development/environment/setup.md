@@ -6,19 +6,27 @@ sidebar_label: Development setup
 
 This page describes the process of how we set up development environments at Yoast.
 
-**Note: These instructions assume you're working with OSX and PHP 7.4+.**
+:::note
+These instructions assume you're working with Mac OSX and PHP 7.4+.
+:::
 
 ## Getting started
 Before you start contributing to the Yoast plugins, ensure you've checked out our [development tools page](tools.md) which lists the various tools that need to be used (unless otherwise noted).
 
 ## Organizing your projects
-Generally speaking, we advise people to create a `~/Projects/Yoast` folder to keep all things together. Note: don't create a Yoast folder in Documents, Desktop or Downloads; this will likely cause an error. After this, you have two flavors:
+Generally speaking, we advise people to create a `~/Projects/Yoast` folder to keep all things together.  
+
+:::note
+Don't create a `Yoast` folder in `~/Documents`, `~/Desktop` or `~/Downloads` as this will likely cause errors when using the `plugin-development-docker`.
+:::
+
+After creating this folder, you have two flavors:
 
 *   Clone plugins on an environment-by-environment basis, which allows you to have various versions of the same plugin on your system, without them (possibly) conflicting.
 *   Clone all plugins into a single directory and symlink them to the development environments. This results in the same version (branch) running across all development environments that were linked.
 
 :::note
-The first option is preferable, as there's a lower chance of messing things up.
+Symlinking is generally preferable, as there's a lower chance of messing things up, as there is a single source of truth.
 :::
 
 ### Cloning plugins on an environment-by-environment basis

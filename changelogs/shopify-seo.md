@@ -1,3 +1,22 @@
+## 15/02/2023 08:25 (UTC)
+
+Release date: 2023-02-15
+
+#### Enhancements
+
+* Adds the site name to the Google preview for mobile.
+* Improves the inclusive language analysis by expanding the number of non-inclusive phrases recognized as well as by improving the feedback, for example by adding more inclusive alternatives or fixing inconsistencies. Specifically, this includes the following changes:
+  * Adds word form support (singular vs. plural, different verb forms) for some non-inclusive phrases.
+  * Improves the feedback strings and suggested alternatives for phrases containing the terms "crazy" and "OCD".
+  * Improves the feedback strings pertaining to medical conditions.
+  * Improves the feedback strings for "binge", "preferred pronouns", and "preferred name".
+  * Changes the scoring and improves the feedback string for "ladies and gentleman".
+  * Excludes the phrases "binge drinking/drinks/drink" and "exotic shorthairs/longhairs" from being targeted as non-inclusive.
+
+#### Bugfixes
+
+* Fixes a bug where the `yoastmark` tags broke the HTML when applied to inline HTML attributes.
+
 ## 03/02/2023 09:16 (UTC)
 
 Release date: 2023-02-03

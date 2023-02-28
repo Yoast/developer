@@ -1,3 +1,19 @@
+## 20.2
+
+Release date: 2023-02-28
+
+Today, we're launching Yoast SEO Premium 20.2. In this release, we've improved our indexables database technology. This database system helps us understand your site quicker while also making your site perform better. It also helps us do our best to make the web greener and lays the groundwork for exciting future possibilities. Find out more about what's new in Yoast SEO 20.2 Premium in [our release post](https://yoa.st/release-28-2-23)!
+
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown when Premium was installed alongside other plugins using the WHIP library.
+* Fixes a bug where orphaned prominent words would remain in the database after their post or term had been deleted.
+
+#### Other
+
+* Bumps minimum required version of Yoast SEO to 20.2.
+
 ## 20.1
 
 Release date: 2023-02-07

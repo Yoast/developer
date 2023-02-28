@@ -12,9 +12,8 @@ Each XML sitemap should be listed within an *XML sitemap index*.
 ## Content types
 XML sitemaps should be created for each of the following content types, providing that the content type is *public* and it contains valid members.
 
-* Posts
-* Pages
-* Authors
+* Posts, pages, and custom post types
+* Authors (users with at least one published, public, indexable post)
 * Custom post types
 * Taxonomies
 * Paginated states of multi-part posts/pages
@@ -27,9 +26,9 @@ Whenever an XML sitemap is updated (as a result of a post, page, or URL being cr
 ## Exclusions & empty sitemaps
 The following conditions should lead to a page being excluded from (the appropriate) XML sitemap:
 
-* Posts/pages which are not eligible for indexing by search engines (i.e., any scenario which results in a URL outputting a meta robots noindex directive)
+* Posts/pages which are not eligible for indexing by search engines (i.e., any scenario which results in a page outputting a meta robots noindex directive via a meta tag or HTTP header)
 * Posts/pages which have a manual canonical URL set, which is *not* the same as their default canonical value
-* Private pages
+* Private or password-protected pages
 * Error pages/states/templates
 * Search results pages
 * Paginated views of any type of archive (e.g., /blog/page/2/)
@@ -37,6 +36,7 @@ The following conditions should lead to a page being excluded from (the appropri
 * All URLs, if/when the whole site is set to 'private' (e.g., in WordPress, when the *Search Engine Visibility* option is set to "*Discourage search engines from indexing this site*")
 
 Some of these scenarios may lead to an XML sitemap (or the XML sitemap index) being empty. This is expected and permissible behavior.
+
 Requests to non-existent sitemap URLs should return normal 404 behavior.
 
 ## Content

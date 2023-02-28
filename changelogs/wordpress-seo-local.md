@@ -1,3 +1,19 @@
+## 14.8
+
+Release date: 2023-02-21
+
+#### Bugfixes
+
+* Fixes a bug where a deprecation warning would be thrown when clustering locations in Google Maps.
+* Fixes a bug where a console error would be thrown because of the Google Maps API requiring a callback.
+
+#### Other
+
+* Adds a deprecation notice for "Local store pickup" in all pages and a warning before enabling it, because WooCommerce will offer a Local Pickup option natively since version 7.4.
+* Fixes some links and their copy following the release of the new settings UI in Yoast SEO.
+* Sets the minimum required version of Yoast SEO to 20.1.
+* Sets the minimum supported WordPress version to 6.0.
+
 ## 14.7
 
 Release date: 2022-11-08
@@ -2064,4 +2080,3 @@ Release date: 2013-04-19
 Release date: 2013-04-20
 
 * Initial release.
-

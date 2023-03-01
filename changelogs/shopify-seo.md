@@ -1,3 +1,11 @@
+## 01/03/2023 11:53 (UTC)
+
+Release date: 2023-03-01
+
+#### Bugfixes
+
+* Removes "keywords" Schema element for Product and Blog page, which used the tags from that content in the wrong context.
+
 ## 15/02/2023 08:25 (UTC)
 
 Release date: 2023-02-15

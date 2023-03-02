@@ -1,3 +1,11 @@
+## 02/03/2023 13:45 (UTC)
+
+Release date: 2023-03-02
+
+#### Bugfixes
+
+* Fixes a security issue in the post editor.
+
 ## 01/03/2023 11:53 (UTC)
 
 Release date: 2023-03-01

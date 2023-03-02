@@ -1,3 +1,11 @@
+= 20.2.1 =
+
+Release date: 2023-03-02
+
+### Bugfix
+
+* Fixes a security issue in the post editor.
+
 = 20.2 =
 
 Release date: 2023-02-28

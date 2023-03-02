@@ -2,7 +2,7 @@
 
 Release date: 2023-03-02
 
-### Bugfix
+#### Bugfixes
 
 * Fixes a security issue in the post editor.
 

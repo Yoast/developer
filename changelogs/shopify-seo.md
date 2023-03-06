@@ -1,3 +1,11 @@
+## 06/03/2023 11:08 (UTC)
+
+Release date: 2023-03-06
+
+#### Bugfixes
+
+* Fixes styling of the arrow for the "add related keyphrase"-button in the Optimize module.
+
 ## 02/03/2023 13:45 (UTC)
 
 Release date: 2023-03-02

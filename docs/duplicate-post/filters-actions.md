@@ -117,8 +117,6 @@ function my_custom_enabled_post_types( $enabled_post_types ) {
 add_filter('duplicate_post_enabled_post_types', 'my_custom_enabled_post_types');
 ```
 
-Now, any time you call the `duplicate_post_clone_post_link` in your theme, the outputted link will _always_ be wrapped in our custom div tag.
-
 ## Actions
 
 ### `duplicate_post_pre_copy`

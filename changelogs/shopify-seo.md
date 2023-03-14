@@ -1,3 +1,15 @@
+## 14/03/2023 08:06 (UTC)
+
+Release date: 2023-03-14
+
+#### Enhancements
+
+* Improves the positioning of the "Skip" link in the welcome app so it aligns with the help button.
+
+#### Bugfixes
+
+* Fixes issue with removed "excerpt" during blog post optimization.
+
 ## 06/03/2023 11:08 (UTC)
 
 Release date: 2023-03-06

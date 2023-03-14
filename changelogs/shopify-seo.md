@@ -1,3 +1,11 @@
+## 14/03/2023 13:46 (UTC)
+
+Release date: 2023-03-14
+
+#### Other
+
+* Removes the beta badge label for _inclusive language analysis_ collapsible and feature toggle.
+
 ## 14/03/2023 08:06 (UTC)
 
 Release date: 2023-03-14

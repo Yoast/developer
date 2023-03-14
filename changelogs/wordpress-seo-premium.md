@@ -1,3 +1,23 @@
+## 20.3
+
+Release date: 2023-03-14
+
+Yoast SEO Premium 20.3 is out today. For this release, we did a round of enhancements and fixes. For one, we made improvements to the redirect manager making it easier to use. Check out the post for more information! Find out more about what's new in Yoast SEO Premium 20.3 in [our release post](https://yoa.st/release-14-3-23)!
+
+#### Enhancements
+
+* Makes links in the redirect manager clickable, to help with testing.
+* Defers redirect management to the `plugins_loaded` hook to avoid a timing misalignment between the redirect manager and the _Wordfence_ live traffic monitor.
+* Enhances the _word complexity_ assessment for English by filtering out more function words.
+
+#### Bugfixes
+
+* Fixes a bug where reactivating Premium would switch usage tracking on regardless of the value set by the user.
+
+#### Other
+
+* Bumps minimum required version of Yoast SEO to 20.3.
+
 ## 20.2.1
 
 Release date: 2023-03-02

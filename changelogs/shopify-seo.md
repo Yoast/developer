@@ -1,3 +1,13 @@
+## 15/03/2023 10:45 (UTC)
+
+Release date: 2023-03-15
+
+#### Enhancements
+
+* Enables free testing for affiliate stores.
+* Introduces more details for development stores about the subscription.
+* Updates the Schema output screen to clarify the enabling/disabling behavior.
+
 ## 14/03/2023 13:46 (UTC)
 
 Release date: 2023-03-14

@@ -1,3 +1,13 @@
+## 16/03/2023 12:15 (UTC)
+
+Release date: 2023-03-16
+
+#### Enhancements
+
+* Enhances the _word complexity_ assessment for English by filtering out more function words.
+* Improves the detection of participles in the _passive voice_ assessment for Portuguese.
+* Improves the  _transition words_ assessment for Portuguese by adding new transition words. Props to [mathiasribeiro](https://github.com/mathiasribeiro).
+
 ## 15/03/2023 10:45 (UTC)
 
 Release date: 2023-03-15

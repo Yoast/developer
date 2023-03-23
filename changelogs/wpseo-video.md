@@ -1,3 +1,31 @@
+## 14.7
+
+Release date: 2023-03-14
+
+#### Enhancements
+
+* Improves the inline documentation for various filters.
+* Improves the usability of the `wpseo_video_{$type}_details` filter by adding a `$post_id` parameter.
+* Improves the usability of the `wpseo_video_family_friendly` filter by allowing to return `false` if the video is not family friendly.
+
+#### Bugfixes
+
+* Fixes a bug where a PHP8 deprecation notice would be thrown for `FILTER_SANITIZE_STRING`.
+* Fixes a bug where a Schema validation warning would be thrown about the `isFamilyFriendly` property in the `VideoObject` piece being set to a string instead of a boolean value.
+* Fixes a bug where the link to the _XML sitemaps_ settings would be incorrect when _XML sitemaps_ were disabled.
+* Fixes a bug where the _video title_ assessment and the _video body_ assessment would also appear under the Readability analysis tab when the Cornerstone content toggle would be switched on.
+
+#### Other
+
+* Improves the compatibility with PHP 8.1.
+* Reduces noise from PHP 8.1 deprecations.
+* Sets the minimum required Yoast SEO version to 20.3.
+* Sets the minimum supported WordPress version to 6.0.
+* Support for the [Flowplayer5](https://wordpress.org/plugins/flowplayer5/) plugin has been dropped as the plugin is no longer supported by the author.
+* Support for the [JW Player for WordPress](https://wordpress.org/plugins/jw-player-plugin-for-wordpress/) plugin has been dropped as the plugin is no longer supported by the author.
+* Support for the [Smart YouTube](https://wordpress.org/plugins/smart-youtube/) plugin has been dropped as the plugin is no longer supported by the author.
+* Support for the [TubePress](https://wordpress.org/plugins/tubepress/) plugin has been dropped as the plugin is no longer supported by the author.
+
 ## 14.6
  
 Release date: 2022-07-12

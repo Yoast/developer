@@ -97,3 +97,29 @@ function do_not_create_indexables_for_order_types( $excluded_taxonomies ) {
     return $excluded_taxonomies;
 }
 ```
+
+## Force including content
+
+
+### Force including post types {#included_post_types}
+
+The `wpseo_indexable_forced_included_post_types` filter takes an array of post types which indexables are to be created for. Make sure not to destroy that array, 
+just add to it. An example:
+
+```php
+add_filter( 'wpseo_indexable_forced_included_post_types', 'force_create_indexables_for_non_public_post_type' );
+
+/**
+ * Force create indexables for a post type that would otherwise not be eligible for Yoast SEO Indexable creation.
+ *
+ * @link https://developer.yoast.com/features/indexables/indexables-filters/#included_post_types
+ * 
+ * @param string[] $included_post_types Array of included post types by name.
+ * 
+ * @return string[]
+ */
+function force_create_indexables_for_non_public_post_type( $included_post_types ) {
+    $included_post_types[] = 'not_public_post_type';
+    return $included_post_types;
+}
+```

@@ -1,3 +1,11 @@
+## 24/03/2023 08:36 (UTC)
+
+Release date: 2023-03-24
+
+#### Enhancements
+
+* Adds `@id` property to the Schema.org Offer pieces.
+
 ## 16/03/2023 12:15 (UTC)
 
 Release date: 2023-03-16

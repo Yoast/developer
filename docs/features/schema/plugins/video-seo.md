@@ -9,14 +9,13 @@ The schema output for our [Video SEO plugin](https://yoast.com/wordpress/plugins
 For all the post types you've enabled Video SEO for, it will automatically add a  `videoObject`  piece when it encounters a video embed on the page that it recognizes.
 
 ## Core logic
-* Add a `videoObject` piece for each discovered video.
-* Add a `video` property to the `Article`, containing an array of references-by-ID to each `videoObject` piece.
+* Add a `videoObject` piece to the graph for each discovered video.
+* Add a `video` property to the `WebPage`, containing an array of references-by-ID to each `videoObject` piece.
 
 ## Additional scenarios
 
-### On pages which don't have an `Article`
-* Add the `video` property to the `WebPage`, instead of to the `Article`.
-* Adapt the `mainEntityOfPage` property of the `itemList` to reference the `WebPage`.
+### On pages which contain an `Article`
+* Add a `video` property to the `Article`, containing an array of references-by-ID to each `videoObject` piece.
 
 ## More information
 * [Video Schema pieces](../pieces/video.md)

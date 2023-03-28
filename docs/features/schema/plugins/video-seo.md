@@ -11,7 +11,6 @@ For all the post types you've enabled Video SEO for, it will automatically add a
 ## Core logic
 * Add a `videoObject` piece for each discovered video.
 * Add a `video` property to the `Article`, containing an array of references-by-ID to each `videoObject` piece.
-* Add an `itemList` containing references to each of the `videoObject` pieces, with a `mainEntityOfPage` property which references the `Article`.
 
 ## Additional scenarios
 

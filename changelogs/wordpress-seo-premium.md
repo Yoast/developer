@@ -1,3 +1,18 @@
+## 20.4
+
+Release date: 2023-03-28
+
+Have you tried the crawl optimization settings in Yoast SEO? We can lower your site's carbon footprint by reducing the number of irrelevant pages and resources crawled by search engines. With over 13 million Yoast SEO users, imagine our impact! Try it today and help our quest for a better and greener world. Find out more about what's new in Yoast SEO Premium 20.4 in [our release post](https://yoa.st/release-28-3-23)!
+
+#### Bugfixes
+
+* Fixes a bug where the _previously used keyword_ assessment would potentially link to an empty page of results when the focus keyphrase had been used as a related keyphrase.
+
+#### Other
+
+* Bumps minimum required version of Yoast SEO to 20.4.
+* Sets the WordPress tested up to version to 6.2.
+
 ## 20.3
 
 Release date: 2023-03-14

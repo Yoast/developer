@@ -1,3 +1,19 @@
+## 20.5
+
+Release date: 2023-04-11
+
+Yoast SEO 20.5 includes a host of exciting improvements and fixes. One of the most noteworthy updates is the improved Google SERP preview that aligns with Google's current styling for mobile and desktop. For more information about these updates, please read all about our latest release. Find out more about what's new in Yoast SEO Premium 20.5 in [our release post](https://yoa.st/release-11-4-23)!
+
+#### Bugfixes
+
+* Fixes a bug where the highlighting for the _word complexity_ assessment would not be applied to the first sentence of a paragraph when that paragraph contained a new line character.
+
+#### Other
+
+* Bumps minimum required version of Yoast SEO to 20.5.
+* Drops compatibility with PHP 5.6, 7.0 and 7.1.
+* Fixes security issues.
+
 ## 20.4
 
 Release date: 2023-03-28

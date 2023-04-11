@@ -1,3 +1,20 @@
+## 14.9
+
+Release date: 2023-04-11
+
+#### Bugfixes
+
+* Fixes a bug where location name and URL would not be correctly escaped when displaying a map block in the frontend.
+* Fixes a bug where the settings would be displayed with the wrong style when using Yoast SEO 20.3+.
+
+#### Other
+
+* Drops compatibility with PHP 5.6, 7.0 and 7.1.
+* Removes the _Transport_ page from the deprecated WooCommerce integration.
+* Sets the minimum required Yoast SEO version to 20.5
+* Sets the WordPress "tested up to" version to 6.2.
+* Fixes security issues.
+
 ## 14.8
 
 Release date: 2023-02-21

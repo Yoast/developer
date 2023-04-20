@@ -388,7 +388,18 @@ module.exports = {
 			items: [
 				'shopify/overview',
 				'features/schema/plugins/yoast-seo-shopify',
-				'shopify/integrations',
+				{
+					type: 'category',
+					label: 'Integrations',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation provides information about integrations for Yoast SEO for Shopify.',
+						slug: '/shopify/integrations/',
+					},
+					items: [
+						'shopify/integrations/review-apps',
+					],
+				},
 			]
 		},
 		{

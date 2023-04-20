@@ -397,6 +397,7 @@ module.exports = {
 						slug: '/shopify/integrations/',
 					},
 					items: [
+						'shopify/integrations/internationalization',
 						'shopify/integrations/review-apps',
 					],
 				},

@@ -1,3 +1,12 @@
+## 25/04/2023 07:53 (UTC)
+
+Release date: 2023-04-25
+
+#### Enhancements
+
+* Improves the recognition of keyphrases starting with a period (e.g., ".net developer") by the _keyphrase in title_ assessment.
+* Updates mobile and desktop Google snippet previews to be in line with Google's current styling.
+
 ## 24/03/2023 08:36 (UTC)
 
 Release date: 2023-03-24

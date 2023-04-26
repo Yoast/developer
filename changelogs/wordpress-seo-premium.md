@@ -1,3 +1,22 @@
+## 20.6
+
+Release date: 2023-04-26
+
+Yoast SEO 20.6, released today, has enhancements and fixes to help your SEO. The latest update incorporates a new readability analysis, an extremely useful feature that alerts you whenever you overuse center-aligned text. Of course, there's more to discover! Find out more about what's new in Yoast SEO Premium 20.6 in [our release post](https://yoa.st/release-26-4-23)!
+
+#### Enhancements
+
+* Adds a _text alignment_ assessment to the readability analysis in Block editor.
+
+#### Bugfixes
+
+* Fixes a bug where a wrong redirect preview URL would be shown when WordPress was installed in a subdirectory.
+
+#### Other
+
+* Adds a dismissible notification for the removal of the Zapier integration when the integration is enabled.
+* Bumps the minimum required version of Yoast SEO to 20.6.
+
 ## 20.5
 
 Release date: 2023-04-11

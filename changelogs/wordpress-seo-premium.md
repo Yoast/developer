@@ -1,3 +1,26 @@
+## 20.7
+
+Release date: 2023-05-09
+
+We've just released Yoast SEO 20.7. Packed with fixes and enhancements to help you boost your website. Yoast SEO Premium has a new feature that lets you quickly discover your cornerstone content articles on your WordPress post overview. Upgrade today and take your website to the next level! Find out more about what's new in Yoast SEO Premium 20.7 in [our release post](https://yoa.st/release-9-5-23)!
+
+#### Enhancements
+
+* Adds a column to the post overview page which shows whether a post has been marked as cornerstone content.
+* Excludes the website home page from the Orphaned content workout in case the page is a static one.
+
+#### Bugfixes
+
+* Fixes a bug where a console error would appear when opening a post on English sites.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.6.
+* Bumps the minimum required version of Yoast SEO to 20.7.
+* Deprecates the Zapier integration.
+* Sets the minimum supported WooCommerce version to 7.1.
+* Sets the minimum supported WordPress version to 6.1.
+
 ## 20.6
 
 Release date: 2023-04-26

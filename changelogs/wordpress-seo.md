@@ -1,3 +1,27 @@
+= 20.7 =
+
+Release date: 2023-05-09
+
+Yoast SEO 20.7 is out now! With this release, our team has rolled out essential fixes and improvements to help you improve your SEO work. Upgrade today to benefit from the latest and greatest! Find out more about what's new in Yoast SEO 20.7 in [our release post](https://yoa.st/release-9-5-23)!
+
+#### Enhancements
+
+* Adds a link to a taxonomy edit page in its settings section when the taxonomy has no public post types associated.
+* Adds an academy page in the Yoast menu for easy access to all of Yoast’s e-learning modules.
+* Ensures compatibility with upcoming Elementor accessibility improvements.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown when visiting Yoast SEO admin pages while Yoast SEO for WooCommerce is active but never executed.
+
+#### Other
+
+* Removes the introductory modal for the settings page.
+* Removes the Zapier integration card.
+* Removes the Zapier post-publish slot and network admin integration toggle.
+* Sets the minimum supported WooCommerce version to 7.1.
+* Sets the minimum supported WordPress version to 6.1
+
 = 20.6 =
 
 Release date: 2023-04-26

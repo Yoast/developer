@@ -1,3 +1,11 @@
+## 16/05/2023 07:54 (UTC)
+
+Release date: 2023-05-16
+
+#### Enhancements
+
+* Updated the Yoast SEO for Shopify app to make it compatible with Online Store 2.0 themes.
+
 ## 25/04/2023 07:53 (UTC)
 
 Release date: 2023-04-25

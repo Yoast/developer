@@ -1,3 +1,11 @@
+## 17/05/2023 10:53 (UTC)
+
+Release date: 2023-05-17
+
+#### Bugfixes
+
+* Fixes a bug where the structured data markup would be invalid when a product has a featured image.
+
 ## 17/05/2023 08:31 (UTC)
 
 Release date: 2023-05-17

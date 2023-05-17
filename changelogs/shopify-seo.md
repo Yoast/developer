@@ -1,3 +1,11 @@
+## 17/05/2023 08:31 (UTC)
+
+Release date: 2023-05-17
+
+#### Bugfixes
+
+* Fixes a bug where the SEO conflict removal would not succeed with certain codes in the theme assets.
+
 ## 16/05/2023 07:54 (UTC)
 
 Release date: 2023-05-16

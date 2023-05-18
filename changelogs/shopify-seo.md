@@ -1,3 +1,11 @@
+## 18/05/2023 10:30 (UTC)
+
+Release date: 2023-05-18
+
+#### Bugfixes
+
+* Fixes issue with keeping subscription status metafield updated.
+
 ## 17/05/2023 10:53 (UTC)
 
 Release date: 2023-05-17

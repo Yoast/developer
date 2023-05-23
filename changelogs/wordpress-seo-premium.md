@@ -1,3 +1,21 @@
+## 20.8
+
+Release date: 2023-05-23
+
+In the 20.8 release of Yoast SEO Premium, we've added a new feature to help you monitor inclusive language in your posts. You can now see your post's inclusive language scores in the WordPress post overview. Here's how that works! Find out more about what's new in Yoast SEO Premium 20.8 in [our release post](https://yoa.st/release-23-5-23)!
+
+#### Enhancements
+
+* Adds a column to the table on the post overview page which shows the inclusive language score.
+
+#### Bugfixes
+
+* Fixes a bug where warnings about duplicated keys for components would be thrown in the Block Editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.8.
+
 ## 20.7
 
 Release date: 2023-05-09

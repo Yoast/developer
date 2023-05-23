@@ -1,3 +1,13 @@
+## 15.0
+
+Release date: 2023-05-23
+
+#### Other
+
+* Security: Adds sanitization to `wpseo_local_show_map` method.
+* Sets the minimum required Yoast SEO version to 20.8.
+* Sets the minimum supported WordPress version to 6.1.
+
 ## 14.9
 
 Release date: 2023-04-11

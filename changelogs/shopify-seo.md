@@ -1,3 +1,11 @@
+## 31/05/2023 05:27 (UTC)
+
+Release date: 2023-05-31
+
+#### Bugfixes
+
+* Fixes issue with starting multiple theme modifications processes.
+
 ## 18/05/2023 10:30 (UTC)
 
 Release date: 2023-05-18

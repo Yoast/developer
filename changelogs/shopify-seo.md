@@ -1,3 +1,11 @@
+## 01/06/2023 09:18 (UTC)
+
+Release date: 2023-06-01
+
+#### Enhancements
+
+* Improves feedback strings for _keyphrase density_ assessment by referring to the keyphrase in general instead of the focus keyphrase.
+
 ## 31/05/2023 05:27 (UTC)
 
 Release date: 2023-05-31

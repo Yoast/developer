@@ -1,3 +1,11 @@
+## 08/06/2023 07:53 (UTC)
+
+Release date: 2023-06-08
+
+#### Bugfixes
+
+* Fixes a bug where the `aggregateRating` Schema property would not be added for products.
+
 ## 01/06/2023 09:18 (UTC)
 
 Release date: 2023-06-01

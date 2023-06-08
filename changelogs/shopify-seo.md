@@ -1,3 +1,15 @@
+## 08/06/2023 12:01 (UTC)
+
+Release date: 2023-06-08
+
+#### Bugfixes
+
+* Fixes a bug where a corrupted `ImageObject` would be in the Schema output when using an image in the content without a more specific Google / Facebook targeted image.
+
+#### Other
+
+* Removes the new badge from the insights section.
+
 ## 08/06/2023 07:53 (UTC)
 
 Release date: 2023-06-08

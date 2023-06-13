@@ -1,3 +1,21 @@
+## 20.9
+
+Release date: 2023-06-13
+
+Yoast SEO 20.9 has an exciting enhancement to the Wincher integration, namely a brand-new dashboard widget that makes tracking your keyphrase rankings a breeze. Plus, we've taken care of any pesky bugs and made general improvements to enhance your user experience. Find out more about what's new in Yoast SEO Premium 20.9 in [our release post](https://yoa.st/release-13-6-23)!
+
+#### Enhancements
+
+* Adds an inclusive language score filter to the posts overview.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown in the block editor with PHP 8.0+ when additional keyphrases are stored in the DB in a malformed way.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.9.
+
 ## 20.8
 
 Release date: 2023-05-23

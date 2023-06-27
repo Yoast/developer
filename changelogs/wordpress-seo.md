@@ -1,3 +1,31 @@
+= 20.10 =
+
+Release date: 2023-06-27
+
+Upgrade now to Yoast SEO 20.10! This latest release includes fixes, enhancements to the crawl optimization settings, and a brand-new support page that helps you get support quickly. Find out more about what's new in Yoast SEO 20.10 in [our release post](https://yoa.st/release-27-6-23)!
+
+#### Enhancements
+
+* Adds a support page to the Yoast admin. This page allows you to easily access Yoast FAQs and support resources from the WordPress admin.
+* Excludes the Yoast SEO Breadcrumbs widget from the content analysis in Elementor Pro.
+* Expands the list of HTML elements excluded from the content analysis.
+* Introduces a new setting for crawl optimization, that disallows AdsBot crawling when enabled.
+* Introduces more robust HTML processing for the _competing links_, _keyphrase in introduction_, _image keyphrase_, and _images_ assessments.
+* Removes any meta tags for enhanced Slack sharing from static home pages.
+
+#### Bugfixes
+
+* Fixes a bug where adding a link in the block editor would result in displaying the URL instead of the post title.
+* Fixes a bug where deletion notice would not appear when deleting a term when the `term_id` is different from `taxonomy_term_id`.
+* Fixes a bug where terms with custom canonical URLs would get added in the sitemap.
+* Fixes a bug where the WordPress native sitemap would not work properly after Yoast SEO was deactivated, until rewrite rules were flushed.
+* Fixes a bug where the wrong taxonomy name would appear in the notice when deleting a term.
+
+#### Other
+
+* Adds the Wincher upgrade callout to the Wincher performance report on the dashboard and to the Wincher SEO performance on the edit post page.
+* Deprecates the `Old_Premium_Integration`.
+
 = 20.9 =
 
 Release date: 2023-06-13

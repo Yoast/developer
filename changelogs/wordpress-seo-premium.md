@@ -1,3 +1,17 @@
+## 20.10
+
+Release date: 2023-06-27
+
+Yoast SEO Premium 20.10 is here. We've added a new support page that helps Premium users contact our dedicated support team quickly. In addition, we've done a regular round of fixes and enhancements, including improvements to the crawl optimization settings. Find out more about what's new in Yoast SEO Premium 20.10 in [our release post](https://yoa.st/release-27-6-23)!
+
+#### Bugfixes
+
+* Fixes a bug where the icons for cornerstone and inclusive language in the taxonomy overview would not show a tooltip when hovering over them.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.10.
+
 ## 20.9
 
 Release date: 2023-06-13

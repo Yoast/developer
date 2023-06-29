@@ -1,3 +1,12 @@
+## 29/06/2023 07:04 (UTC)
+
+Release date: 2023-06-29
+
+#### Enhancements
+
+* Expands the list of HTML elements excluded from the content analysis.
+* Introduces more robust HTML processing for the _competing links_, _keyphrase in introduction_, _image alt text_, _image keyphrase_, and _images_ assessments.
+
 ## 08/06/2023 12:01 (UTC)
 
 Release date: 2023-06-08

@@ -1,3 +1,11 @@
+## 03/07/2023 08:49 (UTC)
+
+Release date: 2023-07-03
+
+#### Enhancements
+
+* Excludes separator and site title from _SEO title width_ assessment and from the calculation in the SEO title progress bar.
+
 ## 29/06/2023 07:04 (UTC)
 
 Release date: 2023-06-29

@@ -1,3 +1,11 @@
+## 04/07/2023 09:16 (UTC)
+
+Release date: 2023-07-04
+
+#### Enhancements
+
+* Adds redirection to welcome app after first successfull integration process.
+
 ## 03/07/2023 08:49 (UTC)
 
 Release date: 2023-07-03

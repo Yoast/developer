@@ -1,3 +1,17 @@
+## 20.11
+
+Release date: 2023-07-11
+
+In Yoast SEO Premium 20.11, we've added a new way to help you improve your E-E-A-T. Add your publishing principles to your site settings, and we'll add the proper schema. Read all about it! Find out more about what's new in Yoast SEO Premium 20.11 in [our release post](https://yoa.st/release-11-7-23)!
+
+#### Enhancements
+
+* Adds support for structured data about a site's policies and publishing principles.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.11.
+
 ## 20.10
 
 Release date: 2023-06-27

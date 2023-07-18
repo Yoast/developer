@@ -1,3 +1,11 @@
+## 18/07/2023 07:33 (UTC)
+
+Release date: 2023-07-18
+
+#### Bugfixes
+
+* Improves performance of the process of importing Yoast CSV files.
+
 ## 04/07/2023 09:16 (UTC)
 
 Release date: 2023-07-04

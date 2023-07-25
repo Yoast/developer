@@ -1,3 +1,22 @@
+## 20.12
+
+Release date: 2023-07-25
+
+Yoast SEO Premium 20.12 is here and it brings you new fixes and enhancements. This update comes with optimized functionalities that will enhance your SEO efforts and simplify your journey towards better rankings. Find out more about what's new in Yoast SEO Premium 20.12 in [our release post](https://yoa.st/release-25-7-23)!
+
+#### Enhancements
+
+* Adds an edit button to the SKU and Product identifier assessments on product pages if the Yoast WooCommerce SEO plugin is installed (version 15.8 or higher).
+* We've made it easier to select a value for the site policies.
+
+#### Bugfixes
+
+* Fixes a bug where a heading would not be included in the _table of contents_ when it was created by transforming a paragraph block.
+
+#### Other
+
+* Bumps the minimum required Free version to 20.12.
+
 ## 20.11
 
 Release date: 2023-07-11

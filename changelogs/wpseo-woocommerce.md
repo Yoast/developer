@@ -1,3 +1,22 @@
+## 15.8
+
+Release date: 2023-07-25
+
+#### Enhancements
+
+* Adds an edit button to the SKU and Product identifier assessments on product pages if the Yoast SEO Premium plugin is installed (version 20.12 or higher).
+* Ensures compatibility of the breadcrumbs replacement feature with WooCommerce 7.9.0 when using blockified template for single products.
+
+#### Bugfixes
+
+* Fixes a bug where the Yoast SEO metabox would not load when the short description metabox had been deactivated.
+
+#### Other
+
+* Bumps the minimum required Yoast SEO version to 20.12.
+* Sets the minimum supported WooCommerce version to 7.1.
+* Sets the minimum supported WordPress version to 6.1.
+
 ## 15.7
 
 Release date: 2023-04-26

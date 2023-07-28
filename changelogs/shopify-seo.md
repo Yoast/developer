@@ -1,3 +1,12 @@
+## 28/07/2023 08:34 (UTC)
+
+Release date: 2023-07-28
+
+#### Enhancements
+
+* Excludes separator and site title from _SEO title width_ assessment and from the calculation in the SEO title progress bar.
+* Updates the verification link to the Google Search Console in the Webmaster tools section in Site settings.
+
 ## 18/07/2023 07:33 (UTC)
 
 Release date: 2023-07-18

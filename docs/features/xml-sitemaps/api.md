@@ -163,6 +163,8 @@ add_filter( 'wpseo_xml_sitemap_post_url', 'sitemap_post_url', 10, 2 );
 ```php
 /**
  * Alters the number of entries in each XML sitemap.
+ * 
+ * Note that the number should be either lower than 100 or a multiple of 100 to avoid problems with the sitemap pagination.
  *
  * @return integer The maximum entries per sitemap.
  */

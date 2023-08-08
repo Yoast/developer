@@ -310,6 +310,7 @@ module.exports = {
 					items: [
 						'customization/yoast-seo-premium/api-filter-actions-deprecations',
 						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
+						'customization/yoast-seo-premium/disabling-autoloading-redirect-options',
 						'customization/yoast-seo-premium/hiding-version-number',
 					],
 				},

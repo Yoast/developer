@@ -1,3 +1,23 @@
+## 14.8
+
+Release date: 2023-08-08
+
+#### Enhancements
+
+* Adds CLI command to index videos: `wp yoast video index`.
+
+#### Bugfixes
+
+* Fixes a bug where a warning would be thrown on pages embedding a video which had been visited more than 30 days ago.
+* Fixes a bug where Wistia videos would not be displayed correctly in a responsive way via the FitVids setting and a console error about jQuery would be thrown.
+
+#### Other
+
+* Drops compatibility with PHP 5.6, 7.0 and 7.1.
+* Sets the minimum required Yoast SEO version to 20.13.
+* Sets the minimum supported WordPress version to 6.1.
+* Sets the tested up to WordPress version to 6.2.
+
 ## 14.7
 
 Release date: 2023-03-14

@@ -15,7 +15,7 @@ add_filter( 'Yoast\WP\SEO\redirects_options_autoload', '__return_false');
 ```
 
 Please note that this is not enough, by itself, to stop the autoloading: you will still need to switch the `autoload` value to `no` for the two options in the database.
-You can also add/delete a redirect in the Redirect manager, or edit one (as long as it's actually changed and not saved as it is), but if this is a _plain_ redirect only the `wpseo-premium-redirects-export-plain`, and the same for _regex_ redirects.
+You can also add/delete a redirect in the Redirect manager, or edit one (as long as it's actually changed and not saved as it is), but if this is a _plain_ redirect, only the `wpseo-premium-redirects-export-plain` autoload will change, and the same for _regex_ redirects.
 
 Besides the value for `autoload`, the filter also accepts two parameters: the type of the redirects (either `plain` or `regex`) and the array of the redirects currently defined.  
 So for example you can ensure that the option for `plain` redirects won't be autoloaded, while keeping the default behaviour for the `regex` redirects. Add a snippet like this one in your theme's `functions.php`:

@@ -1,3 +1,18 @@
+## 20.13
+
+Release date: 2023-08-08
+
+Yoast SEO Premium 20.13 is out today. This release brings performance improvements, leading to a better user experience. Read all about it! Find out more about what's new in Yoast SEO Premium 20.13 in [our release post](https://yoa.st/release-8-8-23)!
+
+#### Enhancements
+
+* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 20.13.
+* Sets the WordPress tested up to version to 6.3.
+
 ## 20.12
 
 Release date: 2023-07-25

@@ -16,7 +16,7 @@ Release date: 2023-08-08
 * Drops compatibility with PHP 5.6, 7.0 and 7.1.
 * Sets the minimum required Yoast SEO version to 20.13.
 * Sets the minimum supported WordPress version to 6.1.
-* Sets the tested up to WordPress version to 6.2.
+* Sets the tested up to WordPress version to 6.3.
 
 ## 14.7
 

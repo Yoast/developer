@@ -1,3 +1,18 @@
+## 21.0
+
+Release date: 2023-08-22
+
+Yoast SEO Premium 21.0 comes with AI! You can now generate titles and meta descriptions with help from generative AI. Our AI reads your content, understands it, and creates accurate, engaging titles and descriptions. Find out more about what's new in Yoast SEO Premium 21.0 in [our release post](https://yoa.st/release-22-8-23)!
+
+#### Enhancements
+
+* Introduces the AI title & description generator. You can now speed up your workflow with high-quality suggestions for titles and descriptions for your search and social appearance, at the click of a button.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.0.
+* Sets the WordPress tested up to version to 6.3.
+
 ## 20.13
 
 Release date: 2023-08-08
@@ -6,7 +21,7 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEO\redirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

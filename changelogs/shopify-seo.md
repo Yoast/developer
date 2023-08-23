@@ -1,3 +1,11 @@
+## 23/08/2023 11:20 (UTC)
+
+Release date: 2023-08-23
+
+#### Enhancements
+
+* NEW: Adds an integration with Semrush. It enables you to find related high-performing keywords and keyphrase insights right in the Shopify editor and write relevant high-quality content!
+
 ## 15/08/2023 06:32 (UTC)
 
 Release date: 2023-08-15

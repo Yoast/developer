@@ -7,14 +7,14 @@ sidebar_label: Customizing the way Yoast SEO handles attachments
 There are multiple ways Yoast SEO can handle attachments added in posts. We have added multiple filters to assure performance in multiple scenario's.
 ## The scenario's
 
-### Not so many attachments > 10.000
+### Not so many attachments < 10.000
 
 The normal implementation which implements a file scan with `WP_HTML_Tag_Processor` is most likely performant enough.
 
-### A hugh amount of attachments < 75.000 and a fast disk
+### A huge amount of attachments > 75.000 and a fast disk
 The normal implementation which implements a file scan with `WP_HTML_Tag_Processor` is most likely performant enough.
 
-### A hugh amount of attachments < 75.000 and a slow disk
+### A huge amount of attachments > 75.000 and a slow disk
 
 If there are performance issues when saving a post, the following filters can help speed up the process.
 
@@ -39,7 +39,7 @@ add_filter('wpseo_force_creating_and_using_attachment_indexables', '__return_tru
 Using this combination of filters allows the system to create indexables for attachments without the need to also enable media archive pages. When these filters are first enabled you will have to run the SEO optimisation in the tools page.
 The filters used in this situation are described on [Indexables: Filters](/features/indexables/indexables-filters/)
 
-### A hugh amount of attachments < 75.000 and the content scanning slows down the performance.
+### A huge amount of attachments > 75.000 and the content scanning slows down the performance.
 
 If the new content scanning solution or the indexables solution happen to slow down the performance there is also an option to revert back to using a regex.
 
@@ -49,7 +49,7 @@ add_filter('wpseo_force_skip_image_content_parsing', '__return_true'  );
 
 ### When using an image or gallery implementation that does not follow the same html structure as WordPress
 Some gallery and image plugins use different HTML markup then WordPress. Our content scan implementation relies on finding the image id in the class of the image tag.
-To allow as user to change this to allow different types of markup there are two filters. The example below is based on the envira-gallery plugin. This plugin uses the id field instead of the class field.
+There are two filters that allow the user to change this in order to allow different types of markup. The example below is based on the envira-gallery plugin. This plugin uses the id field in combination with a  `envira-gallery-image-<image_ID>` format, instead of the class field.
 ```php
 add_filter( 'wpseo_image_attribute_containing_id', 'image_attribute_containing_id', 10 );
 

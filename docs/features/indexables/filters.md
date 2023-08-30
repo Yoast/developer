@@ -126,15 +126,15 @@ function force_create_indexables_for_non_public_post_type( $included_post_types 
 
 ## Ignore hierarchy check
 
-When adding a term with `wp_set_object_terms` right after `wp_insert_post`, the hierarchy check is preventing the indexation of the term. 
-That in turn will prevent incorrent breadcrumbs term.
+When adding a term with `wp_set_object_terms` right after `wp_insert_post`, the hierarchy check is preventing the indexation of the term hierarcy. 
+That in turn will result in worng term (default term) in Yoast breadcrumbs. Use this filter to fix it.
 
 ### Usage
 
 Before using `wp_set_object_terms` together with `wp_insert_post`.
 
 
-The example below shows how you can use this filter to ignore hierarcy check.
+The example below shows how you can use this filter to ignore hierarcy check when using `wp_set_object_terms` together with `wp_insert_post`.
 ```php
 <?php
 add_filter( 'wpseo_hierarchy_ignore_already_saved', '__return_true');

@@ -13,7 +13,7 @@ Clone [WordPress/wordpress-develop](https://github.com/WordPress/wordpress-devel
 ## Expose MySQL port
 After cloning has been done, you have to expose the MySQL port, which allows us to connect to it later on.
 
-In `wordpress-develop`, open the `docker-compose.yml` file and change:
+In `wordpress-develop`, copy the `docker-compose.yml` to `docker-compose.override.yml`, and open the override file. Then change:
 
 > \- "3306"
 

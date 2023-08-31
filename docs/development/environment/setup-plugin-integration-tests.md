@@ -37,8 +37,14 @@ Edit your hosts file by running `sudo nano /etc/hosts` in your terminal and add 
 ### Making your database accessible
 To make your database accessible, run the following command:
 
+* on Mac:
 ```shell script
 sudo ifconfig lo0 alias 10.254.254.254
+```
+
+* on Linux:
+```shell script
+sudo ifconfig lo:0 10.254.254.254
 ```
 
 ## Spin up the containers

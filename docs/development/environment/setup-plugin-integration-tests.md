@@ -5,7 +5,7 @@ sidebar_label: Setting up integration tests
 description: When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part.
 ---
 
-When running integration tests we have to set up some WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part. An added bonus of this is that you also have a separate setup for writing patches and unit tests.
+When running integration tests we have to run a MySQL database. For this we use the WordPress Docker containers. This allows us to test against WordPress, which is the 'integration' part. An added bonus of this is that you also have a separate setup for writing patches and unit tests for WordPress itself.
 
 ## Clone the repository
 Clone [WordPress/wordpress-develop](https://github.com/WordPress/wordpress-develop).

@@ -96,7 +96,7 @@ If you use Local for development, this could be an easy alternative.
 
 Now you have your database, now we need to tell the test suite how to connect to it:
 
-1. In your `wordpress-depelop` clone, find the `wp-tests-config.php` file. If it doesn't exist yet, copy `wp-tests-config-sample.php` and name it `wp-tests-config.php`.
+1. In your `wordpress-develop` clone, find the `wp-tests-config.php` file. If it doesn't exist yet, copy `wp-tests-config-sample.php` and name it `wp-tests-config.php`.
 2. Find the block that looks like this
 	```
 		define( 'DB_NAME', 'youremptytestdbnamehere' );

@@ -47,6 +47,11 @@ sudo ifconfig lo0 alias 10.254.254.254
 sudo ifconfig lo:0 10.254.254.254
 ```
 
+* on Windows:
+```shell script
+netsh interface ipv4 add address "Loopback Pseudo-Interface 1" 10.254.254.254 255.255.255.255
+```
+
 ## Spin up the containers
 If you've gone through all the above steps, it's time to start the containers!
 

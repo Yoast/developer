@@ -1,3 +1,11 @@
+## 15/09/2023 05:28 (UTC)
+
+Release date: 2023-09-15
+
+#### Other
+
+* Introduces a questionnaire to new customers about their reasons for installing.
+
 ## 23/08/2023 11:20 (UTC)
 
 Release date: 2023-08-23

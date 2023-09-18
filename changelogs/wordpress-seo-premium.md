@@ -1,3 +1,14 @@
+## 21.1
+
+Release date: 2023-09-05
+
+Yoast SEO Premium 21.1 is out today. This release brings improvements and enhancements, including ones to our new AI feature. Be sure to try that feature if you still need to! Find out more about what's new in Yoast SEO Premium 21.1 in [our release post](https://yoa.st/release-5-9-23)!
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.1.
+* The AI generator functionality is unavailable if the SEO Analysis is turned off. We now show an error immediately alerting users to this after leaving the AI introduction modal.
+
 ## 21.0
 
 Release date: 2023-08-22

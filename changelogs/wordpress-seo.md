@@ -1,3 +1,19 @@
+= 21.1 =
+
+Release date: 2023-09-05
+
+Here's Yoast SEO 21.1! After the AI release, we're back with an update filled with fixes and enhancements to improve your SEO work. Check it out! Find out more about what's new in Yoast SEO 21.1 in [our release post](https://yoa.st/release-5-9-23)!
+
+#### Bugfixes
+
+* Fixes a bug where an error could occur when an indexable was outdated. Props to @jaimearroyonavia.
+* Fixes a bug where the cleanup routine would throw an error when on multisites.
+* Fixes a bug where the notification for a new content type in the notification center would not be dismissed when installing Elementor and reviewing the new content types.
+
+#### Other
+
+* Adds an attribute to the link "See who contributed to" to open in a new browser tab, located in the General tab. Props to @nathanwritescode-uk.
+
 = 21.0 =
 
 Release date: 2023-08-22

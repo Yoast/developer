@@ -1,3 +1,25 @@
+## 21.2
+
+Release date: 2023-09-19
+
+Yoast SEO Premium 21.2 is out now. This release brings fixes and enhancements, including an easier-to-use sidebar and improvements to the social media preview. Check it out! Find out more about what's new in Yoast SEO Premium 21.2 in [our release post](https://yoa.st/release-19-9-23)!
+
+#### Enhancements
+
+* Renames the _Social preview_ sections to clarify which preview applies to which platform.
+
+#### Bugfixes
+
+* Fixes a bug where the cornerstone and inclusive language columns would be inadvertently displayed on product attribute terms.
+* Fixes a bug where the _Table of Contents_ block header would be displayed in the user language instead of the site language.
+
+#### Other
+
+* Allows user to manage their consent when using the `AI Generator` even if the feature is turned off.
+* Avoids registering the routes related to the `AI Generator` when the feature is disabled.
+* Bumps the minimum required version of Yoast SEO to 21.2.
+* Sets the minimum supported WordPress version to 6.2.
+
 ## 21.1
 
 Release date: 2023-09-05

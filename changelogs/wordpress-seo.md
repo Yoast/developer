@@ -1,3 +1,25 @@
+= 21.2 =
+
+Release date: 2023-09-19
+
+Yoast SEO 21.2 is out today! In this release, we've improved the naming of several features and enhanced the sidebar in the block editor, making it easier to use. Find out more about what's new in Yoast SEO 21.2 in [our release post](https://yoa.st/release-19-9-23)!
+
+#### Enhancements
+
+* Renames Google preview to Search appearance in the metabox and sidebar.
+
+#### Bugfixes
+
+* Fixes a bug where, even if `Show author archives without posts in search results` is enabled, the archive page would have a `noindex` in the `robots` metatag.
+* Fixes a bug where notices about incorrect calls to `wpdb::prepare` would be thrown on Yoast SEO Premium activation.
+* Fixes a bug where pagination meta tags would be wrong when using Query Loop Block with custom query variables.
+* Fixes a bug where the redirect notification would mention "posts" when a tag was deleted or trashed.
+* Fixing a bug where adding special characters like " »" as a title separator would break the RSS feed.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.2.
+
 = 21.1 =
 
 Release date: 2023-09-05

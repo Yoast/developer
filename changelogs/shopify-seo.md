@@ -1,3 +1,13 @@
+## 25/09/2023 12:12 (UTC)
+
+Release date: 2023-09-25
+
+#### Enhancements
+
+* Clarifies notice about the connection to Semrush when facing issues in the connection.
+* Merges Facebook preview and Twitter preview collapsibles into Social media appearance.
+* Renames Google preview collapsible to Search appearance.
+
 ## 15/09/2023 05:28 (UTC)
 
 Release date: 2023-09-15

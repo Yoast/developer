@@ -1,3 +1,11 @@
+## 26/09/2023 13:10 (UTC)
+
+Release date: 2023-09-26
+
+#### Bugfixes
+
+* Fixes a bug where the keyphrase in introduction assessment would fail to find the first paragraph.
+
 ## 25/09/2023 12:12 (UTC)
 
 Release date: 2023-09-25

@@ -1,3 +1,18 @@
+= 21.3 =
+
+Release date: 2023-10-03
+
+Yoast SEO 21.3 is out! In this release, we've focused on improving the plugin's performance, especially regarding handling huge posts on complex websites. Find out more about what's new in Yoast SEO 21.3 in [our release post](https://yoa.st/release-3-10-23)!
+
+#### Enhancements
+
+* Enhances post-saving performance in certain conditions for a smoother and more efficient user experience.
+
+#### Bugfixes
+
+* Fixes a bug where the notifications counter of the admin bar menu would not show with the correct style on the frontend.
+* Fixes a bug where the slug in the search appearance editor would not be set when published posts were edited in the classic editor and the "core/editor" store was available.
+
 = 21.2 =
 
 Release date: 2023-09-19

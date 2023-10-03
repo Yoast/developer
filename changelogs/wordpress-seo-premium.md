@@ -1,3 +1,17 @@
+## 21.3
+
+Release date: 2023-10-03
+
+Yoast SEO Premium 21.3 is out now. In this release, we've improved the word complexity assessment, making it more helpful to improve your content. Find out more about what's new in Yoast SEO Premium 21.3 in [our release post](https://yoa.st/release-3-10-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment in English by recognizing more plural forms of non-complex words. For example, the plural form _universities_ is not marked as a complex word anymore, just like the singular form _university_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.3.
+
 ## 21.2
 
 Release date: 2023-09-19

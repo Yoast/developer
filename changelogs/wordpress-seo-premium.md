@@ -1,3 +1,50 @@
+## 21.3
+
+Release date: 2023-10-03
+
+Yoast SEO Premium 21.3 is out now. In this release, we've improved the word complexity assessment, making it more helpful to improve your content. Find out more about what's new in Yoast SEO Premium 21.3 in [our release post](https://yoa.st/release-3-10-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment in English by recognizing more plural forms of non-complex words. For example, the plural form _universities_ is not marked as a complex word anymore, just like the singular form _university_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.3.
+
+## 21.2
+
+Release date: 2023-09-19
+
+Yoast SEO Premium 21.2 is out now. This release brings fixes and enhancements, including an easier-to-use sidebar and improvements to the social media preview. Check it out! Find out more about what's new in Yoast SEO Premium 21.2 in [our release post](https://yoa.st/release-19-9-23)!
+
+#### Enhancements
+
+* Renames the _Social preview_ sections to clarify which preview applies to which platform.
+
+#### Bugfixes
+
+* Fixes a bug where the cornerstone and inclusive language columns would be inadvertently displayed on product attribute terms.
+* Fixes a bug where the _Table of Contents_ block header would be displayed in the user language instead of the site language.
+
+#### Other
+
+* Allows user to manage their consent when using the `AI Generator` even if the feature is turned off.
+* Avoids registering the routes related to the `AI Generator` when the feature is disabled.
+* Bumps the minimum required version of Yoast SEO to 21.2.
+* Sets the minimum supported WordPress version to 6.2.
+
+## 21.1
+
+Release date: 2023-09-05
+
+Yoast SEO Premium 21.1 is out today. This release brings improvements and enhancements, including ones to our new AI feature. Be sure to try that feature if you still need to! Find out more about what's new in Yoast SEO Premium 21.1 in [our release post](https://yoa.st/release-5-9-23)!
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.1.
+* The AI generator functionality is unavailable if the SEO Analysis is turned off. We now show an error immediately alerting users to this after leaving the AI introduction modal.
+
 ## 21.0
 
 Release date: 2023-08-22

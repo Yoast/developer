@@ -1,3 +1,37 @@
+## 11/10/2023 10:30 (UTC)
+
+Release date: 2023-10-11
+
+#### Enhancements
+
+* Adds _Semrush_ integration promotion banner inside app.
+
+## 26/09/2023 13:10 (UTC)
+
+Release date: 2023-09-26
+
+#### Bugfixes
+
+* Fixes a bug where the _keyphrase in introduction_ assessment would fail to find the first paragraph.
+
+## 25/09/2023 12:12 (UTC)
+
+Release date: 2023-09-25
+
+#### Enhancements
+
+* Clarifies notice about the connection to Semrush when facing issues in the connection.
+* Merges Facebook preview and Twitter preview collapsibles into Social media appearance.
+* Renames Google preview collapsible to Search appearance.
+
+## 15/09/2023 05:28 (UTC)
+
+Release date: 2023-09-15
+
+#### Other
+
+* Introduces a questionnaire to new customers about their reasons for installing.
+
 ## 23/08/2023 11:20 (UTC)
 
 Release date: 2023-08-23

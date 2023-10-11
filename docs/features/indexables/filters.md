@@ -122,4 +122,12 @@ function force_create_indexables_for_non_public_post_type( $included_post_types 
     $included_post_types[] = 'not_public_post_type';
     return $included_post_types;
 }
+
+```
+### Force creating and using attachment indexables {#force_creating_and_using_attachment_indexables}
+
+To use indexables instead of content scanning to find all content images. Enable this filter as displayed below. Refer to [customizing the way Yoast SEO handles attachments](/customization/yoast-seo/customizing-attachment-parsing/) to figure out the scenario's where this might beneficial.
+
+```php
+add_filter( 'wpseo_force_creating_and_using_attachment_indexables', '__return_true' );
 ```

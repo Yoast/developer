@@ -288,6 +288,7 @@ module.exports = {
 						'customization/yoast-seo/adding-custom-data-analysis',
 						'customization/yoast-seo/adding-custom-assessments',
 						'customization/yoast-seo/adding-custom-language-analysis',
+						'customization/yoast-seo/customizing-attachment-parsing',
 						'customization/yoast-seo/disabling-primary-category',
 						'customization/yoast-seo/changing-enhanced-slack-sharing',
 						'customization/yoast-seo/disabling-yoast-seo',

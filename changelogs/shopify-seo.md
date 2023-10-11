@@ -1,3 +1,11 @@
+## 11/10/2023 10:30 (UTC)
+
+Release date: 2023-10-11
+
+#### Enhancements
+
+* Adds _Semrush_ integration promotion banner inside app.
+
 ## 26/09/2023 13:10 (UTC)
 
 Release date: 2023-09-26

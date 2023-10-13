@@ -1,3 +1,15 @@
+## 13/10/2023 07:27 (UTC)
+
+Release date: 2023-10-13
+
+#### Enhancements
+
+* Changes design of Integrations Settings page.
+
+#### Other
+
+* Speeds up the app loading time.
+
 ## 11/10/2023 10:30 (UTC)
 
 Release date: 2023-10-11

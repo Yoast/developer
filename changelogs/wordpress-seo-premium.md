@@ -1,3 +1,19 @@
+## 21.4
+
+Release date: 2023-10-17
+
+Yoast SEO Premium 21.4 is out today. This release comes with several fixes that improve how various features function. Find out more about what's new in Yoast SEO Premium 21.4 in [our release post](https://yoa.st/release-17-10-23)!
+
+#### Bugfixes
+
+* Fixes a bug where the actionable buttons would not focus on the input fields when clicking on them in the sidebar.
+* Fixes a bug where the _Maximum heading level_ option within the _Table of Contents_ block would not work as expected.
+
+#### Other
+
+* Adds output escaping to the redirect message after adding a new redirect.
+* Bumps the minimum required version of Yoast SEO to 21.4.
+
 ## 21.3
 
 Release date: 2023-10-03

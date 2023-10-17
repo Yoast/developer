@@ -1,3 +1,27 @@
+= 21.4 =
+
+Release date: 2023-10-17
+
+We've just released Yoast SEO 21.4. In this release, we've focused on general enhancements and fixes to improve how your WordPress SEO plugin functions. Find out more about what's new in Yoast SEO 21.4 in [our release post](https://yoa.st/release-17-10-23)!
+
+#### Enhancements
+
+* Introduces more robust HTML processing and highlighting for the _keyphrase density_ and _single H1_ assessments.
+* Improves the keyphrase matching in the _keyphrase density_ assessment.
+* Improves keyphrase matching in Japanese by being able to match keyphrase occurrences that contain upper case characters.
+* Updates the list of HTML elements that should be excluded from the content analysis.
+* Improves performance in getting the primary term. Props to [nlemoine](https://github.com/nlemoine).
+* Prevent database update requests on page loads when the site representation settings contain conflicting data. Props to [jboonstra](https://github.com/jboonstra).
+
+#### Bugfixes
+
+* Fixes a bug where highlighting was not applied to keyphrase occurrences that contained different types of apostrophes than `'`.
+* Fixes a bug where PHP notice would happen when the sitemap index is generated on MySQL 8+.
+* Fixes a bug where resource cleanup regarding emojis would cause a fatal error when enabling the `Remove emoji scripts` option in the _crawl optimization_ settings. Props to [MishaBelikov](https://github.com/MishaBelikov).
+* Fixes a bug where sentences would not be highlighted when square brackets were present in the same sentence.
+* Fixes a bug where the first-time configuration' site representation logo button would not be translated. Props to [fxbenard](https://github.com/fxbenard).
+* Fixes a bug where the _single title_ assessment would be triggered when adding a H1 without text.
+
 = 21.3 =
 
 Release date: 2023-10-03

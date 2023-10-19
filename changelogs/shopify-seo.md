@@ -1,3 +1,12 @@
+## 19/10/2023 13:01 (UTC)
+
+Release date: 2023-10-19
+
+#### Bugfixes
+
+* Fixes a bug where the subscription page would not have the right styling applied.
+* Fixes a bug where the welcome back page would not have the right styling applied.
+
 ## 13/10/2023 07:27 (UTC)
 
 Release date: 2023-10-13

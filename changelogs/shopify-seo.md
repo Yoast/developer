@@ -1,3 +1,18 @@
+## 24/10/2023 08:55 (UTC)
+
+Release date: 2023-10-24
+
+#### Enhancements
+
+* Improves keyphrase matching in Japanese by being able to match keyphrase occurrences that contain upper case characters.
+* Introduces more robust HTML processing and highlighting for the _keyphrase density_ and _single H1_ assessments.
+* Updates the list of HTML elements that should be excluded from the content analysis.
+
+#### Bugfixes
+
+* Fixes a bug where highlighting was not applied to keyphrase occurrences that contained different types of apostrophes than `'`.
+* Fixes a bug where the _single title_ assessment would be triggered when adding a H1 without text.
+
 ## 19/10/2023 13:01 (UTC)
 
 Release date: 2023-10-19

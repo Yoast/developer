@@ -1,3 +1,11 @@
+## 26/10/2023 07:20 (UTC)
+
+Release date: 2023-10-26
+
+#### Enhancements
+
+* Allows opening the details view in a new browser tab or window natively.
+
 ## 24/10/2023 08:55 (UTC)
 
 Release date: 2023-10-24

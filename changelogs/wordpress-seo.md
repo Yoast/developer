@@ -1,3 +1,35 @@
+= 21.5 =
+
+Release date: 2023-10-31
+
+Yoast SEO 21.5 is out today! In this release, you'll find improvements to our inclusive language feature, updates to handling RSS feeds and much more. Find out more about what's new in Yoast SEO 21.5 in [our release post](https://yoa.st/release-31-10-23)!
+
+#### Enhancements
+
+* Adds support for the new `wp_attachment_pages_enabled` option introduced by WordPress 6.4, reducing the chances of inconsistencies with Yoast SEO's own "Enable media pages" setting.
+* Improves the _inclusive language_ analysis by making the feedback more clear and consistent, refining the list of targeted phrases, and adding more alternatives for some of the non-inclusive phrases. Specifically, this includes the following changes:
+	* Aligns the traffic light color and written feedback for all phrases.
+	* Makes some feedback strings more accurate by replacing the word ‘overgeneralizing’ with ‘harmful’.
+	* Adds ‘Rom’ and ‘Roma’ as additional alternatives to ‘gypsy’.
+	* Adds additional alternatives to ‘homosexuals’.
+	* Improves the feedback shown for the phrases ‘abnormal behaviour’, ‘behaviourally normal’, and ‘behaviourally abnormal’.
+	* Improves the feedback shown for the word ‘minorities’.
+	* Removes ‘narcissistic’ as a targeted phrase when followed by ‘personality disorder’.
+	* Removes ‘Ebonics’ and ‘normal behaviour’ from the list of targeted phrases.
+* Removes the automatic `rel=nofollow` attribute for links in the RSS feed.
+
+#### Bugfixes
+
+* Fixes a bug where console warnings about incorrect prop types would be shown on the integrations page.
+
+#### Other
+
+* Adds indexation exclusion for Gutenberg Patterns taxonomy.
+* Improves the FAQ block description by removing any reference to the previous restriction of one block per post.
+* Improves the inline documentation for the `WPSEO_Option` class. Props to [costdev](https://github.com/costdev).
+* Leverages Script Strategy feature to add the async attribute to the `wordproof` script in case WordPress version is 6.3 or higher. Props to [adamsilverstein](https://github.com/adamsilverstein).
+* Sets the WordPress tested up to version to 6.4.
+
 = 21.4 =
 
 Release date: 2023-10-17

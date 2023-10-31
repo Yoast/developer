@@ -313,6 +313,7 @@ module.exports = {
 						'customization/yoast-seo-premium/disabling-automatic-redirects-notifications',
 						'customization/yoast-seo-premium/disabling-autoloading-redirect-options',
 						'customization/yoast-seo-premium/hiding-version-number',
+						'customization/yoast-seo-premium/disable-table-of-content-block',
 					],
 				},
 				{

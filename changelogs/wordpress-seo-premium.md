@@ -1,3 +1,20 @@
+## 21.5
+
+Release date: 2023-10-31
+
+In Yoast SEO Premium 21.5, we've enhanced our crawl optimization settings. You now have the option to block web crawlers used to train various AI, like OpenAI's GPTBot, Common Crawl's CCBot, and Google-Extended, from accessing your content. Find out more about what's new in Yoast SEO Premium 21.5 in [our release post](https://yoa.st/release-31-10-23)!
+
+#### Enhancements
+
+* Adds a filter to disable the `Table of Content` block to prevent auto generation of html anchors for headings.
+* Adds optional blocking of the `Google-Extended`, `ChatGPT` and `CCBot` user-agents.
+* Improves the _word compexity_ assessment for English by expanding the list of frequently used words.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.5.
+* Sets the WordPress tested up to version to 6.4.
+
 ## 21.4
 
 Release date: 2023-10-17

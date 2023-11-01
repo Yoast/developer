@@ -1,3 +1,11 @@
+## 01/11/2023 08:57 (UTC)
+
+Release date: 2023-11-01
+
+#### Other
+
+* No longer highlight the Semrush integration card with a "new" badge.
+
 ## 26/10/2023 07:20 (UTC)
 
 Release date: 2023-10-26

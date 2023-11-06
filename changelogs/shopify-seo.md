@@ -5,6 +5,15 @@ Release date: 2023-11-06
 #### Enhancements
 
 * Improves the _word complexity_ assessment for English by expanding the list of frequently used words.
+* Improves the _inclusive language_ analysis by making the feedback more clear and consistent, refining the list of targeted phrases, and adding more alternatives for some of the non-inclusive phrases. Specifically, this includes the following changes:
+  * Aligns the traffic light color and written feedback for all phrases.
+  * Makes some feedback strings more accurate by replacing the word ‘overgeneralizing’ with ‘harmful’.
+  * Adds ‘Rom’ and ‘Roma’ as additional alternatives to ‘gypsy’.
+  * Adds additional alternatives to ‘homosexuals’.
+  * Improves the feedback shown for the phrases ‘abnormal behaviour’, ‘behaviourally normal’, and ‘behaviourally abnormal’.
+  * Improves the feedback shown for the word ‘minorities’.
+  * Removes ‘narcissistic’ as a targeted phrase when followed by ‘personality disorder’.
+  * Removes ‘Ebonics’ and ‘normal behaviour’ from the list of targeted phrases.
 
 ## 01/11/2023 08:57 (UTC)
 

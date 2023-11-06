@@ -1,3 +1,11 @@
+## 06/11/2023 10:55 (UTC)
+
+Release date: 2023-11-06
+
+#### Enhancements
+
+* Improves the _word complexity_ assessment for English by expanding the list of frequently used words.
+
 ## 01/11/2023 08:57 (UTC)
 
 Release date: 2023-11-01

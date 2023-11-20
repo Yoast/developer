@@ -18,7 +18,7 @@ Please note that this means you have to register a JavaScript file via the `wp_e
 wp_enqueue_script(
     'my-shortcodes-filter',
     get_template_directory_uri() . '/js/MyShortcodesFilter.js',
-    [],
+    [ WPSEO_Admin_Asset_Manager::PREFIX . 'analysis' ],
     '1.0',
     true
 );

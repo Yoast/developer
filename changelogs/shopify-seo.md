@@ -1,3 +1,15 @@
+## 22/11/2023 08:47 (UTC)
+
+Release date: 2023-11-22
+
+#### Enhancements
+
+* Introduces the possibility to have the Yoast SEO subscription billed annually.
+
+#### Bugfixes
+
+* Fixes a bug where the the current page in the breadcrumb block would use an `<a>` tag without an `href` attribute.
+
 ## 06/11/2023 10:55 (UTC)
 
 Release date: 2023-11-06

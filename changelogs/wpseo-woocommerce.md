@@ -1,3 +1,21 @@
+## 15.9
+
+Release date: 2023-11-28
+
+Give your store the edge with our AI-enhanced WooCommerce SEO tools! Rapidly generate standout product titles and descriptions that capture attention and convert. This AI update -- for which you need Yoast SEO Premium -- integrates seamlessly with WooCommerce, making your products irresistible to search engines and shoppers. Revamp your product SEO and watch your sales grow! Find out more about what's new in Yoast WooCommerce SEO 15.9 in [our release post](https://yoa.st/release-28-11-23)!
+
+#### Enhancements
+
+* Introducing a new feature: AI SEO title and meta description generation for WooCommerce products! To unlock this SEO magic, make sure you have both Yoast SEO Premium and Yoast WooCommerce SEO installed.
+* This PR introduces a new way of retrieving translations for Yoast SEO for WooCommerce, by utilizing the TranslationPress service. Instead of having to ship all translations with every release, we can now load the translations on a per-install basis, tailored to the user's setup. This means smaller plugin releases and less bloat on the user's server.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.6.
+* Sets the minimum supported WordPress version to 6.2.
+* Sets the WordPress tested up to version to 6.4.
+* Users requiring this package via [WP]Packagist can now use the `composer/installers` v2.
+
 ## 15.8
 
 Release date: 2023-07-25

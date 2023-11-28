@@ -1,3 +1,23 @@
+= 21.6 =
+
+Release date: 2023-11-28
+
+Discover what's new in Yoast SEO 21.6! Have you seen our AI-powered tool that helps you easily craft engaging titles and meta descriptions? Ready for even more AI capabilities? Upgrade to Premium and unlock full access to AI-driven SEO tools to take your website to new heights. Start optimizing smarter, not harder! Find out more about what's new in Yoast SEO 21.6 in [our release post](https://yoa.st/release-28-11-23)!
+
+#### Enhancements
+
+* Improves the _Track SEO performance_ functionality by adding a graph that plots keyphrase trends over time.
+
+#### Bugfixes
+
+* Fixes a bug where encoded characters would be stripped from canonical URLs in the taxonomy metabox. Props to [@stodorovic](https://github.com/stodorovic).
+* Fixes a bug where the Wincher integration would cause PHP warnings with PHP 8+.
+
+#### Other
+
+* Adds a notification when WooCommerce's new beta product editor is enabled.
+* Adds defensive coding to the suppress warnings on archive pages with the `/%category%/%postname%/` permalink structure. Props to [@Mte90](https://github.com/Mte90).
+
 = 21.5 =
 
 Release date: 2023-10-31

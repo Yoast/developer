@@ -1,3 +1,23 @@
+## 21.6
+
+Release date: 2023-11-28
+
+Yoast SEO Premium 21.6 got a power-up with advanced AI technology -- now also for WooCommerce products! Create enticing titles and meta descriptions faster than ever. Own the search results with finely tuned, AI-crafted content that speaks directly to your audience. Upgrade to Premium and experience the future of SEO, where your content works smarter for you. Find out more about what's new in Yoast SEO Premium 21.5 in [our release post](https://yoa.st/release-28-11-23)!
+
+#### Enhancements
+
+* Get ready to supercharge your content! AI-powered meta description and title generation is now seamlessly enabled for all users as the default setting.
+* Introducing a new feature: AI SEO title and meta description generation for WooCommerce products! To unlock this SEO magic, make sure you have both Yoast SEO Premium and Yoast WooCommerce SEO installed.
+
+#### Bugfixes
+
+* Fixes a bug where the focus style of the Use AI error message buttons would be cut off.
+* Fixes a bug where the related links block would not be translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.6.
+
 ## 21.5
 
 Release date: 2023-10-31

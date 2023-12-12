@@ -2,7 +2,7 @@
 
 Release date: 2023-12-12
 
-Yoast SEO Premium 21.7 is out now. This release brings an improved word complexity assessment for the French language. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO Premium 21.6 in [our release post](https://yoa.st/release-12-12-23)!
+Yoast SEO Premium 21.7 is out now. This release brings an improved word complexity assessment for the French language. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO Premium 21.7 in [our release post](https://yoa.st/release-12-12-23)!
 
 #### Enhancements
 
@@ -137,7 +137,8 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEO
+edirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

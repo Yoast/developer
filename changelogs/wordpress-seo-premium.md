@@ -1,3 +1,19 @@
+## 21.7
+
+Release date: 2023-12-12
+
+Yoast SEO Premium 21.7 is out now. This release brings an improved word complexity assessment for the French language. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO Premium 21.6 in [our release post](https://yoa.st/release-12-12-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.7.
+* Adds checks to ensure that the plugin has no known incompatibilities with PHP 8.3.
+* Improves the discoverability of the security policy.
+
 ## 21.6
 
 Release date: 2023-11-28

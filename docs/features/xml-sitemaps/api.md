@@ -179,7 +179,7 @@ add_filter( 'wpseo_sitemap_urlimages_term', 'filter_wpseo_sitemap_urlimages_term
 
 ### Add images to front page 
 
-When the front page is not a page, but the latest posts, you can add images to the sitemap via a filter: `wpseo_sitemap_urlimages_front_page`. This filter will then register images to appear on the sitemap.
+When the front page is not a static page, but the latest posts, you can add images to the sitemap via a filter: `wpseo_sitemap_urlimages_front_page`. This filter will then register images to appear on the sitemap.
 
 ```php
 /**

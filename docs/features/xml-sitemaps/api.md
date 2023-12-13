@@ -177,6 +177,24 @@ function filter_wpseo_sitemap_urlimages_term( $images, $term_id ) {
 add_filter( 'wpseo_sitemap_urlimages_term', 'filter_wpseo_sitemap_urlimages_term' );
 ```
 
+### Add images to front page 
+
+When the front page is not a page, but the latest posts, you can add images to the sitemap via a filter: `wpseo_sitemap_urlimages_front_page`. This filter will then register images to appear on the sitemap.
+
+```php
+/**
+ * An example of adding images to front page.
+ *
+ * @param array $images An array of the images urls related to the front page.
+ * @return array The array of images urls to add.
+ */
+function filter_wpseo_sitemap_urlimages_front_page( $images ) {
+  array_push( $images, ['src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  return $images;
+};
+add_filter( 'wpseo_sitemap_urlimages_front_page', 'filter_wpseo_sitemap_urlimages_front_page' );
+```
+
 ## Misc
 
 ### Alter the URL of an entry

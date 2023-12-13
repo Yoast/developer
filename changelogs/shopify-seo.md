@@ -1,3 +1,12 @@
+## 13/12/2023 09:36 (UTC)
+
+Release date: 2023-12-13
+
+#### Enhancements
+
+* Improved performance of the app.
+* Remembers last used country when retrieving related keyphrases with Semrush, and selects the country by default on subsequent usage.
+
 ## 22/11/2023 08:47 (UTC)
 
 Release date: 2023-11-22

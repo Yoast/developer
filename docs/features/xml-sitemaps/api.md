@@ -151,7 +151,7 @@ Some themes or page builder modules may not show the images on the sitemap. You 
  * @return array The array of images urls to add.
  */
 function filter_wpseo_sitemap_urlimages( $images, $post_id ) {
-  array_push( $images, ['src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
   return $images;
 };
 add_filter( 'wpseo_sitemap_urlimages', 'filter_wpseo_sitemap_urlimages' );
@@ -171,7 +171,7 @@ Some themes, page builder modules or plugins may not show the images on the site
  * @return array The array of images urls to add.
  */
 function filter_wpseo_sitemap_urlimages_term( $images, $term_id ) {
-  array_push( $images, ['src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
   return $images;
 };
 add_filter( 'wpseo_sitemap_urlimages_term', 'filter_wpseo_sitemap_urlimages_term' );
@@ -189,7 +189,7 @@ When the front page is not a static page, but the latest posts, you can add imag
  * @return array The array of images urls to add.
  */
 function filter_wpseo_sitemap_urlimages_front_page( $images ) {
-  array_push( $images, ['src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
   return $images;
 };
 add_filter( 'wpseo_sitemap_urlimages_front_page', 'filter_wpseo_sitemap_urlimages_front_page' );

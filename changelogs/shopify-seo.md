@@ -5,6 +5,7 @@ Release date: 2023-12-18
 #### Bugfixes
 
 * Fixes issue with welcome back view for users who reinstall the app.
+* Fixes a bug where the default settings for search appearance would not be applied when optimizing a content item.
 
 ## 13/12/2023 09:36 (UTC)
 

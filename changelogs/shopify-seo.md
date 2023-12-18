@@ -1,3 +1,11 @@
+## 18/12/2023 08:10 (UTC)
+
+Release date: 2023-12-18
+
+#### Bugfixes
+
+* Fixes issue with welcome back view for users who reinstall the app.
+
 ## 13/12/2023 09:36 (UTC)
 
 Release date: 2023-12-13

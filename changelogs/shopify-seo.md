@@ -1,3 +1,11 @@
+## 19/12/2023 09:50 (UTC)
+
+Release date: 2023-12-19
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
 ## 18/12/2023 08:10 (UTC)
 
 Release date: 2023-12-18

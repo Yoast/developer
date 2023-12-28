@@ -1,3 +1,11 @@
+## 28/12/2023 08:06 (UTC)
+
+Release date: 2023-12-28
+
+#### Bugfixes
+
+* Improves theme integration progress bar to reflect more realistic status.
+
 ## 19/12/2023 09:50 (UTC)
 
 Release date: 2023-12-19

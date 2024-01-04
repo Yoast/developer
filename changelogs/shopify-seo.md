@@ -1,3 +1,11 @@
+## 04/01/2024 08:36 (UTC)
+
+Release date: 2024-01-04
+
+#### Bugfixes
+
+* Fixes a bug where a banner would be briefly showing a warning about an incomplete theme integration when actually having completed the integration.
+
 ## 28/12/2023 08:06 (UTC)
 
 Release date: 2023-12-28

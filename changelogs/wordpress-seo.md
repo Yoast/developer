@@ -1,3 +1,25 @@
+= 21.8 =
+
+Release date: 2024-01-09
+
+We've just released Yoast SEO 21.8. In this release, we've focused on general enhancements and fixes to improve how your WordPress SEO plugin functions. Find out more about what's new in Yoast SEO 21.8 in [our release post](https://yoa.st/release-9-1-24)!
+
+#### Enhancements
+
+* Aligns the styling of the replacement variables in the post editor with the styling in the settings.
+* Improves the centering of the eye icon in the highlighting button across editors.
+
+#### Bugfixes
+
+* Fixes a bug where highlighting for the _keyphrase density_ assessment would not work when using the latest version of Gutenberg (17.3.0).
+
+#### Other
+
+* Adds a JavaScript action (`yoast.analysis.applyMarks`) that allow users to implement the highlighting functionality in other editors.
+* Adds a notification in the sidebar to leave a quick review.
+* Removes a set of Elementor widgets from the content analysis to make the analysis results more accurate.
+* Re-orders menu items in block editor metabox and sidebar, classic editor metabox and Elementor editor sidebar to be consistent with Yoast SEO Premium.
+
 = 21.7 =
 
 Release date: 2023-12-12

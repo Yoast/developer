@@ -1,3 +1,25 @@
+## 21.8
+
+Release date: 2024-01-09
+
+Elementor users rejoice! Yoast SEO Premium 21.8 comes with functional highlighting within the Elementor editor. Now you can see where you need to make edits in the text. Find out more about what's new in Yoast SEO Premium 21.8 in [our release post](https://yoa.st/release-9-1-24)!
+
+#### Enhancements
+
+* Now available: highlighting for results of the SEO, readability, and inclusive language analyses in Elementor.
+* Makes the AI Generator tip toaster visible until explicitly closed by the user.
+
+#### Bugfixes
+
+* Fixes a bug where exporting the keyphrase scores would result in a fatal error when additional keyphrases were stored in the database in a malformed way.
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+* Fixes a bug where the schema for a variable price product created with Easy Digital Downloads would be invalid.
+* Fixes a bug where the Yoast *Table of Contents* block would prevent editing a post when using the latest version of Gutenberg (17.3.0).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.8.
+
 ## 21.7
 
 Release date: 2023-12-12
@@ -137,7 +159,7 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEO\redirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

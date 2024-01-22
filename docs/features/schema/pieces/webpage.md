@@ -72,6 +72,9 @@ When the page is about a particular user (e.g., an member bio / author archive):
   * If the page features posts/pages authored by that `Person`, then the `type` property should instead by an array of `['CollectionPage','ProfilePage']`.
 * Add a `mainEntityOfPage` property to the `Person` which the page is about, which references the `WebPage` by ID.
 
+### FAQ pages
+When the page contains FAQs, the `type` property should be converted to an array including `FAQPage` and `WebPage` (or the most specific transformation as described above).
+
 ### Search results
 On search results pages, the *type* property should be altered to an array of `[CollectionPage, SearchResultsPage]`.
 

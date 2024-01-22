@@ -1,3 +1,23 @@
+## 15.1
+
+Release date: 2023-10-31
+
+#### Enhancements
+
+* Introduces a new way of retrieving translations by utilizing the TranslationPress service. Instead of shipping all translations with every release, translations will now be loaded on a per-install basis, tailored to the user's setup. This leads to smaller plugin releases and less bloat on the user's server.
+
+#### Bugfixes
+
+* Fixes a bug where address shortcode would not be recognized by Local schema assessment when the shortcode was added in Classic editor.
+* Fixes a bug where the organization logo would be used as the default location logo when all locations are part of the same business.
+
+#### Other
+
+* Bumps the minimum required Free version to 21.5.
+* Introduces the option to use the `composer/installers` v2 when this package would be required via [WP]Packagist.
+* Sets the minimum supported WordPress version to 6.2.
+* Sets the WordPress tested up to version to 6.4.
+
 ## 15.0
 
 Release date: 2023-05-23

@@ -1,3 +1,141 @@
+## 21.8
+
+Release date: 2024-01-09
+
+Elementor users rejoice! Yoast SEO Premium 21.8 comes with functional highlighting within the Elementor editor. Now you can see where you need to make edits in the text. Find out more about what's new in Yoast SEO Premium 21.8 in [our release post](https://yoa.st/release-9-1-24)!
+
+#### Enhancements
+
+* Now available: highlighting for results of the SEO, readability, and inclusive language analyses in Elementor.
+* Makes the AI Generator tip toaster visible until explicitly closed by the user.
+
+#### Bugfixes
+
+* Fixes a bug where exporting the keyphrase scores would result in a fatal error when additional keyphrases were stored in the database in a malformed way.
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+* Fixes a bug where the schema for a variable price product created with Easy Digital Downloads would be invalid.
+* Fixes a bug where the Yoast *Table of Contents* block would prevent editing a post when using the latest version of Gutenberg (17.3.0).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.8.
+
+## 21.7
+
+Release date: 2023-12-12
+
+Yoast SEO Premium 21.7 is out now. This release brings an improved word complexity assessment for the French language. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO Premium 21.7 in [our release post](https://yoa.st/release-12-12-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.7.
+* Adds checks to ensure that the plugin has no known incompatibilities with PHP 8.3.
+* Improves the discoverability of the security policy.
+
+## 21.6
+
+Release date: 2023-11-28
+
+Yoast SEO Premium 21.6 got a power-up with advanced AI technology -- now also for WooCommerce products! Create enticing titles and meta descriptions faster than ever. Own the search results with finely tuned, AI-crafted content that speaks directly to your audience. Upgrade to Premium and experience the future of SEO, where your content works smarter for you. Find out more about what's new in Yoast SEO Premium 21.5 in [our release post](https://yoa.st/release-28-11-23)!
+
+#### Enhancements
+
+* Get ready to supercharge your content! AI-powered meta description and title generation is now seamlessly enabled for all users as the default setting.
+* Introducing a new feature: AI SEO title and meta description generation for WooCommerce products! To unlock this SEO magic, make sure you have both Yoast SEO Premium and Yoast WooCommerce SEO installed.
+
+#### Bugfixes
+
+* Fixes a bug where the focus style of the Use AI error message buttons would be cut off.
+* Fixes a bug where the related links block would not be translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.6.
+
+## 21.5
+
+Release date: 2023-10-31
+
+In Yoast SEO Premium 21.5, we've enhanced our crawl optimization settings. You now have the option to block web crawlers used to train various AI, like OpenAI's GPTBot, Common Crawl's CCBot, and Google-Extended, from accessing your content. Find out more about what's new in Yoast SEO Premium 21.5 in [our release post](https://yoa.st/release-31-10-23)!
+
+#### Enhancements
+
+* Adds a filter to disable the `Table of Content` block to prevent auto generation of html anchors for headings.
+* Adds optional blocking of the `Google-Extended`, `ChatGPT` and `CCBot` user-agents.
+* Improves the _word compexity_ assessment for English by expanding the list of frequently used words.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.5.
+* Sets the WordPress tested up to version to 6.4.
+
+## 21.4
+
+Release date: 2023-10-17
+
+Yoast SEO Premium 21.4 is out today. This release comes with several fixes that improve how various features function. Find out more about what's new in Yoast SEO Premium 21.4 in [our release post](https://yoa.st/release-17-10-23)!
+
+#### Bugfixes
+
+* Fixes a bug where the actionable buttons would not focus on the input fields when clicking on them in the sidebar.
+* Fixes a bug where the _Maximum heading level_ option within the _Table of Contents_ block would not work as expected.
+
+#### Other
+
+* Adds output escaping to the redirect message after adding a new redirect.
+* Bumps the minimum required version of Yoast SEO to 21.4.
+
+## 21.3
+
+Release date: 2023-10-03
+
+Yoast SEO Premium 21.3 is out now. In this release, we've improved the word complexity assessment, making it more helpful to improve your content. Find out more about what's new in Yoast SEO Premium 21.3 in [our release post](https://yoa.st/release-3-10-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment in English by recognizing more plural forms of non-complex words. For example, the plural form _universities_ is not marked as a complex word anymore, just like the singular form _university_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.3.
+
+## 21.2
+
+Release date: 2023-09-19
+
+Yoast SEO Premium 21.2 is out now. This release brings fixes and enhancements, including an easier-to-use sidebar and improvements to the social media preview. Check it out! Find out more about what's new in Yoast SEO Premium 21.2 in [our release post](https://yoa.st/release-19-9-23)!
+
+#### Enhancements
+
+* Renames the _Social preview_ sections to clarify which preview applies to which platform.
+
+#### Bugfixes
+
+* Fixes a bug where the cornerstone and inclusive language columns would be inadvertently displayed on product attribute terms.
+* Fixes a bug where the _Table of Contents_ block header would be displayed in the user language instead of the site language.
+
+#### Other
+
+* Allows user to manage their consent when using the `AI Generator` even if the feature is turned off.
+* Avoids registering the routes related to the `AI Generator` when the feature is disabled.
+* Bumps the minimum required version of Yoast SEO to 21.2.
+* Sets the minimum supported WordPress version to 6.2.
+
+## 21.1
+
+Release date: 2023-09-05
+
+Yoast SEO Premium 21.1 is out today. This release brings improvements and enhancements, including ones to our new AI feature. Be sure to try that feature if you still need to! Find out more about what's new in Yoast SEO Premium 21.1 in [our release post](https://yoa.st/release-5-9-23)!
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.1.
+* The AI generator functionality is unavailable if the SEO Analysis is turned off. We now show an error immediately alerting users to this after leaving the AI introduction modal.
+
 ## 21.0
 
 Release date: 2023-08-22
@@ -21,7 +159,8 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEO
+edirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 
@@ -875,7 +1014,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 
 #### Bugfixes
 
-* Fixes a bug where the `Yoast\WP\SEOnable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
+* Fixes a bug where the `Yoast\WP\SEO\Enable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
 
 #### Other
 
@@ -884,7 +1023,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 * Deprecates the `Yoast\WP\SEO\Helpers\Prominent_Words_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Prominent_Words_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Helpers\Zapier_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Zapier_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Conditionals\Zapier_Enabled_Conditional` class in favor of the `Yoast\WP\SEO\Premium\Conditionals\Zapier_Enabled_Conditional` class.
-* Deprecates the `Yoast\WP\SEO\Integrations\Third_Partylementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Partylementor_Premium` class.
+* Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Elementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Elementor_Premium` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Classic_Editor` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Classic_Editor` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Trigger` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Trigger` class.

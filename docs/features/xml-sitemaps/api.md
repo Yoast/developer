@@ -134,6 +134,65 @@ function add_sitemap_custom_items( $sitemap_custom_items ) {
 }
 
 add_filter( 'wpseo_sitemap_index', 'add_sitemap_custom_items' );
+
+```
+
+### Add images to posts 
+
+Some themes or page builder modules may not show the images on the sitemap. You may need to add them via a filter: `wpseo_sitemap_urlimages`. This filter will then register images to appear on the sitemap.
+
+```php
+/**
+ * An example of adding images to posts.
+ *
+ * @param array $images An array of the images urls related to the post.
+ * @param int   $post_id  The post ID.
+ * 
+ * @return array The array of images urls to add.
+ */
+function filter_wpseo_sitemap_urlimages( $images, $post_id ) {
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  return $images;
+};
+add_filter( 'wpseo_sitemap_urlimages', 'filter_wpseo_sitemap_urlimages' );
+```
+
+### Add images to terms 
+
+Some themes, page builder modules or plugins may not show the images on the sitemap. You may need to add them via a filter: `wpseo_sitemap_urlimages_term`. This filter will then register images to appear on the sitemap.
+
+```php
+/**
+ * An example of adding images to terms.
+ *
+ * @param array $images An array of the images urls related to the term.
+ * @param int   $term_id  The term ID.
+ * 
+ * @return array The array of images urls to add.
+ */
+function filter_wpseo_sitemap_urlimages_term( $images, $term_id ) {
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  return $images;
+};
+add_filter( 'wpseo_sitemap_urlimages_term', 'filter_wpseo_sitemap_urlimages_term' );
+```
+
+### Add images to front page 
+
+When the front page is not a static page, but the latest posts, you can add images to the sitemap via a filter: `wpseo_sitemap_urlimages_front_page`. This filter will then register images to appear on the sitemap.
+
+```php
+/**
+ * An example of adding images to front page.
+ *
+ * @param array $images An array of the images urls related to the front page.
+ * @return array The array of images urls to add.
+ */
+function filter_wpseo_sitemap_urlimages_front_page( $images ) {
+  array_push( $images, [ 'src' => 'https://www.example.com/wp-content/uploads/extra-image.jpg' ]);
+  return $images;
+};
+add_filter( 'wpseo_sitemap_urlimages_front_page', 'filter_wpseo_sitemap_urlimages_front_page' );
 ```
 
 ## Misc

@@ -1,3 +1,53 @@
+## 23/01/2024 08:21 (UTC)
+
+Release date: 2024-01-23
+
+#### Bugfixes
+
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+
+## 04/01/2024 08:36 (UTC)
+
+Release date: 2024-01-04
+
+#### Bugfixes
+
+* Fixes a bug where a banner would be briefly showing a warning about an incomplete theme integration when actually having completed the integration.
+
+## 28/12/2023 08:06 (UTC)
+
+Release date: 2023-12-28
+
+#### Bugfixes
+
+* Improves theme integration progress bar to reflect more realistic status.
+
+## 19/12/2023 09:50 (UTC)
+
+Release date: 2023-12-19
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
+## 18/12/2023 08:10 (UTC)
+
+Release date: 2023-12-18
+
+#### Bugfixes
+
+* Fixes issue with welcome back view for users who reinstall the app.
+* Fixes a bug where the default settings for search appearance would not be applied when optimizing a content item.
+
+## 13/12/2023 09:36 (UTC)
+
+Release date: 2023-12-13
+
+#### Enhancements
+
+* Improved performance of the app.
+* Remembers last used country when retrieving related keyphrases with Semrush, and selects the country by default on subsequent usage.
+
 ## 22/11/2023 08:47 (UTC)
 
 Release date: 2023-11-22

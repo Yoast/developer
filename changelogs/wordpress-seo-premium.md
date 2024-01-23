@@ -1,3 +1,61 @@
+## 21.9
+
+Release date: 2024-01-23
+
+Yoast SEO Premium 21.9 is out now. This release is mainly focused on maintenance. It comes with many behind-the-scenes improvements and general enhancements. Find out more about what's new in Yoast SEO Premium 21.9 in [our release post](https://yoa.st/release-23-1-24)!
+
+#### Bugfixes
+
+* Fixes a bug where Accordion and Tabs widgets in Elementor would not open a tab when clicking its header in the preview.
+* Fixes a bug where calling a deprecated function would lead to a fatal error.
+* Fixes a bug where the content analysis would not work properly when a _related links block_ had been added.
+
+#### Other
+
+* Adds a filter to suppress the notification shown in the block editor when a redirect is automatically created upon slug change.
+* Bumps the minimum required version of Yoast SEO to 21.9.
+* Make the required PHP extensions explicit.
+* Removes Yoast SEO from the Premium zip which reduces the zip size. Also automatically installs Yoast SEO from the WordPress.org repository if it's not present.
+* Sets the minimum supported WordPress version to 6.3.
+
+## 21.8
+
+Release date: 2024-01-09
+
+Elementor users rejoice! Yoast SEO Premium 21.8 comes with functional highlighting within the Elementor editor. Now you can see where you need to make edits in the text. Find out more about what's new in Yoast SEO Premium 21.8 in [our release post](https://yoa.st/release-9-1-24)!
+
+#### Enhancements
+
+* Now available: highlighting for results of the SEO, readability, and inclusive language analyses in Elementor.
+* Makes the AI Generator tip toaster visible until explicitly closed by the user.
+
+#### Bugfixes
+
+* Fixes a bug where exporting the keyphrase scores would result in a fatal error when additional keyphrases were stored in the database in a malformed way.
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+* Fixes a bug where the schema for a variable price product created with Easy Digital Downloads would be invalid.
+* Fixes a bug where the Yoast *Table of Contents* block would prevent editing a post when using the latest version of Gutenberg (17.3.0).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.8.
+
+## 21.7
+
+Release date: 2023-12-12
+
+Yoast SEO Premium 21.7 is out now. This release brings an improved word complexity assessment for the French language. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO Premium 21.7 in [our release post](https://yoa.st/release-12-12-23)!
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 21.7.
+* Adds checks to ensure that the plugin has no known incompatibilities with PHP 8.3.
+* Improves the discoverability of the security policy.
+
 ## 21.6
 
 Release date: 2023-11-28
@@ -121,7 +179,8 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEO
+edirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

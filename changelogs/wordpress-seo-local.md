@@ -1,3 +1,22 @@
+## 15.2
+
+Release date: 2024-01-23
+
+#### Enhancements
+
+* Ensure compatibility with Yoast SEO 21.9 by flushing the the rewrite rules when the Location type is registered.
+
+#### Bugfixes
+
+* Fixes a bug where a PHP notice about the use of an outdated WooCommerce version would appear.
+* Fixes a bug where calling a deprecated function would lead to a fatal error.
+
+#### Other
+
+* Improves discoverability of the security policy.
+* Makes the plugin compatible with PHP 8.3.
+* Sets the minimum supported WordPress version to 6.3.
+
 ## 15.1
 
 Release date: 2023-10-31

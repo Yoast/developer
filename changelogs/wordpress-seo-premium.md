@@ -1,3 +1,21 @@
+## 21.9
+
+Release date: 2024-01-23
+
+#### Bugfixes
+
+* Fixes a bug where Accordion and Tabs widgets in Elementor would not open a tab when clicking its header in the preview.
+* Fixes a bug where calling a deprecated function would lead to a fatal error.
+* Fixes a bug where the content analysis would not work properly when a _related links block_ had been added.
+
+#### Other
+
+* Adds a filter to suppress the notification shown in the block editor when a redirect is automatically created upon slug change.
+* Bumps the minimum required version of Yoast SEO to 21.9.
+* Make the required PHP extensions explicit.
+* Removes Yoast SEO from the Premium zip which reduces the zip size. Also automatically installs Yoast SEO from the WordPress.org repository if it's not present.
+* Sets the minimum supported WordPress version to 6.3.
+
 ## 21.8
 
 Release date: 2024-01-09
@@ -1014,7 +1032,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 
 #### Bugfixes
 
-* Fixes a bug where the `Yoast\WP\SEO\Enable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
+* Fixes a bug where the `Yoast\WP\SEOnable_notification_{$watch_type}_{$notification_type}` filter name was not correctly registered.
 
 #### Other
 
@@ -1023,7 +1041,7 @@ Yoast SEO 16.5 is out today! This release introduces an addition to Yoast’s so
 * Deprecates the `Yoast\WP\SEO\Helpers\Prominent_Words_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Prominent_Words_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Helpers\Zapier_Helper` class in favor of the `Yoast\WP\SEO\Premium\Helpers\Zapier_Helper` class.
 * Deprecates the `Yoast\WP\SEO\Conditionals\Zapier_Enabled_Conditional` class in favor of the `Yoast\WP\SEO\Premium\Conditionals\Zapier_Enabled_Conditional` class.
-* Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Elementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Elementor_Premium` class.
+* Deprecates the `Yoast\WP\SEO\Integrations\Third_Partylementor_Premium` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Partylementor_Premium` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Classic_Editor` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Classic_Editor` class.
 * Deprecates the `Yoast\WP\SEO\Integrations\Third_Party\Zapier_Trigger` class in favor of the `Yoast\WP\SEO\Premium\Integrations\Third_Party\Zapier_Trigger` class.

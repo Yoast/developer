@@ -2,6 +2,8 @@
 
 Release date: 2024-01-23
 
+Yoast SEO Premium 21.9 is out now. This release is mainly focused on maintenance. It comes with many behind-the-scenes improvements and general enhancements. Find out more about what's new in Yoast SEO Premium 21.9 in [our release post](https://yoa.st/release-23-1-24)!
+
 #### Bugfixes
 
 * Fixes a bug where Accordion and Tabs widgets in Elementor would not open a tab when clicking its header in the preview.

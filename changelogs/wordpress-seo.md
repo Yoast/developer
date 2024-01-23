@@ -2,6 +2,8 @@
 
 Release date: 2024-01-23
 
+We've just released Yoast SEO 21.9. This release comes with many behind-the-scenes improvements and general enhancements. Find out more about what's new in Yoast SEO 21.9 in [our release post](https://yoa.st/release-23-1-24)!
+
 #### Enhancements
 
 * Adds a filter to add images to the front page in sitemaps.

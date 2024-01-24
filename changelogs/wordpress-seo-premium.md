@@ -1,3 +1,23 @@
+## 21.9
+
+Release date: 2024-01-23
+
+Yoast SEO Premium 21.9 is out now. This release is mainly focused on maintenance. It comes with many behind-the-scenes improvements and general enhancements. Find out more about what's new in Yoast SEO Premium 21.9 in [our release post](https://yoa.st/release-23-1-24)!
+
+#### Bugfixes
+
+* Fixes a bug where Accordion and Tabs widgets in Elementor would not open a tab when clicking its header in the preview.
+* Fixes a bug where calling a deprecated function would lead to a fatal error.
+* Fixes a bug where the content analysis would not work properly when a _related links block_ had been added.
+
+#### Other
+
+* Adds a filter to suppress the notification shown in the block editor when a redirect is automatically created upon slug change.
+* Bumps the minimum required version of Yoast SEO to 21.9.
+* Make the required PHP extensions explicit.
+* Removes Yoast SEO from the Premium zip which reduces the zip size. Also automatically installs Yoast SEO from the WordPress.org repository if it's not present.
+* Sets the minimum supported WordPress version to 6.3.
+
 ## 21.8
 
 Release date: 2024-01-09

@@ -1,3 +1,11 @@
+## 23/01/2024 08:21 (UTC)
+
+Release date: 2024-01-23
+
+#### Bugfixes
+
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+
 ## 04/01/2024 08:36 (UTC)
 
 Release date: 2024-01-04

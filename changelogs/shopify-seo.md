@@ -1,3 +1,11 @@
+## 25/01/2024 09:55 (UTC)
+
+Release date: 2024-01-25
+
+#### Bugfixes
+
+* Fixes a bug where a `<title>` element would be disabled in a theme when it appeared inside an `<svg>` element.
+
 ## 23/01/2024 08:21 (UTC)
 
 Release date: 2024-01-23

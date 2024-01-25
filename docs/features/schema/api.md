@@ -105,7 +105,7 @@ function add_custom_schema_piece( $pieces, $context ) {
 
 ## Referencing other graph pieces
 You can always reference the Yoast SEO core graph pieces using their fixed IDs. You can find those by using the
-`Schema_IDs` class. So you can find for instance `Schema_IDs::WEBPAGE_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many
+`Schema_IDs` class. So you can find for instance `Schema_IDs::ORGANIZATION_HASH`, `Schema_IDs::PERSON_LOGO_HASH` and many
 others. For instance if a piece you are adding needs to reference the `Organization` piece, all you have to do is this:
 
 ```php

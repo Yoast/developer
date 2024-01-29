@@ -1,3 +1,234 @@
+= 21.9.1 =
+
+Release date: 2024-01-25
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would occur when upgrading Yoast SEO on certain setups.
+* Fixes a bug where the image tag would be missing in the home page entry of the XML sitemap when using a static front page.
+
+= 21.9 =
+
+Release date: 2024-01-23
+
+We've just released Yoast SEO 21.9. This release comes with many behind-the-scenes improvements and general enhancements. Find out more about what's new in Yoast SEO 21.9 in [our release post](https://yoa.st/release-23-1-24)!
+
+#### Enhancements
+
+* Adds a filter to add images to the front page in sitemaps.
+* Adds a filter to allow adding images to terms in sitemaps.
+* Clears rewrite rules only for the strip category base option.
+* Removes the clearing of rewrite rules on every option update.
+* Replaces the sitemap rewrite rules mechanism, props to [felixarntz](https://github.com/felixarntz).
+
+#### Bugfixes
+
+* Fixes a bug where a post would be saved when trying to dismiss a notification while editing.
+* Fixes a bug where editing a product would either crash or be slow when there is a high number of registered attributes.
+* Fixes a bug where the Yoast plugin icon in the block editor would not have any horizontal spacing anymore when rendered in "compact" mode.
+
+#### Other
+
+* Be explicit about required PHP extensions.
+* Improves PHP 8.2 compatibility.
+* Sets the minimum supported WordPress version to 6.3.
+* Removes the `WEBPAGE_HASH` constant that had been deprecated in Yoast SEO 19.3 (July 2022).
+
+= 21.8.1 =
+
+Release date: 2024-01-19
+
+#### Bugfixes
+
+* Fixes a bug where our block editor integration would no longer work together with Gutenberg 17.4.1.
+* Fixes a bug where our block editor integration would no longer work together with Gutenberg 17.5.
+
+= 21.8 =
+
+Release date: 2024-01-09
+
+We've just released Yoast SEO 21.8. In this release, we've focused on general enhancements and fixes to improve how your WordPress SEO plugin functions. Find out more about what's new in Yoast SEO 21.8 in [our release post](https://yoa.st/release-9-1-24)!
+
+#### Enhancements
+
+* Aligns the styling of the replacement variables in the post editor with the styling in the settings.
+* Improves the centering of the eye icon in the highlighting button across editors.
+
+#### Bugfixes
+
+* Fixes a bug where highlighting for the _keyphrase density_ assessment would not work when using the latest version of Gutenberg (17.3.0).
+
+#### Other
+
+* Adds a JavaScript action (`yoast.analysis.applyMarks`) that allow users to implement the highlighting functionality in other editors.
+* Adds a notification in the sidebar to leave a quick review.
+* Removes a set of Elementor widgets from the content analysis to make the analysis results more accurate.
+* Re-orders menu items in block editor metabox and sidebar, classic editor metabox and Elementor editor sidebar to be consistent with Yoast SEO Premium.
+
+= 21.7 =
+
+Release date: 2023-12-12
+
+Yoast SEO 21.7 is out now. In this release, we bring an improved first-time configuration, making it easier for people to get started. Also, we fixed several bugs and added some enhancements. Find out more about what's new in Yoast SEO 21.7 in [our release post](https://yoa.st/release-12-12-23)!
+
+#### Enhancements
+
+* Removes a superfluous warning in the first time configuration when the site environment is non-production.
+
+#### Bugfixes
+
+* Fixes a bug where an additional `Organization, Person` schema piece would be wrongly generated for author pages when a website representing an organization was set to represent a person different from the author.
+* Fixes a bug where the initial state for the website name would be empty when saving the site representation step in the first time configuration.
+* Fixes a bug where modifications to the analysis data would not be included in the Insights analysis.
+* Fixes a bug where the "view" button for tracking SEO performance would have the wrong size when editing a post in Elementor and Classic editor.
+
+#### Other
+
+* Adds checks to ensure that the plugin has no known incompatibilities with PHP 8.3.
+* Improves the discoverability of the security policy.
+* Improves the instructions in the first-time configuration so that they're easier to follow.
+* Improves the new installation screen layout and design.
+* Provides a filter to add a list of shortcodes so they can be parsed and then included in our content analysis in Classic editor.
+
+= 21.6 =
+
+Release date: 2023-11-28
+
+Discover what's new in Yoast SEO 21.6! Have you seen our AI-powered tool that helps you easily craft engaging titles and meta descriptions? Ready for even more AI capabilities? Upgrade to Premium and unlock full access to AI-driven SEO tools to take your website to new heights. Start optimizing smarter, not harder! Find out more about what's new in Yoast SEO 21.6 in [our release post](https://yoa.st/release-28-11-23)!
+
+#### Enhancements
+
+* Improves the _Track SEO performance_ functionality by adding a graph that plots keyphrase trends over time.
+
+#### Bugfixes
+
+* Fixes a bug where encoded characters would be stripped from canonical URLs in the taxonomy metabox. Props to [@stodorovic](https://github.com/stodorovic).
+* Fixes a bug where the Wincher integration would cause PHP warnings with PHP 8+.
+
+#### Other
+
+* Adds a notification when WooCommerce's new beta product editor is enabled.
+* Adds defensive coding to the suppress warnings on archive pages with the `/%category%/%postname%/` permalink structure. Props to [@Mte90](https://github.com/Mte90).
+
+= 21.5 =
+
+Release date: 2023-10-31
+
+Yoast SEO 21.5 is out today! In this release, you'll find improvements to our inclusive language feature, updates to handling RSS feeds and much more. Find out more about what's new in Yoast SEO 21.5 in [our release post](https://yoa.st/release-31-10-23)!
+
+#### Enhancements
+
+* Adds support for the new `wp_attachment_pages_enabled` option introduced by WordPress 6.4, reducing the chances of inconsistencies with Yoast SEO's own "Enable media pages" setting.
+* Improves the _inclusive language_ analysis by making the feedback more clear and consistent, refining the list of targeted phrases, and adding more alternatives for some of the non-inclusive phrases. Specifically, this includes the following changes:
+	* Aligns the traffic light color and written feedback for all phrases.
+	* Makes some feedback strings more accurate by replacing the word ‘overgeneralizing’ with ‘harmful’.
+	* Adds ‘Rom’ and ‘Roma’ as additional alternatives to ‘gypsy’.
+	* Adds additional alternatives to ‘homosexuals’.
+	* Improves the feedback shown for the phrases ‘abnormal behaviour’, ‘behaviourally normal’, and ‘behaviourally abnormal’.
+	* Improves the feedback shown for the word ‘minorities’.
+	* Removes ‘narcissistic’ as a targeted phrase when followed by ‘personality disorder’.
+	* Removes ‘Ebonics’ and ‘normal behaviour’ from the list of targeted phrases.
+* Removes the automatic `rel=nofollow` attribute for links in the RSS feed.
+
+#### Bugfixes
+
+* Fixes a bug where console warnings about incorrect prop types would be shown on the integrations page.
+
+#### Other
+
+* Prevents the Pattern Category taxonomy (introduced in WordPress 6.4) to be indexed and hides it in the settings page.
+* Improves the FAQ block description by removing any reference to the previous restriction of one block per post.
+* Improves the inline documentation for the `WPSEO_Option` class. Props to [costdev](https://github.com/costdev).
+* Leverages Script Strategy feature to add the async attribute to the `wordproof` script in case WordPress version is 6.3 or higher. Props to [adamsilverstein](https://github.com/adamsilverstein).
+* Sets the WordPress tested up to version to 6.4.
+
+= 21.4 =
+
+Release date: 2023-10-17
+
+We've just released Yoast SEO 21.4. In this release, we've focused on general enhancements and fixes to improve how your WordPress SEO plugin functions. Find out more about what's new in Yoast SEO 21.4 in [our release post](https://yoa.st/release-17-10-23)!
+
+#### Enhancements
+
+* Introduces more robust HTML processing and highlighting for the _keyphrase density_ and _single H1_ assessments.
+* Improves the keyphrase matching in the _keyphrase density_ assessment.
+* Improves keyphrase matching in Japanese by being able to match keyphrase occurrences that contain upper case characters.
+* Updates the list of HTML elements that should be excluded from the content analysis.
+* Improves performance in getting the primary term. Props to [nlemoine](https://github.com/nlemoine).
+* Prevent database update requests on page loads when the site representation settings contain conflicting data. Props to [jboonstra](https://github.com/jboonstra).
+
+#### Bugfixes
+
+* Fixes a bug where highlighting was not applied to keyphrase occurrences that contained different types of apostrophes than `'`.
+* Fixes a bug where PHP notice would happen when the sitemap index is generated on MySQL 8+.
+* Fixes a bug where resource cleanup regarding emojis would cause a fatal error when enabling the `Remove emoji scripts` option in the _crawl optimization_ settings. Props to [MishaBelikov](https://github.com/MishaBelikov).
+* Fixes a bug where sentences would not be highlighted when square brackets were present in the same sentence.
+* Fixes a bug where the first-time configuration' site representation logo button would not be translated. Props to [fxbenard](https://github.com/fxbenard).
+* Fixes a bug where the _single title_ assessment would be triggered when adding a H1 without text.
+
+= 21.3 =
+
+Release date: 2023-10-03
+
+Yoast SEO 21.3 is out! In this release, we've focused on improving the plugin's performance, especially regarding handling huge posts on complex websites. Find out more about what's new in Yoast SEO 21.3 in [our release post](https://yoa.st/release-3-10-23)!
+
+#### Enhancements
+
+* Enhances post-saving performance in certain conditions for a smoother and more efficient user experience.
+
+#### Bugfixes
+
+* Fixes a bug where the notifications counter of the admin bar menu would not show with the correct style on the frontend.
+* Fixes a bug where the slug in the search appearance editor would not be set when published posts were edited in the classic editor and the "core/editor" store was available.
+
+= 21.2 =
+
+Release date: 2023-09-19
+
+Yoast SEO 21.2 is out today! In this release, we've improved the naming of several features and enhanced the sidebar in the block editor, making it easier to use. Find out more about what's new in Yoast SEO 21.2 in [our release post](https://yoa.st/release-19-9-23)!
+
+#### Enhancements
+
+* Renames Google preview to Search appearance in the metabox and sidebar.
+
+#### Bugfixes
+
+* Fixes a bug where, even if `Show author archives without posts in search results` is enabled, the archive page would have a `noindex` in the `robots` metatag.
+* Fixes a bug where notices about incorrect calls to `wpdb::prepare` would be thrown on Yoast SEO Premium activation.
+* Fixes a bug where pagination meta tags would be wrong when using Query Loop Block with custom query variables.
+* Fixes a bug where the redirect notification would mention "posts" when a tag was deleted or trashed.
+* Fixing a bug where adding special characters like " »" as a title separator would break the RSS feed.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.2.
+
+= 21.1 =
+
+Release date: 2023-09-05
+
+Here's Yoast SEO 21.1! After the AI release, we're back with an update filled with fixes and enhancements to improve your SEO work. Check it out! Find out more about what's new in Yoast SEO 21.1 in [our release post](https://yoa.st/release-5-9-23)!
+
+#### Bugfixes
+
+* Fixes a bug where an error could occur when an indexable was outdated. Props to @jaimearroyonavia.
+* Fixes a bug where the cleanup routine would throw an error when on multisites.
+* Fixes a bug where the notification for a new content type in the notification center would not be dismissed when installing Elementor and reviewing the new content types.
+
+#### Other
+
+* Adds an attribute to the link "See who contributed to" to open in a new browser tab, located in the General tab. Props to @nathanwritescode-uk.
+
+= 21.0 =
+
+Release date: 2023-08-22
+
+We're thrilled to announce Yoast SEO 21.0! This update is geared at making your SEO journey smoother and more successful. We're introducing our first step into AI with automatic titles and meta description generation in Yoast SEO Premium. Find out more about what's new in Yoast SEO 21.0 in [our release post](https://yoa.st/release-22-8-23)!
+
+#### Other
+
+* Sets the WordPress tested up to version to 6.3.
+
 = 20.13 =
 
 Release date: 2023-08-08
@@ -448,7 +679,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 
 #### Other
 
-* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEOdmin_author_archives_meta, Yoast\WP\SEOdmin_date_archives_meta, Yoast\WP\SEOdmin_post_types_beforearchive, Yoast\WP\SEOdmin_post_types_archive, Yoast\WP\SEOdmin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
+* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEO\admin_author_archives_meta, Yoast\WP\SEO\admin_date_archives_meta, Yoast\WP\SEO\admin_post_types_beforearchive, Yoast\WP\SEO\admin_post_types_archive, Yoast\WP\SEO\admin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
@@ -1361,9 +1592,9 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 
 * Adds the `yoast_display_gutenberg_compat_notification` filter to allow disabling the Gutenberg compatibility notification.
 * Adds the `wpseo_schema_person_data` filter to enable the filtering of `Person` Schema by the user's ID.
-* Adds the `Yoast\WP\SEOdmin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
-* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEOdmin_post_types_beforearchive` action.
-* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEOdmin_taxonomies_meta` action.
+* Adds the `Yoast\WP\SEO\admin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
+* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEO\admin_post_types_beforearchive` action.
+* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEO\admin_taxonomies_meta` action.
 * Improves the layout of the Search Appearance collapsibles.
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.

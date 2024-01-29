@@ -1,3 +1,208 @@
+## 25/01/2024 09:55 (UTC)
+
+Release date: 2024-01-25
+
+#### Bugfixes
+
+* Fixes a bug where a `<title>` element would be disabled in a theme when it appeared inside an `<svg>` element.
+
+## 23/01/2024 08:21 (UTC)
+
+Release date: 2024-01-23
+
+#### Bugfixes
+
+* Fixes a bug where highlighting would be applied incorrectly when keyphrase occurrences contained different types of apostrophes than `'` in the _keyphrase distribution_ assessment.
+
+## 04/01/2024 08:36 (UTC)
+
+Release date: 2024-01-04
+
+#### Bugfixes
+
+* Fixes a bug where a banner would be briefly showing a warning about an incomplete theme integration when actually having completed the integration.
+
+## 28/12/2023 08:06 (UTC)
+
+Release date: 2023-12-28
+
+#### Bugfixes
+
+* Improves theme integration progress bar to reflect more realistic status.
+
+## 19/12/2023 09:50 (UTC)
+
+Release date: 2023-12-19
+
+#### Enhancements
+
+* Improves the accuracy of the _word complexity_ assessment for French by recognizing more plural forms of non-complex words. For example, the plural form "résidences" is not marked as a complex word anymore, just like the singular form "résidence".
+
+## 18/12/2023 08:10 (UTC)
+
+Release date: 2023-12-18
+
+#### Bugfixes
+
+* Fixes issue with welcome back view for users who reinstall the app.
+* Fixes a bug where the default settings for search appearance would not be applied when optimizing a content item.
+
+## 13/12/2023 09:36 (UTC)
+
+Release date: 2023-12-13
+
+#### Enhancements
+
+* Improved performance of the app.
+* Remembers last used country when retrieving related keyphrases with Semrush, and selects the country by default on subsequent usage.
+
+## 22/11/2023 08:47 (UTC)
+
+Release date: 2023-11-22
+
+#### Enhancements
+
+* Introduces the possibility to have the Yoast SEO subscription billed annually.
+
+#### Bugfixes
+
+* Fixes a bug where the the current page in the breadcrumb block would use an `<a>` tag without an `href` attribute.
+
+## 06/11/2023 10:55 (UTC)
+
+Release date: 2023-11-06
+
+#### Enhancements
+
+* Improves the _word complexity_ assessment for English by expanding the list of frequently used words.
+* Improves the _inclusive language_ analysis by making the feedback more clear and consistent, refining the list of targeted phrases, and adding more alternatives for some of the non-inclusive phrases. Specifically, this includes the following changes:
+  * Aligns the traffic light color and written feedback for all phrases.
+  * Makes some feedback strings more accurate by replacing the word ‘overgeneralizing’ with ‘harmful’.
+  * Adds ‘Rom’ and ‘Roma’ as additional alternatives to ‘gypsy’.
+  * Adds additional alternatives to ‘homosexuals’.
+  * Improves the feedback shown for the phrases ‘abnormal behaviour’, ‘behaviourally normal’, and ‘behaviourally abnormal’.
+  * Improves the feedback shown for the word ‘minorities’.
+  * Removes ‘narcissistic’ as a targeted phrase when followed by ‘personality disorder’.
+  * Removes ‘Ebonics’ and ‘normal behaviour’ from the list of targeted phrases.
+
+## 01/11/2023 08:57 (UTC)
+
+Release date: 2023-11-01
+
+#### Other
+
+* No longer highlight the Semrush integration card with a "new" badge.
+
+## 26/10/2023 07:20 (UTC)
+
+Release date: 2023-10-26
+
+#### Enhancements
+
+* Allows opening the details view in a new browser tab or window natively.
+
+## 24/10/2023 08:55 (UTC)
+
+Release date: 2023-10-24
+
+#### Enhancements
+
+* Improves keyphrase matching in Japanese by being able to match keyphrase occurrences that contain upper case characters.
+* Introduces more robust HTML processing and highlighting for the _keyphrase density_ and _single H1_ assessments.
+* Updates the list of HTML elements that should be excluded from the content analysis.
+
+#### Bugfixes
+
+* Fixes a bug where highlighting was not applied to keyphrase occurrences that contained different types of apostrophes than `'`.
+* Fixes a bug where the _single title_ assessment would be triggered when adding a H1 without text.
+
+## 19/10/2023 13:01 (UTC)
+
+Release date: 2023-10-19
+
+#### Bugfixes
+
+* Fixes a bug where the subscription page would not have the right styling applied.
+* Fixes a bug where the welcome back page would not have the right styling applied.
+
+## 13/10/2023 07:27 (UTC)
+
+Release date: 2023-10-13
+
+#### Enhancements
+
+* Changes design of Integrations Settings page.
+
+#### Other
+
+* Speeds up the app loading time.
+
+## 11/10/2023 10:30 (UTC)
+
+Release date: 2023-10-11
+
+#### Enhancements
+
+* Adds _Semrush_ integration promotion banner inside app.
+
+## 26/09/2023 13:10 (UTC)
+
+Release date: 2023-09-26
+
+#### Bugfixes
+
+* Fixes a bug where the _keyphrase in introduction_ assessment would fail to find the first paragraph.
+
+## 25/09/2023 12:12 (UTC)
+
+Release date: 2023-09-25
+
+#### Enhancements
+
+* Clarifies notice about the connection to Semrush when facing issues in the connection.
+* Merges Facebook preview and Twitter preview collapsibles into Social media appearance.
+* Renames Google preview collapsible to Search appearance.
+
+## 15/09/2023 05:28 (UTC)
+
+Release date: 2023-09-15
+
+#### Other
+
+* Introduces a questionnaire to new customers about their reasons for installing.
+
+## 23/08/2023 11:20 (UTC)
+
+Release date: 2023-08-23
+
+#### Enhancements
+
+* NEW: Adds an integration with Semrush. It enables you to find related high-performing keywords and keyphrase insights right in the Shopify editor and write relevant high-quality content!
+
+## 15/08/2023 06:32 (UTC)
+
+Release date: 2023-08-15
+
+#### Bugfixes
+
+* Fixes issues with list of blogs limited to 20 records.
+
+## 14/08/2023 08:46 (UTC)
+
+Release date: 2023-08-14
+
+#### Enhancements
+
+* Improves copy about the follow-up steps after finishing the bulk import process.
+
+## 09/08/2023 07:55 (UTC)
+
+Release date: 2023-08-09
+
+#### Enhancements
+
+* Adds support for metaobject in custom page types.
+
 ## 28/07/2023 08:34 (UTC)
 
 Release date: 2023-07-28

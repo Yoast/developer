@@ -34,10 +34,10 @@ function ChangelogListMetadata(props: Props): JSX.Element {
 
 function ChangelogListContent(props: Props): JSX.Element {
   const {metadata, items, sidebar} = props;
-  const {blogTitle} = metadata;
+  const {blogTitle, page} = metadata;
   return (
     <BlogLayout sidebar={sidebar}>
-      <ChangelogListHeader blogTitle={blogTitle} />
+      <ChangelogListHeader blogTitle={blogTitle} page={page} />
       <BlogPostItems items={items} component={ChangelogItem} />
       <BlogListPaginator metadata={metadata} />
     </BlogLayout>

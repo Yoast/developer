@@ -19,10 +19,9 @@ This PR can be acceptance tested by following these steps:
 * [ ] Tested - I have tested this code to the best of my abilities.
 * [ ] Automated tests - I have added unit tests to verify the code works as intended.
 * [ ] Testability - I have added unique ids to elements, so they can be located in automated testing.
-
-## Innovation
-* [ ] No innovation project is applicable for this PR.
-* [ ] This PR falls under an innovation project. I have attached the `innovation` label and noted the work hours in the WBSO sheet (Dutch contracts only).
+* [ ] I have altered a filename.
+    * [ ] I have adjusted the ID property accordingly and updated all internal links.
+    * [ ] I have added the redirect to the `_redirects` file in the root of the project.
 
 <!-- Note: Your PR can only be merged when the build succeeds, even by admins. 
 For now, you can test this locally by running `yarn build`. -->

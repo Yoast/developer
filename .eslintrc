@@ -7,7 +7,7 @@
 		"ecmaVersion": 9,
 		"sourceType": "module",
 		"ecmaFeatures": {
-			"tsx": true
+			"jsx": true
 		}
 	},
 
@@ -16,6 +16,7 @@
 		"camelcase": 1,
 		"complexity": [1, 6],
 		"brace-style": 1,
+		"import/no-unresolved": [ 2, {"ignore": ["@theme", "@docusaurus", "@site"]}],
 		"max-statements": 1,
 		"no-shadow": 1,
 		"no-prototype-builtins": 0,

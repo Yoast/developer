@@ -17,6 +17,7 @@
   "dependencies": {
     "@docusaurus/core": "^2.2.0",
     "@docusaurus/preset-classic": "^2.2.0",
+    "@docusaurus/theme-common": "2.2.0",
     "@docusaurus/theme-mermaid": "^2.2.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.5",
     "@mdx-js/react": "^1.6.22",
@@ -31,13 +32,16 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.10",
-    "@docusaurus/module-type-aliases": "^2.2.0",
+    "@docusaurus/module-type-aliases": "^3.1.1",
+    "@docusaurus/tsconfig": "^3.1.1",
+    "@docusaurus/types": "^3.1.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.56.0",
     "eslint-config-yoast": "^6.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "^7.33.2",
+    "typescript": "^5.3.3"
   },
   "browserslist": {
     "production": [

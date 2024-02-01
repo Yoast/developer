@@ -24,8 +24,8 @@ function ChangelogListMetadata(props: Props): JSX.Element {
   const {metadata} = props;
   const {blogTitle, blogDescription} = metadata;
   const image = "https://yoast.com/shared-assets/opengraph/?title=" + encodeURIComponent( blogTitle + 's: Features, enhancements and bugfixes' );
-  const blogTitleSuffix = ` - page ${metadata.page}`;
-  const blogDescriptionSuffix = ` Page ${metadata.page}.`;
+  const blogTitleSuffix = metadata.page >= 1 ? ` - page ${metadata.page}` : '';
+  const blogDescriptionSuffix = metadata.page >= 1 ? ` Page ${metadata.page}.` : '';
   return (
     <>
       <PageMetadata title={blogTitle + blogTitleSuffix} description={blogDescription + blogDescriptionSuffix} image={image} />

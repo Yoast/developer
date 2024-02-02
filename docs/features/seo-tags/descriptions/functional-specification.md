@@ -19,7 +19,7 @@ Whenever the user has defined a specific value for a page, that value should be 
 User-specified values override all patterns and defaults.
 
 ## Omitted by default
-In all scenarios, Yoast prefers to output _no_ meta title by default, rather than an auto-generated value. It's our opinion that there are very few scenarios where auto-generated meta descriptions are a good _description_ of the page (e.g., they often simply extract the first paragraph, which is rarely a suitable candidate). Additionally, most search engines which rely on the meta descriptions are also sophisticated enough to evaluate the relationship between the search query and page content, and to extract or generate their own meta description.
+In all scenarios, Yoast prefers to output _no_ meta description by default, rather than an auto-generated value. It's our opinion that there are very few scenarios where auto-generated meta descriptions are a good _description_ of the page (e.g., they often simply extract the first paragraph, which is rarely a suitable candidate). Additionally, most search engines which rely on the meta descriptions are also sophisticated enough to evaluate the relationship between the search query and page content, and to extract or generate their own meta description.
 
 ## Providing an admin comment
 When a page lacks a meta description value, the following comment should be output in the HTML code in place of the tag:

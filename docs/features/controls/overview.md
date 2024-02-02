@@ -4,7 +4,7 @@ title: "Controls - Overview"
 sidebar_label: Overview
 description: This documentation provides information about the types of controls that Yoast SEO provides.
 ---
-This documentation provides information about the tyoes of controls that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) provides.
+This documentation provides information about the types of controls that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) provides.
 
 ## Global site controls
 As a site owner, I want to be able to set the following metadata globally.

@@ -45,12 +45,12 @@ For all posts, pages and content types, users must:
 ### Current set-up
 
 At the moment, much of our analysis is tied deeply into either our WordPress or Shopify integrations.
-Here, we specify how our Yoast SEO plugin integrates with the (default) block editor, the classic editor, and Elementor. 
-For understandable reasons, we focus on the parts of our Free plugin.
+Here, we specify how our Yoast SEO plugin integrates with the (default) block editor, the Classic editor, and Elementor. 
+For understandable reasons, we focus on the parts of our free open-source WordPress plugin [Yoast SEO](https://github.com/Yoast/wordpress-seo).
 
 #### PHP integration
 
-On the PHP side, we work with the concept of `Metabox`es for the different parts of our content analysis. This is a slight misnomer, as these are used as parts of both our **Yoast SEO metabox** (in the classic and block editor) and **Yoast SEO sidebar** (in the block editor, Elementor editor, and Shopify app). Refer to the code [for posts](https://github.com/Yoast/wordpress-seo/tree/trunk/admin/metabox/class-metabox.php) and [for taxonomies](https://github.com/Yoast/wordpress-seo/tree/trunk/admin/taxonomy/class-taxonomy-metabox.php) for more details. We are currently working on [decoupling the metabox and the sidebar](https://github.com/Yoast/wordpress-seo/issues/20866), so please stay tuned to for updates on that front. 
+On the PHP side, we work with the concept of `Metabox`es for the different parts of our content analysis. This is a slight misnomer, as these are used as parts of both our **Yoast SEO metabox** (in the classic and block editor) and **Yoast SEO sidebar** (in the block editor, Elementor editor, and Shopify app). Refer to the code [for posts](https://github.com/Yoast/wordpress-seo/tree/trunk/admin/metabox/class-metabox.php) and [for taxonomies](https://github.com/Yoast/wordpress-seo/tree/trunk/admin/taxonomy/class-taxonomy-metabox.php) for more details. We are currently working on [decoupling the metabox and the sidebar](https://github.com/Yoast/wordpress-seo/issues/20866), so please stay tuned for updates on that front. 
 
 The [Elementor integration](https://github.com/Yoast/wordpress-seo/tree/trunk/src/integrations/third-party/elementor.php) shows how these `Metabox` units can be integrated (`implements Integration_Interface`) on other pages, in this case, the Elementor edit post page (see `Elementor_Edit_Conditional`). It also shows how we can enqueue additional scripts and styling (see `register_hooks`).
 
@@ -60,15 +60,15 @@ On the JavaScript side, the starting point is `packages/js/src/post-edit.js` ([h
 * an integration with the editor as a whole (`initEditorIntegration`). Here, there are implementations for the [default block editor](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/initializers/block-editor-integration.js) and [the Classic Editor](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/initializers/classic-editor-integration.js). These integrations make sure the sidebar is displayed and the highlighting functionality is activated. 
 * a scraper that updates the editor data and links the Yoast SEO content analysis (`initPostScraper`)
 * an integration with the primary category element (`initPrimaryCategory`)
-* an integration with the featured image elements (`initFeaturedImageIntegration`)
+* an integration with the featured image element (`initFeaturedImageIntegration`)
 
 In `term-edit.js` ([here on GitHub](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/term-edit.js)), we have a very similar integration for terms, without integrations for elements that do not appear on terms. 
 
-For other editors, like Elementor in `packages/js/src/elementor.js`, we have a similar approach (cf. [this code](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/elementor.js). There are some small differences: 
-- Instead of a scraper, we work with a watcher there (`initElementorWatcher`) to update the editor store.
+For integrations with other editors, like Elementor in `packages/js/src/elementor.js`, we use a very similar approach (cf. [this code](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/elementor.js)). There are some small differences though: 
+- Instead of a scraper, we work with a watcher (`initElementorWatcher`) to update the editor store.
 - The setup of the YoastSEO analysis app (see `initializePostAnalysis` in [the post scraper](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/js/src/initializers/post-scraper.js)) is done in the integration instead of in the watcher.
 - There is some extra code to introduce the Yoast SEO integration to new users (`initializeIntroduction`).
-- The rendering of the sidebar is taken care of through `initElementEditorIntegration`.
+- The rendering of the sidebar is taken care of through `initElementorEditorIntegration`.
 
 ### Future set-up
 
@@ -78,7 +78,7 @@ We aim to make this easy to implement in any content editing context, simply by 
 #### Resources
 
 * A simple example [standalone app](https://github.com/Yoast/wordpress-seo/tree/feature/agnostic-analysis/apps/seo-integration), which includes readability and SEO analysis (for multiple keyphrases and synonyms) as well as a working snippet preview (with replacemant variables)
-  * Note that this currently excludes our *inclusive language*, *formality*, *insights*, and *social previews* checks/features.
+  * Note that this currently excludes our *inclusive language*, *insights*, and *social previews* checks/features.
 * [Documentation](https://github.com/Yoast/wordpress-seo/tree/feature/agnostic-analysis/packages/seo-integration) on how to configure and integrate the standalone app.
 
 Note that these resources should be considered a work in progress, and might not be stable in production environments.

@@ -395,6 +395,7 @@ module.exports = {
 					label: 'Integrations',
 					link: {
 						type: 'generated-index',
+						title: 'Integration for Yoast Shopify SEO',
 						description: 'This documentation provides information about integrations for Yoast SEO for Shopify.',
 						slug: '/shopify/integrations/',
 					},

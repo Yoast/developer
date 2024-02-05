@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "lint": "eslint src --max-warnings=68"
+    "lint": "eslint src --max-warnings=5"
   },
   "dependencies": {
     "@docusaurus/core": "^2.2.0",
@@ -33,14 +33,16 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.10",
     "@docusaurus/module-type-aliases": "^3.1.1",
+    "@docusaurus/plugin-content-blog": "2.2.0",
     "@docusaurus/tsconfig": "^3.1.1",
     "@docusaurus/types": "^3.1.1",
-    "babel-eslint": "^10.1.0",
+    "@docusaurus/utils": "2.2.0",
     "eslint": "^8.56.0",
     "eslint-config-yoast": "^6.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
+    "fs-extra": "^11.2.0",
     "typescript": "^5.3.3"
   },
   "browserslist": {

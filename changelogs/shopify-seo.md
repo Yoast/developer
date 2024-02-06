@@ -1,3 +1,11 @@
+## 06/02/2024 10:48 (UTC)
+
+Release date: 2024-02-06
+
+#### Bugfixes
+
+* Fixes a bug where conflicting `<title>` tags with attributes would not be cleaned up when integrating with a theme.
+
 ## 06/02/2024 08:24 (UTC)
 
 Release date: 2024-02-06

@@ -1,3 +1,11 @@
+## 06/02/2024 08:24 (UTC)
+
+Release date: 2024-02-06
+
+#### Bugfixes
+
+* Improves app load speed.
+
 ## 25/01/2024 09:55 (UTC)
 
 Release date: 2024-01-25

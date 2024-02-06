@@ -1,3 +1,18 @@
+## 16.1
+
+Release date: 2024-02-06
+
+#### Bugfixes
+
+* Fixes a bug where, if a product page had a previously selected page type, that page type would be added in the schema together with `WebPage` and `ItemPage`.
+* Fixes a bug where Twitter fallback image would be used, even when not applicable.
+
+#### Other
+
+* Includes various code improvements.
+* Sets the minimum required Yoast SEO version to 22.0.
+* Sets the minimum supported WordPress version to 6.3.
+
 ## 16.0
 
 Release date: 2023-12-12

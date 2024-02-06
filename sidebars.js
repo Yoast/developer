@@ -145,6 +145,7 @@ module.exports = {
 							items: [
 								'features/opengraph/api/changing-og-locale-output',
 								'features/opengraph/api/wpseo-opengraph-images',
+								'features/opengraph/api/wpseo-opengraph-custom-post-type-filters',
 							]
 						},
 					],

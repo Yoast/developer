@@ -20,7 +20,7 @@ add_filter( 'Yoast\WP\SEO\open_graph_title_{post_type}', 'callback_function' );
 ```php
 <?php
 /**
- * Alter the OpenGraph title for post type `post.
+ * Alter the OpenGraph title for post type `post`.
  * 
  * @param  string $title   The default OpenGraph title.
  * @param  int    $post_id The post ID.
@@ -76,7 +76,7 @@ add_filter( 'Yoast\WP\SEO\open_graph_image_{post_type}', 'callback_function' );
 ```php
 <?php
 /**
- * Alter the OpenGraph image for post type `post.
+ * Alter the OpenGraph image for post type `post`.
  * 
  * @param  string $image     The default image URL.
  * @param  string $post_type The post type.
@@ -88,4 +88,32 @@ public function alter_open_graph_image_for_post( $image, $post_type ) {
     return $image;
 }
 add_filter( 'Yoast\WP\SEO\open_graph_image_post', 'alter_open_graph_image_for_post', 10, 2 );
+```
+
+## Alter the OpenGraph image by id
+
+Sets the Open Graph image values by the image id returned by the filter. 
+Embed the post type in the filter name:
+
+```php
+add_filter( 'Yoast\WP\SEO\open_graph_image_id_{post_type}', 'callback_function' );
+```
+
+### Usage
+
+```php
+<?php
+/**
+ * Alter the OpenGraph image for post type `post`.
+ * 
+ * @param  int    $image_id  The default image id.
+ * @param  string $post_type The post type.
+ * @return string The new image id.
+ */
+public function alter_open_graph_image_id_for_post( $image_id, $post_type ) {
+    // Add your logic here.
+
+    return $image_id;
+}
+add_filter( 'Yoast\WP\SEO\open_graph_image_id_post', 'alter_open_graph_image_id_for_post', 10, 2 );
 ```

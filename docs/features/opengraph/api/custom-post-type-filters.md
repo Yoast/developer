@@ -4,7 +4,7 @@ title: "Yoast SEO: Change the OpenGraph tags for post type"
 sidebar_label: Alter OpenGraph output for post type
 ---
 These filters allow altering an existing OpenGraph output for a specific post type. <br />
-They are also used in `Yoast SEO Premium` for Social media appearance, with priority 10. When using with `Yoast SEO Premium`, make sure to use the right priotity to avoid conflicts.
+They are used in `Yoast SEO Premium` for Social media appearance for the default post, with priority 10. When using with `Yoast SEO Premium`, make sure to use the right priotity to avoid conflicts.
 
 ## Alter the OpenGraph title
 

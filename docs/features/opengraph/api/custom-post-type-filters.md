@@ -1,5 +1,5 @@
 ---
-id: wpseo-opengraph-custom-post-type-filters
+id: wpseo-opengraph-post-type-filters
 title: "Yoast SEO: Change the OpenGraph tags for post type"
 sidebar_label: Alter OpenGraph output for post type
 ---

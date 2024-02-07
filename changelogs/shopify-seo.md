@@ -1,3 +1,11 @@
+## 07/02/2024 06:53 (UTC)
+
+Release date: 2024-02-07
+
+#### Bugfixes
+
+* Fixes issue with displaying "Inclusive language analysis" feature in Optimize content editor.
+
 ## 06/02/2024 10:48 (UTC)
 
 Release date: 2024-02-06

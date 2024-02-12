@@ -10,7 +10,7 @@ module.exports = {
 		{
 			type: 'doc',
 			label: 'Home',
-			id: 'overview'
+			id: 'overview',
 		},
 		{
 			type: 'category',
@@ -263,6 +263,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Customization',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				{
 					type: 'category',
@@ -350,14 +353,20 @@ module.exports = {
 			],
 		},
 		{
-			type: 'category',
 			label: 'Plugin development',
+			type: 'category',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				'development/overview',
 
 				{
-					type: 'category',
 					label: 'Standards',
+					type: 'category',
+					link: {
+						type: 'generated-index',
+					},
 					items: [
 						'development/standards/coding-guidelines-and-principles',
 						'development/standards/version-control-conventions',
@@ -367,8 +376,11 @@ module.exports = {
 				},
 
 				{
-					type: 'category',
 					label: 'Environment',
+					type: 'category',
+					link: {
+						type: 'generated-index',
+					},
 					items: [
 						'development/environment/setup',
 						'development/environment/setup-plugin-integration-tests',
@@ -387,6 +399,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Shopify',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				'shopify/overview',
 				'features/schema/plugins/yoast-seo-shopify',
@@ -409,6 +424,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Changelogs',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				{
 					type: 'link',

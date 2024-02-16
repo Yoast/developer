@@ -1,3 +1,12 @@
+## 16/02/2024 08:22 (UTC)
+
+Release date: 2024-02-16
+
+#### Bugfixes
+
+* Fixes a bug where `ImageObject` schema would have empty width and height values.
+* Fixes a bug where "x.com" was not allowed to be used in Twitter profile URL configuration.
+
 ## 07/02/2024 06:53 (UTC)
 
 Release date: 2024-02-07

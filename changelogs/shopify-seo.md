@@ -1,3 +1,11 @@
+## 20/02/2024 08:13 (UTC)
+
+Release date: 2024-02-20
+
+#### Bugfixes
+
+* Adds loading state in theme integrations page during wait for api response.
+
 ## 16/02/2024 08:22 (UTC)
 
 Release date: 2024-02-16

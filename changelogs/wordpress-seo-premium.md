@@ -1,3 +1,24 @@
+## 22.1
+
+Release date: 2024-02-20
+
+Yoast SEO Premium 22.1 is out now. This release has an updated AI model that brings better results, especially for languages other than English. Try it!. Find out more about what's new in Yoast SEO Premium 22.1 in [our release post](https://yoa.st/release-20-2-24)!
+
+#### Enhancements
+
+* Improves the suggestions created by the AI title & description generator.
+* Improved error handling for using the AI title & description generator for local sites and sites that don't have a publicly accessible REST API.
+* Adds caching in the posts overview page for the query that counts cornerstone content.
+* Adds caching in the posts overview page for the query that counts orphaned content.
+
+#### Bugfixes
+
+* Fixes a bug where special characters in headings such as ampersands (`&`) and non-breaking spaces (` `) would be displayed as their encoded HTML entity version inside the _Yoast Table of Contents_ block.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.1.
+
 ## 22.0
 
 Release date: 2024-02-06

@@ -10,7 +10,7 @@ module.exports = {
 		{
 			type: 'doc',
 			label: 'Home',
-			id: 'overview'
+			id: 'overview',
 		},
 		{
 			type: 'category',
@@ -263,6 +263,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Customization',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				{
 					type: 'category',
@@ -300,7 +303,6 @@ module.exports = {
 						'customization/yoast-seo/filters/markdown-enabled-filter',
 						'customization/yoast-seo/filters/assessment-markers-filter',
 						'customization/yoast-seo/filters/primary-term-taxonomies-filter',
-						'customization/yoast-seo/filters/disable-search-engine-pings',
 						'customization/yoast-seo/filtering-yoast-blocks',
 						'customization/yoast-seo/wp-get-environment-type-in-yoast-seo',
 					],
@@ -351,14 +353,20 @@ module.exports = {
 			],
 		},
 		{
-			type: 'category',
 			label: 'Plugin development',
+			type: 'category',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				'development/overview',
 
 				{
-					type: 'category',
 					label: 'Standards',
+					type: 'category',
+					link: {
+						type: 'generated-index',
+					},
 					items: [
 						'development/standards/coding-guidelines-and-principles',
 						'development/standards/version-control-conventions',
@@ -368,8 +376,11 @@ module.exports = {
 				},
 
 				{
-					type: 'category',
 					label: 'Environment',
+					type: 'category',
+					link: {
+						type: 'generated-index',
+					},
 					items: [
 						'development/environment/setup',
 						'development/environment/setup-plugin-integration-tests',
@@ -388,6 +399,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Shopify',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				'shopify/overview',
 				'features/schema/plugins/yoast-seo-shopify',
@@ -396,6 +410,7 @@ module.exports = {
 					label: 'Integrations',
 					link: {
 						type: 'generated-index',
+						title: 'Integration for Yoast Shopify SEO',
 						description: 'This documentation provides information about integrations for Yoast SEO for Shopify.',
 						slug: '/shopify/integrations/',
 					},
@@ -409,6 +424,9 @@ module.exports = {
 		{
 			type: 'category',
 			label: 'Changelogs',
+			link: {
+				type: 'generated-index',
+			},
 			items: [
 				{
 					type: 'link',

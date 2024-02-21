@@ -61,12 +61,14 @@ function RssLink() {
 
 export default function ChangelogListHeader({
   blogTitle,
+  page,
 }: {
   blogTitle: string;
+  page: number;
 }): JSX.Element {
   return (
     <header className="margin-bottom--lg">
-      <h1 style={{fontSize: '3rem'}}>{blogTitle}</h1>
+      <h1 style={{fontSize: '3rem'}}>{blogTitle} {page > 1 ? `- page ${page}`  : ``}</h1>
       <p>
         <Translate
           id="changelog.description"

@@ -1,3 +1,19 @@
+## 15.3
+
+Release date: 2024-02-06
+
+#### Enhancements
+
+* Adds contact phone number and email to the organization schema settings.
+
+#### Bugfixes
+
+* Fixes a bug where primary location data would be used in the schema when the location status was not publish.
+
+#### Other
+
+* Sets the minimum required Yoast SEO version to 22.0.
+
 ## 15.2
 
 Release date: 2024-01-23

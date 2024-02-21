@@ -1,3 +1,52 @@
+## 20/02/2024 08:13 (UTC)
+
+Release date: 2024-02-20
+
+#### Bugfixes
+
+* Adds loading state in theme integrations page during wait for api response.
+
+## 16/02/2024 08:22 (UTC)
+
+Release date: 2024-02-16
+
+#### Bugfixes
+
+* Fixes a bug where `ImageObject` schema would have empty width and height values.
+* Fixes a bug where "x.com" was not allowed to be used in Twitter profile URL configuration.
+
+## 07/02/2024 06:53 (UTC)
+
+Release date: 2024-02-07
+
+#### Bugfixes
+
+* Fixes issue with displaying "Inclusive language analysis" feature in Optimize content editor.
+
+## 06/02/2024 10:48 (UTC)
+
+Release date: 2024-02-06
+
+#### Bugfixes
+
+* Fixes a bug where conflicting `<title>` tags with attributes would not be cleaned up when integrating with a theme.
+
+## 06/02/2024 08:24 (UTC)
+
+Release date: 2024-02-06
+
+#### Bugfixes
+
+* Improves app load speed.
+
+## 25/01/2024 09:55 (UTC)
+
+Release date: 2024-01-25
+
+#### Bugfixes
+
+* Fixes a bug where a `<title>` element would be disabled in a theme when it appeared inside an `<svg>` element.
+
 ## 23/01/2024 08:21 (UTC)
 
 Release date: 2024-01-23

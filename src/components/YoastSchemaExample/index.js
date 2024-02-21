@@ -1,12 +1,12 @@
 import React from "react";
-import CodeBlock from '@theme/CodeBlock';
+import CodeBlock from "@theme/CodeBlock";
 import styles from "./styles.module.css";
 import classnames from "classnames";
 
 /**
  * Outputs a properly formed JSON-LD tag to be used in the output.
  *
- * @param string jsonScript
+ * @param {string} jsonScript A JSON script.
  *
  * @returns {string} The HTML output.
  */
@@ -28,13 +28,15 @@ const YoastSchemaExample = ( props ) => {
 	return (
 		<div className={ styles.schemaExample }>
 			<form action="https://validator.schema.org/" method="post" target="_blank">
-				<input className={ classnames( "button", "button--secondary", styles.modifyButton ) } type="submit"
-				       value="Test &amp; modify in the Schema.org Validator"/>
-				<textarea name="code" className={ styles.codeArea } value={ cleaned } readOnly></textarea>
+				<input
+					className={ classnames( "button", "button--secondary", styles.modifyButton ) } type="submit"
+					value="Test &amp; modify in the Schema.org Validator"
+				/>
+				<textarea name="code" className={ styles.codeArea } value={ cleaned } readOnly={ true } />
 			</form>
 			<CodeBlock className="language-json">{ props.children }</CodeBlock>
 		</div>
 	);
-}
+};
 
 export default YoastSchemaExample;

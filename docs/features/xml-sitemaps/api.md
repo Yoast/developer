@@ -257,3 +257,16 @@ add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap' );
 
 add_filter( 'wpseo_video_item', 'add_video_live_property', 10, 2 );
 ```
+
+### Filter the urlset element.
+For instance, if you want to use xhtml:link elements in your XML sitemap to add, for instance, hreflang markup, you could do the following:
+```php
+/**
+ * Filters the `urlset` for all sitemaps.
+ *
+ * @param string $urlset The output for the sitemap's `urlset`.
+ */
+add_filter( 'wpseo_sitemap_urlset', function( $urlset ) { 
+  return str_replace( '>', ' xmlns:xhtml="http://www.w3.org/1999/xhtml">', $urlset );
+}, 1, 10 );
+```

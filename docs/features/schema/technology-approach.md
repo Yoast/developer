@@ -92,9 +92,7 @@ These are also documented in their various [pieces documentation](/features/sche
 * The `{{identifier}}` fragment of a `person` should always be obfuscated.
 
 ### Hybrid types & composite IDs
-When the node is a hybrid type (i.e., `@type` is an array of values, such as `['Organization', 'Person']`), then:
-
-* The `{{type}}` value should concatenate the `@type` values in alphabetical order, separated by a hyphen (e.g., `organization-person`), and;
+When the node is a hybrid type (i.e., `@type` is an array of values, such as `['Organization', 'Person']`), then the `{{type}}` value should concatenate the `@type` values in alphabetical order, separated by a hyphen (e.g., `organization-person`).
 
 ## Primary entities
 Our model assumes that every URL should represent a *primary entity* - be it an organization, a product, a blog post (or collection of blog posts), a person, or some other *thing*.

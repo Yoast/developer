@@ -1,3 +1,11 @@
+## 16.1.1
+
+Release date: 2024-02-23
+
+#### Other
+
+* Prevents future update problems for Woo marketplace subscribers who have purchased Yoast WooCommerce SEO from Yoast.com.
+
 ## 16.1
 
 Release date: 2024-02-06

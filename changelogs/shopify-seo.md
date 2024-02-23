@@ -1,3 +1,11 @@
+## 23/02/2024 10:12 (UTC)
+
+Release date: 2024-02-23
+
+#### Enhancements
+
+* Removes loading animation from app initialization process.
+
 ## 20/02/2024 08:13 (UTC)
 
 Release date: 2024-02-20

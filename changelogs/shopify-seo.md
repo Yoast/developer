@@ -1,3 +1,11 @@
+## 28/02/2024 09:33 (UTC)
+
+Release date: 2024-02-28
+
+#### Bugfixes
+
+* Fixes issue with twitter:image URL generation, when adding "https" schema.
+
 ## 23/02/2024 10:12 (UTC)
 
 Release date: 2024-02-23

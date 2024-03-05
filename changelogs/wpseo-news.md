@@ -1,3 +1,27 @@
+## 13.2
+
+Release date: 2024-03-05
+
+#### Enhancements
+
+* Adds a `wpseo_news_sitemap_content` filter to append custom content to the XML sitemap. Props to @wccoder.
+* This PR introduces a new way of retrieving translations for Yoast News SEO, by utilizing the TranslationPress service. Instead of having to ship all translations with every release, we can now load the translations on a per-install basis, tailored to the user's setup. This means smaller plugin releases and less bloat on the user's server.
+
+#### Bugfixes
+
+* Fixes a bug where a warning would be thrown on activation.
+* Fixes a bug where using the `&` character in the publication name would break the XML sitemap.
+
+#### Other
+
+* Drops compatibility with PHP 5.6, 7.0 and 7.1.
+* Improves discoverability of security policy.
+* Sets the minimum required Yoast SEO version to 22.2.
+* Sets the minimum supported WordPress version to 6.3.
+* Sets the WordPress tested up to version to 6.4.
+* The plugin has no known incompatibilities with PHP 8.3.
+* Users requiring this package via [WP]Packagist can now use the `composer/installers` v2.
+
 ## 13.1
 
 Release date: 2021-11-16

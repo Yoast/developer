@@ -1,3 +1,18 @@
+## 22.2
+
+Release date: 2024-03-05
+
+Exciting news! Yoast SEO 22.2 is now live. We've fine-tuned translation features for Yoast News SEO. Plus, you can expect enhanced language analysis, ensuring even more accurate keyphrase recognition. Explore the details in [our latest release post](https://yoa.st/release-5-3-24)!
+
+#### Bugfixes
+
+* Fixes a bug where the link in the redirect overview would wrongly link to the home url + redirect url in the case of an absolute url.
+* Fixes a bug where the upsell message for Yoast WooCommerce SEO would appear when using the AI feature on a non-WooCommerce product page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.2.
+
 ## 22.1
 
 Release date: 2024-02-20

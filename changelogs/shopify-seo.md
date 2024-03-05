@@ -1,3 +1,11 @@
+## 05/03/2024 08:10 (UTC)
+
+Release date: 2024-03-05
+
+#### Enhancements
+
+* Makes the section headings stand out visually in the _SEO_, _readability_ and _inclusive language_ analysis tabs.
+
 ## 28/02/2024 09:33 (UTC)
 
 Release date: 2024-02-28

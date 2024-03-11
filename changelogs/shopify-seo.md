@@ -1,3 +1,11 @@
+## 11/03/2024 08:57 (UTC)
+
+Release date: 2024-03-11
+
+#### Bugfixes
+
+* Fixes a bug where the file upload element inside bulk edit and import/export would have strange text alignment in several languages.
+
 ## 05/03/2024 08:10 (UTC)
 
 Release date: 2024-03-05

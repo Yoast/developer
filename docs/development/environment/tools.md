@@ -152,6 +152,9 @@ Make sure that these paths are mapped to the right paths on the server:
 * `~/Local Sites/<site-name>/app/public` should be mapped to the same path (`~/Local Sites/<site-name>/app/public`) on the server.
 * `/Applications/Local.app/Contents/Resources/extraResources/local-bootstrap.php` should be mapped to the same path (`/Applications/Local.app/Contents/Resources/extraResources/local-bootstrap.php`) on the server.
 
+Make sure you disable `Break at first line in PHP scripts`. Also disable `Force break at first line when no path mapping specified` and `force break at first line when a script is outside the project`. 
+These settings can be found by opening `Settings` (`cmd ,`) -> `PHP` -> `Debug`
+
 You can use [these steps](https://www.jetbrains.com/help/phpstorm/creating-a-php-debug-server-configuration.html) to add these path mappings in your PHPStorm project.
 
 ### Node via NVM

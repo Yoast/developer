@@ -1,3 +1,21 @@
+## 18/03/2024 08:44 (UTC)
+
+Release date: 2024-03-18
+
+#### Enhancements
+
+* Changed the 'yst-bg-gray-100' tag in the body to 'yst-bg-slate-100' in the app/.../toolkit/styles.css file.
+* Changes "Twitter" into "X" as a profile for site representation.
+* Changes "Twitter" into "X" for the social appearance preview.
+* Improves keyphrase detection by treating hyphens and en-dashes as word boundaries. For example, if the keyphrase is 'dog-training tips', a keyphrase occurrence will be recognized as long as the words 'dog', 'training', and 'tips' are found in the same sentence.
+* Improves recognition of single-word function words for Arabic and Hebrew.
+* Improves the highlighting of keyphrases that contain hyphens or dashes. For example, if the keyphrase is 'Cold War era', it will be correctly highlighted in the phrase 'post-Cold War era'. Previously, the word 'post' would also be highlighted.
+* Improves the _inclusive language analysis_ by refining feedback strings and excluding false positives for phrases related to mental health.
+
+#### Bugfixes
+
+* Fixes a bug where the _keyphrase in slug_ assessment would crash when the site language was Indonesian, the keyphrase contained a reduplicated word (e.g. 'buku-buku'), and a form of that word also occurred in the slug.
+
 ## 11/03/2024 08:57 (UTC)
 
 Release date: 2024-03-11

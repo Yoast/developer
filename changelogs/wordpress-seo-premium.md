@@ -1,3 +1,18 @@
+## 22.3
+
+Release date: 2024-03-19
+
+Yoast SEO 22.3 introduces a highly-requested AI feature exclusively for our Yoast SEO Premium customers: AI-generated titles and meta descriptions for taxonomies. You will also find additional refinements and fixes for a better user experience. Explore the details in [our latest release post](https://yoa.st/release-19-3-24)!
+
+#### Enhancements
+
+* Introducing the option to generate titles and meta descriptions for category and tag pages on your website (taxonomies). Optimize your site for higher click-through-rates at the touch of a button.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.3.
+* Sets the WordPress tested up to version to 6.5.
+
 ## 22.2
 
 Release date: 2024-03-05

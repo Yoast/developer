@@ -1,10 +1,18 @@
+## 21/03/2024 08:37 (UTC)
+
+Release date: 2024-03-21
+
+#### Bugfixes
+
+* Fixes an issue where existing schema would not be disabled when the context is set as http://www.schema.org.
+
 ## 18/03/2024 08:44 (UTC)
 
 Release date: 2024-03-18
 
 #### Enhancements
 
-* Changed the 'yst-bg-gray-100' tag in the body to 'yst-bg-slate-100' in the app/.../toolkit/styles.css file.
+* Changes the background color to the Yoast global standard.
 * Changes "Twitter" into "X" as a profile for site representation.
 * Changes "Twitter" into "X" for the social appearance preview.
 * Improves keyphrase detection by treating hyphens and en-dashes as word boundaries. For example, if the keyphrase is 'dog-training tips', a keyphrase occurrence will be recognized as long as the words 'dog', 'training', and 'tips' are found in the same sentence.

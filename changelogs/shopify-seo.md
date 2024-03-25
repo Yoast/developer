@@ -1,3 +1,11 @@
+## 25/03/2024 07:57 (UTC)
+
+Release date: 2024-03-25
+
+#### Enhancements
+
+* Adds review request modal after Site defaults settings save.
+
 ## 21/03/2024 08:37 (UTC)
 
 Release date: 2024-03-21

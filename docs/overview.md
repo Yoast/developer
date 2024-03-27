@@ -28,7 +28,7 @@ Learn how our features work, how to customize the outputs, and how best to integ
   - [Canonical URLs](features/seo-tags/canonical-urls/)
   - [Meta robots tags](features/seo-tags/meta-robots/overview.md)
 - [OpenGraph tags](features/opengraph/)
-- [Twitter tags](features/twitter/functional-specification.md)
+- [X tags](features/twitter/functional-specification.md)
 - [Schema.org markup](features/schema/)
   - [Schema pieces](/features/schema/pieces/)
   - [Output per plugin](/features/schema/plugins/)

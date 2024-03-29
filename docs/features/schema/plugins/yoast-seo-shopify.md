@@ -52,7 +52,7 @@ When these criteria are met, we produce our [base script](https://developer.yoas
             "sameAs": [
                 "https://www.wikipedia.com/example-organization",
                 "https://facebook.com/example-organization",
-                "https://twitter.com/example-organization",
+                "https://x.com/example-organization",
                 "https://www.instagram.com/example-organization"
             ]
         },

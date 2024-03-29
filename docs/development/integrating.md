@@ -24,7 +24,7 @@ All pages and content types should output metadata in line with the following st
 * [Canonical URL tags](features/seo-tags/canonical-urls/functional-specification.md)
 * [Meta robots tags](features/seo-tags/meta-robots/functional-specification.md)
 * [Open Graph tags](features/opengraph/functional-specification.md)
-* [Twitter tags](features/twitter/functional-specification.md)
+* [X tags](features/twitter/functional-specification.md)
 * [Alternate content formats](/features/alternate-formats/)
 
 ### Structured data

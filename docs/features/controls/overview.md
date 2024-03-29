@@ -14,7 +14,7 @@ As a site owner, I want to be able to set the following metadata globally.
 | Option | Description | Values |
 | --- | ----- | --- |
 | `og:site_name` | The name of the site for when shared in social platforms | `string` |
-| `twitter:site` | The Twitter handle of the Twitter profile associated with the site | `string` |
+| `twitter:site` | The X handle of the X profile associated with the site | `string` |
 | *Social profiles* | An array of the URLs of social media properties representing the publisher | `array` |
 | *Title separator* | The character used to delimit a page's 'name' and brand components in the *title* tag | `char` |
 

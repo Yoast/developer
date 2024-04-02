@@ -40,6 +40,8 @@ The following should be added whenever available and valid:
 * `url`: The canonical URL of the page which represents the business.
 * `vatID`: The VAT ID of the business.
 * `taxID`: The tax ID of the business.
+* `globalLocationNumber`: The GLN of the business.
+* `contactPoint`: A `ContactPoint` object.
 
 ## Examples
 

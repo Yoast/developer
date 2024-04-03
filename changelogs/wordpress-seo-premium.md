@@ -1,3 +1,17 @@
+## 22.4
+
+Release date: 2024-04-03
+
+We've been spring cleaning for Yoast SEO 22.4. Elementor users can wave goodbye to that unnecessary redirect when saving a post for the first time. Across the plugin, users can expects a smoother experience due to bug fixes and optimizations. Find more about Yoast SEO Premium 22.4 in [our latest release post](https://yoa.st/release-3-4-24)!
+
+#### Bugfixes
+
+* Fixes a bug where an AJAX request on the edit tags page that did not have `data` as a `string` would cause a JavaScript error on our side, stopping our redirect notification checks.
+
+#### Other
+
+*  Bumps the minimum required version of Yoast SEO to 22.4.
+
 ## 22.3
 
 Release date: 2024-03-19

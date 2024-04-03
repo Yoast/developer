@@ -1,3 +1,18 @@
+## 16.2
+
+Release date: 2024-04-03
+
+Yoast WooCommerce SEO 16.2 delivers the schema update we've been promising! Webshop customers will now have better control over how their product variants show online, ensuring a better overall experience for shoppers. Check out [the release post](https://yoa.st/release-3-4-24) for more details about the impact of Yoast WooCommerce SEO 16.2!
+
+#### Enhancements
+
+* Adds ProductGroup schema to be compatible with Product variant schema.
+
+#### Other
+
+* Sets the minimum required Yoast SEO version to 22.0.
+* Sets the WordPress tested up to version to 6.5.
+
 ## 16.1.1
 
 Release date: 2024-02-23

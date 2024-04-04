@@ -1,3 +1,15 @@
+## 04/04/2024 08:10 (UTC)
+
+Release date: 2024-04-04
+
+#### Enhancements
+
+* Improve clarification on how Yoast SEO for Shopify overrides some Shopify settings.
+
+#### Bugfixes
+
+* Fixes a bug where new content would not be available for bulk editing.
+
 ## 25/03/2024 07:57 (UTC)
 
 Release date: 2024-03-25

@@ -52,7 +52,10 @@ add_filter( 'wpseo_sitemap_exclude_post_type', 'sitemap_exclude_post_type', 10, 
  * @return bool Whether or not a given taxonomy should be excluded.
  */
 function sitemap_exclude_taxonomy( $excluded, $taxonomy ) {
-    return $taxonomy === 'ingredients';
+    if ( $taxonomy === 'ingredients' ) {
+         return true;
+    }
+    return $excluded;
 }
 
 add_filter( 'wpseo_sitemap_exclude_taxonomy', 'sitemap_exclude_taxonomy', 10, 2 );

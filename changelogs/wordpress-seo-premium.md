@@ -1,3 +1,23 @@
+## 22.5
+
+Yoast SEO 22.5 brings maintenance updates and bug fixes throughout the plugin, refined guidance on optimal taxonomy practices and a smoother user experience. Check out [the release post for version 22.5](https://yoa.st/release-16-4-24).
+
+Release date: 2024-04-16
+
+#### Enhancements
+* Introduces a check for allowed MIME types when uploading images to a social appearance template.
+
+#### Bugfixes
+
+* Fixes a bug where some feedback strings in the content analysis would no longer be translated.
+* Fixes a bug where a new field added to the `Add custom fields to page analysis` setting would sometimes be removed after being saved.
+* Fixes a bug where the _Yoast Table of Contents_ block would throw a validation error when changing the heading level of the block's title.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.5.
+* Renames all Twitter references to X.
+
 ## 22.4
 
 Release date: 2024-04-03

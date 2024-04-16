@@ -228,6 +228,7 @@ module.exports = {
 							},
 							items: [
 								'features/schema/plugins/yoast-seo',
+								'features/schema/plugins/yoast-seo-premium',
 								'features/schema/plugins/local-seo',
 								'features/schema/plugins/woocommerce-seo',
 								'features/schema/plugins/news-seo',

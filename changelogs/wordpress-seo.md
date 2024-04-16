@@ -1,3 +1,27 @@
+= 22.5 =
+
+Release date: 2024-04-16
+
+Yoast SEO 22.5 brings general maintenance updates across the plugin, improved guidance around best practice for taxonomies and a more effortless user experience overall. For more details about the release check out [the release post for 22.5](https://yoa.st/release-16-4-24).
+
+#### Enhancements
+
+* Prevents image formats other than JPG, GIF, PNG and WEBP to be used for the `twitter:image` meta tag.
+* Recalibrates the recommended length of the text on taxonomy pages for the _text length_ assessment.
+
+#### Bugfixes
+
+* Fixes an incompatibility with `ES_WP_Query` library used by the WordPress VIP Enterprise Search.
+
+#### Other
+
+* Renames all user-facing `Twitter` references to `X`, including the X profile's `sameAs` schema output URL.
+* Adds an "AI for SEO" course card to the Academy page.
+* Removes the link to the now-retired Google Mobile-Friendly Test from the admin bar menu.
+* Renames the `leiCode` fields to `LEI code` in the plugin's settings.
+* Resolves a typo in the list of German transition words. Props to [magnusmartin85](https://github.com/magnusmartin85).
+* Deprecates unused method `is_image_url_valid`.
+
 = 22.4 =
 
 Release date: 2024-04-03

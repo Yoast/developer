@@ -131,7 +131,7 @@ The following code is the result of a query to https://yoast.com/wp-json/yoast/v
                   "https:\/\/www.youtube.com\/yoast",
                   "https:\/\/www.pinterest.com\/yoast\/",
                   "https:\/\/en.wikipedia.org\/wiki\/Yoast",
-                  "https:\/\/twitter.com\/yoast"
+                  "https:\/\/x.com\/yoast"
                ],
                "logo":{
                   "@type":"ImageObject",
@@ -298,7 +298,7 @@ The following code is the result of a query to https://yoast.com/wp-json/yoast/v
                   "https:\/\/www.facebook.com\/mariekerakt",
                   "https:\/\/www.instagram.com\/mgarakt\/",
                   "https:\/\/www.linkedin.com\/in\/mariekerakt",
-                  "https:\/\/twitter.com\/mariekerakt",
+                  "https:\/\/x.com\/mariekerakt",
                   "https:\/\/marieke.blog\/",
                   "https:\/\/profiles.wordpress.org\/mariekerakt\/"
                ],

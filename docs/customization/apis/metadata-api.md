@@ -32,7 +32,7 @@ By default, Yoast SEO ships with the following presenters that output meta tags.
 | `Pinterest_Presenter` | `<meta name="p:domain_verify" content="%s" />` | n/a |
 | `Yandex_Presenter` | `<meta name="yandex-verification" content="%s" />` | n/a |
 
-### Twitter presenters
+### X presenters
 | Presenter | Tag format | Filter |
 |---|-----|----|
 | `Creator_Presenter` | `<meta name="twitter:creator" content="%s" />` | n/a |

@@ -12,7 +12,7 @@ to point you to their replacements.
 ### Filters
 
 #### `wpseo_twitter_taxonomy_image`
-You can now always filter the Twitter image on any page, including a taxonomy page through the `wpseo_twitter_image` filter.
+You can now always filter the X image on any page, including a taxonomy page through the `wpseo_twitter_image` filter.
 
 #### `wpseo_twitter_metatag_key`
 We removed this filter without a replacement. Please add a new meta data presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.

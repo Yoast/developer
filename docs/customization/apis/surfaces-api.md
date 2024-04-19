@@ -68,12 +68,12 @@ The `current_page` surface exposes every bit of data we have on the current page
 | open_graph_article_modified_time | string | The article:modified_time value. |
 | open_graph_locale | string | The og:locale for the current page. |
 | schema | array | The entire Schema array for the current page. |
-| twitter_card | string | The Twitter card type for the current page. |
-| twitter_title | string | The Twitter card title for the current page. |
-| twitter_description | string | The Twitter card description for the current page. |
-| twitter_image | string | The Twitter card image for the current page. |
-| twitter_creator | string | The Twitter card author for the current page. |
-| twitter_site | string | The Twitter card site reference for the current page. |
+| twitter_card | string | The X card type for the current page. |
+| twitter_title | string | The X card title for the current page. |
+| twitter_description | string | The X card description for the current page. |
+| twitter_image | string | The X card image for the current page. |
+| twitter_creator | string | The X card author for the current page. |
+| twitter_site | string | The X card site reference for the current page. |
 | source | array | The source object for most of this page data. |
 | breadcrumbs | array | The breadcrumbs array for the current page. |
 | estimated_reading_time_minutes | int | The estimated reading time in minutes for the content. | 

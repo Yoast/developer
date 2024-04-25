@@ -1,3 +1,11 @@
+## 25/04/2024 05:17 (UTC)
+
+Release date: 2024-04-25
+
+#### Bugfixes
+
+* Improved theme modifications removal to remove all Yoast file leftovers from active theme.
+
 ## 04/04/2024 08:10 (UTC)
 
 Release date: 2024-04-04

@@ -1,3 +1,17 @@
+## 22.6
+
+Release date: 2024-04-30
+
+Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. Learn more [here](https://yoa.st/release-30-4-24)!
+
+#### Enhancements
+
+* Improves performance when it comes to storing user metadata for data specific to Yoast SEO Premium.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.6.
+
 ## 22.5
 
 Yoast SEO 22.5 brings maintenance updates and bug fixes throughout the plugin, refined guidance on optimal taxonomy practices and a smoother user experience. Check out [the release post for version 22.5](https://yoa.st/release-16-4-24).

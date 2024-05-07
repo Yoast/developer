@@ -1,3 +1,12 @@
+## 07/05/2024 07:58 (UTC)
+
+Release date: 2024-05-07
+
+#### Enhancements
+
+* Enhances the structure of the menu for optimizing content.
+* Introduces a new overview dashboard to help with optimizing content.
+
 ## 25/04/2024 05:17 (UTC)
 
 Release date: 2024-04-25

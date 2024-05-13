@@ -1,3 +1,17 @@
+## 13/05/2024 08:21 (UTC)
+
+Release date: 2024-05-13
+
+#### Bugfixes
+
+* Fixes a bug where Indonesian words with hyphens would be incorrectly treated as multiple words during keyphrase matching when the locale was `id` or a custom locale starting with `id_`.
+* Fixes a bug where Turkish keyphrase forms containing the characters `İ` or `ı` would not be recognized when the locale was `tr`, `tr_CY` or a custom locale starting with `tr_`.
+
+#### Other
+
+* (https://github.com/magnusmartin85).
+* Removes the questionnaire for new customers from the initial onboarding flow.
+
 ## 07/05/2024 07:58 (UTC)
 
 Release date: 2024-05-07

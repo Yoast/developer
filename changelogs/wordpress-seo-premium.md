@@ -1,3 +1,25 @@
+## 22.7
+
+Release date: 2024-05-14
+
+Yoast SEO 22.7 brings multiple bugfixes and adds helpful error messages where AI title & description generator errors appear. [Find more information about our software releases and updates here](https://yoa.st/release-14-5-24).
+
+#### Enhancements
+
+* Adds more helpful error messages when the _AI title & description generator_ errors, for easier troubleshooting.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown when using the _AI title & description generator_ but the request timed out.
+* Fixes a bug where errors while saving a post would not contain the error explanation.
+* Fixes a bug where existing tags would not be saved when adding them to a post.
+* Fixes a bug where the _AI title & description generator_ would not work for variants of locales, like formal German.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.7.
+* Sets the minimum supported WordPress version to 6.4.
+
 ## 22.6
 
 Release date: 2024-04-30

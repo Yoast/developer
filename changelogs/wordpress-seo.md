@@ -1,3 +1,27 @@
+= 22.7 =
+
+Release date: 2024-05-14
+
+Yoast SEO 22.7 converts selected blocks to the Blocks V3 API and brings multiple bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-14-5-24).
+
+#### Enhancements
+
+* Converts the Yoast _How-to_ and _FAQ_ blocks to use the Blocks V3 API.
+* Introduces a `date` and a `separator` snippet variable to the meta description text field, to make clear that both the date and a separator are automatically added to the character count of the meta description. Hovering over the variables reveals a tooltip with more explanation.
+
+#### Bugfixes
+
+* Fixes a bug where a PHP deprecation error would be thrown when trying to convert a relative URL to an absolute one, with the provided value being `null`.
+* Fixes a bug where the character count of the meta description field would not include the automatically added date and separator when no additional content was provided.
+* Fixes a bug where the elements in the Yoast sidebar and metabox are displayed in an incorrect order if Yoast SEO Premium is activated.
+
+#### Other
+
+* Deprecates `\Yoast\WP\SEO\Integrations\Blocks\Structured_Data_Blocks::enqueue_block_editor_assets()`.
+* Properly escapes tags in the Enhanced Slack Sharing presenter to prevent incorrect rendering and unwanted, potentially malicious behavior. Props to @rob006.
+* Removes the `yoast-components-package` script.
+* Sets the minimum supported WordPress version to 6.4.
+
 = 22.6 =
 
 Release date: 2024-04-30

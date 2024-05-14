@@ -292,8 +292,7 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEO
-edirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEO\redirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

@@ -1,3 +1,11 @@
+## 15/05/2024 09:01 (UTC)
+
+Release date: 2024-05-15
+
+#### Bugfixes
+
+* Fixes overview screen introduction modal styling.
+
 ## 13/05/2024 08:21 (UTC)
 
 Release date: 2024-05-13

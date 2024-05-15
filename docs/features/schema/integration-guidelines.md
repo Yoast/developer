@@ -75,7 +75,7 @@ class Book  {
 		$post_id = YoastSEO()->meta->for_current_page()->post_id;
 
 		// Set the type.
-		$data['type'] = 'Book';
+		$data['@type'] = 'Book';
 
 		// Give it a unique ID, based on the URL and the Post ID.
 		$data['@id'] = $canonical . '#/book/' . $post_id;

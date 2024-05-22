@@ -27,7 +27,7 @@ function alter_existing_opengraph_image( $image ) {
 add_filter( 'wpseo_opengraph_image', 'alter_existing_opengraph_image' );
 ```
 
-The same can be done for the `width`, `height` and `type` tags. This can done by using the following three filters:
+The same can be done for the `og:image:width`, `og:image:height` and `og:image:type` tags, by using the following three filters:
 ```php
 <?php
 /**

@@ -131,31 +131,3 @@ To use indexables instead of content scanning to find all content images. Enable
 ```php
 add_filter( 'wpseo_force_creating_and_using_attachment_indexables', '__return_true' );
 ```
-
-## Ignore hierarchy check
-
-When adding a term with `wp_set_object_terms` right after `wp_insert_post`, the hierarchy check is preventing the indexation of the term hierarcy. 
-That in turn will result in worng term (default term) in Yoast breadcrumbs. Use this filter to fix it.
-
-### Usage
-
-Before using `wp_set_object_terms` together with `wp_insert_post`.
-
-
-The example below shows how you can use this filter to ignore hierarcy check when using `wp_set_object_terms` together with `wp_insert_post`.
-```php
-<?php
-add_filter( 'wpseo_hierarchy_ignore_already_saved', '__return_true');
-
-$post_id = wp_insert_post([
-   'post_type' => 'post',
-   'post_title' => 'Test post',
-   'post_content' => '',
-   'post_status' => 'publish'
-]);
-
-if ($post_id != 0) {
-    wp_set_object_terms( $post_id, 'test_term', 'category');
-}
-```
-

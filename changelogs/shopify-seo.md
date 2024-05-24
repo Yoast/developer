@@ -1,3 +1,15 @@
+## 24/05/2024 08:35 (UTC)
+
+Release date: 2024-05-24
+
+#### Enhancements
+
+* Adds new "Not enough content" readability filtering option in optimize module.
+
+#### Bugfixes
+
+* Fixes a bug where the availability of collections would be shown as unavailable on online store when the collection actually would be available.
+
 ## 15/05/2024 09:01 (UTC)
 
 Release date: 2024-05-15

@@ -1,3 +1,27 @@
+= 22.8 =
+
+Release date: 2024-05-28
+
+Yoast SEO 22.8 brings enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-28-5-24).
+
+#### Enhancements
+
+* Converts the Yoast _Breadcrumbs_ block to use the Blocks V3 API.
+
+#### Bugfixes
+
+* Fixes a bug preventing multiple _FAQ_ blocks from being added to a post/page.
+* Fixes a bug where a class was missing in the output of the _FAQ_ and _How-To_ blocks.
+* Fixes a bug where a "Failed to retrieve media" error could prevent selecting a different image or removing the current selection.
+* Fixes a bug where our modals would not open when visiting our sidebar in Elementor for the second time.
+* Fixes a bug where some Yoast SEO settings could not be imported correctly.
+
+#### Other
+
+* Removes the fixed date and separator snippet variables from the meta description text field.
+* Removes the Yoast SEO Breadcrumbs panel from the Customizer to improve compatibility with block-based themes. Users can always change the options for the breadcrumbs under Yoast SEO > Settings > Advanced > Breadcrumbs.
+* Deprecates the `WPSEO_Customizer` class.
+
 = 22.7 =
 
 Release date: 2024-05-14
@@ -854,7 +878,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 
 #### Other
 
-* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEO\admin_author_archives_meta, Yoast\WP\SEO\admin_date_archives_meta, Yoast\WP\SEO\admin_post_types_beforearchive, Yoast\WP\SEO\admin_post_types_archive, Yoast\WP\SEO\admin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
+* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEOdmin_author_archives_meta, Yoast\WP\SEOdmin_date_archives_meta, Yoast\WP\SEOdmin_post_types_beforearchive, Yoast\WP\SEOdmin_post_types_archive, Yoast\WP\SEOdmin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
@@ -1767,9 +1791,9 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 
 * Adds the `yoast_display_gutenberg_compat_notification` filter to allow disabling the Gutenberg compatibility notification.
 * Adds the `wpseo_schema_person_data` filter to enable the filtering of `Person` Schema by the user's ID.
-* Adds the `Yoast\WP\SEO\admin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
-* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEO\admin_post_types_beforearchive` action.
-* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEO\admin_taxonomies_meta` action.
+* Adds the `Yoast\WP\SEOdmin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
+* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEOdmin_post_types_beforearchive` action.
+* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEOdmin_taxonomies_meta` action.
 * Improves the layout of the Search Appearance collapsibles.
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.

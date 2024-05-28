@@ -1,3 +1,11 @@
+## 28/05/2024 09:16 (UTC)
+
+Release date: 2024-05-28
+
+#### Bugfixes
+
+* Improves logic behind alert about imported indexables on overview page.
+
 ## 28/05/2024 07:18 (UTC)
 
 Release date: 2024-05-28

@@ -1,3 +1,11 @@
+## 28/05/2024 07:18 (UTC)
+
+Release date: 2024-05-28
+
+#### Enhancements
+
+* Improves the keyphrase detection in SEO title for Arabic and Hebrew. For example, when the keyphrase is "باندا حمراء" and the SEO title starts with "الباندا الحمراء", we now recognize this as an exact match and give a good result for the _keyphrase in SEO title_ assessment.
+
 ## 24/05/2024 08:35 (UTC)
 
 Release date: 2024-05-24

@@ -1,3 +1,11 @@
+## 29/05/2024 12:16 (UTC)
+
+Release date: 2024-05-29
+
+#### Bugfixes
+
+* Fixed issue with leftover metafields after theme modifications removal during app uninstallation.
+
 ## 28/05/2024 09:16 (UTC)
 
 Release date: 2024-05-28

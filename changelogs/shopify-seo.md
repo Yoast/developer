@@ -1,3 +1,12 @@
+## 11/06/2024 06:01 (UTC)
+
+Release date: 2024-06-11
+
+#### Bugfixes
+
+* Changes Pinterest field field description to be more correct and easier to understand.
+* Fixes a bug where the modifications we made to the theme were not disabled when the Yoast SEO for Shopify app is uninstalled.
+
 ## 29/05/2024 12:16 (UTC)
 
 Release date: 2024-05-29

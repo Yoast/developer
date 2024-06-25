@@ -1,3 +1,48 @@
+## 11/06/2024 06:01 (UTC)
+
+Release date: 2024-06-11
+
+#### Bugfixes
+
+* Changes Pinterest field field description to be more correct and easier to understand.
+* Fixes a bug where the modifications we made to the theme were not disabled when the Yoast SEO for Shopify app is uninstalled.
+
+## 29/05/2024 12:16 (UTC)
+
+Release date: 2024-05-29
+
+#### Bugfixes
+
+* Fixed issue with leftover metafields after theme modifications removal during app uninstallation.
+
+## 28/05/2024 09:16 (UTC)
+
+Release date: 2024-05-28
+
+#### Bugfixes
+
+* Improves logic behind alert about imported indexables on overview page.
+
+## 28/05/2024 07:18 (UTC)
+
+Release date: 2024-05-28
+
+#### Enhancements
+
+* Improves the keyphrase detection in SEO title for Arabic and Hebrew. For example, when the keyphrase is "باندا حمراء" and the SEO title starts with "الباندا الحمراء", we now recognize this as an exact match and give a good result for the _keyphrase in SEO title_ assessment.
+
+## 24/05/2024 08:35 (UTC)
+
+Release date: 2024-05-24
+
+#### Enhancements
+
+* Adds new "Not enough content" readability filtering option in optimize module.
+
+#### Bugfixes
+
+* Fixes a bug where the availability of collections would be shown as unavailable on online store when the collection actually would be available.
+
 ## 15/05/2024 09:01 (UTC)
 
 Release date: 2024-05-15

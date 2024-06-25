@@ -1,3 +1,23 @@
+## 14.9
+
+Release date: 2024-05-28
+
+#### Enhancements
+
+* Enhances the `uploadDate` property of a `VideoObject` schema object, by turning it into a DateTime format instead of just Date, satisfying the newest recommendations for rich results.
+* Introduces a new way of retrieving translations for Yoast Video SEO, by utilizing the TranslationPress service. Instead of having to ship all translations with every release, we can now load the translations on a per-install basis, tailored to the user's setup. This means smaller plugin releases and less bloat on the user's server.
+
+#### Other
+
+* Fixes support for embedded TED videos.
+* Improves discoverability of the security policy.
+* Makes required PHP extensions explicit.
+* Renames all Twitter references to X.
+* Sets the minimum required Yoast SEO version to 22.8.
+* Sets the minimum supported WordPress version to 6.4.
+* Sets the WordPress tested up to version to 6.5.
+* Users requiring this package via [WP]Packagist can now use the `composer/installers` v2.
+
 ## 14.8
 
 Release date: 2023-08-08

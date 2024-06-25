@@ -1,3 +1,21 @@
+## 22.9
+
+Release date: 2024-06-18
+
+Yoast SEO 22.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-18-6-24).
+
+#### Enhancements
+
+* Converts the _Siblings_ and _Subpages_ blocks to the V3 API.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would occur when clicking `Click here to remove the redirect` after reverting the trashing of a post.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.9.
+
 ## 22.8
 
 Release date: 2024-05-28

@@ -2,7 +2,7 @@
 id: breadcrumbs
 title: "Blocks - Breadcrumbs"
 sidebar_label: Breadcrumbs
-description: This documentation provides information about breadcrumbs block.
+description: This documentation provides information about the breadcrumbs block.
 ---
 
 This documentation provides information about the breadcrumb block
@@ -16,15 +16,15 @@ The `wpseo_breadcrumb_output` filter takes the output of the breadcrumb. Make su
 or add data. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_output', [ $this, 'override_home_icon' ] );
+add_filter( 'wpseo_breadcrumb_output', 'override_home_icon' );
 
 /**
  * Replace the home text with an icon.
  *
- * @param  string $original_breadcrumbs The whole breadcrumbs html.
+ * @param  string $original_breadcrumbs The whole breadcrumbs HTML.
  * @return string
  */
-public function override_home_icon( string $original_breadcrumbs ): string {
+function override_home_icon( string $original_breadcrumbs ): string {
     $new_home = \str_replace( '>Home<', ' aria-label="Home"><i class="fa fa-homeicon" aria-hidden="true"></i><', $original_breadcrumbs );
     return $new_home;
 }
@@ -36,18 +36,20 @@ The `wpseo_breadcrumb_single_link` allows changing of each link being put out by
 takes in the generated link and the source breadcrumb information. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_single_link', [ $this, 'override_home_text' ] );
+add_filter( 'wpseo_breadcrumb_single_link', 'remove_current_page' );
 
 /**
  * Remove current page from breadcrumbs.
- *  @param string $link The output string.
- *  @param array  $breadcrumb        The breadcrumb link array.
+ *
+ * @param string $link       The output string.
+ * @param array  $breadcrumb The breadcrumb link array.
  */
-function remove_current_page( $link) {
-	if(strpos( $link_output, 'breadcrumb_last' ) !== false ) {
-		$link_output = '';
+function remove_current_page( $link ) {
+	if ( strpos( $link, 'breadcrumb_last' ) !== false ) {
+		$link = '';
 	}
-  return $link_output;
+
+	return $link;
 }
 ```
 
@@ -70,7 +72,7 @@ function add_breadcrumb_id( $id ) {
 
 ### Changing the HTML class {#breadcrumb_output_class}
 
-The `wpseo_breadcrumb_output_class` allows changing the HTML class on the Yoast SEO breadcrumbs wrapper element. It only called when there it no a class already present. An example:
+The `wpseo_breadcrumb_output_class` allows changing the HTML class on the Yoast SEO breadcrumbs wrapper element. It is only called when there is no class already present. An example:
 
 ```php
 add_filter( 'wpseo_breadcrumb_output_class', [ $this, 'add_breadcrumb_class' ] );
@@ -87,7 +89,7 @@ function add_breadcrumb_class( $class ) {
 
 ### Changing the output wrapper element {#breadcrumb_output_wrapper}
 
-The `wpseo_breadcrumb_output_wrapper` allows changing the Yoast SEO breadcrumbs wrapper element. It is called with a default `span` value. The output should be an valid html element. An example:
+The `wpseo_breadcrumb_output_wrapper` allows changing the Yoast SEO breadcrumbs wrapper element. It is called with a default `span` value. The output should be an valid HTML element. An example:
 
 ```php
 add_filter( 'wpseo_breadcrumb_output_wrapper', [ $this, 'replace_breadcrumb_wrapper' ] );
@@ -98,7 +100,7 @@ add_filter( 'wpseo_breadcrumb_output_wrapper', [ $this, 'replace_breadcrumb_wrap
  * @param  string $output What it normally outputs.
  * @return string
  */
-public function replace_breadcrumb_wrapper( string $output ): string {
+function replace_breadcrumb_wrapper( string $output ): string {
     $output = 'ol';
 
     return $output;
@@ -106,7 +108,7 @@ public function replace_breadcrumb_wrapper( string $output ): string {
 ```
 ### Changing the link wrapper {#breadcrumb_link_wrapper}
 
-The `wpseo_breadcrumb_single_link_wrapper` allows changing the Yoast SEO link wrapper element. It is called with a default `span` value. The output should be an valid html element. An example:
+The `wpseo_breadcrumb_single_link_wrapper` allows changing the Yoast SEO link wrapper element. It is called with a default `span` value. The output should be an valid HTML element. An example:
 
 ```php
 add_filter( 'wpseo_breadcrumb_single_link_wrapper', [ $this, 'replace_link_wrapper' ] );
@@ -117,7 +119,7 @@ add_filter( 'wpseo_breadcrumb_single_link_wrapper', [ $this, 'replace_link_wrapp
  * @param  string $output What it normally outputs.
  * @return string
  */
-public function replace_link_wrapper( string $output ): string {
+function replace_link_wrapper( string $output ): string {
     $output = 'li';
     
     return $output;
@@ -126,7 +128,7 @@ public function replace_link_wrapper( string $output ): string {
 
 ### Changing the separator {#breadcrumb_separator}
 
-The `wpseo_breadcrumb_separator` allows changing the Yoast SEO seperator. It only called with a default value taken from the Yoast SEO settings. The output should be valid html. An example to completely remove the separator:
+The `wpseo_breadcrumb_separator` allows changing the Yoast SEO seperator. It only called with a default value taken from the Yoast SEO settings. The output should be valid HTML. An example to completely remove the separator:
 
 ```php
 add_filter( 'wpseo_breadcrumb_separator', [ $this, 'replace_breadcrumb_separator' ] );
@@ -137,7 +139,7 @@ add_filter( 'wpseo_breadcrumb_separator', [ $this, 'replace_breadcrumb_separator
  * @param  string $output What it normally outputs.
  * @return string
  */
-public function replace_breadcrumb_separator( string $output ): string {
+function replace_breadcrumb_separator( string $output ): string {
     $output = '';
 
     return $output;

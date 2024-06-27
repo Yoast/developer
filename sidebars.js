@@ -23,6 +23,18 @@ module.exports = {
 			items: [
 				{
 					type: 'category',
+					label: 'AI',
+					link: {
+						type: 'generated-index',
+						description: 'This documentation provides information about the AI features that Yoast SEO provides to users.',
+						slug: 'features/AI/',
+					},
+					items: [
+						'features/ai/ai-errors',
+					],
+				},
+				{
+					type: 'category',
 					label: 'Analysis',
 					items: [
 						'features/analysis/overview',

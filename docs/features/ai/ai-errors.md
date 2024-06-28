@@ -1,7 +1,7 @@
 ---
 id: ai-errors
 title: "Yoast AI error messages"
-sidebar_label: AI-errors
+sidebar_label: AI errors
 description: This documentation provides information about the errors that the Yoast AI feature shows.
 ---
 

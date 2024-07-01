@@ -45,7 +45,7 @@ add_filter( 'wpseo_breadcrumb_single_link', 'remove_current_page' );
  * @param string $link       The output string.
  * @param array  $breadcrumb The breadcrumb link array.
  */
-function remove_current_page( $link ) {
+function remove_current_page( $link ): string {
 	if ( strpos( $link, 'breadcrumb_last' ) !== false ) {
 		$link = '';
 	}
@@ -66,7 +66,7 @@ add_filter( 'wpseo_breadcrumb_output_id', 'add_breadcrumb_id' );
  *
  * @param string $id ID to add to the wrapper element.
  */
-function add_breadcrumb_id( $id ) {
+function add_breadcrumb_id( $id ): string {
   return 'my-id';
 }
 ```
@@ -83,7 +83,7 @@ add_filter( 'wpseo_breadcrumb_output_class', 'add_breadcrumb_class' );
  *
  * @param string $class class to add to the wrapper element.
  */
-function add_breadcrumb_class( $class ) {
+function add_breadcrumb_class( $class ): string {
   return 'my-class my-other-class';
 }
 ```

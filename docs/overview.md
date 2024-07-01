@@ -16,8 +16,8 @@ This documentation is aimed at advanced end-users, developers, plugin/theme auth
 ## Explore core features
 - [Overview](features/)
 - [Analysis](features/analysis/overview.md)
+- [Blocks](features/blocks/breadcrumbs.md)
 - [Controls](features/controls/overview.md)
-
 ## Browse technical specifications
 Learn how our features work, how to customize the outputs, and how best to integrate into or out of other systems.
 

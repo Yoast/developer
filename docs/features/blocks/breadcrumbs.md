@@ -58,7 +58,7 @@ function remove_current_page( $link ) {
 The `wpseo_breadcrumb_output_id` allows changing the HTML ID on the Yoast SEO breadcrumbs wrapper element. It only called when there it no an ID already present. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_output_id', [ $this, 'add_breadcrumb_id' ] );
+add_filter( 'wpseo_breadcrumb_output_id', 'add_breadcrumb_id' );
 
 /**
  * Allow changing the HTML ID on the Yoast SEO breadcrumbs wrapper element.
@@ -75,7 +75,7 @@ function add_breadcrumb_id( $id ) {
 The `wpseo_breadcrumb_output_class` allows changing the HTML class on the Yoast SEO breadcrumbs wrapper element. It is only called when there is no class already present. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_output_class', [ $this, 'add_breadcrumb_class' ] );
+add_filter( 'wpseo_breadcrumb_output_class', 'add_breadcrumb_class' );
 
 /**
  * Allow changing the HTML class on the Yoast SEO breadcrumbs wrapper element.
@@ -92,7 +92,7 @@ function add_breadcrumb_class( $class ) {
 The `wpseo_breadcrumb_output_wrapper` allows changing the Yoast SEO breadcrumbs wrapper element. It is called with a default `span` value. The output should be an valid HTML element. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_output_wrapper', [ $this, 'replace_breadcrumb_wrapper' ] );
+add_filter( 'wpseo_breadcrumb_output_wrapper', 'replace_breadcrumb_wrapper' );
 
 /**
  * Replace the wrapper around the breadcrumbs
@@ -111,7 +111,7 @@ function replace_breadcrumb_wrapper( string $output ): string {
 The `wpseo_breadcrumb_single_link_wrapper` allows changing the Yoast SEO link wrapper element. It is called with a default `span` value. The output should be an valid HTML element. An example:
 
 ```php
-add_filter( 'wpseo_breadcrumb_single_link_wrapper', [ $this, 'replace_link_wrapper' ] );
+add_filter( 'wpseo_breadcrumb_single_link_wrapper', 'replace_link_wrapper' );
 
 /**
  * Replace the wrappers around the links.
@@ -131,7 +131,7 @@ function replace_link_wrapper( string $output ): string {
 The `wpseo_breadcrumb_separator` allows changing the Yoast SEO seperator. It only called with a default value taken from the Yoast SEO settings. The output should be valid HTML. An example to completely remove the separator:
 
 ```php
-add_filter( 'wpseo_breadcrumb_separator', [ $this, 'replace_breadcrumb_separator' ] );
+add_filter( 'wpseo_breadcrumb_separator', 'replace_breadcrumb_separator' );
 
 /**
  * Replace the breadcrumbs separators.

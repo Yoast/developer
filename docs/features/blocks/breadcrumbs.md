@@ -26,6 +26,7 @@ add_filter( 'wpseo_breadcrumb_output', 'override_home_icon' );
  */
 function override_home_icon( string $original_breadcrumbs ): string {
     $new_home = \str_replace( '>Home<', ' aria-label="Home"><i class="fa fa-homeicon" aria-hidden="true"></i><', $original_breadcrumbs );
+
     return $new_home;
 }
 ```
@@ -121,7 +122,7 @@ add_filter( 'wpseo_breadcrumb_single_link_wrapper', 'replace_link_wrapper' );
  */
 function replace_link_wrapper( string $output ): string {
     $output = 'li';
-    
+
     return $output;
 }
 ```

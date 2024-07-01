@@ -1,3 +1,11 @@
+## 27/06/2024 09:55 (UTC)
+
+Release date: 2024-06-27
+
+#### Bugfixes
+
+* Fixes a bug where the `article:author` OpenGraph tag would incorrectly be output without containing the URL of the profile page of the author.
+
 ## 11/06/2024 06:01 (UTC)
 
 Release date: 2024-06-11

@@ -1,3 +1,16 @@
+## 23.0
+
+Release date: 2024-07-02
+
+#### Enhancements
+
+* Converts the _Yoast Estimated reading time block_ the Blocks V3 API.
+* Converts the _Yoast Related links_ block to the Blocks V3 API and refactors it to an editable list of item blocks.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.0.
+
 ## 22.9
 
 Release date: 2024-06-18

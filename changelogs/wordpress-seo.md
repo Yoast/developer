@@ -1,3 +1,22 @@
+= 23.0 =
+
+Release date: 2024-07-02
+
+Yoast SEO 23.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-2-7-24).
+
+#### Enhancements
+
+* Removes a redundant database write query, when saving a post.
+
+#### Bugfixes
+
+* Fixes a bug where unnecessary data was written in the Yoast database on non-production sites (or when the relevant `Yoast\WP\SEO\should_index_indexables` filter was used to disable such a behavior).
+
+#### Other
+
+* Deprecates the Wordproof feature.
+* Deprecates the following classes: `Wordproof`, `Wordproof_App_Config`, `Wordproof_Helper`, `Wordproof_Integration_Active_Conditional`, `Wordproof_Plugin_Inactive_Conditional`,  `Wordproof_Translations`.
+
 = 22.9 =
 
 Release date: 2024-06-18

@@ -42,6 +42,13 @@ module.exports = {
 				},
 				{
 					type: 'category',
+					label: 'Blocks',
+					items: [
+						'features/blocks/breadcrumbs',
+					],
+				},
+				{
+					type: 'category',
 					label: 'Controls',
 					link: {
 						type: 'generated-index',

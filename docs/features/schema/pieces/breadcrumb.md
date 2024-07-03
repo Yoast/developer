@@ -68,7 +68,8 @@ If the node is not output, any entities which would otherwise have declared a re
 
 ## WordPress API: Change Breadcrumb Schema output {#api}
 
-To change the `Breadcrumb` schema Yoast SEO outputs, you can use our `wpseo_schema_breadcrumb` filter, for instance as follows:
+To make changes to the `Breadcrumb` schema that Yoast SEO outputs, you can use our `wpseo_schema_breadcrumb` filter. Here is an example:
+
 ### Replace domain name in the breadcrumb schema
 
 ```php

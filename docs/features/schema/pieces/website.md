@@ -79,7 +79,7 @@ The following should be added whenever available and valid:
 
 ## WordPress API: Change Website Schema output {#api}
 
-To change the `Website` schema Yoast SEO outputs, you can use our `wpseo_schema_website` filter, for instance as follows:
+To make changes to the `Website` schema that Yoast SEO outputs, you can use our `wpseo_schema_website` filter. Here is an example:
 
 ```php
 add_filter( 'wpseo_schema_website', 'example_change_website' );

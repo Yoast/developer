@@ -97,3 +97,26 @@ The following should be added whenever available and valid:
       ]
   }`}
 </YoastSchemaExample>
+
+## Yoast WooCommerce SEO API: Change Product Schema output {#api}
+
+To make changes to the `Product` schema that Yoast SEO outputs, you can use our `wpseo_schema_product` filter. Here is an example:
+
+```php
+add_filter( 'wpseo_schema_product', 'example_change_product' );
+
+/**
+ * Adds the color to the product schema.
+ *
+ * @param array $data The Schema Product data.
+ *
+ * @return array Schema.org Product data array.
+ */
+function example_change_product( $data ) {
+	$data['color'] = 'red';
+
+	return $data;
+}
+```
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

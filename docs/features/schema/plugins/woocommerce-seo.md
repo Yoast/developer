@@ -21,6 +21,9 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
  * Stitch `offers`, `review` and/or `aggregateRating` values into the graph (when available / as appropriate).
  * Unset the `datePublished` and `dateModified` values from the `ItemPage`.
 
+#### Filters
+* Customize the Yoast product schema with the `wpseo_schema_product` filter. See [Product Schema pieces](../pieces/product.md) for more information.
+
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.
 

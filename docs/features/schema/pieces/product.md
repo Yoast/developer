@@ -119,4 +119,6 @@ function example_change_product( $data ) {
 }
 ```
 
+We also have a more specific filter for the offer part of the product schema: `wpseo_schema_offer`, see [Offer Schema piece](../pieces/offer.md#api) for more information.
+
 To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

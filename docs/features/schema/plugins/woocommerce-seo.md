@@ -23,6 +23,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 
 #### Filters
 * Customize the Yoast product schema with the `wpseo_schema_product` filter. See [Product Schema pieces](../pieces/product.md) for more information.
+* Customize the offer part of the product schema with the `wpseo_schema_offer` filter. See [Offer Schema pieces](../pieces/offer.md) for more information.
 
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.

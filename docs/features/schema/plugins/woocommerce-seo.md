@@ -30,6 +30,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 
 ## More information
 * [Product Schema pieces](../pieces/product.md)
+* [ProductGroup Schema pieces](../pieces/productgroup.md)
 * [AggregateOffer Schema pieces](../pieces/aggregateoffer.md)
 * [Organization Schema pieces](../pieces/organization.md)
 * [Offer Schema pieces](../pieces/offer.md)

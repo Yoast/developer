@@ -5,7 +5,7 @@ sidebar_label: AI errors
 description: This documentation provides information about the errors that the Yoast AI feature shows.
 ---
 
-This documentation provides information about the errors displayed by the [Yoast AI](https://yoast.com/features/ai-generated-titles-and-meta-descriptions/#utm_medium=software&utm_source=yoast-seo&utm_term=ai-feature-page&utm_content=ai-modal) features of the [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) plugin.
+This documentation provides information about the errors displayed by the [Yoast AI](https://yoast.com/features/ai-generated-titles-and-meta-descriptions/#medium=software&source=yoast-seo&term=ai-feature-page&content=ai-modal) features of the [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) plugin.
 
 ## SEO analysis required
 Our Yoast AI optimization tool, requires the SEO analyses to be enabled in the settings of the plugin. When a premium user try to make use of the AI features whithout having the SEO analyses enabled, the following error message will be shown: 

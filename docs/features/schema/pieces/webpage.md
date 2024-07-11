@@ -153,7 +153,7 @@ On search results pages, the *type* property should be altered to an array of `[
 
 ## WordPress API: Change Webpage Schema output {#api}
 
-To change the `Webpage` schema Yoast SEO outputs, you can use our `wpseo_schema_webpage` filter, for instance as follows:
+To make changes to the `Webpage` schema that Yoast SEO outputs, you can use our `wpseo_schema_webpage` filter. Here is an example:
 
 ```php
 add_filter( 'wpseo_schema_webpage', 'example_change_webpage' );

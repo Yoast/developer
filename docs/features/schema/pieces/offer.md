@@ -57,3 +57,30 @@ If the node is not output, any entities which would otherwise have referenced th
       ]
   }`}
 </YoastSchemaExample>
+
+## Yoast WooCommerce SEO API: Change Offer Schema output {#api}
+
+To make changes to the `Offer` schema that Yoast SEO outputs, you can use our `wpseo_schema_offer` filter. Here is an example:
+
+```php
+add_filter( 'wpseo_schema_offer', 'example_change_offer', 10, 3 );
+
+/**
+ * Adds the product description to the offer schema.
+ *
+ * @param array $offer The schema offer data.
+ * @param WC_Product_Variation $variation The WooCommerce product variation we're working with.
+ * @param WC_Product $product The WooCommerce product we're working with.
+ *
+ * @return array Schema.org Offer data array.
+ */
+function example_change_offer( $offer, $variation, $product ) {
+	$offer['priceSpecification']['description'] = $product->get_description();
+
+	return $offer;
+}
+```
+
+We also have a less specific filter for the full product schema: `wpseo_schema_product`, see [Product Schema piece](../pieces/product.md#api) for more information.
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

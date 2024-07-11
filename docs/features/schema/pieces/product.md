@@ -35,6 +35,12 @@ The following should be added whenever available and valid:
 * `sku`: A merchant-specific identifier for the `Product`.
 * `aggregateRating`: an `AggregateRating` object.
 * `manufacturer`: A reference to an `Organization` piece, representing the brand which produces the `Product`.
+* `gtin8`: The GTIN-8 (Global Trade Item Number) code of the `Product`.
+* `gtin12` / `UPC`: The GTIN-12 (Global Trade Item Number) code of the `Product`.
+* `gtin13` / `EAN`: The GTIN-13 (Global Trade Item Number) code of the `Product`.
+* `gtin14` / `ITF-14`: The GTIN-14 (Global Trade Item Number) code of the `Product`.
+* `isbn`: The ISBN (International Standard Book Number) of the `Book`. When provided, the `@type` of the `Product` changes to `Book`.
+* `mpn`: The MPN (Manufacturer Part Number) of the `Product`.
 
 ## Examples
 
@@ -97,3 +103,28 @@ The following should be added whenever available and valid:
       ]
   }`}
 </YoastSchemaExample>
+
+## Yoast WooCommerce SEO API: Change Product Schema output {#api}
+
+To make changes to the `Product` schema that Yoast SEO outputs, you can use our `wpseo_schema_product` filter. Here is an example:
+
+```php
+add_filter( 'wpseo_schema_product', 'example_change_product' );
+
+/**
+ * Adds the color to the product schema.
+ *
+ * @param array $data The Schema Product data.
+ *
+ * @return array Schema.org Product data array.
+ */
+function example_change_product( $data ) {
+	$data['color'] = 'red';
+
+	return $data;
+}
+```
+
+We also have a more specific filter for the offer part of the product schema: `wpseo_schema_offer`, see [Offer Schema piece](../pieces/offer.md#api) for more information.
+
+To make more changes to our Schema output, see the [Yoast SEO Schema API](../api.md).

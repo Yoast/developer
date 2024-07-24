@@ -1,3 +1,18 @@
+= 23.1 =
+
+Release date: 2024-07-23
+
+Yoast SEO 23.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-23-7-24).
+
+#### Enhancements
+
+* Disables an unneeded cleanup cron job when indexables are disabled.
+* Removes an unnecessary query when indexables are disabled.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 6.6.
+
 = 23.0 =
 
 Release date: 2024-07-02

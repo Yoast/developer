@@ -1,3 +1,18 @@
+## 23.1
+
+Release date: 2024-07-23
+
+Yoast SEO 23.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-23-7-24).
+
+#### Enhancements
+
+* Converts the _Yoast Table of Contents_ block to use the Blocks V3 API.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.1.
+* Sets the _WordPress tested up to_ version to 6.6.
+
 ## 23.0
 
 Release date: 2024-07-02
@@ -363,7 +378,8 @@ Yoast SEO Premium 20.13 is out today. This release brings performance improvemen
 
 #### Enhancements
 
-* Introduces the `Yoast\WP\SEOedirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
+* Introduces the `Yoast\WP\SEO
+edirects_options_autoload` filter, which can be used to override the default setting of having the redirect options autoloaded.
 
 #### Other
 

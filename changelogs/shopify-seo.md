@@ -1,3 +1,11 @@
+## 22/07/2024 08:21 (UTC)
+
+Release date: 2024-07-22
+
+#### Bugfixes
+
+* Fixes a bug where the "Save changes" button was missing on the Settings page Integrations.
+
 ## 27/06/2024 09:55 (UTC)
 
 Release date: 2024-06-27

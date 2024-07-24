@@ -84,4 +84,16 @@ Our Yoast AI features require the SEO analysis to be enabled in the settings. Wh
 
 ## Mimicking these errors
 
-If you intend to display these errors without actually triggering them (e.g., displaying the rate limit alert without actually reaching the rate limit), you can do so by ...
+### In WordPress
+If you intend to display these errors without actually triggering them (e.g., displaying the rate limit alert without actually reaching the rate limit), you can do so by replacing the output of the `get_suggestions` or `fix_assessments` functions of `src/actions/ai-generator-action.php` in the Yoast SEO Premium code. Choose one of the below errors:
+
+```php
+throw new Bad_Request_Exception( "test", 400, "AI_CONTENT_FILTER" );     // Unethical request alert
+throw new Bad_Request_Exception( "test", 400, "NOT_ENOUGH_CONTENT" );    // Not enough content alert
+throw new Bad_Request_Exception( "test", 400, "WP_HTTP_REQUEST_ERROR" ); // Bad WordPress request alert
+throw new Bad_Request_Exception( "test", 400, "SITE_UNREACHABLE" );      // Site unreachable alert
+throw new Bad_Request_Exception( "test", 400, "other" );                 // Generic alert
+throw new Payment_Required_Exception( "test", 402, "test", null, ['Yoast SEO Premium'] ); // Subscription error, replace the array with the missing licenses
+throw new Request_Timeout_Exception( "test", 408, "test" );              // Request timeout alert
+throw new Too_Many_Requests_Exception( "test", 429, "test" );            // Rate limit alert
+```

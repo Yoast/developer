@@ -63,7 +63,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -129,7 +129,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -270,7 +270,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",

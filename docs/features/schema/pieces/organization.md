@@ -34,6 +34,7 @@ The following should be added whenever available and valid:
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the organization (e.g., a Wikipedia page, or Facebook profile).
 * `image`: An array of references-by-ID to `ImageObject` nodes which represent the organization (including the `logo` ).
 * `alternateName`: An alternate (usually _shorter_) name for the organization.
+* `hasMerchantReturnPolicy`: An array of the type `MerchantReturnPolicy` which represents a return policy of the organization.
 
 
 ## Transformations

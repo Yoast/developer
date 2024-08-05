@@ -1,3 +1,15 @@
+## 05/08/2024 08:05 (UTC)
+
+Release date: 2024-08-05
+
+#### Enhancements
+
+* Adds 3D models to the product structured data, to help search engines show them as 3D images in mobile search.
+
+#### Bugfixes
+
+* Changes "Bulk edit" link label and header for better understanding.
+
 ## 22/07/2024 08:21 (UTC)
 
 Release date: 2024-07-22

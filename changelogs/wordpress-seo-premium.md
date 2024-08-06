@@ -1,3 +1,19 @@
+## 23.2
+
+Release date: 2024-08-06
+
+**Introducing Yoast AI Optimize in beta for Yoast SEO 23.2!** Receive AI-powered suggestions to help your content cross the 'SEO' finish line, getting your content closer to a green traffic light at a click. Explore the details [in our latest release post](https://yoa.st/release-6-8-24)!
+
+#### Enhancements
+* Introduces the AI Optimize feature for the _keyphrase in introduction_, _keyphrase density_, and _keyphrase distribution_ assessments in the Block editor.
+* Improves the user experience for Yoast AI Generate by checking if the user has an active subscription before asking for consent.
+* Improves the _word complexity_ assessment by not flagging the focus keyphrase or related keyphrases as complex words.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.2.
+* Deprecates the `Ai_Generate_Titles_And_Descriptions_Introduction` class.
+
 ## 23.1
 
 Release date: 2024-07-23

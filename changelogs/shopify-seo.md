@@ -1,3 +1,11 @@
+## 08/08/2024 09:57 (UTC)
+
+Release date: 2024-08-08
+
+#### Enhancements
+
+* Modify the 'Ask For Review' banner design to make it more user-friendly for customers.
+
 ## 05/08/2024 08:05 (UTC)
 
 Release date: 2024-08-05

@@ -1,3 +1,12 @@
+## 19/08/2024 08:24 (UTC)
+
+Release date: 2024-08-19
+
+#### Enhancements
+
+* Adds a wider gap between assessment result list items.
+* Fixes detection for "**product | structured_data**" Schema generation inside Shopify theme to fix duplicated Schema.
+
 ## 08/08/2024 09:57 (UTC)
 
 Release date: 2024-08-08

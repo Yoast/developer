@@ -1,3 +1,13 @@
+= 23.3 =
+
+Release date: 2024-08-20
+
+Yoast SEO 23.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-20-8-24).
+
+#### Other
+
+* This release only contains non-user-facing maintenance changes.
+
 = 23.2 =
 
 Release date: 2024-08-06

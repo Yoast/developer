@@ -1,3 +1,11 @@
+## 22/08/2024 08:24 (UTC)
+
+Release date: 2024-08-22
+
+#### Bugfixes
+
+* Fixes issue with wrongly rendered aggregateRating Schema when product have no reviews added.
+
 ## 19/08/2024 08:24 (UTC)
 
 Release date: 2024-08-19

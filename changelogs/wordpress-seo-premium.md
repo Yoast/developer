@@ -1,3 +1,24 @@
+## 23.4
+
+Release date: 2024-09-03
+
+Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-9-24).
+
+#### Enhancements
+
+* Disables the highlighting buttons whenever _AI Optimize_ is used.
+* Enables the _AI Optimize_ feature for the _keyphrase in introduction_ assessment when the introduction is part of a Classic block.
+* Improves the success rate of _AI Optimize_ suggestions for a post that contains list blocks.
+* Prevents showing the "not enough content" error message when _AI Generate_ is used before the content is fully loaded.
+
+#### Bugfixes
+
+* Fixes a bug where a full stop would be added at the end of a previous sentence instead of the newly suggested sentence when using _AI Optimize_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.4.
+
 ## 23.3
 
 Release date: 2024-08-20

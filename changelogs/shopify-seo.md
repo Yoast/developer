@@ -1,3 +1,12 @@
+## 04/09/2024 11:11 (UTC)
+
+Release date: 2024-09-04
+
+#### Enhancements
+
+* Combines the search appearance and the search engine listing sections into a single coherent search appearance editor.
+* Moves the social media appearance to follow the new placement of the search appearance section.
+
 ## 22/08/2024 08:24 (UTC)
 
 Release date: 2024-08-22

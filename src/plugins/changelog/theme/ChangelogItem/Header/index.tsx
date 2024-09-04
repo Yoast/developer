@@ -5,45 +5,45 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import {useBlogPost} from '@docusaurus/theme-common/internal';
-import Link from '@docusaurus/Link';
-import BlogPostItemHeaderInfo from '@theme/BlogPostItem/Header/Info';
-import styles from './styles.module.css';
+import React from "react";
+import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
+import Link from "@docusaurus/Link";
+import BlogPostItemHeaderInfo from "@theme/BlogPostItem/Header/Info";
+import styles from "./styles.module.css";
 import clsx from "clsx";
 
-function ChangelogItemHeaderTitle({className}) {
-    const {metadata, frontMatter, isBlogPostPage} = useBlogPost();
-    const {permalink, title} = metadata;
-    const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
-    return (
-        <TitleHeading className={clsx(styles.title, className)}>
-            {isBlogPostPage ? (
-                frontMatter.keywords + ' ' + title
-            ) : (
-                <Link to={permalink}>
-                        {title}
-                </Link>
-            )}
-        </TitleHeading>
-    );
+function ChangelogItemHeaderTitle( { className } ) {
+	const { metadata, frontMatter, isBlogPostPage } = useBlogPost();
+	const { permalink, title } = metadata;
+	const TitleHeading = isBlogPostPage ? "h1" : "h2";
+	return (
+		<TitleHeading className={ clsx( styles.title, className ) }>
+			{ isBlogPostPage ? (
+				frontMatter.keywords + " " + title
+			) : (
+				<Link to={ permalink }>
+					{ title }
+				</Link>
+			) }
+		</TitleHeading>
+	);
 }
 
 // Reduce changelog title size, but only on list view
 function ChangelogTitle() {
-  const {isBlogPostPage} = useBlogPost();
-  return (
-    <ChangelogItemHeaderTitle
-      className={isBlogPostPage ? undefined : styles.changelogItemTitleList}
-    />
-  );
+	const { isBlogPostPage } = useBlogPost();
+	return (
+		<ChangelogItemHeaderTitle
+			className={ isBlogPostPage ? undefined : styles.changelogItemTitleList }
+		/>
+	);
 }
 
 export default function ChangelogItemHeader(): JSX.Element {
-  return (
-    <header>
-      <ChangelogTitle />
-      <BlogPostItemHeaderInfo />
-    </header>
-  );
+	return (
+		<header>
+			<ChangelogTitle />
+			<BlogPostItemHeaderInfo />
+		</header>
+	);
 }

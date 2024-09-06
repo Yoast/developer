@@ -63,7 +63,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -72,7 +72,7 @@ The following examples demonstrate how our base script may be extended and alter
                   "https://www.youtube.com/example/",
                   "https://www.pinterest.com/example/",
                   "https://en.wikipedia.org/wikiexample/",
-                  "https://twitter.com/example/"
+                  "https://x.com/example/"
               ],
               "logo": {
                   "@type": "ImageObject",
@@ -129,7 +129,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -138,7 +138,7 @@ The following examples demonstrate how our base script may be extended and alter
                   "https://www.youtube.com/example/",
                   "https://www.pinterest.com/example/",
                   "https://en.wikipedia.org/wikiexample/",
-                  "https://twitter.com/example/"
+                  "https://x.com/example/"
               ],
               "logo": {
                   "@type": "ImageObject",
@@ -270,7 +270,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -279,7 +279,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
                   "https://www.youtube.com/example/",
                   "https://www.pinterest.com/example/",
                   "https://en.wikipedia.org/wikiexample/",
-                  "https://twitter.com/example/"
+                  "https://x.com/example/"
               ],
               "logo": {
                   "@type": "ImageObject",
@@ -507,6 +507,6 @@ To work around this, we merge the `Person` with an `Organization` to create a hy
 ### 7. Other consumers
 At the time of publishing, it appears that Bing does not support this approach; their 'Markup Validator' tool (part of [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster)) does not detect (and/or parse) markup contained within a `@graph` structure (which forms the backbone of our approach). We're seeking to engage in dialogue with Bing to determine their stance on support.
 
-Social platforms like Facebook, Twitter, Pinterest, etc, have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
+Social platforms like Facebook, X, Pinterest, etc, have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
 
 The support of other search engines (e.g., Baidu, Yandex, others) is unknown; it's our assumption that support will generated be limited, or not exist. We hope that the broad adoption of our approach will encourage these, and other consumers, to expand their support.

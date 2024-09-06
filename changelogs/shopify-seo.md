@@ -1,3 +1,149 @@
+## 04/09/2024 11:11 (UTC)
+
+Release date: 2024-09-04
+
+#### Enhancements
+
+* Combines the search appearance and the search engine listing sections into a single coherent search appearance editor.
+* Moves the social media appearance to follow the new placement of the search appearance section.
+
+## 22/08/2024 08:24 (UTC)
+
+Release date: 2024-08-22
+
+#### Bugfixes
+
+* Fixes issue with wrongly rendered aggregateRating Schema when product have no reviews added.
+
+## 19/08/2024 08:24 (UTC)
+
+Release date: 2024-08-19
+
+#### Enhancements
+
+* Adds a wider gap between assessment result list items.
+* Fixes detection for "**product | structured_data**" Schema generation inside Shopify theme to fix duplicated Schema.
+
+## 08/08/2024 09:57 (UTC)
+
+Release date: 2024-08-08
+
+#### Enhancements
+
+* Modify the 'Ask For Review' banner design to make it more user-friendly for customers.
+
+## 05/08/2024 08:05 (UTC)
+
+Release date: 2024-08-05
+
+#### Enhancements
+
+* Adds 3D models to the product structured data, to help search engines show them as 3D images in mobile search.
+
+#### Bugfixes
+
+* Changes "Bulk edit" link label and header for better understanding.
+
+## 22/07/2024 08:21 (UTC)
+
+Release date: 2024-07-22
+
+#### Bugfixes
+
+* Fixes a bug where the "Save changes" button was missing on the Settings page Integrations.
+
+## 27/06/2024 09:55 (UTC)
+
+Release date: 2024-06-27
+
+#### Bugfixes
+
+* Fixes a bug where the `article:author` OpenGraph tag would incorrectly be output without containing the URL of the profile page of the author.
+
+## 11/06/2024 06:01 (UTC)
+
+Release date: 2024-06-11
+
+#### Bugfixes
+
+* Changes Pinterest field field description to be more correct and easier to understand.
+* Fixes a bug where the modifications we made to the theme were not disabled when the Yoast SEO for Shopify app is uninstalled.
+
+## 29/05/2024 12:16 (UTC)
+
+Release date: 2024-05-29
+
+#### Bugfixes
+
+* Fixed issue with leftover metafields after theme modifications removal during app uninstallation.
+
+## 28/05/2024 09:16 (UTC)
+
+Release date: 2024-05-28
+
+#### Bugfixes
+
+* Improves logic behind alert about imported indexables on overview page.
+
+## 28/05/2024 07:18 (UTC)
+
+Release date: 2024-05-28
+
+#### Enhancements
+
+* Improves the keyphrase detection in SEO title for Arabic and Hebrew. For example, when the keyphrase is "باندا حمراء" and the SEO title starts with "الباندا الحمراء", we now recognize this as an exact match and give a good result for the _keyphrase in SEO title_ assessment.
+
+## 24/05/2024 08:35 (UTC)
+
+Release date: 2024-05-24
+
+#### Enhancements
+
+* Adds new "Not enough content" readability filtering option in optimize module.
+
+#### Bugfixes
+
+* Fixes a bug where the availability of collections would be shown as unavailable on online store when the collection actually would be available.
+
+## 15/05/2024 09:01 (UTC)
+
+Release date: 2024-05-15
+
+#### Bugfixes
+
+* Fixes overview screen introduction modal styling.
+
+## 13/05/2024 08:21 (UTC)
+
+Release date: 2024-05-13
+
+#### Bugfixes
+
+* Fixes a bug where Indonesian words with hyphens would be incorrectly treated as multiple words during keyphrase matching when the locale was `id` or a custom locale starting with `id_`.
+* Fixes a bug where Turkish keyphrase forms containing the characters `İ` or `ı` would not be recognized when the locale was `tr`, `tr_CY` or a custom locale starting with `tr_`.
+
+#### Other
+
+* (https://github.com/magnusmartin85).
+* Removes the questionnaire for new customers from the initial onboarding flow.
+
+## 07/05/2024 07:58 (UTC)
+
+Release date: 2024-05-07
+
+#### Enhancements
+
+* Enhances the structure of the menu for optimizing content.
+* Introduces a new overview dashboard to help with optimizing content.
+
+## 25/04/2024 05:17 (UTC)
+
+Release date: 2024-04-25
+
+#### Bugfixes
+
+* Improved theme modifications removal to remove all Yoast file leftovers from active theme.
+
 ## 04/04/2024 08:10 (UTC)
 
 Release date: 2024-04-04

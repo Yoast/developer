@@ -1,3 +1,175 @@
+## 23.4
+
+Release date: 2024-09-03
+
+Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-9-24).
+
+#### Enhancements
+
+* Disables the highlighting buttons whenever _AI Optimize_ is used.
+* Enables the _AI Optimize_ feature for the _keyphrase in introduction_ assessment when the introduction is part of a Classic block.
+* Improves the success rate of _AI Optimize_ suggestions for a post that contains list blocks.
+* Prevents showing the "not enough content" error message when _AI Generate_ is used before the content is fully loaded.
+
+#### Bugfixes
+
+* Fixes a bug where a full stop would be added at the end of a previous sentence instead of the newly suggested sentence when using _AI Optimize_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.4.
+
+## 23.3
+
+Release date: 2024-08-20
+
+Yoast SEO 23.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-20-8-24).
+
+#### Enhancements
+
+* Adds automatic scroll in AI Optimize when the first suggestion is out of view.
+* Ensures that AI suggestions don't include unnecessary quotes.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.3.
+
+## 23.2
+
+Release date: 2024-08-06
+
+**Introducing Yoast AI Optimize in beta for Yoast SEO 23.2!** Receive AI-powered suggestions to help your content cross the 'SEO' finish line, getting your content closer to a green traffic light at a click. Explore the details [in our latest release post](https://yoa.st/release-6-8-24)!
+
+#### Enhancements
+* Introduces the AI Optimize feature for the _keyphrase in introduction_, _keyphrase density_, and _keyphrase distribution_ assessments in the Block editor.
+* Improves the user experience for Yoast AI Generate by checking if the user has an active subscription before asking for consent.
+* Improves the _word complexity_ assessment by not flagging the focus keyphrase or related keyphrases as complex words.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.2.
+* Deprecates the `Ai_Generate_Titles_And_Descriptions_Introduction` class.
+
+## 23.1
+
+Release date: 2024-07-23
+
+Yoast SEO 23.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-23-7-24).
+
+#### Enhancements
+
+* Converts the _Yoast Table of Contents_ block to use the Blocks V3 API.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.1.
+* Sets the _WordPress tested up to_ version to 6.6.
+
+## 23.0
+
+Release date: 2024-07-02
+
+#### Enhancements
+
+* Converts the _Yoast Estimated reading time block_ the Blocks V3 API.
+* Converts the _Yoast Related links_ block to the Blocks V3 API and refactors it to an editable list of item blocks.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.0.
+
+## 22.9
+
+Release date: 2024-06-18
+
+Yoast SEO 22.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-18-6-24).
+
+#### Enhancements
+
+* Converts the _Siblings_ and _Subpages_ blocks to the V3 API.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would occur when clicking `Click here to remove the redirect` after reverting the trashing of a post.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.9.
+
+## 22.8
+
+Release date: 2024-05-28
+
+Yoast SEO 22.8 brings enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-28-5-24).
+
+#### Enhancements
+
+* Enhances the UI for the AI title and meta description generator.
+
+#### Bugfixes
+
+* Fixes an incompatibility issue with the Genesis Blocks plugin.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.8.
+
+## 22.7
+
+Release date: 2024-05-14
+
+Yoast SEO 22.7 brings multiple bugfixes and adds helpful error messages where AI title & description generator errors appear. [Find more information about our software releases and updates here](https://yoa.st/release-14-5-24).
+
+#### Enhancements
+
+* Adds more helpful error messages when the _AI title & description generator_ errors, for easier troubleshooting.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown when using the _AI title & description generator_ but the request timed out.
+* Fixes a bug where errors while saving a post would not contain the error explanation.
+* Fixes a bug where existing tags would not be saved when adding them to a post.
+* Fixes a bug where the _AI title & description generator_ would not work for variants of locales, like formal German.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.7.
+* Sets the minimum supported WordPress version to 6.4.
+
+## 22.6
+
+Release date: 2024-04-30
+
+Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. Learn more [here](https://yoa.st/release-30-4-24)!
+
+#### Enhancements
+
+* Improves performance when it comes to storing user metadata for data specific to Yoast SEO Premium.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.6.
+
+## 22.5
+
+Yoast SEO 22.5 brings maintenance updates and bug fixes throughout the plugin, refined guidance on optimal taxonomy practices and a smoother user experience. Check out [the release post for version 22.5](https://yoa.st/release-16-4-24).
+
+Release date: 2024-04-16
+
+#### Enhancements
+* Introduces a check for allowed MIME types when uploading images to a social appearance template.
+
+#### Bugfixes
+
+* Fixes a bug where some feedback strings in the content analysis would no longer be translated.
+* Fixes a bug where a new field added to the `Add custom fields to page analysis` setting would sometimes be removed after being saved.
+* Fixes a bug where the _Yoast Table of Contents_ block would throw a validation error when changing the heading level of the block's title.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 22.5.
+* Renames all Twitter references to X.
+
 ## 22.4
 
 Release date: 2024-04-03

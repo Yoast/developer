@@ -150,7 +150,7 @@ Optional properties which should only be output when the required criteria are m
 
 ## WordPress API: Change Article Schema output {#api}
 
-To change the `Article` schema Yoast SEO outputs, you can use our `wpseo_schema_article` filter, for instance as follows:
+To make changes to the `Article` schema that Yoast SEO outputs, you can use our `wpseo_schema_article` filter. Here is an example:
 
 ```php
 add_filter( 'wpseo_schema_article', 'change_article_to_social_posting' );

@@ -30,6 +30,13 @@ module.exports = {
 				},
 				{
 					type: 'category',
+					label: 'Blocks',
+					items: [
+						'features/blocks/breadcrumbs',
+					],
+				},
+				{
+					type: 'category',
 					label: 'Controls',
 					link: {
 						type: 'generated-index',
@@ -209,6 +216,7 @@ module.exports = {
 								'features/schema/pieces/person',
 								'features/schema/pieces/postaladdress',
 								'features/schema/pieces/product',
+								'features/schema/pieces/productgroup',
 								'features/schema/pieces/question',
 								'features/schema/pieces/recipe',
 								'features/schema/pieces/review',

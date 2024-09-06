@@ -27,6 +27,42 @@ function alter_existing_opengraph_image( $image ) {
 add_filter( 'wpseo_opengraph_image', 'alter_existing_opengraph_image' );
 ```
 
+The same can be done for the `og:image:width`, `og:image:height` and `og:image:type` tags, by using the following three filters:
+```php
+<?php
+/**
+ * Alter the OpenGraph image width for a single post type.
+ */
+function change_opengraph_image_width( $width ) {
+    if( is_singular( 'books' ) ) {
+        return 150;
+    }
+    return $width;
+}
+/**
+ * Alter the OpenGraph image height for a single post type.
+ */
+function change_opengraph_image_height ( $height ) {
+	if( is_singular( 'books' ) ) {
+        return 250;
+    }
+    return $height;
+}
+/**
+ * Alter the OpenGraph image type for a single post type.
+ */
+function change_opengraph_image_type ( $type ) {
+	if( is_singular( 'books' ) ) {
+        return 'png';
+    }
+    return $type;
+}
+
+add_filter( 'wpseo_opengraph_image_width', 'change_opengraph_image_width' );
+add_filter( 'wpseo_opengraph_image_height', 'change_opengraph_image_height' );
+add_filter( 'wpseo_opengraph_image_type', 'change_opengraph_image_type' );
+```
+
 ### Add an extra image to the top of the og:image tags array
 
 The `wpseo_add_opengraph_images` filter allows to add an extra image to the top of the og:image tags array. Each image added through the filter will have `og:image`, `og:image:width` and `og:image:height` tags.

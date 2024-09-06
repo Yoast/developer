@@ -270,3 +270,15 @@ add_filter( 'wpseo_sitemap_urlset', function( $urlset ) {
   return str_replace( '>', ' xmlns:xhtml="http://www.w3.org/1999/xhtml">', $urlset );
 }, 1, 10 );
 ```
+
+### Filter the sitemap URL
+```php
+/**
+ * Allows filtering of the XSL URL used in the current environment.
+ *
+ * @param string $current_url The current XSL URL.
+ */
+add_filter( 'wpseo_sitemap_public_url', function ( $current_url ) {
+  return 'https://another-url.com/main-sitemap.xml';
+} );
+```

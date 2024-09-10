@@ -11,7 +11,7 @@ that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) provides.
 :::caution Breadcrumbs in local environments
 In local environments, or in websites that <a href="/features/indexables/indexables-filters/#disabling-indexables-completely">disable the indexable creation in general</a>, breadcrumbs are not working properly.
 
-Specifically, in those setups the hierarchy of a breadcrumb path might be missing intermediate nodes like the category a post belongs to or a parent page of a subpage. 
+Specifically, in those setups the hierarchy of a breadcrumb path might be missing intermediate nodes like the category a post belongs to, or a parent page of a subpage. 
 :::
 
 

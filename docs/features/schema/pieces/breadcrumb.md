@@ -8,6 +8,12 @@ import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
 Describes the hierarchical position a `WebPage` within a `WebSite`.
 
+:::caution Breadcrumbs in local environments
+In local environments, or in websites that <a href="/features/indexables/indexables-filters/#disabling-indexables-completely">disable the indexable creation in general</a>, breadcrumbs are not working properly.
+
+Specifically, in those setups the hierarchy of a breadcrumb path might be missing intermediate nodes like the category a post belongs to or a parent page of a subpage. 
+:::
+
 ## Triggers
 Should be added as top-level node in the graph, on all public pages which have a valid `WebPage`, except for 4xx and 5xx range error pages/scenarios.
 

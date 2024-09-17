@@ -426,6 +426,7 @@ module.exports = {
 					items: [
 						'shopify/integrations/internationalization',
 						'shopify/integrations/review-apps',
+						'shopify/integrations/schema-graph',
 					],
 				},
 			]

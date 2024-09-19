@@ -1,3 +1,11 @@
+## 19/09/2024 11:07 (UTC)
+
+Release date: 2024-09-19
+
+#### Bugfixes
+
+* Fixes a bug where the "go to your apps section" link on "Uninstall Yoast SEO" settings page had an incorrect link, which would not allow going back to the app easily.
+
 ## 04/09/2024 11:11 (UTC)
 
 Release date: 2024-09-04

@@ -13,7 +13,7 @@ Given that a meta robots tag may have multiple (potentially conflicting) values,
 
 * All conditions should be evaluated and the resultant tag values combined additively, for each agent, using the rules defined below (see _Resolving conflict_).
 * The final set of values should be de-duplicated and reconciled.
-An up-to-date list of all possible meta robots values and their relationships is maintained [here](https://yoast.com/robots-meta-tags/).
+See [the up-to-date list of all possible meta robots values and their relationships](https://yoast.com/robots-meta-tags/).
 
 ## Standard structure
 Yoast SEO outputs the following meta robots tags by default on each (public) page, with the following structure:

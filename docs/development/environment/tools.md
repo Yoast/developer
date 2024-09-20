@@ -31,7 +31,7 @@ brew install autoconf automake libtool
 ```
 
 ### Iterm2 and Oh-My-Zsh (optional)
-iTerm2 is a replacement for the default terminal application that can be found on Mac OSX. The reason we suggest you install this is because it adds a lot of extra features when working in your terminal. [Click here](https://www.iterm2.com/features.html) to see what kind of snazzy features are included!
+[iTerm2](https://www.iterm2.com/) is a replacement for the default terminal application that can be found on Mac OSX. We suggest you install this because it [adds a lot of extra features](https://www.iterm2.com/features.html) when working in your terminal.
 
 [Oh-My-Zsh](https://ohmyz.sh/) is a shell for your command line that adds certain features that can't be done in a regular shell without a lot of hassle. It also allows you to more easily manage your zsh configurations.
 
@@ -42,7 +42,7 @@ brew install --cask iterm2
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-After installing both you'll want to change your shell from bsh to zsh by running `chsh -s /bin/zsh`. Otherwise you won't get to see [all those snazzy features](https://github.com/robbyrussell/oh-my-zsh#using-oh-my-zsh) from Oh-My-Zsh.
+After installing both you'll want to change your shell from bsh to zsh by running `chsh -s /bin/zsh`. Otherwise, you won't get to see [all those snazzy features](https://github.com/robbyrussell/oh-my-zsh#using-oh-my-zsh) from Oh-My-Zsh.
 
 Example:
 
@@ -50,7 +50,8 @@ Example:
 *   Better auto-completion for directories and filenames.
 
 ### Git / GitHub
-Within Yoast, Git is used for version control. Don't know how Git works? Check out [this tutorial](https://try.github.io/levels/1/challenges/1). Our Git repositories are all hosted on GitHub. If you don't have one already, go and [create an account](https://github.com/signup).
+
+Within Yoast, [Git](https://git-scm.com/) is used for version control. Don't know how Git works? Check out [this tutorial](https://try.github.io/levels/1/challenges/1). Our Git repositories are all hosted on GitHub. If you don't have one already, go and [create an account](https://github.com/signup).
 
 Install Git by running:
 
@@ -58,9 +59,9 @@ Install Git by running:
 brew install git
 ```
 
-Documentation on how to configure your local Git setup and how to add your SSH key to GitHub can be found [here](https://help.github.com/articles/set-up-git) and [here](https://help.github.com/articles/generating-ssh-keys).
+Then, read more on [how to configure your local Git setup](https://help.github.com/articles/set-up-git) and [how to add your SSH key to GitHub](https://help.github.com/articles/generating-ssh-keys).
 
-Suggestion: [Add a global git ignore file](/development/standards/version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
+One final suggestion: [add a global git ignore file](/development/standards/version-control-conventions.md#global-git-ignore) so you don't accidentally add system files like `.DS_Store` to the repository.
 
 ### Local
 At Yoast, we make use of [Local](https://localwp.com/) as the foundation for our development setup. 
@@ -68,7 +69,7 @@ At Yoast, we make use of [Local](https://localwp.com/) as the foundation for our
 * Go to Flywheel's preferences » Advanced » Router Mode and set it to "Site Domains".
 * Create a new site, call it `basic.wordpress.test`.
 * Optional: make sure your browser / system trusts the SSL certificate of the newly created site.
-  * For MacOS that needs a few steps, [docs here](https://localwp.com/help-docs/ssl/managing-local-sites-ssl-certificate-in-macos/).
+  * For macOS, [that needs a few steps](https://localwp.com/help-docs/ssl/managing-local-sites-ssl-certificate-in-macos/).
  
 Problems with [provisioning through Local](https://community.localwp.com/t/uh-oh-unable-to-provision-site-on-mac-m2/34705)? This command to install [Rosetta](https://en.wikipedia.org/wiki/Rosetta_(software)) helps if you're on a different chipset than the one Local (or any other software) was developed for:
 

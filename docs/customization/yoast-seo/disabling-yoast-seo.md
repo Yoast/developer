@@ -1,8 +1,9 @@
 ---
 id: disabling-yoast-seo
-title: "Yoast SEO: Disable Yoast SEO output for a specific page"
+title: "Yoast SEO: Disable Yoast SEO output"
 sidebar_label: Disable Yoast SEO output
 ---
+
 As of Yoast SEO 14.0, we've changed the way you can interact with the output of Yoast SEO. 
 However, in some cases, you might want to disable the output coming from Yoast SEO on a specific post.
 

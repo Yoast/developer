@@ -757,7 +757,7 @@ Release date: 2016-09-27
 
 #### Enhancements
 
-* [General accessibility improvements](https://github.com/Yoast/wpseo-news/pull/238)
+* General accessibility improvements.
 
 ## 3.5.1
 

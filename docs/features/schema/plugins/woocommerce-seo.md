@@ -28,6 +28,9 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 ### On checkout pages
 * Change the `@type` of the `WebPage` piece to `CheckoutPage`.
 
+### Optional on all pages.
+* `hasMerchantReturnPolicy`: An array of the type `MerchantReturnPolicy` which represents a return policy of the organization.
+
 ## More information
 * [Product Schema pieces](../pieces/product.md)
 * [ProductGroup Schema pieces](../pieces/productgroup.md)
@@ -35,6 +38,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 * [Organization Schema pieces](../pieces/organization.md)
 * [Offer Schema pieces](../pieces/offer.md)
 * [Person Schema pieces](../pieces/person.md)
+* [Organization Schema pieces](../pieces/organization.md)
 * [Review Schema pieces](../pieces/review.md)
 * [WebSite Schema pieces](../pieces/website.md)
 * [WebPage Schema pieces](../pieces/webpage.md)

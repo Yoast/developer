@@ -1,3 +1,76 @@
+= 23.5 =
+
+Release date: 2024-09-24
+
+Yoast SEO 23.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-24-9-24).
+
+#### Enhancements
+
+* Improves analysis score feedback labels in the publish sections.
+* Improves our integration with cache plugins by preventing flushing their cache when not needed.
+
+#### Bugfixes
+
+* Fixes a bug where Arabic keyphrases containing certain function words were not correctly matched.
+
+= 23.4 =
+
+Release date: 2024-09-03
+
+Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-9-24).
+
+#### Enhancements
+
+* Adds support for discarding the changes when switching to a post, using the Top bar feature in Elementor.
+* Adds _так_ to the words recognized by the _transition words_ assessment in Russian. Props to @pavelmai83.
+* Improves the schema output by following the specification for the _SearchAction_ more strictly.
+* Re-enables the script concatenation that was disabled to prevent a bug with WordPress 5.5.
+* Improves the look of the Yoast SEO metabox in the block editor by centering it and making it stand out more by using a background color.
+
+#### Bugfixes
+
+* Fixes a bug where an image caption inside a classic block would be considered the introduction when using the _keyphrase in introduction_ assessment in the default editor.
+* Fixes a bug where the first tag instead of the primary tag would be shown in a permalink when adding a link in the Classic editor.
+* Fixes a bug where the Yoast tab would disappear when opening and closing the Site Settings in Elementor.
+* Fixes a bug where the Yoast user settings would be wiped out after a user profile update when the respective global settings were disabled.
+* Fixes a bug where two admin links would not be resolvable when using a custom admin URL.
+
+#### Other
+
+* Adds a learn more link to the primary category picker.
+* Deprecates some functions in the `Yoast_Input_Validation` class.
+* Deprecates the `Disable_Concatenate_Scripts_Integration` class.
+* Deprecates the `Duplicate_Post_Integration` class.
+* Deprecates the `WPSEO_Admin_User_Profile::user_profile()` method and the `admin/views/user-profile.php` file.
+
+= 23.3 =
+
+Release date: 2024-08-20
+
+Yoast SEO 23.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-20-8-24).
+
+#### Other
+
+* This release only contains non-user-facing maintenance changes.
+
+= 23.2 =
+
+Release date: 2024-08-06
+
+Yoast SEO 23.2 brings more enhancements and bugfixes. [Find more information about Yoast SEO 23.2 here](https://yoa.st/release-6-8-24).
+
+#### Enhancements
+
+* Excludes image captions from the _keyphrase in introduction_ assessment: image captions at the beginning of a post will not be treated as an introduction anymore.
+
+#### Bugfixes
+
+* Fixes a bug where the `wpseo_posts_for_related_keywords` filter would not work anymore since it was accidentally renamed.
+
+#### Other
+
+* Deprecates the `Ai_Generate_Titles_And_Descriptions_Introduction_Upsell` class.
+
 = 23.1 =
 
 Release date: 2024-07-23
@@ -932,7 +1005,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 
 #### Other
 
-* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEOdmin_author_archives_meta, Yoast\WP\SEOdmin_date_archives_meta, Yoast\WP\SEOdmin_post_types_beforearchive, Yoast\WP\SEOdmin_post_types_archive, Yoast\WP\SEOdmin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
+* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEO\admin_author_archives_meta, Yoast\WP\SEO\admin_date_archives_meta, Yoast\WP\SEO\admin_post_types_beforearchive, Yoast\WP\SEO\admin_post_types_archive, Yoast\WP\SEO\admin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
@@ -1845,9 +1918,9 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 
 * Adds the `yoast_display_gutenberg_compat_notification` filter to allow disabling the Gutenberg compatibility notification.
 * Adds the `wpseo_schema_person_data` filter to enable the filtering of `Person` Schema by the user's ID.
-* Adds the `Yoast\WP\SEOdmin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
-* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEOdmin_post_types_beforearchive` action.
-* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEOdmin_taxonomies_meta` action.
+* Adds the `Yoast\WP\SEO\admin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
+* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEO\admin_post_types_beforearchive` action.
+* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEO\admin_taxonomies_meta` action.
 * Improves the layout of the Search Appearance collapsibles.
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.

@@ -1,3 +1,57 @@
+## 19/09/2024 11:07 (UTC)
+
+Release date: 2024-09-19
+
+#### Bugfixes
+
+* Fixes a bug where the "go to your apps section" link on "Uninstall Yoast SEO" settings page had an incorrect link, which would not allow going back to the app easily.
+
+## 04/09/2024 11:11 (UTC)
+
+Release date: 2024-09-04
+
+#### Enhancements
+
+* Combines the search appearance and the search engine listing sections into a single coherent search appearance editor.
+* Moves the social media appearance to follow the new placement of the search appearance section.
+
+## 22/08/2024 08:24 (UTC)
+
+Release date: 2024-08-22
+
+#### Bugfixes
+
+* Fixes issue with wrongly rendered aggregateRating Schema when product have no reviews added.
+
+## 19/08/2024 08:24 (UTC)
+
+Release date: 2024-08-19
+
+#### Enhancements
+
+* Adds a wider gap between assessment result list items.
+* Fixes detection for "**product | structured_data**" Schema generation inside Shopify theme to fix duplicated Schema.
+
+## 08/08/2024 09:57 (UTC)
+
+Release date: 2024-08-08
+
+#### Enhancements
+
+* Modify the 'Ask For Review' banner design to make it more user-friendly for customers.
+
+## 05/08/2024 08:05 (UTC)
+
+Release date: 2024-08-05
+
+#### Enhancements
+
+* Adds 3D models to the product structured data, to help search engines show them as 3D images in mobile search.
+
+#### Bugfixes
+
+* Changes "Bulk edit" link label and header for better understanding.
+
 ## 22/07/2024 08:21 (UTC)
 
 Release date: 2024-07-22

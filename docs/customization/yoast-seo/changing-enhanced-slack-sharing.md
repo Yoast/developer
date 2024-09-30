@@ -1,6 +1,6 @@
 ---
 id: changing-enhanced-slack-sharing
-title: "Yoast SEO: Change the Enhanced Slack sharing output"
+title: "Yoast SEO: Changing the Enhanced Slack sharing output"
 sidebar_label: Enhanced Slack sharing
 ---
 

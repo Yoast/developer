@@ -159,7 +159,7 @@ Yoast SEO 22.7 brings multiple bugfixes and adds helpful error messages where AI
 
 Release date: 2024-04-30
 
-Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. Learn more [here](https://yoa.st/release-30-4-24)!
+Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. [Learn more here](https://yoa.st/release-30-4-24)!
 
 #### Enhancements
 

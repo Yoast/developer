@@ -6,7 +6,7 @@ description: Describes the schema output of the Yoast SEO plugin for WordPress.
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO plugin. More information about our API, integration mechanics, and methodology can be found [here](../).
+This page documents the [schema.org](https://schema.org/) markup output by the Yoast SEO plugin. More information about our API, integration mechanics, and methodology can be found [in the overview](../..).
 
 ## Core logic
 Every page should (attempt to) output the following [pieces](/features/schema/pieces/):
@@ -134,7 +134,7 @@ The above base script should be altered or extended in the following scenarios.
 * Add an [Article](../pieces/article.md) piece, and connect this to the `WebPage` (via a `mainEntityOfPage` property).
 
 ### When a page contains a HowTo block
-* Add a [HowTo](../pieces/howto.md) piece, and connect thit to the `WebPage` - or instead to the `Article`, if one is present (via a `mainEntityOfPage` property).
+* Add a [HowTo](../pieces/howto.md) piece, and connect this to the `WebPage` - or instead to the `Article`, if one is present (via a `mainEntityOfPage` property).
 
 ### When a page contains an FAQ block
 * Add an additional `@type` value of `FAQPage` to the `WebPage`.

@@ -1,3 +1,11 @@
+## 01/10/2024 08:16 (UTC)
+
+Release date: 2024-10-01
+
+#### Enhancements
+
+* Allow for generating titles and descriptions with AI.
+
 ## 19/09/2024 11:07 (UTC)
 
 Release date: 2024-09-19

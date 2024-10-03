@@ -1,3 +1,16 @@
+## 03/10/2024 13:29 (UTC)
+
+Release date: 2024-10-03
+
+#### Enhancements
+
+* The Google preview now shows a meta description based on the item's content, when no specific meta description is added.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generators would not work on shops with a custom domain.
+* Fixes a link to an incorrect help article in the AI Generators.
+
 ## 01/10/2024 08:16 (UTC)
 
 Release date: 2024-10-01

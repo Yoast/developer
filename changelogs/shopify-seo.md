@@ -1,3 +1,11 @@
+## 07/10/2024 07:44 (UTC)
+
+Release date: 2024-10-07
+
+#### Enhancements
+
+* Adds support for hasMerchantReturnPolicy Schema when return policy is configured for the Shop.
+
 ## 03/10/2024 13:29 (UTC)
 
 Release date: 2024-10-03

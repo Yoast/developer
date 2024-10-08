@@ -4,7 +4,7 @@ title: "Yoast SEO: Deprecated filters and actions"
 sidebar_label: Deprecated filters & actions
 ---
 
-We sometimes deprecate filters and actions. In this document we highlight the deprecations and try
+We sometimes deprecate filters and actions. In this document we highlight the deprecations in Yoast SEO and try
 to point you to their replacements.
 
 ## Filters and actions deprecated in Yoast SEO 14.0
@@ -15,12 +15,12 @@ to point you to their replacements.
 You can now always filter the X image on any page, including a taxonomy page through the `wpseo_twitter_image` filter.
 
 #### `wpseo_twitter_metatag_key`
-We removed this filter without a replacement. Please add a new meta data presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.
+We removed this filter without a replacement. Please add a new metadata presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.
 
 ### Actions
 
 #### `wpseo_opengraph`
-We removed this action without a replacement. Please add a new meta data presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.
+We removed this action without a replacement. Please add a new metadata presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.
 
 #### `wpseo_twitter`
-We removed this action without a replacement. Please add a new meta data presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.
+We removed this action without a replacement. Please add a new metadata presenter per [this documentation](/customization/apis/metadata-api/) if you need to add more values.

@@ -1,3 +1,18 @@
+= 23.5 =
+
+Release date: 2024-09-24
+
+Yoast SEO 23.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-24-9-24).
+
+#### Enhancements
+
+* Improves analysis score feedback labels in the publish sections.
+* Improves our integration with cache plugins by preventing flushing their cache when not needed.
+
+#### Bugfixes
+
+* Fixes a bug where Arabic keyphrases containing certain function words were not correctly matched.
+
 = 23.4 =
 
 Release date: 2024-09-03
@@ -10,6 +25,7 @@ Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information abo
 * Adds _так_ to the words recognized by the _transition words_ assessment in Russian. Props to @pavelmai83.
 * Improves the schema output by following the specification for the _SearchAction_ more strictly.
 * Re-enables the script concatenation that was disabled to prevent a bug with WordPress 5.5.
+* Improves the look of the Yoast SEO metabox in the block editor by centering it and making it stand out more by using a background color.
 
 #### Bugfixes
 

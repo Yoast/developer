@@ -1,7 +1,7 @@
 ---
 id: generating-unit-test-template
-title: "Yoast SEO development: Generating a unit test template"
-sidebar_label: Generating a unit test template
+title: "Yoast SEO Development: Unit test templates"
+sidebar_label: Unit test templates
 ---
 Every class in the `src` folder should have an accompanying unit test in the `tests/unit` folder. Since setting up a new unit test file requires some boilerplate code, we created a handy tool that creates a unit test template for you.
 

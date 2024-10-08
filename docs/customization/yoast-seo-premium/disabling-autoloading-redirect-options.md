@@ -1,7 +1,7 @@
 ---
 id: disabling-autoloading-redirect-options
-title: "Yoast SEO Premium: Disabling the autoloading of the redirect options"
-sidebar_label: Disabling the autoloading of the redirect options
+title: "Yoast SEO Premium: Disabling autoloading of redirect options"
+sidebar_label: Disabling autoloading of redirect options
 ---
 
 Since Yoast SEO Premium 17.7 the two options (`wpseo-premium-redirects-export-plain` and `wpseo-premium-redirects-export-regex`) used to calculate the redirect destinations are autoloaded to save two queries.

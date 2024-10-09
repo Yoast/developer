@@ -4,16 +4,16 @@ title: "Yoast SEO Meta robots: Functional specification"
 sidebar_label: Specification
 description: An overview of how meta robots tags work in Yoast SEO.
 ---
-Yoast SEO always outputs a _meta robots_ tag in the `<head>` of every page. When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines (via our [controls](/features/controls/overview.md), we alter the content of that tag.
+Yoast SEO always outputs a _meta robots_ tag in the `<head>` of every page. When a user wishes to proactively restrict the crawling, indexing, or presentation of a page by search engines (via our [controls](/features/controls/overview.md)), we alter the content of that tag.
 
 The tag takes the following format: `<meta name="robots" content="{{values}}" />`.
 
-## Constructing {{values}}
+## Constructing `{{values}}`
 Given that a meta robots tag may have multiple (potentially conflicting) values, and that multiple overlapping conditions may apply, then:
 
 * All conditions should be evaluated and the resultant tag values combined additively, for each agent, using the rules defined below (see _Resolving conflict_).
 * The final set of values should be de-duplicated and reconciled.
-An up-to-date list of all possible meta robots values and their relationships is maintained [here](https://yoast.com/robots-meta-tags/).
+See [the up-to-date list of all possible meta robots values and their relationships](https://yoast.com/robots-meta-tags/).
 
 ## Standard structure
 Yoast SEO outputs the following meta robots tags by default on each (public) page, with the following structure:

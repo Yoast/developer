@@ -1,3 +1,33 @@
+## 23.6
+
+Release date: 2024-10-08
+
+Yoast SEO 23.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-8-10-24).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.6.
+* Sets the minimum supported WordPress version to 6.5.
+
+## 23.5
+
+Release date: 2024-09-24
+
+Yoast SEO 23.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-24-9-24).
+
+#### Enhancements
+
+* Improves the clarity of error messages that are shown when there is a problem with AI features.
+
+#### Bugfixes
+
+* Fixes a bug where the toast notification would appear in the wrong position when using _AI Generate_ with little or no content.
+* Fixes a bug where two sentences in the internal linking suggestions would not be translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.5.
+
 ## 23.4
 
 Release date: 2024-09-03
@@ -140,7 +170,7 @@ Yoast SEO 22.7 brings multiple bugfixes and adds helpful error messages where AI
 
 Release date: 2024-04-30
 
-Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. Learn more [here](https://yoa.st/release-30-4-24)!
+Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. [Learn more here](https://yoa.st/release-30-4-24)!
 
 #### Enhancements
 

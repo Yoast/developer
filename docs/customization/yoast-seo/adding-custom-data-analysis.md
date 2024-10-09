@@ -1,6 +1,7 @@
 ---
 id: adding-custom-data-analysis
-title: "Yoast SEO: Adding custom data to the page analysis"
+title: "Yoast SEO: Adding data to the content analysis"
+sidebar_label: Adding data to the content analysis
 ---
 
 Yoast SEO comes featured with a powerful set of tools to not only help you improve your SEO, but to also help you write better texts by analyzing the content of the post or page that you're working on.
@@ -17,7 +18,7 @@ Before you can add your own data to the analysis, it is necessary to ensure Yoas
 
 ### Creating the plugin
 
-The first thing to do, is create a file in your own plugin's `js/` directory (i.e. `js/MyCustomDataPlugin.js`).
+First, create a file in your own plugin's `js/` directory (i.e. `js/MyCustomDataPlugin.js`).
 
 In this file, you'll have to ensure that, at a minimum, the following is present:
 
@@ -77,7 +78,7 @@ if ( typeof YoastSEO !== "undefined" && typeof YoastSEO.app !== "undefined" ) {
 }
 ```
 
-The above code adds an additional text of "Hello, I'm some additional data!" to the text analysis, but you're not limited to just sending hard-coded strings to your custom plugin. For example, you could add a custom input field and read its contents.
+The above code adds "Hello, I'm some additional data!" to the text analysis, but you're not limited to just sending hard-coded strings to your custom plugin. For example, you could add a custom input field and read its contents.
 
 **Note:** The last part in the above JavaScript is used to properly load the JavaScript class _after_ YoastSEO.js is done initializing. Please make sure you don't forget to add this.
 
@@ -125,4 +126,4 @@ if ( ! wp_installing() ) {
 ### Test the code
 
 The last step is to test the code. Make sure your plugin is properly loaded and create a new post.
-As a test, you could set your keyword to be the word 'additional' and see that the SEO analysis properly detects it under the 'Keyprashe in introduction' result. 
+As a test, you could set your keyword to be the word 'additional' and see that the SEO analysis properly detects it under the 'Keyphrase in introduction' result. 

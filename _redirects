@@ -4,3 +4,9 @@
 /features/installation/using-composer/ /development/installation/using-composer/ 301
 /features/schema/overview /features/schema/ 301
 /blog/* https://yoast.com/developer-blog/:splat 301
+/category/changelogs/ /changelog/ 301
+/category/customization/ /customization/ 301
+/category/plugin-development/ /development/ 301
+/category/environment/ /development/environment/ 301
+/category/standards/ /development/standards/ 301
+/category/shopify/ /shopify/ 301

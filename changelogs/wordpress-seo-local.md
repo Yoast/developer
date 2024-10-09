@@ -1,3 +1,26 @@
+## 15.4
+
+Release date: 2024-10-08
+
+#### Enhancements
+
+* Converts the Yoast Address block to use the Blocks V3 API.
+* Converts the Yoast Map block to use the Blocks V3 API.
+* Converts the Yoast Opening hours block to use the Blocks V3 API.
+* Converts the Yoast Store locator block to use the Blocks V3 API.
+* Improves the performance of sites with multiple locations, decreasing page load times significantly.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal would occur in the settings when a legacy Google Maps API was used.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.6.
+* Deprecates the WooCommerce Local Pickup functionality.
+* Sets the minimum supported WordPress version to 6.5.
+* Sets the _WordPress tested up to_ version to 6.6.
+
 ## 15.3
 
 Release date: 2024-02-06

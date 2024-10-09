@@ -1,3 +1,14 @@
+## 23.6
+
+Release date: 2024-10-08
+
+Yoast SEO 23.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-8-10-24).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.6.
+* Sets the minimum supported WordPress version to 6.5.
+
 ## 23.5
 
 Release date: 2024-09-24

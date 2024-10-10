@@ -300,6 +300,11 @@ export default {
 					theme: {
 						customCss: require.resolve( "./src/css/custom.css" ),
 					},
+					sitemap: {
+						lastmod: "date",
+						priority: null,
+						changefreq: null,
+					},
 				}
 			),
 		],

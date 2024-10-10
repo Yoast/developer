@@ -1,3 +1,40 @@
+## 08/10/2024 12:50 (UTC)
+
+Release date: 2024-10-08
+
+#### Bugfixes
+
+* Fixes a bug where indefinite discounts were given.
+
+## 07/10/2024 07:44 (UTC)
+
+Release date: 2024-10-07
+
+#### Enhancements
+
+* Adds support for hasMerchantReturnPolicy Schema when return policy is configured for the Shop.
+
+## 03/10/2024 13:29 (UTC)
+
+Release date: 2024-10-03
+
+#### Enhancements
+
+* The Google preview now shows a meta description based on the item's content, when no specific meta description is added.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generators would not work on shops with a custom domain.
+* Fixes a link to an incorrect help article in the AI Generators.
+
+## 01/10/2024 08:16 (UTC)
+
+Release date: 2024-10-01
+
+#### Enhancements
+
+* Allow for generating titles and descriptions with AI.
+
 ## 19/09/2024 11:07 (UTC)
 
 Release date: 2024-09-19

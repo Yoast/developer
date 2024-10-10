@@ -1,6 +1,7 @@
 ---
 id: adding-custom-assessments
-title: "Yoast SEO: Adding custom assessments to the page analysis"
+title: "Yoast SEO: Adding assessments to the content analysis"
+sidebar_label: Adding assessments to the content analysis
 ---
 
 In addition to adding your own input fields to the pre-existing assessments that are available in Yoast SEO, it is also possible to write your own assessments that can analyze various aspects of a post, page or term. 
@@ -13,7 +14,7 @@ One of the first steps when it comes to writing your own assessment, is to ensur
 
 ### Creating the plugin
 
-The first thing to do, is create a file in your own plugin's `js/` directory (i.e. `js/MyCustomAssessmentPlugin.js`).
+First, create a file in your own plugin's `js/` directory (i.e. `js/MyCustomAssessmentPlugin.js`).
 
 In this file, you'll have to ensure that, at a minimum, the following is present:
 

@@ -35,7 +35,7 @@ The following should be added whenever available and valid:
 * `datePublished`: The time at which the page was originally published, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `dateModified`: The time at which the page was last modified, in ISO 8601 format; e.g., `2015-10-31T16:10:29+00:00`.
 * `primaryImageOfPage`: A reference-by-ID to a node representing the page's featured image.
-* `breadcrumb`: A reference-by-ID to a node representing the page's breadrumb structure [[link](https://developer.yoast.com/features/schema/pieces/breadcrumb/)].
+* `breadcrumb`: A reference-by-ID to a node representing [the page's breadcrumb structure](https://developer.yoast.com/features/schema/pieces/breadcrumb/).
 * `image`: An array of all images in the page content, referenced by ID (including the image referenced by the `primaryImageOfPage`).
 * `video`: An array of all videos in the page content, referenced by ID.
 * `keywords`: An array of the names of tags attached to the page (e.g., `["cats","dogs","cake"]`).
@@ -44,7 +44,7 @@ The following should be added whenever available and valid:
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.
 
-### When the page is a a conventional *Page* (and not, e.g., a posts archive, user profile, etc)
+### When the page is a conventional *Page* (and not, e.g., a posts archive, user profile, etc.)
 * `potentialAction`: A `ReadAction` object with values:
   * `target`: The unmodified *canonical URL* of the page.
 
@@ -66,10 +66,10 @@ The `WebPage` type may be transformed in the following scenarios.
 When the query returns a loop of posts (e.g., a category archive, a blog homepage, or other taxonomy index) then, then the *type* property should be altered to `CollectionPage`.
 
 ### Profile pages
-When the page is about a particular user (e.g., an member bio / author archive):
+When the page is about a particular user (e.g., a member bio / author archive):
 
 * The `type` property should be altered to `ProfilePage`.
-  * If the page features posts/pages authored by that `Person`, then the `type` property should instead by an array of `['CollectionPage','ProfilePage']`.
+  * If the page features posts/pages authored by that `Person`, then the `type` property should instead be an array of `['CollectionPage','ProfilePage']`.
 * Add a `mainEntityOfPage` property to the `Person` which the page is about, which references the `WebPage` by ID.
 
 ### FAQ pages

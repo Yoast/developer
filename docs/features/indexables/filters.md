@@ -25,6 +25,15 @@ We already disable indexables by default on sites where the core function [`wp_g
 does _not_ return `production`.
 :::
 
+:::caution Discrepancies when indexables are disabled
+When the creation of indexables is disabled, the following features are not working 100% properly:
+
+* <a href="/features/blocks/breadcrumbs/">Breadcrumb blocks</a>
+* <a href="/features/schema/pieces/breadcrumb">Breadcrumb schema pieces</a>
+* <a href="/features/opengraph/functional-specification">og:image</a> meta tags will show resized images instead of their full-sized counterparts, when the prominent image of the content is resized.
+* <a href="/features/twitter/functional-specification">twitter:image</a> meta tags will show resized images instead of their full-sized counterparts, when the prominent image of the content is resized.
+:::
+
 ### Code example
 
 ```php

@@ -17,7 +17,7 @@ Before you start contributing to the Yoast plugins, ensure you've checked out ou
 Generally speaking, we advise people to create a `~/Projects/Yoast` folder to keep all things together.  
 
 :::note
-Don't create a `Yoast` folder in `~/Documents`, `~/Desktop` or `~/Downloads` as this will likely cause errors when using the `plugin-development-docker`.
+Don't create a `Yoast` folder in `~/Documents`, `~/Desktop` or `~/Downloads` as this will likely cause errors when using dockerized environments such as the `plugin-development-docker`.
 :::
 
 After creating this folder, you have two flavors:
@@ -30,7 +30,7 @@ Symlinking is generally preferable, as there's a lower chance of messing things 
 :::
 
 ### Cloning plugins on an environment-by-environment basis
-If you use Local as your development environment of choice, you can follow these steps to clone the plugins to your Local site's plugins directory.
+If you use [Local](https://localwp.com/) as your development environment of choice, you can follow these steps to clone the plugins to your Local site's plugins directory.
 
 :::note
 These steps assume that you have already [installed Local, and have set up a site within Local to use for plugin development](tools.md#local).
@@ -68,8 +68,8 @@ In order to ensure that unit tests can properly run, you need to add the followi
 Example:
 
 ```
-WP_DEVELOP_DIR=/Users/<your name>/Documents/Development/wordpress-develop/
-WP_PLUGIN_DIR=/Users/<your name>/Documents/Development/plugin-development-docker/plugins
+WP_DEVELOP_DIR=/Users/<your name>/Projects/WordPress/wordpress-develop/
+WP_PLUGIN_DIR=/Users/<your name>/Projects/Yoast
 ```
 
 :::caution
@@ -87,45 +87,25 @@ Configure your PHPUnit configuration in PhpStorm by going to `Edit Configuration
 ### Running multisite tests
 Some of our plugins contain tests that are only run on multisite. To run those tests, select your PHPUnit configuration and add the `WP_MULTISITE` flag with value `1` in the command line section of the settings.
 
-## Installing the plugins
-To have the complete set of Yoast plugins, clone the following repositories in your `/plugins/` folder.
+## Installing the plugin
+Now, on to installing the plugin. First, if you haven't already, clone [the wordpress-seo repository](https://github.com/Yoast/wordpress-seo) in your `/plugins/` folder.
 
-Yoast SEO with the addons:
+Then, run the following commands in the directory where you cloned the repository:
 
-*   [https://github.com/Yoast/wordpress-seo](https://github.com/Yoast/wordpress-seo)
-*   [https://github.com/Yoast/wpseo-news](https://github.com/Yoast/wpseo-news)
-*   [https://github.com/Yoast/wpseo-woocommerce](https://github.com/Yoast/wpseo-woocommerce)
+* Run `composer install` to make sure all PHP dependencies are installed.
+* Run `nvm use` to set the right Node version.
+* Run `yarn` to install the JavaScript dependencies.
+* Run `grunt build` to build JavaScript (and CSS) manually.
 
-For each of these add-ons, run `composer install` and `yarn` in the respective directories to make sure all dependencies are installed.
+After this, you can run `yarn start` to watch for changes and build JavaScript automatically.
 
-Additional plugins:
+### Additional plugins
 
-*   [https://wordpress.org/plugins/yoast-test-helper/](https://wordpress.org/plugins/yoast-test-helper/) - Makes testing Yoast SEO, Yoast SEO add-ons and integrations and resetting the different features a lot easier.
-*   [https://github.com/Yoast/yoast-acf-analysis](https://github.com/Yoast/yoast-acf-analysis) - Provide compatiblity with [Advanced Custom Fields](https://www.advancedcustomfields.com/)
-*   [https://github.com/Yoast/yoastseo-amp](https://github.com/Yoast/yoastseo-amp) - Provide additional functionality for The [AMP plugin](https://nl.wordpress.org/plugins/amp/)
+We have several other plugins available. All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/).
 
-All our publicly accessible repositories can be [found on GitHub](https://github.com/Yoast/)
-
-### Enable indexable indexation
+## Enable indexable indexation
 * Install [the Yoast Test helper plugin](https://wordpress.org/plugins/yoast-test-helper/).
-* Enable "Development mode" in Yoast Test helper's settings. This will enable Indexable indexation.
-
-### Working on JavaScript used in the plugins
-If you're developing within the JavaScript code that is part of one of the plugins, you need to ensure that the code is also available in your WordPress environment. This can be achieved by using the following steps:
-
-* Run `yarn` to install dependencies.
-* Run `grunt build:js` to build JavaScript manually.
-* Run `grunt shell:webpack-watch` (Free) or `grunt webpack:watch` (Premium) to watch and build JavaScript automatically.
-
-:::caution
-If your pull-request requires a specific branch from the monorepo, please ensure that you create a branch on the monorepo with the *exact* same name as the branch on the plugin's repository.
-This ensures that Travis uses the correct branches when building. 
-:::
-
-### Working on standalone JavaScript
-If you're planning on working on the JavaScript code, _outside_ of a WordPress environment, you can follow the instructions in the [readme](https://github.com/Yoast/javascript) of the monorepo, which includes all the information you'll need to get the JavaScript side of things up and running.
-
-A list if [useful commands](https://github.com/Yoast/javascript#useful-commands) is also available.
+* Enable "Development mode" in Yoast Test helper's settings. This will enable Indexable indexation on development sites.
 
 ## Generating fake data for testing
 You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to generate fake data like posts, terms and users.
@@ -136,7 +116,7 @@ You can use [Yoast WP CLI Faker](https://github.com/Yoast/wp-cli-faker) to gener
   * Note that for multisites you can use the `--url=<url>` parameter to target a specific subsite.
     * (See [how to run a WP-CLI command on one or more sites on WordPress multisite](https://danielbachhuber.com/tip/run-wp-cli-command-wordpress-multisite/).)
 * Optional: follow [the _WooCommerce_ instructions](https://github.com/Yoast/wp-cli-faker#woocommerce) to generate fake data for WooCommerce.
-* To exit the shell use: `exit`.
+* To exit the shell, use `exit`.
 
 ## Now what?
 After you've cloned the repositories, you can navigate to `basic.wordpress.test` in your browser to see the development environment. Open the plugin directory in your IDE and you should be ready to develop!

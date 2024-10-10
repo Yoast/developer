@@ -1,18 +1,19 @@
 ---
 id: filtering-yoast-blocks
 title: "Yoast SEO: Filtering Yoast Blocks"
-sidebar_label: Filter Yoast Blocks
+sidebar_label: Filtering Yoast Blocks
 ---
+
 As of [Yoast SEO 8.2](https://yoast.com/yoast-seo-8-2/), we've added our first two structured data blocks: The FAQ block and the How-To block.
 
 ## Available blocks
 
 Currently, the following blocks are available within Yoast SEO
 
-| Block | Namespace |
-| ----- | --------- |
-| FAQ block| `yoast/faq-block` |
-| How-To block| `yoast/how-to-block` |
+| Block        | Namespace            |
+|--------------|----------------------|
+| FAQ block    | `yoast/faq-block`    |
+| How-To block | `yoast/how-to-block` |
 
 ## Example
 Although WordPress allows you to filter out Blocks by utilizing the [`allowed_block_types`](https://developer.wordpress.org/reference/hooks/allowed_block_types/) filter, this filter contains some limitations.

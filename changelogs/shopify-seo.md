@@ -1,3 +1,11 @@
+## 14/10/2024 11:23 (UTC)
+
+Release date: 2024-10-14
+
+#### Enhancements
+
+* Adds support for "Product.brand" Schema, based on vendor value.
+
 ## 14/10/2024 07:18 (UTC)
 
 Release date: 2024-10-14

@@ -1,3 +1,15 @@
+## 14/10/2024 07:18 (UTC)
+
+Release date: 2024-10-14
+
+#### Enhancements
+
+* Optimize AI-powered suggestions for collections & blogs.
+
+#### Bugfixes
+
+* Fixes a bug where the AI suggestions modal would already show briefly when consent was still required.
+
 ## 08/10/2024 12:50 (UTC)
 
 Release date: 2024-10-08

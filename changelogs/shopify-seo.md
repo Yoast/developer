@@ -1,3 +1,11 @@
+## 15/10/2024 08:51 (UTC)
+
+Release date: 2024-10-15
+
+#### Bugfixes
+
+* Fixes issue with newsletter modal redisplaying on Safari browser.
+
 ## 14/10/2024 11:23 (UTC)
 
 Release date: 2024-10-14

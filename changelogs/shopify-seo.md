@@ -1,3 +1,15 @@
+## 18/10/2024 09:25 (UTC)
+
+Release date: 2024-10-18
+
+#### Enhancements
+
+* Improves feedback when trying to use AI suggestions while offline.
+
+#### Bugfixes
+
+* Changes the label on the Shopify SEO title variable to match the connected Shopify SEO title field.
+
 ## 15/10/2024 08:51 (UTC)
 
 Release date: 2024-10-15

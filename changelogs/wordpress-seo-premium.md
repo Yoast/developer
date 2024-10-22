@@ -1,3 +1,21 @@
+## 23.7
+
+Release date: 2024-10-22
+
+Yoast SEO 23.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-22-10-24).
+
+#### Enhancements
+
+* Introducing a new feature: AI SEO title and meta description generation for WooCommerce product categories and tags! To unlock this SEO magic, make sure you have both Yoast SEO Premium and Yoast WooCommerce SEO installed.
+
+#### Bugfixes
+
+* Fixes a bug where the _Table of Contents_ block title would not be translated when it was added to a page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.7.
+
 ## 23.6
 
 Release date: 2024-10-08

@@ -1,3 +1,23 @@
+= 23.7 =
+
+Release date: 2024-10-22
+
+Yoast SEO 23.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-22-10-24).
+
+#### Enhancements
+
+* Removes the _keyphrase in slug_ assessment for static home pages.
+
+#### Bugfixes
+
+* Fixes a bug where a database error would occur when there were no public taxonomies available for indexing.
+* Fixes a bug where another plugin running the `exit()` function inside the `plugin_loaded` hook would result in a fatal error. Props to [menno-ll](https://github.com/menno-ll).
+
+#### Other
+
+* Removes translation strings that are not meant for the Yoast SEO Free version from the plugin.
+* Resets the notice for search engines discouraged when changing Search engine visibility to visible.
+
 = 23.6 =
 
 Release date: 2024-10-08

@@ -1,3 +1,11 @@
+## 16.4
+
+Release date: 2024-10-22
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.5.
+
 ## 16.3
 
 Release date: 2024-09-24

@@ -1,3 +1,18 @@
+## 23/10/2024 11:56 (UTC)
+
+Release date: 2024-10-23
+
+#### Enhancements
+
+* Adds _так_ to the words recognized by the _transition words_ assessment in Russian. Props to @pavelmai83.
+* Improves the _transition words_ assessment for Turkish and English by expanding the relevant lists of transitions words.
+* Improves the _word complexity_ assessment by not flagging the focus keyphrase or related keyphrases as complex words.
+* Increases the spacing between the assessment copy and the highlight buttons.
+
+#### Bugfixes
+
+* Fixes a bug where Arabic keyphrases containing certain function words were not correctly matched..
+
 ## 18/10/2024 09:25 (UTC)
 
 Release date: 2024-10-18

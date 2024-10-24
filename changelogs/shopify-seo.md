@@ -1,3 +1,11 @@
+## 24/10/2024 10:56 (UTC)
+
+Release date: 2024-10-24
+
+#### Bugfixes
+
+* Changes "Webmaster tools" page name to "Site connections".
+
 ## 23/10/2024 11:56 (UTC)
 
 Release date: 2024-10-23

@@ -99,8 +99,7 @@ export default {
 					   '\t\t\t"founder": {\n' +
 					   '\t\t\t\t"@type": "Person",\n' +
 					   '\t\t\t\t"name": "Joost de Valk",\n' +
-					   '\t\t\t\t"url": "https://yoast.com/about-us/team/joost-de-valk/",\n' +
-					   '\t\t\t\t"sameAs": "https://yoast.com/about-us/team/joost-de-valk/"\n' +
+					   '\t\t\t\t"sameAs": "https://en.wikipedia.org/wiki/Joost_de_Valk"\n' +
 					   "\t\t\t},\n" +
 					   '\t\t\t"foundingDate": "2010-05-01",\n' +
 					   '\t\t\t"slogan": "SEO for Everyone",\n' +

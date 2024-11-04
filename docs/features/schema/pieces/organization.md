@@ -119,8 +119,7 @@ function change_organization_schema( $data, $context ) {
 	$data['founder'] = [
 		'@type'  => 'Person',
 		'name'   => 'Joost de Valk',
-		'url'    => 'https://yoast.com/about-us/team/joost-de-valk/',
-		'sameAs' => 'https://yoast.com/about-us/team/joost-de-valk/',
+		'sameAs' => 'https://en.wikipedia.org/wiki/Joost_de_Valk',
 	];
 	$data['foundingDate']       = '2010-05-01';
 	$data['numberOfEmployees']  = (int) wp_count_posts( 'yoast_employees' )->publish;

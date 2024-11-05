@@ -1,3 +1,22 @@
+= 23.8 =
+
+Release date: 2024-11-05
+
+Yoast SEO 23.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-5-11-24).
+
+#### Enhancements
+
+* Introduces a new, redesigned General page.
+* Adds a notification to inform the user when an error occurs while changing the visibility of a notification or a problem.
+
+#### Bugfixes
+
+* Fixes a bug in our Elementor integration where previously saved slug values of drafts would be ignored.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 6.7.
+
 = 23.7 =
 
 Release date: 2024-10-22

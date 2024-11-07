@@ -342,6 +342,20 @@ module.exports = {
 				},
 				{
 					type: "category",
+					label: "News SEO",
+					items: [
+						"customization/news-seo/hooks",
+					],
+				},
+				{
+					type: "category",
+					label: "Video SEO",
+					items: [
+						"customization/video-seo/hooks",
+					],
+				},
+				{
+					type: "category",
 					label: "MyYoast",
 					items: [
 						{

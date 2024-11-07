@@ -24,7 +24,7 @@ This filter allows adding extra content to the News XML sitemap.
 The output that's added in `$str` defaults to an empty string.
 
 ### `Yoast\WP\News\publication_language`
-Arguments: `$publication_lang` (string), $item (Indexable)
+Arguments: `$publication_lang` (string), `$item` (Indexable)
 
 This filter allows changing the publication language of a specific post in the News XML sitemap.
 

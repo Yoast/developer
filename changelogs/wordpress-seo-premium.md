@@ -1,3 +1,23 @@
+## 23.9
+
+Release date: 2024-11-19
+
+Yoast SEO 23.9 brings enhancements to the Yoast SEO Semrush integration and various bug fixes. Find more about Yoast SEO 23.9 in [our release post](https://yoa.st/release-19-11-24)!
+
+#### Enhancements
+
+* Implements a new design for the buttons for adding/removing related keyphrases in the Semrush integration.
+* Improves the compatibility of the Yoast blocks with WordPress 6.7.
+
+#### Bugfixes
+
+* Fixes a bug where the highlighting marker button would be incorrectly enabled when switching the editor mode from code to visual, while the AI Optimize toast notification was still visible.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.9.
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
 ## 23.8
 
 Release date: 2024-11-05

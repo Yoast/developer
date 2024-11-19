@@ -1,3 +1,25 @@
+= 23.9 =
+
+Release date: 2024-11-19
+
+Yoast SEO 23.9 brings enhancements to the Yoast SEO Semrush integration and various bug fixes. Find more about Yoast SEO 23.9 in [our release post](https://yoa.st/release-19-11-24)!
+
+#### Enhancements
+
+* Adds a maximum width to the problems and notifications sections on the _General_ page.
+* Adds _Intent_ and _Difficulty_ to the metrics shown in the Semrush integration.
+* Improves the compatibility of the Yoast blocks with WordPress 6.7.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error is triggered in PHP 8.x when a user's additional contact methods have been improperly set to `null`. Props to [PhilETaylor](https://github.com/PhilETaylor).
+* Fixes a bug where the _First time configuration_ would have a double separator for the title and content.
+* Fixes a bug where the _First time configuration_ would not resize properly on smaller width screens.
+
+#### Other
+
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
 = 23.8 =
 
 Release date: 2024-11-05

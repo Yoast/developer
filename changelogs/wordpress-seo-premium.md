@@ -1,3 +1,23 @@
+## 24.0
+
+Release date: 2024-12-03
+
+Yoast SEO 24.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-12-24).
+
+#### Enhancements
+
+* Improves keyphrase recognition for word forms ending in `-er` in English.
+
+#### Bugfixes
+
+* Fixes a bug where AI Optimize suggestions would not be styled correctly in tablet or mobile mode.
+* Fixes a bug where AI Optimize suggestions would not be styled correctly in WordPress 6.7.
+* Fixes a bug where the inclusive language filter would be displayed on the WooCommerce orders overview page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.0.
+
 ## 23.9
 
 Release date: 2024-11-19

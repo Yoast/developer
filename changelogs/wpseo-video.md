@@ -1,3 +1,19 @@
+## 15.0
+
+Release date: 2024-12-03
+
+#### Bugfixes
+
+* Fixes a bug where the _Open Search appearance_ button would not work.
+
+#### Other
+
+* Renames _Google Preview editor_ to _Search appearance_, reflecting how we call it in Yoast SEO.
+* Sets the minimum required Yoast SEO version to 24.0.
+* Sets the minimum supported WordPress version to 6.5.
+* Sets the _WordPress tested up to_ version to 6.7.
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
 ## 14.9
 
 Release date: 2024-05-28

@@ -1,3 +1,26 @@
+= 24.0 =
+
+Release date: 2024-12-03
+
+Yoast SEO 24.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-12-24).
+
+#### Enhancements
+
+* Allows to set OpenGraph image HTML metadata `width`, `height`, and `type` to `null` in order not to show them. Props to [GiovanniMounir](https://github.com/GiovanniMounir).
+* Improves the _transition words_ assessment for Portuguese and English by updating the relevant lists of transition words. Props to [BrunoAseff](https://github.com/BrunoAseff).
+* Introduces an error message in the Yoast _General_ page in case of JavaScript errors.
+* Updates the design and translations of the country selector in the modal for related keyphrase suggestions.
+
+#### Bugfixes
+
+* Fixes a bug where the first step in the _First time configuration_ would not be considered finished unless the _Site representation_ step would be finished as well.
+* Fixes a bug where the settings for a post type are inaccessible when the permalink structure includes special characters that require encoding, e.g., when WooCommerce products are set to use the "Shop base with category" permalink structure.
+* Fixes a bug where the Yoast _General_ page would not reflect the active menu item properly if using a fallback.
+
+#### Other
+
+* Improves the documentation for `wpseo_enable_tracking` filter. Props to [kkmuffme](https://github.com/kkmuffme).
+
 = 23.9 =
 
 Release date: 2024-11-19

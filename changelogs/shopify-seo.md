@@ -1,3 +1,16 @@
+## 05/12/2024 08:33 (UTC)
+
+Release date: 2024-12-05
+
+#### Enhancements
+
+* Adds information about issues with custom metafields type definition during content saving.
+* Collect user feedback after usage of the AI Generators.
+
+#### Bugfixes
+
+* Fixes issue with inclusive language settings not reflected in SEO scoring.
+
 ## 24/10/2024 10:56 (UTC)
 
 Release date: 2024-10-24

@@ -1,3 +1,11 @@
+## 09/12/2024 10:17 (UTC)
+
+Release date: 2024-12-09
+
+#### Bugfixes
+
+* Improves the Shopify meta description field to allow wrapping onto multiple lines for easier editing.
+
 ## 05/12/2024 08:33 (UTC)
 
 Release date: 2024-12-05

@@ -1,3 +1,16 @@
+## 16.5
+
+Release date: 2024-12-18
+
+#### Enhancements
+
+* Adds support for the new `priceSpecification` schema type format introduced by WooCommerce 9.5.0.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.1.
+* Sets the _WordPress tested up to_ version to 6.7.
+
 ## 16.4
 
 Release date: 2024-10-22

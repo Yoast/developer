@@ -1,3 +1,17 @@
+## 24.1
+
+Release date: 2024-12-18
+
+Yoast SEO 24.1 adds the Yoast SEO Dashboard to monitor your site's SEO performance in one overview. Find more about Yoast SEO 24.1 in [our release post](https://yoa.st/release-18-12-24)!
+
+#### Bugfixes
+
+* Fixes a bug where the Yoast AI usage counter would only be displayed after a delay.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.1.
+
 ## 24.0
 
 Release date: 2024-12-03

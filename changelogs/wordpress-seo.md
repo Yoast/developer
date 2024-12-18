@@ -1,3 +1,23 @@
+= 24.1 =
+
+Release date: 2024-12-18
+
+Yoast SEO 24.1 adds the Yoast SEO Dashboard to monitor your site's SEO performance in one overview. Find more about Yoast SEO 24.1 in [our release post](https://yoa.st/release-18-12-24)!
+
+#### Enhancements
+
+* Introduces the Yoast Dashboard, a place where site administrators can check the SEO and Readability performance of the site's posts.
+* Adds `Not analyzed` as an option in the readability filter in the posts page.
+* Enhances the existing `Needs improvement` option in the readability filter in the posts page, to include posts that don't have enough content as well.
+
+#### Bugfixes
+
+* Fixes a bug where posts that have been set to explicitly not be noindexed and had no keyword set would not appear in the relevant SEO filter in the posts page.
+
+#### Other
+
+* Improves the translatability of feedback for the _paragraph length_ and the _sentence length_ assessments.
+
 = 24.0 =
 
 Release date: 2024-12-03

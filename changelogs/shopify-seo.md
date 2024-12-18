@@ -1,3 +1,16 @@
+## 18/12/2024 10:57 (UTC)
+
+Release date: 2024-12-18
+
+#### Enhancements
+
+* Improve consistency of the feedback colors used across the app.
+
+#### Bugfixes
+
+* Hides insights statistics for blogs content type.
+* Removes Semrush token when integration is deactivated.
+
 ## 09/12/2024 10:17 (UTC)
 
 Release date: 2024-12-09

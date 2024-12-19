@@ -1,3 +1,11 @@
+## 19/12/2024 08:38 (UTC)
+
+Release date: 2024-12-19
+
+#### Enhancements
+
+* Improves AI SEO title and description generation for Collections.
+
 ## 18/12/2024 10:57 (UTC)
 
 Release date: 2024-12-18

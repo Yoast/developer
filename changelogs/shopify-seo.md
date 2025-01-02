@@ -1,3 +1,11 @@
+## 02/01/2025 09:22 (UTC)
+
+Release date: 2025-01-02
+
+#### Bugfixes
+
+* Fixes a bug where navigation groups would close automatically when navigating across pages.
+
 ## 19/12/2024 08:38 (UTC)
 
 Release date: 2024-12-19

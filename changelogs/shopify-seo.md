@@ -1,3 +1,11 @@
+## 06/01/2025 09:22 (UTC)
+
+Release date: 2025-01-06
+
+#### Bugfixes
+
+* Fixes an issue where the focus keyphrase requirement would not be scrolled into the screen for subsequent AI Generate usage attempts.
+
 ## 02/01/2025 09:22 (UTC)
 
 Release date: 2025-01-02

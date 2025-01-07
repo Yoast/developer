@@ -1,3 +1,24 @@
+= 24.2 =
+
+Release date: 2025-01-07
+
+Yoast SEO 24.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-7-1-25).
+
+#### Enhancements
+
+* Improves the tooltips accessibility in the related keyphrase suggestions modal.
+
+#### Bugfixes
+
+* Fixes a bug where a deprecation message would appear in PHP 8+ when saving a post containing images with invalid sources. Props to [kkmuffme](https://github.com/kkmuffme).
+* Fixes a bug where a TypeError would occur when checking for capabilities of SEO Manager user role when the roles were not passed as an array. Props to [kfeinUI](https://github.com/kfeinUI).
+* Fixes a bug where styles on buttons, intent badge and modal links would not adjust the direction when on RTL view.
+
+#### Other
+
+* Changes the title text on the Yoast installation success page.
+* Fixes a console warning about ReactDOM.render being no longer supported in React 18.
+
 = 24.1 =
 
 Release date: 2024-12-18

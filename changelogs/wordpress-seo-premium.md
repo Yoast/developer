@@ -1,3 +1,18 @@
+## 24.2
+
+Release date: 2025-01-07
+
+Yoast SEO 24.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-7-1-25).
+
+#### Bugfixes
+
+* Fixes a bug where an error modal requesting a Yoast WooCommerce SEO subscription was shown when clicking the 'Use AI' button for Custom Post Type (CPT) products and taxonomies.
+* Fixes a bug where translations would break for the internal linking unindexed notice when in other languages.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.2.
+
 ## 24.1
 
 Release date: 2024-12-18

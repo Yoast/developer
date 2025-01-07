@@ -1,3 +1,17 @@
+## 07/01/2025 09:53 (UTC)
+
+Release date: 2025-01-07
+
+#### Enhancements
+
+* Improves keyphrase recognition for word forms ending in `-er` in English.
+* Improves the _transition words_ assessment for Portuguese and English by updating the relevant lists of transition words.
+* Moves Terms and Conditions and Newsletter subscription to subscription upgrade page.
+
+#### Other
+
+* Improves the translatability of feedback for the _paragraph length_ and the _sentence length_ assessments.
+
 ## 06/01/2025 09:22 (UTC)
 
 Release date: 2025-01-06

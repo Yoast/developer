@@ -1,3 +1,23 @@
+## 24.3
+
+Release date: 2025-01-21
+
+Yoast SEO 24.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds the Yoast AI Optimize feature to _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where interacting with the SEO/Readability/Inclusive language analysis tab/collapsible would disable the highlighting buttons when an AI Optimize button was present in the analysis results.
+* Fixes a bug where modifying content in the editor that could lead to a different analysis score would disable the highlighting buttons when an AI Optimize button was present in the analysis results.
+* Fixes a bug where switching between "visual" and "code" editors inside the Block editor would not disable the highlighting buttons when there was no AI Optimize button in the analysis results.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.3.
+
 ## 24.2
 
 Release date: 2025-01-07

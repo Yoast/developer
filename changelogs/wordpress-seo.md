@@ -1,3 +1,24 @@
+= 24.3 =
+
+Release date: 2025-01-21
+
+Yoast SEO 24.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Introduces more robust HTML processing and highlighting for the _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where the Semrush request would be executed twice when opening the related keyphrases modal.
+* Fixes a bug where the text color in the search on our settings page would not change correctly when active, resulting in bad contrast.
+* Fixes a bug where the _View_ button label in the Yoast dashboard would not be available for translation.
+
+#### Other
+
+* Improves contrast in the related keyphrase suggestions table.
+* Improves contrast in the RSS supported variables explainer table.
+
 = 24.2 =
 
 Release date: 2025-01-07

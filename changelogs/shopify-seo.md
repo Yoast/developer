@@ -1,3 +1,11 @@
+## 24/01/2025 08:12 (UTC)
+
+Release date: 2025-01-24
+
+#### Enhancements
+
+* Remove optional checkboxes from upgrade checkout to reduce clutter.
+
 ## 07/01/2025 09:53 (UTC)
 
 Release date: 2025-01-07

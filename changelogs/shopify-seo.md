@@ -1,3 +1,16 @@
+## 27/01/2025 10:02 (UTC)
+
+Release date: 2025-01-27
+
+#### Enhancements
+
+* Adds a cancellation explainer on the subscription page.
+* Adds a clear purchase intent to the buy-button on the subscription page.
+
+#### Bugfixes
+
+* Fixes a bug where the Bulk Edit and Import/Export features would not be available when a merchant is still in the trial period of their subscription.
+
 ## 24/01/2025 08:12 (UTC)
 
 Release date: 2025-01-24

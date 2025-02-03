@@ -1,3 +1,11 @@
+## 03/02/2025 09:25 (UTC)
+
+Release date: 2025-02-03
+
+#### Bugfixes
+
+* Fixes issues with exporting data requests.
+
 ## 27/01/2025 10:02 (UTC)
 
 Release date: 2025-01-27

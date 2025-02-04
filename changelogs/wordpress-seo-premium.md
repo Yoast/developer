@@ -1,3 +1,17 @@
+## 24.4
+
+Release date: 2025-02-04
+
+Yoast SEO 24.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves keyphrase recognition for German plural noun forms with an umlaut.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.4.
+
 ## 24.3
 
 Release date: 2025-01-21

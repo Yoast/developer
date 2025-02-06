@@ -1,3 +1,11 @@
+## 06/02/2025 08:32 (UTC)
+
+Release date: 2025-02-06
+
+#### Enhancements
+
+* Adds Shopify title and Shopify slug to CSV export files.
+
 ## 03/02/2025 09:25 (UTC)
 
 Release date: 2025-02-03

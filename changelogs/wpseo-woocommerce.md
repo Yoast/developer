@@ -1,3 +1,17 @@
+## 16.6
+
+Release date: 2025-02-18
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown in product pages when WooCommerce add-ons added schema but didn't account for the new WooCommerce schema structure, introduced in WooCommerce v9.5.0.
+* Fixes a bug where a variable product without a product image would lead to a malformed schema output.
+* Fixes a bug where product attributes would not be included in a product schema.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.5.
+
 ## 16.5
 
 Release date: 2024-12-18

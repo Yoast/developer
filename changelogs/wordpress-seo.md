@@ -1,3 +1,22 @@
+= 24.5 =
+
+Release date: 2025-02-18
+
+Yoast SEO 24.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Issues a warning message when the image automatically selected for a post social preview is in the unsupported AVIF format.
+
+#### Bugfixes
+
+* Fixes a bug where the canonical presenter would throw a deprecation notice when the environments run PHP >= 8.1. Props to [aanduque](https://github.com/aanduque).
+
+#### Other
+
+* Simplifies calculating the `date` replacement variable before displaying it in the frontend. Props to [apermo](https://github.com/apermo).
+* Updates the Yoast WooCommerce SEO integration cards with the latest Woo logo.
+
 = 24.4 =
 
 Release date: 2025-02-04

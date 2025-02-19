@@ -1,3 +1,11 @@
+## 19/02/2025 11:55 (UTC)
+
+Release date: 2025-02-19
+
+#### Bugfixes
+
+* Fixes issue with default value support inside canonical_url column during imports.
+
 ## 06/02/2025 08:32 (UTC)
 
 Release date: 2025-02-06

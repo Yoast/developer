@@ -1,3 +1,11 @@
+## 20/02/2025 08:42 (UTC)
+
+Release date: 2025-02-20
+
+#### Enhancements
+
+* Introduces new, automated Site Connections settings feature.
+
 ## 19/02/2025 11:55 (UTC)
 
 Release date: 2025-02-19

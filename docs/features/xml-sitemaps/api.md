@@ -32,7 +32,7 @@ add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', 'exclude_posts_from_xml_si
  * @param boolean $excluded  Whether the post type is excluded by default.
  * @param string  $post_type The post type to exclude.
  *
- * @return bool Whether or not a given post type should be excluded.
+ * @return bool Whether a given post type should be excluded.
  */
 function sitemap_exclude_post_type( $excluded, $post_type ) {
     return $post_type === 'recipes';
@@ -49,7 +49,7 @@ add_filter( 'wpseo_sitemap_exclude_post_type', 'sitemap_exclude_post_type', 10, 
  * @param boolean $excluded Whether the taxonomy is excluded by default.
  * @param string  $taxonomy The taxonomy to exclude.
  *
- * @return bool Whether or not a given taxonomy should be excluded.
+ * @return bool Whether a given taxonomy should be excluded.
  */
 function sitemap_exclude_taxonomy( $excluded, $taxonomy ) {
     return $taxonomy === 'ingredients';
@@ -127,7 +127,7 @@ add_action( 'init', 'enable_custom_sitemap' );
 function add_sitemap_custom_items( $sitemap_custom_items ) {
     $sitemap_custom_items .= '
 <sitemap>
-<loc>http://www.example.com/external-sitemap-1.xml</loc>
+<loc>https://www.example.com/external-sitemap-1.xml</loc>
 <lastmod>2017-05-22T23:12:27+00:00</lastmod>
 </sitemap>';
     return $sitemap_custom_items;
@@ -195,7 +195,7 @@ function filter_wpseo_sitemap_urlimages_front_page( $images ) {
 add_filter( 'wpseo_sitemap_urlimages_front_page', 'filter_wpseo_sitemap_urlimages_front_page' );
 ```
 
-## Misc
+## Miscellaneous
 
 ### Alter the URL of an entry
 ```php
@@ -232,7 +232,7 @@ add_filter( 'wpseo_xml_sitemap_post_url', 'sitemap_post_url', 10, 2 );
 add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap' );
 ```
 
-### Add extra properties to the <video:video> container 
+### Add extra properties to the `<video:video>` container
 ```php
 /**
  * Adds an example <video:live> property to a <video:video> container for a particular post
@@ -258,7 +258,7 @@ add_filter( 'wpseo_sitemap_entries_per_page', 'max_entries_per_sitemap' );
 add_filter( 'wpseo_video_item', 'add_video_live_property', 10, 2 );
 ```
 
-### Filter the urlset element.
+### Filter the `urlset` element
 For instance, if you want to use xhtml:link elements in your XML sitemap to add, for instance, hreflang markup, you could do the following:
 ```php
 /**
@@ -269,4 +269,16 @@ For instance, if you want to use xhtml:link elements in your XML sitemap to add,
 add_filter( 'wpseo_sitemap_urlset', function( $urlset ) { 
   return str_replace( '>', ' xmlns:xhtml="http://www.w3.org/1999/xhtml">', $urlset );
 }, 1, 10 );
+```
+
+### Filter the sitemap URL
+```php
+/**
+ * Allows filtering of the XSL URL used in the current environment.
+ *
+ * @param string $current_url The current XSL URL.
+ */
+add_filter( 'wpseo_sitemap_public_url', function ( $current_url ) {
+  return 'https://another-url.com/main-sitemap.xml';
+} );
 ```

@@ -83,7 +83,7 @@ Whether you need the *OpenGraph description* or the *robots array*, this has you
 
 ## Deprecated properties
 | Variable | Type | Description | Deprecated |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | open_graph_fb_app_id | string | The Facebook App ID. | Yoast SEO 15.5 (Dec 2020) |
 
 ## For other pages

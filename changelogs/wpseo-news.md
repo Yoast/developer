@@ -1,3 +1,21 @@
+## 13.3
+
+Release date: 2025-02-04
+
+#### Enhancements
+
+* Allows for News Sitemap items to change the language via a new filter `Yoast\WP\News\publication_language`. Props to [dgwatkins](https://github.com/dgwatkins).
+
+#### Bugfixes
+
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
+#### Other
+
+* Sets the minimum required Yoast SEO version to 24.4.
+* Sets the minimum supported WordPress version to 6.5.
+* Sets the _WordPress tested up to_ version to 6.7.
+
 ## 13.2
 
 Release date: 2024-03-05
@@ -757,7 +775,7 @@ Release date: 2016-09-27
 
 #### Enhancements
 
-* [General accessibility improvements](https://github.com/Yoast/wpseo-news/pull/238)
+* General accessibility improvements.
 
 ## 3.5.1
 

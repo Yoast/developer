@@ -7,9 +7,9 @@ description: An overview of how description tags work in Yoast SEO.
 
 Every public page on a website should contain a unique, useful editorial summary of the content/purpose of that page, output in a _meta description_ tag.
 
-A valid meta description tag takes the following format: `<meta name="description" content="{{VALUE}}" />`.
+A valid meta description tag takes the following format: `<meta name="description" content="{{value}}" />`.
 
-## Constructing {{values}}
+## Constructing `{{value}}`
 
 ### User-specified patterns
 Whenever the user has defined a pattern/template for meta description values (e.g., using Yoast SEO's replacement variables), that pattern should be used.

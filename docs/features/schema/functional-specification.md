@@ -63,7 +63,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -129,7 +129,7 @@ The following examples demonstrate how our base script may be extended and alter
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -270,7 +270,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
           {
               "@type": "Organization",
               "@id": "https://www.example.com/#/schema/Organization/1",
-              "name": "Example Orgnaization",
+              "name": "Example Organization",
               "url": "https://www.example.com/",
               "sameAs": [
                   "https://www.facebook.com/example/",
@@ -431,7 +431,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
 Our [technical documentation](technology-approach.md) contains more extensive and varied examples, as well details on how [Yoast SEO software](https://yoast.com/wordpress/plugins/seo/) determines what to output in various scenarios.
 
 ## Altering or extending our graphs
-All of our output can be altered, extended or disabled (by *piece* or in totality) via a full API. The documentation for this is available [here](api.md).
+All of our output can be altered, extended or disabled (by *piece* or in totality) via [a full API](api.md).
 
 In scenarios where third-party plugins, themes or systems result in 'un-stitching' of the graph, duplicate/conflated properties, or shared ID spaces, we recommend adopting our framework and [utilizing our APIs](api.md) (or encouraging the relevant solution authors to do so).
 
@@ -451,7 +451,7 @@ On the surface, JSON-LD's requirement to output a single, static snippet of code
 * They're tied to the structure of the page's HTML markup. That means that it's hard to represent structures and entities whose properties don't align perfectly to the page's layout, and often, representing meta properties or linked data requires inlining of hidden properties and meta tags.
 * They do a poor job of handling the complexity of relationships. If *entity A* shares or inherits a property with *entity B*, or is a child of *entity C*, there's no easy way to represent this. There's also no easy way to reverse the direction of relationship declarations.
 * Not all entities can be easily represented by a neat hierarchy, which can align to the HTML markup of a template. For example, correctly positioning the *main content* of a `WebPage` which contains an `Article` - which is published by an `Organization` on a `WebSite`, and which has an `Author` and other attributes - as the explicit centre of a network graph, isn't always easy when working with linear, nested markup. There's an amount of cross-linking and relationship referencing required to abstract away from the page's code structure.
-* Even if you can overcome all of this, it's hard to universally integrate into all of the individual templates of websites where the schema is required - businesses and users will utilize a variety of templates, themes, markups, plugins, coding techniques and processes - making it incredibly difficult to rely on maintaining valid markup. In the WordPress world, at least, we can't guarantee that themes and plugins will be able to reliably and cleanly communicate, integrate and structure inline markup.
+* Even if you can overcome all of this, it's hard to universally integrate into all the individual templates of websites where the schema is required - businesses and users will utilize a variety of templates, themes, markups, plugins, coding techniques and processes - making it incredibly difficult to rely on maintaining valid markup. In the WordPress world, at least, we can't guarantee that themes and plugins will be able to reliably and cleanly communicate, integrate and structure inline markup.
 
 As we're attempting to maximize flexibility and interoperability, in this context, JSON-LD is a clear winner.
 
@@ -475,7 +475,7 @@ Approaches which rely on external scripts and platforms - such as tag management
 Throughout the examples in this document, we generally make a few assumptions about images:
 
 * Even though the core [schema.org](https://schema.org) definitions don't always list image as a required attribute of a piece, Google *does* frequently require an image for almost all piece types (i.e., eligibility for their 'rich snippets' and similar experiences almost always require pages, blog posts, products and other piece entities to have at least one image). **Assume that anywhere where we've included an image parameter, it should be considered to be mandatory.**
-* All image properties should be registered as arrays of `imageObject` entities, so as to be able to set advanced properties (like caption) where feasible, and to be able to inherit/share images across pieces via ID. This enables ease of sharing of images between related pieces (e.g., where the main/featured image of a `blogPosting` is often likely to be the same entity as the `primaryImageOfPage` of the page where the blog post resides).
+* All image properties should be registered as arrays of `imageObject` entities, to be able to set advanced properties (like caption) where feasible, and to be able to inherit/share images across pieces via ID. This enables ease of sharing of images between related pieces (e.g., where the main/featured image of a `blogPosting` is often likely to be the same entity as the `primaryImageOfPage` of the page where the blog post resides).
 * Size and format constraints vary by agent, but, common sense should be applied.
 
 ### 4. Using canonical URLs
@@ -487,8 +487,8 @@ For example, if *Page A* has a URL of [https://www.example.com/page-a/](https://
 We have three preferred tools when testing, evaluating and debugging schema.
 
 - [The official schema.org validator](https://validator.schema.org/) checks that for structural and syntax errors.
-- [Google's Rich Results Test](https://search.google.com/test/rich-results) (or 'SDTT') validates whether a given page is eligable for certain types of rich results in Google.
-- [Classy Schema](https://classyschema.org/Visualisation) visualises a page's graph, to ensure that it's cohesive and coherant.
+- [Google's Rich Results Test](https://search.google.com/test/rich-results) (or 'SDTT') validates whether a given page is eligible for certain types of rich results in Google.
+- [Classy Schema](https://classyschema.org/Visualisation) visualises a page's graph, to ensure that it's cohesive and coherent.
 
 ### 6. Known issues
 There are a number of scenarios where the SDTT deviates from the schema.org definitions. In some cases, we've adapted or compromised our approach to find a solution which applies to both - in others, we've swayed in favor of one or the other, depending on the context.
@@ -507,6 +507,6 @@ To work around this, we merge the `Person` with an `Organization` to create a hy
 ### 7. Other consumers
 At the time of publishing, it appears that Bing does not support this approach; their 'Markup Validator' tool (part of [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster)) does not detect (and/or parse) markup contained within a `@graph` structure (which forms the backbone of our approach). We're seeking to engage in dialogue with Bing to determine their stance on support.
 
-Social platforms like Facebook, X, Pinterest, etc, have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
+Social platforms like Facebook, X, Pinterest, etc., have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
 
 The support of other search engines (e.g., Baidu, Yandex, others) is unknown; it's our assumption that support will generated be limited, or not exist. We hope that the broad adoption of our approach will encourage these, and other consumers, to expand their support.

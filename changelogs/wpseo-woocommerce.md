@@ -1,3 +1,43 @@
+## 16.5
+
+Release date: 2024-12-18
+
+#### Enhancements
+
+* Adds support for the new `priceSpecification` schema type format introduced by WooCommerce 9.5.0.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.1.
+* Sets the _WordPress tested up to_ version to 6.7.
+
+## 16.4
+
+Release date: 2024-10-22
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.5.
+
+## 16.3
+
+Release date: 2024-09-24
+
+#### Enhancements
+
+* Adds the ability to set a page as the designated return policy page, which gets added in the structured data graph.
+
+#### Bugfixes
+
+* Fixes a bug where the feedback for the _SKU assessment_ would not be translated when the SKU was missing.
+* Fixes a bug where `wp_get_attachment_image_src` gets called with a non-existing image id, thus returning `false` instead of an array.
+
+#### Other
+
+* Sets the minimum required Yoast SEO version to 23.5.
+* Sets the minimum supported WordPress version to 6.4.
+* Sets the _WordPress tested up to_ version to 6.6.
+
 ## 16.2
 
 Release date: 2024-04-03

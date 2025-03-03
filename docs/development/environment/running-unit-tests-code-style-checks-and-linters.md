@@ -3,13 +3,13 @@ id: running-unit-tests-code-style-checks-and-linters
 title: "Yoast SEO Development: Unit tests, code style and linters"
 sidebar_label: Unit tests, code style & linters
 ---
-At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and less bugs.
+At Yoast we use a variety of tools to ensure our code adheres to a certain set of standards, which allow us to ship our products with more confidence and fewer bugs.
 
 These tools include the following:
 
 * Unit tests - To ensure isolated functions / methods behave as expected.
-* Integration tests - To ensure that a chain of actions (i.e function/method calls) behave as expected.
-* Linters - To ensure that code is written in a uniform way (i.e. structure, spacing etc.).
+* Integration tests - To ensure that a chain of actions (i.e., function/method calls) behave as expected.
+* Linters - To ensure that code is written in a uniform way (i.e., structure, spacing etc.).
 
 ## PHP
 
@@ -26,7 +26,7 @@ The results of this analysis are then stored as a report that can later be used 
 To configure your system to be able to run with code coverage, follow these steps:
 
 1. Run `pecl install xdebug` in your terminal to install XDebug.
-1. To run the tests including the coverage, click <img alt="Coverage button in PhpStorm" src="https://user-images.githubusercontent.com/17744553/53946611-714ab580-40c4-11e9-85b6-fde5576e4609.png" /> in the upper right corner of PhpStorm.
+2. To run the tests including the coverage, click <img alt="Coverage button in PhpStorm" src="https://user-images.githubusercontent.com/17744553/53946611-714ab580-40c4-11e9-85b6-fde5576e4609.png" /> in the upper right corner of PhpStorm.
 
 ##### Troubleshooting
 
@@ -37,9 +37,9 @@ If you get an error `"Failed loading /usr/local/Cellar/php@7.1/7.1.26/lib/php/20
 Follow these steps to configure your extension directory:
 
 1. Run `php --ini` in your terminal to find your `php.ini` file.
-1. Open the `php.ini` file in your preferred editor.
-1. To find out what the proper extension directory is, run: `pecl config-get ext_dir` in a separate terminal window.
-1. Now uncomment and update the extension_dir in your php.ini:`extension_dir = /usr/local/lib/php/pecl/<php_api_version>` and replace the pathname with the one you found in the previous step.
+2. Open the `php.ini` file in your preferred editor.
+3. To find out what the proper extension directory is, run: `pecl config-get ext_dir` in a separate terminal window.
+4. Now uncomment and update the extension_dir in your php.ini:`extension_dir = /usr/local/lib/php/pecl/<php_api_version>` and replace the pathname with the one you found in the previous step.
 
 Sometimes the unit tests will run on a different PHP version than the one used for code coverage. This is because of a quirk in PhpStorm.
 
@@ -122,13 +122,13 @@ To enable this automatic usage, select the `Automatic ESlint configuration` opti
 #### Run linter manually
 To run the linter, use the following command in your terminal:
 
-* `grunt eslint`
+* `yarn lint`
 
 ## Availability
 |                  | wordpress-seo | wordpress-seo-premium | wpseo-news | wpseo-video | wpseo-woocommerce |
 |------------------|---------------|-----------------------|------------|-------------|-------------------|
-| PHPUnit          | ✅            | ✅                   | ✅         | ✅          | ✅                |
-| PHPLint          | ✅            | ✅                   | ✅         | ✅          | ✅                |
-| PHPCS            | ✅            | ✅                   | ✅         | ✅          | ✅                |
-| JavaScript tests | ✅            | ✅                   | ❌         | ❌          | ❌                |
-| ESLint           | ✅            | ✅                   | ❌         | ✅          | ❌                |
+| PHPUnit          | ✅             | ✅                     | ✅          | ✅           | ✅                 |
+| PHPLint          | ✅             | ✅                     | ✅          | ✅           | ✅                 |
+| PHPCS            | ✅             | ✅                     | ✅          | ✅           | ✅                 |
+| JavaScript tests | ✅             | ✅                     | ❌          | ❌           | ❌                 |
+| ESLint           | ✅             | ✅                     | ❌          | ✅           | ❌                 |

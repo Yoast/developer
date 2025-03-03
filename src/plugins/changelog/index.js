@@ -3,6 +3,8 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
+ *
+ * Based on: https://github.com/facebook/docusaurus/blob/main/website/src/plugins/changelog/index.js
  */
 
 const path = require( "path" );
@@ -149,7 +151,8 @@ async function ChangelogPlugin( context, options ) {
 				options.id,
 			);
 			// Redirect the metadata path to our folder
-			config.module.rules[ 0 ].use[ 1 ].options.metadataPath = ( mdxPath ) => {
+			const mdxLoader = config.module.rules[ 0 ].use[ 0 ];
+			mdxLoader.options.metadataPath = ( mdxPath ) => {
 				// Note that metadataPath must be the same/in-sync as
 				// the path from createData for each MDX.
 				const aliasedPath = aliasedSitePath( mdxPath, context.siteDir );

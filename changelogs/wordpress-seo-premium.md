@@ -1,3 +1,232 @@
+## 24.5
+
+Release date: 2025-02-18
+
+Yoast SEO 24.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the overall score for the Related keyphrase analysis would still be orange when all the individual assessment results were green.
+* Fixes a bug where tooltips would exceed the width of the sidebar.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.5.
+
+## 24.4
+
+Release date: 2025-02-04
+
+Yoast SEO 24.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves keyphrase recognition for German plural noun forms with an umlaut.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.4.
+
+## 24.3
+
+Release date: 2025-01-21
+
+Yoast SEO 24.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds the Yoast AI Optimize feature to _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where interacting with the SEO/Readability/Inclusive language analysis tab/collapsible would disable the highlighting buttons when an AI Optimize button was present in the analysis results.
+* Fixes a bug where modifying content in the editor that could lead to a different analysis score would disable the highlighting buttons when an AI Optimize button was present in the analysis results.
+* Fixes a bug where switching between "visual" and "code" editors inside the Block editor would not disable the highlighting buttons when there was no AI Optimize button in the analysis results.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.3.
+
+## 24.2
+
+Release date: 2025-01-07
+
+Yoast SEO 24.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-7-1-25).
+
+#### Bugfixes
+
+* Fixes a bug where an error modal requesting a Yoast WooCommerce SEO subscription was shown when clicking the 'Use AI' button for Custom Post Type (CPT) products and taxonomies.
+* Fixes a bug where translations would break for the internal linking unindexed notice when in other languages.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.2.
+
+## 24.1
+
+Release date: 2024-12-18
+
+Yoast SEO 24.1 adds the Yoast SEO Dashboard to monitor your site's SEO performance in one overview. Find more about Yoast SEO 24.1 in [our release post](https://yoa.st/release-18-12-24)!
+
+#### Bugfixes
+
+* Fixes a bug where the Yoast AI usage counter would only be displayed after a delay.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.1.
+
+## 24.0
+
+Release date: 2024-12-03
+
+Yoast SEO 24.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-12-24).
+
+#### Enhancements
+
+* Improves keyphrase recognition for word forms ending in `-er` in English.
+
+#### Bugfixes
+
+* Fixes a bug where AI Optimize suggestions would not be styled correctly in tablet or mobile mode.
+* Fixes a bug where AI Optimize suggestions would not be styled correctly in WordPress 6.7.
+* Fixes a bug where the inclusive language filter would be displayed on the WooCommerce orders overview page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.0.
+
+## 23.9
+
+Release date: 2024-11-19
+
+Yoast SEO 23.9 brings enhancements to the Yoast SEO Semrush integration and various bug fixes. Find more about Yoast SEO 23.9 in [our release post](https://yoa.st/release-19-11-24)!
+
+#### Enhancements
+
+* Implements a new design for the buttons for adding/removing related keyphrases in the Semrush integration.
+* Improves the compatibility of the Yoast blocks with WordPress 6.7.
+
+#### Bugfixes
+
+* Fixes a bug where the highlighting marker button would be incorrectly enabled when switching the editor mode from code to visual, while the AI Optimize toast notification was still visible.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.9.
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
+## 23.8
+
+Release date: 2024-11-05
+
+Yoast SEO 23.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-5-11-24).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.8.
+* Sets the _WordPress tested up to_ version to 6.7.
+
+## 23.7
+
+Release date: 2024-10-22
+
+Yoast SEO 23.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-22-10-24).
+
+#### Enhancements
+
+* Introducing a new feature: AI SEO title and meta description generation for WooCommerce product categories and tags! To unlock this SEO magic, make sure you have both Yoast SEO Premium and Yoast WooCommerce SEO installed.
+
+#### Bugfixes
+
+* Fixes a bug where the _Table of Contents_ block title would not be translated when it was added to a page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.7.
+
+## 23.6
+
+Release date: 2024-10-08
+
+Yoast SEO 23.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-8-10-24).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.6.
+* Sets the minimum supported WordPress version to 6.5.
+
+## 23.5
+
+Release date: 2024-09-24
+
+Yoast SEO 23.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-24-9-24).
+
+#### Enhancements
+
+* Improves the clarity of error messages that are shown when there is a problem with AI features.
+
+#### Bugfixes
+
+* Fixes a bug where the toast notification would appear in the wrong position when using _AI Generate_ with little or no content.
+* Fixes a bug where two sentences in the internal linking suggestions would not be translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.5.
+
+## 23.4
+
+Release date: 2024-09-03
+
+Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-9-24).
+
+#### Enhancements
+
+* Disables the highlighting buttons whenever _AI Optimize_ is used.
+* Enables the _AI Optimize_ feature for the _keyphrase in introduction_ assessment when the introduction is part of a Classic block.
+* Improves the success rate of _AI Optimize_ suggestions for a post that contains list blocks.
+* Prevents showing the "not enough content" error message when _AI Generate_ is used before the content is fully loaded.
+
+#### Bugfixes
+
+* Fixes a bug where a full stop would be added at the end of a previous sentence instead of the newly suggested sentence when using _AI Optimize_.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.4.
+
+## 23.3
+
+Release date: 2024-08-20
+
+Yoast SEO 23.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-20-8-24).
+
+#### Enhancements
+
+* Adds automatic scroll in AI Optimize when the first suggestion is out of view.
+* Ensures that AI suggestions don't include unnecessary quotes.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.3.
+
+## 23.2
+
+Release date: 2024-08-06
+
+**Introducing Yoast AI Optimize in beta for Yoast SEO 23.2!** Receive AI-powered suggestions to help your content cross the 'SEO' finish line, getting your content closer to a green traffic light at a click. Explore the details [in our latest release post](https://yoa.st/release-6-8-24)!
+
+#### Enhancements
+* Introduces the AI Optimize feature for the _keyphrase in introduction_, _keyphrase density_, and _keyphrase distribution_ assessments in the Block editor.
+* Improves the user experience for Yoast AI Generate by checking if the user has an active subscription before asking for consent.
+* Improves the _word complexity_ assessment by not flagging the focus keyphrase or related keyphrases as complex words.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 23.2.
+* Deprecates the `Ai_Generate_Titles_And_Descriptions_Introduction` class.
+
 ## 23.1
 
 Release date: 2024-07-23
@@ -88,7 +317,7 @@ Yoast SEO 22.7 brings multiple bugfixes and adds helpful error messages where AI
 
 Release date: 2024-04-30
 
-Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. Learn more [here](https://yoa.st/release-30-4-24)!
+Exciting news: Yoast SEO 22.6 is live! Explore the latest performance updates and enhancements in your favorite SEO tool. Don't forget: PHP version update required. [Learn more here](https://yoa.st/release-30-4-24)!
 
 #### Enhancements
 

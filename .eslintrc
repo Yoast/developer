@@ -8,6 +8,10 @@
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
+		},
+		"requireConfigFile": false,
+		"babelOptions": {
+			"presets": ["@docusaurus/core/lib/babel/preset"]
 		}
 	},
 

@@ -34,6 +34,7 @@ The following should be added whenever available and valid:
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the organization (e.g., a Wikipedia page, or Facebook profile).
 * `image`: An array of references-by-ID to `ImageObject` nodes which represent the organization (including the `logo` ).
 * `alternateName`: An alternate (usually _shorter_) name for the organization.
+* `hasMerchantReturnPolicy`: An array of the type `MerchantReturnPolicy` which represents a return policy of the organization.
 
 
 ## Transformations
@@ -118,8 +119,7 @@ function change_organization_schema( $data, $context ) {
 	$data['founder'] = [
 		'@type'  => 'Person',
 		'name'   => 'Joost de Valk',
-		'url'    => 'https://yoast.com/about-us/team/joost-de-valk/',
-		'sameAs' => 'https://yoast.com/about-us/team/joost-de-valk/',
+		'sameAs' => 'https://en.wikipedia.org/wiki/Joost_de_Valk',
 	];
 	$data['foundingDate']       = '2010-05-01';
 	$data['numberOfEmployees']  = (int) wp_count_posts( 'yoast_employees' )->publish;

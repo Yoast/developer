@@ -1,3 +1,282 @@
+## 20/02/2025 08:42 (UTC)
+
+Release date: 2025-02-20
+
+#### Enhancements
+
+* Introduces new, automated Site Connections settings feature.
+
+## 19/02/2025 11:55 (UTC)
+
+Release date: 2025-02-19
+
+#### Bugfixes
+
+* Fixes issue with default value support inside canonical_url column during imports.
+
+## 06/02/2025 08:32 (UTC)
+
+Release date: 2025-02-06
+
+#### Enhancements
+
+* Adds Shopify title and Shopify slug to CSV export files.
+
+## 03/02/2025 09:25 (UTC)
+
+Release date: 2025-02-03
+
+#### Bugfixes
+
+* Fixes issues with exporting data requests.
+
+## 27/01/2025 10:02 (UTC)
+
+Release date: 2025-01-27
+
+#### Enhancements
+
+* Adds a cancellation explainer on the subscription page.
+* Adds a clear purchase intent to the buy-button on the subscription page.
+
+#### Bugfixes
+
+* Fixes a bug where the Bulk Edit and Import/Export features would not be available when a merchant is still in the trial period of their subscription.
+
+## 24/01/2025 08:12 (UTC)
+
+Release date: 2025-01-24
+
+#### Enhancements
+
+* Remove optional checkboxes from upgrade checkout to reduce clutter.
+
+## 07/01/2025 09:53 (UTC)
+
+Release date: 2025-01-07
+
+#### Enhancements
+
+* Improves keyphrase recognition for word forms ending in `-er` in English.
+* Improves the _transition words_ assessment for Portuguese and English by updating the relevant lists of transition words.
+* Moves Terms and Conditions and Newsletter subscription to subscription upgrade page.
+
+#### Other
+
+* Improves the translatability of feedback for the _paragraph length_ and the _sentence length_ assessments.
+
+## 06/01/2025 09:22 (UTC)
+
+Release date: 2025-01-06
+
+#### Bugfixes
+
+* Fixes an issue where the focus keyphrase requirement would not be scrolled into the screen for subsequent AI Generate usage attempts.
+
+## 02/01/2025 09:22 (UTC)
+
+Release date: 2025-01-02
+
+#### Bugfixes
+
+* Fixes a bug where navigation groups would close automatically when navigating across pages.
+
+## 19/12/2024 08:38 (UTC)
+
+Release date: 2024-12-19
+
+#### Enhancements
+
+* Improves AI SEO title and description generation for Collections.
+
+## 18/12/2024 10:57 (UTC)
+
+Release date: 2024-12-18
+
+#### Enhancements
+
+* Improve consistency of the feedback colors used across the app.
+
+#### Bugfixes
+
+* Hides insights statistics for blogs content type.
+* Removes Semrush token when integration is deactivated.
+
+## 09/12/2024 10:17 (UTC)
+
+Release date: 2024-12-09
+
+#### Bugfixes
+
+* Improves the Shopify meta description field to allow wrapping onto multiple lines for easier editing.
+
+## 05/12/2024 08:33 (UTC)
+
+Release date: 2024-12-05
+
+#### Enhancements
+
+* Adds information about issues with custom metafields type definition during content saving.
+* Collect user feedback after usage of the AI Generators.
+
+#### Bugfixes
+
+* Fixes issue with inclusive language settings not reflected in SEO scoring.
+
+## 24/10/2024 10:56 (UTC)
+
+Release date: 2024-10-24
+
+#### Bugfixes
+
+* Changes "Webmaster tools" page name to "Site connections".
+
+## 23/10/2024 11:56 (UTC)
+
+Release date: 2024-10-23
+
+#### Enhancements
+
+* Adds _так_ to the words recognized by the _transition words_ assessment in Russian. Props to @pavelmai83.
+* Improves the _transition words_ assessment for Turkish and English by expanding the relevant lists of transitions words.
+* Improves the _word complexity_ assessment by not flagging the focus keyphrase or related keyphrases as complex words.
+* Increases the spacing between the assessment copy and the highlight buttons.
+
+#### Bugfixes
+
+* Fixes a bug where Arabic keyphrases containing certain function words were not correctly matched..
+
+## 18/10/2024 09:25 (UTC)
+
+Release date: 2024-10-18
+
+#### Enhancements
+
+* Improves feedback when trying to use AI suggestions while offline.
+
+#### Bugfixes
+
+* Changes the label on the Shopify SEO title variable to match the connected Shopify SEO title field.
+
+## 15/10/2024 08:51 (UTC)
+
+Release date: 2024-10-15
+
+#### Bugfixes
+
+* Fixes issue with newsletter modal redisplaying on Safari browser.
+
+## 14/10/2024 11:23 (UTC)
+
+Release date: 2024-10-14
+
+#### Enhancements
+
+* Adds support for "Product.brand" Schema, based on vendor value.
+
+## 14/10/2024 07:18 (UTC)
+
+Release date: 2024-10-14
+
+#### Enhancements
+
+* Optimize AI-powered suggestions for collections & blogs.
+
+#### Bugfixes
+
+* Fixes a bug where the AI suggestions modal would already show briefly when consent was still required.
+
+## 08/10/2024 12:50 (UTC)
+
+Release date: 2024-10-08
+
+#### Bugfixes
+
+* Fixes a bug where indefinite discounts were given.
+
+## 07/10/2024 07:44 (UTC)
+
+Release date: 2024-10-07
+
+#### Enhancements
+
+* Adds support for hasMerchantReturnPolicy Schema when return policy is configured for the Shop.
+
+## 03/10/2024 13:29 (UTC)
+
+Release date: 2024-10-03
+
+#### Enhancements
+
+* The Google preview now shows a meta description based on the item's content, when no specific meta description is added.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generators would not work on shops with a custom domain.
+* Fixes a link to an incorrect help article in the AI Generators.
+
+## 01/10/2024 08:16 (UTC)
+
+Release date: 2024-10-01
+
+#### Enhancements
+
+* Allow for generating titles and descriptions with AI.
+
+## 19/09/2024 11:07 (UTC)
+
+Release date: 2024-09-19
+
+#### Bugfixes
+
+* Fixes a bug where the "go to your apps section" link on "Uninstall Yoast SEO" settings page had an incorrect link, which would not allow going back to the app easily.
+
+## 04/09/2024 11:11 (UTC)
+
+Release date: 2024-09-04
+
+#### Enhancements
+
+* Combines the search appearance and the search engine listing sections into a single coherent search appearance editor.
+* Moves the social media appearance to follow the new placement of the search appearance section.
+
+## 22/08/2024 08:24 (UTC)
+
+Release date: 2024-08-22
+
+#### Bugfixes
+
+* Fixes issue with wrongly rendered aggregateRating Schema when product have no reviews added.
+
+## 19/08/2024 08:24 (UTC)
+
+Release date: 2024-08-19
+
+#### Enhancements
+
+* Adds a wider gap between assessment result list items.
+* Fixes detection for "**product | structured_data**" Schema generation inside Shopify theme to fix duplicated Schema.
+
+## 08/08/2024 09:57 (UTC)
+
+Release date: 2024-08-08
+
+#### Enhancements
+
+* Modify the 'Ask For Review' banner design to make it more user-friendly for customers.
+
+## 05/08/2024 08:05 (UTC)
+
+Release date: 2024-08-05
+
+#### Enhancements
+
+* Adds 3D models to the product structured data, to help search engines show them as 3D images in mobile search.
+
+#### Bugfixes
+
+* Changes "Bulk edit" link label and header for better understanding.
+
 ## 22/07/2024 08:21 (UTC)
 
 Release date: 2024-07-22

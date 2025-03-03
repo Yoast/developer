@@ -1,3 +1,276 @@
+= 24.5 =
+
+Release date: 2025-02-18
+
+Yoast SEO 24.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Issues a warning message when the image automatically selected for a post social preview is in the unsupported AVIF format.
+
+#### Bugfixes
+
+* Fixes a bug where the canonical presenter would throw a deprecation notice when the environments run PHP >= 8.1. Props to [aanduque](https://github.com/aanduque).
+
+#### Other
+
+* Simplifies calculating the `date` replacement variable before displaying it in the frontend. Props to [apermo](https://github.com/apermo).
+* Updates the Yoast WooCommerce SEO integration cards with the latest Woo logo.
+
+= 24.4 =
+
+Release date: 2025-02-04
+
+Yoast SEO 24.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where editing a link in the block editor would have unexpected consequences when using undo.
+* Fixes a bug where the `article:modified_time` meta tag would show an earlier time than the `article:published_time` meta tag for scheduled posts.
+* Fixes a bug where the Schema type of the product would not be locked when Yoast WooCommerce SEO is enabled.
+* Fixes a bug where using hyphens at the start or end of a sentence would cripple the content analysis when editing a post.
+
+= 24.3 =
+
+Release date: 2025-01-21
+
+Yoast SEO 24.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Introduces more robust HTML processing and highlighting for the _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where the Semrush request would be executed twice when opening the related keyphrases modal.
+* Fixes a bug where the text color in the search on our settings page would not change correctly when active, resulting in bad contrast.
+* Fixes a bug where the _View_ button label in the Yoast dashboard would not be available for translation.
+
+#### Other
+
+* Improves contrast in the related keyphrase suggestions table.
+* Improves contrast in the RSS supported variables explainer table.
+
+= 24.2 =
+
+Release date: 2025-01-07
+
+Yoast SEO 24.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-7-1-25).
+
+#### Enhancements
+
+* Improves the tooltips accessibility in the related keyphrase suggestions modal.
+
+#### Bugfixes
+
+* Fixes a bug where a deprecation message would appear in PHP 8+ when saving a post containing images with invalid sources. Props to [kkmuffme](https://github.com/kkmuffme).
+* Fixes a bug where a TypeError would occur when checking for capabilities of SEO Manager user role when the roles were not passed as an array. Props to [kfeinUI](https://github.com/kfeinUI).
+* Fixes a bug where styles on buttons, intent badge and modal links would not adjust the direction when on RTL view.
+
+#### Other
+
+* Changes the title text on the Yoast installation success page.
+* Fixes a console warning about ReactDOM.render being no longer supported in React 18.
+
+= 24.1 =
+
+Release date: 2024-12-18
+
+Yoast SEO 24.1 adds the Yoast SEO Dashboard to monitor your site's SEO performance in one overview. Find more about Yoast SEO 24.1 in [our release post](https://yoa.st/release-18-12-24)!
+
+#### Enhancements
+
+* Introduces the Yoast Dashboard, a place where site administrators can check the SEO and Readability performance of the site's posts.
+* Adds `Not analyzed` as an option in the readability filter in the posts page.
+* Enhances the existing `Needs improvement` option in the readability filter in the posts page, to include posts that don't have enough content as well.
+
+#### Bugfixes
+
+* Fixes a bug where posts that have been set to explicitly not be noindexed and had no keyword set would not appear in the relevant SEO filter in the posts page.
+
+#### Other
+
+* Improves the translatability of feedback for the _paragraph length_ and the _sentence length_ assessments.
+
+= 24.0 =
+
+Release date: 2024-12-03
+
+Yoast SEO 24.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-12-24).
+
+#### Enhancements
+
+* Allows to set OpenGraph image HTML metadata `width`, `height`, and `type` to `null` in order not to show them. Props to [GiovanniMounir](https://github.com/GiovanniMounir).
+* Improves the _transition words_ assessment for Portuguese and English by updating the relevant lists of transition words. Props to [BrunoAseff](https://github.com/BrunoAseff).
+* Introduces an error message in the Yoast _General_ page in case of JavaScript errors.
+* Updates the design and translations of the country selector in the modal for related keyphrase suggestions.
+
+#### Bugfixes
+
+* Fixes a bug where the first step in the _First time configuration_ would not be considered finished unless the _Site representation_ step would be finished as well.
+* Fixes a bug where the settings for a post type are inaccessible when the permalink structure includes special characters that require encoding, e.g., when WooCommerce products are set to use the "Shop base with category" permalink structure.
+* Fixes a bug where the Yoast _General_ page would not reflect the active menu item properly if using a fallback.
+
+#### Other
+
+* Improves the documentation for `wpseo_enable_tracking` filter. Props to [kkmuffme](https://github.com/kkmuffme).
+
+= 23.9 =
+
+Release date: 2024-11-19
+
+Yoast SEO 23.9 brings enhancements to the Yoast SEO Semrush integration and various bug fixes. Find more about Yoast SEO 23.9 in [our release post](https://yoa.st/release-19-11-24)!
+
+#### Enhancements
+
+* Adds a maximum width to the problems and notifications sections on the _General_ page.
+* Adds _Intent_ and _Difficulty_ to the metrics shown in the Semrush integration.
+* Improves the compatibility of the Yoast blocks with WordPress 6.7.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error is triggered in PHP 8.x when a user's additional contact methods have been improperly set to `null`. Props to [PhilETaylor](https://github.com/PhilETaylor).
+* Fixes a bug where the _First time configuration_ would have a double separator for the title and content.
+* Fixes a bug where the _First time configuration_ would not resize properly on smaller width screens.
+
+#### Other
+
+* Stops PHP notices on WordPress 6.7 about `_load_textdomain_just_in_time` loading incorrectly.
+
+= 23.8 =
+
+Release date: 2024-11-05
+
+Yoast SEO 23.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-5-11-24).
+
+#### Enhancements
+
+* Introduces a new, redesigned General page.
+* Adds a notification to inform the user when an error occurs while changing the visibility of a notification or a problem.
+
+#### Bugfixes
+
+* Fixes a bug in our Elementor integration where previously saved slug values of drafts would be ignored.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 6.7.
+
+= 23.7 =
+
+Release date: 2024-10-22
+
+Yoast SEO 23.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-22-10-24).
+
+#### Enhancements
+
+* Removes the _keyphrase in slug_ assessment for static home pages.
+
+#### Bugfixes
+
+* Fixes a bug where a database error would occur when there were no public taxonomies available for indexing.
+* Fixes a bug where another plugin running the `exit()` function inside the `plugin_loaded` hook would result in a fatal error. Props to [menno-ll](https://github.com/menno-ll).
+
+#### Other
+
+* Removes translation strings that are not meant for the Yoast SEO Free version from the plugin.
+* Resets the notice for search engines discouraged when changing Search engine visibility to visible.
+
+= 23.6 =
+
+Release date: 2024-10-08
+
+Yoast SEO 23.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-8-10-24).
+
+#### Enhancements
+
+* Adds a filter to modify the sitemap's URL. Props to [ashujangra](https://github.com/ashujangra).
+* Improves the _transition words_ assessment for Turkish and English by expanding the relevant lists of transitions words. Props to [abulu](https://wordpress.org/support/users/abulu/).
+* Uses the full-sized counterpart when a resized first content image is used for Open Graph and X images.
+
+#### Bugfixes
+
+* Fixes a bug where the content analysis would error when removing an image caption in the default editor.
+* Fixes a bug where the link popover would be hidden when editing a post in tablet/mobile view. Props to [stokesman](https://github.com/stokesman).
+* Fixes a visual inconsistency where the descriptions of the disabled Premium policy settings would look enabled, when they are not enabled.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.5.
+
+= 23.5 =
+
+Release date: 2024-09-24
+
+Yoast SEO 23.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-24-9-24).
+
+#### Enhancements
+
+* Improves analysis score feedback labels in the publish sections.
+* Improves our integration with cache plugins by preventing flushing their cache when not needed.
+
+#### Bugfixes
+
+* Fixes a bug where Arabic keyphrases containing certain function words were not correctly matched.
+
+= 23.4 =
+
+Release date: 2024-09-03
+
+Yoast SEO 23.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-3-9-24).
+
+#### Enhancements
+
+* Adds support for discarding the changes when switching to a post, using the Top bar feature in Elementor.
+* Adds _так_ to the words recognized by the _transition words_ assessment in Russian. Props to @pavelmai83.
+* Improves the schema output by following the specification for the _SearchAction_ more strictly.
+* Re-enables the script concatenation that was disabled to prevent a bug with WordPress 5.5.
+* Improves the look of the Yoast SEO metabox in the block editor by centering it and making it stand out more by using a background color.
+
+#### Bugfixes
+
+* Fixes a bug where an image caption inside a classic block would be considered the introduction when using the _keyphrase in introduction_ assessment in the default editor.
+* Fixes a bug where the first tag instead of the primary tag would be shown in a permalink when adding a link in the Classic editor.
+* Fixes a bug where the Yoast tab would disappear when opening and closing the Site Settings in Elementor.
+* Fixes a bug where the Yoast user settings would be wiped out after a user profile update when the respective global settings were disabled.
+* Fixes a bug where two admin links would not be resolvable when using a custom admin URL.
+
+#### Other
+
+* Adds a learn more link to the primary category picker.
+* Deprecates some functions in the `Yoast_Input_Validation` class.
+* Deprecates the `Disable_Concatenate_Scripts_Integration` class.
+* Deprecates the `Duplicate_Post_Integration` class.
+* Deprecates the `WPSEO_Admin_User_Profile::user_profile()` method and the `admin/views/user-profile.php` file.
+
+= 23.3 =
+
+Release date: 2024-08-20
+
+Yoast SEO 23.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/release-20-8-24).
+
+#### Other
+
+* This release only contains non-user-facing maintenance changes.
+
+= 23.2 =
+
+Release date: 2024-08-06
+
+Yoast SEO 23.2 brings more enhancements and bugfixes. [Find more information about Yoast SEO 23.2 here](https://yoa.st/release-6-8-24).
+
+#### Enhancements
+
+* Excludes image captions from the _keyphrase in introduction_ assessment: image captions at the beginning of a post will not be treated as an introduction anymore.
+
+#### Bugfixes
+
+* Fixes a bug where the `wpseo_posts_for_related_keywords` filter would not work anymore since it was accidentally renamed.
+
+#### Other
+
+* Deprecates the `Ai_Generate_Titles_And_Descriptions_Introduction_Upsell` class.
+
 = 23.1 =
 
 Release date: 2024-07-23
@@ -932,7 +1205,7 @@ Improves the call-to-action feedback string of the Flesch Reading Ease insight w
 
 #### Other
 
-* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEOdmin_author_archives_meta, Yoast\WP\SEOdmin_date_archives_meta, Yoast\WP\SEOdmin_post_types_beforearchive, Yoast\WP\SEOdmin_post_types_archive, Yoast\WP\SEOdmin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
+* Deprecates the hooks used to add custom content to the Yoast SEO settings pages, in preparation for future releases. The following hooks have been deprecated: wpseo_tools_overview_list_items, wpseo_settings_tab_crawl_cleanup, wpseo_settings_tab_site_analysis, Yoast\WP\SEO\admin_author_archives_meta, Yoast\WP\SEO\admin_date_archives_meta, Yoast\WP\SEO\admin_post_types_beforearchive, Yoast\WP\SEO\admin_post_types_archive, Yoast\WP\SEO\admin_taxonomies_meta, wpseo_admin_other_section, wpseo_admin_opengraph_section, wpseo_admin_pinterest_section, wpseo_admin_twitter_section, wpseo_import_other_plugins.
 * Ensures compatibility with the High Performance Order Storage feature in WooCommerce 7.1+.
 * Sets the WordPress tested up to version to 6.1.
 
@@ -1845,9 +2118,9 @@ Out now: Yoast SEO 16.3! This release helps you with one of the key aspects of m
 
 * Adds the `yoast_display_gutenberg_compat_notification` filter to allow disabling the Gutenberg compatibility notification.
 * Adds the `wpseo_schema_person_data` filter to enable the filtering of `Person` Schema by the user's ID.
-* Adds the `Yoast\WP\SEOdmin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
-* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEOdmin_post_types_beforearchive` action.
-* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEOdmin_taxonomies_meta` action.
+* Adds the `Yoast\WP\SEO\admin_post_types_archive` action at the end of the archive section of the custom post types in Search Appearance.
+* Deprecates the `wpseo_admin_page_meta_post_types` action in favor of the new `Yoast\WP\SEO\admin_post_types_beforearchive` action.
+* Deprecates the `wpseo_admin_page_meta_taxonomies` action in favor of the new `Yoast\WP\SEO\admin_taxonomies_meta` action.
 * Improves the layout of the Search Appearance collapsibles.
 * Improves spacing between settings sections in the Search Appearance page.
 * Replaces all occurrences of 'SEMrush' by 'Semrush' to reflect Semrush's rebranding.

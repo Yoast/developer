@@ -1,10 +1,11 @@
 ---
 id: customizing-attachment-parsing
-title: "Yoast SEO: Customizing the way Yoast SEO handles attachments"
-sidebar_label: Customizing the way Yoast SEO handles attachments
+title: "Yoast SEO: Customizing attachment handling"
+sidebar_label: Customizing attachment handling
 ---
 
 There are multiple ways Yoast SEO can handle attachments added in posts. We have added multiple filters to assure performance in multiple scenario's.
+
 ## The scenario's
 
 ### Not so many attachments < 10.000

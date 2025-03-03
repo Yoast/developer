@@ -1,3 +1,19 @@
+## 24.6
+
+Release date: 2025-03-04
+
+Yoast SEO 24.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Provides support for the Optimized Markup feature in Elementor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.6.
+* Sets the minimum supported WordPress version to 6.6.
+* Uses approximation when counting tokens to be sent as Yoast AI Optimize prompt.
+
 ## 24.5
 
 Release date: 2025-02-18

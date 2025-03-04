@@ -1,3 +1,22 @@
+= 24.6 =
+
+Release date: 2025-03-04
+
+Yoast SEO 24.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Provides support for the Optimized Markup feature in Elementor.
+* Removes the breadcrumbs from the Search snippet preview in Mobile mode.
+
+#### Bugfixes
+
+* Fixes a bug where invalid inner blocks would be removed when saving a post in the block editor.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.6.
+
 = 24.5 =
 
 Release date: 2025-02-18

@@ -1,3 +1,18 @@
+## 06/03/2025 10:20 (UTC)
+
+Release date: 2025-03-06
+
+#### Enhancements
+
+* Changes content filters name from **No focus keyphrase** and **Not enough content** to **Not analyzed**
+* Improves keyphrase recognition for German plural noun forms with an umlaut.
+* Introduces more robust HTML processing and highlighting for the _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where the overall score for the Related keyphrase analysis would still be orange when all the individual assessment results were green.
+* Fixes a bug where the overall SEO score for collections would still be orange when all the individual assessment results were green.
+
 ## 20/02/2025 08:42 (UTC)
 
 Release date: 2025-02-20

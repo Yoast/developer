@@ -1,3 +1,11 @@
+## 13/03/2025 10:45 (UTC)
+
+Release date: 2025-03-13
+
+#### Enhancements
+
+* Add **"Keyword Difficulty"** and **"Intent"** to **"Get related keyphrases"** feature.
+
 ## 06/03/2025 10:20 (UTC)
 
 Release date: 2025-03-06

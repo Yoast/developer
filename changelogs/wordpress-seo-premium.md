@@ -1,3 +1,19 @@
+## 24.7
+
+Release date: 2025-03-18
+
+#### Enhancements
+
+* Improves keyphrase recognition for keyphrases that contain verbs in Spanish.
+
+#### Bugfixes
+
+* Fixes a bug where the help beacon would be displayed over table pagination the redirect page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.7.
+
 ## 24.6
 
 Release date: 2025-03-04

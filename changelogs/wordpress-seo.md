@@ -1,3 +1,22 @@
+= 24.7 =
+
+Release date: 2025-03-18
+
+Yoast SEO 24.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the accuracy of assessments measuring character count for Japanese texts by removing common punctuation from the count.
+
+#### Bugfixes
+
+* Fixes a bug where the help beacon would be displayed over table pagination on the bulk editor page.
+
+#### Other
+
+* Improves the feedback strings of the _subheading distribution_ assessment for better translatability.
+* Removes extra span tags in the Post/Page overview. Props to [dilipbheda](https://github.com/dilipbheda).
+
 = 24.6 =
 
 Release date: 2025-03-04

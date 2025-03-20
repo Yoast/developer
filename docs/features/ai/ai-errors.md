@@ -4,64 +4,78 @@ title: "Yoast AI error messages"
 sidebar_label: AI errors
 description: This documentation provides information about the errors that the Yoast AI features show.
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 This documentation provides information about the errors displayed by the [Yoast AI features](https://yoast.com/features/ai-generated-titles-and-meta-descriptions/) of the [Yoast SEO Premium](https://yoast.com/wordpress/plugins/seo/) plugin. All Yoast AI features connect to the Yoast AI API, which in turn connects to an AI service provider (currently: [OpenAI](https://openai.com/)). Below, we list the possible error messages based on the [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) received from this API.
 
 ## 400 responses
-This section lists the errors that will be displayed for [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) responses.
+This section lists the errors that are displayed for [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) responses.
 
 ### "Unethical request" error
 The Yoast AI features rely on the [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter?tabs=warning%2Cpython-new#text-content) content filtering system, which has a policy against unethical content. The system flags input that includes hate, violence, self-harm references or sexual content. 
 
 This error message is displayed when your content does not pass the content filter system.
 
-![Error example](images/400-unethical-request-alert.png)
-
-<details>
-  <summary>Text of error message</summary>
-
-##### Usage policy violation
-Due to OpenAI's strict ethical guidelines and [usage policies](https://openai.com/policies/usage-policies/), we cannot enable Yoast AI for your page. If you intend to use AI, kindly avoid the use of explicit, violent, copyrighted, or sexually explicit content. [Read more on how to configure your page to make sure you get the best results with AI](https://yoast.com/help/faq-ai-in-yoast-seo/#utm_medium=software&utm_source=yoast-seo&utm_term=ai-faq&utm_content=faq&php_version=8.1&platform=wordpress&platform_version=6.6.1&software=premium&software_version=23.2&days_active=399&shortlink=ai-generator-configure-page). 
-
-</details>
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Usage policy violation**<br/>Due to OpenAI's strict ethical guidelines and usage policies, we cannot generate suggestions for the content on this page. If you intend to use AI, kindly avoid the use of explicit, violent, copyrighted, or sexually explicit content. In case you need further help, please contact our support team.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/400-unethical-request-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes links to: the [OpenAI usage policies](https://openai.com/policies/usage-policies/) and the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ### "Not enough content" error
-The use of Yoast AI requires enough content in your post to create valuable AI suggestions. This error message is displayed when you do not have enough content in your post.
+The use of Yoast AI requires enough content in order to generate valuable AI suggestions. This error message is displayed when there is not enough content on the page.
 
-![Error example](images/400-non-enough-content-alert.png)
-
-<details>
-  <summary>Text of error message</summary>
-
-##### Not enough content
-Please try again later. If the issue persists, please [contact our support team]().
-
-</details>
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Not enough content**<br/>Please add more content to ensure a valuable AI suggestion. Learn more on our page about common AI feature problems and errors. In case you need further help, please contact our support team.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/400-not-enough-content-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes links to: an article on [common AI feature problems and errors](https://yoast.com/help/common-ai-errors) and the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ### "Site unreachable" error
-The use of Yoast AI requires your site to be publicly accessible. This error message is displayed when that is not the case. 
+The use of Yoast AI requires your site to be publicly accessible. This error message is displayed when that is not the case.
 
-![Error example](images/400-site-unreachable-alert.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Yoast AI cannot reach your site**<br/>To use this feature, your site must be publicly accessible. This applies to both test sites and instances where your REST API is password-protected. Please ensure your site is accessible to the public and try again. Learn more on our page about common AI feature problems and errors. In case you need further help, please contact our support team.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/400-site-unreachable-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes links to: an article on [common AI feature problems and errors](https://yoast.com/help/common-ai-errors) and the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ### "Bad WordPress request" error
 In the Yoast SEO plugins for WordPress, we use the WordPress REST interface to connect to our Yoast AI API. This error message is displayed if something went wrong in that connection. 
 
-![Error example](images/400-bad-wordpress-request-alert.png)
-
-### Generic 400 error
-In the case that we are not able to further refine the 400 error response, this generic error message is displayed.
-
-![Error example](images/400-generic-alert.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Something went wrong**<br/>The request came back with the following error: 'test'. Please try again later. If the issue persists, please contact our support team.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/400-bad-wordpress-request-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes a link to the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ## 402 responses
 This section lists the errors that will be displayed for [402 Payment Required](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402) responses.
 
 ### Subscription error
-The use of Yoast AI requires an active subscription for your site. Please refer to [this page](https://yoast.com/help/faq-ai-in-yoast-seo) to understand the subscriptions required for the Yoast AI features.
+The use of Yoast AI requires an active subscription for your site. Please refer to [this page](https://yoast.com/help/faq-ai-in-yoast-seo) to understand the subscriptions required to use the Yoast AI features.
 
-This error message is displayed when you do not have the required active subscriptions.
+This error message is displayed when you do not have the required active subscriptions. The error message and links are adapted depending on the missing subscription(s).
 
-![Error example](images/402-subscription-error.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Subscription required**<br/>_For one subscription_<br/>
+To access this feature, you need an active Yoast SEO Premium subscription. Please activate your subscription in MyYoast or get a new Yoast SEO Premium subscription. Afterward, refresh this page. It may take up to 30 seconds for the feature to function correctly.<br/>
+_For two subscriptions_<br/>
+To access this feature, you need active Yoast SEO Premium and Yoast WooCommerce SEO subscriptions. Please activate your subscriptions in MyYoast or get a new Yoast WooCommerce SEO Premium bundle. Afterward, refresh this page. It may take up to 30 seconds for the feature to function correctly.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/402-one-subscription-error.png)![Error example](images/402-two-subscriptions-error.png)</TabItem>
+<TabItem value="error-links" label="Links">Depending on the missing subscription(s), the message will include links to: an article on [how to activate a Yoast subscription](https://yoast.com/help/activate-premium-license) as well as pages on upgrading to [Yoast SEO Premium](https://yoast.com/rtu-generative-ai), to [Yoast WooCommerce SEO](https://yoast.com/rtu-woocommerce-seo), and to [the Yoast WooCommerce Premium bundle](https://yoast.com/rtu-woo-premium-bundle).</TabItem>
+</Tabs>
+:::
 
 ## 408 responses
 This section lists the errors that will be displayed for [408 Request Timeout](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408) responses.
@@ -69,7 +83,14 @@ This section lists the errors that will be displayed for [408 Request Timeout](h
 ### "Request timeout" error
 The Yoast AI features expect a response from the Yoast AI API within 60 seconds. This error message is displayed when the response is not retrieved within 60 seconds.
 
-![Error example](images/408-request-timeout-alert.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Connection timeout**<br/>
+It seems that a connection timeout has occurred. Please check your internet connection and try again later. Learn more on our page about common AI feature problems and errors. In case you need further help, please contact our support team.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/408-request-timeout-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes links to: an article on [common AI feature problems and errors](https://yoast.com/help/common-ai-errors) and the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ## 429 responses
 This section lists the errors that will be displayed for [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) responses.
@@ -79,15 +100,25 @@ The use of Yoast AI comes with rate limits to ensure fair use. Moreover, we are 
 
 This error message is displayed when you surpass the Yoast AI rate limit for a specific time frame, or (in the future) your Yoast AI sparks limit.
 
-![Error example](images/429-rate-limit-alert.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**You've reached the Yoast AI rate limit**<br/>
+You might have reached your Yoast AI rate limit for a specific time frame or your sparks limit for this month. If you have reached your rate limit, please reduce the frequency of your requests to continue using Yoast AI features. Our help article provides guidance on effectively planning and pacing your requests for an optimized workflow.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/429-rate-limit-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes a link to an article on [the rate limits for the AI features in Yoast SEO Premium](https://yoast.com/help/rate-limits-for-ai-in-yoast-seo-premium).</TabItem>
+</Tabs>
+:::
 
-## 403/503 responses
-This section lists the errors that will be displayed for [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) and [503 Service Unavailable](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503) responses.
+## Generic error
+For all other error responses, the Generic error is displayed. This includes the following cases: when we are not able to further refine the 400 error response; [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) and [503 Service Unavailable](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503) responses; other error responses (i.e., which are not [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)).
 
-### Generic error
-In the case of all other error responses (i.e., which are not [200 OK](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)), this error message is displayed.
-
-![Error example](images/400-generic-alert.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**Something went wrong**<br/>Please try again later. If this issue persists, you can learn more about possible reasons for this error on our page about common AI feature problems and errors. In case you need further help, please contact our support team.></TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/400-generic-error.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes links to: an article on [common AI feature problems and errors](https://yoast.com/help/common-ai-errors) and the Yoast Support page (for WordPress sites it's the one within the Yoast SEO plugin's Settings; for Shopify sites -- the one on [yoast.com]( https://yoast.com/help/support/#support-shopify)).</TabItem>
+</Tabs>
+:::
 
 ## Other errors
 
@@ -96,12 +127,21 @@ This section lists other errors that can be displayed during the use of Yoast AI
 ### "SEO analysis required" error
 Our Yoast AI features require the SEO analysis to be enabled in the settings. When a user tries to make use of the AI features without having the SEO analysis enabled, this error message is displayed.
 
-![Error example](images/000-seo-analysis-required.png)
+:::note[Error message]
+<Tabs>
+<TabItem value="error-text" label="Text">**SEO analysis required**<br/>
+Yoast AI requires the SEO analysis to be enabled. To enable it, please navigate to Site features in Yoast SEO, turn on the SEO analysis, and click 'Save changes'. If it's disabled in your WordPress user profile, access your profile and enable it there. Please contact your administrator if you don't have access to these settings.</TabItem>
+<TabItem value="error-image" label="Screenshot">![Error example](images/000-seo-analysis-required.png)</TabItem>
+<TabItem value="error-links" label="Links">The message includes a link to the Site features admin page within the Yoast SEO plugin's Settings.</TabItem>
+</Tabs>
+:::
 
 ## Mocking these errors
 
 ### In WordPress
-If you need to display these errors without actually triggering them (e.g., displaying the rate limit error without actually reaching the rate limit), you can do so by replacing the output of the `get_suggestions` or `fix_assessments` functions of `src/actions/ai-generator-action.php` in the Yoast SEO Premium code. Choose one of the errors below:
+If you need to display these errors without actually triggering them (e.g., displaying the rate limit error without actually reaching the rate limit), you can do so by replacing the output of the `get_suggestions` function of `src/actions/ai-generator-action.php` in the Yoast SEO Premium code. 
+
+Choose one of the errors below:
 
 ```php
 throw new Bad_Request_Exception( "test", 400, "AI_CONTENT_FILTER" );     // Unethical request error

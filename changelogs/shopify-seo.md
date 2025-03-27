@@ -1,3 +1,12 @@
+## 27/03/2025 10:21 (UTC)
+
+Release date: 2025-03-27
+
+#### Enhancements
+
+* Adds new Schema preview block in products editor.
+* Add support for Google's rich result type Merchant Listing for product variants. Product variants and the related properties are based on Shopify's product categories and rely on the related product attributes.
+
 ## 13/03/2025 10:45 (UTC)
 
 Release date: 2025-03-13

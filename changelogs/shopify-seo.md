@@ -2,12 +2,12 @@
 
 Release date: 2025-03-27
 
-[Read more](https://yoast.com/product-variant-schema-release/) about this release.
-
 #### Enhancements
 
 * Adds new Schema preview block in products editor.
 * Add support for Google's rich result type Merchant Listing for product variants. Product variants and the related properties are based on Shopify's product categories and rely on the related product attributes.
+
+[Read more](https://yoast.com/product-variant-schema-release/) about this release.
 
 ## 13/03/2025 10:45 (UTC)
 

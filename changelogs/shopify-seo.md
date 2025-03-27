@@ -2,6 +2,8 @@
 
 Release date: 2025-03-27
 
+[Read more](https://yoast.com/product-variant-schema-release/) about this release.
+
 #### Enhancements
 
 * Adds new Schema preview block in products editor.

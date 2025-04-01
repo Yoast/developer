@@ -1,3 +1,18 @@
+= 24.8 =
+
+Release date: 2025-04-01
+
+Yoast SEO 24.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds _pregnant women_ to the potentially non-inclusive phrases targeted by the inclusive language analysis.
+* Improves the inclusive language analysis feedback for the potentially non-inclusive word _exotic_, and prevents the feedback from appearing when _exotic_ is followed by words common in scientific contexts.
+
+#### Other
+
+* Removes the Yoast AI Optimize modals from the Yoast admin pages.
+
 = 24.7 =
 
 Release date: 2025-03-18

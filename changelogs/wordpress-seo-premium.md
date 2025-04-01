@@ -1,3 +1,18 @@
+## 24.8
+
+Release date: 2025-04-01
+
+Yoast SEO 24.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves error messages related to AI features by updating the link directing to Yoast Support.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.8.
+* Removes the beta label from the front-end SEO inspector.
+
 ## 24.7
 
 Release date: 2025-03-18

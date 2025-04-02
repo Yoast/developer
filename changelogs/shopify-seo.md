@@ -1,3 +1,21 @@
+## 02/04/2025 07:51 (UTC)
+
+Release date: 2025-04-02
+
+#### Enhancements
+
+* Improves keyphrase recognition for keyphrases that contain verbs in Spanish.
+* Improves the accuracy of assessments measuring character count for Japanese texts by removing common punctuation from the count.
+* Updates “Edit with Shopify” link in editor to follow the move of the Blogs section from the Online Store app to the Content section of the admin.
+
+#### Bugfixes
+
+* Fixes an issue where the AI intro modal would keep displaying when going back to the optimization overview.
+
+#### Other
+
+* Improves the feedback strings of the _subheading distribution_ assessment for better translatability.
+
 ## 27/03/2025 10:21 (UTC)
 
 Release date: 2025-03-27

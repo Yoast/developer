@@ -1,3 +1,11 @@
+= 24.8.1 =
+
+Release date: 2025-04-02
+
+#### Bugfixes
+
+* Fixes a potential fatal error on the dashboard page.
+
 = 24.8 =
 
 Release date: 2025-04-01

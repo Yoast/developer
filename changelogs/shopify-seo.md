@@ -1,3 +1,12 @@
+## 07/04/2025 08:33 (UTC)
+
+Release date: 2025-04-07
+
+#### Enhancements
+
+* Adds support for "search" feature in blog posts list.
+* Moves all blog posts to one lists instead of grouped by blog.
+
 ## 02/04/2025 07:51 (UTC)
 
 Release date: 2025-04-02

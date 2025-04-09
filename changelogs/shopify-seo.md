@@ -1,3 +1,11 @@
+## 09/04/2025 12:20 (UTC)
+
+Release date: 2025-04-09
+
+#### Enhancements
+
+* Adds `productGroupID` attribute in `ProductGroup` structured data.
+
 ## 07/04/2025 08:33 (UTC)
 
 Release date: 2025-04-07

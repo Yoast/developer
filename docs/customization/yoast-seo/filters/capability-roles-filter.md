@@ -6,7 +6,7 @@ sidebar_label: Yoast SEO roles and capabilities
 Yoast SEO ships with a variety of custom capabilities that are assigned to various roles, which allow for granular control over what features are available for a particular role. However, in some cases you might want to expand or limit these capabilities. To support this, we’ve introduced a filter named `{$capability}_roles`, where `{$capability}` needs to be replaced with the name of one of the capabilities	that is registered by Yoast SEO.
 
 ## Default roles
-Yoast SEO has the following two default roles and their respective capabilities. These roles can be seen as an extension to the default WordPress role of Editor. As such, inherits all capabilities of the Editor role as well.
+Yoast SEO has the following two default roles and their respective capabilities. These roles can be seen as an extension to the default WordPress role of Editor. As such, they inherit all capabilities of the Editor role as well.
 
 **wpseo_editor**
 - `wpseo_bulk_edit`

@@ -1,3 +1,17 @@
+## 24.9
+
+Release date: 2025-04-15
+
+Yoast SEO 24.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the AI generator modal would not be visible when using Astra plugins.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.9.
+
 ## 24.8
 
 Release date: 2025-04-01

@@ -1,3 +1,13 @@
+## 15/04/2025 07:30 (UTC)
+
+Release date: 2025-04-15
+
+#### Enhancements
+
+* Adds _pregnant women_ to the potentially non-inclusive phrases targeted by the inclusive language analysis.
+* Improved our Product structured data by specifying the `Offer.priceSpecification` more specifically with the type `UnitPriceSpecification`.
+* Improves the inclusive language analysis feedback for the potentially non-inclusive word _exotic_, and prevents the feedback from appearing when _exotic_ is followed by words common in scientific contexts.
+
 ## 09/04/2025 12:20 (UTC)
 
 Release date: 2025-04-09

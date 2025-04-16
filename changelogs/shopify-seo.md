@@ -1,3 +1,11 @@
+## 16/04/2025 09:48 (UTC)
+
+Release date: 2025-04-16
+
+#### Enhancements
+
+* Adds search feature to blogs list.
+
 ## 15/04/2025 07:30 (UTC)
 
 Release date: 2025-04-15

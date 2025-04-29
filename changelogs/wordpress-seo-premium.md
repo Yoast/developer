@@ -1,3 +1,22 @@
+## 25.0
+
+Release date: 2025-04-29
+
+Yoast SEO 25.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the Yoast SEO Premium update process by decluttering the page from unnecessary admin notices.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generator usage counter would not be correctly styled when retrieving suggestions in the Classic Editor and Elementor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.0.
+* Drops compatibility with PHP 7.2 and 7.3.
+
 ## 24.9
 
 Release date: 2025-04-15

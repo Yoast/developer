@@ -1,3 +1,19 @@
+## 01/05/2025 08:48 (UTC)
+
+Release date: 2025-05-01
+
+#### Enhancements
+
+* Adds a learn more link in the schema section of the product editor.
+* Changes the applicability criteria of readability assessments so that they are shown even if there is little or no text.
+* Improves recognition of function words for Farsi. Props to [nshayanfar](https://github.com/nshayanfar).
+* Improves the recognition of transition words for Farsi.
+* Introduces more robust HTML processing and highlighting for the _consecutive sentences_ assessment.
+
+#### Bugfixes
+
+* Fixes a bug where function words with spaces were not recognised in Farsi.
+
 ## 16/04/2025 09:48 (UTC)
 
 Release date: 2025-04-16

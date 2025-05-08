@@ -1,3 +1,11 @@
+## 08/05/2025 08:40 (UTC)
+
+Release date: 2025-05-08
+
+#### Bugfixes
+
+* Fixes issue with theme modifications apply in some stores due to Shopify API limits.
+
 ## 01/05/2025 08:48 (UTC)
 
 Release date: 2025-05-01

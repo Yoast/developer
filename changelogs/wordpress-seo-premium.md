@@ -1,3 +1,13 @@
+## 25.1
+
+Release date: 2025-05-13
+
+Yoast SEO 25.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.1.
+
 ## 25.0
 
 Release date: 2025-04-29

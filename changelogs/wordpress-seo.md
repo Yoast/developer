@@ -1,3 +1,16 @@
+= 25.1 =
+
+Release date: 2025-05-13
+
+Yoast SEO 25.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds more phrases regarding disability to the _inclusive language assessment_.
+* Improves the feedback for "lame" in the _inclusive language assessment_.
+* Makes the following SEO assessments available in the analysis by default, even when no content has been added: _keyphrase in introduction_, _keyphrase in meta description_, _keyphrase in SEO title_, _keyphrase in slug_ and _previously used keyphrase_.
+* Optimizes the function used to fetch post IDs which share the same focus keyphrase. Props to [dilipbheda](https://github.com/dilipbheda).
+
 = 25.0 =
 
 Release date: 2025-04-29

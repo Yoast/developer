@@ -1,3 +1,16 @@
+## 14/05/2025 11:40 (UTC)
+
+Release date: 2025-05-14
+
+#### Enhancements
+
+* Improves the feedback texts for the _passive voice_ and _consecutive sentences_ assessments in case there is nothing to report.
+* Makes the _images_, _internal links_, and _external links_ assessments available when no content has been added.
+
+#### Other
+
+* Improves the translatability of feedback strings for the keyphrase length assessment.
+
 ## 08/05/2025 08:40 (UTC)
 
 Release date: 2025-05-08

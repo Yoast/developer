@@ -1,3 +1,11 @@
+## 22/05/2025 10:47 (UTC)
+
+Release date: 2025-05-22
+
+#### Bugfixes
+
+* Fixes a bug where the template suffix of pages would be reset to the default when saving optimizations.
+
 ## 14/05/2025 11:40 (UTC)
 
 Release date: 2025-05-14

@@ -1,3 +1,13 @@
+## 26/05/2025 06:49 (UTC)
+
+Release date: 2025-05-26
+
+#### Enhancements
+
+* Adds more phrases regarding disability to the _inclusive language assessment_.
+* Improves the feedback for "lame" in the _inclusive language assessment_.
+* Makes the following SEO assessments available in the analysis by default, even when no content has been added: _keyphrase in introduction_, _keyphrase in meta description_, _keyphrase in SEO title_, _keyphrase in slug_.
+
 ## 22/05/2025 10:47 (UTC)
 
 Release date: 2025-05-22

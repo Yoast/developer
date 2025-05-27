@@ -1,3 +1,21 @@
+## 25.2
+
+Release date: 2025-05-27
+
+Yoast SEO 25.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds support for Yoast AI Optimize in the Classic editor.
+
+#### Bugfixes
+
+* Fixes a bug where the AI grant/revoke consent on the profile page was not translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.2.
+
 ## 25.1
 
 Release date: 2025-05-13

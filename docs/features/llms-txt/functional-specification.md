@@ -25,7 +25,7 @@ Categories/tags
 - Follow https://llmstxt.org/ for best practices
 ## Known limitations
 - When there’s another llms.txt file, we make sure to not overwrite it. But if a plugin serves a llms.txt file dynamically, our txt file is created and since it has higher prio, it will be displayed in the example.com/llms.txt URL.
-- If you deactivate Yoast SEO while having the llms.txt feature enabled and then you activate it again at some point, for the next 5 minutes after activation the View the llms.txt button in the settings will point to a 404.
+- If you deactivate Yoast SEO while having the llms.txt feature enabled and then you activate it again at some point, for the next 5 minutes after activation the "View the llms.txt file" button in the settings will point to a 404.
   - We do not yet support markdown code blocks with special markdown characters. Currently these characters will be escaped. For example:
   - The site tagline contains the following string: “This is `the *tagline`”
   - Llms.txt will output that as “This is `the \*tagline`“

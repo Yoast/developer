@@ -30,5 +30,5 @@ Categories/tags
   - The site tagline contains the following string: “This is \`the *tagline\`”
   - Llms.txt will output that as “This is \\\`the \\*tagline\\\`“
 - If the server doesn’t serve .txt files with a UTF-8 encoding and the llms.txt file has non-english characters in it, they will appear garbled when accessed via the browser.
-  - So, the word Ελληνικά will appear as Î•Î»Î»Î·Î½Î¹ÎºÎ¬ there. 
+  - So, the word `Ελληνικά` will appear as `Î•Î»Î»Î·Î½Î¹ÎºÎ¬` there. 
 

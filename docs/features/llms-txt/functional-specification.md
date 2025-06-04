@@ -10,11 +10,13 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 - Enabling the llms.txt feature will create an llms.txt file in the root directory of your website
 - This file will be be updated weekly by a scheduled action
 ## How does Yoast SEO choose content to include in the llms.txt file?
-Posts/pages/custom post types
+**Posts/pages/custom post types**
 - Yoast SEO includes the 5 latest updated posts/pages/custom post types in the llms.txt file (posts are only included if they have been published in the last 12 months)
-- custom post types are included if the “Show tags in search results” box in the Search Appearance settings is ticked for the specific custom post type
-Categories/tags
+- Custom post types are included if the “Show tags in search results” box in the Search Appearance settings is ticked for the specific custom post type
+
+**Categories/tags/terms for custom taxonomies**
 - Yoast SEO includes the 5 categories/tags with the most content pieces attached to them
+- Terms for custom taxonomies are included if the “Show terms in search results” box in the Search Appearance settings is ticked for the specific taxonomy
 
 ## How can I delete an llms.txt file?
 - You might see a warning from Yoast SEO that an llms.txt file can't be automatically generated because of an existing llms.txt file

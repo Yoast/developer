@@ -33,4 +33,5 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
   - Llms.txt will output that as “This is \\\`the \\*tagline\\\`“
 - If the server doesn’t serve .txt files with a UTF-8 encoding and the llms.txt file has non-english characters in it, they will appear garbled when accessed via the browser.
   - So, the word `Ελληνικά` will appear as `Î•Î»Î»Î·Î½Î¹ÎºÎ¬` there. 
+- Post types that are set to `noindex` in the global settings will not be included in the llms.txt file. We don’t yet support the automatic exclusion of individual posts set as `noindex`.
 

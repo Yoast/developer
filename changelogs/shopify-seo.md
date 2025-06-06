@@ -1,3 +1,14 @@
+## 06/06/2025 08:11 (UTC)
+
+Release date: 2025-06-06
+
+#### Enhancements
+
+* Adds a feedback string for the image alt attributes and image keyphrase assessments for when no content and/or image has been added.
+* Makes the _keyphrase in image alt attributes_ assessment  available when no content has been added.
+* Renames _image keyphrase_ assessment to _keyphrase in image alt attributes_ assessment.
+* Renames the image alt tags assessment to image alt attributes assessment.
+
 ## 04/06/2025 09:26 (UTC)
 
 Release date: 2025-06-04

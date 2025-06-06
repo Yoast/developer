@@ -1,3 +1,16 @@
+## 25.3
+
+Release date: 2025-06-10
+
+#### Enhancements
+
+* Improves the placement of the AI Optimize introduction popover in the Classic editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.3.
+* Disables the code editor switch button in Classic editor when the Yoast AI Optimize notification is visible.
+
 ## 25.2
 
 Release date: 2025-05-27

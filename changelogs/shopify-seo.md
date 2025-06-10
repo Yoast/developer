@@ -1,3 +1,31 @@
+## 06/06/2025 08:11 (UTC)
+
+Release date: 2025-06-06
+
+#### Enhancements
+
+* Adds a feedback string for the image alt attributes and image keyphrase assessments for when no content and/or image has been added.
+* Makes the _keyphrase in image alt attributes_ assessment  available when no content has been added.
+* Renames _image keyphrase_ assessment to _keyphrase in image alt attributes_ assessment.
+* Renames the image alt tags assessment to image alt attributes assessment.
+
+## 04/06/2025 09:26 (UTC)
+
+Release date: 2025-06-04
+
+#### Enhancements
+
+* Adds a feedback string for the _image alt attributes_ and _image keyphrase_ assessments for when no content and/or image has been added.
+* Renames the _image alt tags_ assessment to _image alt attributes_ assessment.
+
+#### Bugfixes
+
+* Improves the guidance on using the `Shopify SEO title` variable in our `Full SEO title`.
+
+#### Other
+
+* Removes the "new" badge from the schema section for products.
+
 ## 26/05/2025 06:49 (UTC)
 
 Release date: 2025-05-26

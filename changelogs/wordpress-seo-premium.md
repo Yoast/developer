@@ -1,3 +1,18 @@
+## 25.3
+
+Release date: 2025-06-10
+
+*New:* Yoast SEO 25.3 introduces llms.txt support to help AI tools understand your site better. [Read the full release post here!](https://yoa.st/release-10-6-25)
+
+#### Enhancements
+
+* Improves the placement of the AI Optimize introduction popover in the Classic editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.3.
+* Disables the code editor switch button in Classic editor when the Yoast AI Optimize notification is visible.
+
 ## 25.2
 
 Release date: 2025-05-27

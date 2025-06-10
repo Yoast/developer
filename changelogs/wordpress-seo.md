@@ -1,3 +1,13 @@
+= 25.3 =
+
+Release date: 2025-06-10
+
+*New:* Yoast SEO 25.3 introduces llms.txt support to help AI tools understand your site better. [Read the full release post here!](https://yoa.st/release-10-6-25)
+
+#### Enhancements
+
+* Introduces the llms.txt feature, which gives site owners the opportunity to automatically generate an llms.txt file. This file helps LLMs to better understand the site's content.
+
 = 25.2 =
 
 Release date: 2025-05-27

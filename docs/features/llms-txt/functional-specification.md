@@ -30,7 +30,7 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 - If you deactivate Yoast SEO while having the llms.txt feature enabled and then you activate it again at some point, for the next 5 minutes after activation the "View the llms.txt file" button in the settings will point to a 404.
 - We do not yet support markdown code blocks with special markdown characters. Currently these characters will be escaped. For example:
   - The site tagline contains the following string: “This is \`the *tagline\`”
-  - Llms.txt will output that as “This is \\\`the \\*tagline\\\`“
+  - llms.txt will output that as “This is \\\`the \\*tagline\\\`“
 - If the server doesn’t serve .txt files with a UTF-8 encoding and the llms.txt file has non-english characters in it, they will appear garbled when accessed via the browser.
   - So, the word `Ελληνικά` will appear as `Î•Î»Î»Î·Î½Î¹ÎºÎ¬` there. 
 - Post types that are set to `noindex` in the global settings will not be included in the llms.txt file. We don’t yet support the automatic exclusion of individual posts set as `noindex`.

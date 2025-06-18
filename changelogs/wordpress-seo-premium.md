@@ -1,3 +1,17 @@
+## 25.3.1
+
+Release date: 2025-06-18
+
+#### Bugfixes
+
+* Fixes a bug where a console error would appear when Yoast AI was enabled and a post was opened, saved, or published when inside the Classic code editor.
+* Fixes a bug where the class names used for AI Optimize feature in Classic editor were not cleaned up when a post is saved or published.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.3.1.
+* Temporarily disables the AI Optimize feature in the Classic editor.
+
 ## 25.3
 
 Release date: 2025-06-10

@@ -1,3 +1,17 @@
+## 25.4
+
+Release date: 2025-07-01
+
+Yoast SEO 25.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the AI Optimize Introduction notification would display behind the WordPress admin menu in some screen resolutions.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.4.
+
 ## 25.3.1
 
 Release date: 2025-06-18

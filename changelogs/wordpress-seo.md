@@ -1,3 +1,9 @@
+= 25.3.1 =
+
+Release date: 2025-06-18
+
+This is a maintenance release which is required to align with changes to Yoast SEO Premium 25.3.1.
+
 = 25.3 =
 
 Release date: 2025-06-10

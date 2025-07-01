@@ -30,8 +30,61 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 - If you deactivate Yoast SEO while having the llms.txt feature enabled and then you activate it again at some point, for the next 5 minutes after activation the "View the llms.txt file" button in the settings will point to a 404.
 - We do not yet support markdown code blocks with special markdown characters. Currently these characters will be escaped. For example:
   - The site tagline contains the following string: “This is \`the *tagline\`”
-  - Llms.txt will output that as “This is \\\`the \\*tagline\\\`“
-- If the server doesn’t serve .txt files with a UTF-8 encoding and the llms.txt file has non-english characters in it, they will appear garbled when accessed via the browser.
-  - So, the word `Ελληνικά` will appear as `Î•Î»Î»Î·Î½Î¹ÎºÎ¬` there. 
-- Post types that are set to `noindex` in the global settings will not be included in the llms.txt file. We don’t yet support the automatic exclusion of individual posts set as `noindex`.
+  - llms.txt will output that as “This is \\\`the \\*tagline\\\`“
+
+## Filters
+
+There's a couple of filters available for the llms.txt feature.
+
+### Change the way the filepath root is retrieved, to place the llms.txt file
+
+* The llms.txt file uses `get_home_path()` to place the llms.txt file to the root of the WordPress installation. 
+* If that's not writable, it then uses `$_SERVER['DOCUMENT_ROOT']`, if that's available. 
+* For cases where neither is working, the `wpseo_llmstxt_filesystem_path` filter can be used:
+
+```php
+add_filter( 'wpseo_llmstxt_filesystem_path', 'custom_llmstxt_file_path' );
+
+/**
+ * Uses the WP_CONTENT_DIR const to retrieve the server's webroot instead of the default way.
+ *
+ * @return string The edited webroot.
+ */
+function custom_llmstxt_file_path() {
+    return dirname( WP_CONTENT_DIR );
+}
+```
+
+### Edit the BOM prefix that is added in the llms.txt file
+
+* For encoding purposes, we prefix the llms.txt file with the Byte Order Mark (BOM) for UTF-8 (`"\xEF\xBB\xBF"`).
+* For changing the BOM to a different encoding or even to remove it, the `wpseo_llmstxt_encoding_prefix` filter can be used:
+
+```php
+add_filter( 'wpseo_llmstxt_encoding_prefix', 'custom_llmstxt_encoding_prefix' );
+
+/**
+ * Edits out the UTF-8 BOM prefix from the llms.txt file and adds a UTF-16 BOM one.
+ *
+ * @return string The edited prefix.
+ */
+function custom_llmstxt_encoding_prefix() {
+    return "\xFF\xFE";
+}
+```
+* For removing the encoding prefix altogether, the same filter can be used:
+```php
+add_filter( 'wpseo_llmstxt_encoding_prefix', 'custom_llmstxt_encoding_prefix' );
+
+/**
+ * Removes UTF-8 BOM prefix from the llms.txt file.
+ *
+ * @return string The removed prefix.
+ */
+function custom_llmstxt_encoding_prefix() {
+    return "";
+}
+```
+
+
 

@@ -43,7 +43,6 @@ There's a couple of filters available for the llms.txt feature.
 * For cases where neither is working, the `wpseo_llmstxt_filesystem_path` filter can be used:
 
 ```php
-<?php
 add_filter( 'wpseo_llmstxt_filesystem_path', 'custom_llmstxt_file_path' );
 
 /**
@@ -62,7 +61,6 @@ function custom_llmstxt_file_path() {
 * For changing the BOM to a different encoding or even to remove it, the `wpseo_llmstxt_encoding_prefix` filter can be used:
 
 ```php
-<?php
 add_filter( 'wpseo_llmstxt_encoding_prefix', 'custom_llmstxt_encoding_prefix' );
 
 /**
@@ -76,7 +74,6 @@ function custom_llmstxt_encoding_prefix() {
 ```
 * For removing the encoding prefix altogether, the same filter can be used:
 ```php
-<?php
 add_filter( 'wpseo_llmstxt_encoding_prefix', 'custom_llmstxt_encoding_prefix' );
 
 /**

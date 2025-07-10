@@ -1,3 +1,12 @@
+## 10/07/2025 09:12 (UTC)
+
+Release date: 2025-07-10
+
+#### Enhancements
+
+* Adds first time configuration wizard to help merchants walk through the essential app settings.
+* Improves welcome dialog to guide merchants showcasing app pinning option and premium support.
+
 ## 06/06/2025 08:11 (UTC)
 
 Release date: 2025-06-06

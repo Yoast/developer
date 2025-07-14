@@ -1,3 +1,24 @@
+= 25.5 =
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Enhances the UX of the llms.txt feature by informing users about potential issues with generating the file via Yoast’s alert center.
+* Changes post lists in the llms.txt file to use canonical URLs.
+
+#### Bugfixes
+
+* Fixes a bug where a request limit warning would be shown in the Semrush related keyphrases when no warning was applicable.
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Changes the `Upgrades` page to a `Plans` page.
+* Removes redundant flushing of cache groups when incoming links for posts change.
+
 = 25.4 =
 
 Release date: 2025-07-01

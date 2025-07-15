@@ -1,3 +1,11 @@
+## 15/07/2025 10:48 (UTC)
+
+Release date: 2025-07-15
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications would run into the rate limits of some Shopify APIs.
+
 ## 10/07/2025 09:12 (UTC)
 
 Release date: 2025-07-10

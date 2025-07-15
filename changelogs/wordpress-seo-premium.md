@@ -1,3 +1,14 @@
+## 25.5
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Bumps the minimum required version of Yoast SEO to 25.5.
+
 ## 25.4
 
 Release date: 2025-07-01

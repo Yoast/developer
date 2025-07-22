@@ -1,3 +1,11 @@
+## 22/07/2025 09:35 (UTC)
+
+Release date: 2025-07-22
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications banner would not disappear when the theme modifications have just been applied.
+
 ## 15/07/2025 10:48 (UTC)
 
 Release date: 2025-07-15

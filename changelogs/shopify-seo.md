@@ -1,3 +1,11 @@
+## 28/07/2025 07:30 (UTC)
+
+Release date: 2025-07-28
+
+#### Bugfixes
+
+* Fixes a bug where some navigation items would not be clickable when the FTC banner was visible.
+
 ## 22/07/2025 09:35 (UTC)
 
 Release date: 2025-07-22

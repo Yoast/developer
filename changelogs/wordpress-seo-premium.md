@@ -1,3 +1,11 @@
+## 25.6
+
+Release date: 2025-07-29
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.6.
+
 ## 25.5
 
 Release date: 2025-07-15

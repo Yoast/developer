@@ -1,3 +1,18 @@
+= 25.6 =
+
+Release date: 2025-07-29
+
+Yoast SEO 25.6 adds enhancements to the llms.txt feature, introducing manual personalization. [Read the release post here](https://yoa.st/release-29-7-25)!
+
+#### Enhancements
+
+* Adds a free preview of the AI features from Yoast SEO Premium.
+* Introduces a way to manually select the pages to be included in the llms.txt file.
+
+#### Bugfixes
+
+* Fixes a bug where the icon on search appearance would not be aligned when on a right-to-left locale.
+
 = 25.5 =
 
 Release date: 2025-07-15

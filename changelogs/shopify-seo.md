@@ -1,3 +1,27 @@
+## 28/07/2025 07:30 (UTC)
+
+Release date: 2025-07-28
+
+#### Bugfixes
+
+* Fixes a bug where some navigation items would not be clickable when the FTC banner was visible.
+
+## 22/07/2025 09:35 (UTC)
+
+Release date: 2025-07-22
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications banner would not disappear when the theme modifications have just been applied.
+
+## 15/07/2025 10:48 (UTC)
+
+Release date: 2025-07-15
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications would run into the rate limits of some Shopify APIs.
+
 ## 10/07/2025 09:12 (UTC)
 
 Release date: 2025-07-10

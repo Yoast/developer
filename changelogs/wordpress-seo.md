@@ -1,3 +1,39 @@
+= 25.6 =
+
+Release date: 2025-07-29
+
+Yoast SEO 25.6 adds enhancements to the llms.txt feature, introducing manual personalization. [Read the release post here](https://yoa.st/release-29-7-25)!
+
+#### Enhancements
+
+* Adds a free preview of the AI features from Yoast SEO Premium.
+* Introduces a way to manually select the pages to be included in the llms.txt file.
+
+#### Bugfixes
+
+* Fixes a bug where the icon on search appearance would not be aligned when on a right-to-left locale.
+
+= 25.5 =
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Enhances the UX of the llms.txt feature by informing users about potential issues with generating the file via Yoast’s alert center.
+* Changes post lists in the llms.txt file to use canonical URLs.
+
+#### Bugfixes
+
+* Fixes a bug where a request limit warning would be shown in the Semrush related keyphrases when no warning was applicable.
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Changes the `Upgrades` page to a `Plans` page.
+* Removes redundant flushing of cache groups when incoming links for posts change.
+
 = 25.4 =
 
 Release date: 2025-07-01

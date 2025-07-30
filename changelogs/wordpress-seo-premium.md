@@ -1,3 +1,24 @@
+## 25.6
+
+Release date: 2025-07-29
+
+Yoast SEO Premium 25.6 brings support for Yoast SEO 25.6 and enhances the llms.txt feature with manual personalization.  [Read the release post here](https://yoa.st/release-29-7-25)!
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.6.
+
+## 25.5
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Bumps the minimum required version of Yoast SEO to 25.5.
+
 ## 25.4
 
 Release date: 2025-07-01

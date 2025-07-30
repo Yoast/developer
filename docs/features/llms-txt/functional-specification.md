@@ -12,6 +12,8 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 ## How does Yoast SEO choose content to include in the llms.txt file?
 **Posts/pages/custom post types**
 - Yoast SEO includes the 5 latest updated posts/pages/custom post types in the llms.txt file (posts are only included if they have been published in the last 12 months)
+  - This logic includes giving priority to cornerstone content first
+  - For pages, you can override this logic, if you select `Manual page selection` in the llms.txt settings
 - Custom post types are included if the “Show tags in search results” box in the Search Appearance settings is ticked for the specific custom post type
 
 **Categories/tags/terms for custom taxonomies**
@@ -31,6 +33,7 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 - We do not yet support markdown code blocks with special markdown characters. Currently these characters will be escaped. For example:
   - The site tagline contains the following string: “This is \`the *tagline\`”
   - llms.txt will output that as “This is \\\`the \\*tagline\\\`“
+- When you make any changes in the settings of the page selection while the feature is already enabled, these changes will be applied the next time an llms.txt file is generated. This will happen within a week.
 
 ## Filters
 

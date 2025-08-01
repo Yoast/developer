@@ -33,7 +33,6 @@ This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/
 - We do not yet support markdown code blocks with special markdown characters. Currently these characters will be escaped. For example:
   - The site tagline contains the following string: “This is \`the *tagline\`”
   - llms.txt will output that as “This is \\\`the \\*tagline\\\`“
-- When you make any changes in the settings of the page selection while the feature is already enabled, these changes will be applied the next time an llms.txt file is generated. This will happen within a week.
 
 ## Filters
 

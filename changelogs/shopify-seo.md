@@ -1,3 +1,12 @@
+## 04/08/2025 12:15 (UTC)
+
+Release date: 2025-08-04
+
+#### Bugfixes
+
+* Fixes a bug where Page number string would not be correctly translated.
+* Fixes an bug where metafields and data would not be removed when following any of the uninstallation processes.
+
 ## 28/07/2025 07:30 (UTC)
 
 Release date: 2025-07-28

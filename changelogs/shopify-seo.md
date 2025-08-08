@@ -1,3 +1,12 @@
+## 08/08/2025 08:52 (UTC)
+
+Release date: 2025-08-08
+
+#### Enhancements
+
+* Adds option to sort blog posts list.
+* Adds option to sort blogs list.
+
 ## 04/08/2025 12:15 (UTC)
 
 Release date: 2025-08-04

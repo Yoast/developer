@@ -1,3 +1,28 @@
+## 25.7
+
+Release date: 2025-08-12
+
+Yoast SEO 25.7 introduces an updated interface for Yoast SEO Redirect Manager and extends Yoast AI Optimize to the Classic Editor. [Read the release post here](https://yoa.st/release-12-8-25)!
+
+#### Enhancements
+
+* Re-introduces the improved AI Optimize feature in Classic Editor.
+* Launches a brand new redesign of the Redirects page.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Optimize introduction component would not be shown when the AI buttons were only available inside the SEO Analysis.
+* Fixes a bug where the check icon of the Apply button inside AI Optimize notification would be displayed upside down in RTL languages.
+* Fixes a bug where the text in the Apply, Dismiss and Learn more buttons of the AI Optimize notification would be missing in some RTL languages, such as Arabic.
+* Fixes a bug where the user would be prompted to create a redirect for private terms.
+* Fixes a bug where the wrong error message would be shown for AI Optimize in the following cases: unreachable site; subscription not found.
+* Fixes a bug where the active Code tab would be switched to Visual when content was saved in Classic Editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.7.
+* Sets the minimum supported WordPress version to 6.7.
+
 ## 25.6
 
 Release date: 2025-07-29

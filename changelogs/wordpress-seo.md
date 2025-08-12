@@ -1,3 +1,22 @@
+= 25.7 =
+
+Release date: 2025-08-12
+
+Yoast SEO 25.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Re-generates the llms.txt file immediately when there's any change in the selection of the pages to be included.
+
+#### Bugfixes
+
+* Fixes a bug where the AI free sparks upsell would appear instead of the rate limit error in cases where the rate limit for AI Generate was reached before the free sparks limit.
+
+#### Other
+
+* Adds an announcement for the upcoming AI Brand Insights feature.
+* Sets the minimum supported WordPress version to 6.7.
+
 = 25.6 =
 
 Release date: 2025-07-29

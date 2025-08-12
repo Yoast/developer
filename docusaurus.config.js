@@ -374,7 +374,7 @@ export default {
 								},
 								{
 									label: "Yoast SEO for Shopify",
-									href: "https://yoast.com/shopify/apps/yoast-seo/",
+									href: "https://yoast.com/product/yoast-seo-shopify/",
 								},
 								{
 									label: "WooCommerce SEO for WordPress",

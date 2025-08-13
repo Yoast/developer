@@ -1,3 +1,11 @@
+## 25.7.1
+
+Release date: 2025-08-13
+
+#### Bugfixes
+
+* Fixes a bug where a deprecation warning would be thrown when `WP_DEBUG` is enabled and a site is on PHP 8.1 or newer.
+
 ## 25.7
 
 Release date: 2025-08-12

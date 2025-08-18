@@ -1,3 +1,18 @@
+## 18/08/2025 07:13 (UTC)
+
+Release date: 2025-08-18
+
+#### Enhancements
+
+* Changes one of the feedback texts for the _text length_ assessment to be consistent with the others.
+* Improves the feedback of the _competing links_ assessment by making it clearer.
+* Makes the assessments _single title_ and _competing links_ available from the get-go in the SEO analysis.
+* Renames the _link keyphrase_ assessment to _competing links_.
+
+#### Other
+
+* Improves the translatability of the feedback strings for the _text length_ assessment.
+
 ## 08/08/2025 08:52 (UTC)
 
 Release date: 2025-08-08

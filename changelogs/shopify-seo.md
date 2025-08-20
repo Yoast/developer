@@ -1,3 +1,15 @@
+## 20/08/2025 07:59 (UTC)
+
+Release date: 2025-08-20
+
+#### Enhancements
+
+* Modifies theme modification progress component to adjust to new design.
+
+#### Bugfixes
+
+* Fixes a bug where uninstall page would not update correctly after removing theme modifications.
+
 ## 18/08/2025 07:13 (UTC)
 
 Release date: 2025-08-18

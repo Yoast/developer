@@ -1,3 +1,19 @@
+## 15.6
+
+Release date: 2025-08-26
+
+#### Enhancements
+
+* Improves the onboarding flow by hiding relevant notices when info about the organization is filled via the First Time Configuration.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.8.
+* Drops compatibility with PHP 7.2 and 7.3.
+* Improves the general security of the plugin via sanitization and escaping.
+* Sets the minimum supported WordPress version to 6.7.
+* Sets the WordPress tested up to version to 6.8
+
 ## 15.5
 
 Release date: 2024-11-05

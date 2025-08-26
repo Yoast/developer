@@ -1,3 +1,19 @@
+= 25.8 =
+
+Release date: 2025-08-26
+
+Yoast SEO 25.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Changes the AI generator button label and design.
+
+#### Other
+
+* Improves response validation of the Yoast license check. Props to [aryanjasala](https://github.com/aryanjasala).
+* Fixes a console warning message triggered by the introductions in the Yoast admin page.
+* Updates ads to reflect the new pricing scheme.
+
 = 25.7 =
 
 Release date: 2025-08-12

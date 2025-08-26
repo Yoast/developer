@@ -1,3 +1,18 @@
+## 25.8
+
+Release date: 2025-08-26
+
+Yoast SEO 25.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where redirect notification would be created when changing the slug on a non public term.
+* Fixes a bug where redirect notification would not be created when changing the slug on a public term with url arguments in the permalink.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.8.
+
 ## 25.7.1
 
 Release date: 2025-08-13

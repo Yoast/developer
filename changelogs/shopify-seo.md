@@ -1,3 +1,11 @@
+## 08/09/2025 09:40 (UTC)
+
+Release date: 2025-09-08
+
+#### Enhancements
+
+* Changes welcome page limitation to display it for every user.
+
 ## 05/09/2025 07:37 (UTC)
 
 Release date: 2025-09-05

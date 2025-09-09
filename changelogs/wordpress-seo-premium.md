@@ -1,3 +1,17 @@
+## 25.9
+
+Release date: 2025-09-09
+
+New: introduces Yoast AI Summarize, instantly condense long-form content into clear key takeaways, in seconds. [Read the release post here](https://yoa.st/release-9-9-2025).
+
+#### Enhancements
+
+* Introduces AI Summarize, the new Yoast custom block which generates a summary of the content using AI.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.9.
+
 ## 25.8
 
 Release date: 2025-08-26

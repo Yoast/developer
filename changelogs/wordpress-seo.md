@@ -1,3 +1,18 @@
+= 25.9 =
+
+Release date: 2025-09-09
+
+Yoast SEO 25.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the UX of the llms.txt feature by displaying errors with generating the llms.txt file in the relevant settings page.
+* Improves the UX of onboarding new users by preventing irrelevant modals from displaying in the First Time Configuration.
+
+#### Other
+
+* Updates the copy of the consent modal for using the Yoast AI features.
+
 = 25.8 =
 
 Release date: 2025-08-26

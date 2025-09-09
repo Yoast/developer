@@ -1,3 +1,11 @@
+## 09/09/2025 07:49 (UTC)
+
+Release date: 2025-09-09
+
+#### Enhancements
+
+* Introduces a new warning to explain that a duplicate slug is used in the product editor.
+
 ## 08/09/2025 09:40 (UTC)
 
 Release date: 2025-09-08

@@ -119,6 +119,7 @@ All pieces in our schema output can referenced via an `@id` attribute. To replic
 * `WebSite`: `shop.url | append: '/#/schema/website/1'`
 * `WebPage`: `canonical_url`
 * `Article`: `canonical_url | append: '#/schema/article/' | append: article.id`
+* `Person`: `article.author | handleize | prepend: '/#/schema/person/' | prepend: shop.url`
 * `Product`: `canonical_url | append: "/#/schema/Product"`
 * `Offer`: `shop.url | append: '/#/schema/Offer/' | append: variant.id`
 * `BreadcrumbList`: `canonical_url | append: '/#/schema/breadcrumb'`

@@ -1,3 +1,275 @@
+## 09/09/2025 07:49 (UTC)
+
+Release date: 2025-09-09
+
+#### Enhancements
+
+* Introduces a new warning to explain that a duplicate slug is used in the product editor.
+
+## 08/09/2025 09:40 (UTC)
+
+Release date: 2025-09-08
+
+#### Enhancements
+
+* Changes welcome page limitation to display it for every user.
+
+## 05/09/2025 07:37 (UTC)
+
+Release date: 2025-09-05
+
+#### Enhancements
+
+* Fixes a bug when theme modifications was not applied fully due to Shopify API limitations.
+
+## 20/08/2025 07:59 (UTC)
+
+Release date: 2025-08-20
+
+#### Enhancements
+
+* Modifies theme modification progress component to adjust to new design.
+
+#### Bugfixes
+
+* Fixes a bug where uninstall page would not update correctly after removing theme modifications.
+
+## 18/08/2025 07:13 (UTC)
+
+Release date: 2025-08-18
+
+#### Enhancements
+
+* Changes one of the feedback texts for the _text length_ assessment to be consistent with the others.
+* Improves the feedback of the _competing links_ assessment by making it clearer.
+* Makes the assessments _single title_ and _competing links_ available from the get-go in the SEO analysis.
+* Renames the _link keyphrase_ assessment to _competing links_.
+
+#### Other
+
+* Improves the translatability of the feedback strings for the _text length_ assessment.
+
+## 08/08/2025 08:52 (UTC)
+
+Release date: 2025-08-08
+
+#### Enhancements
+
+* Adds option to sort blog posts list.
+* Adds option to sort blogs list.
+
+## 04/08/2025 12:15 (UTC)
+
+Release date: 2025-08-04
+
+#### Bugfixes
+
+* Fixes a bug where Page number string would not be correctly translated.
+* Fixes an bug where metafields and data would not be removed when following any of the uninstallation processes.
+
+## 28/07/2025 07:30 (UTC)
+
+Release date: 2025-07-28
+
+#### Bugfixes
+
+* Fixes a bug where some navigation items would not be clickable when the FTC banner was visible.
+
+## 22/07/2025 09:35 (UTC)
+
+Release date: 2025-07-22
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications banner would not disappear when the theme modifications have just been applied.
+
+## 15/07/2025 10:48 (UTC)
+
+Release date: 2025-07-15
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications would run into the rate limits of some Shopify APIs.
+
+## 10/07/2025 09:12 (UTC)
+
+Release date: 2025-07-10
+
+#### Enhancements
+
+* Adds first time configuration wizard to help merchants walk through the essential app settings.
+* Improves welcome dialog to guide merchants showcasing app pinning option and premium support.
+
+## 06/06/2025 08:11 (UTC)
+
+Release date: 2025-06-06
+
+#### Enhancements
+
+* Adds a feedback string for the image alt attributes and image keyphrase assessments for when no content and/or image has been added.
+* Makes the _keyphrase in image alt attributes_ assessment  available when no content has been added.
+* Renames _image keyphrase_ assessment to _keyphrase in image alt attributes_ assessment.
+* Renames the image alt tags assessment to image alt attributes assessment.
+
+## 04/06/2025 09:26 (UTC)
+
+Release date: 2025-06-04
+
+#### Enhancements
+
+* Adds a feedback string for the _image alt attributes_ and _image keyphrase_ assessments for when no content and/or image has been added.
+* Renames the _image alt tags_ assessment to _image alt attributes_ assessment.
+
+#### Bugfixes
+
+* Improves the guidance on using the `Shopify SEO title` variable in our `Full SEO title`.
+
+#### Other
+
+* Removes the "new" badge from the schema section for products.
+
+## 26/05/2025 06:49 (UTC)
+
+Release date: 2025-05-26
+
+#### Enhancements
+
+* Adds more phrases regarding disability to the _inclusive language assessment_.
+* Improves the feedback for "lame" in the _inclusive language assessment_.
+* Makes the following SEO assessments available in the analysis by default, even when no content has been added: _keyphrase in introduction_, _keyphrase in meta description_, _keyphrase in SEO title_, _keyphrase in slug_.
+
+## 22/05/2025 10:47 (UTC)
+
+Release date: 2025-05-22
+
+#### Bugfixes
+
+* Fixes a bug where the template suffix of pages would be reset to the default when saving optimizations.
+
+## 14/05/2025 11:40 (UTC)
+
+Release date: 2025-05-14
+
+#### Enhancements
+
+* Improves the feedback texts for the _passive voice_ and _consecutive sentences_ assessments in case there is nothing to report.
+* Makes the _images_, _internal links_, and _external links_ assessments available when no content has been added.
+
+#### Other
+
+* Improves the translatability of feedback strings for the keyphrase length assessment.
+
+## 08/05/2025 08:40 (UTC)
+
+Release date: 2025-05-08
+
+#### Bugfixes
+
+* Fixes issue with theme modifications apply in some stores due to Shopify API limits.
+
+## 01/05/2025 08:48 (UTC)
+
+Release date: 2025-05-01
+
+#### Enhancements
+
+* Adds a learn more link in the schema section of the product editor.
+* Changes the applicability criteria of readability assessments so that they are shown even if there is little or no text.
+* Improves recognition of function words for Farsi. Props to [nshayanfar](https://github.com/nshayanfar).
+* Improves the recognition of transition words for Farsi.
+* Introduces more robust HTML processing and highlighting for the _consecutive sentences_ assessment.
+
+#### Bugfixes
+
+* Fixes a bug where function words with spaces were not recognised in Farsi.
+
+## 16/04/2025 09:48 (UTC)
+
+Release date: 2025-04-16
+
+#### Enhancements
+
+* Adds search feature to blogs list.
+
+## 15/04/2025 07:30 (UTC)
+
+Release date: 2025-04-15
+
+#### Enhancements
+
+* Adds _pregnant women_ to the potentially non-inclusive phrases targeted by the inclusive language analysis.
+* Improved our Product structured data by specifying the `Offer.priceSpecification` more specifically with the type `UnitPriceSpecification`.
+* Improves the inclusive language analysis feedback for the potentially non-inclusive word _exotic_, and prevents the feedback from appearing when _exotic_ is followed by words common in scientific contexts.
+
+## 09/04/2025 12:20 (UTC)
+
+Release date: 2025-04-09
+
+#### Enhancements
+
+* Adds `productGroupID` attribute in `ProductGroup` structured data.
+
+## 07/04/2025 08:33 (UTC)
+
+Release date: 2025-04-07
+
+#### Enhancements
+
+* Adds support for "search" feature in blog posts list.
+* Moves all blog posts to one lists instead of grouped by blog.
+
+## 02/04/2025 07:51 (UTC)
+
+Release date: 2025-04-02
+
+#### Enhancements
+
+* Improves keyphrase recognition for keyphrases that contain verbs in Spanish.
+* Improves the accuracy of assessments measuring character count for Japanese texts by removing common punctuation from the count.
+* Updates “Edit with Shopify” link in editor to follow the move of the Blogs section from the Online Store app to the Content section of the admin.
+
+#### Bugfixes
+
+* Fixes an issue where the AI intro modal would keep displaying when going back to the optimization overview.
+
+#### Other
+
+* Improves the feedback strings of the _subheading distribution_ assessment for better translatability.
+
+## 27/03/2025 10:21 (UTC)
+
+Release date: 2025-03-27
+
+#### Enhancements
+
+* Adds new Schema preview block in products editor.
+* Add support for Google's rich result type Merchant Listing for product variants. Product variants and the related properties are based on Shopify's product categories and rely on the related product attributes.
+
+[Read more](https://yoast.com/product-variant-schema-release/) about this release.
+
+## 13/03/2025 10:45 (UTC)
+
+Release date: 2025-03-13
+
+#### Enhancements
+
+* Add **"Keyword Difficulty"** and **"Intent"** to **"Get related keyphrases"** feature.
+
+## 06/03/2025 10:20 (UTC)
+
+Release date: 2025-03-06
+
+#### Enhancements
+
+* Changes content filters name from **No focus keyphrase** and **Not enough content** to **Not analyzed**
+* Improves keyphrase recognition for German plural noun forms with an umlaut.
+* Introduces more robust HTML processing and highlighting for the _sentence length_ and _paragraph length_ assessments.
+
+#### Bugfixes
+
+* Fixes a bug where the overall score for the Related keyphrase analysis would still be orange when all the individual assessment results were green.
+* Fixes a bug where the overall SEO score for collections would still be orange when all the individual assessment results were green.
+
 ## 20/02/2025 08:42 (UTC)
 
 Release date: 2025-02-20

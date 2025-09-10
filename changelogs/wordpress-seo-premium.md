@@ -1,3 +1,242 @@
+## 25.9
+
+Release date: 2025-09-09
+
+New: introduces Yoast AI Summarize, instantly condense long-form content into clear key takeaways, in seconds. [Read the release post here](https://yoa.st/release-9-9-2025).
+
+#### Enhancements
+
+* Introduces AI Summarize, the new Yoast custom block which generates a summary of the content using AI.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.9.
+
+## 25.8
+
+Release date: 2025-08-26
+
+Yoast SEO 25.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where redirect notification would be created when changing the slug on a non public term.
+* Fixes a bug where redirect notification would not be created when changing the slug on a public term with url arguments in the permalink.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.8.
+
+## 25.7.1
+
+Release date: 2025-08-13
+
+#### Bugfixes
+
+* Fixes a bug where a deprecation warning would be thrown when `WP_DEBUG` is enabled and a site is on PHP 8.1 or newer.
+
+## 25.7
+
+Release date: 2025-08-12
+
+Yoast SEO 25.7 introduces an updated interface for Yoast SEO Redirect Manager and extends Yoast AI Optimize to the Classic Editor. [Read the release post here](https://yoa.st/release-12-8-25)!
+
+#### Enhancements
+
+* Re-introduces the improved AI Optimize feature in Classic Editor.
+* Launches a brand new redesign of the Redirects page.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Optimize introduction component would not be shown when the AI buttons were only available inside the SEO Analysis.
+* Fixes a bug where the check icon of the Apply button inside AI Optimize notification would be displayed upside down in RTL languages.
+* Fixes a bug where the text in the Apply, Dismiss and Learn more buttons of the AI Optimize notification would be missing in some RTL languages, such as Arabic.
+* Fixes a bug where the user would be prompted to create a redirect for private terms.
+* Fixes a bug where the wrong error message would be shown for AI Optimize in the following cases: unreachable site; subscription not found.
+* Fixes a bug where the active Code tab would be switched to Visual when content was saved in Classic Editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.7.
+* Sets the minimum supported WordPress version to 6.7.
+
+## 25.6
+
+Release date: 2025-07-29
+
+Yoast SEO Premium 25.6 brings support for Yoast SEO 25.6 and enhances the llms.txt feature with manual personalization.  [Read the release post here](https://yoa.st/release-29-7-25)!
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.6.
+
+## 25.5
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Bumps the minimum required version of Yoast SEO to 25.5.
+
+## 25.4
+
+Release date: 2025-07-01
+
+Yoast SEO 25.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the AI Optimize Introduction notification would display behind the WordPress admin menu in some screen resolutions.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.4.
+
+## 25.3.1
+
+Release date: 2025-06-18
+
+Updates Yoast AI Optimize for the Classic Editor as part of ongoing improvements. [Learn more in the release post here](https://yoa.st/release-18-6-25).
+
+#### Bugfixes
+
+* Automatically cleans up the unexpected classes added by AI Optimize for the Classic editor.
+* Fixes a bug where a console error would appear when Yoast AI was enabled and a post was opened, saved, or published when inside the Classic code editor.
+* Fixes a bug where the class names used for AI Optimize feature in Classic editor were not cleaned up when a post is saved or published.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.3.1.
+* Temporarily disables the AI Optimize feature in the Classic editor.
+
+## 25.3
+
+Release date: 2025-06-10
+
+*New:* Yoast SEO 25.3 introduces llms.txt support to help AI tools understand your site better. [Read the full release post here!](https://yoa.st/release-10-6-25)
+
+#### Enhancements
+
+* Improves the placement of the AI Optimize introduction popover in the Classic editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.3.
+* Disables the code editor switch button in Classic editor when the Yoast AI Optimize notification is visible.
+
+## 25.2
+
+Release date: 2025-05-27
+
+Yoast SEO 25.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds support for Yoast AI Optimize in the Classic editor.
+
+#### Bugfixes
+
+* Fixes a bug where the AI grant/revoke consent on the profile page was not translated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.2.
+
+## 25.1
+
+Release date: 2025-05-13
+
+Yoast SEO 25.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.1.
+
+## 25.0
+
+Release date: 2025-04-29
+
+Yoast SEO 25.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the Yoast SEO Premium update process by decluttering the page from unnecessary admin notices.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generator usage counter would not be correctly styled when retrieving suggestions in the Classic Editor and Elementor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.0.
+* Drops compatibility with PHP 7.2 and 7.3.
+
+## 24.9
+
+Release date: 2025-04-15
+
+Yoast SEO 24.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the AI generator modal would not be visible when using Astra plugins.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.9.
+
+## 24.8
+
+Release date: 2025-04-01
+
+Yoast SEO 24.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves error messages related to AI features by updating the link directing to Yoast Support.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.8.
+* Removes the beta label from the front-end SEO inspector.
+
+## 24.7
+
+Release date: 2025-03-18
+
+Yoast SEO 24.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves keyphrase recognition for keyphrases that contain verbs in Spanish.
+
+#### Bugfixes
+
+* Fixes a bug where the help beacon would be displayed over table pagination the redirect page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.7.
+
+## 24.6
+
+Release date: 2025-03-04
+
+Yoast SEO 24.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Provides support for the Optimized Markup feature in Elementor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 24.6.
+* Sets the minimum supported WordPress version to 6.6.
+* Uses approximation when counting tokens to be sent as Yoast AI Optimize prompt.
+
 ## 24.5
 
 Release date: 2025-02-18

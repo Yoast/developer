@@ -1,3 +1,28 @@
+## 16.6
+
+Release date: 2025-09-09
+
+#### Enhancements
+
+* Adds a new condition to the _image alt attributes_ assessment for when no content and/or image has been added.
+* Aligns product variation `priceSpecification` with the simple product `priceSpecification` schema.
+* Enhances variable products schema output by adding support for the `variesBy` property.
+* Renames the _image alt tags_ assessment to _image alt attributes_ assessment.
+
+#### Bugfixes
+
+* Fixes a bug where a fatal error would be thrown in product pages when WooCommerce add-ons added schema but didn't account for the new WooCommerce schema structure, introduced in WooCommerce v9.5.0.
+* Fixes a bug where a variable product without a product image would lead to a malformed schema output.
+* Fixes a bug where product attributes would not be included in a product schema.
+* Fixes a bug where simple products having a custom attribute with multiple values would still be rendered in the schema.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 25.9.
+* Drops compatibility with PHP 7.2 and 7.3.
+* Sets the minimum supported WordPress version to 6.7.
+* Sets the _WordPress tested up to_ version to 6.8.
+
 ## 16.5
 
 Release date: 2024-12-18

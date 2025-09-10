@@ -175,6 +175,7 @@ module.exports = {
 				},
 				"features/twitter/functional-specification",
 				"features/robots-txt/functional-specification",
+				"features/llms-txt/functional-specification",
 				{
 					type: "category",
 					label: "Integrations",

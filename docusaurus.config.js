@@ -374,19 +374,7 @@ export default {
 								},
 								{
 									label: "Yoast SEO for Shopify",
-									href: "https://yoast.com/shopify/apps/yoast-seo/",
-								},
-								{
-									label: "Local SEO for WordPress",
-									href: "https://yoast.com/wordpress/plugins/local-seo/",
-								},
-								{
-									label: "News SEO for WordPress",
-									href: "https://yoast.com/wordpress/plugins/news-seo/",
-								},
-								{
-									label: "Video SEO for WordPress",
-									href: "https://yoast.com/wordpress/plugins/video-seo/",
+									href: "https://yoast.com/product/yoast-seo-shopify/",
 								},
 								{
 									label: "WooCommerce SEO for WordPress",

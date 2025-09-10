@@ -1,9 +1,22 @@
 ---
 id: capability-roles-filter
-title: "Yoast SEO: Alter Yoast SEO capabilities for roles"
-sidebar_label: Alter Yoast SEO capabilities for roles
+title: "Yoast SEO: Yoast SEO roles and capabilities"
+sidebar_label: Yoast SEO roles and capabilities
 ---
 Yoast SEO ships with a variety of custom capabilities that are assigned to various roles, which allow for granular control over what features are available for a particular role. However, in some cases you might want to expand or limit these capabilities. To support this, we’ve introduced a filter named `{$capability}_roles`, where `{$capability}` needs to be replaced with the name of one of the capabilities	that is registered by Yoast SEO.
+
+## Default roles
+Yoast SEO has the following two default roles and their respective capabilities. These roles can be seen as an extension to the default WordPress role of Editor. As such, they inherit all capabilities of the Editor role as well.
+
+**wpseo_editor**
+- `wpseo_bulk_edit`
+- `wpseo_edit_advanced_metadata`
+
+**wpseo_manager**
+- `wpseo_bulk_edit`
+- `wpseo_edit_advanced_metadata`
+- `wpseo_manage_options`
+- `view_site_health_checks`
 
 ## Usage
 ### Adding roles
@@ -57,5 +70,3 @@ Currently, the following capabilities are registered and can be altered with the
 * `wpseo_edit_advanced_metadata` - Allows users to edit advanced metadata in the Advanced tab of the Yoast SEO metabox. Please note: If you want to fully disable this for a user that also has the `wpseo_manage_options` capability, you will have to also remove this capability for said user.
 * `wpseo_manage_options` - Allows users to access the Yoast SEO settings pages. Please note: This does not work for administrators.
 * `view_site_health_checks` - Allows users to access the Site Health Checks that are present in WordPress.
-
-

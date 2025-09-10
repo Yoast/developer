@@ -19,7 +19,7 @@ A valid `Organization` must have the following properties.
 * `@type`: `Organization`.
 * `@id`: The site's home URL appended by `#/schema/Organization/{{ID}}`, where `{{ID}}` is a unique identifier.
   * If the `organization` is the publisher of the `WebSite` (i.e., the "*primary organization*", or "*this organization*"), then the value of `{{ID}}` should be `1`.
-  * `name`: The name of the `Organization`.
+* `name`: The name of the `Organization`.
 * `URL:` The site's home URL.
 * `logo`: A reference-by-ID to an `ImageObject` of the organization's logo.
 

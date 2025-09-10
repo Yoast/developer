@@ -1,3 +1,270 @@
+= 25.9 =
+
+Release date: 2025-09-09
+
+Yoast SEO 25.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the UX of the llms.txt feature by displaying errors with generating the llms.txt file in the relevant settings page.
+* Improves the UX of onboarding new users by preventing irrelevant modals from displaying in the First Time Configuration.
+
+#### Other
+
+* Updates the copy of the consent modal for using the Yoast AI features.
+
+= 25.8 =
+
+Release date: 2025-08-26
+
+Yoast SEO 25.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Changes the AI generator button label and design.
+
+#### Other
+
+* Improves response validation of the Yoast license check. Props to [aryanjasala](https://github.com/aryanjasala).
+* Fixes a console warning message triggered by the introductions in the Yoast admin page.
+* Updates ads to reflect the new pricing scheme.
+
+= 25.7 =
+
+Release date: 2025-08-12
+
+Yoast SEO 25.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Re-generates the llms.txt file immediately when there's any change in the selection of the pages to be included.
+
+#### Bugfixes
+
+* Fixes a bug where the AI free sparks upsell would appear instead of the rate limit error in cases where the rate limit for AI Generate was reached before the free sparks limit.
+
+#### Other
+
+* Adds an announcement for the upcoming AI Brand Insights feature.
+* Sets the minimum supported WordPress version to 6.7.
+
+= 25.6 =
+
+Release date: 2025-07-29
+
+Yoast SEO 25.6 adds enhancements to the llms.txt feature, introducing manual personalization. [Read the release post here](https://yoa.st/release-29-7-25)!
+
+#### Enhancements
+
+* Adds a free preview of the AI features from Yoast SEO Premium.
+* Introduces a way to manually select the pages to be included in the llms.txt file.
+
+#### Bugfixes
+
+* Fixes a bug where the icon on search appearance would not be aligned when on a right-to-left locale.
+
+= 25.5 =
+
+Release date: 2025-07-15
+
+Yoast SEO 25.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Enhances the UX of the llms.txt feature by informing users about potential issues with generating the file via Yoast’s alert center.
+* Changes post lists in the llms.txt file to use canonical URLs.
+
+#### Bugfixes
+
+* Fixes a bug where a request limit warning would be shown in the Semrush related keyphrases when no warning was applicable.
+
+#### Other
+
+* Adds an announcement for the Google Docs add-on.
+* Changes the `Upgrades` page to a `Plans` page.
+* Removes redundant flushing of cache groups when incoming links for posts change.
+
+= 25.4 =
+
+Release date: 2025-07-01
+
+Yoast SEO 25.4 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds descriptions for the posts listed in the llms.txt file, using their excerpts when those are explicitly set.
+* Adds support for preventing specifically `noindex`ed posts from getting into the llms.txt file.
+* Changes one of the feedback texts for the _text length_ assessment to be consistent with the others.
+* Improves support for non-english characters in llms.txt, for servers that don't serve .txt files in UTF-8.
+* Improves the feedback of the _competing links_ assessment by making it clearer.
+* Makes the assessments _single title_ and _competing links_ available from the get-go in the SEO analysis.
+* Prioritizes cornerstone content for the posts lists in the llms.txt file.
+* Renames the _link keyphrase_ assessment to _competing links_.
+
+#### Bugfixes
+
+* Fixes a bug where the llmst.txt file wouldn't be able to be generated in wp.com.
+
+#### Other
+
+* Improves the internal engine that creates the post lists in the llms.txt file for a more efficient and lighter generation.
+* Improves the translatability of the feedback strings for the _text length_ assessment.
+* Introduces the `wpseo_llmstxt_filesystem_path` filter that allows editing the file path of the llmst.txt file, to help users in servers with filesystem restrictions.
+
+= 25.3.1 =
+
+Release date: 2025-06-18
+
+This is a maintenance release which is required to align with changes to Yoast SEO Premium 25.3.1.
+
+= 25.3 =
+
+Release date: 2025-06-10
+
+*New:* Yoast SEO 25.3 introduces llms.txt support to help AI tools understand your site better. [Read the full release post here!](https://yoa.st/release-10-6-25)
+
+#### Enhancements
+
+* Introduces the llms.txt feature, which gives site owners the opportunity to automatically generate an llms.txt file. This file helps LLMs to better understand the site's content.
+
+= 25.2 =
+
+Release date: 2025-05-27
+
+Yoast SEO 25.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Makes the _keyphrase in image alt attributes_ assessment  available when no content has been added.
+* Renames _image keyphrase_ assessment to _keyphrase in image alt attributes_ assessment.
+
+#### Bugfixes
+
+* Fixes a bug in the retrieval of post categories titles where a non-existent term might be referenced. Props to [@bor0](https://github.com/bor0).
+* Fixes a bug where the Yoast introduction in the Elementor editor would not be positioned correctly when on Elementor version 3.30.0.
+
+#### Other
+
+* Excludes gallery, embed and playlist shortcodes from the _keyphrase in introduction_ analysis in Classic editor.
+
+= 25.1 =
+
+Release date: 2025-05-13
+
+Yoast SEO 25.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds more phrases regarding disability to the _inclusive language assessment_.
+* Improves the feedback for "lame" in the _inclusive language assessment_.
+* Makes the following SEO assessments available in the analysis by default, even when no content has been added: _keyphrase in introduction_, _keyphrase in meta description_, _keyphrase in SEO title_, _keyphrase in slug_ and _previously used keyphrase_.
+* Optimizes the function used to fetch post IDs which share the same focus keyphrase. Props to [dilipbheda](https://github.com/dilipbheda).
+
+= 25.0 =
+
+Release date: 2025-04-29
+
+Yoast SEO 25.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Optimizes the `wp yoast cleanup` CLI command  `update_indexables_author_to_reassigned` step, which can become very slow for very large data sets. Props to [eddiesshop](https://github.com/eddiesshop).
+* Improves the feedback texts for the _passive voice_ and _consecutive sentences_ assessments in case there is nothing to report.
+* Makes the _images_, _internal links_, and _external links_ assessments available when no content has been added.
+
+#### Other
+
+* Drops compatibility with PHP 7.2 and 7.3.
+* Improves the translatability of feedback strings for the keyphrase length assessment.
+
+= 24.9 =
+
+Release date: 2025-04-15
+
+Yoast SEO 24.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Changes the applicability criteria of readability assessments so that they are shown even if there is little or no text.
+* Improves the recognition of transition words for Farsi.
+* Introduces more robust HTML processing and highlighting for the _consecutive sentences_ assessment.
+* Improves recognition of function words for Farsi. Props to [nshayanfar](https://github.com/nshayanfar).
+
+#### Bugfixes
+
+* Fixes a bug where long sentences would be incorrectly highlighted in _sentence length_ assessment in the default editor when they were part of a block that contained non-breaking spaces or closing tags (`>`).
+* Fixes a bug where the advanced replacement variables would not be visible when editing social previews in Elementor.
+* Fixes a bug where the content image would not show on social previews when editing it in Elementor.
+* Fixes a bug where Yoast modals would not be visible when using Astra plugins.
+* Fixes a bug where function words with spaces were not recognised in Farsi. 
+
+#### Other
+
+* Adds a space before the closing slash in self-closing HTML tags to comply with recommended coding standards. Props to [laxman1192](https://github.com/laxman1192).
+* Sets the _WordPress tested up to_ version to 6.8.
+* Updates the Google AI bot name in the _crawl optimization_ settings from _Google Bard_ to _Google Gemini_.
+
+= 24.8.1 =
+
+Release date: 2025-04-02
+
+#### Bugfixes
+
+* Fixes a potential fatal error on the dashboard page.
+
+= 24.8 =
+
+Release date: 2025-04-01
+
+Yoast SEO 24.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds _pregnant women_ to the potentially non-inclusive phrases targeted by the inclusive language analysis.
+* Improves the inclusive language analysis feedback for the potentially non-inclusive word _exotic_, and prevents the feedback from appearing when _exotic_ is followed by words common in scientific contexts.
+
+#### Other
+
+* Removes the Yoast AI Optimize modals from the Yoast admin pages.
+
+= 24.7 =
+
+Release date: 2025-03-18
+
+Yoast SEO 24.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the accuracy of assessments measuring character count for Japanese texts by removing common punctuation from the count.
+
+#### Bugfixes
+
+* Fixes a bug where the help beacon would be displayed over table pagination on the bulk editor page.
+
+#### Other
+
+* Improves the feedback strings of the _subheading distribution_ assessment for better translatability.
+* Removes extra span tags in the Post/Page overview. Props to [dilipbheda](https://github.com/dilipbheda).
+
+= 24.6 =
+
+Release date: 2025-03-04
+
+Yoast SEO 24.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Provides support for the Optimized Markup feature in Elementor.
+* Removes the breadcrumbs from the Search snippet preview in Mobile mode.
+
+#### Bugfixes
+
+* Fixes a bug where invalid inner blocks would be removed when saving a post in the block editor.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 6.6.
+
 = 24.5 =
 
 Release date: 2025-02-18

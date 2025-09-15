@@ -139,7 +139,9 @@ Yoast AI requires the SEO analysis to be enabled. To enable it, please navigate 
 ## Mocking these errors
 
 ### In WordPress
-If you need to display these errors without actually triggering them (e.g., displaying the rate limit error without actually reaching the rate limit), you can do so by replacing the output of the `get_suggestions` function of `src/actions/ai-generator-action.php` in the Yoast SEO Premium code. 
+If you need to display these errors without actually triggering them (e.g., displaying the rate limit error without actually reaching the rate limit), you can do so by editing the function `get_suggestions` in `src/ai-generator/user-interface/get-suggestions-route.php` in the Yoast SEO repository. 
+Replace the content of the `throw` block with one of the errors below. Also, replace the variable in the following `catch` block with the name of the error (e.g. `Bad_Request_Exception`), and add the error to the imports (e.g. `use Yoast\WP\SEO\AI_HTTP_Request\Domain\Exceptions\Bad_Request_Exception;`).
+```php
 
 Choose one of the errors below:
 

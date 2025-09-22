@@ -1,6 +1,6 @@
 ---
 id: orphaned-content-count-cache-filters
-title: "Yoast SEO: Alter Yoast SEO orphaned content count cache"
+title: "Yoast SEO Premium: Alter Yoast SEO orphaned content count cache"
 sidebar_label: Alter Yoast SEO orphaned content count cache
 ---
 Yoast SEO Premium allows you to either disable the orphaned content count cache, or change the way it's invalidated.

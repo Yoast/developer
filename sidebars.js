@@ -312,7 +312,6 @@ module.exports = {
 						"customization/yoast-seo/filters/capability-roles-filter",
 						"customization/yoast-seo/filters/change-metabox-prio-filter",
 						"customization/yoast-seo/filters/cornerstone-post-types-filter",
-						"customization/yoast-seo/filters/orphaned-content-count-cache-filters",
 						"customization/yoast-seo/filters/shortcodes-filter",
 						"customization/yoast-seo/filters/markdown-enabled-filter",
 						"customization/yoast-seo/filters/assessment-markers-filter",
@@ -330,6 +329,7 @@ module.exports = {
 						"customization/yoast-seo-premium/disabling-autoloading-redirect-options",
 						"customization/yoast-seo-premium/hiding-version-number",
 						"customization/yoast-seo-premium/disable-table-of-content-block",
+						"customization/yoast-seo-premium/orphaned-content-count-cache-filters",
 					],
 				},
 				{

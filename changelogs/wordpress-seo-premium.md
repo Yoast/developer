@@ -1,3 +1,25 @@
+## 26.1
+
+Release date: 2025-10-07
+
+Yoast SEO 26.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds tooltips to the AI Summarize `Generate summary` and `Regenerate summary` buttons when they are disabled.
+* Excludes the content of the AI Summarize block from the content that should be summarized when re-generating a summary.
+* Prevents AI Optimize from suggesting improvements to the content of the AI Summarize block.
+
+#### Bugfixes
+
+* Fixes a bug where the modals would be rendered every time on hovering over the transform options in the AI Summarize menu.
+
+#### Other
+
+* Adds the `wpseo_premium_orphaned_count_cache` filter to allow the ability to completely disable the `orphaned_count` object cache.
+* Adds the `wpseo_premium_orphaned_count_cache_invalidation_method` filter as one more way to invalidate the `orphaned_count` object cache, apart from the `wpseo_premium_orphaned_count_cache` filter.
+* Bumps the minimum required version of Yoast SEO to 26.1.
+
 ## 26.0
 
 Release date: 2025-09-23

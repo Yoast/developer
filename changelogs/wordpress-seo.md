@@ -1,3 +1,45 @@
+= 26.1 =
+
+Release date: 2025-10-07
+
+Yoast SEO 26.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the UX of the `llms.txt` settings page, by informing the user that they have to save their changes in order for the file to be generated.
+* Introduces the option to add an Ahrefs verification code via the Yoast Settings page.
+
+#### Bugfixes
+
+* Fixes a bug where the `llms.txt` opt-in would hide behind the WordPress sidebar when on RTL language.
+
+#### Other
+
+* Introduces the `Yoast\WP\SEO\should_invalidate_opcache` filter that disables opcache invalidation on plugin upgrade.
+* Lets users know about the new `Yoast SEO AI+` plan and related features.
+* Updates the `Site features` page to include icons instead of images.
+
+= 26.0 =
+
+Release date: 2025-09-23
+
+Yoast SEO 26.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Opens the `Advanced` Settings' section when clicking the `Customize llms.txt file` button.
+
+#### Bugfixes
+
+* Fixes a bug where a string in the AI Generate usage counter tooltip was missing in RTL languages.
+
+#### Other
+
+* Adds an introduction which would show after 14 days of the plugin activation or update.
+* Adds safety check when accessing an array to avoid PHP warnings when getting the upgrade campaign for Wincher integration. Props to [@bor0](https://github.com/bor0).
+* Allow changing the main image ID through a filter `wpseo_schema_main_image_id`. Props to [@JoryHogeveen](https://github.com/JoryHogeveen).
+* Ensures compatibility with the recent Wincher API changes.
+
 = 25.9 =
 
 Release date: 2025-09-09

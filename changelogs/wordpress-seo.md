@@ -1,3 +1,11 @@
+= 26.1.1 =
+
+Release date: 2025-10-08
+
+#### Other
+
+* Updates an outdated piece of copy.
+
 = 26.1 =
 
 Release date: 2025-10-07

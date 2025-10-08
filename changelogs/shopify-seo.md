@@ -1,3 +1,11 @@
+## 08/10/2025 12:13 (UTC)
+
+Release date: 2025-10-08
+
+#### Bugfixes
+
+* Fixes a bug where customers was not redirected to welcome page after app installation.
+
 ## 08/10/2025 08:16 (UTC)
 
 Release date: 2025-10-08

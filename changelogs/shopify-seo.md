@@ -1,3 +1,11 @@
+## 08/10/2025 08:16 (UTC)
+
+Release date: 2025-10-08
+
+#### Enhancements
+
+* Introduces new checkout page.
+
 ## 09/09/2025 07:49 (UTC)
 
 Release date: 2025-09-09

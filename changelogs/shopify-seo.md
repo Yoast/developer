@@ -1,3 +1,11 @@
+## 13/10/2025 10:45 (UTC)
+
+Release date: 2025-10-13
+
+#### Bugfixes
+
+* Fixes issue with welcome page not displaying after app install.
+
 ## 08/10/2025 12:13 (UTC)
 
 Release date: 2025-10-08

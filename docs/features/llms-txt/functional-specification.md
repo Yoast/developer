@@ -111,12 +111,12 @@ function custom_llmstxt_encoding_prefix() {
  * @return string The changed link description in the llms.txt file.
  */
 function set_custom_llmstxt_link_description( $link_description, $post_id, $post_type ) {
-	// Remove excerpt for specific post types.
-	if ( in_array( $post_type, [ 'page' ], true ) ) {
-		return '';
-	}
+    // Remove excerpt for specific post types.
+    if ( in_array( $post_type, [ 'page' ], true ) ) {
+      return '';
+    }
 
-	// Keep excerpt for other post types but make it more descriptive.
+    // Keep excerpt for other post types but make it more descriptive.
     return 'Custom description for post ID ' . $post_id . ', ' . $link_description;
 }
 

@@ -23,6 +23,18 @@ module.exports = {
 			items: [
 				{
 					type: "category",
+					label: "Yoast AI",
+					link: {
+						type: "generated-index",
+						description: "This documentation provides information about the AI features that Yoast SEO provides to users.",
+						slug: "features/ai/",
+					},
+					items: [
+						"features/ai/ai-errors",
+					],
+				},
+				{
+					type: "category",
 					label: "Analysis",
 					items: [
 						"features/analysis/overview",
@@ -76,6 +88,7 @@ module.exports = {
 							label: "Titles",
 							link: {
 								type: "generated-index",
+								// eslint-disable-next-line max-len
 								description: "This documentation provides technical information about how Yoast SEO generates and/or manages title tags.",
 								slug: "/features/seo-tags/titles/",
 							},
@@ -89,6 +102,7 @@ module.exports = {
 							label: "Descriptions",
 							link: {
 								type: "generated-index",
+								// eslint-disable-next-line max-len
 								description: "This documentation provides technical information about how Yoast SEO generates and/or manages description tags.",
 								slug: "/features/seo-tags/descriptions/",
 							},
@@ -102,6 +116,7 @@ module.exports = {
 							label: "Canonical URLs",
 							link: {
 								type: "generated-index",
+								// eslint-disable-next-line max-len
 								description: "This documentation provides technical information about how Yoast SEO generates and/or manages canonical URL values and tags.",
 								slug: "/features/seo-tags/canonical-urls/",
 							},
@@ -116,6 +131,7 @@ module.exports = {
 							label: "Meta robots",
 							link: {
 								type: "generated-index",
+								// eslint-disable-next-line max-len
 								description: "This documentation provides technical information about how Yoast SEO generates and/or manages meta robots tags.",
 								slug: "/features/seo-tags/meta-robots/",
 							},
@@ -146,6 +162,7 @@ module.exports = {
 							label: "API",
 							link: {
 								type: "generated-index",
+								// eslint-disable-next-line max-len
 								description: "This documentation explains how to use the Yoast SEO API to influence the values of, and which OpenGraph tags Yoast SEO generates and outputs.",
 								slug: "/features/opengraph/api/",
 							},
@@ -285,6 +302,7 @@ module.exports = {
 					label: "APIs",
 					link: {
 						type: "generated-index",
+						// eslint-disable-next-line max-len
 						description: "Yoast SEO exposes several APIs, which are designed to help advanced users, developers, and integrators to access and manipulate our data and outputs.",
 						slug: "/customization/apis",
 					},

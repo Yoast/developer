@@ -88,5 +88,49 @@ function custom_llmstxt_encoding_prefix() {
 }
 ```
 
+### Edit the description in the posts lists
+
+* By default, for posts that have a custom excerpt, we use that to add a description for each post:
+```
+## Posts
+- [Post with excerpt](http://example.com/post-with-excerpt/): This is a custom excerpt.
+- [Post without excerpt](http://example.com/post-without-excerpt/)
+```
+* For changing the default behavior, you can use the `wpseo_llmstxt_link_description` filter:
+
+```php
+<?php
+
+/**
+ * Changes the link description in the llms.txt file.
+ *
+ * @param string $link_description The description of the link.
+ * @param string $post_id          The ID of the post that is being added as a link.
+ * @param string $post_type        The post type of the post that is being added as a link.
+ *
+ * @return string The changed link description in the llms.txt file.
+ */
+function set_custom_llmstxt_link_description( $link_description, $post_id, $post_type ) {
+    // Remove excerpt for specific post types.
+    if ( in_array( $post_type, [ 'page' ], true ) ) {
+      return '';
+    }
+
+    // Keep excerpt for other post types but make it more descriptive.
+    return 'Custom description for post ID ' . $post_id . ', ' . $link_description;
+}
+
+add_filter( 'wpseo_llmstxt_link_description', 'set_custom_llmstxt_link_description', 10, 3 );
+```
+* The above snippet will remove descriptions from pages (if there are any) and adjust accordingly the descriptions for posts:
+```
+## Pages
+- [Page with excerpt](http://example.com/page-with-excerpt/)
+
+## Posts
+- [Post with excerpt](http://example.com/post-1): Custom description for post ID 1, this is the custom excerpt.
+```
+
+
 
 

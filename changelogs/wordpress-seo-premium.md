@@ -1,3 +1,15 @@
+## 26.2
+
+Release date: 2025-10-21
+
+#### Enhancements
+
+* Makes the HelpScout Beacon in the `Support` page accessible to all users with any valid plan regardless of the add-ons they have installed/activated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.2.
+
 ## 26.1
 
 Release date: 2025-10-07

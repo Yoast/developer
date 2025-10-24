@@ -1,3 +1,11 @@
+## 23/10/2025 06:20 (UTC)
+
+Release date: 2025-10-23
+
+#### Bugfixes
+
+* Fixes issue with wrongly detected delimiters during CSV data import.
+
 ## 13/10/2025 10:45 (UTC)
 
 Release date: 2025-10-13

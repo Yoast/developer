@@ -1,3 +1,11 @@
+## 29/10/2025 10:55 (UTC)
+
+Release date: 2025-10-29
+
+#### Bugfixes
+
+* Fixes a bug where discounts would not show when using the mobile checkout page.
+
 ## 27/10/2025 08:43 (UTC)
 
 Release date: 2025-10-27

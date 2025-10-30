@@ -36,6 +36,7 @@ The following should be added whenever available and valid:
 * `sameAs`: An array of URLs representing declared social/authoritative profiles of the person (e.g., a Wikipedia page, or Facebook profile).
 * `image`: An array of references-by-ID to `ImageObject` nodes which represent the person.
 * `url`: The URL of the users' profile page (if they're affiliated with the site in question), or to their personal homepage/website.
+* `pronouns`: The user pronouns from the users' profile page.
 
 ## Conditional properties
 Optional properties which should only be output when the required criteria is met.

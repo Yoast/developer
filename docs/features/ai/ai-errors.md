@@ -7,7 +7,7 @@ description: This documentation provides information about the errors that the Y
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This documentation provides information about the errors displayed by the [Yoast AI features](https://yoast.com/features/ai-generated-titles-and-meta-descriptions/) of the [Yoast SEO Premium](https://yoast.com/wordpress/plugins/seo/) plugin. All Yoast AI features connect to the Yoast AI API, which in turn connects to an AI service provider (currently: [OpenAI](https://openai.com/)). Below, we list the possible error messages based on the [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) received from this API.
+This documentation provides information about the errors displayed by the [Yoast AI features](https://yoast.com/features/ai-generated-titles-and-meta-descriptions/). All Yoast AI features connect to the Yoast AI API, which in turn connects to an AI service provider (currently: [OpenAI](https://openai.com/)). Below, we list the possible error messages based on the [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) received from this API.
 
 ## 400 responses
 This section lists the errors that are displayed for [400 Bad Request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400) responses.
@@ -59,7 +59,7 @@ In the Yoast SEO plugins for WordPress, we use the WordPress REST interface to c
 :::
 
 ## 402 responses
-This section lists the errors that will be displayed for [402 Payment Required](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402) responses.
+This section lists the errors that are displayed for [402 Payment Required](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402) responses.
 
 ### Subscription error
 The use of Yoast AI requires an active subscription for your site. Please refer to [this page](https://yoast.com/help/faq-ai-in-yoast-seo) to understand the subscriptions required to use the Yoast AI features.
@@ -73,12 +73,12 @@ To access this feature, you need an active Yoast SEO Premium subscription. Pleas
 _For two subscriptions_<br/>
 To access this feature, you need active Yoast SEO Premium and Yoast WooCommerce SEO subscriptions. Please activate your subscriptions in MyYoast or get a new Yoast WooCommerce SEO Premium bundle. Afterward, refresh this page. It may take up to 30 seconds for the feature to function correctly.</TabItem>
 <TabItem value="error-image" label="Screenshot">![Error example](images/402-one-subscription-error.png)![Error example](images/402-two-subscriptions-error.png)</TabItem>
-<TabItem value="error-links" label="Links">Depending on the missing subscription(s), the message will include links to: an article on [how to activate a Yoast subscription](https://yoast.com/help/activate-premium-license) as well as pages on upgrading to [Yoast SEO Premium](https://yoast.com/rtu-generative-ai), to [Yoast WooCommerce SEO](https://yoast.com/rtu-woocommerce-seo), and to [the Yoast WooCommerce Premium bundle](https://yoast.com/rtu-woo-premium-bundle).</TabItem>
+<TabItem value="error-links" label="Links">Depending on the missing subscription(s), the message includes links to: an article on [how to activate a Yoast subscription](https://yoast.com/help/activate-premium-license) as well as pages on upgrading to [Yoast SEO Premium](https://yoast.com/rtu-generative-ai), to [Yoast WooCommerce SEO](https://yoast.com/rtu-woocommerce-seo), and to [the Yoast WooCommerce Premium bundle](https://yoast.com/rtu-woo-premium-bundle).</TabItem>
 </Tabs>
 :::
 
 ## 408 responses
-This section lists the errors that will be displayed for [408 Request Timeout](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408) responses.
+This section lists the errors that are displayed for [408 Request Timeout](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408) responses.
 
 ### "Request timeout" error
 The Yoast AI features expect a response from the Yoast AI API within 60 seconds. This error message is displayed when the response is not retrieved within 60 seconds.
@@ -93,7 +93,7 @@ It seems that a connection timeout has occurred. Please check your internet conn
 :::
 
 ## 429 responses
-This section lists the errors that will be displayed for [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) responses.
+This section lists the errors that are displayed for [429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) responses.
 
 ### Rate limit error
 The use of Yoast AI comes with rate limits to ensure fair use. Moreover, we are in the process of introducing a subscription-based limit on the amount of AI generations per month. Please refer to [this page](https://yoa.st/ai-generator-rate-limit-help) to understand the rate limits that are applicable. 

@@ -336,6 +336,7 @@ module.exports = {
 						"customization/yoast-seo/filters/primary-term-taxonomies-filter",
 						"customization/yoast-seo/filtering-yoast-blocks",
 						"customization/yoast-seo/wp-get-environment-type-in-yoast-seo",
+						"customization/yoast-seo/filters/disable-opcache-reset-on-upgrade",
 					],
 				},
 				{
@@ -347,6 +348,7 @@ module.exports = {
 						"customization/yoast-seo-premium/disabling-autoloading-redirect-options",
 						"customization/yoast-seo-premium/hiding-version-number",
 						"customization/yoast-seo-premium/disable-table-of-content-block",
+						"customization/yoast-seo-premium/orphaned-content-count-cache-filters",
 					],
 				},
 				{

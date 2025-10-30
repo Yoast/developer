@@ -1,3 +1,54 @@
+## 26.2
+
+Release date: 2025-10-21
+
+#### Enhancements
+
+* Makes the HelpScout Beacon in the `Support` page accessible to all users with any valid plan regardless of the add-ons they have installed/activated.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.2.
+
+## 26.1
+
+Release date: 2025-10-07
+
+Yoast SEO 26.1 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds tooltips to the AI Summarize `Generate summary` and `Regenerate summary` buttons when they are disabled.
+* Excludes the content of the AI Summarize block from the content that should be summarized when re-generating a summary.
+* Prevents AI Optimize from suggesting improvements to the content of the AI Summarize block.
+
+#### Bugfixes
+
+* Fixes a bug where the modals would be rendered every time on hovering over the transform options in the AI Summarize menu.
+
+#### Other
+
+* Adds the `wpseo_premium_orphaned_count_cache` filter to allow the ability to completely disable the `orphaned_count` object cache.
+* Adds the `wpseo_premium_orphaned_count_cache_invalidation_method` filter as one more way to invalidate the `orphaned_count` object cache, apart from the `wpseo_premium_orphaned_count_cache` filter.
+* Bumps the minimum required version of Yoast SEO to 26.1.
+
+## 26.0
+
+Release date: 2025-09-23
+
+Yoast SEO 26.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where a redirect could not be removed if it included our own redirect routes.
+* Fixes a bug where a string from the usage counter tooltip for AI features was missing in RTL languages.
+* Fixes a bug where the filter and search values would be persistent when switching tabs in the redirects page.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.0.
+* Fixes a security defect where users with `edit_posts` capabilities (Contributor+) could execute stored cross-site scripting if the plugin's AI feature was enabled. Props to [stealthcopter](https://github.com/stealthcopter).
+
 ## 25.9
 
 Release date: 2025-09-09

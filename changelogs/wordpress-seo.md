@@ -1,3 +1,18 @@
+= 26.3 =
+
+Release date: 2025-11-04
+
+Yoast SEO 26.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+*  Fixes a bug where the llms.txt file template contained a spelling error "can by found" instead of "can be found". Props to [aditya241104](https://github.com/aditya241104).
+
+#### Other
+
+* Introduces the `wpseo_llmstxt_link_description` filter for link descriptions in the `llms.txt` file. Props to @Godzilaa.
+* Removes the external link icon from the `Customize llms.txt file` button in the `Site features` section of the plugin's Settings page.
+
 = 26.2 =
 
 Release date: 2025-10-21

@@ -1,3 +1,17 @@
+## 26.3
+
+Release date: 2025-11-04
+
+Yoast SEO 26.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where users could activate the web server redirection method in multisite installations.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.3.
+
 ## 26.2
 
 Release date: 2025-10-21

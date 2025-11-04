@@ -1,3 +1,19 @@
+## 29/10/2025 10:55 (UTC)
+
+Release date: 2025-10-29
+
+#### Bugfixes
+
+* Fixes a bug where discounts would not show when using the mobile checkout page.
+
+## 27/10/2025 08:43 (UTC)
+
+Release date: 2025-10-27
+
+#### Bugfixes
+
+* Fixes a bug where development subscription would cause issues after migrating to a paid subscription.
+
 ## 23/10/2025 06:20 (UTC)
 
 Release date: 2025-10-23

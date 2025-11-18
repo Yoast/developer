@@ -1,3 +1,26 @@
+## 15.1
+
+Release date: 2025-11-18
+
+#### Enhancements
+
+* Detect videos output by blocks.
+
+#### Bugfixes
+
+* Fixes a bug where a author post url containing an ampersand would cause invalid XML.
+* Fixes a bug where a Wistia embed with an unknown `embedType` would not be picked up correctly.
+* Fixes a bug where saving after re-indexation would cause settings to be lost.
+* Fixes a bug where the saved video tags would not be used when reindexing videos.
+* Fixes a bug where the video sitemap would include an invalid `player_loc` when using Wistia.
+
+#### Other
+
+* Bumps the minimum required Yoast SEO version to 26.4.
+* Drops compatibility with PHP 7.2 and 7.3.
+* Sets the minimum supported WordPress version to 6.7.
+* Sets the _WordPress tested up to_ version to 6.8.
+
 ## 15.0
 
 Release date: 2024-12-03

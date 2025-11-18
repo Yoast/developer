@@ -1,3 +1,18 @@
+= 26.4 =
+
+Release date: 2025-11-18
+
+#### Bugfixes
+
+* Fixes a bug for users who have the Site Kit integration enabled, where a fatal error would be thrown for edge cases, like when custom code intervened with the default WP login flow.
+* Fixes a bug in the Settings page where the advanced tab would close when selecting one of its options or other options after visiting the advanced tab.
+
+#### Other
+
+* Adds a button for using AI to generate custom an SEO title or meta description in the pre-publish sidebar of the block editor, if all recent posts have been using default SEO data.
+* Adds the Yoast siblings and subpages premium blocks to the Yoast custom blocks menu tab in pages.
+* Improves performance when author archives are disabled and an author is created. Props to [ErikBrendel](https://github.com/ErikBrendel).
+
 = 26.3 =
 
 Release date: 2025-11-04

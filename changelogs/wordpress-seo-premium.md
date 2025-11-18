@@ -1,3 +1,15 @@
+## 26.4
+
+Release date: 2025-11-18
+
+#### Enhancements
+
+* Adds a warning when a user redirects a URL that includes `wp-json/`.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.4.
+
 ## 26.3
 
 Release date: 2025-11-04

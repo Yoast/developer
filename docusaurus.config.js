@@ -369,16 +369,16 @@ export default {
 							title: "Products",
 							items: [
 								{
-									label: "Yoast SEO for WordPress",
-									href: "https://yoast.com/wordpress/plugins/seo/",
+									label: "Yoast SEO Premium",
+									href: "https://yoast.com/product/yoast-seo-premium-wordpress/",
 								},
 								{
 									label: "Yoast SEO for Shopify",
 									href: "https://yoast.com/product/yoast-seo-shopify/",
 								},
 								{
-									label: "WooCommerce SEO for WordPress",
-									href: "https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/",
+									label: "Yoast WooCommerce SEO",
+									href: "https://yoast.com/product/yoast-woocommerce-seo/",
 								},
 							],
 						},

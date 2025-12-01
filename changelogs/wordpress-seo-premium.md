@@ -1,3 +1,23 @@
+## 26.5
+
+Release date: 2025-12-02
+
+**New:** Yoast SEO Premium now includes full access to the Site Kit by Google integration in your Dashboard. [Read the full release post here](https://yoa.st/54t). 
+
+#### Enhancements:
+
+* Enables the Yoast Dashboard integration with Site Kit by Google for all Yoast SEO Premium users.
+* Removes H1 from the AI Summarize block heading options.
+* Makes the _keyphrase distribution_ assessment available when no content or keyphrase has been added.
+
+#### Bugfixes:
+
+* Fixes a bug where the location shortcodes blocks would not be excluded from the AI Optimize analyses assessments.
+
+#### Other:
+
+* Bumps the minimum required version of Yoast SEO to 26.5.
+
 ## 26.4
 
 Release date: 2025-11-18

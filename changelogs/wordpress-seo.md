@@ -1,3 +1,23 @@
+= 26.5 =
+
+Release date: 2025-12-02
+
+**New:** Yoast SEO includes the necessary updates to support the Site Kit by Google integration for all Premium users, with Yoast SEO (free) support following soon. [Read the full release post here](https://yoa.st/54u).
+
+#### Enhancements
+
+* Integrates the Yoast SEO tab into the Elementor Editor's Elements panel sidebar to provide enhanced access to SEO settings.
+* Makes the _keyphrase density assessment_ and _keyphrase in subheadings assessment_  available when no content has been added.
+
+#### Bugfixes
+
+* Fixes a bug where table backgrounds in the RSS settings and Semrush related keyphrases tables would expand beyond the rounded corners in Firefox.
+
+#### Other
+
+* Relocates the introduction notification to point to the Yoast SEO tab within the Elements panel sidebar of the Elementor Editor for better user guidance.
+* Sets the _WordPress tested up to_ version to 6.9.
+
 = 26.4 =
 
 Release date: 2025-11-18

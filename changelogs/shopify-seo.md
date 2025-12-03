@@ -1,3 +1,19 @@
+## 03/12/2025 09:22 (UTC)
+
+Release date: 2025-12-03
+
+#### Enhancements
+
+* Improves the error handling messages for the AI Optimize integration.
+* Improves the handling of RTL languages for the positioning of the favicon in the Search snippet preview.
+* Improves the handling of RTL languages for the tooltips in the related keyphrase suggestions modal.
+* Improves the tooltips accessibility in the related keyphrase suggestions modal.
+* Removes the breadcrumbs from the Search snippet preview in Mobile mode.
+
+#### Bugfixes
+
+* Fixes a bug that caused a timeout when exporting a large volume of data.
+
 ## 29/10/2025 10:55 (UTC)
 
 Release date: 2025-10-29

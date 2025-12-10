@@ -4,7 +4,7 @@ title: "RSS Feeds - Functional specification"
 sidebar_label: RSS Feeds
 description: This documentation explains Yoast SEO modifies RSS feeds.
 ---
-This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) modifies RSS feeds.
+This documentation provides technical information about how [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) modifies RSS feeds.
 
 For any feed(s) of public posts/pages*, Yoast SEO allows the user to automatically prefix and/or append a dynamic content string (for the purposes of branding, attribution or similar).
 

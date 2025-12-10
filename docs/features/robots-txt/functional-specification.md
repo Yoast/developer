@@ -4,7 +4,7 @@ title: "Yoast SEO: robots.txt - functional specification"
 sidebar_label: robots.txt
 description: This documentation explains how Yoast SEO modifies robots.txt files.
 ---
-This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) modifies robots.txt files.
+This documentation explains how [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) modifies robots.txt files.
 
 ## Default content
 When a site does not have a user-defined `robots.txt` file (at the point of installation/activation), Yoast SEO generates a default output.

@@ -4,7 +4,7 @@ title: "Yoast SEO OpenGraph Tags: Functional specification"
 sidebar_label: Specification
 description: This documentation provides technical information about which OpenGraph tags Yoast SEO generates and outputs.
 ---
-This documentation provides technical information about which OpenGraph and related tags that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs.
+This documentation provides technical information about which OpenGraph and related tags that [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) generates and outputs.
 
 We output a variety of OpenGraph and similar tags in the `<head>` of each page, in order to better inform data consumers about the content of the page in question. OpenGraph data is consumed by Facebook, but also by Pinterest, LinkedIn, WhatsApp and even Google.
 

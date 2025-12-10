@@ -6,7 +6,7 @@ description: This page describes our functional and technical approach to constr
 ---
 import YoastSchemaExample from '@site/src/components/YoastSchemaExample';
 
-The core of our approach is to output a "base script" - a `@graph` object rendered in `JSON-LD` - which describes the `WebPage`, the `WebSite`, and the `Organization` (or `Person`, in the case of a website which represents an individual). This is included on every page of a website running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) .
+The core of our approach is to output a "base script" - a `@graph` object rendered in `JSON-LD` - which describes the `WebPage`, the `WebSite`, and the `Organization` (or `Person`, in the case of a website which represents an individual). This is included on every page of a website running the [Yoast SEO plugin](https://yoast.com/product/yoast-seo-wordpress/).
 
 On any given page, the graph may be altered and/or extended to reflect the specific *type* of web page and its attributes. For any given scenario, we aim to identify the 'main entity' of the page, and to develop the graph to represent this entity (see '[Primary entities](technology-approach.md#primary-entities)').
 
@@ -428,7 +428,7 @@ Note that these are actually two separate graph blocks in reality, that are stit
 </YoastSchemaExample>
 
 ### Other examples
-Our [technical documentation](technology-approach.md) contains more extensive and varied examples, as well details on how [Yoast SEO software](https://yoast.com/wordpress/plugins/seo/) determines what to output in various scenarios.
+Our [technical documentation](technology-approach.md) contains more extensive and varied examples, as well details on how [Yoast SEO software](https://yoast.com/product/yoast-seo-wordpress/) determines what to output in various scenarios.
 
 ## Altering or extending our graphs
 All of our output can be altered, extended or disabled (by *piece* or in totality) via [a full API](api.md).
@@ -436,7 +436,7 @@ All of our output can be altered, extended or disabled (by *piece* or in totalit
 In scenarios where third-party plugins, themes or systems result in 'un-stitching' of the graph, duplicate/conflated properties, or shared ID spaces, we recommend adopting our framework and [utilizing our APIs](api.md) (or encouraging the relevant solution authors to do so).
 
 ## Use in Yoast software
-This specification forms the basis of our [schema.org](http://schema.org/) / JSON-LD output from [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) version 11.0 onwards. Specific information on how our software utilizes and extends this specification can be found [here](plugins/yoast-seo.md) .
+This specification forms the basis of our [schema.org](http://schema.org/) / JSON-LD output from [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) version 11.0 onwards. Specific information on how our software utilizes and extends this specification can be found [here](plugins/yoast-seo.md) .
 
 ## Support and feedback
 This spec is a continual work in progress, and, we're always keen to assist others in adoption, extension or refinement. If you have questions about the mechanics described here, or if you'd like to apply the spec to your own theme/plugin(s), feel free to create an issue on [our GitHub repository](https://github.com/Yoast/wordpress-seo/).
@@ -495,7 +495,7 @@ There are a number of scenarios where the SDTT deviates from the schema.org defi
 
 For example, the SDTT requires that a `recipe` has an `image`. This isn't a mandatory attribute according to [the schema.org recipe specification](https://schema.org/Recipe), but Google requires it. There are many scenarios like this, where the SDTT reveals Google-specific idiosyncrasies and requirements which are either the product of deliberate 'bending' of the standards to fit their needs, or of somewhat arbitrary decision-making.
 
-The following are specific scenarios where our approach causes conflicts and issues, where we're petitioning to alter how Google interpret and process our markup.
+The following are specific scenarios where our approach causes conflicts and issues, where we're petitioning to alter how Google interprets and processes our markup.
 
 #### A `Person` cannot be the `Publisher` of an `Article`
 This is a particularly challenging issue, as a `WebSite` which represents a `Person` (as opposed to one which represents an `Organization`; i.e., a personal website) will naturally 'publish' articles where that `Person` should be considered to be the 'publisher'. This is an extremely common use-case, but one which various Google tools and standards flag as invalid.
@@ -509,4 +509,4 @@ At the time of publishing, it appears that Bing does not support this approach; 
 
 Social platforms like Facebook, X, Pinterest, etc., have varying levels of support for this markup. Most rely on *Open Graph* markup ('OG tags') and similar, but may use components of schema.org markup when OG tags are missing or invalid.
 
-The support of other search engines (e.g., Baidu, Yandex, others) is unknown; it's our assumption that support will generated be limited, or not exist. We hope that the broad adoption of our approach will encourage these, and other consumers, to expand their support.
+The support of other search engines (e.g., Baidu, Yandex, others) is unknown; it's our assumption that support will generally be limited, or not exist. We hope that the broad adoption of our approach will encourage these, and other consumers, to expand their support.

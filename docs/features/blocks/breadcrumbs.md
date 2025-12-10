@@ -6,7 +6,7 @@ description: This documentation provides information about the breadcrumbs block
 ---
 
 This documentation provides information about the breadcrumb block
-that [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) provides.
+that [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) provides.
 
 :::caution Breadcrumbs in local environments
 In local environments, or in websites that <a href="/features/indexables/indexables-filters/#disabling-indexables-completely">disable the indexable creation in general</a>, breadcrumbs are not working properly.

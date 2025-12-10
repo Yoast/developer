@@ -4,7 +4,7 @@ title: "Yoast SEO Meta robots: Overview"
 sidebar_label: Overview
 description: This documentation provides technical information about how Yoast SEO generates and/or manages meta robots tags.
 ---
-This documentation provides technical information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and/or manages meta robots tags.
+This documentation provides technical information about how [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) generates and/or manages meta robots tags.
 
 ## Resources
 * Our [functional specification](functional-specification.md) describes the logic we use to construct and output meta robots tags in various conditions.

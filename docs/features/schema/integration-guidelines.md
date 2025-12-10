@@ -22,7 +22,7 @@ For example, you might provide a plugin which lets sites write _book reviews_. I
 
 Example code to achieve this might look something like the following. 
 
-Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/wordpress/plugins/seo/) of version 14.0 or higher. Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
+Note: this will only work if a user is running the [Yoast SEO plugin](https://yoast.com/product/yoast-seo-wordpress/) of version 14.0 or higher. Plugin/theme/third-party developers should determine whether the Yoast SEO plugin is running, and manage their output accordingly.
 
 ### Create the piece.
 First we create the `Book` object.
@@ -152,7 +152,7 @@ If you use a different approach (e.g., you output a structured `JSON-LD` tree, o
 
 In this case, we encourage you to adapt your code to follow our approach in the examples above, and disable your plugin/theme output (as our own logic will manage the construction and output of the completed graph).
 
-NB: If you detect that your user *isn't* running [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) and you want to maximize interoperability with *other* plugins, you can construct your own graph following [our specification](functional-specification.md).
+NB: If you detect that your user *isn't* running [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) and you want to maximize interoperability with *other* plugins, you can construct your own graph following [our specification](functional-specification.md).
 
 ### 1. How do I de-dupe the Schema?
 If you output Schema that Yoast SEO outputs too, you may need to de-dupe it. Let's say you output `Organization` data. If yours is less extensive than Yoast's output, you could simply replace your `Organization` data with [a reference](https://developer.yoast.com/features/schema/api/#referencing-other-graph-pieces) to Yoast's `Organization` data. If yours is more extensive, we'd suggest [filtering the Yoast SEO output for that particular piece](https://developer.yoast.com/features/schema/api/#change-a-graph-pieces-data) to include your data. 

@@ -4,11 +4,11 @@ title: "Yoast SEO: llms.txt - functional specification"
 sidebar_label: llms.txt
 description: This documentation explains how Yoast SEO generates llms.txt files.
 ---
-This documentation explains how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates llms.txt files.
+This documentation explains how [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) generates llms.txt files.
 
 ## What does the Yoast SEO llms.txt feature do?
 - Enabling the llms.txt feature will create an llms.txt file in the root directory of your website
-- This file will be be updated weekly by a scheduled action
+- This file will be updated weekly by a scheduled action
 ## How does Yoast SEO choose content to include in the llms.txt file?
 **Posts/pages/custom post types**
 - Yoast SEO includes the 5 latest updated posts/pages/custom post types in the llms.txt file (posts are only included if they have been published in the last 12 months)

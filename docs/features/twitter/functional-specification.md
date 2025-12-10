@@ -5,7 +5,7 @@ sidebar_label: X
 description: This documentation provides technical information about which X tags Yoast SEO generates and outputs.
 
 ---
-This documentation provides technical information about which X tags [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) generates and outputs. These tags are only consumed by X.
+This documentation provides technical information about which X tags [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) generates and outputs. These tags are only consumed by X.
 
 We output a variety of `<meta>` tags for X in the `<head>` of each page, in order to better inform X about the content of the page in question.
 

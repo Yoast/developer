@@ -1,3 +1,19 @@
+## 26.6
+
+Release date: 2025-12-16
+
+#### Enhancements
+
+* Adds Premium tasks to the newly-released task list.
+
+#### Bugfixes
+
+* Fixes a bug where empty AI Summarize block markers would remain in the content when users delete the summary in Classic Editor's visual mode.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.6.
+
 ## 26.5
 
 Release date: 2025-12-02

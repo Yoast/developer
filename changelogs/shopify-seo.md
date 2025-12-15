@@ -1,3 +1,11 @@
+## 15/12/2025 09:06 (UTC)
+
+Release date: 2025-12-15
+
+#### Other
+
+* Improves the app performance for an improved user experience.
+
 ## 03/12/2025 09:22 (UTC)
 
 Release date: 2025-12-03

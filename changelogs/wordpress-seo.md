@@ -1,3 +1,27 @@
+= 26.6 =
+
+Release date: 2025-12-15
+
+Yoast SEO 26.6 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Introduces a task list for reminding site admins about relevant SEO tasks.
+* Improves the llms.txt structure by moving the sitemap mention into an option section at the end of the llms.txt file.
+
+#### Bugfixes
+
+* Fixes a bug where the `Show more` list for categories and content types would collapse when clicking on menu items in the settings sidebar navigation.
+* Fixes a bug where translations for the content analysis were not displayed on WordPress 6.9.
+* Fixes a security bug that would allow users with limited capabilities to read metadata of posts that they should not have access to.
+
+#### Other
+
+* Highlights the Google Docs & Yoast Duplicate post add-ons on the Plans page.
+* Improves the behavior of the upgrade button in the Yoast sidebar and admin menus.
+* Improves the focus behavior for some buttons and links in the Yoast SEO admin pages.
+* Redesigns the AI Brand Insights button in the Yoast sidebar and admin menus.
+
 = 26.5 =
 
 Release date: 2025-12-02

@@ -4,7 +4,7 @@ title: "Link Attributes - Functional specification"
 sidebar_label: Link attributes
 description: This documentation provides technical information about Yoast SEO manages link attributes.
 ---
-This documentation provides technical information about [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) manages link attributes.
+This documentation provides technical information about [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) manages link attributes.
 
 We provide tools which allow users to declare special properties of links within editable content areas, in order to help them adhere to search engine guidelines.
 

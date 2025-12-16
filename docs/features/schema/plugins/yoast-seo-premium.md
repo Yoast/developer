@@ -6,7 +6,7 @@ description: Describes the schema output of the Yoast SEO premium plugin for Wor
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-The schema output for our [Yoast SEO Premium](https://yoast.com/wordpress/plugins/seo/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about organizations.
+The schema output for our [Yoast SEO Premium](https://yoast.com/product/yoast-seo-premium-wordpress/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about organizations.
 
 ## Core functionality
 

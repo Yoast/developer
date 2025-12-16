@@ -4,7 +4,7 @@ title: "Yoast SEO Content analysis: Overview"
 sidebar_label: Overview
 description: This documentation provides information about how Yoast SEO analyzes content.
 ---
-This documentation provides information about how [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) analyzes content.
+This documentation provides information about how [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/) analyzes content.
 
 ## Content analysis & meta controls
 Our JavaScript content analysis tool, [YoastSEO.js](https://github.com/Yoast/javascript/tree/main/packages/yoastseo), is able to analyze content for a whole range of SEO, accessibility and readability checks.

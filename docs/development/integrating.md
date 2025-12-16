@@ -3,7 +3,7 @@ id: integrating
 title: "Integrating Yoast SEO"
 description: A hub for describing the technical specifications and requirements for integrating Yoast SEO.
 ---
-This documentation is a hub for describing the technical specifications and requirements for integrating [Yoast SEO](https://yoast.com/wordpress/plugins/seo/).
+This documentation is a hub for describing the technical specifications and requirements for integrating [Yoast SEO](https://yoast.com/product/yoast-seo-wordpress/).
 
 ## Automatic optimization
 The following standards must be met, automatically and without user intervention, when the software is installed and activated.

@@ -16,12 +16,18 @@ Note: it is _not_ recommended to leave this on in production.
 
 If you're looking for a more convenient way of debugging Schema, try our [our Yoast Test Helper plugin](https://wordpress.org/plugins/yoast-test-helper/) which allows you to debug more easily.
 
-## To disable Schema entirely
+## To disable Schema entirely on the frontend
 If you return false or an empty array on the `wpseo_json_ld_output` filter, you disable all Yoast SEO's schema output.
 
 ```php
 add_filter( 'wpseo_json_ld_output', '__return_false' );
 ```
+
+#### Technical limitation: REST API responses
+
+When disabling Schema using this filter (or via other methods e.g. third party plugins), the `yoast_head` attribute in REST API responses (e.g., `http://example.com/wp-json/wp/v2/posts/<POST_ID>`) is properly updated to exclude the Schema output. However, the `yoast_head_json` attribute will still contain the Schema data.
+
+This is a known limitation that exists because the HTML and JSON outputs use different code paths. The `wpseo_json_ld_output` filter is designed to disable the HTML `<script>` tag output on the frontend, but the code path that populates `yoast_head_json` (which returns raw data for programmatic access) does not apply this filter.
 
 ## To add or remove graph pieces
 As [the documentation](plugins/yoast-seo.md) clearly shows we output a lot of graph pieces on some pages. You might want
@@ -130,7 +136,7 @@ If you need to perform complex operations to the Schema, such as changing values
 add_filter( 'wpseo_schema_graph', 'change_image_urls_to_cdn', 10, 2 );
 
 /**
- * Replaces hostname in all images with the CDN one.  
+ * Replaces hostname in all images with the CDN one.
  *
  * @param array             $data    Schema.org graph.
  * @param Meta_Tags_Context $context Context object.

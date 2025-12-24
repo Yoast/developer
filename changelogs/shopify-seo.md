@@ -1,3 +1,11 @@
+## 24/12/2025 08:37 (UTC)
+
+Release date: 2025-12-24
+
+#### Enhancements
+
+* Introduces new Account section with extended subscription insights and management options.
+
 ## 15/12/2025 09:06 (UTC)
 
 Release date: 2025-12-15

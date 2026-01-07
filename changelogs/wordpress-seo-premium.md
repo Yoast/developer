@@ -1,3 +1,19 @@
+## 26.7
+
+Release date: 2026-01-07
+
+Yoast SEO Premium 26.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the thank you page redirect would interrupt Bluehost authentication flows when the first wp-admin visit was an AJAX request.
+* Fixes a bug that caused workouts to be disabled when internal linking suggestions were turned off.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.7.
+* Improves redirect security by restricting non-privileged users to only create 301 and 410 redirects with relative URLs.
+
 ## 26.6
 
 Release date: 2025-12-15

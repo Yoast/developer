@@ -1,3 +1,23 @@
+= 26.7 =
+
+Release date: 2026-01-07
+
+*New:* Yoast SEO (free) now includes full access to the Site Kit by Google integration in your Dashboard. [Read the full release post here](https://yoa.st/551).
+
+#### Enhancements
+
+* Changes the Schema output to render `Article` entities even when the `publisher` property is left empty.
+* Rolls out the Site Kit integration for all Yoast users.
+
+#### Bugfixes
+
+* Fixes a bug where the Yoast AI consent modal would incorrectly pop up when interacting with unrelated buttons or fields on Profile setting page.
+
+#### Other
+
+* Hides the llms.txt task in multisites, since the feature is disabled in such setups.
+* Increases disabling opcache invalidation on plugin upgrade, now applied to a bigger subset of the userbase.
+
 = 26.6 =
 
 Release date: 2025-12-15

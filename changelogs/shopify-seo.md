@@ -1,3 +1,11 @@
+## 08/01/2026 08:37 (UTC)
+
+Release date: 2026-01-08
+
+#### Enhancements
+
+* Updates the way how we display discounts in checkout and subscription page.
+
 ## 24/12/2025 08:37 (UTC)
 
 Release date: 2025-12-24

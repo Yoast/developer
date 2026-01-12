@@ -1,3 +1,11 @@
+## 12/01/2026 08:24 (UTC)
+
+Release date: 2026-01-12
+
+#### Enhancements
+
+* Adds option to be notified about initial overview ready by email notification.
+
 ## 08/01/2026 08:37 (UTC)
 
 Release date: 2026-01-08

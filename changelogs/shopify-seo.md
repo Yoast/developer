@@ -1,3 +1,15 @@
+## 13/01/2026 08:53 (UTC)
+
+Release date: 2026-01-13
+
+#### Enhancements
+
+* Adds integration with Shopify contextual bar for better user experience.
+
+#### Bugfixes
+
+* Fixes a bug where the renewal date was calculated wrongly on the Subscription page.
+
 ## 12/01/2026 08:24 (UTC)
 
 Release date: 2026-01-12

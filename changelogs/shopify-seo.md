@@ -1,3 +1,11 @@
+## 20/01/2026 09:39 (UTC)
+
+Release date: 2026-01-20
+
+#### Bugfixes
+
+* Fixes a bug where importing CSV files would show an error when any field contains new line in content.
+
 ## 13/01/2026 08:53 (UTC)
 
 Release date: 2026-01-13

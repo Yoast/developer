@@ -1,3 +1,23 @@
+## 26.8
+
+Release date: 2026-01-20
+
+Yoast SEO 26.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Updates the design of the emoji picker button.
+
+#### Bugfixes
+
+* Fixes a bug where AI Summarize block's "Generate summary" button would be disabled when it's added in `template-locked` mode in Block editor regardless of content presence.
+* Fixes a bug where Table of Contents block would not be not generated correctly when it's added in `template-locked` mode in Block editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.8.
+* Improves the translatability of some tasks' title and content in the task list.
+
 ## 26.7
 
 Release date: 2026-01-07

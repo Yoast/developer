@@ -1,3 +1,11 @@
+## 22/01/2026 10:01 (UTC)
+
+Release date: 2026-01-22
+
+#### Enhancements
+
+* Adds search and sorting to the "Pages" content type.
+
 ## 20/01/2026 09:39 (UTC)
 
 Release date: 2026-01-20

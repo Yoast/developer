@@ -1,3 +1,14 @@
+## 26/01/2026 09:54 (UTC)
+
+Release date: 2026-01-26
+
+#### Enhancements
+
+* Adjusts the _keyphrase distribution_ assessment's scoring criteria for texts that are shorter than 15 sentences.
+* Adjusts the scoring criteria for the _keyphrase density_ assessment for texts shorter than 100 words.
+* Introduces more robust HTML processing and highlighting for the _keyphrase distribution_ assessment.
+* Makes the _keyphrase distribution_ assessment available when no content or keyphrase has been added.
+
 ## 22/01/2026 10:01 (UTC)
 
 Release date: 2026-01-22

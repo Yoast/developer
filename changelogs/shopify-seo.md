@@ -1,3 +1,11 @@
+## 29/01/2026 09:51 (UTC)
+
+Release date: 2026-01-29
+
+#### Enhancements
+
+* Adds sale pricing markup.
+
 ## 26/01/2026 09:54 (UTC)
 
 Release date: 2026-01-26

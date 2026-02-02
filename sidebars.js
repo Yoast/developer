@@ -262,6 +262,20 @@ module.exports = {
 								"features/schema/plugins/yoast-seo-shopify",
 							],
 						},
+						{
+							type: "category",
+							label: "Schema Aggregator",
+							link: {
+								type: "generated-index",
+								description: "The Schema Aggregator collects and serves structured data for all content across your WordPress site through REST API endpoints and CLI commands.",
+								slug: "/features/schema/schema-aggregator",
+							},
+							items: [
+								"features/schema/schema-aggregator/overview",
+								"features/schema/schema-aggregator/api-reference",
+								"features/schema/schema-aggregator/filters",
+							],
+						},
 					],
 				},
 				{

@@ -1,3 +1,23 @@
+## 26.9
+
+Release date: 2026-02-03
+
+Yoast SEO 26.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the Table of Contents block failed to register in the Widgets area when the Twenty Twenty-One theme was active.
+* Fixes a bug where the EDD schema structure pointed to non-existent nodes when the website was configured to represent a person.
+* Fixes a bug where the Yoast AI Optimize feature failed to function when content was edited in template-locked mode within the Block Editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.9.
+* Ensures no deprecated props are used for WordPress components `ToggleControl`, `TextControl`, and `SelectControl` for Estimated reading time and Table of Contents blocks.
+* Makes AI Summarize block not available inside Widgets when Twenty Twenty-One theme is used.
+* Only loads AI Summarize assets on Posts, Pages, and CPTs.
+* Sets the minimum supported WordPress version to 6.8.
+
 ## 26.8
 
 Release date: 2026-01-20

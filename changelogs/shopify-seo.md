@@ -1,3 +1,11 @@
+## 02/02/2026 11:41 (UTC)
+
+Release date: 2026-02-02
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications banner was displayed after modifications were already applied.
+
 ## 29/01/2026 09:51 (UTC)
 
 Release date: 2026-01-29

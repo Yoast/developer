@@ -17,8 +17,9 @@ You can customize which post types are included using the `wpseo_schema_aggregat
 
 ### Schema types
 
-The aggregator handles over 1000 schema.org types, categorized into 9 contexts:
+The aggregator handles schema.org types, categorized into 10 contexts:
 
+- **Website**: Site information 
 - **Content**: Articles, blog posts, creative works
 - **Commerce**: Products, offers, orders
 - **Entity**: Organizations, persons, places
@@ -28,8 +29,9 @@ The aggregator handles over 1000 schema.org types, categorized into 9 contexts:
 - **Action**: Potential actions (filtered by default)
 - **Enumeration**: Type definitions (filtered by default)
 - **Meta**: Schema.org metadata (filtered by default)
-- **Website**: Site structure elements (filtered by default)
+- **Website Meta**: Site structure elements, breadcrumbs (filtered by default)
 
+The specific schema types that get filtered can be found at the [source](https://github.com/Yoast/wordpress-seo/blob/trunk/src/schema-aggregator/infrastructure/elements-context-map/default-elements-context-map.php).
 ## Key features
 
 ### REST API endpoints

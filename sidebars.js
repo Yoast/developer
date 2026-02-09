@@ -528,6 +528,11 @@ module.exports = {
 					label: "Yoast SEO for Shopify",
 					href: "/changelog/shopify/",
 				},
+				{
+					type: "link",
+					label: "AI Brand Insights",
+					href: "/changelog/ai-brand-insights/",
+				},
 			],
 		},
 	],

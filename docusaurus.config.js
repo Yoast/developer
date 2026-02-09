@@ -266,6 +266,24 @@ export default {
 			},
 		],
 		[
+			require.resolve( "./src/plugins/changelog/index.js" ),
+			{
+				id: "ai-brand-insights",
+				routeBasePath: "changelog/ai-brand-insights/",
+				path: "./changelog/source/ai-brand-insights/",
+				blogTitle: "Yoast AI Brand Insights changelog",
+				blogDescription: "Keep yourself up-to-date about new features, enhancements and bugfixes in every release of Yoast AI Brand Insights.",
+				feedOptions: {
+					type: "rss",
+					title: "Yoast AI Brand Insights changelog",
+					description: "Stay up-to-date about new bugfixes and features in every release.",
+					copyright: "Copyright © " + year + " Yoast BV",
+					language: "en",
+				},
+				onUntruncatedBlogPosts: "ignore",
+			},
+		],
+		[
 			require.resolve( "docusaurus-gtm-plugin" ),
 			{
 				id: "GTM-NHRB36F",

@@ -91,7 +91,7 @@ Release date: 2025-12-03
 
 #### Enhancements
 
-* Improves the error handling messages for the AI Optimize integration.
+* Improves the error handling messages for the AI Generate integration.
 * Improves the handling of RTL languages for the positioning of the favicon in the Search snippet preview.
 * Improves the handling of RTL languages for the tooltips in the related keyphrase suggestions modal.
 * Improves the tooltips accessibility in the related keyphrase suggestions modal.

@@ -1,3 +1,11 @@
+## 13/02/2026 09:32 (UTC)
+
+Release date: 2026-02-13
+
+#### Enhancements
+
+* Refreshes the site features settings page.
+
 ## 02/02/2026 11:41 (UTC)
 
 Release date: 2026-02-02

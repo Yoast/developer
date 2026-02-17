@@ -1,10 +1,105 @@
+## 13/02/2026 09:32 (UTC)
+
+Release date: 2026-02-13
+
+#### Enhancements
+
+* Refreshes the site features settings page.
+
+## 02/02/2026 11:41 (UTC)
+
+Release date: 2026-02-02
+
+#### Bugfixes
+
+* Fixes a bug where the theme modifications banner was displayed after modifications were already applied.
+
+## 29/01/2026 09:51 (UTC)
+
+Release date: 2026-01-29
+
+#### Enhancements
+
+* Adds sale pricing markup.
+
+## 26/01/2026 09:54 (UTC)
+
+Release date: 2026-01-26
+
+#### Enhancements
+
+* Adjusts the _keyphrase distribution_ assessment's scoring criteria for texts that are shorter than 15 sentences.
+* Adjusts the scoring criteria for the _keyphrase density_ assessment for texts shorter than 100 words.
+* Introduces more robust HTML processing and highlighting for the _keyphrase distribution_ assessment.
+* Makes the _keyphrase distribution_ assessment available when no content or keyphrase has been added.
+
+## 22/01/2026 10:01 (UTC)
+
+Release date: 2026-01-22
+
+#### Enhancements
+
+* Adds search and sorting to the "Pages" content type.
+
+## 20/01/2026 09:39 (UTC)
+
+Release date: 2026-01-20
+
+#### Bugfixes
+
+* Fixes a bug where importing CSV files would show an error when any field contains new line in content.
+
+## 13/01/2026 08:53 (UTC)
+
+Release date: 2026-01-13
+
+#### Enhancements
+
+* Adds integration with Shopify contextual bar for better user experience.
+
+#### Bugfixes
+
+* Fixes a bug where the renewal date was calculated wrongly on the Subscription page.
+
+## 12/01/2026 08:24 (UTC)
+
+Release date: 2026-01-12
+
+#### Enhancements
+
+* Adds option to be notified about initial overview ready by email notification.
+
+## 08/01/2026 08:37 (UTC)
+
+Release date: 2026-01-08
+
+#### Enhancements
+
+* Updates the way how we display discounts in checkout and subscription page.
+
+## 24/12/2025 08:37 (UTC)
+
+Release date: 2025-12-24
+
+#### Enhancements
+
+* Introduces new Account section with extended subscription insights and management options.
+
+## 15/12/2025 09:06 (UTC)
+
+Release date: 2025-12-15
+
+#### Other
+
+* Improves the app performance for an improved user experience.
+
 ## 03/12/2025 09:22 (UTC)
 
 Release date: 2025-12-03
 
 #### Enhancements
 
-* Improves the error handling messages for the AI Optimize integration.
+* Improves the error handling messages for the AI Generate integration.
 * Improves the handling of RTL languages for the positioning of the favicon in the Search snippet preview.
 * Improves the handling of RTL languages for the tooltips in the related keyphrase suggestions modal.
 * Improves the tooltips accessibility in the related keyphrase suggestions modal.

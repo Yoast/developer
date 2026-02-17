@@ -1,3 +1,21 @@
+## 15.7
+
+Release date: 2026-01-20
+
+#### Bugfixes
+
+* Fixes a bug where adding a Store locator block resulted in an error and the block was not rendered.
+* Fixes a bug where adding Local SEO shortcodes to the content in Classic Editor would break the _consecutive sentences_ assessment.
+* Fixes a bug where a PHP notice was thrown if the selected primary location was deleted.
+* Fixes a bug where enabling "Open 24/7" option inside a location generated incorrect schema for `openingHoursSpecification` for that specific location.
+* Fixes a bug where enabling "Open 24/7" option inside a location triggered an error in the console.
+
+#### Other
+
+* Bumps the minimum required Free version to 26.8.
+* Improves the general security of the plugin via sanitization and escaping.
+* Sets the WordPress tested up to version to 6.9.
+
 ## 15.6
 
 Release date: 2025-08-26

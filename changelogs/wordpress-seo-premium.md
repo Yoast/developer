@@ -1,3 +1,89 @@
+## 27.0
+
+Release date: 2026-02-17
+
+Yoast SEO 27.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.0
+* Improves permission checks in REST API routes.
+* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
+
+## 26.9
+
+Release date: 2026-02-03
+
+Yoast SEO 26.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the Table of Contents block failed to register in the Widgets area when the Twenty Twenty-One theme was active.
+* Fixes a bug where the EDD schema structure pointed to non-existent nodes when the website was configured to represent a person.
+* Fixes a bug where the Yoast AI Optimize feature failed to function when content was edited in template-locked mode within the Block Editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.9.
+* Ensures no deprecated props are used for WordPress components `ToggleControl`, `TextControl`, and `SelectControl` for Estimated reading time and Table of Contents blocks.
+* Makes AI Summarize block not available inside Widgets when Twenty Twenty-One theme is used.
+* Only loads AI Summarize assets on Posts, Pages, and CPTs.
+* Sets the minimum supported WordPress version to 6.8.
+
+## 26.8
+
+Release date: 2026-01-20
+
+Yoast SEO 26.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Updates the design of the emoji picker button.
+
+#### Bugfixes
+
+* Fixes a bug where AI Summarize block's "Generate summary" button would be disabled when it's added in `template-locked` mode in Block editor regardless of content presence.
+* Fixes a bug where Table of Contents block would not be not generated correctly when it's added in `template-locked` mode in Block editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.8.
+* Improves the translatability of some tasks' title and content in the task list.
+
+## 26.7
+
+Release date: 2026-01-07
+
+Yoast SEO Premium 26.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the thank you page redirect would interrupt Bluehost authentication flows when the first wp-admin visit was an AJAX request.
+* Fixes a bug that caused workouts to be disabled when internal linking suggestions were turned off.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.7.
+* Improves redirect security by restricting non-privileged users to only create 301 and 410 redirects with relative URLs.
+
+## 26.6
+
+Release date: 2025-12-15
+
+Yoast SEO Premium now includes an expanded SEO task list. [Read the full release post here](https://yoa.st/release-15-12-25).
+
+#### Enhancements
+
+* Adds Premium tasks to the newly-released task list.
+
+#### Bugfixes
+
+* Fixes a bug where empty AI Summarize block markers would remain in the content when users delete the summary in Classic Editor's visual mode.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 26.6.
+
 ## 26.5
 
 Release date: 2025-12-02

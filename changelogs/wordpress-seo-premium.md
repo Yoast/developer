@@ -1,3 +1,15 @@
+## 27.0
+
+Release date: 2026-02-17
+
+Yoast SEO 27.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.0
+* Improves permission checks in REST API routes.
+* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
+
 ## 26.9
 
 Release date: 2026-02-03

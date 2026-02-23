@@ -5,7 +5,7 @@ sidebar_label: Filters
 description: WordPress filters to customize the Schema Aggregator feature behavior and output.
 ---
 
-The Schema Aggregator provides 18 WordPress filters that allow you to customize its behavior, from cache configuration to content enhancement. This document provides a complete reference with practical examples for each filter.
+The Schema Aggregator provides WordPress filters that allow you to customize its behavior, from cache configuration to content enhancement. This document provides a complete reference with practical examples for each filter.
 
 ## Quick Reference
 
@@ -23,11 +23,11 @@ The Schema Aggregator provides 18 WordPress filters that allow you to customize 
 | [`wpseo_schema_aggregator_elements_context_map`](#elements-context-map) | Context Map | Override complete context map |
 | [`wpseo_schema_aggregator_elements_context_map_{context}`](#wpseo_schema_aggregator_elements_context_map_context) | Context Map | Customize elements for specific context |
 | [`wpseo_article_enhance_config_{key}`](#article-enhancement-configuration) | Article Enhancement | Configure article enhancement settings |
-| [`wpseo_article_enhance_{enhancement}`](#article-enhancement-toggles) | Article Enhancement | Toggle specific article enhancements |
+| [`wpseo_article_enhance_{enhancement}`](#article-enhancement-toggles) | Article Enhancement | Toggle article enhancements (article_body, use_excerpt, keywords) |
 | [`wpseo_article_enhance_body_when_excerpt_exists`](#article-body-with-excerpt) | Article Enhancement | Include body when excerpt exists |
 | [`wpseo_article_enhance_article_body_fallback`](#article-body-fallback) | Article Enhancement | Include body when no excerpt |
 | [`wpseo_person_enhance_config_{key}`](#person-enhancement-configuration) | Person Enhancement | Configure person enhancement settings |
-| [`wpseo_person_enhance_{enhancement}`](#person-enhancement-toggles) | Person Enhancement | Toggle specific person enhancements |
+| [`wpseo_person_enhance_{enhancement}`](#person-enhancement-toggles) | Person Enhancement | Toggle person enhancements (person_job_title) |
 | [`wpseo_disable_robots_schemamap`](#robotstxt-integration) | Robots.txt | Disable schema map in robots.txt |
 
 ## Post Type Configuration
@@ -42,7 +42,7 @@ Control which post types are included in the schema aggregation.
 |-----------|------|-------------|
 | `$post_types` | array | Array of post type names to aggregate |
 
-**Default Value:** All public post types
+**Default Value:** All indexable post types
 
 **Example: Include Only Specific Post Types**
 
@@ -254,13 +254,11 @@ Set the cache time-to-live (TTL) in seconds.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$ttl` | int | Cache duration in seconds |
-| `$post_type` | string | The post type being cached |
-| `$post_count` | int | Number of posts for this post type |
 
-**Default Value:** Dynamic based on site size:
-- Small sites (< 100 posts): 86400 seconds (24 hours)
-- Medium sites (100-1000 posts): 43200 seconds (12 hours)
-- Large sites (> 1000 posts): 21600 seconds (6 hours)
+**Default Value:** Dynamic based on serialized payload size:
+- Small payloads (< 100 KB): 1800 seconds (30 minutes)
+- Normal payloads: 3600 seconds (1 hour)
+- Large payloads (> 1 MB): 21600 seconds (6 hours)
 
 **Example: Fixed TTL**
 
@@ -268,52 +266,20 @@ Set the cache time-to-live (TTL) in seconds.
 add_filter( 'wpseo_schema_aggregator_cache_ttl', 'custom_cache_ttl' );
 
 /**
- * Set a fixed cache duration for all post types.
+ * Set a fixed cache duration.
  *
  * Use this when you want consistent cache behavior regardless
- * of site size or post type.
+ * of payload size.
  *
  * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#wpseo_schema_aggregator_cache_ttl
  *
- * @param int    $ttl        Cache duration in seconds.
- * @param string $post_type  Post type being cached.
- * @param int    $post_count Number of posts.
+ * @param int $ttl Cache duration in seconds.
  *
  * @return int Modified cache duration.
  */
-function custom_cache_ttl( $ttl, $post_type, $post_count ) {
-	// Cache for 1 hour (3600 seconds) regardless of size.
-	return 3600;
-}
-```
-
-**Example: Post Type Specific TTL**
-
-```php
-add_filter( 'wpseo_schema_aggregator_cache_ttl', 'post_type_specific_ttl', 10, 3 );
-
-/**
- * Set different cache durations for different post types.
- *
- * Frequently updated content gets shorter cache times,
- * while static content can be cached longer.
- *
- * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#wpseo_schema_aggregator_cache_ttl
- *
- * @param int    $ttl        Cache duration in seconds.
- * @param string $post_type  Post type being cached.
- * @param int    $post_count Number of posts.
- *
- * @return int Modified cache duration.
- */
-function post_type_specific_ttl( $ttl, $post_type, $post_count ) {
-	$custom_ttls = [
-		'post'    => 1800,  // 30 minutes for frequently updated posts.
-		'page'    => 86400, // 24 hours for static pages.
-		'product' => 3600,  // 1 hour for product catalog.
-	];
-
-	return $custom_ttls[ $post_type ] ?? $ttl;
+function custom_cache_ttl( $ttl ) {
+	// Cache for 2 hours regardless of payload size.
+	return 7200;
 }
 ```
 
@@ -401,9 +367,9 @@ Implement a custom filtering strategy by providing your own strategy class.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$strategy` | object\|null | Custom filtering strategy instance |
+| `$strategy` | Filtering_Strategy_Interface | The filtering strategy instance |
 
-**Default Value:** `null` (uses default strategy)
+**Default Value:** `Default_Filter` instance (filters Actions, Enumerations, Meta, and Website categories)
 
 **Example:**
 
@@ -575,16 +541,17 @@ Articles and their subtypes (BlogPosting, NewsArticle, etc.) can be enhanced wit
 
 Use the `wpseo_article_enhance_config_{key}` filter pattern to configure enhancement behavior. Available keys:
 
-- `max_article_body_length` - Maximum length for articleBody (default: 5000)
-- `max_description_length` - Maximum length for description (default: 320)
-- `add_article_body` - Whether to add articleBody (default: true)
-- `add_description` - Whether to add description (default: true)
-- `add_keywords` - Whether to add keywords (default: true)
+- `article_body_max_length` - Maximum length for articleBody in characters (default: 500)
+- `excerpt_max_length` - Maximum length for excerpt in characters (default: 0, no limit)
+- `categories_as_keywords` - Include categories as keywords (default: false)
+- `excerpt_prefer_manual` - Only use manually written excerpts; skip auto-generated ones (default: false)
+- `strip_shortcodes_from_body` - Strip shortcodes from article body (default: true)
+- `strip_html_from_body` - Strip HTML tags from article body (default: true)
 
-**Example: Adjust Maximum Lengths**
+**Example: Adjust Article Body Length**
 
 ```php
-add_filter( 'wpseo_article_enhance_config_max_article_body_length', 'custom_article_body_length' );
+add_filter( 'wpseo_article_enhance_config_article_body_max_length', 'custom_article_body_length' );
 
 /**
  * Increase maximum article body length.
@@ -599,63 +566,36 @@ add_filter( 'wpseo_article_enhance_config_max_article_body_length', 'custom_arti
  * @return int Modified maximum length.
  */
 function custom_article_body_length( $max_length ) {
-	return 10000; // Increase from 5000 to 10000 characters.
+	return 2000; // Increase from 500 to 2000 characters.
 }
 ```
 
-```php
-add_filter( 'wpseo_article_enhance_config_max_description_length', 'custom_description_length' );
+**Example: Include Categories as Keywords**
 
-/**
- * Adjust maximum description length.
- *
- * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#article-enhancement-configuration
- *
- * @param int $max_length Maximum length in characters.
- *
- * @return int Modified maximum length.
- */
-function custom_description_length( $max_length ) {
-	return 500; // Increase from 320 to 500 characters.
-}
+```php
+add_filter( 'wpseo_article_enhance_config_categories_as_keywords', '__return_true' );
 ```
 
-**Example: Disable Specific Enhancements**
+**Example: Only Use Manual Excerpts**
 
 ```php
-add_filter( 'wpseo_article_enhance_config_add_article_body', '__return_false' );
+add_filter( 'wpseo_article_enhance_config_excerpt_prefer_manual', '__return_true' );
 ```
 
 ### Article Enhancement Toggles
 
-Use the `wpseo_article_enhance_{enhancement}` filter pattern to enable or disable enhancements dynamically. Available enhancements match the configuration keys: `article_body`, `description`, `keywords`.
+Use the `wpseo_article_enhance_{enhancement}` filter pattern to enable or disable enhancements dynamically. Available enhancements: `article_body`, `use_excerpt`, `keywords` (all default to `true`).
 
-**Example: Conditional Article Body**
+**Example: Disable Article Body Enhancement**
 
 ```php
-add_filter( 'wpseo_article_enhance_article_body', 'conditional_article_body', 10, 2 );
+add_filter( 'wpseo_article_enhance_article_body', '__return_false' );
+```
 
-/**
- * Only include article body for certain post types.
- *
- * This allows fine-grained control over which content types
- * receive full body enhancement.
- *
- * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#article-enhancement-toggles
- *
- * @param bool  $enabled     Whether enhancement is enabled.
- * @param array $schema_piece The schema piece being enhanced.
- *
- * @return bool Modified enabled status.
- */
-function conditional_article_body( $enabled, $schema_piece ) {
-	// Only add article body for blog posts, not news articles.
-	if ( isset( $schema_piece['@type'] ) && $schema_piece['@type'] === 'NewsArticle' ) {
-		return false;
-	}
+**Example: Disable Excerpt Enhancement**
 
-	return $enabled;
-}
+```php
+add_filter( 'wpseo_article_enhance_use_excerpt', '__return_false' );
 ```
 
 ### Article Body with Excerpt
@@ -669,7 +609,6 @@ Control whether to include article body when an excerpt already exists.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$include_body` | bool | Whether to include body when excerpt exists |
-| `$schema_piece` | array | The schema piece being enhanced |
 
 **Default Value:** `false`
 
@@ -690,7 +629,6 @@ Control whether to include article body when no excerpt exists.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `$use_fallback` | bool | Whether to use body as fallback |
-| `$schema_piece` | array | The schema piece being enhanced |
 
 **Default Value:** `true`
 
@@ -706,50 +644,35 @@ Person schema pieces can be enhanced with additional properties based on WordPre
 
 ### Person Enhancement Configuration
 
-Use the `wpseo_person_enhance_config_{key}` filter pattern to configure person enhancement. The exact available keys depend on your implementation.
+Use the `wpseo_person_enhance_config_{key}` filter pattern to configure person enhancement settings. This follows the same generic pattern as article enhancement configuration — the filter receives a default value and returns a customized one.
 
 **Example:**
 
 ```php
-add_filter( 'wpseo_person_enhance_config_include_social_profiles', '__return_true' );
+add_filter( 'wpseo_person_enhance_config_my_custom_key', 'custom_person_config' );
+
+/**
+ * Customize a person enhancement configuration value.
+ *
+ * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#person-enhancement-configuration
+ *
+ * @param string|int|bool $value The default configuration value.
+ *
+ * @return string|int|bool Modified configuration value.
+ */
+function custom_person_config( $value ) {
+	return 'custom_value';
+}
 ```
 
 ### Person Enhancement Toggles
 
-Use the `wpseo_person_enhance_\{enhancement\}` filter pattern to enable or disable specific person enhancements dynamically.
+Use the `wpseo_person_enhance_{enhancement}` filter pattern to enable or disable specific person enhancements. Available enhancements: `person_job_title` (default: `true`).
 
-**Example:**
+**Example: Disable Job Title Enhancement**
 
 ```php
-add_filter( 'wpseo_person_enhance_bio', 'conditional_person_bio', 10, 2 );
-
-/**
- * Only include person bio for authors with posts.
- *
- * @link https://developer.yoast.com/features/schema/schema-aggregator/filters/#person-enhancement-toggles
- *
- * @param bool  $enabled     Whether enhancement is enabled.
- * @param array $schema_piece The schema piece being enhanced.
- *
- * @return bool Modified enabled status.
- */
-function conditional_person_bio( $enabled, $schema_piece ) {
-	// Extract user ID from schema piece if available.
-	if ( isset( $schema_piece['@id'] ) ) {
-		// Parse user ID from the @id.
-		preg_match( '/person\/(\d+)/', $schema_piece['@id'], $matches );
-
-		if ( ! empty( $matches[1] ) ) {
-			$user_id = (int) $matches[1];
-			$post_count = count_user_posts( $user_id );
-
-			// Only include bio if user has published posts.
-			return $post_count > 0;
-		}
-	}
-
-	return $enabled;
-}
+add_filter( 'wpseo_person_enhance_person_job_title', '__return_false' );
 ```
 
 ## Robots.txt Integration

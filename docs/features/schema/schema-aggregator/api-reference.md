@@ -75,9 +75,6 @@ curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post
 
 # Get second page
 curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post/2
-
-# Debug mode (bypass cache)
-curl "https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post?debug=1"
 ```
 
 ---
@@ -101,13 +98,13 @@ None.
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url contentType="structuredData/schema.org">
-      <loc>https://exampple.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
       <lastmod>2026-01-01T14:03:56Z</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
    <url contentType="structuredData/schema.org">
-      <loc>https://exampple.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
       <lastmod>2026-01-01T14:03:56Z</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
@@ -118,10 +115,11 @@ None.
 
 **Cache Headers:**
 
-Responses include cache control headers matching the dynamic TTL strategy:
-- Small sites (< 100 posts): 24 hours
-- Medium sites (100-1000 posts): 12 hours
-- Large sites (> 1000 posts): 6 hours
+Responses include cache control headers with a 5-minute (300 seconds) cache duration:
+
+```
+Cache-Control: max-age=300
+```
 
 **robots.txt Integration:**
 
@@ -139,7 +137,7 @@ curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml
 
 **Customizing Post Types:**
 
-By default, the schema map includes all public post types. You can customize this using the `wpseo_schema_aggregator_post_types` filter:
+By default, the schema map includes all indexable post types. You can customize this using the `wpseo_schema_aggregator_post_types` filter:
 
 ```php
 add_filter( 'wpseo_schema_aggregator_post_types', 'customize_schema_post_types' );
@@ -237,8 +235,6 @@ By default, the Schema Aggregator removes schema pieces in the following categor
 
 This filtering reduces noise and focuses on meaningful content entities.
 
-**Customize filtering:**
-
 ### What Gets Enhanced
 
 The Schema Aggregator enhances certain schema types with additional data:
@@ -247,35 +243,93 @@ The Schema Aggregator enhances certain schema types with additional data:
 
 Articles (and subtypes like `BlogPosting`, `NewsArticle`) are enhanced with:
 
-1. **articleBody**: Full post content (configurable max length, default: 5000 characters)
-2. **description**: Post excerpt (configurable max length, default: 320 characters)
-3. **keywords**: Post tags as keyword array
+1. **articleBody**: Full post content (configurable max length, default: 500 characters)
+2. **description**: Post excerpt (configurable max length, default: no limit)
+3. **keywords**: Post tags as keyword array (optionally includes categories)
 
 **Configuration:**
 
 ```php
 // Adjust article body length.
-add_filter( 'wpseo_article_enhance_config_max_article_body_length', function() {
-    return 10000; // Increase to 10,000 characters.
+add_filter( 'wpseo_article_enhance_config_article_body_max_length', function() {
+    return 2000; // Increase to 2,000 characters.
 } );
 
-// Adjust description length.
-add_filter( 'wpseo_article_enhance_config_max_description_length', function() {
-    return 500; // Increase to 500 characters.
+// Adjust excerpt length.
+add_filter( 'wpseo_article_enhance_config_excerpt_max_length', function() {
+    return 500; // Limit to 500 characters.
 } );
+
+// Include categories as keywords.
+add_filter( 'wpseo_article_enhance_config_categories_as_keywords', '__return_true' );
 
 // Disable article body enhancement.
-add_filter( 'wpseo_article_enhance_config_add_article_body', '__return_false' );
+add_filter( 'wpseo_article_enhance_article_body', '__return_false' );
 
-// Disable description enhancement.
-add_filter( 'wpseo_article_enhance_config_add_description', '__return_false' );
+// Disable excerpt enhancement.
+add_filter( 'wpseo_article_enhance_use_excerpt', '__return_false' );
 
 // Disable keywords enhancement.
-add_filter( 'wpseo_article_enhance_config_add_keywords', '__return_false' );
+add_filter( 'wpseo_article_enhance_keywords', '__return_false' );
 ```
+
+#### Person Enhancement
+
+Person schema (`@type: Person`) is enhanced with:
+
+1. **jobTitle**: Retrieved from WordPress user meta (`job_title` field)
+
+**Configuration:**
+
+```php
+// Disable job title enhancement.
+add_filter( 'wpseo_person_enhance_person_job_title', '__return_false' );
+```
+
+### Customize Filtering
+
+The Schema Aggregator uses a **strategy pattern** for filtering. The default strategy categorizes schema pieces using an elements-to-context map and filters out entire categories (Actions, Enumerations, Meta, Website). You can customize filtering at three levels:
+
+#### Replace the Entire Filtering Strategy
+
+Implement `Filtering_Strategy_Interface` and register it via the `wpseo_schema_aggregator_filtering_strategy` hook:
+
+```php
+add_filter( 'wpseo_schema_aggregator_filtering_strategy', function( $default_filter ) {
+    return new My_Custom_Filter();
+} );
+```
+
+Your custom class must implement the `filter` method, which receives a `Schema_Piece_Collection` and returns a filtered `Schema_Piece_Collection`.
+
+#### Modify the Elements-to-Context Map
+
+The default filtering strategy maps schema types into categories (e.g., `website`, `actions`, `meta`). You can modify this map with two filters:
+
+```php
+// Replace the entire map.
+add_filter( 'wpseo_schema_aggregator_elements_context_map', function( $map ) {
+    $map['my_category'] = [ 'WebPage', 'SomeOtherType' ];
+    return $map;
+} );
+
+// Modify a single category (e.g., add Table to the website category).
+add_filter( 'wpseo_schema_aggregator_elements_context_map_website', function( $types ) {
+    $types[] = 'Table';
+    return $types;
+} );
+```
+
+#### Conditional and Property-Level Filtering
+
+The default strategy also supports fine-grained control through node-level filters:
+
+- **Node filters** (`{Type}_Schema_Node_Filter`): Conditionally decide whether a schema piece of a given type should be filtered. For example, `WebPage` is only filtered when it represents an `Article`; otherwise it is kept.
+- **Property filters** (`{Type}_Schema_Node_Property_Filter`): Remove specific properties from a schema piece rather than filtering the entire piece.
 
 ## See Also
 
 - [Overview](overview.md): Introduction to Schema Aggregator
+- [Filters](filters.md): Complete filter reference with examples
 - [Schema.org documentation](https://schema.org/)
 - [JSON-LD specification](https://json-ld.org/)

@@ -5,13 +5,12 @@ sidebar_label: Overview
 description: An introduction to the Schema Aggregator feature in Yoast SEO.
 ---
 
-The Schema Aggregator is a powerful feature in Yoast SEO that collects and serves structured data (schema.org markup) for all content across your WordPress site.
+The Schema Aggregator collects structured data (schema.org markup) for all content across your WordPress site and serves it through a unified REST API. 
+This allows search engines and other consumers to easily access comprehensive schema data without needing to crawl individual pages.
 
 ### What gets aggregated
 
-By default, the Schema Aggregator processes:
-
-- All **public post types** (posts, pages, custom post types)
+By default, the Schema Aggregator processes all **public post types** (posts, pages, custom post types).
 
 You can customize which post types are included using the `wpseo_schema_aggregator_post_types` filter.
 
@@ -31,12 +30,14 @@ The aggregator handles schema.org types, categorized into 10 contexts:
 - **Meta**: Schema.org metadata (filtered by default)
 - **Website Meta**: Site structure elements, breadcrumbs (filtered by default)
 
-The specific schema types that get filtered can be found at the [source](https://github.com/Yoast/wordpress-seo/blob/trunk/src/schema-aggregator/infrastructure/elements-context-map/default-elements-context-map.php).
+The specific schema types that get filtered are specified in the [source code](https://github.com/Yoast/wordpress-seo/blob/trunk/src/schema-aggregator/infrastructure/elements-context-map/default-elements-context-map.php).
+
+
 ## Key features
 
 ### REST API endpoints
 
-Access aggregated schema through clean REST endpoints:
+The aggregated schema can be accessed through the following REST endpoints:
 
 ```
 GET /wp-json/yoast/v1/schema-aggregator/get-schema/{post_type}[/{page}]
@@ -66,7 +67,7 @@ The Schema Aggregator implements a dynamic caching strategy:
 
 ### Schema map (XML sitemap for structured data)
 
-The schema map provides a XML index of all available schema endpoints:
+The schema map provides an XML index of all available schema endpoints:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

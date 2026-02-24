@@ -63,11 +63,10 @@ The Schema Aggregator implements a dynamic caching strategy:
   - Large sites (> 1000 posts): 6 hours
 - **Automatic invalidation**: Cache clears when posts are updated
 - **Per-post-type caching**: Each post type has its own cache
-- **Debug mode**: Bypass cache with `?debug=1` parameter
 
-### Schema map (XML sitemap for structured data)
+### Schemamap (XML map for structured data)
 
-The schema map provides an XML index of all available schema endpoints:
+The schemamap provides an XML index of all available schema endpoints:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -81,7 +80,7 @@ The schema map provides an XML index of all available schema endpoints:
 </schemalist>
 ```
 
-The schema map is automatically referenced in your site's `robots.txt`:
+The schemamap is automatically referenced in your site's `robots.txt`:
 
 ```
 Sitemap: https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml

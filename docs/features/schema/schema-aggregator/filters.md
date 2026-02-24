@@ -9,26 +9,26 @@ The Schema Aggregator provides WordPress filters that allow you to customize its
 
 ## Quick Reference
 
-| Filter | Category | Purpose |
-|--------|----------|---------|
-| [`wpseo_schema_aggregator_post_types`](#post-type-configuration) | Post Types | Control which post types to aggregate |
-| [`wpseo_schema_aggregator_per_page`](#pagination-configuration) | Pagination | Set default items per page (1000) |
-| [`wpseo_schema_aggregator_per_page_big`](#pagination-configuration) | Pagination | Set items per page for big schema post types (100) |
-| [`wpseo_schema_aggregator_big_schema_post_types`](#pagination-configuration) | Pagination | Define which post types have large schema |
-| [`wpseo_schema_aggregator_cache_enabled`](#cache-configuration) | Cache | Enable/disable caching |
-| [`wpseo_schema_aggregator_cache_ttl`](#cache-configuration) | Cache | Set cache duration (dynamic by default) |
-| [`wpseo_schema_aggregator_schemamap_changefreq`](#schema-map-configuration) | Schema Map | Set XML sitemap update frequency |
-| [`wpseo_schema_aggregator_schemamap_priority`](#schema-map-configuration) | Schema Map | Set XML sitemap priority |
-| [`wpseo_schema_aggregator_filtering_strategy`](#filtering-strategy) | Filtering | Implement custom filtering logic |
-| [`wpseo_schema_aggregator_elements_context_map`](#elements-context-map) | Context Map | Override complete context map |
-| [`wpseo_schema_aggregator_elements_context_map_{context}`](#wpseo_schema_aggregator_elements_context_map_context) | Context Map | Customize elements for specific context |
-| [`wpseo_article_enhance_config_{key}`](#article-enhancement-configuration) | Article Enhancement | Configure article enhancement settings |
+| Filter | Category            | Purpose                                                          |
+|--------|---------------------|------------------------------------------------------------------|
+| [`wpseo_schema_aggregator_post_types`](#post-type-configuration) | Post Types          | Control which post types to aggregate                            |
+| [`wpseo_schema_aggregator_per_page`](#pagination-configuration) | Pagination          | Set default items per page (1000)                                |
+| [`wpseo_schema_aggregator_per_page_big`](#pagination-configuration) | Pagination          | Set items per page for big schema post types (100)               |
+| [`wpseo_schema_aggregator_big_schema_post_types`](#pagination-configuration) | Pagination          | Define which post types have large schema                        |
+| [`wpseo_schema_aggregator_cache_enabled`](#cache-configuration) | Cache               | Enable/disable caching                                           |
+| [`wpseo_schema_aggregator_cache_ttl`](#cache-configuration) | Cache               | Set cache duration (dynamic by default)                          |
+| [`wpseo_schema_aggregator_schemamap_changefreq`](#schema-map-configuration) | schemamap           | Set XML schemamap update frequency                               |
+| [`wpseo_schema_aggregator_schemamap_priority`](#schema-map-configuration) | schemamap          | Set XML schemamap priority                                         |
+| [`wpseo_schema_aggregator_filtering_strategy`](#filtering-strategy) | Filtering           | Implement custom filtering logic                                 |
+| [`wpseo_schema_aggregator_elements_context_map`](#elements-context-map) | Context Map         | Override complete context map                                    |
+| [`wpseo_schema_aggregator_elements_context_map_{context}`](#wpseo_schema_aggregator_elements_context_map_context) | Context Map         | Customize elements for specific context                          |
+| [`wpseo_article_enhance_config_{key}`](#article-enhancement-configuration) | Article Enhancement | Configure article enhancement settings                           |
 | [`wpseo_article_enhance_{enhancement}`](#article-enhancement-toggles) | Article Enhancement | Toggle article enhancements (article_body, use_excerpt, keywords) |
-| [`wpseo_article_enhance_body_when_excerpt_exists`](#article-body-with-excerpt) | Article Enhancement | Include body when excerpt exists |
-| [`wpseo_article_enhance_article_body_fallback`](#article-body-fallback) | Article Enhancement | Include body when no excerpt |
-| [`wpseo_person_enhance_config_{key}`](#person-enhancement-configuration) | Person Enhancement | Configure person enhancement settings |
-| [`wpseo_person_enhance_{enhancement}`](#person-enhancement-toggles) | Person Enhancement | Toggle person enhancements (person_job_title) |
-| [`wpseo_disable_robots_schemamap`](#robotstxt-integration) | Robots.txt | Disable schema map in robots.txt |
+| [`wpseo_article_enhance_body_when_excerpt_exists`](#article-body-with-excerpt) | Article Enhancement | Include body when excerpt exists                                 |
+| [`wpseo_article_enhance_article_body_fallback`](#article-body-fallback) | Article Enhancement | Include body when no excerpt                                     |
+| [`wpseo_person_enhance_config_{key}`](#person-enhancement-configuration) | Person Enhancement  | Configure person enhancement settings                            |
+| [`wpseo_person_enhance_{enhancement}`](#person-enhancement-toggles) | Person Enhancement  | Toggle person enhancements (person_job_title)                    |
+| [`wpseo_disable_robots_schemamap`](#robotstxt-integration) | Robots.txt          | Disable schemamap in robots.txt                                  |
 
 ## Post Type Configuration
 
@@ -283,13 +283,13 @@ function custom_cache_ttl( $ttl ) {
 }
 ```
 
-## Schema Map Configuration
+## Schemamap Configuration
 
-The schema map is an XML sitemap that lists all available schema endpoints. It's automatically referenced in your site's `robots.txt`.
+The schemamap is an XML sitemap that lists all available schema endpoints. It's automatically referenced in your site's `robots.txt`.
 
 ### wpseo_schema_aggregator_schemamap_changefreq
 
-Set the change frequency for schema map entries.
+Set the change frequency for schemamap entries.
 
 **Parameters:**
 
@@ -305,7 +305,7 @@ Set the change frequency for schema map entries.
 add_filter( 'wpseo_schema_aggregator_schemamap_changefreq', 'custom_schemamap_changefreq' );
 
 /**
- * Set schema map change frequency to weekly.
+ * Set schemamap change frequency to weekly.
  *
  * Use this to indicate how often search engines should check
  * for updated schema data.
@@ -323,7 +323,7 @@ function custom_schemamap_changefreq( $changefreq ) {
 
 ### wpseo_schema_aggregator_schemamap_priority
 
-Set the priority value for schema map entries.
+Set the priority value for schemamap entries.
 
 **Parameters:**
 
@@ -339,7 +339,7 @@ Set the priority value for schema map entries.
 add_filter( 'wpseo_schema_aggregator_schemamap_priority', 'custom_schemamap_priority' );
 
 /**
- * Increase schema map priority to indicate importance.
+ * Increase schemamap priority to indicate importance.
  *
  * Higher priority suggests to search engines that this content
  * is important relative to other URLs on your site.
@@ -677,11 +677,11 @@ add_filter( 'wpseo_person_enhance_person_job_title', '__return_false' );
 
 ## Robots.txt Integration
 
-By default, the schema map is automatically referenced in your site's `robots.txt` file. You can disable this integration if needed.
+By default, the schemamap is automatically referenced in your site's `robots.txt` file. You can disable this integration if needed.
 
 ### wpseo_disable_robots_schemamap
 
-Disable the schema map reference in robots.txt.
+Disable the schemamap reference in robots.txt.
 
 **Parameters:**
 
@@ -716,7 +716,7 @@ add_filter( 'wpseo_schema_aggregator_per_page', function() {
 	return defined( 'WP_DEBUG' ) && WP_DEBUG ? 10 : 1000;
 } );
 
-// Don't add schema map to robots.txt in development.
+// Don't add schemamap to robots.txt in development.
 add_filter( 'wpseo_disable_robots_schemamap', function() {
 	return defined( 'WP_DEBUG' ) && WP_DEBUG;
 } );

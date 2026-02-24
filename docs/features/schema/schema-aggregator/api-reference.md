@@ -24,7 +24,6 @@ GET /wp-json/yoast/v1/schema-aggregator/get-schema/{post_type}[/{page}]
 |-----------|------|----------|---------|-------------|
 | `post_type` | string | Yes | - | The post type to aggregate (e.g., `post`, `page`, `product`) |
 | `page` | integer | No | 1 | Page number for pagination |
-| `debug` | boolean | No | false | Disables cache when set to true (add `?debug=1` to URL) |
 
 **Pagination:**
 
@@ -79,7 +78,7 @@ curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post/2
 
 ---
 
-### Get XML Schema Map
+### Get XML Schemamap
 
 Retrieve an XML sitemap of all available schema endpoints.
 
@@ -123,7 +122,7 @@ Cache-Control: max-age=300
 
 **robots.txt Integration:**
 
-The schema map is automatically referenced in your site's `robots.txt`:
+The schemamap is automatically referenced in your site's `robots.txt`:
 
 ```
 Sitemap: https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml
@@ -137,7 +136,7 @@ curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml
 
 **Customizing Post Types:**
 
-By default, the schema map includes all indexable post types. You can customize this using the `wpseo_schema_aggregator_post_types` filter:
+By default, the schemamap includes all indexable post types. You can customize this using the `wpseo_schema_aggregator_post_types` filter:
 
 ```php
 add_filter( 'wpseo_schema_aggregator_post_types', 'customize_schema_post_types' );

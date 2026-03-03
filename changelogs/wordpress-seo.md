@@ -1,3 +1,19 @@
+= 27.1 =
+
+Release date: 2026-03-03
+
+New: Introducing the Schema Aggregation feature. Futureproof your website for an agentic future. [Read the full release post here](https://yoa.st/55i).
+
+#### Enhancements
+
+* Introduces the Schema aggregation feature. Thanks to Syde for helping us with testing it!
+* Introduces a more robust HTML processing and highlighting approach for the *transition words* assessment.
+
+#### Bugfixes
+
+* Fixes a bug where sentences containing transition words failed to be highlighted in _transition words_ assessment when they contained elements excluded from the analysis such as `<code>`.
+* Fixes a bug where Slovak two-part transition words weren't recognized when running the readability analysis.
+
 = 27.0 =
 
 Release date: 2026-02-17

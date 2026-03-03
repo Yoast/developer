@@ -32,6 +32,7 @@ Learn how our features work, how to customize the outputs, and how best to integ
 - [Schema.org markup](features/schema/)
   - [Schema pieces](/features/schema/pieces/)
   - [Output per plugin](/features/schema/plugins/)
+  - [Schema aggregator](/features/schema/schema-aggregator/)
 
 ## Integrating
 Want to integrate Yoast SEO into your platform? Check out our documentation on [integrating](/development/integrating.md), and familiarize yourself with all of our features and controls.

@@ -1,3 +1,11 @@
+## 26/02/2026 09:02 (UTC)
+
+Release date: 2026-02-26
+
+#### Enhancements
+
+* Enables product rating in snippet preview.
+
 ## 13/02/2026 09:32 (UTC)
 
 Release date: 2026-02-13

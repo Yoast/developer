@@ -1,3 +1,13 @@
+## 27.1
+
+Release date: 2026-03-03
+
+New: Introducing the Schema Aggregation feature, including additional Premium schema for organization identity, authors, and trust related coverage. Futureproof your website for an agentic future. [Read the full release post here.](https://yoa.st/55h)
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.1
+
 ## 27.0
 
 Release date: 2026-02-17

@@ -91,6 +91,14 @@ function BlogSidebarMobileSecondaryMenu( { sidebar } ) {
 					>
 						Yoast SEO for Shopify changelog</Link>
 				</li>
+				<li className={ styles.sidebarItem }>
+					<Link
+						isNavLink={ true } to="/changelog/ai-brand-insights/"
+						className={ styles.sidebarItemLink }
+						activeClassName={ styles.sidebarItemLinkActive }
+					>
+						AI Brand Insights changelog</Link>
+				</li>
 			</ul>
 			<div className={ clsx( styles.sidebarItemTitle, "margin-bottom--md" ) }>
 				Recent releases

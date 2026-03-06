@@ -1,3 +1,19 @@
+## 26/02/2026 09:02 (UTC)
+
+Release date: 2026-02-26
+
+#### Enhancements
+
+* Enables product rating in snippet preview.
+
+## 13/02/2026 09:32 (UTC)
+
+Release date: 2026-02-13
+
+#### Enhancements
+
+* Refreshes the site features settings page.
+
 ## 02/02/2026 11:41 (UTC)
 
 Release date: 2026-02-02
@@ -91,7 +107,7 @@ Release date: 2025-12-03
 
 #### Enhancements
 
-* Improves the error handling messages for the AI Optimize integration.
+* Improves the error handling messages for the AI Generate integration.
 * Improves the handling of RTL languages for the positioning of the favicon in the Search snippet preview.
 * Improves the handling of RTL languages for the tooltips in the related keyphrase suggestions modal.
 * Improves the tooltips accessibility in the related keyphrase suggestions modal.

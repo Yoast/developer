@@ -1,3 +1,15 @@
+## 09/03/2026 08:42 (UTC)
+
+Release date: 2026-03-09
+
+#### Enhancements
+
+* Adds star rating schema visibility.
+
+#### Bugfixes
+
+* Fixes a bug where exporting new items to CSV did not including title and URL handle.
+
 ## 26/02/2026 09:02 (UTC)
 
 Release date: 2026-02-26

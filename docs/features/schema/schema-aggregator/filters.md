@@ -17,8 +17,8 @@ The Schema Aggregator provides WordPress filters that allow you to customize its
 | [`wpseo_schema_aggregator_big_schema_post_types`](#pagination-configuration) | Pagination          | Define which post types have large schema                        |
 | [`wpseo_schema_aggregator_cache_enabled`](#cache-configuration) | Cache               | Enable/disable caching                                           |
 | [`wpseo_schema_aggregator_cache_ttl`](#cache-configuration) | Cache               | Set cache duration (dynamic by default)                          |
-| [`wpseo_schema_aggregator_schemamap_changefreq`](#schema-map-configuration) | schemamap           | Set XML schemamap update frequency                               |
-| [`wpseo_schema_aggregator_schemamap_priority`](#schema-map-configuration) | schemamap          | Set XML schemamap priority                                         |
+| [`wpseo_schema_aggregator_schemamap_changefreq`](#schemamap-configuration) | schemamap           | Set XML schemamap update frequency                               |
+| [`wpseo_schema_aggregator_schemamap_priority`](#schemamap-configuration) | schemamap          | Set XML schemamap priority                                         |
 | [`wpseo_schema_aggregator_filtering_strategy`](#filtering-strategy) | Filtering           | Implement custom filtering logic                                 |
 | [`wpseo_schema_aggregator_elements_context_map`](#elements-context-map) | Context Map         | Override complete context map                                    |
 | [`wpseo_schema_aggregator_elements_context_map_{context}`](#wpseo_schema_aggregator_elements_context_map_context) | Context Map         | Customize elements for specific context                          |

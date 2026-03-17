@@ -1,3 +1,13 @@
+## 27.2
+
+Release date: 2026-03-17
+
+Yoast SEO 27.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.2.
+
 ## 27.1
 
 Release date: 2026-03-03

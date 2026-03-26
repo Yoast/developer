@@ -3,7 +3,7 @@ id: disabling-automatic-redirects-notifications
 title: "Yoast SEO Premium: Disabling automatic redirects and notifications"
 sidebar_label: Disabling automatic redirects & notifications
 ---
-The Yoast SEO Premium's [redirects manager](https://yoast.com/wordpress/plugins/seo/redirects-manager/) includes automatic redirect creation and redirect request notifications. In rare cases, you may prefer to turn off some of these features.
+The Yoast SEO Premium's [redirects manager](https://yoast.com/features/redirect-manager/) includes automatic redirect creation and redirect request notifications. In rare cases, you may prefer to turn off some of these features.
 
 ## Disable automatic redirect creation
 Yoast SEO Premium monitors for URL changes and automatically creates a redirect. In most cases, this is ideal behavior in order to prevent visitors landing on a `404` error page. However, you can disable this feature by adding the following code to your theme's `functions.php`:

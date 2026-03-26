@@ -108,7 +108,7 @@ Because we're using `@id` attributes to join pieces, it's technically possible t
 
 We generally recommend that system authors attempt to avoid this kind of fragmentation when possible (as it introduces fragility and obfuscation into an already complex system), but, recognize that it's sometimes necessary.
 
-In fact, we use this approach in some of our own solutions when it's not possible to compute and output everything in the `<head>`. For example, our [Yoast WooCommerce SEO plugin](https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/) relies on parsing product information which isn't available during initialization, and so outputs a secondary `<script>` blog in the page's footer which contains additions to the page's graph (specifically, product and review information). This additional graph stitches seamlessly to create a cohesive whole.
+In fact, we use this approach in some of our own solutions when it's not possible to compute and output everything in the `<head>`. For example, our [Yoast WooCommerce SEO plugin](https://yoast.com/product/yoast-woocommerce-seo/) relies on parsing product information which isn't available during initialization, and so outputs a secondary `<script>` blog in the page's footer which contains additions to the page's graph (specifically, product and review information). This additional graph stitches seamlessly to create a cohesive whole.
 
 ## Hybrid types
 Sometimes, an object might be two different things. A book, for example, can be a `book` *and* a `product`, and have properties of both. It may have both an `author` and a `price`.

@@ -6,7 +6,7 @@ description: Describes the schema output of Yoast's "Local SEO" plugin for WordP
 ---
 import YoastSchemaExample from '../../../../src/components/YoastSchemaExample';
 
-The schema output for [Local SEO for WordPress](https://yoast.com/wordpress/plugins/local-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
+The schema output for [Local SEO for WordPress](https://yoast.com/features/local-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to add additional *local business* detail (such as addresses and opening hours).
 
 ## Core logic
 

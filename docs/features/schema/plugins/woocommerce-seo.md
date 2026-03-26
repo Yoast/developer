@@ -4,7 +4,7 @@ title: "Yoast WooCommerce SEO: Schema output"
 sidebar_label: WooCommerce SEO
 description: Describes the schema output of Yoast's "WooCommerce SEO" plugin for WordPress.
 ---
-The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about products and ecommerce functionality.
+The schema output for our [WooCommerce SEO plugin](https://yoast.com/product/yoast-woocommerce-seo/) builds upon the [Yoast SEO schema output](yoast-seo.md), to add additional detail about products and ecommerce functionality.
 
 ## Core functionality
 

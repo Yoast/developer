@@ -4,7 +4,7 @@ title: "Yoast News SEO for WordPress: Schema output"
 sidebar_label: News SEO for WordPress
 description: Describes the schema output of Yoast's "News SEO" plugin for WordPress.
 ---
-The schema output for [News SEO for WordPress](https://yoast.com/wordpress/plugins/news-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to provide additional *news* context and detail.
+The schema output for [News SEO for WordPress](https://yoast.com/features/news-seo/) builds upon [Yoast SEO for WordPress' base schema output](yoast-seo.md), to provide additional *news* context and detail.
 
 ## Core logic
 When a post type has been elected as a *News Article* format, then:

@@ -106,7 +106,7 @@ XML sitemaps do not need to be indexed by search engines in order to be read or 
 ## Additional scenarios
 
 ### Video sitemaps
-Our [Video SEO for WordPress plugin](https://yoast.com/wordpress/plugins/video-seo/) adds an additional *video sitemap* (at `video-sitemap.xml`, and included in the sitemap index) which contains information on each video hosted/referenced within site content.
+Our [Video SEO for WordPress plugin](https://yoast.com/features/video-seo/) adds an additional *video sitemap* (at `video-sitemap.xml`, and included in the sitemap index) which contains information on each video hosted/referenced within site content.
 
 For each page which contains video, the sitemap contains a `<url>` wrapper, with a `<loc>` value (the canonical URL / permalink of the page), and a `<video:video>` container for each video on the page. E.g:
 ```xml
@@ -147,7 +147,7 @@ For each page which contains video, the sitemap contains a `<url>` wrapper, with
 The video XML sitemap uses a dedicated XSL file.
 
 ### News sitemaps
-Our [News SEO for WordPress plugin](https://yoast.com/wordpress/plugins/news-seo/) adds an additional *news sitemap* (at `news-sitemap.xml`, and included in the sitemap index) which contains information news articles published on the site.
+Our [News SEO for WordPress plugin](https://yoast.com/features/news-seo/) adds an additional *news sitemap* (at `news-sitemap.xml`, and included in the sitemap index) which contains information news articles published on the site.
 
 News sitemaps should only reference articles which were published or modified within the last 48 hours.
 

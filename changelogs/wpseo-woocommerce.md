@@ -1,3 +1,23 @@
+## 16.8
+
+Release date: 2026-03-31
+
+#### Enhancements
+
+* Updates the logic to determine which page `@type` to output in the schema for a Product page.
+
+#### Bugfixes
+
+* Fixes a bug where screen reader text was rendered in the search appearance preview.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 7.0.
+* Bumps the minimum required version of Yoast SEO to 27.3.
+* Confirmed compatibility with PHP 8.5. Please report any issues you may still see.
+* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
+* Sets the minimum supported WordPress version to 6.8.
+
 ## 16.7
 
 Release date: 2025-10-21

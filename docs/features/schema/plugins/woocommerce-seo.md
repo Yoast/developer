@@ -12,7 +12,7 @@ The schema output for our [WooCommerce SEO plugin](https://yoast.com/wordpress/p
 * Remove WooCommerce's breadcrumb schema.
 
 ### On product pages
-* Change the `@type` of the `WebPage` piece into `ItemPage`. While taking into account additional types added via the [schema API](../api.md).
+* Change the `@type` of the `WebPage` piece into `ItemPage`, while taking into account additional types added via the [schema API](../api.md).
 * Alter the `Product` piece.
   * Apply our validation logic to each existing WooCommerce *piece* /value.
   * Add a `mainEntityOfPage` property to the `Product`, referencing the `WebPage` by ID.

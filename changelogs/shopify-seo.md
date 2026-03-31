@@ -1,3 +1,11 @@
+## 31/03/2026 07:39 (UTC)
+
+Release date: 2026-03-31
+
+#### Enhancements
+
+* Adds support for generating and managing an llms.txt file to help large language models better understand online stores.
+
 ## 09/03/2026 08:42 (UTC)
 
 Release date: 2026-03-09

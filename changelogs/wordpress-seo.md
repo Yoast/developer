@@ -1,3 +1,26 @@
+= 27.3 =
+
+Release date: 2026-03-31
+
+Yoast SEO 27.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds the highlighting feature to _keyphrase in subheadings_ assessment. Now users can highlight the headings that include the keyphrase or synonyms.
+* Introduces a more robust HTML processing approach for the _keyphrase in subheadings_ assessment.
+
+#### Bugfixes
+
+* Fixes a bug where `Deprecated: strip_tags(): Passing null to parameter #1 ($string) of type string is deprecated` notices appeared on certain actions, like when activating the plugin, or saving a Yoast setting. Props to @sabernhardt.
+* Fixes a bug where the installation success redirect was incorrectly fired during AJAX, cron, REST API, or JSON requests, breaking integrations such as the Bluehost SSO.
+* Fixes a console error in the editor related to AI Generate feature that occurred when the “Enable SEO controls and assessments” option was disabled for a content type.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 7.0.
+* Improves security of format_json_encode() by removing JSON_UNESCAPED_SLASHES, which could allow a user to control tags in the schema JSON-LD output. Props to @rob006.
+* Updates the completion message and changes the call-to-action button text of the First-time configuration.
+
 = 27.2 =
 
 Release date: 2026-03-17

@@ -1,3 +1,23 @@
+## 27.3
+
+Release date: 2026-03-31
+
+Yoast SEO 27.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves focus management restauration when the AI Optimize dialog is dissmissed.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Optimize dialog did not have focus when visible.
+* Fixes a console error in the editor related to AI Optimize feature that occurred when the “Enable SEO controls and assessments” option was disabled for a content type.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 7.0.
+* Bumps the minimum required version of Yoast SEO to 27.3
+
 ## 27.2
 
 Release date: 2026-03-17

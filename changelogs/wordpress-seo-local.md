@@ -1,3 +1,20 @@
+## 15.8
+
+Release date: 2026-03-31
+
+#### Bugfixes
+
+* Fixes a performance issue that was causing a timeout/memory exhaustion when using the Schema aggregation feature.
+
+#### Other
+
+* Sets the _WordPress tested up to_ version to 7.0.
+* Bumps the minimum required Free version to 27.3.
+* Compatibility with PHP 8.4 and 8.5 is now being safeguarded more stringently
+* Improved compatibility with PHP 8.5
+* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
+* Sets the minimum supported WordPress version to 6.8.
+
 ## 15.7
 
 Release date: 2026-01-20

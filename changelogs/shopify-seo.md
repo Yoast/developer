@@ -1,3 +1,12 @@
+## 02/04/2026 10:04 (UTC)
+
+Release date: 2026-04-02
+
+#### Other
+
+* Fixes Optimize/Account spacing between content and navigation bar slightly reduced compared to Settings spacing.
+* Translates the "Optimize with Yoast SEO" extension.
+
 ## 31/03/2026 07:39 (UTC)
 
 Release date: 2026-03-31

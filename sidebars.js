@@ -303,7 +303,7 @@ module.exports = {
 					type: "category",
 					label: "Yoast SEO Abilities API",
 					items: [
-						"features/yoast-abilities-api/background",
+						"features/yoast-abilities-api/overview",
 						"features/yoast-abilities-api/recent-posts-seo-ability",
 						"features/yoast-abilities-api/recent-posts-readability-ability",
 						"features/yoast-abilities-api/recent-posts-inclusive-language-ability",

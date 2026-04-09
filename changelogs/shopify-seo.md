@@ -1,3 +1,11 @@
+## 09/04/2026 12:09 (UTC)
+
+Release date: 2026-04-09
+
+#### Enhancements
+
+* Adds webinar promotion banner on overview page.
+
 ## 02/04/2026 10:04 (UTC)
 
 Release date: 2026-04-02

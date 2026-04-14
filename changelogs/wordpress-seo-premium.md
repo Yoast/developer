@@ -1,3 +1,18 @@
+## 27.4
+
+Release date: 2026-04-14
+
+Yoast SEO 27.4 adds new tasks to the Task List, improves navigation within the editor, and fixes a bug where tasks were displaying in the wrong language. [Read the full release post here.](https://yoa.st/task-list)  
+
+#### Enhancements
+
+* Enhances the task list with a task about adding Open Graph images to recent content.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.4.
+* Informs users about the availability of a free trial for Yoast AI Brand Insights.
+
 ## 27.3
 
 Release date: 2026-03-31

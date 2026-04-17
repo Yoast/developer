@@ -80,12 +80,6 @@ The schemamap provides an XML index of all available schema endpoints:
 </schemalist>
 ```
 
-The schemamap is automatically referenced in your site's `robots.txt`:
-
-```
-Schemamap: https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml
-```
-
 ### External source support
 
 The Schema Aggregator seamlessly integrates with:

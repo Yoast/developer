@@ -136,7 +136,7 @@ Doing so in a website might yield the following result:
 ```
 
 ## How to disable it programmatically?
-There's a way to disable the Recent Posts's SEO Ability programmatically and that's by using the WP native `wp_abilities_api_init` action, likeso:
+There's a way to disable the Recent Posts's SEO Ability programmatically and that's by using the WP native `wp_abilities_api_init` action, like so:
 ```
 add_action( 'wp_abilities_api_init', function() { 
         if ( wp_has_ability( 'yoast-seo/get-seo-scores' ) ) {

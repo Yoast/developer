@@ -35,7 +35,7 @@ Assuming that an AI agent is connected to a WordPress-enabled MCP site (details 
 That way, Yoast SEO exposes the results of its analyses to authenticated AI agents, enabling users to use AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 
 ### Third-party code
-A more traditional way to consume the Yoast SEO Abilities API, any plugin that is interested in building features on top of Yoast SEO Analyses can now use the new WP REST API endpoints, to reliably get information about a website's recent posts, in a structured way.
+For plugins interested in building features on top of Yoast SEO Analyses, a more traditional way to consume the Yoast SEO Abilities API would be to use the new WP REST API endpoints. This allows information about a website's recent posts to be reliably retrieved in a structured way.
 
 ## Prerequisites
 * WordPress version should over v6.9.

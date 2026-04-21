@@ -8,7 +8,7 @@ This documentation explains what is the Abilities API and how [Yoast SEO](https:
 
 ## What is the Abilities API?
 [Abilities API was introduced in WordPress 6.9](https://developer.wordpress.org/news/2025/11/introducing-the-wordpress-abilities-api/), as a new standardized way for plugins to expose what they can do. It allows plugins to do so by providing:
-* A **registry** where plugins declare their capabilities (also know as `abilities`) with structured input/output schemas.
+* A **registry** where plugins declare their capabilities/features/functionalities (also known as **abilities**) with structured input and output schemas.
 * A **central REST discovery endpoint** (`/wp-json/wp-abilities/v1/abilities`) where any client/plugin can list everything that's available.
 * A **standardized execution endpoint** (`/run`) to invoke any registered ability.
 * **Permission checks** baked into every ability, so access control is consistent.

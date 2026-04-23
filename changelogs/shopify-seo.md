@@ -1,3 +1,11 @@
+## 23/04/2026 08:19 (UTC)
+
+Release date: 2026-04-23
+
+#### Bugfixes
+
+* Fixes a bug where certain blogs and pages could no longer be updated via Yoast SEO for Shopify when the app had been completely uninstalled and then re-installed.
+
 ## 09/04/2026 12:09 (UTC)
 
 Release date: 2026-04-09

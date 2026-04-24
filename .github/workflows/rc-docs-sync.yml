@@ -1,0 +1,314 @@
+# .github/workflows/rc-docs-sync.yml
+#
+# Lives in: Yoast/developer
+# Purpose: once a day, check each opted-in product repo for RC tags we haven't
+#          processed yet. For each new RC, ask a Claude agent whether the
+#          developer-portal docs need updates; if so, open one PR per affected
+#          feature area (per AGENT_MAP.md).
+#
+# Why no GitHub App or PAT: product repos are public → anonymous cloning works;
+# writes to Yoast/developer (branches, PRs, issue comments) use GITHUB_TOKEN.
+# The only secret required is ANTHROPIC_API_KEY.
+#
+# State management: because `main` is protected, this workflow never writes to
+# `main`. Instead, the per-product tracking issue's comments serve as state.
+# Every run-summary comment starts with a machine-readable marker:
+#     <!-- rc-docs-sync:v1 product=<slug> rc_tag=<tag> -->
+# The workflow scans the tracking issue's comments to find the latest processed
+# RC per product, then processes any newer RC tags.
+#
+# Validation: Cloudflare Pages auto-deploys a preview on every PR push, acting
+# as the per-PR check (broken Docusaurus links fail the deploy). The agent
+# doesn't re-run `yarn build` locally; it trusts CF Pages for the final word.
+
+name: RC docs sync
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # daily at 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      product:
+        description: 'Product slug (must match AGENT_MAP.md; e.g. wordpress-seo). Leave blank to sweep all opted-in products.'
+        required: false
+        type: string
+      rc_tag:
+        description: 'Specific RC tag to process (e.g. 27.5-RC1). Bypasses state gating for that one product+tag. Useful for backfill.'
+        required: false
+        type: string
+
+concurrency:
+  group: rc-docs-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write       # push per-RC doc branches (NOT main — main is protected)
+  pull-requests: write  # open and label PRs
+  issues: write         # comment on tracking issue(s)
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    env:
+      # Map product slug → tracking issue repo variable name. Variable names must
+      # be alphanumeric + underscores, so the slug dashes are normalized to underscores.
+      # TRACKING_ISSUE_WORDPRESS_SEO (repo var) → issue number in Yoast/developer.
+      TRACKING_ISSUE_WORDPRESS_SEO: ${{ vars.TRACKING_ISSUE_WORDPRESS_SEO }}
+
+    steps:
+      - name: Check out Yoast/developer
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          path: developer
+
+      # ---- 1. Resolve work queue using issue comments as state -----------
+      # For each opted-in product, find the most recent "rc-docs-sync" marker
+      # comment on its tracking issue. Process RC tags newer than that marker.
+
+      - name: Resolve work queue
+        id: queue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_PRODUCT: ${{ github.event.inputs.product }}
+          INPUT_RC_TAG: ${{ github.event.inputs.rc_tag }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' > queue.json
+          import json, os, re, subprocess, sys, urllib.request
+          from urllib.error import HTTPError
+
+          # --- opted-in products for this phase of rollout ---
+          PRODUCTS = {
+              "wordpress-seo": {
+                  "display_name": "Yoast SEO",
+                  "repos": ["Yoast/wordpress-seo"],
+                  "tracking_issue_var": "TRACKING_ISSUE_WORDPRESS_SEO",
+              },
+          }
+
+          MARKER_RE = re.compile(
+              r"<!--\s*rc-docs-sync:v1\s+product=(?P<product>\S+)\s+rc_tag=(?P<rc_tag>\S+)\s*-->"
+          )
+          RC_TAG_RE = re.compile(r"^\d+\.\d+(?:\.\d+)?-RC\d+$")
+          STABLE_RE = re.compile(r"^\d+\.\d+(?:\.\d+)?$")
+
+          def sort_key(tag):
+              m = re.match(r"^(\d+)\.(\d+)(?:\.(\d+))?(?:-RC(\d+))?$", tag)
+              if not m:
+                  return (0, 0, 0, 0)
+              major, minor, patch, rc = m.groups()
+              # Stable (no RC suffix) should sort AFTER its RCs: use rc=99999 to mark stable.
+              return (int(major), int(minor), int(patch or 0), int(rc) if rc else 99999)
+
+          def gh_json(args):
+              cp = subprocess.run(["gh"] + args, check=True, capture_output=True, text=True)
+              return json.loads(cp.stdout)
+
+          def fetch_comments(issue_number):
+              # gh issue view --json comments returns {"comments":[{"body":"..","createdAt":"..."},...]}
+              data = gh_json(["issue", "view", str(issue_number), "--json", "comments"])
+              return data.get("comments", [])
+
+          def fetch_latest_marker(issue_number, product_slug):
+              comments = fetch_comments(issue_number)
+              # Scan newest first (gh returns in ascending order by default; reverse).
+              for c in reversed(comments):
+                  for m in MARKER_RE.finditer(c.get("body", "")):
+                      if m.group("product") == product_slug:
+                          return m.group("rc_tag")
+              return None
+
+          def fetch_tags(repo):
+              url = f"https://api.github.com/repos/{repo}/tags?per_page=100"
+              req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(req) as r:
+                  tags = json.load(r)
+              return [t["name"] for t in tags]
+
+          input_product = os.environ.get("INPUT_PRODUCT") or ""
+          input_rc_tag = os.environ.get("INPUT_RC_TAG") or ""
+          queue = []
+          seed_actions = []
+
+          products_to_sweep = [input_product] if input_product else list(PRODUCTS.keys())
+          for slug in products_to_sweep:
+              if slug not in PRODUCTS:
+                  print(f"skipping unknown product {slug}", file=sys.stderr)
+                  continue
+              product = PRODUCTS[slug]
+              tracking_issue = os.environ.get(product["tracking_issue_var"])
+              if not tracking_issue:
+                  print(f"missing repo variable {product['tracking_issue_var']}; cannot process {slug}", file=sys.stderr)
+                  continue
+
+              main_repo = product["repos"][0]
+              all_tags = fetch_tags(main_repo)
+              rc_tags = [t for t in all_tags if RC_TAG_RE.match(t)]
+              stable_tags = [t for t in all_tags if STABLE_RE.match(t)]
+
+              if input_rc_tag and input_product == slug:
+                  if input_rc_tag not in rc_tags:
+                      print(f"{input_rc_tag} not found as RC in {main_repo}", file=sys.stderr)
+                      sys.exit(2)
+                  rcs_to_process = [input_rc_tag]
+              else:
+                  last = fetch_latest_marker(tracking_issue, slug)
+                  if last is None:
+                      # First-run seeding: mark the current latest RC as "already processed"
+                      # by posting a seed comment, and process nothing historically.
+                      rc_tags_sorted = sorted(rc_tags, key=sort_key)
+                      seed_rc = rc_tags_sorted[-1] if rc_tags_sorted else None
+                      if seed_rc:
+                          seed_actions.append({
+                              "issue": tracking_issue,
+                              "product": slug,
+                              "rc_tag": seed_rc,
+                              "display_name": product["display_name"],
+                          })
+                      continue
+                  last_key = sort_key(last)
+                  rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
+
+              for rc_tag in rcs_to_process:
+                  prev_candidates = [t for t in stable_tags if sort_key(t) <= sort_key(rc_tag)]
+                  if not prev_candidates:
+                      print(f"no previous stable for {rc_tag}; skipping", file=sys.stderr)
+                      continue
+                  prev = sorted(prev_candidates, key=sort_key)[-1]
+                  queue.append({
+                      "product": slug,
+                      "display_name": product["display_name"],
+                      "repos": product["repos"],
+                      "rc_tag": rc_tag,
+                      "prev_release": prev,
+                      "tracking_issue": tracking_issue,
+                  })
+
+          print(json.dumps({"queue": queue, "seeds": seed_actions}))
+          PY
+          cat queue.json
+          echo "count=$(jq '.queue | length' queue.json)" >> "$GITHUB_OUTPUT"
+          echo "seed_count=$(jq '.seeds | length' queue.json)" >> "$GITHUB_OUTPUT"
+
+      # ---- 2. Post seed comments for first-run products ------------------
+
+      - name: Seed first-run tracking issues
+        if: steps.queue.outputs.seed_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          jq -c '.seeds[]' queue.json | while read -r seed; do
+            issue=$(echo "$seed" | jq -r .issue)
+            product=$(echo "$seed" | jq -r .product)
+            rc_tag=$(echo "$seed" | jq -r .rc_tag)
+            display=$(echo "$seed" | jq -r .display_name)
+            gh issue comment "$issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
+
+          **First-run seed for ${display}** — RC tag \`${rc_tag}\` recorded as the baseline. No historical RCs will be processed automatically. To backfill a specific RC, use \`workflow_dispatch\` with \`product=${product}\` and the desired \`rc_tag\`."
+          done
+
+      # ---- 3. Short-circuit if queue is empty ----------------------------
+
+      - name: Short-circuit if queue is empty
+        if: steps.queue.outputs.count == '0'
+        run: |
+          echo "No new RC tags to process."
+          exit 0
+
+      # ---- 4. Process the queue serially --------------------------------
+      # No node setup / yarn install here: the Cloudflare Pages preview deploy
+      # on the resulting PR is the per-PR validation. Any broken internal links
+      # or frontmatter errors will fail the preview and surface on the PR.
+
+      - name: Process RC queue
+        if: steps.queue.outputs.count != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          mkdir -p sources bundle
+
+          jq -c '.queue[]' queue.json | while read -r item; do
+            product=$(echo "$item" | jq -r .product)
+            display_name=$(echo "$item" | jq -r .display_name)
+            rc_tag=$(echo "$item" | jq -r .rc_tag)
+            prev=$(echo "$item" | jq -r .prev_release)
+            tracking_issue=$(echo "$item" | jq -r .tracking_issue)
+            echo "===== Processing $product @ $rc_tag (prev: $prev) ====="
+
+            # Clone each source repo for this product (anonymous)
+            for repo in $(echo "$item" | jq -r '.repos[]'); do
+              name="${repo##*/}"
+              if [ ! -d "sources/${name}" ]; then
+                git clone --depth 50 --no-single-branch "https://github.com/${repo}.git" "sources/${name}"
+              fi
+              git -C "sources/${name}" fetch --depth 200 origin "refs/tags/${rc_tag}:refs/tags/${rc_tag}" "refs/tags/${prev}:refs/tags/${prev}" || true
+            done
+
+            # Build the bundle
+            bundle_dir="bundle/${product}/${rc_tag}"
+            mkdir -p "$bundle_dir"
+            for repo in $(echo "$item" | jq -r '.repos[]'); do
+              name="${repo##*/}"
+              rb="${bundle_dir}/${name}"
+              mkdir -p "$rb"
+              git -C "sources/${name}" diff "${prev}..${rc_tag}" > "${rb}/rc.diff.full"
+              git -C "sources/${name}" diff "${prev}..${rc_tag}" \
+                -- \
+                ':(exclude)tests' \
+                ':(exclude)**/__tests__' \
+                ':(exclude)**/__snapshots__' \
+                ':(exclude)**/*.lock' \
+                ':(exclude)languages' \
+                ':(exclude).github' \
+                ':(exclude)composer.lock' \
+                ':(exclude)yarn.lock' \
+                ':(exclude)package-lock.json' \
+                > "${rb}/rc.diff.filtered"
+              git -C "sources/${name}" diff --stat "${prev}..${rc_tag}" > "${rb}/rc.diff.stat"
+              for f in readme.txt CHANGELOG.md changelog.md changelog.txt; do
+                if git -C "sources/${name}" show "${rc_tag}:${f}" > "${rb}/changelog.source" 2>/dev/null; then break; fi
+              done
+            done
+
+            # Build symbol index from current docs/
+            (
+              grep -rohE "'wpseo_[a-zA-Z0-9_]+'" developer/docs/ || true
+              grep -rohE "'Yoast\\\\WP\\\\SEO\\\\[a-zA-Z0-9_\\\\]+'" developer/docs/ || true
+              grep -rohE "'duplicate_post_[a-zA-Z0-9_]+'" developer/docs/ || true
+            ) | sort -u > "${bundle_dir}/symbol-index.txt"
+
+            # Short-circuit if filtered diff is empty
+            any_content=false
+            for f in ${bundle_dir}/*/rc.diff.filtered; do
+              [ -s "$f" ] && any_content=true
+            done
+            if [ "$any_content" = "false" ]; then
+              gh issue comment "$tracking_issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
+
+          **${display_name} ${rc_tag%-RC*}** (RC \`${rc_tag}\`) — no doc changes needed.
+          Filtered diff is empty (only tests/translations/lockfiles changed).
+          Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              continue
+            fi
+
+            # Invoke the Claude agent.
+            # (Placeholder — see .github/claude-agent/run.md for the prompt. The action
+            # reference/version must be pinned when wiring for real, e.g.
+            # anthropics/claude-code-action@<sha>.)
+            echo "TODO: invoke agent with BUNDLE_DIR=$(realpath $bundle_dir) PRODUCT=$product RC_TAG=$rc_tag DISPLAY_NAME=$display_name TRACKING_ISSUE=$tracking_issue"
+
+            # Per agent contract, the agent itself is responsible for:
+            #   1. Creating branches under rc-sync/<product>/<rc_tag>/<area>
+            #   2. Running `yarn build` / `yarn lint` before each PR
+            #   3. Opening PRs via `gh pr create` with the required title format and labels
+            #   4. Posting the run-summary comment with the marker to the tracking issue
+          done

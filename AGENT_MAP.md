@@ -22,21 +22,24 @@ Each doc file belongs to **exactly one area**. One PR plan per affected area. If
 
 ## Product → source repo
 
-| Product slug            | Display name             | GitHub repo(s)                                                         |
-|-------------------------|--------------------------|------------------------------------------------------------------------|
-| wordpress-seo           | Yoast SEO                | `Yoast/wordpress-seo`                                                  |
-| wordpress-seo-premium   | Yoast SEO Premium        | `Yoast/wordpress-seo-premium`                                          |
-| wordpress-seo-local     | Yoast Local SEO          | `Yoast/wordpress-seo-local`                                            |
-| wpseo-news              | Yoast News SEO           | `Yoast/wpseo-news`                                                     |
-| wpseo-video             | Yoast Video SEO          | `Yoast/wpseo-video`                                                    |
-| wpseo-woocommerce       | Yoast WooCommerce SEO    | `Yoast/wpseo-woocommerce`                                              |
-| shopify-seo             | Yoast SEO for Shopify    | `Yoast/shopify-seo`                                                    |
-| duplicate-post          | Yoast Duplicate Post     | `Yoast/duplicate-post`                                                 |
-| ai-brand-insights       | Yoast AI Brand Insights  | `Yoast/ai-insights-api` + `Yoast/ai-insights-frontend` (split product) |
+| Product slug            | Display name             | GitHub repo(s)                  |
+|-------------------------|--------------------------|---------------------------------|
+| wordpress-seo           | Yoast SEO                | `Yoast/wordpress-seo`           |
+| wordpress-seo-premium   | Yoast SEO Premium        | `Yoast/wordpress-seo-premium`   |
+| wordpress-seo-local     | Yoast Local SEO          | `Yoast/wordpress-seo-local`     |
+| wpseo-news              | Yoast News SEO           | `Yoast/wpseo-news`              |
+| wpseo-video             | Yoast Video SEO          | `Yoast/wpseo-video`             |
+| wpseo-woocommerce       | Yoast WooCommerce SEO    | `Yoast/wpseo-woocommerce`       |
+| shopify-seo             | Yoast SEO for Shopify    | `Yoast/shopify-seo`             |
+| duplicate-post          | Yoast Duplicate Post     | `Yoast/duplicate-post`          |
 
 Display names are the human-readable product names used in PR titles and tracking issue summaries. They mirror the names used in `docusaurus.config.js` changelog plugin entries.
 
-`ai-brand-insights` is the only product with more than one source repo — the agent must consider diffs from both when running on its RCs. Product slug matches the changelog id in `docusaurus.config.js`, which differs from the repo name in several cases (`wordpress-seo-local` ↔ `Local SEO`, `wpseo-*` ↔ `News/Video/WooCommerce SEO`, `shopify-seo` ↔ `Yoast SEO for Shopify`, `ai-brand-insights` ↔ `AI Brand Insights`).
+Products that have a changelog in this repo but **no feature docs** (e.g. AI Brand Insights) are intentionally excluded from this table. Add them here only when feature-spec docs are introduced in `docs/`; otherwise every RC run on the product would reliably produce zero PRs, wasting compute and review attention.
+
+Product slug is the stable identifier used throughout this file and the workflow. It does not always match the repo name — see how `wordpress-seo-local` ↔ `Local SEO`, `wpseo-*` ↔ `News/Video/WooCommerce SEO`, `shopify-seo` ↔ `Yoast SEO for Shopify`. Keep the slug consistent with the corresponding changelog plugin id in `docusaurus.config.js` so the two pieces line up.
+
+No currently-listed product has more than one source repo. If one is ever added (for example a split API+frontend product), the workflow and agent will need an extra rule: clone diffs from both repos, pass them to the agent labeled by repo, and treat the set as a single RC unit.
 
 ---
 
@@ -168,16 +171,13 @@ Display names are the human-readable product names used in PR titles and trackin
 - **Typical triggers**: new integration added (IndexNow, site-connections, Algolia, etc.); change to ping/notify behavior.
 
 ### `ai`
-- **Products**: wordpress-seo, wordpress-seo-premium, ai-brand-insights (split across `Yoast/ai-insights-api` + `Yoast/ai-insights-frontend`)
+- **Products**: wordpress-seo, wordpress-seo-premium
 - **Docs paths**: `docs/features/ai/**`
 - **Source paths** (wordpress-seo): `src/ai-*/**`, `src/generators/ai*`, `src/integrations/ai*`
 - **Source paths** (wordpress-seo-premium): `src/ai/**`
-- **Source paths** (ai-insights-api): Laravel app — `app/**` (controllers, models, services, jobs), `routes/**`, `config/**`, `database/migrations/**`, `resources/views/**` (Blade templates)
-- **Source paths** (ai-insights-frontend): Vite/React/TypeScript — `src/api/**`, `src/components/**`, `src/pages/**`, `src/hooks/**`, `src/contexts/**`, `src/lib.tsx`, `src/orval/**` (auto-generated API clients — changes here reflect upstream API changes)
-- **Split-product workflow rule**: For `ai-brand-insights` RCs the workflow must pull diffs from **both** repos (ai-insights-api and ai-insights-frontend) and pass them to the agent as a single input, clearly labeled by repo. Only the API repo emits user-observable public surface; frontend changes are informational unless they alter documented behavior.
-- **Docs-coverage gap note**: At map-drafting time `docs/features/ai/` contained only `ai-errors.md`. There is no feature-spec doc for AI Brand Insights yet. Until such docs exist, RC runs for `ai-brand-insights` will almost always yield `pr_plans: []` — this is correct behavior, not a failure. If AI Brand Insights starts being documented in the portal, expand this area's docs_paths accordingly.
-- **Symbol namespaces** (WP side): `wpseo_ai_*`
-- **Typical triggers**: new AI error code; new AI feature exposing a filter; change to request/retry behavior documented in `ai-errors.md`; new public REST endpoint in `ai-insights-api`.
+- **Symbol namespaces**: `wpseo_ai_*`
+- **Typical triggers**: new AI error code; new AI feature exposing a filter; change to request/retry behavior documented in `ai-errors.md`.
+- **Note**: AI Brand Insights is an adjacent product with its own changelog in this repo but no feature-spec docs under `docs/features/ai/`. It is deliberately not in this area's product list. When/if feature docs land (e.g. a functional specification for AI Brand Insights), re-add the product to the Product table and expand this area's products + source paths to include `Yoast/ai-insights-api` (Laravel — `app/**`, `routes/**`) and `Yoast/ai-insights-frontend` (Vite/React — `src/**`), plus a split-product workflow rule.
 
 ### `alternate-formats`
 - **Products**: wordpress-seo

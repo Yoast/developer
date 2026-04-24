@@ -11,7 +11,7 @@ You are the RC docs-sync agent for Yoast's developer portal. A Release Candidate
 
 - **`AGENT_MAP.md`** (in this repo root) — the source of truth for feature areas, docs paths, source paths, and symbol namespaces. Read this first.
 - **`docs/`** — the current state of the developer portal docs.
-- **`$BUNDLE_DIR/<source-repo>/rc.diff.filtered`** — noise-filtered diff of the RC against the previous release, one per source repo. (For `ai-brand-insights` there are two.)
+- **`$BUNDLE_DIR/<source-repo>/rc.diff.filtered`** — noise-filtered diff of the RC against the previous release. One subdirectory per source repo. Most products have a single source repo; if a future product ships a split-repo architecture, there will be multiple and the agent should treat all of them as a single RC unit.
 - **`$BUNDLE_DIR/<source-repo>/rc.diff.full`** — unfiltered diff for cross-check.
 - **`$BUNDLE_DIR/<source-repo>/rc.diff.stat`** — `git diff --stat` summary.
 - **`$BUNDLE_DIR/<source-repo>/changelog.source`** — the product's user-facing changelog file. Find the entry for `$RC_TAG` and treat it as the "why" complementing the diff's "what".
@@ -54,6 +54,22 @@ Group findings by area. Produce an internal list of PR plans, one per affected a
 - Maximum 5 PR plans per run. If the triage produces more, consolidate or escalate (comment on the tracking issue explaining what you dropped).
 - Never touch `docs/development/**` or `docs/duplicate-post/**` (unless `PRODUCT` is `duplicate-post`).
 - If a PR plan creates or renames doc files, it must also include `sidebars.js` with an update describing the navigation entry change.
+
+### Step 1.5 — Coverage-gap detection
+
+While triaging, additionally collect any **AGENT_MAP.md coverage gaps** you observe. A coverage gap is a hunk that looks like public surface — specifically:
+
+- A new `apply_filters('<symbol>', …)` or `do_action('<symbol>', …)` call whose source file path does NOT match any area's `source_paths`, AND whose symbol prefix does NOT match any area's `symbol_namespaces`.
+- A new file under a top-level `src/<subsystem>/**` path that no area's `source_paths` covers, when the file clearly contains new public classes/interfaces/routes (not internal refactors).
+- A new REST route registration (`register_rest_route(...)`) at a path no existing doc references.
+
+Do NOT flag internal refactors, private helpers, test files, generated code, or symbols whose path IS covered by some area even if you chose not to open a PR for them this run. The goal is surfacing *missing* map entries, not second-guessing triage decisions.
+
+List each gap as one bullet with: the source path where you observed it, the symbol or route that prompted the flag, and a one-line hypothesis of which area it might belong to (or "new area?" if none fit).
+
+Emit these in the run summary in Step 4 under a heading **"Coverage gaps observed"**. If there are no gaps, omit the heading entirely — don't emit an empty section.
+
+The gaps are informational; they do NOT block the run. A maintainer reviewing the tracking issue will decide whether to update `AGENT_MAP.md` in a separate PR.
 
 ### Step 2 — Authoring (only if PR plans exist)
 
@@ -101,6 +117,7 @@ The body after the marker should contain:
 - Symbol index size, count of new symbols observed in diff.
 - One bullet per PR plan: area, title, PR link.
 - If zero PRs: a one-paragraph explanation of what the RC contained and why no doc changes are needed (cite the changelog entry and top-level diff areas).
+- A **"Coverage gaps observed"** section iff you flagged any in Step 1.5. Omit the heading entirely when there are none.
 
 **If you fail to post the comment with the marker, the next scheduled run will re-process this RC.** Posting the marker is the acknowledgement of completion.
 

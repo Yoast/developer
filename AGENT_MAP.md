@@ -35,7 +35,7 @@ Each doc file belongs to **exactly one area**. One PR plan per affected area. If
 
 Display names are the human-readable product names used in PR titles and tracking issue summaries. They mirror the names used in `docusaurus.config.js` changelog plugin entries.
 
-Products that have a changelog in this repo but **no feature docs** (e.g. AI Brand Insights) are intentionally excluded from this table. Add them here only when feature-spec docs are introduced in `docs/`; otherwise every RC run on the product would reliably produce zero PRs, wasting compute and review attention.
+Only products with feature-spec docs under `docs/` belong in this table. A product whose only presence here is a changelog produces zero-PR runs every time, which adds noise to the tracking issue without value — skip it.
 
 Product slug is the stable identifier used throughout this file and the workflow. It does not always match the repo name — see how `wordpress-seo-local` ↔ `Local SEO`, `wpseo-*` ↔ `News/Video/WooCommerce SEO`, `shopify-seo` ↔ `Yoast SEO for Shopify`. Keep the slug consistent with the corresponding changelog plugin id in `docusaurus.config.js` so the two pieces line up.
 
@@ -177,7 +177,6 @@ No currently-listed product has more than one source repo. If one is ever added 
 - **Source paths** (wordpress-seo-premium): `src/ai/**`
 - **Symbol namespaces**: `wpseo_ai_*`
 - **Typical triggers**: new AI error code; new AI feature exposing a filter; change to request/retry behavior documented in `ai-errors.md`.
-- **Note**: AI Brand Insights is an adjacent product with its own changelog in this repo but no feature-spec docs under `docs/features/ai/`. It is deliberately not in this area's product list. When/if feature docs land (e.g. a functional specification for AI Brand Insights), re-add the product to the Product table and expand this area's products + source paths to include `Yoast/ai-insights-api` (Laravel — `app/**`, `routes/**`) and `Yoast/ai-insights-frontend` (Vite/React — `src/**`), plus a split-product workflow rule.
 
 ### `alternate-formats`
 - **Products**: wordpress-seo

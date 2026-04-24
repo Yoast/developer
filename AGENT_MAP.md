@@ -276,7 +276,6 @@ No currently-listed product has more than one source repo. If one is ever added 
 - **Docs paths**: `docs/duplicate-post/**`
 - **Source paths** (duplicate-post): `src/**` (admin, cli, handlers, ui, watchers), `compat/**`, root-level PHP files (`duplicate-post.php`, `admin-functions.php`, `common-functions.php`, `options.php`)
 - **Symbol namespaces**: `duplicate_post_*`
-- **Off-by-default**: do not run docs-sync on this product until explicitly enabled; its release cadence is independent from the SEO plugins.
 
 ---
 

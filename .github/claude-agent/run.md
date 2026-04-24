@@ -52,7 +52,7 @@ Group findings by area. Produce an internal list of PR plans, one per affected a
 **Rules:**
 - Each doc file belongs to exactly one area. No file may appear in two PR plans.
 - Maximum 5 PR plans per run. If the triage produces more, consolidate or escalate (comment on the tracking issue explaining what you dropped).
-- Never touch `docs/development/**` or `docs/duplicate-post/**` (unless `PRODUCT` is `duplicate-post`).
+- Never touch `docs/development/**` — those are contributor/meta docs, not product feature docs, and are out of scope for RC-triggered updates.
 - If a PR plan creates or renames doc files, it must also include `sidebars.js` with an update describing the navigation entry change.
 
 ### Step 1.5 — Coverage-gap detection

@@ -1,3 +1,13 @@
+## 27.5
+
+Release date: 2026-04-28
+
+Introduces Yoast SEO Abilities API, allowing AI tools, dashboards, and automated workflows to automatically read SEO, readability, and inclusive language scores from your most recent posts. Read more in the [release post](https://yoa.st/56j). 
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.5.
+
 ## 27.4
 
 Release date: 2026-04-14

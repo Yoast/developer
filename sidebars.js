@@ -31,6 +31,7 @@ module.exports = {
 					},
 					items: [
 						"features/ai/ai-errors",
+					"features/ai/content-planner",
 					],
 				},
 				{

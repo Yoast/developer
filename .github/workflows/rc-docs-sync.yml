@@ -47,14 +47,19 @@ permissions:
   issues: write         # comment on tracking issue(s)
 
 jobs:
-  sync:
+  # =====================================================================
+  # Job 1: resolve which (product, rc_tag) pairs need processing.
+  # Outputs a JSON queue that job 2 fans out over with a matrix.
+  # =====================================================================
+  resolve:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
+
+    outputs:
+      queue: ${{ steps.queue.outputs.queue_json }}
+      count: ${{ steps.queue.outputs.count }}
 
     env:
-      # Map product slug → tracking issue repo variable name. Variable names must
-      # be alphanumeric + underscores, so the slug dashes are normalized to underscores.
-      # TRACKING_ISSUE_WORDPRESS_SEO (repo var) → issue number in Yoast/developer.
       TRACKING_ISSUE_WORDPRESS_SEO: ${{ vars.TRACKING_ISSUE_WORDPRESS_SEO }}
 
     steps:
@@ -62,11 +67,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          path: developer
-
-      # ---- 1. Resolve work queue using issue comments as state -----------
-      # For each opted-in product, find the most recent "rc-docs-sync" marker
-      # comment on its tracking issue. Process RC tags newer than that marker.
 
       - name: Resolve work queue
         id: queue
@@ -79,7 +79,6 @@ jobs:
           set -euo pipefail
           python3 - <<'PY' > queue.json
           import json, os, re, subprocess, sys, urllib.request
-          from urllib.error import HTTPError
 
           # --- opted-in products for this phase of rollout ---
           PRODUCTS = {
@@ -101,22 +100,15 @@ jobs:
               if not m:
                   return (0, 0, 0, 0)
               major, minor, patch, rc = m.groups()
-              # Stable (no RC suffix) should sort AFTER its RCs: use rc=99999 to mark stable.
               return (int(major), int(minor), int(patch or 0), int(rc) if rc else 99999)
 
           def gh_json(args):
               cp = subprocess.run(["gh"] + args, check=True, capture_output=True, text=True)
               return json.loads(cp.stdout)
 
-          def fetch_comments(issue_number):
-              # gh issue view --json comments returns {"comments":[{"body":"..","createdAt":"..."},...]}
-              data = gh_json(["issue", "view", str(issue_number), "--json", "comments"])
-              return data.get("comments", [])
-
           def fetch_latest_marker(issue_number, product_slug):
-              comments = fetch_comments(issue_number)
-              # Scan newest first (gh returns in ascending order by default; reverse).
-              for c in reversed(comments):
+              data = gh_json(["issue", "view", str(issue_number), "--json", "comments"])
+              for c in reversed(data.get("comments", [])):
                   for m in MARKER_RE.finditer(c.get("body", "")):
                       if m.group("product") == product_slug:
                           return m.group("rc_tag")
@@ -126,19 +118,16 @@ jobs:
               url = f"https://api.github.com/repos/{repo}/tags?per_page=100"
               req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"})
               with urllib.request.urlopen(req) as r:
-                  tags = json.load(r)
-              return [t["name"] for t in tags]
+                  return [t["name"] for t in json.load(r)]
 
           input_product = os.environ.get("INPUT_PRODUCT") or ""
           input_rc_tag = os.environ.get("INPUT_RC_TAG") or ""
-          queue = []
-          seed_actions = []
+          queue, seed_actions = [], []
 
           products_to_sweep = [input_product] if input_product else list(PRODUCTS.keys())
           for slug in products_to_sweep:
               if slug not in PRODUCTS:
-                  print(f"skipping unknown product {slug}", file=sys.stderr)
-                  continue
+                  print(f"skipping unknown product {slug}", file=sys.stderr); continue
               product = PRODUCTS[slug]
               tracking_issue = os.environ.get(product["tracking_issue_var"])
               if not tracking_issue:
@@ -152,22 +141,17 @@ jobs:
 
               if input_rc_tag and input_product == slug:
                   if input_rc_tag not in rc_tags:
-                      print(f"{input_rc_tag} not found as RC in {main_repo}", file=sys.stderr)
-                      sys.exit(2)
+                      print(f"{input_rc_tag} not found as RC in {main_repo}", file=sys.stderr); sys.exit(2)
                   rcs_to_process = [input_rc_tag]
               else:
                   last = fetch_latest_marker(tracking_issue, slug)
                   if last is None:
-                      # First-run seeding: mark the current latest RC as "already processed"
-                      # by posting a seed comment, and process nothing historically.
                       rc_tags_sorted = sorted(rc_tags, key=sort_key)
                       seed_rc = rc_tags_sorted[-1] if rc_tags_sorted else None
                       if seed_rc:
                           seed_actions.append({
-                              "issue": tracking_issue,
-                              "product": slug,
-                              "rc_tag": seed_rc,
-                              "display_name": product["display_name"],
+                              "issue": tracking_issue, "product": slug,
+                              "rc_tag": seed_rc, "display_name": product["display_name"],
                           })
                       continue
                   last_key = sort_key(last)
@@ -176,8 +160,7 @@ jobs:
               for rc_tag in rcs_to_process:
                   prev_candidates = [t for t in stable_tags if sort_key(t) <= sort_key(rc_tag)]
                   if not prev_candidates:
-                      print(f"no previous stable for {rc_tag}; skipping", file=sys.stderr)
-                      continue
+                      print(f"no previous stable for {rc_tag}; skipping", file=sys.stderr); continue
                   prev = sorted(prev_candidates, key=sort_key)[-1]
                   queue.append({
                       "product": slug,
@@ -191,10 +174,10 @@ jobs:
           print(json.dumps({"queue": queue, "seeds": seed_actions}))
           PY
           cat queue.json
+          # Emit queue as compact JSON for matrix consumption.
+          echo "queue_json=$(jq -c '.queue' queue.json)" >> "$GITHUB_OUTPUT"
           echo "count=$(jq '.queue | length' queue.json)" >> "$GITHUB_OUTPUT"
           echo "seed_count=$(jq '.seeds | length' queue.json)" >> "$GITHUB_OUTPUT"
-
-      # ---- 2. Post seed comments for first-run products ------------------
 
       - name: Seed first-run tracking issues
         if: steps.queue.outputs.seed_count != '0'
@@ -213,102 +196,161 @@ jobs:
           **First-run seed for ${display}** — RC tag \`${rc_tag}\` recorded as the baseline. No historical RCs will be processed automatically. To backfill a specific RC, use \`workflow_dispatch\` with \`product=${product}\` and the desired \`rc_tag\`."
           done
 
-      # ---- 3. Short-circuit if queue is empty ----------------------------
-
-      - name: Short-circuit if queue is empty
+      - name: Note when queue is empty
         if: steps.queue.outputs.count == '0'
+        run: echo "No new RC tags to process this run."
+
+  # =====================================================================
+  # Job 2: per-RC processing. Fans out as a matrix over the resolved queue.
+  # Each matrix entry: clone source repo(s), build bundle, invoke Claude agent.
+  # max-parallel: 1 to avoid PR-creation races on the same area branches.
+  # =====================================================================
+  process:
+    needs: resolve
+    if: needs.resolve.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        item: ${{ fromJSON(needs.resolve.outputs.queue) }}
+
+    steps:
+      - name: Check out Yoast/developer
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Clone source repo(s) at RC and previous release
         run: |
-          echo "No new RC tags to process."
-          exit 0
+          set -euo pipefail
+          mkdir -p sources
+          for repo in $(echo '${{ toJSON(matrix.item.repos) }}' | jq -r '.[]'); do
+            name="${repo##*/}"
+            git clone --depth 50 --no-single-branch "https://github.com/${repo}.git" "sources/${name}"
+            git -C "sources/${name}" fetch --depth 200 origin \
+              "refs/tags/${{ matrix.item.rc_tag }}:refs/tags/${{ matrix.item.rc_tag }}" \
+              "refs/tags/${{ matrix.item.prev_release }}:refs/tags/${{ matrix.item.prev_release }}" || true
+          done
 
-      # ---- 4. Process the queue serially --------------------------------
-      # No node setup / yarn install here: the Cloudflare Pages preview deploy
-      # on the resulting PR is the per-PR validation. Any broken internal links
-      # or frontmatter errors will fail the preview and surface on the PR.
+      - name: Build diff bundle, symbol index, and changelog
+        id: bundle
+        run: |
+          set -euo pipefail
+          bundle_dir="bundle/${{ matrix.item.product }}/${{ matrix.item.rc_tag }}"
+          mkdir -p "$bundle_dir"
+          for repo in $(echo '${{ toJSON(matrix.item.repos) }}' | jq -r '.[]'); do
+            name="${repo##*/}"
+            rb="${bundle_dir}/${name}"
+            mkdir -p "$rb"
+            git -C "sources/${name}" diff "${{ matrix.item.prev_release }}..${{ matrix.item.rc_tag }}" > "${rb}/rc.diff.full"
+            git -C "sources/${name}" diff "${{ matrix.item.prev_release }}..${{ matrix.item.rc_tag }}" \
+              -- \
+              ':(exclude)tests' \
+              ':(exclude)**/__tests__' \
+              ':(exclude)**/__snapshots__' \
+              ':(exclude)**/*.lock' \
+              ':(exclude)languages' \
+              ':(exclude).github' \
+              ':(exclude)composer.lock' \
+              ':(exclude)yarn.lock' \
+              ':(exclude)package-lock.json' \
+              > "${rb}/rc.diff.filtered"
+            git -C "sources/${name}" diff --stat "${{ matrix.item.prev_release }}..${{ matrix.item.rc_tag }}" > "${rb}/rc.diff.stat"
+            for f in readme.txt CHANGELOG.md changelog.md changelog.txt; do
+              if git -C "sources/${name}" show "${{ matrix.item.rc_tag }}:${f}" > "${rb}/changelog.source" 2>/dev/null; then
+                break
+              fi
+            done
+          done
 
-      - name: Process RC queue
-        if: steps.queue.outputs.count != '0'
+          # Symbol index from the current docs/ tree.
+          (
+            grep -rohE "'wpseo_[a-zA-Z0-9_]+'" docs/ || true
+            grep -rohE "'Yoast\\\\WP\\\\SEO\\\\[a-zA-Z0-9_\\\\]+'" docs/ || true
+            grep -rohE "'duplicate_post_[a-zA-Z0-9_]+'" docs/ || true
+          ) | sort -u > "${bundle_dir}/symbol-index.txt"
+
+          # Decide whether to invoke the agent at all.
+          any_content=false
+          for f in ${bundle_dir}/*/rc.diff.filtered; do
+            [ -s "$f" ] && any_content=true
+          done
+          echo "bundle_dir=${bundle_dir}" >> "$GITHUB_OUTPUT"
+          echo "any_content=${any_content}" >> "$GITHUB_OUTPUT"
+
+      - name: Post no-op summary if filtered diff is empty
+        if: steps.bundle.outputs.any_content == 'false'
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          mkdir -p sources bundle
+          rc_tag='${{ matrix.item.rc_tag }}'
+          base_version="${rc_tag%-RC*}"
+          gh issue comment '${{ matrix.item.tracking_issue }}' --body "<!-- rc-docs-sync:v1 product=${{ matrix.item.product }} rc_tag=${rc_tag} -->
 
-          jq -c '.queue[]' queue.json | while read -r item; do
-            product=$(echo "$item" | jq -r .product)
-            display_name=$(echo "$item" | jq -r .display_name)
-            rc_tag=$(echo "$item" | jq -r .rc_tag)
-            prev=$(echo "$item" | jq -r .prev_release)
-            tracking_issue=$(echo "$item" | jq -r .tracking_issue)
-            echo "===== Processing $product @ $rc_tag (prev: $prev) ====="
-
-            # Clone each source repo for this product (anonymous)
-            for repo in $(echo "$item" | jq -r '.repos[]'); do
-              name="${repo##*/}"
-              if [ ! -d "sources/${name}" ]; then
-                git clone --depth 50 --no-single-branch "https://github.com/${repo}.git" "sources/${name}"
-              fi
-              git -C "sources/${name}" fetch --depth 200 origin "refs/tags/${rc_tag}:refs/tags/${rc_tag}" "refs/tags/${prev}:refs/tags/${prev}" || true
-            done
-
-            # Build the bundle
-            bundle_dir="bundle/${product}/${rc_tag}"
-            mkdir -p "$bundle_dir"
-            for repo in $(echo "$item" | jq -r '.repos[]'); do
-              name="${repo##*/}"
-              rb="${bundle_dir}/${name}"
-              mkdir -p "$rb"
-              git -C "sources/${name}" diff "${prev}..${rc_tag}" > "${rb}/rc.diff.full"
-              git -C "sources/${name}" diff "${prev}..${rc_tag}" \
-                -- \
-                ':(exclude)tests' \
-                ':(exclude)**/__tests__' \
-                ':(exclude)**/__snapshots__' \
-                ':(exclude)**/*.lock' \
-                ':(exclude)languages' \
-                ':(exclude).github' \
-                ':(exclude)composer.lock' \
-                ':(exclude)yarn.lock' \
-                ':(exclude)package-lock.json' \
-                > "${rb}/rc.diff.filtered"
-              git -C "sources/${name}" diff --stat "${prev}..${rc_tag}" > "${rb}/rc.diff.stat"
-              for f in readme.txt CHANGELOG.md changelog.md changelog.txt; do
-                if git -C "sources/${name}" show "${rc_tag}:${f}" > "${rb}/changelog.source" 2>/dev/null; then break; fi
-              done
-            done
-
-            # Build symbol index from current docs/
-            (
-              grep -rohE "'wpseo_[a-zA-Z0-9_]+'" developer/docs/ || true
-              grep -rohE "'Yoast\\\\WP\\\\SEO\\\\[a-zA-Z0-9_\\\\]+'" developer/docs/ || true
-              grep -rohE "'duplicate_post_[a-zA-Z0-9_]+'" developer/docs/ || true
-            ) | sort -u > "${bundle_dir}/symbol-index.txt"
-
-            # Short-circuit if filtered diff is empty
-            any_content=false
-            for f in ${bundle_dir}/*/rc.diff.filtered; do
-              [ -s "$f" ] && any_content=true
-            done
-            if [ "$any_content" = "false" ]; then
-              gh issue comment "$tracking_issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
-
-          **${display_name} ${rc_tag%-RC*}** (RC \`${rc_tag}\`) — no doc changes needed.
+          **${{ matrix.item.display_name }} ${base_version}** (RC \`${rc_tag}\`) — no doc changes needed.
           Filtered diff is empty (only tests/translations/lockfiles changed).
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-              continue
-            fi
 
-            # Invoke the Claude agent.
-            # (Placeholder — see .github/claude-agent/run.md for the prompt. The action
-            # reference/version must be pinned when wiring for real, e.g.
-            # anthropics/claude-code-action@<sha>.)
-            echo "TODO: invoke agent with BUNDLE_DIR=$(realpath $bundle_dir) PRODUCT=$product RC_TAG=$rc_tag DISPLAY_NAME=$display_name TRACKING_ISSUE=$tracking_issue"
+      - name: Invoke Claude agent
+        if: steps.bundle.outputs.any_content == 'true'
+        uses: anthropics/claude-code-action@v1
+        env:
+          PRODUCT: ${{ matrix.item.product }}
+          RC_TAG: ${{ matrix.item.rc_tag }}
+          DISPLAY_NAME: ${{ matrix.item.display_name }}
+          BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
+          TRACKING_ISSUE: ${{ matrix.item.tracking_issue }}
+          PREV_RELEASE: ${{ matrix.item.prev_release }}
+          GH_REPO: ${{ github.repository }}
+          WORKFLOW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # The agent reads its full instructions from the prompt file in the
+          # repo. Keeping the prompt in-tree (not inlined here) means the
+          # workflow stays small and the prompt is reviewable as a separate
+          # artifact.
+          prompt: |
+            Read `.github/claude-agent/run.md` in this repository and execute the orchestration described there for the current RC.
 
-            # Per agent contract, the agent itself is responsible for:
-            #   1. Creating branches under rc-sync/<product>/<rc_tag>/<area>
-            #   2. Running `yarn build` / `yarn lint` before each PR
-            #   3. Opening PRs via `gh pr create` with the required title format and labels
-            #   4. Posting the run-summary comment with the marker to the tracking issue
-          done
+            Environment variables already set for you:
+            - `PRODUCT` (e.g. `wordpress-seo`)
+            - `RC_TAG` (e.g. `27.5-RC1`)
+            - `DISPLAY_NAME` (e.g. `Yoast SEO`)
+            - `BUNDLE_DIR` — absolute path to this run's bundle directory; contains `rc.diff.filtered`, `rc.diff.full`, `rc.diff.stat`, `changelog.source`, `symbol-index.txt`, organized as `$BUNDLE_DIR/<source-repo>/...`.
+            - `TRACKING_ISSUE` — numeric issue id where the run-summary comment must be posted.
+            - `PREV_RELEASE` — the source-repo tag the diff was computed against.
+            - `WORKFLOW_RUN_URL` — link to this workflow run; include in the PR body for reviewer context.
+
+            When the prompt instructs you to post comments or create PRs, use `gh` (already authenticated). When it instructs you to read the source diff, look in `$BUNDLE_DIR/<repo-name>/`.
+
+            Begin by reading `.github/claude-agent/run.md` end-to-end, then execute.
+          settings: |
+            {
+              "permissions": {
+                "defaultMode": "auto",
+                "allow": [
+                  "Read(//**)",
+                  "Grep(//**)",
+                  "Glob(//**)",
+                  "Edit(//**)",
+                  "Write(//**)",
+                  "Bash(git *)",
+                  "Bash(gh *)",
+                  "Bash(jq *)",
+                  "Bash(cat *)",
+                  "Bash(ls *)",
+                  "Bash(diff *)",
+                  "Bash(grep *)",
+                  "Bash(echo *)",
+                  "Bash(date *)"
+                ]
+              }
+            }
+          claude_args: |
+            --max-turns 50
+            --model claude-sonnet-4-6

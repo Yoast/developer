@@ -1,3 +1,23 @@
+= 27.5 =
+
+Release date: 2026-04-28
+
+Introduces Yoast SEO Abilities API, allowing AI tools, dashboards, and automated workflows to automatically read SEO, readability, and inclusive language scores from your most recent posts. Read more in the [release post](https://yoa.st/56j). 
+
+#### Enhancements
+
+* Adds a Yoast ability for retrieving scores for Yoast analyses for recent posts, using the Abilities API.
+* Adds Qatar to the list of available countries for the Semrush related keyphrase suggestions.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Generator's "Generate with AI" feature failed after a site's domain was changed, because stale callback URLs remained registered with the Yoast API from the original domain.
+
+#### Other
+
+* Introduces a performance increase when calculating if the SEO optimization is completed for internal links. Props to [@adconecto](https://github.com/adconecto).
+* Removes the schemamap line from the `robots.txt` file.
+
 = 27.4 =
 
 Release date: 2026-04-14

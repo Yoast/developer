@@ -12,7 +12,7 @@ The MyYoast OAuth client is only loaded when `YOAST_SEO_MYYOAST_CONNECTION` is d
 The software statement and initial access token are normally signed by a MyYoast administrator. Override these filters only when pointing the client at a non-production issuer.
 :::
 
-## `Yoast\WP\SEO\myyoast_issuer_url`
+## `wpseo_myyoast_issuer_url`
 
 The base URL of the MyYoast issuer. The Yoast SEO plugin ships with the production URL as the default; override it to point at a development or staging issuer. Trailing slashes in the returned value are stripped automatically.
 
@@ -20,14 +20,14 @@ The base URL of the MyYoast issuer. The Yoast SEO plugin ships with the producti
 <?php
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_issuer_url',
+    'wpseo_myyoast_issuer_url',
     static function () {
         return 'https://my.yoast.test';
     }
 );
 ```
 
-## `Yoast\WP\SEO\myyoast_software_statement`
+## `wpseo_myyoast_software_statement`
 
 A signed [JWT software statement](https://www.rfc-editor.org/rfc/rfc7591#section-2.3) that identifies the Yoast SEO plugin during Dynamic Client Registration. The plugin ships a software statement that is valid for the production issuer; for non-production issuers, use this filter to substitute a software statement signed by that issuer's administrators.
 
@@ -35,14 +35,14 @@ A signed [JWT software statement](https://www.rfc-editor.org/rfc/rfc7591#section
 <?php
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_software_statement',
+    'wpseo_myyoast_software_statement',
     static function () {
         return 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...';
     }
 );
 ```
 
-## `Yoast\WP\SEO\myyoast_initial_access_token`
+## `wpseo_myyoast_initial_access_token`
 
 The [initial access token](https://www.rfc-editor.org/rfc/rfc7591#section-3) presented as a bearer credential during Dynamic Client Registration. Like the software statement, the plugin ships one that is valid for the production issuer; override it when registering against another issuer.
 
@@ -50,7 +50,7 @@ The [initial access token](https://www.rfc-editor.org/rfc/rfc7591#section-3) pre
 <?php
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_initial_access_token',
+    'wpseo_myyoast_initial_access_token',
     static function () {
         return 'iat-...';
     }
@@ -65,21 +65,21 @@ When pointing the OAuth client at a non-production issuer, all three filters are
 <?php
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_issuer_url',
+    'wpseo_myyoast_issuer_url',
     static function () {
         return 'https://my.yoast.test';
     }
 );
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_software_statement',
+    'wpseo_myyoast_software_statement',
     static function () {
         return 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...';
     }
 );
 
 add_filter(
-    'Yoast\\WP\\SEO\\myyoast_initial_access_token',
+    'wpseo_myyoast_initial_access_token',
     static function () {
         return 'iat-...';
     }

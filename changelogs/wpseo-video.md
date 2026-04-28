@@ -1,3 +1,14 @@
+## 15.2
+
+Release date: 2026-04-28
+
+#### Other
+
+* Modernizes how translations of the plugin work by removing the unneeded `load_plugin_textdomain()` calls.
+* Sets the minimum supported WordPress version to 6.8.
+* Sets the _WordPress tested up to_ version to 7.0.
+* Updates the description copy of the XML Video Sitemap.
+
 ## 15.1
 
 Release date: 2025-11-18

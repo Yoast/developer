@@ -45,6 +45,7 @@ permissions:
   contents: write       # push per-RC doc branches (NOT main — main is protected)
   pull-requests: write  # open and label PRs
   issues: write         # comment on tracking issue(s)
+  id-token: write       # required by anthropics/claude-code-action for OIDC auth
 
 jobs:
   # =====================================================================

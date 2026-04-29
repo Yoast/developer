@@ -136,8 +136,8 @@ The body after the marker should contain:
 - Symbol index size, count of new symbols observed in diff.
 - One bullet per PR plan: area, title, PR link.
 - If zero PRs: a one-paragraph explanation of what the RC contained and why no doc changes are needed (cite the changelog entry and top-level diff areas).
-- A **"Coverage gaps observed"** section iff you flagged any in Step 1.5. Omit the heading entirely when there are none.
-- An **"Internal surface skipped"** section iff you skipped any items in Step 1.6. Omit the heading entirely when there are none.
+- A **"Coverage gaps observed"** section if you flagged any in Step 1.5. Omit the heading entirely when there are none.
+- An **"Internal surface skipped"** section if you skipped any items in Step 1.6. Omit the heading entirely when there are none.
 
 **If you fail to post the comment with the marker, the next scheduled run will re-process this RC.** Posting the marker is the acknowledgement of completion.
 

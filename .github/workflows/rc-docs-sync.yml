@@ -353,5 +353,33 @@ jobs:
               }
             }
           claude_args: |
-            --max-turns 50
+            --max-turns 100
             --model claude-sonnet-4-6
+
+      - name: Ensure marker comment exists (safety net)
+        if: always() && steps.bundle.outputs.any_content == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          issue='${{ matrix.item.tracking_issue }}'
+          product='${{ matrix.item.product }}'
+          rc_tag='${{ matrix.item.rc_tag }}'
+          display='${{ matrix.item.display_name }}'
+
+          # Skip if the agent already posted its own marker for this (product, rc_tag).
+          if gh issue view "$issue" --json comments --jq '.comments[].body' \
+              | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${product}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
+            echo "Marker for ${product} ${rc_tag} already on issue #${issue}; nothing to do."
+            exit 0
+          fi
+
+          base_version="${rc_tag%-RC*}"
+          gh issue comment "$issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
+
+          **${display} ${base_version}** (RC \`${rc_tag}\`) — agent step did not post its own summary; this is a safety-net marker so the next scheduled run does not re-process this RC.
+
+          Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Inspect the run logs and any PRs labeled \`rc/${rc_tag}\` to see what the agent produced before failing."

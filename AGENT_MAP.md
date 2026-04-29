@@ -296,6 +296,26 @@ These docs are only touched by the sync agent if the RC diff *explicitly* change
 - `docs/development/**` — contributor guides, tooling, standards. Changes to Yoast's internal development practices, not to the plugin's public surface.
 - `docs/overview.md` when the change is stylistic — only update on genuine information changes.
 
+## Public vs. internal surface
+
+Not every new REST route, hook, or class in a plugin RC is intended to be public API. Documenting an internal admin-UI route in the developer portal effectively turns it into a long-term public commitment, which is worse than missing a real public API (a missed doc is a TODO; a falsely-public internal API is a support burden).
+
+The agent's prompt (`.github/claude-agent/run.md`, Step 1.6) implements this discrimination. Source-repo authors can mark a route or class as internal in either of two ways, in increasing order of authority:
+
+1. **Path/naming heuristics** are picked up automatically. Files under `*-admin-*`, `**/admin/**`, or `**/user-interface/**`, classes named `*_Admin_*` or `*_Internal_*`, and `register_rest_route` calls whose `permission_callback` enforces an admin capability check (`current_user_can('manage_options')` etc.) are treated as internal by default.
+
+2. **`@internal` PHPDoc annotation** is the unambiguous override. Add it to the registering method's or class's docblock:
+   ```php
+   /**
+    * @internal Used by the Yoast SEO admin UI; not part of the public REST API.
+    */
+   ```
+   The agent treats `@internal` as authoritative — don't document, regardless of what the heuristics say.
+
+When the agent skips an item under this rule, it lists the item (and which signal fired) in an **"Internal surface skipped"** section in the run-summary comment on the tracking issue. That gives a maintainer a clear audit trail: nothing is silently dropped; the decision is visible per RC.
+
+If the heuristics misfire and a route is *intentionally public* but matches an internal-looking path or callback, add `@public` to the docblock or move the registering code to a non-`/admin/`, non-`/user-interface/` path. (Adding `@public` is currently advisory — the agent treats absence of `@internal` as the public signal — but the convention may become authoritative if false-negatives become a recurring issue.)
+
 ## Cross-product ripple rules
 
 When a public filter or class moves between products (e.g., promoted from Premium to Free, or vice versa), the agent must:

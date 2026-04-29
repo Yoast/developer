@@ -71,6 +71,25 @@ Emit these in the run summary in Step 4 under a heading **"Coverage gaps observe
 
 The gaps are informational; they do NOT block the run. A maintainer reviewing the tracking issue will decide whether to update `AGENT_MAP.md` in a separate PR.
 
+### Step 1.6 — Public vs. internal surface
+
+Not every newly-added REST route, hook, or class is intended to be a public API. Some are internal admin-UI plumbing that the source plugin reserves the right to change without notice. Documenting an internal route in the developer portal effectively turns it into a public commitment, which is worse than failing to document a real public API (a missed-doc gap is a TODO; a falsely-public-promised internal API is a long-term support burden).
+
+For each candidate item that would otherwise produce a PR plan, apply this discrimination **before** adding it to a plan:
+
+1. **Authoritative override — `@internal` annotation.** If the registering call's surrounding PHPDoc, the registering method's docblock, or the registering class's docblock contains an `@internal` tag, treat the item as internal. Do NOT document. Note in the run summary's "Internal surface skipped" section (see Step 4).
+
+2. **Heuristic — permission callback.** For `register_rest_route(...)`, read the `permission_callback`. If it enforces a logged-in admin capability check (`current_user_can('manage_options')`, `current_user_can('edit_posts')`, `current_user_can('wpseo_manage_options')`, similar) without an unauthenticated branch, treat the route as **likely internal**. Don't document; flag in "Internal surface skipped" with the callback as evidence.
+
+3. **Heuristic — file-path/class-name signals.** Default-to-internal when the registration lives in any of these:
+   - File path contains `/admin/`, `/user-interface/`, `*-admin-*`, `*-internal-*`.
+   - Class name contains `Admin_`, `Internal_`, ends with `_Admin_Route` / `_UI_Route`.
+   - Registration is from a class that extends a known internal base (e.g. `Yoast\WP\SEO\Admin\...`).
+
+4. **When in doubt, don't document.** False positives in the public-API direction are higher cost than false negatives. If the signals are mixed (e.g. neutral path but no `@internal` annotation and a `current_user_can` callback), prefer to skip and flag, rather than confidently document. The maintainer can ask the source-repo team and reverse the decision in a follow-up.
+
+Items skipped under this rule must be listed in the run summary under a heading **"Internal surface skipped"**, with one bullet per item: source path, symbol/route, and which signal fired (`@internal`, permission-callback heuristic, path/class heuristic, or "mixed signals"). Omit the heading entirely if no items were skipped.
+
 ### Step 2 — Authoring (only if PR plans exist)
 
 For each PR plan, in order:
@@ -117,7 +136,8 @@ The body after the marker should contain:
 - Symbol index size, count of new symbols observed in diff.
 - One bullet per PR plan: area, title, PR link.
 - If zero PRs: a one-paragraph explanation of what the RC contained and why no doc changes are needed (cite the changelog entry and top-level diff areas).
-- A **"Coverage gaps observed"** section iff you flagged any in Step 1.5. Omit the heading entirely when there are none.
+- A **"Coverage gaps observed"** section if you flagged any in Step 1.5. Omit the heading entirely when there are none.
+- An **"Internal surface skipped"** section if you skipped any items in Step 1.6. Omit the heading entirely when there are none.
 
 **If you fail to post the comment with the marker, the next scheduled run will re-process this RC.** Posting the marker is the acknowledgement of completion.
 

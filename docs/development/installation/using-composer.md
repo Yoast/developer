@@ -4,42 +4,54 @@ title: "Yoast SEO: Install using Composer"
 sidebar_label: Using Composer
 ---
 
-## What is Composer?
-[Composer](https://getcomposer.org/) is a dependency manager tool for PHP projects (similar to NPM) and can be run from your terminal.
+[Composer](https://getcomposer.org/) is the PHP dependency manager. If you run a Composer-managed WordPress site, you can pull Yoast SEO and Yoast SEO Premium in as Composer dependencies.
 
-## Installing Composer
+Working on Yoast SEO itself rather than consuming it? See the [contributor setup](/development/environment/setup) instead.
 
-To get Composer installed on your system, make sure you follow the [official installation steps](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).
+## Requirement: your project must register a Composer autoloader
 
-## Installing Yoast SEO via Composer
-To install Yoast SEO via Composer, run the following command in your `plugins` directory:
+The Composer-distributed Yoast SEO package does not ship its own `vendor/autoload.php`. Yoast SEO's classes are loaded through your project's root autoloader, which must be registered before WordPress loads plugins. In practice this means a line equivalent to:
 
-```shell script
+```php
+require_once __DIR__ . '/vendor/autoload.php';
+```
+
+before `require ABSPATH . 'wp-settings.php';` runs. Most Composer-managed WordPress stacks already do this; if yours doesn't, add it (in `wp-config.php`, in your scaffold's pre-WP bootstrap file, or via a small must-use plugin).
+
+If no autoloader is registered, Yoast SEO will detect this on the first admin request, display a *"plugin installation is incomplete"* notice and self-deactivate.
+
+## Yoast SEO (free)
+
+From the **root of your Composer-managed WordPress project**:
+
+```shell
 composer require yoast/wordpress-seo
-``` 
+```
 
-The command above downloads the latest version of the Yoast SEO plugin and installs all necessary dependencies.
+The package is routed to `wp-content/plugins/wordpress-seo/`.
 
-## Installing a development version of Yoast SEO
-If you are looking to help develop Yoast SEO (i.e. patch a bug, for example), we recommend you use `git clone git@github.com:Yoast/wordpress-seo.git` as we don't support downloading development versions of Yoast SEO through Composer.
+## Yoast SEO Premium
 
-## Post-installation
-Once Composer has completed its installation process, or git is done cloning the repository, please make sure you run `yarn`, followed by `grunt:build` in the `wordpress-seo` directory to ensure all necessary files are properly built.
+Premium is distributed via Yoast's private Composer repository at `https://my.yoast.com/packages/`. You will need a Composer install token from your MyYoast account.
 
-## Updating dependencies
+```shell
+composer config -g http-basic.my.yoast.com token <your-token>
+composer config repositories.my-yoast composer https://my.yoast.com/packages/
+composer require yoast/wordpress-seo-premium
+```
 
-Composer tracks the state of the project in the `composer.lock` file. Running `composer install` will always reproduce that state, ensuring consistency across developers' setups.
-When dependencies need to be updated the following command will bring said dependencies to the latest versions, as far as is allowed by the version restrictions set in `composer.json`.
+This installs both Premium and the free plugin (which Premium depends on) into `wp-content/plugins/`. Premium relies on the same project-level autoloader as the free plugin — see the [requirement](#requirement-your-project-must-register-a-composer-autoloader) above.
 
-```shell script
+## Updating
+
+```shell
 composer update
 ```
 
-After that, the updated `composer.lock` file needs to be committed into version control.
+Composer tracks the resolved state in `composer.lock`. Commit `composer.lock` so every environment installs the same versions.
 
 :::caution
 
-Please note that updating dependencies is somewhat of a delicate process and doing so might result in breakage. 
-Always properly test before committing an updated version of `composer.json` and `composer.lock`. 
+Updating Composer dependencies is a delicate process and may introduce regressions. Always test before committing an updated `composer.json` / `composer.lock`.
 
 :::

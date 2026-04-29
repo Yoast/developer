@@ -107,13 +107,20 @@ jobs:
               cp = subprocess.run(["gh"] + args, check=True, capture_output=True, text=True)
               return json.loads(cp.stdout)
 
-          def fetch_latest_marker(issue_number, product_slug):
+          def fetch_processed_markers(issue_number, product_slug):
+              """Return list of RC tags processed for this product, in the document order
+              they appear in the tracking issue's comments (oldest first)."""
               data = gh_json(["issue", "view", str(issue_number), "--json", "comments"])
-              for c in reversed(data.get("comments", [])):
+              out = []
+              for c in data.get("comments", []):
                   for m in MARKER_RE.finditer(c.get("body", "")):
                       if m.group("product") == product_slug:
-                          return m.group("rc_tag")
-              return None
+                          out.append(m.group("rc_tag"))
+              return out
+
+          def base_version(tag):
+              """Strip the -RC<n> suffix from a tag. 27.6-RC2 -> 27.6; 27.1.1-RC3 -> 27.1.1."""
+              return re.sub(r"-RC\d+$", "", tag)
 
           def fetch_tags(repo):
               url = f"https://api.github.com/repos/{repo}/tags?per_page=100"
@@ -140,13 +147,14 @@ jobs:
               rc_tags = [t for t in all_tags if RC_TAG_RE.match(t)]
               stable_tags = [t for t in all_tags if STABLE_RE.match(t)]
 
+              processed_markers = fetch_processed_markers(tracking_issue, slug)
+
               if input_rc_tag and input_product == slug:
                   if input_rc_tag not in rc_tags:
                       print(f"{input_rc_tag} not found as RC in {main_repo}", file=sys.stderr); sys.exit(2)
                   rcs_to_process = [input_rc_tag]
               else:
-                  last = fetch_latest_marker(tracking_issue, slug)
-                  if last is None:
+                  if not processed_markers:
                       rc_tags_sorted = sorted(rc_tags, key=sort_key)
                       seed_rc = rc_tags_sorted[-1] if rc_tags_sorted else None
                       if seed_rc:
@@ -155,20 +163,40 @@ jobs:
                               "rc_tag": seed_rc, "display_name": product["display_name"],
                           })
                       continue
-                  last_key = sort_key(last)
+                  last_key = sort_key(processed_markers[-1])
                   rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
 
               for rc_tag in rcs_to_process:
-                  prev_candidates = [t for t in stable_tags if sort_key(t) <= sort_key(rc_tag)]
-                  if not prev_candidates:
-                      print(f"no previous stable for {rc_tag}; skipping", file=sys.stderr); continue
-                  prev = sorted(prev_candidates, key=sort_key)[-1]
+                  # Prefer the most recent already-processed RC of the same base version as
+                  # the diff base — that way iterative RCs (RC2, RC3, ...) only see the
+                  # incremental delta from the last RC, not the whole release cycle.
+                  # Falls back to the latest stable release before this RC when no prior
+                  # same-base RC has been processed (first RC of a new base, or backfill
+                  # against an RC older than anything previously processed).
+                  base = base_version(rc_tag)
+                  same_base_processed = [
+                      t for t in processed_markers
+                      if base_version(t) == base
+                      and t != rc_tag
+                      and sort_key(t) < sort_key(rc_tag)
+                  ]
+                  if same_base_processed:
+                      prev = sorted(same_base_processed, key=sort_key)[-1]
+                      prev_kind = "rc"
+                  else:
+                      prev_candidates = [t for t in stable_tags if sort_key(t) <= sort_key(rc_tag)]
+                      if not prev_candidates:
+                          print(f"no previous stable for {rc_tag}; skipping", file=sys.stderr); continue
+                      prev = sorted(prev_candidates, key=sort_key)[-1]
+                      prev_kind = "stable"
+
                   queue.append({
                       "product": slug,
                       "display_name": product["display_name"],
                       "repos": product["repos"],
                       "rc_tag": rc_tag,
                       "prev_release": prev,
+                      "prev_kind": prev_kind,
                       "tracking_issue": tracking_issue,
                   })
 
@@ -307,6 +335,7 @@ jobs:
           BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
           TRACKING_ISSUE: ${{ matrix.item.tracking_issue }}
           PREV_RELEASE: ${{ matrix.item.prev_release }}
+          PREV_KIND: ${{ matrix.item.prev_kind }}  # 'stable' or 'rc' — see Resolve work queue
           GH_REPO: ${{ github.repository }}
           WORKFLOW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         with:
@@ -324,7 +353,7 @@ jobs:
             - `DISPLAY_NAME` (e.g. `Yoast SEO`)
             - `BUNDLE_DIR` — absolute path to this run's bundle directory; contains `rc.diff.filtered`, `rc.diff.full`, `rc.diff.stat`, `changelog.source`, `symbol-index.txt`, organized as `$BUNDLE_DIR/<source-repo>/...`.
             - `TRACKING_ISSUE` — numeric issue id where the run-summary comment must be posted.
-            - `PREV_RELEASE` — the source-repo tag the diff was computed against.
+            - `PREV_RELEASE` — the source-repo tag the diff was computed against. May be a stable release (e.g. `27.5`) or a prior RC of the same base version (e.g. `27.6-RC1`); `PREV_KIND` is `stable` or `rc` accordingly. When it's `rc`, expect the diff to be small (incremental delta vs. the previous RC of this cycle); when it's `stable`, the diff is the full release cycle.
             - `WORKFLOW_RUN_URL` — link to this workflow run; include in the PR body for reviewer context.
 
             When the prompt instructs you to post comments or create PRs, use `gh` (already authenticated). When it instructs you to read the source diff, look in `$BUNDLE_DIR/<repo-name>/`.

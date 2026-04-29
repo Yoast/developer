@@ -20,7 +20,7 @@ before `require ABSPATH . 'wp-settings.php';` runs. Most Composer-managed WordPr
 
 If no autoloader is registered, Yoast SEO will detect this on the first admin request, display a *"plugin installation is incomplete"* notice and self-deactivate.
 
-## Yoast SEO (free)
+## Yoast SEO
 
 From the **root of your Composer-managed WordPress project**:
 
@@ -40,7 +40,7 @@ composer config repositories.my-yoast composer https://my.yoast.com/packages/
 composer require yoast/wordpress-seo-premium
 ```
 
-This installs both Premium and the free plugin (which Premium depends on) into `wp-content/plugins/`. Premium relies on the same project-level autoloader as the free plugin — see the [requirement](#requirement-your-project-must-register-a-composer-autoloader) above.
+This installs Yoast SEO Premium and Yoast SEO (which Premium depends on) into `wp-content/plugins/`. Premium relies on the same project-level autoloader as Yoast SEO — see the [requirement](#requirement-your-project-must-register-a-composer-autoloader) above.
 
 ## Updating
 

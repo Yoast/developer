@@ -1,3 +1,15 @@
+## 07/05/2026 07:51 (UTC)
+
+Release date: 2026-05-07
+
+#### Enhancements
+
+* Limits the amount of values shown for schema attributes inside the app to provide understanding without overloading on information.
+
+#### Bugfixes
+
+* Fixes issue when we were displaying a collection that was not published to any channel.
+
 ## 23/04/2026 08:19 (UTC)
 
 Release date: 2026-04-23

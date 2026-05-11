@@ -336,8 +336,155 @@ jobs:
           Filtered diff is empty (only tests/translations/lockfiles changed).
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-      - name: Invoke Claude agent
+      # ---------------------------------------------------------------------
+      # Pre-agent fast-path: when the filtered diff is non-empty but contains
+      # no new public surface (no new register_rest_route / WP_CLI::add_command
+      # / apply_filters / do_action calls referencing undocumented symbols),
+      # post a "no doc changes" marker and skip the Claude agent invocation
+      # entirely. Catches the common case where a small RC contains only
+      # internal refactors / JS-only changes / version bumps.
+      #
+      # Risk: misses behavior-only changes that don't introduce new symbols.
+      # The agent prompt flags these as uncertain anyway; if this becomes a
+      # missed-doc source, tighten the heuristic or invoke the agent on a
+      # cheaper model as a spot-check.
+      # ---------------------------------------------------------------------
+      - name: Detect new public surface in filtered diff
+        id: detect
         if: steps.bundle.outputs.any_content == 'true'
+        env:
+          PRODUCT: ${{ matrix.item.product }}
+          RC_TAG: ${{ matrix.item.rc_tag }}
+          DISPLAY_NAME: ${{ matrix.item.display_name }}
+          BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
+          PREV_RELEASE: ${{ matrix.item.prev_release }}
+          PREV_KIND: ${{ matrix.item.prev_kind }}
+          WORKFLOW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import glob, os, re, sys
+
+          bundle_dir = os.environ['BUNDLE_DIR']
+          rc_tag = os.environ['RC_TAG']
+          display_name = os.environ['DISPLAY_NAME']
+          prev_release = os.environ['PREV_RELEASE']
+          prev_kind = os.environ['PREV_KIND']
+          product = os.environ['PRODUCT']
+          run_url = os.environ['WORKFLOW_RUN_URL']
+
+          # symbol-index.txt entries are quoted (e.g. 'wpseo_foo'); strip quotes.
+          symbol_index = set()
+          si_path = os.path.join(bundle_dir, "symbol-index.txt")
+          if os.path.exists(si_path):
+              with open(si_path) as f:
+                  for line in f:
+                      sym = line.strip().strip("'\"")
+                      if sym:
+                          symbol_index.add(sym)
+
+          HOOK_RE  = re.compile(r"(?:apply_filters|do_action)\s*\(\s*['\"]([A-Za-z_][A-Za-z0-9_]*)['\"]")
+          ROUTE_RE = re.compile(r"register_rest_route\s*\(")
+          CLI_RE   = re.compile(r"WP_CLI::add_command\s*\(")
+
+          new_routes, new_cli, new_hook_symbols = [], [], set()
+          diff_files = sorted(glob.glob(os.path.join(bundle_dir, "*", "rc.diff.filtered")))
+          for path in diff_files:
+              with open(path) as f:
+                  for line in f:
+                      if not line.startswith('+') or line.startswith('+++'):
+                          continue
+                      body = line[1:]
+                      if ROUTE_RE.search(body):
+                          new_routes.append(body.strip())
+                      if CLI_RE.search(body):
+                          new_cli.append(body.strip())
+                      for m in HOOK_RE.finditer(body):
+                          sym = m.group(1)
+                          if sym not in symbol_index:
+                              new_hook_symbols.add(sym)
+
+          has_public = bool(new_routes or new_cli or new_hook_symbols)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as gho:
+              gho.write(f"has_public_surface={'true' if has_public else 'false'}\n")
+
+          if has_public:
+              print("Public surface detected — agent will be invoked.")
+              if new_routes:
+                  print(f"  new register_rest_route lines: {len(new_routes)}")
+                  for l in new_routes[:5]: print(f"    {l}")
+              if new_cli:
+                  print(f"  new WP_CLI::add_command lines: {len(new_cli)}")
+                  for l in new_cli[:5]: print(f"    {l}")
+              if new_hook_symbols:
+                  print(f"  new (undocumented) hook symbols: {sorted(new_hook_symbols)}")
+              sys.exit(0)
+
+          # No new public surface — assemble the fast-path comment body.
+          filtered_total = 0
+          stat_entries = []
+          STAT_RE = re.compile(r"^\s*(\S.*?)\s*\|\s*(\d+)")
+          for path in diff_files:
+              with open(path) as f:
+                  filtered_total += sum(1 for _ in f)
+              repo_name = os.path.basename(os.path.dirname(path))
+              stat_path = os.path.join(bundle_dir, repo_name, "rc.diff.stat")
+              if os.path.exists(stat_path):
+                  with open(stat_path) as f:
+                      for line in f:
+                          m = STAT_RE.match(line)
+                          if m:
+                              stat_entries.append((m.group(1), int(m.group(2))))
+          top = sorted(stat_entries, key=lambda p: -p[1])[:8]
+
+          base_version = re.sub(r"-RC\d+$", "", rc_tag)
+          prev_desc = "incremental RC delta" if prev_kind == "rc" else "full release cycle vs. stable"
+
+          body = [
+              f"<!-- rc-docs-sync:v1 product={product} rc_tag={rc_tag} -->",
+              f"## {display_name} {base_version}",
+              "",
+              f"- **RC tag**: `{rc_tag}`",
+              f"- **Previous release**: `{prev_release}` ({prev_desc})",
+              f"- **Filtered diff size**: {filtered_total} lines",
+              f"- **Symbol index**: {len(symbol_index)} symbols currently documented; **0 new public symbols** in this diff",
+              "",
+              "### Outcome: 0 PRs opened (fast-path)",
+              "",
+              "The filtered diff contains no new `apply_filters` / `do_action` calls referencing undocumented symbols, no `register_rest_route(...)` registrations, and no `WP_CLI::add_command(...)` calls. Per the deterministic pre-agent fast-path, this RC introduces no public API surface and the Claude agent was not invoked.",
+              "",
+          ]
+          if top:
+              body.append("<details><summary>Top changed files</summary>")
+              body.append("")
+              body.append("```")
+              for path, count in top:
+                  body.append(f"  {path} | {count}")
+              body.append("```")
+              body.append("")
+              body.append("</details>")
+              body.append("")
+          body.append(f"_Fast-path decision — Claude agent skipped. Workflow run: {run_url}_")
+
+          out_path = os.path.join(bundle_dir, "fast-path-comment.md")
+          with open(out_path, "w") as f:
+              f.write("\n".join(body) + "\n")
+          print(f"No public surface detected — fast-path comment written to {out_path}")
+          print(f"  filtered_total={filtered_total}, symbols_known={len(symbol_index)}")
+          PY
+
+      - name: Post fast-path marker (no new public surface)
+        if: steps.bundle.outputs.any_content == 'true' && steps.detect.outputs.has_public_surface == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
+        run: |
+          set -euo pipefail
+          gh issue comment '${{ matrix.item.tracking_issue }}' --body-file "${BUNDLE_DIR}/fast-path-comment.md"
+
+      - name: Invoke Claude agent
+        if: steps.bundle.outputs.any_content == 'true' && steps.detect.outputs.has_public_surface == 'true'
         uses: anthropics/claude-code-action@v1
         env:
           PRODUCT: ${{ matrix.item.product }}
@@ -397,7 +544,7 @@ jobs:
             --model claude-sonnet-4-6
 
       - name: Ensure marker comment exists (safety net)
-        if: always() && steps.bundle.outputs.any_content == 'true'
+        if: always() && steps.bundle.outputs.any_content == 'true' && steps.detect.outputs.has_public_surface == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}

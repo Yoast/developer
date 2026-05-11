@@ -277,14 +277,15 @@ jobs:
             git -C "sources/${name}" diff "${{ matrix.item.prev_release }}..${{ matrix.item.rc_tag }}" > "${rb}/rc.diff.full"
             # `-I<regex>` drops hunks whose *every* changed line matches at least one
             # of the regexes. Used here to strip the per-RC version-string bumps
-            # (Version: header, WPSEO_VERSION define, "version": in package.json,
-            # CURRENT_RELEASE / MINIMUM_SUPPORTED constants) so the agent doesn't have
-            # to read them and dismiss them as noise each run. `rc.diff.full` keeps
-            # them as a cross-check.
+            # (PHP file header, WPSEO_VERSION define, package.json's "version" and
+            # "pluginVersion" fields, CURRENT_RELEASE / MINIMUM_SUPPORTED constants)
+            # so the agent doesn't have to read them and dismiss them as noise each
+            # run. `rc.diff.full` keeps them as a cross-check.
             git -C "sources/${name}" diff "${{ matrix.item.prev_release }}..${{ matrix.item.rc_tag }}" \
               -I' \* Version: ' \
               -I'WPSEO_VERSION' \
               -I'"version":' \
+              -I'"pluginVersion":' \
               -I'CURRENT_RELEASE' \
               -I'MINIMUM_SUPPORTED' \
               -- \

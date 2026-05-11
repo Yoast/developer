@@ -4,7 +4,7 @@ title: "Yoast SEO WP CLI: MyYoast authentication command"
 sidebar_label: MyYoast authentication
 ---
 
-Yoast SEO 27.6 introduces `wp yoast auth`, a WP CLI command namespace for managing the site's MyYoast OAuth client. It covers Dynamic Client Registration, the user authorization code flow, the site-level client credentials grant, token revocation, and cryptographic key rotation.
+Yoast SEO 27.7 introduces `wp yoast auth`, a WP CLI command namespace for managing the site's MyYoast OAuth client. It covers Dynamic Client Registration, the user authorization code flow, the site-level client credentials grant, token revocation, and cryptographic key rotation.
 
 :::caution Requires the MyYoast connection feature flag
 The `wp yoast auth` command is only registered when the MyYoast connection module is enabled. To enable it, add the following to your `wp-config.php`:

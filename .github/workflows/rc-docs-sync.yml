@@ -292,6 +292,9 @@ jobs:
               ':(exclude)tests' \
               ':(exclude)**/__tests__' \
               ':(exclude)**/__snapshots__' \
+              ':(exclude)**/*.test.*' \
+              ':(exclude)**/*.spec.*' \
+              ':(exclude)**/*.stories.*' \
               ':(exclude)**/*.lock' \
               ':(exclude)languages' \
               ':(exclude).github' \

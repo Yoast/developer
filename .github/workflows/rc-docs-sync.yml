@@ -290,8 +290,9 @@ jobs:
               -I'MINIMUM_SUPPORTED' \
               -- \
               ':(exclude)tests' \
-              ':(exclude)**/__tests__' \
-              ':(exclude)**/__snapshots__' \
+              ':(exclude)**/__tests__/**' \
+              ':(exclude)**/__snapshots__/**' \
+              ':(exclude)**/spec/**' \
               ':(exclude)**/*.test.*' \
               ':(exclude)**/*.spec.*' \
               ':(exclude)**/*.stories.*' \

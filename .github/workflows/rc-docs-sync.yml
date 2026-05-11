@@ -548,8 +548,13 @@ jobs:
             --max-turns 100
             --model claude-sonnet-4-6
 
+      # Safety net runs whenever the bundle was non-empty (any_content == 'true').
+      # The step body deduplicates: if any earlier step already posted the marker
+      # (the agent itself, or the fast-path marker step), it exits early. This
+      # also catches the edge case where the detect step crashes — the step body
+      # then sees no marker exists and posts the fallback.
       - name: Ensure marker comment exists (safety net)
-        if: always() && steps.bundle.outputs.any_content == 'true' && steps.detect.outputs.has_public_surface == 'true'
+        if: always() && steps.bundle.outputs.any_content == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}

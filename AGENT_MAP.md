@@ -173,8 +173,8 @@ No currently-listed product has more than one source repo. If one is ever added 
 ### `ai`
 - **Products**: wordpress-seo, wordpress-seo-premium
 - **Docs paths**: `docs/features/ai/**`
-- **Source paths** (wordpress-seo): `src/ai/**` (current convention — all new AI feature code lives here), `src/ai-*/**` (legacy, being migrated under `src/ai/`; safe to drop once the migration completes), `src/generators/ai*`, `src/integrations/ai*`
-- **Source paths** (wordpress-seo-premium): `src/ai/**`
+- **Source paths** (wordpress-seo): `src/ai/**` (current convention — all new AI feature code lives here), `src/ai-*/**` (legacy, being migrated under `src/ai/`; safe to drop once the migration completes), `src/generators/ai*`, `src/integrations/ai*`, `packages/js/src/ai-*/**` (frontend code for AI features lives in per-feature `ai-<slug>/` directories under the JS package; e.g. `ai-content-planner/`)
+- **Source paths** (wordpress-seo-premium): `src/ai/**`, `packages/js/src/ai-*/**`
 - **Symbol namespaces**: `wpseo_ai_*`
 - **Typical triggers**: new AI error code; new AI feature exposing a filter; change to request/retry behavior documented in `ai-errors.md`.
 

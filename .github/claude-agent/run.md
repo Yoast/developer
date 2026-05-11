@@ -16,6 +16,7 @@ You are the RC docs-sync agent for Yoast's developer portal. A Release Candidate
 - **`$BUNDLE_DIR/<source-repo>/rc.diff.stat`** — `git diff --stat` summary.
 - **`$BUNDLE_DIR/<source-repo>/changelog.source`** — the product's user-facing changelog file. Find the entry for `$RC_TAG` and treat it as the "why" complementing the diff's "what".
 - **`$BUNDLE_DIR/symbol-index.txt`** — sorted list of `wpseo_*` / `Yoast\WP\SEO\*` / `duplicate_post_*` symbols *currently documented* anywhere in `docs/`. A symbol that appears in a diff but NOT in this list is a new public surface and likely warrants docs.
+- **`$BUNDLE_DIR/open-doc-prs.json`** — JSON array of recent open PRs in this repo that touch `docs/` or `sidebars.js`. Used in Step 1.7 to defer to pre-documentation PRs instead of duplicating them.
 
 Environment variables (set by the invoking shell or workflow, not hardcoded here): `PRODUCT`, `RC_TAG`, `DISPLAY_NAME` (the human-readable product name from `AGENT_MAP.md`'s product table, e.g. `Yoast SEO`), `BUNDLE_DIR`, `TRACKING_ISSUE` (the issue number where the run summary must be posted), and optionally `DRY_RUN`. Read them before doing anything else so you know which product, RC, bundle, and tracking issue to work with.
 
@@ -90,6 +91,29 @@ For each candidate item that would otherwise produce a PR plan, apply this discr
 
 Items skipped under this rule must be listed in the run summary under a heading **"Internal surface skipped"**, with one bullet per item: source path, symbol/route, and which signal fired (`@internal`, permission-callback heuristic, path/class heuristic, or "mixed signals"). Omit the heading entirely if no items were skipped.
 
+### Step 1.7 — Defer to open documentation PRs
+
+Before authoring (Step 2), read `$BUNDLE_DIR/open-doc-prs.json`. The file lists open PRs in this repo, updated within the last 30 days, that touch `docs/` or `sidebars.js` — PRs that may already be pre-documenting features your RC also covers (i.e. someone wrote the docs before the RC landed). Each entry has `number`, `title`, `headRefName`, `updatedAt`, `files`, and a (truncated) `body`.
+
+For every PR plan you produced in Steps 1–1.6:
+
+1. **Check file overlap.** Does any path in your plan's `files` list appear in an open PR's `files` list? `sidebars.js` is a frequent shared touchpoint — overlap on `sidebars.js` alone is *not* enough; look for overlap on at least one `docs/**` file specific to the area.
+2. **Check symbol/area overlap.** Does the open PR's `title` or `body` mention any of the symbols (filter names, route paths, CLI commands, class names) your plan would document, or the area name itself?
+
+If overlap is detected for a plan:
+
+- **Do NOT open a new PR for that plan.**
+- Comment on the existing PR via `gh pr comment <number> --body-file <path>` with:
+  - This RC's tag and a link to the workflow run.
+  - The source-evidence bullets your plan would have included (file:line + symbol names + one-line "what changed").
+  - A short paragraph: "This RC adds (or changes) the following alongside what your PR already documents — please incorporate before merging, or reply if these are out of scope."
+- Remove the plan from your authoring queue.
+- Note the deferral in the run summary under a new heading **"Overlapped with open PRs"**, one bullet per deferral: `#<number> <title>` — area, what was deferred, source-evidence link.
+
+If the open PR overlaps only on `sidebars.js` (e.g. it's adding a different doc page in a different area), open your PR as normal — the eventual merge order will resolve the navigation entries naturally. Note any cross-cutting touch in the run summary anyway, so the reviewer can resolve order.
+
+The goal: pre-documentation PRs (a human writing docs before the feature ships) are first-class. The agent helps them land, not duplicate them.
+
 ### Step 2 — Authoring (only if PR plans exist)
 
 For each PR plan, in order:
@@ -138,6 +162,7 @@ The body after the marker should contain:
 - If zero PRs: a one-paragraph explanation of what the RC contained and why no doc changes are needed (cite the changelog entry and top-level diff areas).
 - A **"Coverage gaps observed"** section if you flagged any in Step 1.5. Omit the heading entirely when there are none.
 - An **"Internal surface skipped"** section if you skipped any items in Step 1.6. Omit the heading entirely when there are none.
+- An **"Overlapped with open PRs"** section if you deferred any plans in Step 1.7. Omit the heading entirely when there are none.
 
 **If you fail to post the comment with the marker, the next scheduled run will re-process this RC.** Posting the marker is the acknowledgement of completion.
 

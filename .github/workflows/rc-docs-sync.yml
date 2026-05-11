@@ -350,6 +350,39 @@ jobs:
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       # ---------------------------------------------------------------------
+      # Pre-fetch open documentation PRs in this repo so the agent can defer
+      # to them instead of opening duplicates. A pre-doc PR is a human-authored
+      # PR that documents an upcoming feature before its RC ships (e.g. #391
+      # documented the wp yoast auth CLI namespace before 27.7-RC1). When the
+      # RC lands and the agent sees the same source files, it should comment
+      # on the existing PR rather than open a competing one.
+      #
+      # Filter: open, not labeled rc-doc-sync (the agent's own past PRs),
+      # updated within the last 30 days, touching docs/ or sidebars.js.
+      # ---------------------------------------------------------------------
+      - name: Fetch recent open documentation PRs in this repo
+        id: open_prs
+        if: steps.bundle.outputs.any_content == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
+        run: |
+          set -euo pipefail
+          cutoff=$(date -u -d '30 days ago' +%Y-%m-%d)
+          gh pr list -R "${{ github.repository }}" \
+            --search "is:open is:pr -label:rc-doc-sync updated:>=${cutoff}" \
+            --limit 50 \
+            --json number,title,headRefName,updatedAt,body,files,labels \
+            | jq '[ .[]
+                    | select((.files // []) | any(.path | startswith("docs/") or .path == "sidebars.js"))
+                    | {number, title, headRefName, updatedAt,
+                       files: [.files[].path],
+                       body: .body[0:1500] }
+                  ]' \
+            > "${BUNDLE_DIR}/open-doc-prs.json"
+          echo "Fetched $(jq length "${BUNDLE_DIR}/open-doc-prs.json") open doc PR(s) updated since ${cutoff}"
+
+      # ---------------------------------------------------------------------
       # Pre-agent fast-path: when the filtered diff is non-empty but contains
       # no new public surface (no new register_rest_route / WP_CLI::add_command
       # / apply_filters / do_action calls referencing undocumented symbols),

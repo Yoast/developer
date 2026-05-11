@@ -1,3 +1,20 @@
+## 27.6
+
+Release date: 2026-05-12
+
+Introduces Yoast AI Content Planner, giving you five site-specific post ideas and a structured starter draft the moment you open a new post. [Read the full release post here](https://yoa.st/56o).
+
+#### Enhancements
+* Adds the Content Planner feature, which allows users to get AI-powered content suggestions and structured outlines for new posts directly from the block editor.
+
+#### Bugfixes
+
+* Fixes a bug where an empty Yoast Related Links block could not be selected or removed from the editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.6.
+
 ## 27.5
 
 Release date: 2026-04-28

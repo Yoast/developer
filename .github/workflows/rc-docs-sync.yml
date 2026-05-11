@@ -333,9 +333,17 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
+          issue='${{ matrix.item.tracking_issue }}'
+          product='${{ matrix.item.product }}'
           rc_tag='${{ matrix.item.rc_tag }}'
           base_version="${rc_tag%-RC*}"
-          gh issue comment '${{ matrix.item.tracking_issue }}' --body "<!-- rc-docs-sync:v1 product=${{ matrix.item.product }} rc_tag=${rc_tag} -->
+          # Idempotency: skip if a marker for this (product, rc_tag) already exists.
+          if gh issue view "$issue" --json comments --jq '.comments[].body' \
+              | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${product}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
+            echo "Marker for ${product} ${rc_tag} already on issue #${issue}; skipping no-op summary."
+            exit 0
+          fi
+          gh issue comment "$issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
 
           **${{ matrix.item.display_name }} ${base_version}** (RC \`${rc_tag}\`) — no doc changes needed.
           Filtered diff is empty (only tests/translations/lockfiles changed).
@@ -486,7 +494,19 @@ jobs:
           BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
         run: |
           set -euo pipefail
-          gh issue comment '${{ matrix.item.tracking_issue }}' --body-file "${BUNDLE_DIR}/fast-path-comment.md"
+          issue='${{ matrix.item.tracking_issue }}'
+          product='${{ matrix.item.product }}'
+          rc_tag='${{ matrix.item.rc_tag }}'
+          # Idempotency: if a marker for this (product, rc_tag) already exists on the
+          # tracking issue (e.g. from a prior scheduled run, or a workflow_dispatch
+          # backfill), don't post a duplicate. Same dedup pattern as the safety-net
+          # step below.
+          if gh issue view "$issue" --json comments --jq '.comments[].body' \
+              | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${product}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
+            echo "Marker for ${product} ${rc_tag} already on issue #${issue}; skipping fast-path comment."
+            exit 0
+          fi
+          gh issue comment "$issue" --body-file "${BUNDLE_DIR}/fast-path-comment.md"
 
       - name: Invoke Claude agent
         if: steps.bundle.outputs.any_content == 'true' && steps.detect.outputs.has_public_surface == 'true'

@@ -1,7 +1,7 @@
 # .github/workflows/rc-docs-sync.yml
 #
 # Lives in: Yoast/developer
-# Purpose: once a day, check each opted-in product repo for RC tags we haven't
+# Purpose: every weekday, check each opted-in product repo for RC tags we haven't
 #          processed yet. For each new RC, ask a Claude agent whether the
 #          developer-portal docs need updates; if so, open one PR per affected
 #          feature area (per AGENT_MAP.md).
@@ -25,7 +25,7 @@ name: RC docs sync
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # daily at 06:00 UTC
+    - cron: '0 6 * * 1-5'  # 06:00 UTC, Monday through Friday only
   workflow_dispatch:
     inputs:
       product:

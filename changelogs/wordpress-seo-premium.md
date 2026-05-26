@@ -1,3 +1,11 @@
+## 27.6.1
+
+Release date: 2026-05-26
+
+#### Bugfixes
+
+* Fixes a bug where an authenticated user with the `edit_posts` capability could inject arbitrary Apache directives into the site-root `.htaccess` via a redirect AJAX endpoint when file-based redirects were enabled.
+
 ## 27.6
 
 Release date: 2026-05-12

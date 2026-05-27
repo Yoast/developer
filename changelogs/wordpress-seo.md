@@ -1,3 +1,23 @@
+= 27.7 =
+
+Release date: 2026-05-27
+
+Yoast SEO 27.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug in Schema aggregator where products Schema pieces had incorrect `@id` values for `mainEntityOfPage` and `image` properties.
+* Fixes a bug where a `FocusTrap` warning was thrown and the X button did not receive focus when the replace content confirmation modal from the AI Content Planner was opened.
+* Fixes a bug where a warning was triggered in the console when editing a post with the Content Planner feature enabled.
+* Fixes a bug where only the first piece was returned when indexables were not available.
+* Fixes a bug where the AI features section was rendered twice on the user profile page.
+* Fixes a bug where the block editor was crashing when some AI features were triggering errors.
+* Fixes a bug where the Content Planner inline banner was displayed when editing a template or template part.
+
+#### Other
+
+* Makes the Academy, Upgrade and Brand insights links visible to more user roles.
+
 = 27.6 =
 
 Release date: 2026-05-12

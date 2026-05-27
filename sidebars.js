@@ -297,6 +297,7 @@ module.exports = {
 					label: "WP CLI",
 					items: [
 						"features/wp-cli/reindex-indexables",
+						"features/wp-cli/auth",
 					],
 				},
 				{

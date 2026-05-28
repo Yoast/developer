@@ -148,6 +148,9 @@ jobs:
               stable_tags = [t for t in all_tags if STABLE_RE.match(t)]
 
               processed_markers = fetch_processed_markers(tracking_issue, slug)
+              # Per-product state — must be initialized for every iteration of the
+              # outer loop, and used by both the dispatch and the scheduled paths.
+              superseded_by_latest = {}
 
               if input_rc_tag and input_product == slug:
                   if input_rc_tag not in rc_tags:
@@ -163,7 +166,14 @@ jobs:
                               "rc_tag": seed_rc, "display_name": product["display_name"],
                           })
                       continue
-                  last_key = sort_key(processed_markers[-1])
+                  # Use the max processed marker by sort_key, not the last in
+                  # document order. Superseded markers are posted *after* their
+                  # superseding RC's marker, so document order would mis-identify
+                  # an older (superseded) RC as the high-water mark and re-queue
+                  # an already-processed RC. Manual backfills via workflow_dispatch
+                  # (which can post markers for arbitrarily-old RCs) have the same
+                  # property.
+                  last_key = sort_key(max(processed_markers, key=sort_key))
                   rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
                   # Within each base version, collapse to just the latest unprocessed
                   # RC and attach the skipped ones as `superseded_rcs` on that queue
@@ -178,7 +188,6 @@ jobs:
                   # 27.9-RC1), each base still gets its own queue entry diffed
                   # against its own previous-stable. Explicit workflow_dispatch
                   # with input_rc_tag bypasses this collapse.
-                  superseded_by_latest = {}
                   if len(rcs_to_process) > 1:
                       by_base = {}
                       for rc in rcs_to_process:

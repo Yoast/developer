@@ -130,7 +130,7 @@ jobs:
 
           input_product = os.environ.get("INPUT_PRODUCT") or ""
           input_rc_tag = os.environ.get("INPUT_RC_TAG") or ""
-          queue, seed_actions, superseded_actions = [], [], []
+          queue, seed_actions = [], []
 
           products_to_sweep = [input_product] if input_product else list(PRODUCTS.keys())
           for slug in products_to_sweep:
@@ -166,15 +166,19 @@ jobs:
                   last_key = sort_key(processed_markers[-1])
                   rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
                   # Within each base version, collapse to just the latest unprocessed
-                  # RC and mark earlier ones in that group as superseded — earlier RCs
-                  # in the same base would otherwise fan out as separate matrix
-                  # entries and produce duplicate PRs (see GH run 26561237947, which
-                  # opened #400 and #401 for the same filter introduced in 27.8-RC1
-                  # and re-emitted in 27.8-RC2). Collapsing is *per base version* so
-                  # if two cycles' RCs are simultaneously unprocessed (e.g. workflow
-                  # missed 27.8-RC1 and 27.9-RC1), each base still gets its own
-                  # queue entry diffed against its own previous-stable. Explicit
-                  # workflow_dispatch with input_rc_tag bypasses this collapse.
+                  # RC and attach the skipped ones as `superseded_rcs` on that queue
+                  # entry. The matrix step that processes the latest RC will post
+                  # the superseded markers itself, AFTER its own marker is in place
+                  # — that way a clone/bundle failure doesn't leave the tracking
+                  # issue with superseded markers that incorrectly advance state
+                  # past unprocessed RCs.
+                  #
+                  # Collapsing is *per base version*: if two cycles' RCs are
+                  # simultaneously unprocessed (e.g. workflow missed 27.8-RC1 and
+                  # 27.9-RC1), each base still gets its own queue entry diffed
+                  # against its own previous-stable. Explicit workflow_dispatch
+                  # with input_rc_tag bypasses this collapse.
+                  superseded_by_latest = {}
                   if len(rcs_to_process) > 1:
                       by_base = {}
                       for rc in rcs_to_process:
@@ -183,14 +187,7 @@ jobs:
                       for base, group in by_base.items():
                           group_sorted = sorted(group, key=sort_key)
                           latest_in_group = group_sorted[-1]
-                          for skipped in group_sorted[:-1]:
-                              superseded_actions.append({
-                                  "issue": tracking_issue,
-                                  "product": slug,
-                                  "rc_tag": skipped,
-                                  "superseded_by": latest_in_group,
-                                  "display_name": product["display_name"],
-                              })
+                          superseded_by_latest[latest_in_group] = group_sorted[:-1]
                           collapsed.append(latest_in_group)
                       rcs_to_process = sorted(collapsed, key=sort_key)
 
@@ -226,16 +223,16 @@ jobs:
                       "prev_release": prev,
                       "prev_kind": prev_kind,
                       "tracking_issue": tracking_issue,
+                      "superseded_rcs": superseded_by_latest.get(rc_tag, []),
                   })
 
-          print(json.dumps({"queue": queue, "seeds": seed_actions, "superseded": superseded_actions}))
+          print(json.dumps({"queue": queue, "seeds": seed_actions}))
           PY
           cat queue.json
           # Emit queue as compact JSON for matrix consumption.
           echo "queue_json=$(jq -c '.queue' queue.json)" >> "$GITHUB_OUTPUT"
           echo "count=$(jq '.queue | length' queue.json)" >> "$GITHUB_OUTPUT"
           echo "seed_count=$(jq '.seeds | length' queue.json)" >> "$GITHUB_OUTPUT"
-          echo "superseded_count=$(jq '.superseded | length' queue.json)" >> "$GITHUB_OUTPUT"
 
       - name: Seed first-run tracking issues
         if: steps.queue.outputs.seed_count != '0'
@@ -252,31 +249,6 @@ jobs:
             gh issue comment "$issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
 
           **First-run seed for ${display}** — RC tag \`${rc_tag}\` recorded as the baseline. No historical RCs will be processed automatically. To backfill a specific RC, use \`workflow_dispatch\` with \`product=${product}\` and the desired \`rc_tag\`."
-          done
-
-      - name: Mark superseded RCs (latest-only-per-run)
-        if: steps.queue.outputs.superseded_count != '0'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        run: |
-          set -euo pipefail
-          jq -c '.superseded[]' queue.json | while read -r entry; do
-            issue=$(echo "$entry" | jq -r .issue)
-            product=$(echo "$entry" | jq -r .product)
-            rc_tag=$(echo "$entry" | jq -r .rc_tag)
-            superseded_by=$(echo "$entry" | jq -r .superseded_by)
-            display=$(echo "$entry" | jq -r .display_name)
-            base_version="${rc_tag%-RC*}"
-            # Idempotency: skip if a marker for this RC already exists.
-            if gh issue view "$issue" --json comments --jq '.comments[].body' \
-                | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${product}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
-              echo "Marker for ${product} ${rc_tag} already exists; skipping superseded marker."
-              continue
-            fi
-            gh issue comment "$issue" --body "<!-- rc-docs-sync:v1 product=${product} rc_tag=${rc_tag} -->
-
-          **${display} ${base_version}** (RC \`${rc_tag}\`) — superseded by \`${superseded_by}\` in the same sync run. The later RC was processed against the same diff base, so any net public-surface changes are covered there. This RC was not individually processed."
           done
 
       - name: Note when queue is empty
@@ -687,3 +659,45 @@ jobs:
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           Inspect the run logs and any PRs labeled \`rc/${rc_tag}\` to see what the agent produced before failing."
+
+      # Posts "superseded by X" markers for the RCs this matrix entry collapsed
+      # past. Gated on the latest RC's own marker actually being present — if
+      # clone or bundle failed before any marker for this RC was posted, the
+      # skipped RCs stay unmarked so the next run re-picks them up correctly
+      # (rather than being incorrectly used as `same_base_processed` diff bases).
+      - name: Mark RCs superseded by this entry
+        if: always() && steps.bundle.outputs.any_content != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          LATEST_RC_TAG: ${{ matrix.item.rc_tag }}
+          DISPLAY_NAME: ${{ matrix.item.display_name }}
+          PRODUCT: ${{ matrix.item.product }}
+          TRACKING_ISSUE: ${{ matrix.item.tracking_issue }}
+          SUPERSEDED_RCS: ${{ toJSON(matrix.item.superseded_rcs) }}
+        run: |
+          set -euo pipefail
+          # No-op when this entry didn't collapse anything.
+          if [ "$(echo "$SUPERSEDED_RCS" | jq 'length')" = "0" ]; then
+            exit 0
+          fi
+          # Refuse to post superseded markers unless the marker for this entry's
+          # latest RC is already on the tracking issue (placed by the no-op step,
+          # fast-path step, agent itself, or the safety-net step above).
+          if ! gh issue view "$TRACKING_ISSUE" --json comments --jq '.comments[].body' \
+              | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${PRODUCT}[[:space:]]+rc_tag=${LATEST_RC_TAG}[[:space:]]*-->"; then
+            echo "Latest RC ${LATEST_RC_TAG} has no marker yet; not posting superseded markers."
+            exit 0
+          fi
+          base_version="${LATEST_RC_TAG%-RC*}"
+          echo "$SUPERSEDED_RCS" | jq -r '.[]' | while read -r rc_tag; do
+            [ -z "$rc_tag" ] && continue
+            if gh issue view "$TRACKING_ISSUE" --json comments --jq '.comments[].body' \
+                | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${PRODUCT}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
+              echo "Marker for ${rc_tag} already exists; skipping."
+              continue
+            fi
+            gh issue comment "$TRACKING_ISSUE" --body "<!-- rc-docs-sync:v1 product=${PRODUCT} rc_tag=${rc_tag} -->
+
+          **${DISPLAY_NAME} ${base_version}** (RC \`${rc_tag}\`) — superseded by \`${LATEST_RC_TAG}\` in the same sync run. The later RC was processed against the same diff base, so any net public-surface changes are covered there."
+          done

@@ -165,26 +165,34 @@ jobs:
                       continue
                   last_key = sort_key(processed_markers[-1])
                   rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
-                  # Collapse multiple unprocessed RCs to just the latest. Earlier
-                  # RCs in the same sync run would otherwise fan out as separate
-                  # matrix entries and produce duplicate PRs (see GH run
-                  # 26561237947, which opened PRs #400 and #401 for the same
-                  # filter introduced in 27.8-RC1 and re-emitted in 27.8-RC2).
-                  # The latest RC's diff base is computed below as usual; the
-                  # skipped RCs get a "superseded" marker so the state machine
-                  # advances past them. Explicit per-RC backfill via
+                  # Within each base version, collapse to just the latest unprocessed
+                  # RC and mark earlier ones in that group as superseded — earlier RCs
+                  # in the same base would otherwise fan out as separate matrix
+                  # entries and produce duplicate PRs (see GH run 26561237947, which
+                  # opened #400 and #401 for the same filter introduced in 27.8-RC1
+                  # and re-emitted in 27.8-RC2). Collapsing is *per base version* so
+                  # if two cycles' RCs are simultaneously unprocessed (e.g. workflow
+                  # missed 27.8-RC1 and 27.9-RC1), each base still gets its own
+                  # queue entry diffed against its own previous-stable. Explicit
                   # workflow_dispatch with input_rc_tag bypasses this collapse.
                   if len(rcs_to_process) > 1:
-                      latest = rcs_to_process[-1]
-                      for skipped in rcs_to_process[:-1]:
-                          superseded_actions.append({
-                              "issue": tracking_issue,
-                              "product": slug,
-                              "rc_tag": skipped,
-                              "superseded_by": latest,
-                              "display_name": product["display_name"],
-                          })
-                      rcs_to_process = [latest]
+                      by_base = {}
+                      for rc in rcs_to_process:
+                          by_base.setdefault(base_version(rc), []).append(rc)
+                      collapsed = []
+                      for base, group in by_base.items():
+                          group_sorted = sorted(group, key=sort_key)
+                          latest_in_group = group_sorted[-1]
+                          for skipped in group_sorted[:-1]:
+                              superseded_actions.append({
+                                  "issue": tracking_issue,
+                                  "product": slug,
+                                  "rc_tag": skipped,
+                                  "superseded_by": latest_in_group,
+                                  "display_name": product["display_name"],
+                              })
+                          collapsed.append(latest_in_group)
+                      rcs_to_process = sorted(collapsed, key=sort_key)
 
               for rc_tag in rcs_to_process:
                   # Prefer the most recent already-processed RC of the same base version as

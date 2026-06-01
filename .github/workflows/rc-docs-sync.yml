@@ -374,7 +374,7 @@ jobs:
             --limit 50 \
             --json number,title,headRefName,updatedAt,body,files,labels \
             | jq '[ .[]
-                    | select((.files // []) | any(.path | startswith("docs/") or .path == "sidebars.js"))
+                    | select((.files // []) | any((.path | startswith("docs/")) or .path == "sidebars.js"))
                     | {number, title, headRefName, updatedAt,
                        files: [.files[].path],
                        body: .body[0:1500] }

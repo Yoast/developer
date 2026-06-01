@@ -148,6 +148,9 @@ jobs:
               stable_tags = [t for t in all_tags if STABLE_RE.match(t)]
 
               processed_markers = fetch_processed_markers(tracking_issue, slug)
+              # Per-product state — must be initialized for every iteration of the
+              # outer loop, and used by both the dispatch and the scheduled paths.
+              superseded_by_latest = {}
 
               if input_rc_tag and input_product == slug:
                   if input_rc_tag not in rc_tags:
@@ -163,8 +166,39 @@ jobs:
                               "rc_tag": seed_rc, "display_name": product["display_name"],
                           })
                       continue
-                  last_key = sort_key(processed_markers[-1])
+                  # Use the max processed marker by sort_key, not the last in
+                  # document order. Superseded markers are posted *after* their
+                  # superseding RC's marker, so document order would mis-identify
+                  # an older (superseded) RC as the high-water mark and re-queue
+                  # an already-processed RC. Manual backfills via workflow_dispatch
+                  # (which can post markers for arbitrarily-old RCs) have the same
+                  # property.
+                  last_key = sort_key(max(processed_markers, key=sort_key))
                   rcs_to_process = sorted([t for t in rc_tags if sort_key(t) > last_key], key=sort_key)
+                  # Within each base version, collapse to just the latest unprocessed
+                  # RC and attach the skipped ones as `superseded_rcs` on that queue
+                  # entry. The matrix step that processes the latest RC will post
+                  # the superseded markers itself, AFTER its own marker is in place
+                  # — that way a clone/bundle failure doesn't leave the tracking
+                  # issue with superseded markers that incorrectly advance state
+                  # past unprocessed RCs.
+                  #
+                  # Collapsing is *per base version*: if two cycles' RCs are
+                  # simultaneously unprocessed (e.g. workflow missed 27.8-RC1 and
+                  # 27.9-RC1), each base still gets its own queue entry diffed
+                  # against its own previous-stable. Explicit workflow_dispatch
+                  # with input_rc_tag bypasses this collapse.
+                  if len(rcs_to_process) > 1:
+                      by_base = {}
+                      for rc in rcs_to_process:
+                          by_base.setdefault(base_version(rc), []).append(rc)
+                      collapsed = []
+                      for base, group in by_base.items():
+                          group_sorted = sorted(group, key=sort_key)
+                          latest_in_group = group_sorted[-1]
+                          superseded_by_latest[latest_in_group] = group_sorted[:-1]
+                          collapsed.append(latest_in_group)
+                      rcs_to_process = sorted(collapsed, key=sort_key)
 
               for rc_tag in rcs_to_process:
                   # Prefer the most recent already-processed RC of the same base version as
@@ -198,6 +232,7 @@ jobs:
                       "prev_release": prev,
                       "prev_kind": prev_kind,
                       "tracking_issue": tracking_issue,
+                      "superseded_rcs": superseded_by_latest.get(rc_tag, []),
                   })
 
           print(json.dumps({"queue": queue, "seeds": seed_actions}))
@@ -633,3 +668,45 @@ jobs:
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           Inspect the run logs and any PRs labeled \`rc/${rc_tag}\` to see what the agent produced before failing."
+
+      # Posts "superseded by X" markers for the RCs this matrix entry collapsed
+      # past. Gated on the latest RC's own marker actually being present — if
+      # clone or bundle failed before any marker for this RC was posted, the
+      # skipped RCs stay unmarked so the next run re-picks them up correctly
+      # (rather than being incorrectly used as `same_base_processed` diff bases).
+      - name: Mark RCs superseded by this entry
+        if: always() && steps.bundle.outputs.any_content != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          LATEST_RC_TAG: ${{ matrix.item.rc_tag }}
+          DISPLAY_NAME: ${{ matrix.item.display_name }}
+          PRODUCT: ${{ matrix.item.product }}
+          TRACKING_ISSUE: ${{ matrix.item.tracking_issue }}
+          SUPERSEDED_RCS: ${{ toJSON(matrix.item.superseded_rcs) }}
+        run: |
+          set -euo pipefail
+          # No-op when this entry didn't collapse anything.
+          if [ "$(echo "$SUPERSEDED_RCS" | jq 'length')" = "0" ]; then
+            exit 0
+          fi
+          # Refuse to post superseded markers unless the marker for this entry's
+          # latest RC is already on the tracking issue (placed by the no-op step,
+          # fast-path step, agent itself, or the safety-net step above).
+          if ! gh issue view "$TRACKING_ISSUE" --json comments --jq '.comments[].body' \
+              | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${PRODUCT}[[:space:]]+rc_tag=${LATEST_RC_TAG}[[:space:]]*-->"; then
+            echo "Latest RC ${LATEST_RC_TAG} has no marker yet; not posting superseded markers."
+            exit 0
+          fi
+          base_version="${LATEST_RC_TAG%-RC*}"
+          echo "$SUPERSEDED_RCS" | jq -r '.[]' | while read -r rc_tag; do
+            [ -z "$rc_tag" ] && continue
+            if gh issue view "$TRACKING_ISSUE" --json comments --jq '.comments[].body' \
+                | grep -Eq "<!--[[:space:]]*rc-docs-sync:v1[[:space:]]+product=${PRODUCT}[[:space:]]+rc_tag=${rc_tag}[[:space:]]*-->"; then
+              echo "Marker for ${rc_tag} already exists; skipping."
+              continue
+            fi
+            gh issue comment "$TRACKING_ISSUE" --body "<!-- rc-docs-sync:v1 product=${PRODUCT} rc_tag=${rc_tag} -->
+
+          **${DISPLAY_NAME} ${base_version}** (RC \`${rc_tag}\`) — superseded by \`${LATEST_RC_TAG}\` in the same sync run. The later RC was processed against the same diff base, so any net public-surface changes are covered there."
+          done

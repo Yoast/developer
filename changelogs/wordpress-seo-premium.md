@@ -1,3 +1,23 @@
+## 27.8
+
+Release date: 2026-06-09
+
+Yoast SEO 27.8 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves post editor rendering performance by stabilising the `getKeywords` Redux selector reference to prevent unnecessary re-renders.
+
+#### Bugfixes
+
+* Fixes a bug where the addon installer repeatedly downloaded Yoast SEO on every request when the installation failed or was outdated.
+* Fixes a bug where the XML sitemap could fail to generate when redirects were combined with another plugin or theme that also filtered sitemap entries.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 27.8.
+* Improves cross-version PHP compatibility.
+
 ## 27.7
 
 Release date: 2026-05-27

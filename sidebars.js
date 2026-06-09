@@ -362,6 +362,7 @@ module.exports = {
 						"customization/yoast-seo/filtering-yoast-blocks",
 						"customization/yoast-seo/wp-get-environment-type-in-yoast-seo",
 						"customization/yoast-seo/filters/disable-opcache-reset-on-upgrade",
+						"customization/yoast-seo/filters/custom-fields-pre-query-filter",
 					],
 				},
 				{

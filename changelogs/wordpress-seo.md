@@ -6,25 +6,25 @@ Yoast SEO 27.8 brings more enhancements and bugfixes. [Find more information abo
 
 #### Enhancements
 
-* Makes the schema aggregator faster by drastically reducing the roundtrips to the database, when indexables are disabled.
-* Makes the SEO optimization faster by drastically reducing the roundtrips to the database.
-* Optimizes expensive DB queries when performing actions in admin pages related to SEO optimization.
-* Significantly reduces loading times of the root sitemap on sites with many users.
+* Makes the schema aggregator faster by reducing database roundtrips when indexables are disabled.
+* Speeds up the SEO optimization analysis by cutting down the number of database queries it runs.
+* Optimizes resource-heavy database queries when performing actions on admin pages related to SEO optimization.
+* Reduces loading times of the root sitemap on sites with many users.
 * Reduces loading times of the author sitemap on sites with many users.
-* Prevents unnecessary expensive DB queries when admin pages are being visited.
+* Prevents unnecessary database queries when someone visits an admin page.
 
 #### Bugfixes
 
 * Ensures compatibility with the React 19 version bundled in Gutenberg 23.3 (WordPress 7.1), fixing several screens and components that could otherwise fail to render.
-* Fixes a bug where NaN was set as the Primary taxonomy and triggered a console error.
-* Fixes a bug where the dismiss button in the Webinar promo notice in general page was transparent.
-* Improves post editor rendering performance by stabilising Redux selector and `withSelect` references in multiple components to prevent unnecessary re-renders.
+* Fixes a bug where NaN became the Primary taxonomy and triggered a console error.
+* Fixes a bug where the dismiss button in the Webinar promo notice on the General page was transparent.
+* Improves post editor rendering performance by stabilizing Redux selector and `withSelect` references in multiple components to prevent unnecessary re-renders.
 
 #### Other
 
-* Introduces the `wpseo_custom_fields_pre_query` filter, allowing sites to short-circuit the potentially expensive custom-fields lookup in Yoast settings, with a pre-computed list or a custom query.
+* Introduces the `wpseo_custom_fields_pre_query` filter, letting sites skip the resource-heavy custom-fields lookup in Yoast settings by supplying a pre-computed list or a custom query.
 * Removes the Yoast group from the filter bar on the WordPress plugins list.
-* Sets the title of a child task to "(no title)" in the task list, when the related post has no title.
+* Sets the title of a child task to "(no title)" in the task list when the related post has no title.
 
 = 27.7 =
 

@@ -1,6 +1,6 @@
 ---
 id: recent-posts-seo-ability
-title: "Yoast SEO Abilities API - Recent Posts's SEO Ability"
+title: "Yoast SEO Abilities - Recent Posts's SEO Ability"
 sidebar_label: Recent Posts's SEO Ability
 description: This documentation explains what is the Recent Posts's SEO Ability.
 ---

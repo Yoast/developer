@@ -1,6 +1,6 @@
 ---
 id: overview
-title: "Yoast SEO Abilities API"
+title: "Yoast SEO Abilities"
 sidebar_label: Overview
 description: This documentation explains what is the Abilities API and how Yoast SEO integrates with it.
 ---
@@ -15,7 +15,7 @@ Abilities API is a standardized way for plugins to expose what they can do, [int
 
 Once an ability is registered, it is discoverable and executable from PHP, JavaScript, and the REST API. That way, AI agents (and other third-party systems) can use that ability for their purproses.
 
-## Yoast SEO Abilities API
+## Yoast SEO Abilities
 The abilities that Yoast SEO is currently registering are:
 
 * [Recent Posts' SEO Ability](recent-posts-seo-ability.md) - Gets the SEO scores for the most recently modified posts
@@ -24,7 +24,7 @@ The abilities that Yoast SEO is currently registering are:
 
 Those abilities can also be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
 
-## Use cases for the Yoast SEO Abilities API
+## Use cases for the Yoast SEO Abilities
 
 ### AI agents
 Assuming that an AI agent is connected to a WordPress-enabled MCP site (details on how one can do that, on [this helpful tutorial](https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter) from the WP Core team ) with Yoast SEO active, it can then discover the above abilities and answer questions like:
@@ -35,7 +35,7 @@ Assuming that an AI agent is connected to a WordPress-enabled MCP site (details 
 That way, Yoast SEO exposes the results of its analyses to authenticated AI agents, enabling users to use AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 
 ### Third-party code
-For plugins interested in building features on top of Yoast SEO Analyses, a more traditional way to consume the Yoast SEO Abilities API would be to use the new WP REST API endpoints. This allows information about a website's recent posts to be reliably retrieved in a structured way.
+For plugins interested in building features on top of Yoast SEO Analyses, a more traditional way to consume the Yoast SEO Abilities would be to use the new WP REST API endpoints. This allows information about a website's recent posts to be reliably retrieved in a structured way.
 
 ## Prerequisites
 * WordPress version should over v6.9.

@@ -10,3 +10,7 @@
 /category/environment/ /development/environment/ 301
 /category/standards/ /development/standards/ 301
 /category/shopify/ /shopify/ 301
+/features/yoast-abilities-api/overview/ /features/yoast-seo-abilities/overview/ 301
+/features/yoast-abilities-api/recent-posts-seo-ability/ /features/yoast-seo-abilities/analysis-scores/ 301
+/features/yoast-abilities-api/recent-posts-readability-ability/ /features/yoast-seo-abilities/analysis-scores/ 301
+/features/yoast-abilities-api/recent-posts-inclusive-language-ability/ /features/yoast-seo-abilities/analysis-scores/ 301

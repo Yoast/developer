@@ -305,9 +305,7 @@ module.exports = {
 					label: "Yoast SEO Abilities",
 					items: [
 						"features/yoast-seo-abilities/overview",
-						"features/yoast-seo-abilities/recent-posts-seo-ability",
-						"features/yoast-seo-abilities/recent-posts-readability-ability",
-						"features/yoast-seo-abilities/recent-posts-inclusive-language-ability",
+						"features/yoast-seo-abilities/analysis-scores",
 					],
 				},
 			],

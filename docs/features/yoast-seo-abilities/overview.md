@@ -16,13 +16,13 @@ Abilities API is a standardized way for plugins to expose what they can do, [int
 Once an ability is registered, it is discoverable and executable from PHP, JavaScript, and the REST API. That way, AI agents (and other third-party systems) can use that ability for their purposes.
 
 ## Yoast SEO Abilities
-The abilities that Yoast SEO is currently registering are:
+Yoast SEO currently registers three read-only abilities that return the scores of its content analyses for the most recently modified posts:
 
-* [Recent Posts' SEO Ability](recent-posts-seo-ability.md) - Gets the SEO scores for the most recently modified posts
-* [Recent Posts' Readability Ability](recent-posts-readability-ability.md) - Gets the Readability scores for the most recently modified posts
-* [Recent Posts' Inclusive Language Ability](recent-posts-inclusive-language-ability.md) - Gets the Inclusive Language scores for the most recently modified posts
+* The SEO analysis score
+* The readability analysis score
+* The inclusive language analysis score
 
-Those abilities can also be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
+All three are documented on the [Analysis scores](analysis-scores.md) page. They can also be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
 
 ## Use cases for the Yoast SEO Abilities
 

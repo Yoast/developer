@@ -302,12 +302,10 @@ module.exports = {
 				},
 				{
 					type: "category",
-					label: "Yoast SEO Abilities API",
+					label: "Yoast SEO Abilities",
 					items: [
-						"features/yoast-abilities-api/overview",
-						"features/yoast-abilities-api/recent-posts-seo-ability",
-						"features/yoast-abilities-api/recent-posts-readability-ability",
-						"features/yoast-abilities-api/recent-posts-inclusive-language-ability",
+						"features/yoast-seo-abilities/overview",
+						"features/yoast-seo-abilities/analysis-scores",
 					],
 				},
 			],

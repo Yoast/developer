@@ -1,3 +1,24 @@
+## 4.7
+
+Release date: 2026-06-22
+
+#### Enhancements
+
+* Adds a link to the existing duplicate in the Rewrite & Republish admin notices, so you can open it directly instead of hunting for it in the post list. Props to [@johnbillion](https://github.com/johnbillion).
+
+#### Bugfixes
+
+* Fixes a bug where a published post could be overwritten by a user without permission to edit it, when that user scheduled a Rewrite & Republish copy of the post for future publication. Props to [@nacento](https://github.com/nacento).
+* Fixes a bug where a PHP deprecation notice appeared in the block editor, when a user opened a Rewrite & Republish copy of a post they were not allowed to edit.
+* Fixes a bug where the _Copy to a new draft_ and _Rewrite & Republish_ links broke the layout of the Classic Editor Publish meta box on WordPress 7.0.
+
+#### Other
+
+* Improves the security of the welcome notice dismissal by requiring a valid nonce and the `manage_options` capability.
+* Improves the security of the scheduled republish notice in the Classic editor by escaping the post title and permalink before output.
+* Sets the _WordPress tested up to_ version to 7.0.
+
+
 ## 4.6
 
 Release date: 2026-03-09

@@ -1,3 +1,11 @@
+## 23/06/2026 09:21 (UTC)
+
+Release date: 2026-06-23
+
+#### Enhancements
+
+* llms.txt is now generated as a theme file that stays in sync with your active theme.
+
 ## 07/05/2026 07:51 (UTC)
 
 Release date: 2026-05-07

@@ -1,3 +1,16 @@
+## 27.9
+
+Release date: 2026-06-23
+
+#### Bugfixes
+
+* Fixes the _Old URL_ field not being auto-populated when clicking _Create Redirect_ from the admin bar on a 404 page.
+
+#### Other
+
+* Adds the redirect-mode options to the tracked settings.
+* Bumps the minimum required version of Yoast SEO to 27.9.
+
 ## 27.8
 
 Release date: 2026-06-09

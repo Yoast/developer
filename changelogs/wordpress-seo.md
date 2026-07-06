@@ -1,3 +1,21 @@
+= 28.0 =
+
+Release date: 2026-07-06
+
+Yoast SEO now works smoothly with Elementor's version 4 release. [Read the full release post here](https://yoa.st/578).
+
+#### Enhancements
+
+* Improves the compatibility with the atomic editor in Elementor V4.
+
+#### Bugfixes
+
+* Fixes a bug where raw `type` and `id` attributes were written on a link instead of `data-type` and `data-id`, when the link was added by selecting a suggestion in the block editor link popover.
+
+#### Other
+
+* Updates the guzzlehttp/guzzle and guzzlehttp/psr7 dependencies to patched releases that address known security advisories.
+
 = 27.9 =
 
 Release date: 2026-06-22

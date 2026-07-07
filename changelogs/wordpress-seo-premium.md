@@ -1,3 +1,17 @@
+## 28.0
+
+Release date: 2026-07-07
+
+Yoast SEO now works smoothly with Elementor's version 4 release. [Read the full release post here](https://yoa.st/579).
+
+#### Bugfixes
+
+* Fixes a bug where keyphrase highlights were not applied when using the Elementor V4 atomic editor.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.0.
+
 ## 27.9
 
 Release date: 2026-06-23

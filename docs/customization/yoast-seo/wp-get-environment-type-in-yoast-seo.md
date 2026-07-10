@@ -44,4 +44,4 @@ Another feature of WordPress, Application Passwords is tied to the value returne
 
 ### On non-production environments
 
-On sites that are not live - `if ( wp_get_environment_type() !== 'production' )` - , several things are not necessary. Thus, in these cases, the plugin does not fetch Ryte data, does not execute the Ryte Site Health check, disables data tracking and disables search engine pinging about the XML sitemap.
+On sites that are not live - `if ( wp_get_environment_type() !== 'production' )` -, some of the plugin's features are unnecessary. In these cases, Yoast SEO does not build its indexables (the internal tables that store the SEO metadata for your content), does not show the notification that asks you to optimize your SEO data, and disables the tracking of usage data.

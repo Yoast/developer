@@ -1,3 +1,11 @@
+## 10/07/2026 09:22 (UTC)
+
+Release date: 2026-07-10
+
+#### Other
+
+* Migrate app navigation to more read-friendly structure.
+
 ## 23/06/2026 09:21 (UTC)
 
 Release date: 2026-06-23

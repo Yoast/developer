@@ -1,3 +1,12 @@
+## 10/07/2026 13:36 (UTC)
+
+Release date: 2026-07-10
+
+#### Bugfixes
+
+* Fixes a bug where CSV import never received the uploaded file.
+* Fixes a bug where Yoast AI was unable to connect.
+
 ## 10/07/2026 09:22 (UTC)
 
 Release date: 2026-07-10

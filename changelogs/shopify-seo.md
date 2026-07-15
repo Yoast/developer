@@ -1,3 +1,11 @@
+## 15/07/2026 09:42 (UTC)
+
+Release date: 2026-07-15
+
+#### Bugfixes
+
+* Fixes a bug where new installs would not be redirected to our subscription page when accessing the app.
+
 ## 10/07/2026 13:36 (UTC)
 
 Release date: 2026-07-10

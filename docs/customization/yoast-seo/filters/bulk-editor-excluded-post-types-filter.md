@@ -32,23 +32,3 @@ function my_exclude_product_from_bulk_editor( $excluded_post_types ) {
 add_filter( 'wpseo_bulk_editor_excluded_post_types', 'my_exclude_product_from_bulk_editor' );
 ```
 
-### Including the attachment post type
-
-To make attachments available in the bulk editor, remove `attachment` from the exclusion list:
-
-```php
-<?php
-
-/**
- * Removes the default 'attachment' exclusion so attachments appear in the bulk editor.
- *
- * @param array<string> $excluded_post_types Post types currently excluded from the bulk editor.
- *
- * @return array<string> The updated list of excluded post types.
- */
-function my_include_attachments_in_bulk_editor( $excluded_post_types ) {
-    return array_diff( $excluded_post_types, [ 'attachment' ] );
-}
-
-add_filter( 'wpseo_bulk_editor_excluded_post_types', 'my_include_attachments_in_bulk_editor' );
-```

@@ -1,3 +1,15 @@
+## 17/07/2026 08:01 (UTC)
+
+Release date: 2026-07-17
+
+#### Bugfixes
+
+* Fixes a bug where requesting existing Shopify permissions would not work for certain staff members.
+
+#### Other
+
+* Fixes an issue where the llms.txt file would not be updated for all shops in case we reach a critical level of adoption.
+
 ## 15/07/2026 09:42 (UTC)
 
 Release date: 2026-07-15

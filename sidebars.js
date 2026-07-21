@@ -362,6 +362,7 @@ module.exports = {
 						"customization/yoast-seo/filters/disable-opcache-reset-on-upgrade",
 						"customization/yoast-seo/filters/custom-fields-pre-query-filter",
 						"customization/yoast-seo/filters/bulk-editor-excluded-post-types-filter",
+						"customization/yoast-seo/filters/myyoast-oauth-redirect-uri-filters",
 					],
 				},
 				{

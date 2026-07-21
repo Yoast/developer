@@ -1,3 +1,21 @@
+## 28.1
+
+Release date: 2026-07-21
+
+Yoast SEO Premium 28.1 brings AI to the redesigned Bulk editor: draft SEO titles, meta descriptions, and social sharing titles and descriptions in bulk, and review every suggestion before it's saved. [Read the full release post here](https://yoa.st/57d).
+
+#### Enhancements
+
+* Adds the bulk generation feature, which allows users to get AI-powered Metadata suggestions for multiple posts directly from the bulk editor page.
+
+#### Bugfixes
+
+* Fixes a bug where Yoast SEO Premium could delete a version-controlled copy of Yoast SEO (for example a local Git checkout) when it automatically updated an outdated Yoast SEO installation in the background.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.1.
+
 ## 28.0
 
 Release date: 2026-07-07

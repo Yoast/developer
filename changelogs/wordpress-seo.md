@@ -1,3 +1,13 @@
+= 28.1 =
+
+Release date: 2026-07-21
+
+Yoast SEO 28.1 redesigns the Bulk editor into a focused workspace with new search and status filters, so you can find and fix titles and meta descriptions across posts, pages, and custom post types in one place. [Read the full release post here](https://yoa.st/57c).
+
+#### Enhancements
+
+* Redesigns the bulk editor page, which allows users to edit Metadata for multiple posts at once.
+
 = 28.0 =
 
 Release date: 2026-07-06

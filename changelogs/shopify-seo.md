@@ -1,3 +1,11 @@
+## 23/07/2026 10:59 (UTC)
+
+Release date: 2026-07-23
+
+#### Bugfixes
+
+* Fixes a bug where an incomplete dashboard or CSV export was caused by a failure to create a complete store index.
+
 ## 17/07/2026 08:01 (UTC)
 
 Release date: 2026-07-17

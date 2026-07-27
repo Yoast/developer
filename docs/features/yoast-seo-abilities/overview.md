@@ -16,7 +16,7 @@ Abilities API is a standardized way for plugins to expose what they can do, [int
 Once an ability is registered, it is discoverable and executable from PHP, JavaScript, and the REST API. That way, AI agents (and other third-party systems) can use that ability for their purposes.
 
 ## Yoast SEO Abilities
-Yoast SEO currently registers five abilities across two pages:
+Yoast SEO currently registers five abilities across two sections:
 
 **Analysis scores** — three read-only abilities that return the SEO, readability, and inclusive language analysis scores for the most recently modified posts. Documented on the [Analysis scores](analysis-scores.md) page.
 

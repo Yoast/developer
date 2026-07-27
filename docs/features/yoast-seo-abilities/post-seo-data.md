@@ -237,37 +237,191 @@ The response is the full SEO data object for the post after the update, in the s
         "items": {
             "type": "object",
             "properties": {
-                "post_id":                         { "type": "integer" },
-                "post_title":                      { "type": ["string", "null"] },
-                "permalink":                       { "type": ["string", "null"] },
-                "post_type":                       { "type": "string" },
-                "post_status":                     { "type": ["string", "null"] },
-                "seo_title":                       { "type": ["string", "null"] },
-                "seo_title_rendered":              { "type": ["string", "null"] },
-                "meta_description":                { "type": ["string", "null"] },
-                "meta_description_rendered":       { "type": ["string", "null"] },
-                "focus_keyphrase":                 { "type": ["string", "null"] },
-                "canonical":                       { "type": ["string", "null"] },
-                "canonical_rendered":              { "type": ["string", "null"] },
-                "is_cornerstone":                  { "type": "boolean" },
-                "noindex":                         { "type": ["boolean", "null"] },
-                "nofollow":                        { "type": "boolean" },
-                "noimageindex":                    { "type": "boolean" },
-                "noarchive":                       { "type": "boolean" },
-                "nosnippet":                       { "type": "boolean" },
-                "open_graph_title":                { "type": ["string", "null"] },
-                "open_graph_title_rendered":       { "type": ["string", "null"] },
-                "open_graph_description":          { "type": ["string", "null"] },
-                "open_graph_description_rendered": { "type": ["string", "null"] },
-                "twitter_title":                   { "type": ["string", "null"] },
-                "twitter_title_rendered":          { "type": ["string", "null"] },
-                "twitter_description":             { "type": ["string", "null"] },
-                "twitter_description_rendered":    { "type": ["string", "null"] },
-                "schema_page_type":                { "type": ["string", "null"] },
-                "schema_article_type":             { "type": ["string", "null"] },
-                "seo_score":                       { "type": "string", "enum": ["na", "bad", "ok", "good"] },
-                "readability_score":               { "type": "string", "enum": ["na", "bad", "ok", "good"] },
-                "inclusive_language_score":        { "type": "string", "enum": ["na", "bad", "ok", "good"] }
+                "post_id": {
+                    "type": "integer"
+                },
+                "post_title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "permalink": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "post_type": {
+                    "type": "string"
+                },
+                "post_status": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "seo_title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "seo_title_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The SEO title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "meta_description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "meta_description_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The meta description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "focus_keyphrase": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "canonical": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "canonical_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The canonical URL as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "is_cornerstone": {
+                    "type": "boolean"
+                },
+                "noindex": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "description": "Whether search engines are told not to index this post. true means noindex (the post is excluded from search results); false means the post is forced to be indexed; null means no setting is stored and the post-type default applies."
+                },
+                "nofollow": {
+                    "type": "boolean"
+                },
+                "noimageindex": {
+                    "type": "boolean"
+                },
+                "noarchive": {
+                    "type": "boolean"
+                },
+                "nosnippet": {
+                    "type": "boolean"
+                },
+                "open_graph_title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "open_graph_title_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The Open Graph title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "open_graph_description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "open_graph_description_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The Open Graph description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "twitter_title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "twitter_title_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The Twitter title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "twitter_description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "twitter_description_rendered": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The Twitter description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+                },
+                "schema_page_type": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "schema_article_type": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "seo_score": {
+                    "type": "string",
+                    "enum": [
+                        "na",
+                        "bad",
+                        "ok",
+                        "good"
+                    ],
+                    "description": "The result of the SEO analysis that ran on the post when it was last saved."
+                },
+                "readability_score": {
+                    "type": "string",
+                    "enum": [
+                        "na",
+                        "bad",
+                        "ok",
+                        "good"
+                    ],
+                    "description": "The result of the readability analysis that ran on the post when it was last saved."
+                },
+                "inclusive_language_score": {
+                    "type": "string",
+                    "enum": [
+                        "na",
+                        "bad",
+                        "ok",
+                        "good"
+                    ],
+                    "description": "The result of the inclusive language analysis that ran on the post when it was last saved."
+                }
             }
         }
     },
@@ -281,6 +435,28 @@ The response is the full SEO data object for the post after the update, in the s
         "mcp": {
             "public": true
         }
+    },
+    "_links": {
+        "self": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities/yoast-seo/get-post-seo-data",
+                "targetHints": {
+                    "allow": [
+                        "GET"
+                    ]
+                }
+            }
+        ],
+        "collection": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities"
+            }
+        ],
+        "wp:action-run": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities/yoast-seo/get-post-seo-data/run"
+            }
+        ]
     }
 }
 ```
@@ -298,60 +474,320 @@ The response is the full SEO data object for the post after the update, in the s
         "type": "object",
         "additionalProperties": false,
         "properties": {
-            "post_id":                { "type": "integer", "minimum": 1 },
-            "permalink":              { "type": "string" },
-            "seo_title":              { "type": ["string", "null"] },
-            "meta_description":       { "type": ["string", "null"] },
-            "focus_keyphrase":        { "type": ["string", "null"], "maxLength": 191 },
-            "canonical":              { "type": ["string", "null"] },
-            "is_cornerstone":         { "type": "boolean" },
-            "noindex":                { "type": ["boolean", "null"] },
-            "nofollow":               { "type": "boolean" },
-            "noimageindex":           { "type": "boolean" },
-            "noarchive":              { "type": "boolean" },
-            "nosnippet":              { "type": "boolean" },
-            "open_graph_title":       { "type": ["string", "null"] },
-            "open_graph_description": { "type": ["string", "null"] },
-            "twitter_title":          { "type": ["string", "null"] },
-            "twitter_description":    { "type": ["string", "null"] },
-            "schema_page_type":       { "type": ["string", "null"] },
-            "schema_article_type":    { "type": ["string", "null"] }
+            "post_id": {
+                "type": "integer",
+                "description": "The ID of the post to update.",
+                "minimum": 1
+            },
+            "permalink": {
+                "type": "string",
+                "description": "The permalink (URL) of the post to update."
+            },
+            "seo_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "meta_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "focus_keyphrase": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "maxLength": 191
+            },
+            "canonical": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "is_cornerstone": {
+                "type": "boolean"
+            },
+            "noindex": {
+                "type": [
+                    "boolean",
+                    "null"
+                ],
+                "description": "Whether search engines should be told not to index this post. true sets noindex (the post is excluded from search results); false forces the post to be indexed; null clears the setting and falls back to the post-type default."
+            },
+            "nofollow": {
+                "type": "boolean"
+            },
+            "noimageindex": {
+                "type": "boolean"
+            },
+            "noarchive": {
+                "type": "boolean"
+            },
+            "nosnippet": {
+                "type": "boolean"
+            },
+            "open_graph_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "open_graph_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "twitter_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "twitter_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "schema_page_type": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Schema.org page type for the post. Must be one of the supported page types. Use null to clear it and fall back to the default.",
+                "enum": [
+                    "WebPage",
+                    "ItemPage",
+                    "AboutPage",
+                    "FAQPage",
+                    "QAPage",
+                    "ProfilePage",
+                    "ContactPage",
+                    "MedicalWebPage",
+                    "CollectionPage",
+                    "CheckoutPage",
+                    "RealEstateListing",
+                    "SearchResultsPage",
+                    "",
+                    null
+                ]
+            },
+            "schema_article_type": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Schema.org article type for the post. Must be one of the supported article types. Use null to clear it and fall back to the default.",
+                "enum": [
+                    "Article",
+                    "BlogPosting",
+                    "SocialMediaPosting",
+                    "NewsArticle",
+                    "AdvertiserContentArticle",
+                    "SatiricalArticle",
+                    "ScholarlyArticle",
+                    "TechArticle",
+                    "Report",
+                    "None",
+                    "",
+                    null
+                ]
+            }
         }
     },
     "output_schema": {
         "type": "object",
         "properties": {
-            "post_id":                         { "type": "integer" },
-            "post_title":                      { "type": ["string", "null"] },
-            "permalink":                       { "type": ["string", "null"] },
-            "post_type":                       { "type": "string" },
-            "post_status":                     { "type": ["string", "null"] },
-            "seo_title":                       { "type": ["string", "null"] },
-            "seo_title_rendered":              { "type": ["string", "null"] },
-            "meta_description":                { "type": ["string", "null"] },
-            "meta_description_rendered":       { "type": ["string", "null"] },
-            "focus_keyphrase":                 { "type": ["string", "null"] },
-            "canonical":                       { "type": ["string", "null"] },
-            "canonical_rendered":              { "type": ["string", "null"] },
-            "is_cornerstone":                  { "type": "boolean" },
-            "noindex":                         { "type": ["boolean", "null"] },
-            "nofollow":                        { "type": "boolean" },
-            "noimageindex":                    { "type": "boolean" },
-            "noarchive":                       { "type": "boolean" },
-            "nosnippet":                       { "type": "boolean" },
-            "open_graph_title":                { "type": ["string", "null"] },
-            "open_graph_title_rendered":       { "type": ["string", "null"] },
-            "open_graph_description":          { "type": ["string", "null"] },
-            "open_graph_description_rendered": { "type": ["string", "null"] },
-            "twitter_title":                   { "type": ["string", "null"] },
-            "twitter_title_rendered":          { "type": ["string", "null"] },
-            "twitter_description":             { "type": ["string", "null"] },
-            "twitter_description_rendered":    { "type": ["string", "null"] },
-            "schema_page_type":                { "type": ["string", "null"] },
-            "schema_article_type":             { "type": ["string", "null"] },
-            "seo_score":                       { "type": "string", "enum": ["na", "bad", "ok", "good"] },
-            "readability_score":               { "type": "string", "enum": ["na", "bad", "ok", "good"] },
-            "inclusive_language_score":        { "type": "string", "enum": ["na", "bad", "ok", "good"] }
+            "post_id": {
+                "type": "integer"
+            },
+            "post_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "permalink": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "post_type": {
+                "type": "string"
+            },
+            "post_status": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "seo_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "seo_title_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The SEO title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "meta_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "meta_description_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The meta description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "focus_keyphrase": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "canonical": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "canonical_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The canonical URL as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "is_cornerstone": {
+                "type": "boolean"
+            },
+            "noindex": {
+                "type": [
+                    "boolean",
+                    "null"
+                ],
+                "description": "Whether search engines are told not to index this post. true means noindex (the post is excluded from search results); false means the post is forced to be indexed; null means no setting is stored and the post-type default applies."
+            },
+            "nofollow": {
+                "type": "boolean"
+            },
+            "noimageindex": {
+                "type": "boolean"
+            },
+            "noarchive": {
+                "type": "boolean"
+            },
+            "nosnippet": {
+                "type": "boolean"
+            },
+            "open_graph_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "open_graph_title_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Open Graph title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "open_graph_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "open_graph_description_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Open Graph description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "twitter_title": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "twitter_title_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Twitter title as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "twitter_description": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "twitter_description_rendered": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "description": "The Twitter description as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+            },
+            "schema_page_type": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "schema_article_type": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "seo_score": {
+                "type": "string",
+                "enum": [
+                    "na",
+                    "bad",
+                    "ok",
+                    "good"
+                ],
+                "description": "The result of the SEO analysis that ran on the post when it was last saved."
+            },
+            "readability_score": {
+                "type": "string",
+                "enum": [
+                    "na",
+                    "bad",
+                    "ok",
+                    "good"
+                ],
+                "description": "The result of the readability analysis that ran on the post when it was last saved."
+            },
+            "inclusive_language_score": {
+                "type": "string",
+                "enum": [
+                    "na",
+                    "bad",
+                    "ok",
+                    "good"
+                ],
+                "description": "The result of the inclusive language analysis that ran on the post when it was last saved."
+            }
         }
     },
     "meta": {
@@ -364,6 +800,28 @@ The response is the full SEO data object for the post after the update, in the s
         "mcp": {
             "public": true
         }
+    },
+    "_links": {
+        "self": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities/yoast-seo/update-post-seo-data",
+                "targetHints": {
+                    "allow": [
+                        "GET"
+                    ]
+                }
+            }
+        ],
+        "collection": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities"
+            }
+        ],
+        "wp:action-run": [
+            {
+                "href": "https://basic.wordpress.test/wp-json/wp-abilities/v1/abilities/yoast-seo/update-post-seo-data/run"
+            }
+        ]
     }
 }
 ```

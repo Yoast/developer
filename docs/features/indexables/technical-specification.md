@@ -24,26 +24,26 @@ considered indexable objects. Of course a post has to _exist_ to be a valid Inde
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#ffffff', 'stroke':'#000'}}}%%
- flowchart TD
+flowchart TD
   Input([Post]) --> PTRegistered{Post <em>type</em> registered?}
-  PTRegistered == Yes ==>PTExcluded{Post <em>type</em> excluded<br/><a href='/features/indexables/indexables-filters/#post_types'>through filter</a>?}
-  PTRegistered -- No -->NoIndexable([Do <strong>not</strong> create an indexable])
-  PTExcluded -- Yes -->PTIncluded{Post <em>type</em> force included<br/><a href='/features/indexables/indexables-filters/#included_post_types'>through filter</a>?}
-  PTExcluded == No ==>PTPublic{Is the<br/>post <em>type</em> <code>public</code>?}
-  PTPublic == Yes ==>PTAttachment{Is the post<br/><em>type</em> <code>attachment</code>?}
-  PTPublic == No ==>PTIncluded
-  PTAttachment -- Yes -->AttDisabled{Are <a href='https://yoast.com/features/redirect-attachment-urls/'>attachment URLs<br/> disabled</a> in Yoast SEO?}
-  AttDisabled -- Yes -->PTIncluded
-  AttDisabled == No ==>PSRegistered{Post <em>status</em> registered?}
-  PTAttachment == No ==>PSRegistered
-  PSRegistered -- No -->NoIndexable
-  PSRegistered == Yes ==>PSPublic{Is the post<br/><em>status</em> <code>public</code>?}
-  PSPublic -- No -->IncludedNonPublishPostStatus{Post <em>status</em> one of:<br/><code>draft</code>, <code>pending</code>, <code>future</code>?}
-  PTIncluded == No -->NoIndexable
-  PTIncluded == Yes -->CreateIndexable
-  IncludedNonPublishPostStatus -- No -->NoIndexable
-  IncludedNonPublishPostStatus == Yes ==>CreateIndexable
-  PSPublic == Yes ==>CreateIndexable([Create an indexable])
+  PTRegistered -- Yes --> PTExcluded{Post <em>type</em> excluded<br/><a href='/features/indexables/indexables-filters/#post_types'>through filter</a>?}
+  PTRegistered -- No --> NoIndexable([Do <strong>not</strong> create an indexable])
+  PTExcluded -- Yes --> PTIncluded{Post <em>type</em> force included<br/><a href='/features/indexables/indexables-filters/#included_post_types'>through filter</a>?}
+  PTExcluded -- No --> PTPublic{Is the<br/>post <em>type</em> <code>public</code>?}
+  PTPublic -- Yes --> PTAttachment{Is the post<br/><em>type</em> <code>attachment</code>?}
+  PTPublic -- No --> PTIncluded
+  PTAttachment -- Yes --> AttDisabled{Are <a href='https://yoast.com/features/redirect-attachment-urls/'>attachment URLs<br/> disabled</a> in Yoast SEO?}
+  AttDisabled -- Yes --> PTIncluded
+  AttDisabled -- No --> PSRegistered{Post <em>status</em> registered?}
+  PTAttachment -- No --> PSRegistered
+  PSRegistered -- No --> NoIndexable
+  PSRegistered -- Yes --> PSPublic{Is the post<br/><em>status</em> <code>public</code>?}
+  PSPublic -- No --> IncludedNonPublishPostStatus{Post <em>status</em> one of:<br/><code>draft</code>, <code>pending</code>, <code>future</code>?}
+  PTIncluded -- No --> NoIndexable
+  PTIncluded -- Yes --> CreateIndexable([Create an indexable])
+  IncludedNonPublishPostStatus -- No --> NoIndexable
+  IncludedNonPublishPostStatus -- Yes --> CreateIndexable
+  PSPublic -- Yes --> CreateIndexable
   style Input fill:#ddf,stroke:#aaf,stroke-width:2px
   style NoIndexable fill:#ffcccc,stroke:#f00,stroke-width:2px
   style CreateIndexable fill:#ccffcc,stroke:#0f0,stroke-width:2px

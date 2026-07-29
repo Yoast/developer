@@ -1,3 +1,11 @@
+## 29/07/2026 07:17 (UTC)
+
+Release date: 2026-07-29
+
+#### Bugfixes
+
+* Fixes issue with creating duplicated Shopify subscriptions.
+
 ## 23/07/2026 10:59 (UTC)
 
 Release date: 2026-07-23

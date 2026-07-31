@@ -104,7 +104,7 @@ async function ChangelogPlugin( context, options ) {
 		...options,
 		archiveBasePath: null,
 		showReadingTime: false,
-		postsPerPage: 50,
+		postsPerPage: 20,
 		blogSidebarCount: 10,
 		blogSidebarTitle: "Recent releases",
 		blogListComponent: "@theme/ChangelogList",

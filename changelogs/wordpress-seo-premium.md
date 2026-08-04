@@ -1,3 +1,17 @@
+## 28.2
+
+Release date: 2026-08-04
+
+Yoast SEO 28.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where editing a redirect or saving the redirect settings would fail when the site was behind a proxy that strips the X-HTTP-Method-Override header.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.2.
+
 ## 28.1
 
 Release date: 2026-07-21

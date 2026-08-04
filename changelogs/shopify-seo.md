@@ -1,3 +1,11 @@
+## 04/08/2026 08:55 (UTC)
+
+Release date: 2026-08-04
+
+#### Bugfixes
+
+* Changes newsletter agreement checkbox content.
+
 ## 29/07/2026 07:17 (UTC)
 
 Release date: 2026-07-29

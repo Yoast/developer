@@ -1,3 +1,18 @@
+= 28.2 =
+
+Release date: 2026-08-04
+
+Yoast SEO 28.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the overall SEO score was lowered when the focus keyphrase did not consist of function words only. Props to [@faisalahammad](https://github.com/faisalahammad).
+* Fixes a bug where an uncaught fatal error was thrown in the post editor on sites using the OAuth connection to MyYoast, when the `AUTH_KEY` salt in wp-config.php was set to a non-string value.
+
+#### Other
+
+* Prevents Yoast SEO Abilities from being registered when indexables are disabled.
+
 = 28.1 =
 
 Release date: 2026-07-21

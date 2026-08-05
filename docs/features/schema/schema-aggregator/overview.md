@@ -66,18 +66,29 @@ The Schema Aggregator implements a dynamic caching strategy:
 
 ### Schemamap (XML map for structured data)
 
-The schemamap provides an XML index of all available schema endpoints:
+The schemamap provides an XML index of all available schema endpoints. Starting with Yoast SEO 28.3, the schemamap is accessible at two URLs:
+
+- **Site-root URL** (new in 28.3): `https://example.com/schemamap.xml` — a plain URL served by WordPress's rewrite layer, designed for AI crawlers and NLWeb-compliant consumers.
+- **REST endpoint**: `https://example.com/wp-json/yoast/v1/schema-aggregator/get-xml` — the original REST API path.
+
+Both URLs return the same cached XML document:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist>
-    <schema>
-        <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
-    </schema>
-    <schema>
-        <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
-    </schema>
-</schemalist>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url contentType="structuredData/schema.org">
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
+      <lastmod>2026-01-01T14:03:56Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url contentType="structuredData/schema.org">
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
+      <lastmod>2026-01-01T14:03:56Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>
 ```
 
 ### External source support

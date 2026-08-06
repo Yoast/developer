@@ -1,3 +1,11 @@
+## 06/08/2026 08:09 (UTC)
+
+Release date: 2026-08-06
+
+#### Bugfixes
+
+* Fixes issue with opening pages and blog post editor in some customers.
+
 ## 04/08/2026 08:55 (UTC)
 
 Release date: 2026-08-04

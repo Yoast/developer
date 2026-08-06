@@ -195,6 +195,28 @@ function filter_wpseo_sitemap_urlimages_front_page( $images ) {
 add_filter( 'wpseo_sitemap_urlimages_front_page', 'filter_wpseo_sitemap_urlimages_front_page' );
 ```
 
+## Performance
+
+### Disable cache priming for sitemap generation
+
+By default, Yoast SEO primes the post, term, and featured-image caches in bulk before generating each sitemap batch. This avoids one database query per post on setups without a persistent object cache, but can occasionally interfere with custom caching layers. Use this filter to opt out of the bulk priming when needed.
+
+```php
+<?php
+/**
+ * Disables bulk cache priming during XML sitemap generation.
+ *
+ * @param bool $disable Whether to disable cache priming. Defaults to false.
+ *
+ * @return bool
+ */
+function disable_sitemap_cache_priming( $disable ) {
+    return true;
+}
+
+add_filter( 'wpseo_disable_xml_sitemap_cache_priming', 'disable_sitemap_cache_priming' );
+```
+
 ## Miscellaneous
 
 ### Alter the URL of an entry

@@ -9,6 +9,7 @@ export default {
 	title: "Yoast developer portal",
 	url: "https://developer.yoast.com",
 	baseUrl: "/",
+	clientModules: [ require.resolve("./src/clientModules/noChangelogPreload.js") ],
 
 	favicon: "img/favicon.png",
 	trailingSlash: true,

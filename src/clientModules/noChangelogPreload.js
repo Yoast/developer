@@ -11,11 +11,16 @@
  */
 
 if (typeof document !== 'undefined') {
+  const MAX_ATTEMPTS = 60; // ~1s at 60fps
+
   /**
-   * Patches window.docusaurus — must be called after it's initialized.
+   * Patches window.docusaurus — retries until it's initialized.
    */
-  function patch() {
+  function patch(attempt = 0) {
     if (!window.docusaurus) {
+      if (attempt < MAX_ATTEMPTS) {
+        requestAnimationFrame(() => patch(attempt + 1));
+      }
       return;
     }
 
@@ -44,7 +49,7 @@ if (typeof document !== 'undefined') {
   }
 
   // window.docusaurus may not exist yet when clientModules are evaluated
-  // (webpack static import hoisting). Defer with requestAnimationFrame so
-  // clientEntry.js has had a chance to set it up.
-  requestAnimationFrame(patch);
+  // (webpack static import hoisting). Defer with requestAnimationFrame and
+  // retry until ready so clientEntry.js has had a chance to set it up.
+  requestAnimationFrame(() => patch());
 }

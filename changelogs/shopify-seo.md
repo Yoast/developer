@@ -1,3 +1,11 @@
+## 12/08/2026 08:03 (UTC)
+
+Release date: 2026-08-12
+
+#### Bugfixes
+
+* Fixes issue with loading page/blog posts editor for some customers.
+
 ## 06/08/2026 08:09 (UTC)
 
 Release date: 2026-08-06

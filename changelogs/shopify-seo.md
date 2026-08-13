@@ -1,3 +1,11 @@
+## 13/08/2026 12:29 (UTC)
+
+Release date: 2026-08-13
+
+#### Bugfixes
+
+* Updates Shopify API version to new one.
+
 ## 12/08/2026 08:03 (UTC)
 
 Release date: 2026-08-12

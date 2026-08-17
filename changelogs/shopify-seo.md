@@ -1,3 +1,11 @@
+## 17/08/2026 07:52 (UTC)
+
+Release date: 2026-08-17
+
+#### Bugfixes
+
+* Fixes issue with background change during loading animation.
+
 ## 13/08/2026 12:29 (UTC)
 
 Release date: 2026-08-13

@@ -1,3 +1,24 @@
+## 28.3
+
+Release date: 2026-08-18
+
+Yoast SEO 28.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Improves the performance of the SEO optimization, by warming post and term cache when building data for the prominent words of the website.
+
+#### Bugfixes
+
+* Fixes a bug where the editor would not scroll to the changes proposed by Yoast AI Optimize in WordPress 6.9 and higher.
+* Fixes a bug where users without permission to manage redirects could delete existing redirects.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.3.
+* Sets the minimum supported WordPress version to 6.9.
+* Sets the _WordPress tested up to_ version to 7.1.
+
 ## 28.2
 
 Release date: 2026-08-04

@@ -1,3 +1,26 @@
+= 28.3 =
+
+Release date: 2026-08-18
+
+Yoast SEO 28.3 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Adds a schemamap.xml file at the site root that exposes the aggregated schema map.
+* Adds the failing object's type and ID to the SEO data optimization error report when an indexable cannot be built.
+* Improves performance when running the SEO optimization by warming post and term caches in bulk.
+* Improves the performance of generating XML sitemaps by warming post, term and featured-image caches in bulk.
+
+#### Bugfixes
+
+* Fixes a bug where the AI Content Planner inserted an empty paragraph block before the template blocks when a post type had a block template registered.
+
+#### Other
+
+* Adds a first-time guided tour to the bulk editor.
+* Sets the minimum supported WordPress version to 6.9.
+* Sets the _WordPress tested up to_ version to 7.1.
+
 = 28.2 =
 
 Release date: 2026-08-04

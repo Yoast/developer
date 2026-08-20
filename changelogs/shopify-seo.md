@@ -1,3 +1,11 @@
+## 20/08/2026 08:01 (UTC)
+
+Release date: 2026-08-20
+
+#### Bugfixes
+
+* Improves theme modifications process to prevent Shopify API Limits.
+
 ## 17/08/2026 07:52 (UTC)
 
 Release date: 2026-08-17

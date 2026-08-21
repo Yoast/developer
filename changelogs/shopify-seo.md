@@ -1,3 +1,11 @@
+## 21/08/2026 07:33 (UTC)
+
+Release date: 2026-08-21
+
+#### Bugfixes
+
+* Fixes issues with the theme modifications process to stop making unexpected file changes.
+
 ## 20/08/2026 08:01 (UTC)
 
 Release date: 2026-08-20

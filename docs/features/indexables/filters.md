@@ -140,3 +140,49 @@ To use indexables instead of content scanning to find all content images. Enable
 ```php
 add_filter( 'wpseo_force_creating_and_using_attachment_indexables', '__return_true' );
 ```
+
+## Observing indexing failures
+
+### wpseo_indexable_indexing_failed
+
+Fires when an indexable cannot be built because of an unexpected error. This lets third-party plugins observe and log build failures without catching exceptions in Yoast SEO's own call stack.
+
+The action fires once per failing object, after the error has already been logged internally. The original `$exception` is passed so you can inspect or forward it.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$object_id` | `int\|null` | The object ID of the indexable that failed to build, or `null` for id-less object types (home-page, system-page, date-archive, post-type-archive). |
+| `$object_type` | `string` | The object type (e.g. `post`, `term`, `user`, `home-page`). |
+| `$object_sub_type` | `string\|null` | The object sub type (e.g. a post type slug or taxonomy name), or `null` when not applicable. |
+| `$exception` | `Throwable` | The error that caused the build to fail. |
+
+**Example:**
+
+```php
+<?php
+/**
+ * Forwards indexable build failures to a custom error-tracking service.
+ *
+ * @param int|null    $object_id       The object ID, or null for id-less types.
+ * @param string      $object_type     The object type (e.g. 'post', 'term').
+ * @param string|null $object_sub_type The object sub type (e.g. post type slug).
+ * @param Throwable   $exception       The error that caused the failure.
+ *
+ * @return void
+ */
+function track_indexable_build_failure( $object_id, $object_type, $object_sub_type, $exception ) {
+    $context = [
+        'object_id'       => $object_id,
+        'object_type'     => $object_type,
+        'object_sub_type' => $object_sub_type,
+        'message'         => $exception->getMessage(),
+    ];
+
+    // Replace with your own error-tracking call.
+    error_log( 'Yoast SEO indexable build failed: ' . wp_json_encode( $context ) );
+}
+
+add_action( 'wpseo_indexable_indexing_failed', 'track_indexable_build_failure', 10, 4 );
+```

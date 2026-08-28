@@ -72,7 +72,7 @@ class Book  {
 	public function generate() {
 
 		$canonical = YoastSEO()->meta->for_current_page()->canonical;
-		$post_id = YoastSEO()->meta->for_current_page()->post_id;
+		$post_id = YoastSEO()->meta->for_current_page()->id;
 
 		// Set the type.
 		$data['@type'] = 'Book';

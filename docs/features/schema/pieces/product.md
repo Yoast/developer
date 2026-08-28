@@ -27,7 +27,7 @@ If the node is not output, any entities which would otherwise have declared them
 ## Optional properties
 The following should be added whenever available and valid:
 
-* `offers`: An array of references-by-ID to one or more `Offer` or `AggregateOffer` pieces.
+* `offers`: A reference by ID to an `Offer` or `AggregateOffer` piece.
 * `brand`: A reference to an `Organization` piece, representing brand associated with the `Product`.
 * `seller`: A reference to an `Organization` piece which represents the `WebSite.`
 * `description`: A text description of the product.

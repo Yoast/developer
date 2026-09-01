@@ -1,3 +1,18 @@
+## 15.9
+
+Release date: 2026-09-01
+
+#### Bugfixes
+
+* Fixes a bug where a `TypeError: Cannot read properties of undefined (reading 'getCurrentPostType')` was thrown when adding a Local Address or Opening Hours widget on the Appearance → Widgets screen.
+* Fixes a security bug where an SEO Manager could upload files of any type through the Local SEO CSV import.
+
+#### Other
+
+* Bumps the minimum required Yoast SEO version to 28.4.
+* Sets the minimum supported WordPress version to 6.9.
+* Sets the _WordPress tested up to_ version to 7.1.
+
 ## 15.8
 
 Release date: 2026-03-31

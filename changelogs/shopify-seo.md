@@ -1,3 +1,13 @@
+## 01/09/2026 09:02 (UTC)
+
+Release date: 2026-09-01
+
+#### Enhancements
+
+* Adds a status indicator for the activation status of SEO metatags & schema app embed.
+* Adds setup instructions and theme editor deep links for the "SEO metatags & schema" app embed.
+* Adds setup instructions for the "Yoast SEO Breadcrumbs" block.
+
 ## 21/08/2026 07:33 (UTC)
 
 Release date: 2026-08-21

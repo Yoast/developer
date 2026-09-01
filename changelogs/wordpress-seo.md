@@ -1,3 +1,17 @@
+= 28.4 =
+
+Release date: 2026-09-01
+
+Yoast SEO 28.4 makes the Bulk editor easier to access by adding a Bulk edit option to the Posts and Pages sections of the WordPress dashboard. This allows you to quickly access the Bulk editor after selecting the posts or pages you want to optimize. [Read the full release post here](https://yoa.st/57m).
+
+#### Enhancements
+
+* Adds an option to access the Yoast SEO Bulk editor from the Bulk actions menu in the Posts and Pages sections of the WordPress dashboard. 
+
+#### Bugfixes
+
+* Fixes a bug where the AI generator's tip to write more content was not shown for posts whose content consisted mostly of block markup, because the markup was counted as content.
+
 = 28.3 =
 
 Release date: 2026-08-18

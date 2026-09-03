@@ -1,3 +1,11 @@
+## 03/09/2026 08:01 (UTC)
+
+Release date: 2026-09-03
+
+#### Bugfixes
+
+* Fixes issues with shop overview data fetch.
+
 ## 01/09/2026 09:02 (UTC)
 
 Release date: 2026-09-01

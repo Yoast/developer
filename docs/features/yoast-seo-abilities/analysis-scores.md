@@ -20,7 +20,7 @@ All three take the same input and return the same shape, with one exception: the
 All three are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 
 ## Annotations
-Each ability declares a set of [behavior annotations](overview.md#annotations) — read-only, destructive, and idempotent — as hints for AI agents and other MCP clients. All three score abilities share the same values:
+Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients. All three score abilities share the same values:
 
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|

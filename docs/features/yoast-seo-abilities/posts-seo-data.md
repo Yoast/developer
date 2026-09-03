@@ -17,22 +17,22 @@ Yoast SEO registers two abilities for working with the SEO data of individual po
 Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 
 ## Permissions
-Unlike the [Analysis scores](analysis-scores.md) abilities, which are gated behind the Yoast SEO management capability (`wpseo_manage_options`), these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`) — the same capability that gates the advanced and schema fields in the editor. On top of that, per-post edit access is always enforced: only posts the current user is allowed to edit are ever returned or updated.
+Unlike the [Analysis scores](analysis-scores.md) abilities, which are gated behind the Yoast SEO management capability (`wpseo_manage_options`), these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`), the same capability that gates the advanced and schema fields in the editor. On top of that, per-post edit access is always enforced: only posts the current user is allowed to edit are ever returned or updated.
 
 ## Annotations
-Each ability declares a set of [behavior annotations](overview.md#annotations) — read-only, destructive, and idempotent — as hints for AI agents and other MCP clients:
+Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients:
 
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|
 | `yoast-seo/get-post-seo-data` | Yes | No | Yes |
 | `yoast-seo/update-post-seo-data` | No | No | Yes |
 
-`update-post-seo-data` is not read-only, since it writes post data. It is non-destructive because it only edits the post's SEO metadata fields — it never deletes the post or its content — so a change is always bounded to those fields rather than a wholesale, irreversible operation. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
+`update-post-seo-data` is not read-only, since it writes post data. It is non-destructive because it only edits the post's SEO metadata fields (it never deletes the post or its content) so a change is always bounded to those fields rather than a wholesale, irreversible operation. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
 
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.
 
-`get-post-seo-data` additionally accepts a `title` search, which `update-post-seo-data` deliberately does not: an update must target a single, unambiguous post.
+`get-post-seo-data` additionally accepts a `title` search, which `update-post-seo-data` deliberately does not, since an update must target a single, unambiguous post. That way, users can describe in human language what post they want data for and the ability will can find it quickly and efficiently.
 
 ## `get-post-seo-data`
 Reads the SEO data for one or more posts.
@@ -42,8 +42,14 @@ Provide at least one of the following:
 
 * `post_id` – the ID of the post to retrieve. An integer of 1 or higher.
 * `permalink` – the permalink (URL) of the post to retrieve.
-* `title` – keywords to search for in post titles. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page.
-* `page` – the page of title-search results to return, 1-based and defaulting to 1. Matches are ordered most recently modified first, so request a later page to reach older matches. An empty result means there are no further pages. Only applies to a `title` search.
+* `title` – keywords to search for in post titles. 
+  * A comma-separated list to search for several titles at once is expected
+  * each value is matched as a whole phrase against the post title, and a post matching any value is returned. 
+  * At most 10 phrases are used per request; any beyond the first 10 are ignored. 
+  * Results are paginated to 10 entities per page.
+* `page` – the page of title-search results to return, 1-based and defaulting to 1. 
+  * Matches are ordered most recently modified first, so request a later page to reach older matches. 
+  * An empty result means there are no further pages. Only applies to a `title` search.
 
 ### Output
 Returns an array of [post SEO data objects](#the-post-seo-data-object), one per matched post. A lookup by `post_id` or `permalink` returns at most one object.

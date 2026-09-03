@@ -19,6 +19,16 @@ Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 ## Permissions
 Unlike the [Analysis scores](analysis-scores.md) abilities, which are gated behind the Yoast SEO management capability (`wpseo_manage_options`), these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`) — the same capability that gates the advanced and schema fields in the editor. On top of that, per-post edit access is always enforced: only posts the current user is allowed to edit are ever returned or updated.
 
+## Annotations
+Each ability declares a set of [behavior annotations](overview.md#annotations) — read-only, destructive, and idempotent — as hints for AI agents and other MCP clients:
+
+| Ability | Read-only | Destructive | Idempotent |
+|---|---|---|---|
+| `yoast-seo/get-post-seo-data` | Yes | No | Yes |
+| `yoast-seo/update-post-seo-data` | No | No | Yes |
+
+`update-post-seo-data` is not read-only, since it writes post data. It is non-destructive because it only edits the post's SEO metadata fields — it never deletes the post or its content — so a change is always bounded to those fields rather than a wholesale, irreversible operation. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
+
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.
 
@@ -100,7 +110,7 @@ Doing so might yield the following result:
 ## `update-post-seo-data`
 Updates the SEO data for a single post.
 
-Only the fields you provide are changed; every other field is left untouched. A provided empty value (`""` or `null`, depending on the field) clears that field and lets Yoast SEO fall back to its default. Because a repeated call with the same input produces the same result, the ability is idempotent.
+Only the fields you provide are changed; every other field is left untouched. A provided empty value (`""` or `null`, depending on the field) clears that field and lets Yoast SEO fall back to its default.
 
 ### Input
 Identify the post with `post_id` **or** `permalink` (a `title` search is not accepted here), then provide any of the writable fields you want to change:

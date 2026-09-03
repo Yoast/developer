@@ -19,6 +19,17 @@ All three take the same input and return the same shape, with one exception: the
 
 All three are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 
+## Annotations
+Each ability declares a set of [behavior annotations](overview.md#annotations) — read-only, destructive, and idempotent — as hints for AI agents and other MCP clients. All three score abilities share the same values:
+
+| Ability | Read-only | Destructive | Idempotent |
+|---|---|---|---|
+| `yoast-seo/get-seo-scores` | Yes | No | Yes |
+| `yoast-seo/get-readability-scores` | Yes | No | Yes |
+| `yoast-seo/get-inclusive-language-scores` | Yes | No | Yes |
+
+Being read-only, they never modify your content; the destructive and idempotent hints are included for completeness but carry no practical weight for a read-only ability.
+
 ## Input
 Each ability takes a single optional argument:
 

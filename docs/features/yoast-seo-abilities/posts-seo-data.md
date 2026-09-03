@@ -25,9 +25,9 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|
 | `yoast-seo/get-post-seo-data` | Yes | No | Yes |
-| `yoast-seo/update-post-seo-data` | No | No | Yes |
+| `yoast-seo/update-post-seo-data` | No | Not declared (`null`) | Yes |
 
-`update-post-seo-data` is not read-only, since it writes post data. It is non-destructive because it only edits the post's SEO metadata fields (it never deletes the post or its content) so a change is always bounded to those fields rather than a wholesale, irreversible operation. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
+`update-post-seo-data` is not read-only, since it writes post data. Its destructive hint is left undeclared (`null`) rather than `false`: although the ability only edits Yoast's SEO metadata fields and never touches the post's content, writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
 
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.
@@ -377,7 +377,7 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
     "meta": {
         "annotations": {
             "readonly": false,
-            "destructive": false,
+            "destructive": null,
             "idempotent": true
         },
         "show_in_rest": true,

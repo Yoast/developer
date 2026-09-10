@@ -1,3 +1,11 @@
+## 10/09/2026 08:00 (UTC)
+
+Release date: 2026-09-10
+
+#### Bugfixes
+
+* Fixes issue with pulling indexables for stores with big amount of events.
+
 ## 03/09/2026 08:01 (UTC)
 
 Release date: 2026-09-03

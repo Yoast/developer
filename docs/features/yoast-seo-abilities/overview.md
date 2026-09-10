@@ -16,13 +16,26 @@ Abilities API is a standardized way for plugins to expose what they can do, [int
 Once an ability is registered, it is discoverable and executable from PHP, JavaScript, and the REST API. That way, AI agents (and other third-party systems) can use that ability for their purposes.
 
 ## Yoast SEO Abilities
-Yoast SEO currently registers three read-only abilities that return the scores of its content analyses for the most recently modified posts:
+Yoast SEO registers the following abilities:
 
-* The SEO analysis score
-* The readability analysis score
-* The inclusive language analysis score
+* Three **read-only** [Analysis scores](analysis-scores.md) abilities that return the scores of its content analyses for the most recently modified posts:
+  * the SEO analysis score
+  * the readability analysis score
+  * the inclusive language analysis score.
+* Two abilities [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts
+  * one that **reads** a post's SEO data 
+  * one that **updates** it.
 
-All three are documented on the [Analysis scores](analysis-scores.md) page. They can also be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
+They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
+
+## Annotations
+Every ability declares a set of behavior annotations in its `meta.annotations`. They are hints (primarily for AI agents and other MCP clients) describing how the ability behaves, so a client can reason about how risky it is to call:
+
+* **Read-only** – when `true`, the ability only reads data and never changes anything on your site.
+* **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes are additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
+* **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input has no further effect beyond the first call.
+
+The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations) and [Post's SEO data](posts-seo-data.md#annotations).
 
 ## Use cases for the Yoast SEO Abilities
 
@@ -32,10 +45,18 @@ Assuming that an AI agent is connected to a WordPress-enabled MCP site (details 
 * _"Do you see the readability of my recent content going upwards or downwards?"_
 * _"I want to know if I have content on my site that uses non-inclusive language. If there's indeed not inclusive language in my content, do you see a correlation between the subjects covered?"_
 
-That way, Yoast SEO exposes the results of its analyses to authenticated AI agents, enabling users to use AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
+Beyond reading analysis scores, the agent can also read and update the SEO data of individual posts, answering requests like:
+* _"Show me the SEO settings for the post at https://example.com/homemade-sourdough-bread/. Is it set to be indexed?"_
+* _"Mark my post about sourdough bread as cornerstone content and set its canonical URL to https://example.com/sourdough/."_
+* _"Noindex the post with ID 42."_
+* Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_ 
+
+That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents, enabling users to use AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 
 ### Third-party code
-For plugins interested in building features on top of Yoast SEO Analyses, a more traditional way to consume the Yoast SEO Abilities would be to use the new WP REST API endpoints. This allows information about a website's recent posts to be reliably retrieved in a structured way.
+AI agents are not the only consumers. Plugins and other integrations can call the same abilities directly through the WP REST API, without any AI in the loop, by sending requests to each ability's `/run` endpoint. 
+
+Because every ability declares structured input and output schemas, this gives integrators a reliable, versioned way to read a site's analysis scores and post SEO data, and to update that SEO data, in a predictable shape, rather than depending on Yoast SEO's internal storage.
 
 ## Prerequisites
 * WordPress 6.9 or higher.

@@ -1,3 +1,18 @@
+= 28.5 =
+
+Release date: 2026-09-15
+
+Yoast SEO 28.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the SEO data optimization would loop endlessly when an indexing batch was repeatedly returned without being processed.
+
+#### Other
+
+* Adds a link with more information about social previews to the social appearance sections of the editor.
+* Updates the plugin's app URL and logo that are used when initiating the MyYoast connection.
+
 = 28.4 =
 
 Release date: 2026-09-01

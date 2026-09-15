@@ -1,3 +1,22 @@
+## 16.9
+
+Release date: 2026-09-15
+
+#### Enhancements
+
+* Improves Schema generation performance for variable products with multiple images.
+
+#### Bugfixes
+
+* Fixes a bug where the Schema of product variations showed raw prices not taking into account WooCommerce VAT settings.
+* Fixes a bug where the XML sitemap could fail to generate when products hidden from the catalog were combined with another plugin or theme that also filtered sitemap entries.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.5.
+* Sets the minimum supported WordPress version to 6.9.
+* Sets the _WordPress tested up to_ version to 7.1.
+
 ## 16.8
 
 Release date: 2026-03-31

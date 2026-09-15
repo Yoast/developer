@@ -1,3 +1,19 @@
+## 28.5
+
+Release date: 2026-09-15
+
+Yoast SEO 28.5 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where the editor was unresponsive when WooCommerce's experimental block-based email editor was enabled.
+* Fixes a bug where the SEO data optimization looped endlessly when the prominent words indexation script failed to initialize.
+* Fixes a bug where all prominent words were saved instead of the configured per-indexable limit.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.5.
+
 ## 28.4
 
 Release date: 2026-09-01

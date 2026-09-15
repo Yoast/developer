@@ -1,3 +1,17 @@
+## 15.3
+
+Release date: 2026-09-15
+
+#### Bugfixes
+
+* Fixes a bug where a crafted YouTube embed block ran JavaScript in the visitor's browser when the YouTube faster embed option was enabled.
+
+#### Other
+
+* Sets the minimum required Yoast SEO version to 28.5.
+* Sets the minimum supported WordPress version to 6.9.
+* Sets the _WordPress tested up to_ version to 7.1.
+
 ## 15.2
 
 Release date: 2026-04-28

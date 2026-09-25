@@ -43,8 +43,8 @@ Provide at least one of the following:
 * `post_id` – the ID of the post to retrieve. An integer of 1 or higher.
 * `permalink` – the permalink (URL) of the post to retrieve.
 * `title` – keywords to search for in post titles. 
-  * A comma-separated list to search for several titles at once is expected
-  * each value is matched as a whole phrase against the post title, and a post matching any value is returned. 
+  * Pass a single phrase, or a comma-separated list to search for several titles at once. 
+  * Each value is matched as a whole phrase against the post title, and a post matching any value is returned. 
   * At most 10 phrases are used per request; any beyond the first 10 are ignored. 
   * Results are paginated to 10 entities per page.
 * `page` – the page of title-search results to return, 1-based and defaulting to 1. 

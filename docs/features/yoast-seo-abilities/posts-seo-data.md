@@ -184,7 +184,7 @@ Both abilities return the same object (`get-post-seo-data` inside an array, `upd
 | `canonical_rendered` | string \| null | The canonical URL as output on the front end. |
 | `is_cornerstone` | boolean | Whether the post is marked as cornerstone content. |
 | `noindex` | boolean \| null | Whether search engines are told not to index this post. `true` means noindex, `false` forces indexing, `null` means the post-type default applies. |
-| `nofollow` | boolean | Whether links on the post are not to be followed. |
+| `nofollow` | boolean | Whether links in the post are not to be followed. |
 | `noimageindex` | boolean | Whether images in the post are not to be indexed. |
 | `noarchive` | boolean | Whether search engines are told not to show a cached copy. |
 | `nosnippet` | boolean | Whether search engines are told not to show a snippet. |

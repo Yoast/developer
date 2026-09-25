@@ -7,7 +7,7 @@ description: This documentation explains the abilities that read and update the 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Yoast SEO registers two abilities for working with the SEO data of individual posts: one to read it and one to update it.
+Yoast SEO registers two abilities to work with the SEO data of individual posts: one to read it and one to update it.
 
 | Ability | Type | Returns |
 |---|---|---|

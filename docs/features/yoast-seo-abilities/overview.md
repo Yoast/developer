@@ -31,9 +31,9 @@ They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast
 ## Annotations
 Every ability declares a set of behavior annotations in its `meta.annotations`. They are hints (primarily for AI agents and other MCP clients) describing how the ability behaves, so a client can reason about how risky it is to call:
 
-* **Read-only** – when `true`, the ability only reads data and never changes anything on your site.
-* **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes are additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
-* **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input has no further effect beyond the first call.
+* **Read-only** – when `true`, the ability should only read data and never change anything on your site.
+* **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
+* **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
 The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations) and [Post's SEO data](posts-seo-data.md#annotations).
 

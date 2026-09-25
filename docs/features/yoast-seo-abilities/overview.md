@@ -56,7 +56,7 @@ That way, Yoast SEO exposes both the results of its analyses and the SEO data of
 ### Third-party code
 AI agents are not the only consumers: plugins and other integrations can call the same abilities directly through the ability WP REST API `/run` endpoint, without any AI in the loop.
 
-Because every ability declares structured input and output schemas, this gives integrators a reliable, versioned way to read a site's analysis scores and post SEO data, and to update that SEO data, in a predictable shape, rather than depending on Yoast SEO's internal storage.
+Every ability declares structured input and output schemas providing consumers a reliable, versioned way to read and update a site's analysis scores and post SEO data in a predictable shape, rather than depending on Yoast SEO's internal storage.
 
 ## Prerequisites
 * WordPress 6.9 or higher.

@@ -54,7 +54,7 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 
 ### Third-party code
-AI agents are not the only consumers. Plugins and other integrations can call the same abilities directly through the WP REST API, without any AI in the loop, by sending requests to each ability's `/run` endpoint. 
+AI agents are not the only consumers: plugins and other integrations can call the same abilities directly through the ability WP REST API `/run` endpoint, without any AI in the loop.
 
 Because every ability declares structured input and output schemas, this gives integrators a reliable, versioned way to read a site's analysis scores and post SEO data, and to update that SEO data, in a predictable shape, rather than depending on Yoast SEO's internal storage.
 

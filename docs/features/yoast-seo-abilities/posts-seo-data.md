@@ -125,7 +125,7 @@ Identify the post with `post_id` **or** `permalink` (a `title` search is not acc
 * `is_cornerstone` – whether the post is marked as cornerstone content. A boolean.
 * `noindex` – whether search engines should be told not to index this post. `true` sets noindex (the post is excluded from search results); `false` forces the post to be indexed; `null` clears the setting and falls back to the post-type default.
 * `nofollow` – whether links in the post should not be followed. A boolean.
-* `noimageindex` – whether images on the post should not be indexed. A boolean.
+* `noimageindex` – whether images in the post should not be indexed. A boolean.
 * `noarchive` – whether search engines should not show a cached copy of the post. A boolean.
 * `nosnippet` – whether search engines should not show a snippet of the post in search results. A boolean.
 * `schema_page_type` – the Schema.org page type for the post. Must be one of the supported page types, or an empty string / `null` to clear it and fall back to the default.

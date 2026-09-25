@@ -189,7 +189,7 @@ Both abilities return the same object (`get-post-seo-data` inside an array, `upd
 | `noarchive` | boolean | Whether search engines are told not to show a cached copy. |
 | `nosnippet` | boolean | Whether search engines are told not to show a snippet. |
 | `open_graph_title` | string \| null | The custom Open Graph title. |
-| `open_graph_title_rendered` | string \| null | The Open Graph title as output on the front end. |
+| `open_graph_title_rendered` | string \| null | The Open Graph title as output in the front end. |
 | `open_graph_description` | string \| null | The custom Open Graph description. |
 | `open_graph_description_rendered` | string \| null | The Open Graph description as output on the front end. |
 | `twitter_title` | string \| null | The custom Twitter title. |

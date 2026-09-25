@@ -131,7 +131,7 @@ Identify the post with `post_id` **or** `permalink` (a `title` search is not acc
 * `schema_page_type` – the Schema.org page type for the post. Must be one of the supported page types, or an empty string / `null` to clear it and fall back to the default.
 * `schema_article_type` – the Schema.org article type for the post. Must be one of the supported article types, or an empty string / `null` to clear it and fall back to the default.
 
-The Schema page and article types accepted are exactly the ones the editor accepts, including any registered through the `wpseo_schema_article_types` filter. Supplying a value outside that set returns an error and changes nothing.
+The valid Schema page and article types are exactly the ones the editor accepts, including any type registered through the `wpseo_schema_article_types` filter. Supplying a value outside that set returns an error and changes nothing.
 
 ### Output
 Returns the single, updated [post SEO data object](#the-post-seo-data-object), reflecting the state of the post after the update. This is the same shape as one entry of the `get-post-seo-data` array, so you can immediately confirm what was written.

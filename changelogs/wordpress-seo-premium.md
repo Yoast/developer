@@ -1,3 +1,15 @@
+## 28.6
+
+Release date: 2026-09-29
+
+#### Bugfixes
+
+* Fixes a bug where the bulk editor still started an AI generation request when the SEO analysis was disabled.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.6.
+
 ## 28.5
 
 Release date: 2026-09-15

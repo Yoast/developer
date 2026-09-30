@@ -1,3 +1,16 @@
+## 30/09/2026 10:44 (UTC)
+
+Release date: 2026-09-30
+
+#### Enhancements
+
+* Introduce a link to the MyYoast subscription details.
+* Introduces an offer for the new Yoast SEO AI+ for Shopify plan, including Yoast AI Brand Insights.
+
+#### Bugfixes
+
+*  Fixes a bug where switching to a cheaper plan or from annual to monthly billing only took effect at the end of the current billing period.
+
 ## 10/09/2026 08:00 (UTC)
 
 Release date: 2026-09-10

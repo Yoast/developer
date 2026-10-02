@@ -1,3 +1,11 @@
+## 02/10/2026 06:27 (UTC)
+
+Release date: 2026-10-02
+
+#### Bugfixes
+
+* Fixes a bug where existing subscriptions were never linked to their MyYoast subscription, caused by the backfill job exhausting the worker's memory and being redelivered indefinitely.
+
 ## 30/09/2026 10:44 (UTC)
 
 Release date: 2026-09-30

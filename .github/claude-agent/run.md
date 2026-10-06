@@ -42,6 +42,8 @@ Everything else in this prompt applies identically in both modes.
 
 ### Step 1 — Triage
 
+If `$BUNDLE_DIR/<source-repo>/watched-hits.txt` exists, the workflow invoked you (at least partly) because the RC changed files under a watch path, even if the diff adds no new hooks, REST routes or CLI commands. It lists those files, one per line. Start your triage with their hunks and check them against the area whose `source_paths` cover them. If they don't change the documented surface, that area gets 0 PRs.
+
 Read `AGENT_MAP.md`. For every hunk in every `rc.diff.filtered`:
 
 - Map the source path to an area via the area's `source_paths`.
@@ -80,14 +82,16 @@ For each candidate item that would otherwise produce a PR plan, apply this discr
 
 1. **Authoritative override — `@internal` annotation.** If the registering call's surrounding PHPDoc, the registering method's docblock, or the registering class's docblock contains an `@internal` tag, treat the item as internal. Do NOT document. Note in the run summary's "Internal surface skipped" section (see Step 4).
 
-2. **Heuristic — permission callback.** For `register_rest_route(...)`, read the `permission_callback`. If it enforces a logged-in admin capability check (`current_user_can('manage_options')`, `current_user_can('edit_posts')`, `current_user_can('wpseo_manage_options')`, similar) without an unauthenticated branch, treat the route as **likely internal**. Don't document; flag in "Internal surface skipped" with the callback as evidence.
+2. **Public by design — WordPress Abilities.** Abilities registered via `wp_register_ability(...)` (and their categories, via `wp_register_ability_category(...)`) are public by design: the Abilities API exists to expose them to external consumers (AI agents, MCP clients, other plugins). Treat them as **public** regardless of the path/class heuristics below — e.g. Yoast SEO registers its abilities in `src/abilities/user-interface/` because of its onion-architecture layout, not because they are internal. A `permission_callback` that checks a capability is likewise expected for abilities and is NOT an internal signal. Only an `@internal` annotation (rule 1) overrides this. See the `yoast-seo-abilities` area in `AGENT_MAP.md` for the docs paths.
 
-3. **Heuristic — file-path/class-name signals.** Default-to-internal when the registration lives in any of these:
+3. **Heuristic — permission callback.** For `register_rest_route(...)`, read the `permission_callback`. If it enforces a logged-in admin capability check (`current_user_can('manage_options')`, `current_user_can('edit_posts')`, `current_user_can('wpseo_manage_options')`, similar) without an unauthenticated branch, treat the route as **likely internal**. Don't document; flag in "Internal surface skipped" with the callback as evidence.
+
+4. **Heuristic — file-path/class-name signals.** Default-to-internal when the registration lives in any of these:
    - File path contains `/admin/`, `/user-interface/`, `*-admin-*`, `*-internal-*`.
    - Class name contains `Admin_`, `Internal_`, ends with `_Admin_Route` / `_UI_Route`.
    - Registration is from a class that extends a known internal base (e.g. `Yoast\WP\SEO\Admin\...`).
 
-4. **When in doubt, don't document.** False positives in the public-API direction are higher cost than false negatives. If the signals are mixed (e.g. neutral path but no `@internal` annotation and a `current_user_can` callback), prefer to skip and flag, rather than confidently document. The maintainer can ask the source-repo team and reverse the decision in a follow-up.
+5. **When in doubt, don't document.** False positives in the public-API direction are higher cost than false negatives. If the signals are mixed (e.g. neutral path but no `@internal` annotation and a `current_user_can` callback), prefer to skip and flag, rather than confidently document. The maintainer can ask the source-repo team and reverse the decision in a follow-up.
 
 Items skipped under this rule must be listed in the run summary under a heading **"Internal surface skipped"**, with one bullet per item: source path, symbol/route, and which signal fired (`@internal`, permission-callback heuristic, path/class heuristic, or "mixed signals"). Omit the heading entirely if no items were skipped.
 

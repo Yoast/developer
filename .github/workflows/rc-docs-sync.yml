@@ -87,6 +87,9 @@ jobs:
                   "display_name": "Yoast SEO",
                   "repos": ["Yoast/wordpress-seo"],
                   "tracking_issue_var": "TRACKING_ISSUE_WORDPRESS_SEO",
+                  # Any change under these path prefixes invokes the agent, even
+                  # when the diff adds no new hooks, REST routes or CLI commands.
+                  "watch_paths": ["src/abilities/"],
               },
           }
 
@@ -233,6 +236,7 @@ jobs:
                       "prev_kind": prev_kind,
                       "tracking_issue": tracking_issue,
                       "superseded_rcs": superseded_by_latest.get(rc_tag, []),
+                      "watch_paths": product.get("watch_paths", []),
                   })
 
           print(json.dumps({"queue": queue, "seeds": seed_actions}))
@@ -420,10 +424,11 @@ jobs:
       # ---------------------------------------------------------------------
       # Pre-agent fast-path: when the filtered diff is non-empty but contains
       # no new public surface (no new register_rest_route / WP_CLI::add_command
-      # / apply_filters / do_action calls referencing undocumented symbols),
-      # post a "no doc changes" marker and skip the Claude agent invocation
-      # entirely. Catches the common case where a small RC contains only
-      # internal refactors / JS-only changes / version bumps.
+      # / apply_filters / do_action calls referencing undocumented symbols, and
+      # no changed files under the product's `watch_paths`), post a "no doc
+      # changes" marker and skip the Claude agent invocation entirely.
+      # Catches the common case where a small RC contains only internal
+      # refactors / JS-only changes / version bumps.
       #
       # Risk: misses behavior-only changes that don't introduce new symbols.
       # The agent prompt flags these as uncertain anyway; if this becomes a
@@ -440,11 +445,12 @@ jobs:
           BUNDLE_DIR: ${{ github.workspace }}/${{ steps.bundle.outputs.bundle_dir }}
           PREV_RELEASE: ${{ matrix.item.prev_release }}
           PREV_KIND: ${{ matrix.item.prev_kind }}
+          WATCH_PATHS: ${{ toJSON(matrix.item.watch_paths) }}
           WORKFLOW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import glob, os, re, sys
+          import glob, json, os, re, sys
 
           bundle_dir = os.environ['BUNDLE_DIR']
           rc_tag = os.environ['RC_TAG']
@@ -453,6 +459,8 @@ jobs:
           prev_kind = os.environ['PREV_KIND']
           product = os.environ['PRODUCT']
           run_url = os.environ['WORKFLOW_RUN_URL']
+          # `null` when the queue entry predates `watch_paths` (e.g. a re-run).
+          watch_paths = json.loads(os.environ.get('WATCH_PATHS') or '[]') or []
 
           # symbol-index.txt entries are quoted (e.g. 'wpseo_foo'); strip quotes.
           symbol_index = set()
@@ -467,12 +475,22 @@ jobs:
           HOOK_RE  = re.compile(r"(?:apply_filters|do_action)\s*\(\s*['\"]([A-Za-z_][A-Za-z0-9_]*)['\"]")
           ROUTE_RE = re.compile(r"register_rest_route\s*\(")
           CLI_RE   = re.compile(r"WP_CLI::add_command\s*\(")
+          DIFF_HEADER_RE = re.compile(r"^diff --git a/(\S+) b/(\S+)")
 
-          new_routes, new_cli, new_hook_symbols = [], [], set()
+          new_routes, new_cli, new_hook_symbols, watched_hits = [], [], set(), set()
           diff_files = sorted(glob.glob(os.path.join(bundle_dir, "*", "rc.diff.filtered")))
           for path in diff_files:
+              repo_hits = set()
               with open(path) as f:
                   for line in f:
+                      # Both sides of the header are checked so that deletions and
+                      # renames out of a watched path also count.
+                      header = DIFF_HEADER_RE.match(line)
+                      if header:
+                          for changed in header.groups():
+                              if any(changed.startswith(w) for w in watch_paths):
+                                  repo_hits.add(changed)
+                          continue
                       if not line.startswith('+') or line.startswith('+++'):
                           continue
                       body = line[1:]
@@ -484,8 +502,14 @@ jobs:
                           sym = m.group(1)
                           if sym not in symbol_index:
                               new_hook_symbols.add(sym)
+              # Tells the agent which watched files triggered it, so it can start
+              # its triage there instead of rediscovering them from the diff.
+              if repo_hits:
+                  with open(os.path.join(os.path.dirname(path), "watched-hits.txt"), "w") as wf:
+                      wf.write("\n".join(sorted(repo_hits)) + "\n")
+                  watched_hits |= repo_hits
 
-          has_public = bool(new_routes or new_cli or new_hook_symbols)
+          has_public = bool(new_routes or new_cli or new_hook_symbols or watched_hits)
           with open(os.environ['GITHUB_OUTPUT'], 'a') as gho:
               gho.write(f"has_public_surface={'true' if has_public else 'false'}\n")
 
@@ -499,6 +523,9 @@ jobs:
                   for l in new_cli[:5]: print(f"    {l}")
               if new_hook_symbols:
                   print(f"  new (undocumented) hook symbols: {sorted(new_hook_symbols)}")
+              if watched_hits:
+                  print(f"  changed files under watch paths {watch_paths}: {len(watched_hits)}")
+                  for p in sorted(watched_hits)[:10]: print(f"    {p}")
               sys.exit(0)
 
           # No new public surface — assemble the fast-path comment body.
@@ -532,7 +559,9 @@ jobs:
               "",
               "### Outcome: 0 PRs opened (fast-path)",
               "",
-              "The filtered diff contains no new `apply_filters` / `do_action` calls referencing undocumented symbols, no `register_rest_route(...)` registrations, and no `WP_CLI::add_command(...)` calls. Per the deterministic pre-agent fast-path, this RC introduces no public API surface and the Claude agent was not invoked.",
+              "The filtered diff contains no new `apply_filters` / `do_action` calls referencing undocumented symbols, no `register_rest_route(...)` registrations, no `WP_CLI::add_command(...)` calls"
+              + (f", and no changes under the watched paths ({', '.join(f'`{w}`' for w in watch_paths)})" if watch_paths else "")
+              + ". Per the deterministic pre-agent fast-path, this RC introduces no public API surface and the Claude agent was not invoked.",
               "",
           ]
           if top:
@@ -602,7 +631,7 @@ jobs:
             - `PRODUCT` (e.g. `wordpress-seo`)
             - `RC_TAG` (e.g. `27.5-RC1`)
             - `DISPLAY_NAME` (e.g. `Yoast SEO`)
-            - `BUNDLE_DIR` — absolute path to this run's bundle directory; contains `rc.diff.filtered`, `rc.diff.full`, `rc.diff.stat`, `changelog.source`, `symbol-index.txt`, organized as `$BUNDLE_DIR/<source-repo>/...`.
+            - `BUNDLE_DIR` — absolute path to this run's bundle directory; contains `rc.diff.filtered`, `rc.diff.full`, `rc.diff.stat`, `changelog.source`, `symbol-index.txt`, and — when the RC touched one of the product's watch paths — `watched-hits.txt`, organized as `$BUNDLE_DIR/<source-repo>/...`.
             - `TRACKING_ISSUE` — numeric issue id where the run-summary comment must be posted.
             - `PREV_RELEASE` — the source-repo tag the diff was computed against. May be a stable release (e.g. `27.5`) or a prior RC of the same base version (e.g. `27.6-RC1`); `PREV_KIND` is `stable` or `rc` accordingly. When it's `rc`, expect the diff to be small (incremental delta vs. the previous RC of this cycle); when it's `stable`, the diff is the full release cycle.
             - `WORKFLOW_RUN_URL` — link to this workflow run; include in the PR body for reviewer context.

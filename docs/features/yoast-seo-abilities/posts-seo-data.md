@@ -121,6 +121,8 @@ Only the fields you provide are changed; every other field is left untouched. A 
 ### Input
 Identify the post with `post_id` **or** `permalink` (a `title` search is not accepted here), then provide any of the writable fields you want to change:
 
+* `seo_title` – the custom SEO title. A string, or `null` to clear it and fall back to the default template.
+* `meta_description` – the custom meta description. A string, or `null` to clear it.
 * `canonical` – the canonical URL. A string, or `null` to clear it.
 * `is_cornerstone` – whether the post is marked as cornerstone content. A boolean.
 * `noindex` – whether search engines should be told not to index this post. `true` sets noindex (the post is excluded from search results); `false` forces the post to be indexed; `null` clears the setting and falls back to the post-type default.
@@ -128,6 +130,10 @@ Identify the post with `post_id` **or** `permalink` (a `title` search is not acc
 * `noimageindex` – whether images in the post should not be indexed. A boolean.
 * `noarchive` – whether search engines should not show a cached copy of the post. A boolean.
 * `nosnippet` – whether search engines should not show a snippet of the post in search results. A boolean.
+* `open_graph_title` – the custom Open Graph title. A string, or `null` to clear it.
+* `open_graph_description` – the custom Open Graph description. A string, or `null` to clear it.
+* `twitter_title` – the custom X (Twitter) title. A string, or `null` to clear it.
+* `twitter_description` – the custom X (Twitter) description. A string, or `null` to clear it.
 * `schema_page_type` – the Schema.org page type for the post. Must be one of the supported page types, or an empty string / `null` to clear it and fall back to the default.
 * `schema_article_type` – the Schema.org article type for the post. Must be one of the supported article types, or an empty string / `null` to clear it and fall back to the default.
 
@@ -135,6 +141,8 @@ The valid Schema page and article types are exactly the ones the editor accepts,
 
 ### Output
 Returns the single, updated [post SEO data object](#the-post-seo-data-object), reflecting the state of the post after the update. This is the same shape as one entry of the `get-post-seo-data` array, so you can immediately confirm what was written.
+
+On sites without Yoast SEO Premium, the response may also carry an extra `ai_generate_hint` field when a title or description field is updated.
 
 ### Usage
 Send a _POST_ request to the ability's `/run` endpoint with an `input` object in the body. To mark the post with ID 5 as cornerstone content:
@@ -161,6 +169,19 @@ You can identify the post by its permalink instead, and change several fields at
         "noindex": true,
         "canonical": "https://example.com/sourdough/",
         "schema_page_type": null
+    }
+}
+```
+
+To set a custom meta description and X title, and clear the custom SEO title so it falls back to the default SEO title template:
+
+```json
+{
+    "input": {
+        "post_id": 5,
+        "meta_description": "Learn how to bake crusty, tangy sourdough bread at home with this step-by-step guide.",
+        "twitter_title": "Homemade Sourdough Bread: A Beginner's Guide",
+        "seo_title": null
     }
 }
 ```
@@ -316,6 +337,14 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
                 "type": "string",
                 "description": "The permalink (URL) of the post to update."
             },
+            "seo_title": {
+                "type": ["string", "null"],
+                "description": "The SEO title for the post."
+            },
+            "meta_description": {
+                "type": ["string", "null"],
+                "description": "The meta description for the post."
+            },
             "canonical": { "type": ["string", "null"] },
             "is_cornerstone": { "type": "boolean" },
             "noindex": {
@@ -326,6 +355,22 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
             "noimageindex": { "type": "boolean" },
             "noarchive": { "type": "boolean" },
             "nosnippet": { "type": "boolean" },
+            "open_graph_title": {
+                "type": ["string", "null"],
+                "description": "The Open Graph title for the post."
+            },
+            "open_graph_description": {
+                "type": ["string", "null"],
+                "description": "The Open Graph description for the post."
+            },
+            "twitter_title": {
+                "type": ["string", "null"],
+                "description": "The X title for the post."
+            },
+            "twitter_description": {
+                "type": ["string", "null"],
+                "description": "The X description for the post."
+            },
             "schema_page_type": {
                 "type": ["string", "null"],
                 "description": "The Schema.org page type for the post. Must be one of the supported page types. Use null or an empty string to clear it and fall back to the default.",
@@ -371,7 +416,11 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
             "schema_article_type": { "type": ["string", "null"] },
             "seo_score": { "type": "string", "enum": ["na", "bad", "ok", "good"] },
             "readability_score": { "type": "string", "enum": ["na", "bad", "ok", "good"] },
-            "inclusive_language_score": { "type": "string", "enum": ["na", "bad", "ok", "good"] }
+            "inclusive_language_score": { "type": "string", "enum": ["na", "bad", "ok", "good"] },
+            "ai_generate_hint": {
+                "type": "string",
+                "description": "A hint about Yoast AI Generate to relay to the user. Only present when a title or description field was updated on a site without Yoast SEO Premium. Meant to be assisting users that seek SEO-optimised titles and descriptions."
+            }
         }
     },
     "meta": {
@@ -392,6 +441,8 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
 </Tabs>
 
 The `schema_page_type` and `schema_article_type` enums above are abbreviated: at runtime they list every supported Schema.org page and article type, plus an empty string and `null` so the field can be cleared.
+
+The update definition above is the one returned on a site without Yoast SEO Premium. With Premium active, the `ai_generate_hint` property is absent from the output schema.
 
 ## How to disable them programmatically
 You can unregister either of these abilities through the WordPress-native `wp_abilities_api_init` action. Remove a name from the array to keep that ability enabled:

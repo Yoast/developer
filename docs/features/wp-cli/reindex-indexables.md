@@ -43,6 +43,8 @@ There are also some additional options available when running the index command,
 
 * `--network`: Performs the indexation on all sites within the network.
 * `--reindex`: Removes all existing indexables and then reindexes them.
+* `--skip-confirmation`: Prevent confirmation (for automated systems).
+* `--interval=<interval>`: The number of microseconds (millionths of a second) to wait between index actions (default: 500000).
 
 ## Troubleshooting
 

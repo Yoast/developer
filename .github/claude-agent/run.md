@@ -42,6 +42,8 @@ Everything else in this prompt applies identically in both modes.
 
 ### Step 1 — Triage
 
+If `$BUNDLE_DIR/<source-repo>/watched-hits.txt` exists, the workflow invoked you (at least partly) because the RC changed files under a watch path, even if the diff adds no new hooks, REST routes or CLI commands. It lists those files, one per line. Start your triage with their hunks and check them against the area whose `source_paths` cover them. If they don't change the documented surface, that area gets 0 PRs.
+
 Read `AGENT_MAP.md`. For every hunk in every `rc.diff.filtered`:
 
 - Map the source path to an area via the area's `source_paths`.

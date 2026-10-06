@@ -215,6 +215,14 @@ No currently-listed product has more than one source repo. If one is ever added 
 - **Symbol namespaces**: `WP_CLI::add_command` registrations.
 - **Typical triggers**: new CLI command; new option on an existing command.
 
+### `yoast-seo-abilities`
+- **Products**: wordpress-seo
+- **Docs paths**: `docs/features/yoast-seo-abilities/**`
+- **Source paths** (wordpress-seo): `src/abilities/**`
+- **Ability names**: `yoast-seo/*` (registered in the `yoast-seo` ability category)
+- **Typical triggers**: new/renamed/removed ability; changes to an ability's input or output schema, annotations (`readonly`, `destructive`, `idempotent`) or permission checks.
+- **Workflow watch path**: any change under `src/abilities/` invokes the agent even without new hooks/routes/CLI commands (see `watch_paths` in `rc-docs-sync.yml`). Many of these changes will be internal refactors — open 0 PRs when the documented ability surface is unchanged.
+
 ---
 
 ### `apis` (shared, low-frequency)

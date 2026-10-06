@@ -221,6 +221,7 @@ No currently-listed product has more than one source repo. If one is ever added 
 - **Source paths** (wordpress-seo): `src/abilities/**`
 - **Ability names**: `yoast-seo/*` (registered in the `yoast-seo` ability category)
 - **Typical triggers**: new/renamed/removed ability; changes to an ability's input or output schema, annotations (`readonly`, `destructive`, `idempotent`) or permission checks.
+- **Public surface**: abilities are public by design, even though they're registered under `src/abilities/user-interface/` with a capability-checking `permission_callback`. Don't apply the internal path/permission heuristics from "Public vs. internal surface" to them; only `@internal` opts an ability out.
 - **Workflow watch path**: any change under `src/abilities/` invokes the agent even without new hooks/routes/CLI commands (see `watch_paths` in `rc-docs-sync.yml`). Many of these changes will be internal refactors — open 0 PRs when the documented ability surface is unchanged.
 
 ---
@@ -310,7 +311,7 @@ Not every new REST route, hook, or class in a plugin RC is intended to be public
 
 The agent's prompt (`.github/claude-agent/run.md`, Step 1.6) implements this discrimination. Source-repo authors can mark a route or class as internal in either of two ways, in increasing order of authority:
 
-1. **Path/naming heuristics** are picked up automatically. Files under `*-admin-*`, `**/admin/**`, or `**/user-interface/**`, classes named `*_Admin_*` or `*_Internal_*`, and `register_rest_route` calls whose `permission_callback` enforces an admin capability check (`current_user_can('manage_options')` etc.) are treated as internal by default.
+1. **Path/naming heuristics** are picked up automatically. Files under `*-admin-*`, `**/admin/**`, or `**/user-interface/**`, classes named `*_Admin_*` or `*_Internal_*`, and `register_rest_route` calls whose `permission_callback` enforces an admin capability check (`current_user_can('manage_options')` etc.) are treated as internal by default. **Exception:** abilities registered via `wp_register_ability` / `wp_register_ability_category` are public by design and are exempt from these heuristics (including the `/user-interface/` path and capability-checking `permission_callback`s) — see the `yoast-seo-abilities` area.
 
 2. **`@internal` PHPDoc annotation** is the unambiguous override. Add it to the registering method's or class's docblock:
    ```php

@@ -1,3 +1,12 @@
+## 12/10/2026 06:59 (UTC)
+
+Release date: 2026-10-12
+
+#### Bugfixes
+
+* Fixes a bug where links in the Yoast AI rate limit and usage policy violation notifications opened inside the app instead of in a new tab.
+* Improves the speed of our app load.
+
 ## 02/10/2026 06:27 (UTC)
 
 Release date: 2026-10-02

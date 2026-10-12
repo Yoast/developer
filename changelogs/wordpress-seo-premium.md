@@ -1,3 +1,18 @@
+## 28.7
+
+Release date: 2026-10-13
+
+Yoast SEO 28.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Bugfixes
+
+* Fixes a bug where a PHP warning was triggered when editing a post with some page builders, like Flatsome's UX Builder.
+* Fixes a bug where a user was able to add arbitrary internal redirects regardless of their role.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.7.
+
 ## 28.6
 
 Release date: 2026-09-29

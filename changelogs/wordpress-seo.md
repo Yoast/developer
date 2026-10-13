@@ -1,3 +1,13 @@
+= 28.7 =
+
+Release date: 2026-10-13
+
+Yoast SEO 28.7 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Allows agents to update titles and descriptions via the respective Yoast Ability.
+
 = 28.6 =
 
 Release date: 2026-09-29

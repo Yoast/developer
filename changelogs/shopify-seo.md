@@ -1,3 +1,11 @@
+## 13/10/2026 08:47 (UTC)
+
+Release date: 2026-10-13
+
+#### Bugfixes
+
+* Fixes a bug where briefly a "page not found" would flash after the checkout process.
+
 ## 12/10/2026 06:59 (UTC)
 
 Release date: 2026-10-12

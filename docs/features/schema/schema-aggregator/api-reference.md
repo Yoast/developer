@@ -78,9 +78,59 @@ curl https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post/2
 
 ---
 
-### Get XML Schemamap
+### Get XML Schemamap — site-root URL (since 28.3)
 
-Retrieve an XML sitemap of all available schema endpoints.
+Starting with Yoast SEO 28.3, the schemamap is also served at the site root as a plain XML file:
+
+```
+GET https://example.com/schemamap.xml
+```
+
+This URL is served by WordPress's rewrite layer (no REST API required) and returns the same XML document as the REST endpoint below. AI crawlers and NLWeb-compliant consumers can fetch it without knowing the WordPress REST API path prefix.
+
+**Response Format:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url contentType="structuredData/schema.org">
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
+      <lastmod>2026-01-01T14:03:56Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url contentType="structuredData/schema.org">
+      <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
+      <lastmod>2026-01-01T14:03:56Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>
+```
+
+**Response Headers:**
+
+```
+Content-Type: application/xml; charset=UTF-8
+Cache-Control: public, max-age=300
+X-Robots-Tag: noindex, follow
+```
+
+**Example Request:**
+
+```bash
+curl https://example.com/schemamap.xml
+```
+
+:::note
+The site-root URL and the REST endpoint both serve the same cached XML. Yoast SEO automatically flushes the cache when relevant content changes, so both URLs stay in sync.
+:::
+
+---
+
+### Get XML Schemamap — REST endpoint
+
+Retrieve an XML sitemap of all available schema endpoints via the REST API.
 
 **Endpoint:**
 ```

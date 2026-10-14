@@ -22,9 +22,17 @@ Yoast SEO registers the following abilities:
   * the SEO analysis score
   * the readability analysis score
   * the inclusive language analysis score.
-* Two abilities [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts
-  * one that **reads** a post's SEO data 
+* Two [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts:
+  * one that **reads** a post's SEO data
   * one that **updates** it.
+* Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
+  * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
+  * `yoast-seo/set-open-graph-status` — toggle Open Graph data output on or off
+  * `yoast-seo/set-schema-aggregation-endpoint-status` — toggle the Schema Aggregation endpoint on or off
+  * `yoast-seo/set-schema-framework-status` — toggle the Schema Framework (JSON-LD output) on or off
+  * `yoast-seo/set-x-card-status` — toggle X card data output on or off
+  * `yoast-seo/set-xml-sitemap-status` — toggle the XML sitemap on or off
+* One [Site representation](site-representation.md) ability that updates the name, logo, social profiles, and person/organization toggle used in the site's organization schema.
 
 They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
 
@@ -35,7 +43,7 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 * **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
 * **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
-The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations) and [Post's SEO data](posts-seo-data.md#annotations).
+The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), and [Site representation](site-representation.md#annotations).
 
 ## Use cases for the Yoast SEO Abilities
 
@@ -53,6 +61,13 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 * Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_
 
 See [Post's SEO data](posts-seo-data.md#update-post-seo-data) for the full list of fields the agent can read and update.
+
+The agent can also toggle individual Yoast SEO features and update site representation settings. For example:
+* _"Enable the XML sitemap on this site."_
+* _"Disable the Open Graph data output."_
+* _"Set the site to represent an organization named Acme Corp and add our LinkedIn URL to the social profiles."_
+
+See [Feature toggles](feature-toggles.md) and [Site representation](site-representation.md) for details.
 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 

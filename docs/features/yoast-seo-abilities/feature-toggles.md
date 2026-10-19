@@ -20,11 +20,11 @@ Every ability declares [behavior annotations](overview.md#annotations) as hints 
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|
 | `yoast-seo/set-llms-txt-status` | No | Not declared (`null`) | Yes |
-| `yoast-seo/set-open-graph-status` | No | Not declared (`null`) | Yes |
 | `yoast-seo/set-schema-aggregation-endpoint-status` | No | Not declared (`null`) | Yes |
 | `yoast-seo/set-schema-framework-status` | No | Not declared (`null`) | Yes |
-| `yoast-seo/set-x-card-status` | No | Not declared (`null`) | Yes |
 | `yoast-seo/set-xml-sitemap-status` | No | Not declared (`null`) | Yes |
+| `yoast-seo/set-open-graph-status` | No | Not declared (`null`) | Yes |
+| `yoast-seo/set-x-card-status` | No | Not declared (`null`) | Yes |
 
 `destructive` is left undeclared (`null`) for all of them rather than set to `false`: disabling a feature removes or stops serving content (the llms.txt file, Open Graph tags, the schema graph, sitemaps, etc.), which may be unwanted. All six are idempotent: calling them again with the same `enabled` value leaves the site in the same state.
 
@@ -90,24 +90,6 @@ POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-llms-txt-status/run
 }
 ```
 
-## `yoast-seo/set-open-graph-status`
-
-Enables or disables Yoast SEO's Open Graph data feature. Enabling it outputs Open Graph meta tags on the site's pages, so Facebook and other social media can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags.
-
-**Usage:**
-
-```
-POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-open-graph-status/run
-```
-
-```json
-{
-    "input": {
-        "enabled": false
-    }
-}
-```
-
 ## `yoast-seo/set-schema-aggregation-endpoint-status`
 
 Enables or disables Yoast SEO's Schema aggregation endpoint feature. Enabling it serves the site's public structured data as a schema map at `/schemamap.xml` and through the schema aggregator REST endpoints, so conversational interfaces like NLWeb can query the site's content; disabling it stops serving them.
@@ -144,24 +126,6 @@ POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-schema-framework-status/ru
 }
 ```
 
-## `yoast-seo/set-x-card-status`
-
-Enables or disables Yoast SEO's X card data feature. Enabling it outputs X card meta tags on the site's pages, so X can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags.
-
-**Usage:**
-
-```
-POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-x-card-status/run
-```
-
-```json
-{
-    "input": {
-        "enabled": false
-    }
-}
-```
-
 ## `yoast-seo/set-xml-sitemap-status`
 
 Enables or disables Yoast SEO's XML sitemap feature. Enabling it serves the sitemap index at `/sitemap_index.xml` and its sub-sitemaps, and replaces the WordPress core sitemaps; disabling it stops serving them.
@@ -180,6 +144,42 @@ POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-xml-sitemap-status/run
 }
 ```
 
+## `yoast-seo/set-open-graph-status`
+
+Enables or disables Yoast SEO's Open Graph data feature. Enabling it outputs Open Graph meta tags on the site's pages, so Facebook and other social media can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags.
+
+**Usage:**
+
+```
+POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-open-graph-status/run
+```
+
+```json
+{
+    "input": {
+        "enabled": false
+    }
+}
+```
+
+## `yoast-seo/set-x-card-status`
+
+Enables or disables Yoast SEO's X card data feature. Enabling it outputs X card meta tags on the site's pages, so X can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags.
+
+**Usage:**
+
+```
+POST /wp-json/wp-abilities/v1/abilities/yoast-seo/set-x-card-status/run
+```
+
+```json
+{
+    "input": {
+        "enabled": false
+    }
+}
+```
+
 ## How to disable them programmatically
 
 You can unregister any of these abilities through the WordPress-native `wp_abilities_api_init` action:
@@ -189,11 +189,11 @@ You can unregister any of these abilities through the WordPress-native `wp_abili
 add_action( 'wp_abilities_api_init', function() {
     $abilities = [
         'yoast-seo/set-llms-txt-status',
-        'yoast-seo/set-open-graph-status',
         'yoast-seo/set-schema-aggregation-endpoint-status',
         'yoast-seo/set-schema-framework-status',
-        'yoast-seo/set-x-card-status',
         'yoast-seo/set-xml-sitemap-status',
+        'yoast-seo/set-open-graph-status',
+        'yoast-seo/set-x-card-status',
     ];
     foreach ( $abilities as $ability ) {
         if ( wp_has_ability( $ability ) ) {

@@ -27,11 +27,11 @@ Yoast SEO registers the following abilities:
   * one that **updates** it.
 * Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
   * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
-  * `yoast-seo/set-open-graph-status` — toggle Open Graph data output on or off
   * `yoast-seo/set-schema-aggregation-endpoint-status` — toggle the Schema Aggregation endpoint on or off
   * `yoast-seo/set-schema-framework-status` — toggle the Schema Framework (JSON-LD output) on or off
-  * `yoast-seo/set-x-card-status` — toggle X card data output on or off
   * `yoast-seo/set-xml-sitemap-status` — toggle the XML sitemap on or off
+  * `yoast-seo/set-open-graph-status` — toggle Open Graph data output on or off
+  * `yoast-seo/set-x-card-status` — toggle X card data output on or off
 * One [Site representation](site-representation.md) ability that updates the name, logo, social profiles, and person/organization toggle used in the site's organization schema.
 
 They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.

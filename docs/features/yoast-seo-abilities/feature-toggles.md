@@ -26,7 +26,11 @@ Every ability declares [behavior annotations](overview.md#annotations) as hints 
 | `yoast-seo/set-x-card-status` | No | Not declared (`null`) | Yes |
 | `yoast-seo/set-xml-sitemap-status` | No | Not declared (`null`) | Yes |
 
-`destructive` is left undeclared (`null`) for all of them rather than set to `false`: disabling a feature removes or stops serving content (the llms.txt file, Open Graph tags, the schema graph, sitemaps, etc.), which may be unwanted and is not automatically reversed by re-enabling. Callers should treat each toggle as potentially destructive. All six are idempotent: calling them again with the same `enabled` value leaves the site in the same state.
+`destructive` is left undeclared (`null`) for all of them rather than set to `false`: disabling a feature removes or stops serving content (the llms.txt file, Open Graph tags, the schema graph, sitemaps, etc.), which may be unwanted. All six are idempotent: calling them again with the same `enabled` value leaves the site in the same state.
+
+:::caution
+Abilities can change settings that the Yoast UI normally double-checks with confirmation warnings, such as turning the Schema Framework off. That double check doesn't happen here, so it's worth knowing what you're changing before you change it. Use is at the user's discretion.
+:::
 
 ## Input and output
 

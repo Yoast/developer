@@ -21,10 +21,6 @@ The `yoast-seo/update-site-representation` ability is gated behind the `wpseo_ma
 
 `destructive` is left undeclared (`null`): providing an empty value for a field (an empty string, `0`, or an empty array) clears that setting, which could remove previously saved data. Callers should treat this ability as potentially destructive. It is idempotent: calling it again with the same input leaves the settings in the same state.
 
-:::caution
-The site representation settings are public facts about who owns the site. Only use values the user provided or that come from the site itself, never guessed or sourced from elsewhere. Confirm them with the user before saving.
-:::
-
 ## Input
 
 Send a POST request to `/wp-json/wp-abilities/v1/abilities/yoast-seo/update-site-representation/run` with an `input` object containing any of the fields below. At least one field is required. Only the fields you include are changed; every other setting is left untouched.

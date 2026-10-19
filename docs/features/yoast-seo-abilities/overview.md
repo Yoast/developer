@@ -32,7 +32,7 @@ Yoast SEO registers the following abilities:
   * `yoast-seo/set-xml-sitemap-status` — toggle the XML sitemap on or off
   * `yoast-seo/set-open-graph-status` — toggle Open Graph data output on or off
   * `yoast-seo/set-x-card-status` — toggle X card data output on or off
-* One [Site representation](site-representation.md) ability that updates the name, logo, social profiles, and person/organization toggle used in the site's organization schema.
+* One [Site representation](site-representation.md) ability that updates the name, logo, social profiles, and person/organization toggle used in the site's organization schema. With [Yoast SEO Premium](site-representation.md#yoast-seo-premium-fields) active, it also updates the organization's additional details and identifiers.
 
 They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
 
@@ -61,13 +61,6 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 * Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_
 
 See [Post's SEO data](posts-seo-data.md#update-post-seo-data) for the full list of fields the agent can read and update.
-
-The agent can also toggle individual Yoast SEO features and update site representation settings. For example:
-* _"Enable the XML sitemap on this site."_
-* _"Disable the Open Graph data output."_
-* _"Set the site to represent an organization named Acme Corp and add our LinkedIn URL to the social profiles."_
-
-See [Feature toggles](feature-toggles.md) and [Site representation](site-representation.md) for details.
 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 

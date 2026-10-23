@@ -1,6 +1,6 @@
 ---
 id: feature-toggles
-title: "Yoast SEO Abilities — Feature Toggles"
+title: "Yoast SEO Abilities - Feature toggles"
 sidebar_label: Feature toggles
 description: This documentation explains the abilities that enable or disable Yoast SEO features.
 ---

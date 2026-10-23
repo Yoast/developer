@@ -1,6 +1,6 @@
 ---
 id: site-representation
-title: "Yoast SEO Abilities — Site Representation"
+title: "Yoast SEO Abilities - Site representation"
 sidebar_label: Site representation
 description: This documentation explains the ability that updates the Yoast SEO site representation settings.
 ---

@@ -1,3 +1,19 @@
+## 28.8
+
+Release date: 2026-10-27
+
+Released alongside Yoast SEO 28.8 and Yoast WooCommerce SEO 17.0, which introduces Yoast AI Generate for image alt text. [Read the release post here](https://yoa.st/57w).
+
+#### Enhancements
+
+* Enhances the Yoast ability that updates Site representation settings with Premium fields, like additional organization info and organization identifiers.
+
+#### Other
+
+* Improves the *SEO analysis required* error notice in the bulk editor, to include how to turn the SEO analysis on when it is disabled in the user profile.
+* Bumps the minimum required version of Yoast SEO to 28.8.
+* Sets the minimum supported WordPress version to 7.0.
+
 ## 28.7
 
 Release date: 2026-10-13

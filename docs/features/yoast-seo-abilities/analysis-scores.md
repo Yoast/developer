@@ -11,13 +11,15 @@ Yoast SEO registers three read-only abilities that return the scores of its cont
 
 All three take the same input and return the same shape, with one exception: the SEO ability also returns the focus keyphrase.
 
-| Ability | Returns | Extra output field |
-|---|---|---|
-| `yoast-seo/get-seo-scores` | SEO analysis score | `focus_keyphrase` |
-| `yoast-seo/get-readability-scores` | Readability analysis score | – |
-| `yoast-seo/get-inclusive-language-scores` | Inclusive language analysis score | – |
+| Ability | Returns | Extra output field | Available by default |
+|---|---|---|---|
+| `yoast-seo/get-seo-scores` | SEO analysis score | `focus_keyphrase` | Yes |
+| `yoast-seo/get-readability-scores` | Readability analysis score | – | Yes |
+| `yoast-seo/get-inclusive-language-scores` | Inclusive language analysis score | – | **No** |
 
-All three are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
+When available, they are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
+
+Each ability is only available when the analysis it reports on is enabled, both site-wide and in the current user's profile. Otherwise it is left out of the listing and calling it returns an error. None of the three are available on non-production environments, where Yoast SEO's indexables, which the scores are read from, aren't built by default.
 
 ## Annotations
 Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients. All three score abilities share the same values:

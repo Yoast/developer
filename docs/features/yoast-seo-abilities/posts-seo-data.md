@@ -32,7 +32,18 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.
 
-`get-post-seo-data` additionally accepts a `title` search, which `update-post-seo-data` deliberately does not, since an update must target a single, unambiguous post. That way, users can describe in human language what post they want data for and the ability will can find it quickly and efficiently.
+`get-post-seo-data` additionally accepts a `title` search, which `update-post-seo-data` deliberately does not, since an update must target a single, unambiguous post. That way, users can describe in human language what post they want data for and the ability can find it quickly and efficiently.
+
+### Identifier precedence
+Only one identifier is ever used to locate the post. When more than one is provided, they are checked in this order and the first non-empty one wins:
+
+1. `post_id`
+2. `permalink`
+3. `title` (`get-post-seo-data` only)
+
+The remaining identifiers are ignored: they are not cross-checked against the post that was found, and no error or warning is returned if they point to a different post. For example, if `post_id` is `5` and `permalink` is the URL of post `12`, `update-post-seo-data` updates post `5`. Likewise, a `post_id` or `permalink` that doesn't resolve to a post returns a not-found error, without falling back to any other identifier that was provided.
+
+To avoid editing the wrong post, send a single identifier per request. If you only know the post's URL or title, look it up with `get-post-seo-data` first, check that the returned post is the one you expect, and then pass its `post_id` to `update-post-seo-data`.
 
 ## `get-post-seo-data`
 Reads the SEO data for one or more posts.

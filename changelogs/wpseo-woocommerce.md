@@ -1,3 +1,19 @@
+## 17.0
+
+Release date: 2026-10-27
+
+Introducing Yoast AI Generate for image alt text: generate, review and apply alt text for your product images. [Read the release post here](https://yoa.st/57x).
+
+#### Enhancements
+
+* Adds AI-powered image alt text generation for WooCommerce product images, with a bulk editor *Image alt text* tab for reviewing and applying AI-generated or manually-edited alt texts across the product catalog, and an in-editor modal for generating alt text directly from the product edit page.
+* Improves assessments for images on products be about images that actually describe the product, like feature images, gallery images or variation images.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.8.
+* Sets the minimum supported WordPress version to 7.0.
+
 ## 16.9
 
 Release date: 2026-09-15

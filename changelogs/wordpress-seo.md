@@ -1,3 +1,27 @@
+= 28.8 =
+
+Release date: 2026-10-27
+
+New Yoast Abilities for AI agents, Schema Feeds support, and the groundwork for Yoast AI Generate for image alt text in Yoast WooCommerce SEO 17.0. [Read the release post here](https://yoa.st/57v).
+
+#### Enhancements
+
+* Adds AI-powered image alt text generation for WooCommerce product images, including a dedicated Image alt text tab in the bulk editor for Yoast WooCommerce SEO.
+* Adds Yoast abilities that let agents turn site-wide features on and off: llms.txt, Open Graph data, Schema Aggregator, Schema Framework, X card data, and XML sitemaps.
+* Adds a Yoast ability that lets agents update Site representation settings.
+* Adds the `sf:contentType` element from NLWeb's Schema Feeds specification to the schema map.
+
+#### Bugfixes
+
+* Fixes a bug where AI Optimize buttons were shown in the content analysis when AI features were turned off.
+* Fixes a bug where the AI features' free trial was treated as already started after the Yoast SEO settings were saved.
+* Fixes a bug where the bulk editor kept the SEO analysis active when the user had turned it off in their profile.
+* Fixes a bug where the time the schema aggregation endpoint was enabled was not recorded when the setting was saved from the Site features page.
+
+#### Other
+
+* Sets the minimum supported WordPress version to 7.0.
+
 = 28.7 =
 
 Release date: 2026-10-13

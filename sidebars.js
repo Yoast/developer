@@ -307,6 +307,8 @@ module.exports = {
 						"features/yoast-seo-abilities/overview",
 						"features/yoast-seo-abilities/analysis-scores",
 						"features/yoast-seo-abilities/posts-seo-data",
+						"features/yoast-seo-abilities/terms-seo-data",
+						"features/yoast-seo-abilities/author-schema",
 						"features/yoast-seo-abilities/feature-toggles",
 						"features/yoast-seo-abilities/site-representation",
 					],

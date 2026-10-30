@@ -1,3 +1,11 @@
+## 30/10/2026 14:43 (UTC)
+
+Release date: 2026-10-30
+
+#### Bugfixes
+
+* Fixes a bug where the SEO, readability and status filters, the search term and the sort order of a content list were reset when coming back to the list from an item.
+
 ## 13/10/2026 08:47 (UTC)
 
 Release date: 2026-10-13

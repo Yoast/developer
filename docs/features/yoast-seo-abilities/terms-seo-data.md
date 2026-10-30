@@ -1,7 +1,7 @@
 ---
 id: terms-seo-data
-title: "Yoast SEO Abilities - Term SEO data"
-sidebar_label: Term SEO data
+title: "Yoast SEO Abilities - Term's SEO data"
+sidebar_label: Term's SEO data
 description: This documentation explains the abilities that read and update the SEO data of individual taxonomy terms.
 ---
 import Tabs from '@theme/Tabs';
@@ -17,11 +17,9 @@ Yoast SEO registers two abilities to work with the SEO data of individual taxono
 Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 
 ## Permissions
-
-Like the [Post SEO data](posts-seo-data.md) abilities, these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`), the same capability that gates the advanced and schema fields in the editor. On top of that, per-term edit access is always enforced: only terms the current user is allowed to edit are ever returned or updated.
+Like the [Post's SEO data](posts-seo-data.md) abilities, these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`), the same capability that gates the advanced and schema fields in the editor. On top of that, per-term edit access is always enforced: only terms the current user is allowed to edit are ever returned or updated.
 
 ## Annotations
-
 Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients:
 
 | Ability | Read-only | Destructive | Idempotent |
@@ -29,44 +27,51 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | `yoast-seo/get-term-seo-data` | Yes | No | Yes |
 | `yoast-seo/update-term-seo-data` | No | Not declared (`null`) | Yes |
 
-`update-term-seo-data` is not read-only, since it writes term data. Its destructive hint is left undeclared (`null`): although the ability only edits Yoast's SEO metadata fields, a provided empty value clears the field, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide, and sending the same request again leaves the term in the same state.
+`update-term-seo-data` is not read-only, since it writes term data. Its destructive hint is left undeclared (`null`) rather than `false`: although the ability only edits Yoast's SEO metadata fields and never touches the term's name, slug, or description, writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the term in the same state, rather than compounding the change.
 
 ## Identifying the term
-
 Both abilities accept a `term_id` (an integer of 1 or higher) or a `permalink` (the term archive's URL) to locate the term. At least one identifier is required.
 
-Term IDs are unique across taxonomies in WordPress, so the ID alone is always sufficient to identify a term. When a permalink is used, it is matched exactly against the value stored in the indexable table; the exact stored permalink must be provided.
+Term IDs are unique across taxonomies in WordPress, so the ID alone is always sufficient to identify a term. A `permalink` is matched exactly against the permalink Yoast SEO has stored for the term, without any WordPress URL resolution, so it must be the term archive's exact URL. A permalink that belongs to a post, author, or other archive returns a not-found error.
+
+Unlike `get-post-seo-data`, neither ability accepts a `title` search: both always target a single term.
+
+### Identifier precedence
+Only one identifier is ever used to locate the term. When both are provided, they are checked in this order and the first non-empty one wins:
+
+1. `term_id`
+2. `permalink`
+
+The other identifier is ignored: it is not cross-checked against the term that was found, and no error or warning is returned if it points to a different term. For example, if `term_id` is `7` and `permalink` is the archive URL of term `12`, `update-term-seo-data` updates term `7`. Likewise, a `term_id` that doesn't resolve to a term returns a not-found error, without falling back to the `permalink`.
+
+To avoid editing the wrong term, send a single identifier per request. If you only know the term archive's URL, look it up with `get-term-seo-data` first, check that the returned term is the one you expect, and then pass its `term_id` to `update-term-seo-data`.
 
 ## `get-term-seo-data`
-
 Reads the SEO data for a single taxonomy term.
 
 ### Input
-
-Provide one of the following:
+Provide at least one of the following:
 
 * `term_id` – the ID of the term to retrieve. An integer of 1 or higher.
 * `permalink` – the permalink (URL) of the term archive to retrieve.
 
 ### Output
-
-Returns a single [term SEO data object](#the-term-seo-data-object).
+Returns a single [term SEO data object](#the-term-seo-data-object). Unlike `get-post-seo-data`, the object is not wrapped in an array.
 
 ### Usage
-
 Send a _GET_ request to the ability's `/run` endpoint. To retrieve the SEO data of the term with ID 7:
 
 ```
 /wp-json/wp-abilities/v1/abilities/yoast-seo/get-term-seo-data/run?input[term_id]=7
 ```
 
-To retrieve the same term by its archive permalink:
+To retrieve the same term by its archive permalink instead, pass the archive's full URL (URL-encoded) as `permalink`:
 
 ```
 /wp-json/wp-abilities/v1/abilities/yoast-seo/get-term-seo-data/run?input[permalink]=https%3A%2F%2Fexample.com%2Fcategory%2Frecipes%2F
 ```
 
-A successful response might look like this:
+Doing so might yield the following result:
 
 ```json
 {
@@ -98,14 +103,12 @@ A successful response might look like this:
 ```
 
 ## `update-term-seo-data`
-
 Updates the SEO data for a single taxonomy term.
 
 Only the fields you provide are changed; every other field is left untouched. A provided empty value (`""` or `null`, depending on the field) clears that field and lets Yoast SEO fall back to its default.
 
 ### Input
-
-Identify the term with `term_id` **or** `permalink`, then provide any of the writable fields you want to change:
+Identify the term with `term_id` **or** `permalink` (a `title` search is not accepted here), then provide any of the writable fields you want to change:
 
 * `seo_title` – the custom SEO title. A string, or `null` to clear it and fall back to the default template.
 * `meta_description` – the custom meta description. A string, or `null` to clear it.
@@ -122,11 +125,11 @@ Terms support fewer SEO metadata fields than posts. The advanced robots flags (`
 :::
 
 ### Output
+Returns the single, updated [term SEO data object](#the-term-seo-data-object), reflecting the state of the term after the update. This is the same shape as the `get-term-seo-data` response, so you can immediately confirm what was written.
 
-Returns the single, updated [term SEO data object](#the-term-seo-data-object), reflecting the state of the term after the update. On sites without Yoast SEO Premium, the response may also carry an extra `ai_generate_hint` field when a title or description field is updated.
+On sites without Yoast SEO Premium, the response may also carry an extra `ai_generate_hint` field when a title or description field is updated.
 
 ### Usage
-
 Send a _POST_ request to the ability's `/run` endpoint with an `input` object in the body. To mark the category with ID 7 as noindex:
 
 ```
@@ -167,8 +170,7 @@ To clear the custom SEO title so it falls back to the default template:
 ```
 
 ## The term SEO data object
-
-Both abilities return the same object shape. Its fields are:
+Both abilities return the same object. Its fields are:
 
 | Field | Type | Description |
 |---|---|---|
@@ -197,10 +199,9 @@ Both abilities return the same object shape. Its fields are:
 | `readability_score` | string | The result of the readability analysis when the term was last saved. |
 | `inclusive_language_score` | string | The result of the inclusive language analysis when the term was last saved. |
 
-The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with replacement variables expanded. It is `null` when nothing is output.
+The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with replacement variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
 
 ## Full definition
-
 A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete definition of each ability:
 
 <Tabs>
@@ -301,21 +302,42 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
                 "type": "string",
                 "description": "The permalink (URL) of the term archive to update."
             },
-            "seo_title": { "type": ["string", "null"] },
-            "meta_description": { "type": ["string", "null"] },
+            "seo_title": {
+                "type": ["string", "null"],
+                "description": "The SEO title for the term."
+            },
+            "meta_description": {
+                "type": ["string", "null"],
+                "description": "The meta description for the term."
+            },
             "canonical": {
                 "type": ["string", "null"],
                 "description": "The custom canonical URL for the term archive. Use null or an empty string to remove it and fall back to the default canonical."
             },
-            "is_cornerstone": { "type": "boolean" },
+            "is_cornerstone": {
+                "type": "boolean",
+                "description": "Whether the term is marked as cornerstone content."
+            },
             "noindex": {
                 "type": ["boolean", "null"],
                 "description": "Whether search engines should be told not to index this term archive. true sets noindex (the archive is excluded from search results); false forces the archive to be indexed; null clears the setting and falls back to the taxonomy default."
             },
-            "open_graph_title": { "type": ["string", "null"] },
-            "open_graph_description": { "type": ["string", "null"] },
-            "twitter_title": { "type": ["string", "null"] },
-            "twitter_description": { "type": ["string", "null"] }
+            "open_graph_title": {
+                "type": ["string", "null"],
+                "description": "The Open Graph title for the term."
+            },
+            "open_graph_description": {
+                "type": ["string", "null"],
+                "description": "The Open Graph description for the term."
+            },
+            "twitter_title": {
+                "type": ["string", "null"],
+                "description": "The X title for the term."
+            },
+            "twitter_description": {
+                "type": ["string", "null"],
+                "description": "The X description for the term."
+            }
         }
     },
     "output_schema": {
@@ -371,20 +393,19 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
 The update definition above is the one returned on a site without Yoast SEO Premium. With Premium active, the `ai_generate_hint` property is absent from the output schema.
 
 ## How to disable them programmatically
-
 You can unregister either of these abilities through the WordPress-native `wp_abilities_api_init` action. Remove a name from the array to keep that ability enabled:
 
 ```php
-<?php
 add_action( 'wp_abilities_api_init', function() {
-    $abilities = [
-        'yoast-seo/get-term-seo-data',
-        'yoast-seo/update-term-seo-data',
-    ];
-    foreach ( $abilities as $ability ) {
-        if ( wp_has_ability( $ability ) ) {
-            wp_unregister_ability( $ability );
+        $abilities = [
+            'yoast-seo/get-term-seo-data',
+            'yoast-seo/update-term-seo-data',
+        ];
+        foreach ( $abilities as $ability ) {
+            if ( wp_has_ability( $ability ) ) {
+                wp_unregister_ability( $ability );
+            }
         }
-    }
-}, 20 ); // Run after Yoast SEO registers at default priority 10
+    }, 20
+); // Run after Yoast SEO registers at default priority 10
 ```

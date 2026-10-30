@@ -28,7 +28,9 @@ Yoast SEO registers the following abilities:
 * Two [Term SEO data](terms-seo-data.md) abilities for working with the SEO data of individual taxonomy terms (categories, tags, and custom taxonomies):
   * one that **reads** a term's SEO data
   * one that **updates** it.
-* One [Author schema](author-schema.md) ability that updates the pronouns and social profiles used in a user's Person schema (`yoast-seo/update-author-schema`).
+* One [Author schema](author-schema.md) ability for working with the author schema settings of individual users, which populate their Person schema:
+  * it **reads** a user's author schema settings
+  * and **updates** them.
 * Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
   * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
   * `yoast-seo/set-schema-aggregation-endpoint-status` — toggle the Schema Aggregation endpoint on or off
@@ -57,7 +59,7 @@ Assuming that an AI agent is connected to a WordPress-enabled MCP site (details 
 * _"Do you see the readability of my recent content going upwards or downwards?"_
 * _"I want to know if I have content on my site that uses non-inclusive language. If there's indeed not inclusive language in my content, do you see a correlation between the subjects covered?"_
 
-Beyond reading analysis scores, the agent can also read and update the SEO data of individual posts and terms, and update author schema settings:
+Beyond reading analysis scores, the agent can also read and update the SEO data of individual posts and terms, and the author schema settings of users:
 * _"Show me the SEO settings for the post at https://example.com/homemade-sourdough-bread/. Is it set to be indexed?"_
 * _"Write a meta description of at most 155 characters for the post with ID 42, making sure it includes its focus keyphrase."_
 * _"Mark my post about sourdough bread as cornerstone content and set its canonical URL to https://example.com/sourdough/."_

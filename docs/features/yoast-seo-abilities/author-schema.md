@@ -2,10 +2,10 @@
 id: author-schema
 title: "Yoast SEO Abilities - Author schema"
 sidebar_label: Author schema
-description: This documentation explains the ability that updates a user's author schema settings, including pronouns and social profiles.
+description: This documentation explains the ability that reads and updates a user's author schema settings, such as pronouns, social profiles, and (with Yoast SEO Premium) additional personal details.
 ---
 
-Yoast SEO registers one ability to update a user's author schema settings: the pronouns and social profiles that are used to populate the Person schema for the user. The Person schema describes the user as the author of their posts, on their author archive, and as the site itself when the site is configured to represent this person.
+Yoast SEO registers one ability to read and update a user's author schema settings: the pronouns, social profiles, and related details that are used to populate the Person schema for the user. With Yoast SEO Premium active, it can also update the user's additional details, such as their job title, employer, expertise, and awards.
 
 It is listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
 
@@ -30,10 +30,6 @@ Send a POST request to `/wp-json/wp-abilities/v1/abilities/yoast-seo/update-auth
 
 `user_id` is required. Provide only `user_id` without any other fields to read the current settings without changing anything.
 
-:::caution
-Author schema settings are published as personal details about the user. Only use values the user has provided themselves — never values guessed, inferred (for example pronouns inferred from a name), or sourced elsewhere. Always confirm them before saving.
-:::
-
 | Field | Type | Description |
 |---|---|---|
 | `user_id` | integer (≥ 1) | **Required.** The ID of the user whose settings to update or read. |
@@ -51,9 +47,28 @@ Author schema settings are published as personal details about the user. Only us
 
 Social profile values are validated: an invalid URL is not saved and a warning is returned for that field. A provided empty string clears the setting. The other fields are still saved when one field fails validation.
 
+### Yoast SEO Premium fields
+
+When Yoast SEO Premium is active, the ability also accepts the fields below. They are listed in the ability's input and output schema only while Premium is active; without Premium, sending them is rejected as an unknown field.
+
+| Field | Type | Description |
+|---|---|---|
+| `honorificPrefix` | string | The honorific prefix of the user, such as `Dr`, `Ms`, or `Mr`. |
+| `honorificSuffix` | string | The honorific suffix of the user, such as `MD` or `PhD`. |
+| `birthDate` | string (`YYYY-MM-DD`) | The birth date of the user. A date that does not exist (like `2024-02-31`) is not saved and returns a warning. |
+| `gender` | string | The gender of the user, such as `female`, `male`, or `non-binary`. |
+| `award` | array of strings | The awards the user received, such as `Most likely to succeed - 1991`. |
+| `knowsAbout` | array of strings | The topics the user has expertise in, such as `PHP` or `90's rock music`. |
+| `knowsLanguage` | array of strings | The languages the user speaks, such as `English` or `Dutch`. |
+| `jobTitle` | string | The job title of the user, such as `software engineer`. |
+| `worksFor` | string | The name of the user's employer, such as `Acme inc`. |
+| `mastodon` | string | The URL of the user's Mastodon profile. Validated like the other social profiles. |
+
+A provided list replaces the current one, and an empty list clears it. List items cannot contain commas, because the user profile page edits lists as comma-separated text; a list with such an item is not saved and returns a warning.
+
 ## Output
 
-Returns the full set of author schema settings for the user after the update, keyed by field name, plus the `user_id`. When a field could not be saved as provided — for example because a social profile URL is invalid, or because pronouns cannot be set on this site — an extra `warning` field is included in the response explaining which fields were not saved. The other fields are still saved when one fails.
+Returns the full set of author schema settings for the user after the update, keyed by field name, plus the `user_id`. This includes the Yoast SEO Premium fields when Premium is active. When a field could not be saved as provided — for example because a social profile URL is invalid, or because pronouns cannot be set on this site — an extra `warning` field is included in the response explaining which fields were not saved. The other fields are still saved when one fails.
 
 ### Usage
 
@@ -198,6 +213,8 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
     }
 }
 ```
+
+The definition above is the one returned on a site without Yoast SEO Premium. With Premium active, the [Yoast SEO Premium fields](#yoast-seo-premium-fields) are also listed in both the input and the output schema.
 
 ## How to disable it programmatically
 

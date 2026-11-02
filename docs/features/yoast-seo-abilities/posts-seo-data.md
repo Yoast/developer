@@ -32,6 +32,8 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.
 
+When the homepage is a static page, its URL (the home URL, like `https://example.com/`) resolves to that page. When the homepage shows the latest posts, it is not a post: its SEO settings are read and updated with the [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md) abilities instead.
+
 `get-post-seo-data` additionally accepts a `title` search, which `update-post-seo-data` deliberately does not, since an update must target a single, unambiguous post. That way, users can describe in human language what post they want data for and the ability can find it quickly and efficiently.
 
 ### Identifier precedence
@@ -208,7 +210,7 @@ Both abilities return the same object (`get-post-seo-data` inside an array, `upd
 | `post_type` | string | The post type slug. |
 | `post_status` | string \| null | The post status, such as `publish` or `draft`. |
 | `seo_title` | string \| null | The custom SEO title, or `null` when none is set. |
-| `seo_title_rendered` | string \| null | The SEO title as output on the front end, with the default template applied and replacement variables expanded. |
+| `seo_title_rendered` | string \| null | The SEO title as output on the front end, with the default template applied and snippet variables expanded. |
 | `meta_description` | string \| null | The custom meta description, or `null` when none is set. |
 | `meta_description_rendered` | string \| null | The meta description as output on the front end. |
 | `focus_keyphrase` | string \| null | The focus keyphrase, or `null` when none is set. |
@@ -234,7 +236,7 @@ Both abilities return the same object (`get-post-seo-data` inside an array, `upd
 | `readability_score` | string | The result of the readability analysis when the post was last saved. |
 | `inclusive_language_score` | string | The result of the inclusive language analysis when the post was last saved. |
 
-The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with replacement variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
+The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with snippet variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
 
 ## Full definition
 A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete definition of each ability:

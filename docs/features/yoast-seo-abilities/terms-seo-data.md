@@ -179,7 +179,7 @@ Both abilities return the same object. Its fields are:
 | `permalink` | string \| null | The term archive's permalink (URL). |
 | `taxonomy` | string | The taxonomy slug, such as `category` or `post_tag`. |
 | `seo_title` | string \| null | The custom SEO title, or `null` when none is set. |
-| `seo_title_rendered` | string \| null | The SEO title as output on the front end, with the default template applied and replacement variables expanded. |
+| `seo_title_rendered` | string \| null | The SEO title as output on the front end, with the default template applied and snippet variables expanded. |
 | `meta_description` | string \| null | The custom meta description, or `null` when none is set. |
 | `meta_description_rendered` | string \| null | The meta description as output on the front end. |
 | `focus_keyphrase` | string \| null | The focus keyphrase, or `null` when none is set. |
@@ -199,7 +199,7 @@ Both abilities return the same object. Its fields are:
 | `readability_score` | string | The result of the readability analysis when the term was last saved. |
 | `inclusive_language_score` | string | The result of the inclusive language analysis when the term was last saved. |
 
-The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with replacement variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
+The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with snippet variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
 
 ## Full definition
 A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete definition of each ability:

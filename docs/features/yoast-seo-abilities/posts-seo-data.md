@@ -234,7 +234,7 @@ Both abilities return the same object (`get-post-seo-data` inside an array, `upd
 | `readability_score` | string | The result of the readability analysis when the post was last saved. |
 | `inclusive_language_score` | string | The result of the inclusive language analysis when the post was last saved. |
 
-The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with replacement variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
+The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with snippet variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
 
 ## Full definition
 A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete definition of each ability:

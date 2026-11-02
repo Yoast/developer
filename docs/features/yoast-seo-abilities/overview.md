@@ -25,6 +25,9 @@ Yoast SEO registers the following abilities:
 * Two [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts:
   * one that **reads** a post's SEO data
   * one that **updates** it.
+* Two [Archive and special page SEO settings](archive-and-special-page-seo-settings.md) abilities for reading and updating the SEO settings of the homepage, content type archives, and special pages:
+  * `yoast-seo/get-archive-and-special-page-seo-settings` — reads the settings for all available targets
+  * `yoast-seo/update-archive-and-special-page-seo-settings` — updates the settings for one target.
 * Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
   * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
   * `yoast-seo/set-schema-aggregation-endpoint-status` — toggle the Schema Aggregation endpoint on or off
@@ -43,7 +46,7 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 * **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
 * **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
-The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), and [Site representation](site-representation.md#annotations).
+The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), [Site representation](site-representation.md#annotations), and [Archive and special page SEO settings](archive-and-special-page-seo-settings.md#annotations).
 
 ## Use cases for the Yoast SEO Abilities
 

@@ -293,14 +293,18 @@ add_filter( 'wpseo_sitemap_urlset', function( $urlset ) {
 }, 1, 10 );
 ```
 
-### Filter the sitemap URL
+### Filter the sitemap stylesheet URL
+
+By default, Yoast SEO resolves the stylesheet URL relative to `home_url` or the plugin directory. Use this filter to override it — for example, to serve the stylesheet from a CDN.
+
 ```php
+<?php
 /**
- * Allows filtering of the XSL URL used in the current environment.
+ * Filters the stylesheet URL used in the current environment.
  *
- * @param string $current_url The current XSL URL.
+ * @param string $current_url The current stylesheet URL (defaults to main-sitemap.css relative to home_url).
  */
 add_filter( 'wpseo_sitemap_public_url', function ( $current_url ) {
-  return 'https://another-url.com/main-sitemap.xml';
+  return 'https://cdn.example.com/main-sitemap.css';
 } );
 ```

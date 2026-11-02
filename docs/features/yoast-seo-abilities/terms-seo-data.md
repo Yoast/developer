@@ -14,8 +14,6 @@ Yoast SEO registers two abilities to work with the SEO data of individual taxono
 | `yoast-seo/get-term-seo-data` | Read-only | The SEO data object for the matched term |
 | `yoast-seo/update-term-seo-data` | Write | The updated SEO data object for the term |
 
-Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
 Like the [Post's SEO data](posts-seo-data.md) abilities, these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`), the same capability that gates the advanced and schema fields in the editor. On top of that, per-term edit access is always enforced: only terms the current user is allowed to edit are ever returned or updated.
 
@@ -27,7 +25,7 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | `yoast-seo/get-term-seo-data` | Yes | No | Yes |
 | `yoast-seo/update-term-seo-data` | No | Not declared (`null`) | Yes |
 
-`update-term-seo-data` is not read-only, since it writes term data. Its destructive hint is left undeclared (`null`) rather than `false`: although the ability only edits Yoast's SEO metadata fields and never touches the term's name, slug, or description, writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the term in the same state, rather than compounding the change.
+`update-term-seo-data` only edits Yoast's SEO metadata fields and never touches the term's name, slug, or description.
 
 ## Identifying the term
 Both abilities accept a `term_id` (an integer of 1 or higher) or a `permalink` (the term archive's URL) to locate the term. At least one identifier is required.
@@ -37,14 +35,7 @@ Term IDs are unique across taxonomies in WordPress, so the ID alone is always su
 Unlike `get-post-seo-data`, neither ability accepts a `title` search: both always target a single term.
 
 ### Identifier precedence
-Only one identifier is ever used to locate the term. When both are provided, they are checked in this order and the first non-empty one wins:
-
-1. `term_id`
-2. `permalink`
-
-The other identifier is ignored: it is not cross-checked against the term that was found, and no error or warning is returned if it points to a different term. For example, if `term_id` is `7` and `permalink` is the archive URL of term `12`, `update-term-seo-data` updates term `7`. Likewise, a `term_id` that doesn't resolve to a term returns a not-found error, without falling back to the `permalink`.
-
-To avoid editing the wrong term, send a single identifier per request. If you only know the term archive's URL, look it up with `get-term-seo-data` first, check that the returned term is the one you expect, and then pass its `term_id` to `update-term-seo-data`.
+When both identifiers are provided, `term_id` wins and `permalink` is ignored: it is not cross-checked, even when it points to a different term, and a `term_id` that doesn't resolve returns a not-found error without falling back to the `permalink`. To avoid editing the wrong term, send a single identifier per request.
 
 ## `get-term-seo-data`
 Reads the SEO data for a single taxonomy term.
@@ -108,7 +99,7 @@ Updates the SEO data for a single taxonomy term.
 Only the fields you provide are changed; every other field is left untouched. A provided empty value (`""` or `null`, depending on the field) clears that field and lets Yoast SEO fall back to its default.
 
 ### Input
-Identify the term with `term_id` **or** `permalink` (a `title` search is not accepted here), then provide any of the writable fields you want to change:
+Identify the term with `term_id` **or** `permalink`, then provide any of the writable fields you want to change:
 
 * `seo_title` – the custom SEO title. A string, or `null` to clear it and fall back to the default template.
 * `meta_description` – the custom meta description. A string, or `null` to clear it.
@@ -154,17 +145,6 @@ You can identify the term by its archive permalink instead, and change several f
         "seo_title": "All Recipes - My Site",
         "meta_description": "Browse all our tested and approved recipes.",
         "is_cornerstone": true
-    }
-}
-```
-
-To clear the custom SEO title so it falls back to the default template:
-
-```json
-{
-    "input": {
-        "term_id": 7,
-        "seo_title": null
     }
 }
 ```

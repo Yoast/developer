@@ -7,8 +7,6 @@ description: This documentation explains the ability that reads and updates a us
 
 Yoast SEO registers one ability to read and update a user's author schema settings: the pronouns, social profiles, and related details that are used to populate the Person schema for the user. With Yoast SEO Premium active, it can also update the user's additional details, such as their job title, employer, expertise, and awards.
 
-It is listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
 
 The `yoast-seo/update-author-schema` ability is gated behind the `edit_user` capability for the specific user being updated. This mirrors the capability that gates the user profile page:
@@ -18,11 +16,11 @@ The `yoast-seo/update-author-schema` ability is gated behind the `edit_user` cap
 
 ## Annotations
 
+The ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients:
+
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|
 | `yoast-seo/update-author-schema` | No | Not declared (`null`) | Yes |
-
-`destructive` is left undeclared (`null`): providing an empty string for a field clears that setting, which could remove previously saved data. Callers should treat this ability as potentially destructive. It is idempotent: calling it again with the same input leaves the user's settings in the same state.
 
 ## Input
 
@@ -68,7 +66,7 @@ A provided list replaces the current one, and an empty list clears it. List item
 
 ## Output
 
-Returns the full set of author schema settings for the user after the update, keyed by field name, plus the `user_id`. This includes the Yoast SEO Premium fields when Premium is active. When a field could not be saved as provided — for example because a social profile URL is invalid, or because pronouns cannot be set on this site — an extra `warning` field is included in the response explaining which fields were not saved. The other fields are still saved when one fails.
+Returns the full set of author schema settings for the user after the update, keyed by field name, plus the `user_id`. This includes the Yoast SEO Premium fields when Premium is active. When a field could not be saved as provided — for example because a social profile URL is invalid, or because pronouns cannot be set on this site — an extra `warning` field is included in the response explaining which fields were not saved.
 
 ### Usage
 

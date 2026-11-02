@@ -17,9 +17,7 @@ All three take the same input and return the same shape, with one exception: the
 | `yoast-seo/get-readability-scores` | Readability analysis score | – | Yes |
 | `yoast-seo/get-inclusive-language-scores` | Inclusive language analysis score | – | **No** |
 
-When available, they are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
-Each ability is only available when the analysis it reports on is enabled, both site-wide and in the current user's profile. Otherwise it is left out of the listing and calling it returns an error. None of the three are available on non-production environments, where Yoast SEO's indexables, which the scores are read from, aren't built by default.
+Each ability is only available when the analysis it reports on is enabled, both site-wide and in the current user's profile. Otherwise it is left out of the [abilities listing](overview.md#yoast-seo-abilities) and calling it returns an error. None of the three are available on non-production environments, where Yoast SEO's indexables, which the scores are read from, aren't built by default.
 
 ## Annotations
 Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients. All three score abilities share the same values:
@@ -29,8 +27,6 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | `yoast-seo/get-seo-scores` | Yes | No | Yes |
 | `yoast-seo/get-readability-scores` | Yes | No | Yes |
 | `yoast-seo/get-inclusive-language-scores` | Yes | No | Yes |
-
-Being read-only, they never modify your content; the destructive and idempotent hints are included for completeness but carry no practical weight for a read-only ability.
 
 ## Input
 Each ability takes a single optional argument:

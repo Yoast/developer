@@ -54,6 +54,8 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 * **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
 * **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
+The Yoast SEO abilities that write data leave the destructive hint undeclared (`null`) rather than `false`: writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and they make no non-destructive guarantee. They are idempotent because they only set the fields you provide, so sending the same request again leaves the data in the same state, rather than compounding the change.
+
 The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Term's SEO data](terms-seo-data.md#annotations), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#annotations), [Author schema](author-schema.md#annotations), [Feature toggles](feature-toggles.md#annotations), and [Site representation](site-representation.md#annotations).
 
 ## Use cases for the Yoast SEO Abilities

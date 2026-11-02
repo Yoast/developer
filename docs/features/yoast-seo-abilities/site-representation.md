@@ -7,19 +7,19 @@ description: This documentation explains the ability that updates the Yoast SEO 
 
 Yoast SEO registers one ability to update the site representation settings: the information that tells search engines whether the site represents an organization or a person, and provides the name, logo, social profiles, and related details used in the site's organization schema. With Yoast SEO Premium active, it can also update the organization's additional details and identifiers.
 
-It is listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
 
 The `yoast-seo/update-site-representation` ability is gated behind the `wpseo_manage_options` capability, the same capability that gates the Yoast SEO settings page where the site representation is configured.
 
 ## Annotations
 
+The ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients:
+
 | Ability | Read-only | Destructive | Idempotent |
 |---|---|---|---|
 | `yoast-seo/update-site-representation` | No | Not declared (`null`) | Yes |
 
-`destructive` is left undeclared (`null`): providing an empty value for a field (an empty string, `0`, or an empty array) clears that setting, which could remove previously saved data. Callers should treat this ability as potentially destructive. It is idempotent: calling it again with the same input leaves the settings in the same state.
+An empty value that clears a field can be an empty string, `0`, or an empty array, depending on the field.
 
 ## Input
 

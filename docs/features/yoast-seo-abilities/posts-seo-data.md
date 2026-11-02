@@ -14,8 +14,6 @@ Yoast SEO registers two abilities to work with the SEO data of individual posts:
 | `yoast-seo/get-post-seo-data` | Read-only | An array of SEO data objects, one per matched post |
 | `yoast-seo/update-post-seo-data` | Write | The updated SEO data object for the post |
 
-Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
 Unlike the [Analysis scores](analysis-scores.md) abilities, which are gated behind the Yoast SEO management capability (`wpseo_manage_options`), these two abilities are gated behind the advanced metadata capability (`wpseo_edit_advanced_metadata`), the same capability that gates the advanced and schema fields in the editor. On top of that, per-post edit access is always enforced: only posts the current user is allowed to edit are ever returned or updated.
 
@@ -27,7 +25,7 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | `yoast-seo/get-post-seo-data` | Yes | No | Yes |
 | `yoast-seo/update-post-seo-data` | No | Not declared (`null`) | Yes |
 
-`update-post-seo-data` is not read-only, since it writes post data. Its destructive hint is left undeclared (`null`) rather than `false`: although the ability only edits Yoast's SEO metadata fields and never touches the post's content, writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the post in the same state, rather than compounding the change.
+`update-post-seo-data` only edits Yoast's SEO metadata fields and never touches the post's content.
 
 ## Identifying the post
 Both abilities accept a `post_id` (an integer of 1 or higher) or a `permalink` (the post's URL) to locate the post. At least one identifier is required.

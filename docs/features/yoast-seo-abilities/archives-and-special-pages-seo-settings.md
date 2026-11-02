@@ -14,10 +14,8 @@ Yoast SEO registers two abilities to work with the SEO settings of the homepage 
 | `yoast-seo/get-archive-and-special-page-seo-settings` | Read-only | An array of SEO settings objects, one per target |
 | `yoast-seo/update-archive-and-special-page-seo-settings` | Write | The updated SEO settings object for the target |
 
-Both are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
-Like the [Analysis scores](analysis-scores.md) abilities, and unlike the [Post's SEO data](posts-seo-data.md) and [Term's SEO data](terms-seo-data.md) abilities, these two abilities are gated behind the Yoast SEO management capability (`wpseo_manage_options`), the same capability that gates the Yoast SEO settings page where these settings are configured.
+These two abilities are gated behind the Yoast SEO management capability (`wpseo_manage_options`), the same capability that gates the Yoast SEO settings page where these settings are configured.
 
 ## Annotations
 Each ability declares a set of [behavior annotations](overview.md#annotations) as hints for AI agents and other MCP clients:
@@ -27,7 +25,7 @@ Each ability declares a set of [behavior annotations](overview.md#annotations) a
 | `yoast-seo/get-archive-and-special-page-seo-settings` | Yes | No | Yes |
 | `yoast-seo/update-archive-and-special-page-seo-settings` | No | Not declared (`null`) | Yes |
 
-`update-archive-and-special-page-seo-settings` is not read-only, since it writes Yoast SEO settings. Its destructive hint is left undeclared (`null`) rather than `false`: writing a field overwrites its previous value, a provided empty value clears it, and setting `noindex` to `true` can remove whole groups of pages from search results, so some data loss is possible and the ability makes no non-destructive guarantee. It is idempotent because it only sets the specific fields you provide and sending the same request again leaves the settings in the same state, rather than compounding the change.
+On top of the [usual reasons](overview.md#annotations) for the undeclared destructive hint, setting `noindex` to `true` can remove whole groups of pages from search results.
 
 ## Identifying the target
 Each set of settings belongs to a `target`: the pages it applies to. These are the settings configured in `Yoast SEO` → `Settings`:

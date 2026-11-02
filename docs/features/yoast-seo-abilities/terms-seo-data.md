@@ -155,7 +155,7 @@ Both abilities return the same object. Its fields are:
 | Field | Type | Description |
 |---|---|---|
 | `term_id` | integer | The term ID. |
-| `term_name` | string \| null | The term name. |
+| `term_name` | string \| null | The term's breadcrumb title: the custom breadcrumb title when set, otherwise the term name. |
 | `permalink` | string \| null | The term archive's permalink (URL). |
 | `taxonomy` | string | The taxonomy slug, such as `category` or `post_tag`. |
 | `seo_title` | string \| null | The custom SEO title, or `null` when none is set. |

@@ -66,18 +66,27 @@ The Schema Aggregator implements a dynamic caching strategy:
 
 ### Schemamap (XML map for structured data)
 
-The schemamap provides an XML index of all available schema endpoints:
+The schemamap provides an XML index of all available schema endpoints, following the sitemap protocol and [NLWeb's Schema Feeds specification](http://schema.org/schemas/schemafeed/0.1). It is served at `/schemamap.xml` when the Schema Aggregator feature is enabled.
+
+Each `url` entry includes the endpoint location, change frequency, priority, and an `sf:contentType` element from the Schema Feeds namespace that identifies the content as `structuredData/schema.org`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist>
-    <schema>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:sf="http://schema.org/schemas/schemafeed/0.1">
+    <url contentType="structuredData/schema.org">
         <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/post</loc>
-    </schema>
-    <schema>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <sf:contentType>structuredData/schema.org</sf:contentType>
+    </url>
+    <url contentType="structuredData/schema.org">
         <loc>https://example.com/wp-json/yoast/v1/schema-aggregator/get-schema/page</loc>
-    </schema>
-</schemalist>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <sf:contentType>structuredData/schema.org</sf:contentType>
+    </url>
+</urlset>
 ```
 
 ### External source support

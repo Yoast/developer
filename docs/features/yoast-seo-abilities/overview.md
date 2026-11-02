@@ -71,13 +71,13 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 * _"Write a meta description of at most 155 characters for the post with ID 42, making sure it includes its focus keyphrase."_
 * _"Mark my post about sourdough bread as cornerstone content and set its canonical URL to https://example.com/sourdough/."_
 * _"Remove the custom Open Graph title from the post at https://example.com/homemade-sourdough-bread/ so that Facebook and other social platforms show the default title instead."_
-* Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_
 * _"Set a custom meta description for the category at https://example.com/category/recipes/."_
 * _"Make the titles of my author archives and my Books archive more descriptive."_
 * _"Hide the date archives from search engines."_
 * _"Update the LinkedIn profile for user ID 3 to https://www.linkedin.com/in/jane-doe/."_
+* Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title."_
 
-See [Post's SEO data](posts-seo-data.md#update-post-seo-data), [Term's SEO data](terms-seo-data.md#update-term-seo-data), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#update-archive-and-special-page-seo-settings), and [Author schema](author-schema.md#input) for the full list of fields the agent can read and update.
+See [Post's SEO data](posts-seo-data.md#update-post-seo-data), [Term's SEO data](terms-seo-data.md#update-term-seo-data), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#update-archive-and-special-page-seo-settings), and [Author schema](author-schema.md#input) for the full lists of fields the agent can read and update.
 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 

@@ -142,7 +142,7 @@ Not every target has every field:
 | `post_type_archive` | Yes | Yes | Yes | Yes |
 
 :::note
-The title and description fields are templates that can contain snippet variables in the `%%variable%%` format, which are replaced with the values of the page they are shown on. Only use snippet variables that apply to the pages you update: the ones that do not (like `%%term_title%%` on author archives) are silently removed when the page is rendered.
+The title and description fields are templates that can contain snippet variables in the `%%variable%%` format, which are replaced with the values of the page they are shown on. Only use snippet variables that apply to the pages you update: the ones that do not (like `%%term_title%%` on author archives) are silently removed when the pages are rendered.
 :::
 
 ### Output

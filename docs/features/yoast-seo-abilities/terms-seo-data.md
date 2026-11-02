@@ -179,7 +179,7 @@ Both abilities return the same object. Its fields are:
 | `readability_score` | string | The result of the readability analysis when the term was last saved. |
 | `inclusive_language_score` | string | The result of the inclusive language analysis when the term was last saved. |
 
-The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with snippet variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what a visitor and search engine actually see.
+The `*_rendered` companion of a field carries the value as actually output on the front end: the global default template applied where no custom value is set, with snippet variables expanded. It is `null` when nothing is output. This lets you distinguish a field the user left empty (a `null` stored value with a non-`null` rendered value) from what visitors and search engines actually see.
 
 ## Full definition
 A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete definition of each ability:
@@ -376,16 +376,16 @@ The update definition above is the one returned on a site without Yoast SEO Prem
 You can unregister either of these abilities through the WordPress-native `wp_abilities_api_init` action. Remove a name from the array to keep that ability enabled:
 
 ```php
+<?php
 add_action( 'wp_abilities_api_init', function() {
-        $abilities = [
-            'yoast-seo/get-term-seo-data',
-            'yoast-seo/update-term-seo-data',
-        ];
-        foreach ( $abilities as $ability ) {
-            if ( wp_has_ability( $ability ) ) {
-                wp_unregister_ability( $ability );
-            }
+    $abilities = [
+        'yoast-seo/get-term-seo-data',
+        'yoast-seo/update-term-seo-data',
+    ];
+    foreach ( $abilities as $ability ) {
+        if ( wp_has_ability( $ability ) ) {
+            wp_unregister_ability( $ability );
         }
-    }, 20
-); // Run after Yoast SEO registers at default priority 10
+    }
+}, 20 ); // Run after Yoast SEO registers at default priority 10
 ```

@@ -25,6 +25,37 @@ Snippet editor (mobile)
 
 These UI elements should be integrated into the content editing experience and should update in a real-time or semi-realtime manner. For inspiration, implementors are recommended to take a look at how these elements are integrated into [Yoast SEO for WordPress](https://wordpress.org/plugins/wordpress-seo/).
 
+## Image alt text assessments
+
+Yoast SEO 28.9 replaces the _Keyphrase in image alt attributes_ assessment with a suite of five dedicated image alt text quality assessments. The new assessments run on the images found in the analyzed text, or on images the platform supplies via the `providedImages` field of the `PaperDto` input contract.
+
+| Assessment class | What it flags |
+|---|---|
+| `AltTextLengthAssessment` | Images whose alt text is too short or too long |
+| `DuplicateAltTextAssessment` | Images that share identical alt text with another image on the same page |
+| `NonDescriptiveAltTextAssessment` | Images whose alt text is a file name, a placeholder, or a generic default like "Product image" |
+| `RedundantPhraseInAltTextAssessment` | Images whose alt text begins with a redundant phrase like "Image of" or "Photo of" |
+| `KeyphraseStuffingInAltTextAssessment` | Images whose alt text overuses the keyphrase or its synonyms |
+
+All five assessments are included in the standard `SEOAssessor` and exported from the library's public `seo` namespace in `index.js`. The corresponding researches (`altTextLength`, `altTextKeyphraseCount`, `duplicateAltText`, `nonDescriptiveAltText`, `redundantPhraseInAltText`) are registered on `AbstractResearcher` and are therefore available in every researcher instance.
+
+### Deprecated: `KeyphraseInImageTextAssessment`
+
+`KeyphraseInImageTextAssessment` (identifier `imageKeyphrase`) is deprecated as of 28.9. It is still exported for backwards compatibility but is no longer included in any built-in assessor, and instantiating it logs a `console.warn`. It will be removed in a future major version. Integrators that referenced this assessment by name should switch to the new assessments above.
+
+### Flagged items on `AssessmentResult`
+
+The alt text assessments use a new `flaggedItems` field on `AssessmentResult` to identify which specific images their result refers to. `ImageAltTagsAssessment` also populates this field. Consumers that build image management UIs (for example, an image alt text tab in a bulk editor) can read these identifiers to highlight the precise images that need attention:
+
+```js
+const result = assessment.getResult( paper, researcher );
+const imageIds = result.getFlaggedItems(); // Array<string|number>
+```
+
+The identifiers come from the `id` field of each object in the `providedImages` array. When a provided image has no `id`, the library falls back to its `src`. Because multiple assessments can flag the same image (for example, an alt text can be both too short and a duplicate), consumers should merge the lists returned by several results, keyed by identifier.
+
+The `flaggedItems` field is also included in `ResultDto` (the serialized form returned by the analysis worker), under the same name.
+
 ## Advanced page controls
 Users should also be able to define the following for any given page:
 

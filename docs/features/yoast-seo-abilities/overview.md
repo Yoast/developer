@@ -62,8 +62,6 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 
 The Yoast SEO abilities that write data leave the destructive hint undeclared (`null`) rather than `false`: writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and they make no non-destructive guarantee. They are idempotent because they only set the fields you provide, so sending the same request again leaves the data in the same state, rather than compounding the change.
 
-The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Term's SEO data](terms-seo-data.md#annotations), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#annotations), [Author schema](author-schema.md#annotations), [Feature toggles](feature-toggles.md#annotations), [Site representation](site-representation.md#annotations), and [Blocked bots](blocked-bots.md#annotations).
-
 ## Use cases for the Yoast SEO Abilities
 
 ### AI agents
@@ -81,7 +79,6 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 * _"Make the titles of my author archives and my Books archive more descriptive."_
 * _"Hide the date archives from search engines."_
 * _"Update the LinkedIn profile for user ID 3 to https://www.linkedin.com/in/jane-doe/."_
-* With Yoast SEO Premium active: _"Block GPTBot on my site, but keep allowing Google's Gemini bots."_
 * Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title."_
 
 See [Post's SEO data](posts-seo-data.md#update-post-seo-data), [Term's SEO data](terms-seo-data.md#update-term-seo-data), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#update-archive-and-special-page-seo-settings), and [Author schema](author-schema.md#input) for the full lists of fields the agent can read and update.

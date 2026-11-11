@@ -312,6 +312,7 @@ module.exports = {
 						"features/yoast-seo-abilities/author-schema",
 						"features/yoast-seo-abilities/feature-toggles",
 						"features/yoast-seo-abilities/site-representation",
+						"features/yoast-seo-abilities/blocked-bots",
 					],
 				},
 			],

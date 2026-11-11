@@ -7,8 +7,6 @@ description: This documentation explains the abilities that enable or disable Yo
 
 Yoast SEO registers six abilities that let agents enable or disable individual features. Each ability writes the corresponding option and—when the feature has side-effects on toggle—performs the additional work (generating or removing a file, flushing a cache, etc.).
 
-All six are listed at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo`.
-
 ## Permissions
 
 Every feature-toggle ability is gated behind the `wpseo_manage_options` capability, the same capability that gates the Yoast SEO settings page where those toggles live.
@@ -26,7 +24,7 @@ Every ability declares [behavior annotations](overview.md#annotations) as hints 
 | `yoast-seo/set-open-graph-status` | No | Not declared (`null`) | Yes |
 | `yoast-seo/set-x-card-status` | No | Not declared (`null`) | Yes |
 
-`destructive` is left undeclared (`null`) for all of them rather than set to `false`: disabling a feature removes or stops serving content (the llms.txt file, Open Graph tags, the schema graph, sitemaps, etc.), which may be unwanted. All six are idempotent: calling them again with the same `enabled` value leaves the site in the same state.
+Here, the destructive hint is left undeclared because disabling a feature removes or stops serving content (the llms.txt file, Open Graph tags, the schema graph, sitemaps, etc.), which may be unwanted.
 
 :::caution
 Abilities can change settings that the Yoast UI normally double-checks with confirmation warnings, such as turning the Schema Framework off. That double check doesn't happen here, so it's worth knowing what you're changing before you change it. Use is at the user's discretion.

@@ -29,3 +29,6 @@ The **Meta description length** assessment checks whether the meta description h
 | Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) ≤ 120 characters (Japanese: ≤ 60 characters) | **Meta description length**: The meta description is too short (under X characters). Up to X characters are available. **Use the space!** |
 | Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) > 156 characters (Japanese: > 80 characters) | **Meta description length**: The meta description is over X characters. To ensure the entire description will be visible, **you should reduce the length!** |
 | Green | 9 | Meta description (incl. the date) > 120 and ≤ 156 characters (Japanese: > 60 and ≤ 80 characters) | **Meta description length**: Well done! |
+
+## Taxonomies
+On taxonomies, the date is not shown in the meta description, so it is not included in the length. The boundaries and scores are the same.

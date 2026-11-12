@@ -105,6 +105,11 @@ The penalties of all assessments are added up. The sum defines the overall score
 * [Non-descriptive alt text](seo/non-descriptive-alt-text.md)
 * [Title](seo/title.md) (Premium)
 
+### Product page assessments
+* [Image alt attributes](seo/image-alt-attributes.md)
+* [Product identifier](seo/product-identifier.md)
+* [SKU](seo/sku.md)
+
 ## Readability assessments
 * [Subheading distribution](readability/subheading-distribution.md)
 * [Paragraph length](readability/paragraph-length.md)
@@ -115,6 +120,7 @@ The penalties of all assessments are added up. The sum defines the overall score
 * [Text presence](readability/text-presence.md)
 * [Word complexity](readability/word-complexity.md) (Premium, Shopify)
 * [Text alignment](readability/text-alignment.md) (Premium)
+* [Lists](readability/lists.md) (product pages)
 
 ## Assessments per content type
 Different content types use a different set of assessments. The table below shows which SEO assessments run for the focus keyphrase on each content type, and which also run for related keyphrases.

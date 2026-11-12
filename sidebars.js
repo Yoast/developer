@@ -71,6 +71,9 @@ module.exports = {
 										"features/analysis/assessments/seo/redundant-phrase-in-alt-text",
 										"features/analysis/assessments/seo/non-descriptive-alt-text",
 										"features/analysis/assessments/seo/title",
+										"features/analysis/assessments/seo/image-alt-attributes",
+										"features/analysis/assessments/seo/product-identifier",
+										"features/analysis/assessments/seo/sku",
 									],
 								},
 								{
@@ -86,6 +89,7 @@ module.exports = {
 										"features/analysis/assessments/readability/text-presence",
 										"features/analysis/assessments/readability/word-complexity",
 										"features/analysis/assessments/readability/text-alignment",
+										"features/analysis/assessments/readability/lists",
 									],
 								},
 							],

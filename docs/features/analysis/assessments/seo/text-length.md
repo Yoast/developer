@@ -17,7 +17,7 @@ The **Text length** assessment checks whether the text is long enough.
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Japanese counts characters instead of words, with different boundaries (see the scoring tables). |
-| **Cornerstone** | ✅ Higher boundaries and lower scores (see the scoring tables) |
+| **Cornerstone** | ✅ Higher boundaries and lower scores (see the scoring tables). Not on taxonomies and collection pages. |
 | **Uses highlighting** | ❌ |
 | **Uses morphology (Premium)** | ❌ |
 
@@ -42,3 +42,36 @@ X stands for the number of words (Japanese: characters) in the text, or for the 
 | Red | -20 | 300-399 words (Japanese: 600-799 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 900 words (Japanese: 1800 characters). **Add more content.** |
 | Orange | 6 | 400-899 words (Japanese: 800-1799 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 900 words (Japanese: 1800 characters). **Add more content.** |
 | Green | 9 | 900 words or more (Japanese: 1800 characters or more) | **Text length**: The text contains X words. Good job! |
+
+## Product pages
+
+### Default
+
+| Traffic light | Score | Criterion | Feedback |
+|---|---|---|---|
+| Red | -20 | 0-49 words (Japanese: 0-99 characters) | **Text length**: The text contains X words. This is far below the recommended minimum of 200 words (Japanese: 400 characters). **Add more content.** |
+| Red | -10 | 50-99 words (Japanese: 100-199 characters) | **Text length**: The text contains X words. This is far below the recommended minimum of 200 words (Japanese: 400 characters). **Add more content.** |
+| Red | 3 | 100-149 words (Japanese: 200-299 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 200 words (Japanese: 400 characters). **Add more content.** |
+| Orange | 6 | 150-199 words (Japanese: 300-399 characters) | **Text length**: The text contains X words. This is slightly below the recommended minimum of 200 words (Japanese: 400 characters). **Add more content.** |
+| Green | 9 | 200 words or more (Japanese: 400 characters or more) | **Text length**: The text contains X words. Good job! |
+
+### Cornerstone content
+
+| Traffic light | Score | Criterion | Feedback |
+|---|---|---|---|
+| Red | -20 | 0-199 words (Japanese: 0-399 characters) | **Text length**: The text contains X words. This is far below the recommended minimum of 400 words (Japanese: 800 characters). **Add more content.** |
+| Red | -20 | 200-299 words (Japanese: 400-599 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 400 words (Japanese: 800 characters). **Add more content.** |
+| Orange | 6 | 300-399 words (Japanese: 600-799 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 400 words (Japanese: 800 characters). **Add more content.** |
+| Green | 9 | 400 words or more (Japanese: 800 characters or more) | **Text length**: The text contains X words. Good job! |
+
+## Taxonomies and collection pages
+On taxonomies (WordPress) and collection pages (Shopify), the boundaries are lower, and the links in the feedback are different:
+* Title URL: [https://yoa.st/34j](https://yoa.st/34j)
+* Call to action URL: [https://yoa.st/34k](https://yoa.st/34k)
+
+| Traffic light | Score | Criterion | Feedback |
+|---|---|---|---|
+| Red | -20 | 0 words | **Text length**: **Please add some content.** |
+| Red | 3 | 1-9 words (Japanese: 1-19 characters) | **Text length**: The text contains X words. This is below the recommended minimum of 30 words (Japanese: 60 characters). **Add more content.** |
+| Orange | 6 | 10-29 words (Japanese: 20-59 characters) | **Text length**: The text contains X words. This is slightly below the recommended minimum of 30 words (Japanese: 60 characters). **Add more content.** |
+| Green | 9 | 30 words or more (Japanese: 60 characters or more) | **Text length**: The text contains X words. Good job! |

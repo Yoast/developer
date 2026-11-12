@@ -40,3 +40,6 @@ The whole alt text is matched: "Product image" is flagged, "Product image of a r
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag` and `nonDescriptiveCount`, and must return `nonDescriptive`. The returned object is used as is.
+
+## Product pages
+On product pages, the checks and the score are the same. Only the feedback strings are different: the assessed images are the product's own, so the strings say "product images" instead of "images". WooCommerce SEO and Shopify both supply their own feedback strings, so a user sees the platform's strings, not the defaults.

@@ -41,3 +41,10 @@ The result names the flagged images in `flaggedItems`, by their `id`, or else by
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag` and `duplicateCount`, and must return `duplicate`. The returned object is used as is, so an omitted key renders as an empty result text. It does not fall back to the default.
+
+## Product pages
+On product pages, the criterion and the score are the same. Only the feedback strings are different: the assessed images are the product's own, so the strings say "product images" instead of "images". WooCommerce SEO and Shopify both supply their own feedback strings, so a user sees the platform's strings, not the defaults.
+
+Provided images with the same `id` count as one image, so a product image that is also in the gallery is not a duplicate.
+
+In Shopify, the links are different: [https://yoa.st/shopify-duplicate-alt-text](https://yoa.st/shopify-duplicate-alt-text) and [https://yoa.st/shopify-duplicate-alt-text-cta](https://yoa.st/shopify-duplicate-alt-text-cta).

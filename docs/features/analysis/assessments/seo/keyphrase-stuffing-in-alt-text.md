@@ -39,3 +39,6 @@ X is the number of images, not the number of keyphrase occurrences.
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag`, `overusedCount`, `twiceCount` and `exactMatchRequested`, and must return all four of `moreThanTwice`, `multipleTimes`, `twice` and `twiceOrMore`. The returned object is used as is, so an omitted key renders as an empty result text. It does not fall back to the default.
+
+## Product pages
+The scoring is the same on product pages. WooCommerce SEO and Shopify can supply their own feedback strings and links through the assessor options.

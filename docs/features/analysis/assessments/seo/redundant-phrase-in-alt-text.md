@@ -29,3 +29,6 @@ The **Redundant phrase in alt text** assessment checks whether the assessed imag
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag` and `redundantPhraseCount`, and must return `redundantPhrase`. The returned object is used as is.
+
+## Product pages
+On product pages, the phrases and the score are the same. Only the feedback strings are different: the assessed images are the product's own, so the strings say "product images" instead of "images". WooCommerce SEO and Shopify both supply their own feedback strings, so a user sees the platform's strings, not the defaults.

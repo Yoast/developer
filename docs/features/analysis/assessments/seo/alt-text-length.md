@@ -38,3 +38,8 @@ Each feedback text is two separately translated sentences: the count, then the a
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag`, `tooShortCount`, `tooLongCount`, `tooShortBoundary` and `tooLongBoundary`, and must return all three of `tooShort`, `tooLong` and `both`. The returned object is used as is, so an omitted key renders as an empty result text. It does not fall back to the default.
+
+## Product pages
+On product pages, the limits and the score are the same. Only the feedback strings are different: the assessed images are the product's own, so the strings say "product images" instead of "images". WooCommerce SEO and Shopify both supply their own feedback strings, so a user sees the platform's strings, not the defaults.
+
+In Shopify, the links are different: [https://yoa.st/shopify-alt-text-length](https://yoa.st/shopify-alt-text-length) and [https://yoa.st/shopify-alt-text-length-cta](https://yoa.st/shopify-alt-text-length-cta).

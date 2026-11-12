@@ -29,3 +29,6 @@ The **Internal links** assessment checks whether the text has internal links (li
 | Orange | 7 | All internal links are nofollowed | **Internal links**: The internal links in this page are all nofollowed. **Add some good internal links.** |
 | Green | 8 | There are both followed and nofollowed internal links | **Internal links**: There are both nofollowed and normal internal links on this page. Good job! |
 | Green | 9 | All internal links are followed | **Internal links**: You have enough internal links. Good job! |
+
+## Product pages
+This assessment does not run on product pages. On a product page, the main goal is that the visitor buys the product, so we don't encourage links to other pages. On informative blog posts, links such as "continue reading another post" do make sense.

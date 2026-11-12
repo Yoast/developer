@@ -6,18 +6,20 @@ description: This documentation provides a list of all assessments in the Yoast 
 ---
 The Yoast SEO content analysis is made up of separate checks, called **assessments**. Each assessment checks one aspect of a text, gives it a score, and shows feedback with a traffic light. This page explains how the scores work and lists all assessments. Each assessment has its own page with the details.
 
-The assessments are part of the [`yoastseo`](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo) JavaScript package. Some assessments are only available in [Yoast SEO Premium](https://yoast.com/product/yoast-seo-premium-wordpress/).
+Most assessments are part of the [`yoastseo`](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo) JavaScript package. Some assessments are only available in [Yoast SEO Premium](https://yoast.com/product/yoast-seo-premium-wordpress/), in [Yoast SEO for Shopify](https://yoast.com/product/yoast-seo-shopify/), or in the add-ons [Yoast Local SEO](https://yoast.com/product/local-seo-wordpress/), [Yoast Video SEO](https://yoast.com/product/video-seo-wordpress/) and [Yoast WooCommerce SEO](https://yoast.com/product/yoast-woocommerce-seo/).
+
+The inclusive language assessments are not documented here yet.
 
 ## How to read an assessment page
 Each assessment page starts with a card with the main information:
 
 | Field | Meaning |
 |---|---|
-| **Name in code** | The class name of the assessment, linked to its source code. |
+| **Name in code** | The class name of the assessment, linked to its source code when the code is public. |
 | **Title URL** | The link on the assessment name in the feedback. The linked part is shown in bold in the feedback strings. |
 | **Call to action URL** | The link on the call to action in the feedback. The linked part is shown in bold in the feedback strings. |
 | **When it applies** | When the assessment runs and shows a result. |
-| **Product** | Whether the assessment is part of Yoast SEO (Free) or Yoast SEO Premium. |
+| **Product** | The product the assessment is part of: Yoast SEO (Free), Yoast SEO Premium, Yoast SEO for Shopify, or an add-on. |
 | **Content types** | The content types the assessment runs on. See [Assessments per content type](#assessments-per-content-type). |
 | **Related keyphrases** (SEO only) | Whether the assessment also runs for related keyphrases (a Yoast SEO Premium feature). |
 | **Uses synonyms** (SEO only) | Whether keyphrase synonyms (a Yoast SEO Premium feature) are also used. |
@@ -121,6 +123,20 @@ The penalties of all assessments are added up. The sum defines the overall score
 * [Word complexity](readability/word-complexity.md) (Premium, Shopify)
 * [Text alignment](readability/text-alignment.md) (Premium)
 * [Lists](readability/lists.md) (product pages)
+
+## Add-on assessments
+
+### Yoast Local SEO
+* [Local schema](local-seo/local-schema.md)
+* [Local title](local-seo/local-title.md)
+* [Local slug](local-seo/local-slug.md)
+
+### Yoast Video SEO
+* [Video body](video-seo/video-body.md)
+* [Video title](video-seo/video-title.md)
+
+### Yoast WooCommerce SEO
+* [Product description](woocommerce-seo/product-description.md)
 
 ## Assessments per content type
 Different content types use a different set of assessments. The table below shows which SEO assessments run for the focus keyphrase on each content type, and which also run for related keyphrases.

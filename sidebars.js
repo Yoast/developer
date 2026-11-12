@@ -92,6 +92,30 @@ module.exports = {
 										"features/analysis/assessments/readability/lists",
 									],
 								},
+								{
+									type: "category",
+									label: "Local SEO",
+									items: [
+										"features/analysis/assessments/local-seo/local-schema",
+										"features/analysis/assessments/local-seo/local-title",
+										"features/analysis/assessments/local-seo/local-slug",
+									],
+								},
+								{
+									type: "category",
+									label: "Video SEO",
+									items: [
+										"features/analysis/assessments/video-seo/video-body",
+										"features/analysis/assessments/video-seo/video-title",
+									],
+								},
+								{
+									type: "category",
+									label: "WooCommerce SEO",
+									items: [
+										"features/analysis/assessments/woocommerce-seo/product-description",
+									],
+								},
 							],
 						},
 					],

@@ -13,7 +13,7 @@ The **Previously used keyphrase** assessment checks whether the keyphrase was al
 | **Call to action URL** | [https://yoa.st/33y](https://yoa.st/33y) |
 | **When it applies** | Always, in the Yoast SEO WordPress plugin. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: not available<br/>**Google Docs**: not available |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

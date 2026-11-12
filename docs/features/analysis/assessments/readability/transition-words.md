@@ -13,7 +13,7 @@ The **Transition words** assessment checks whether enough sentences contain tran
 | **Call to action URL** | [https://yoa.st/35a](https://yoa.st/35a) |
 | **When it applies** | When the assessment is supported for the language of the text. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Only [supported languages](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis). Japanese counts characters instead of words for the text length. |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ✅ Highlights the sentences with transition words |

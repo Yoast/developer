@@ -15,7 +15,7 @@ By default, it assesses the images in the text. A platform can limit all image a
 | **Call to action URL** | [https://yoa.st/alt-text-keyphrase-stuffing-cta](https://yoa.st/alt-text-keyphrase-stuffing-cta) |
 | **When it applies** | Only when a keyphrase is set and at least one assessed image overuses it. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ✅ The keyphrase and synonym matches in one alt text are added up: the keyphrase once plus a synonym once counts as 2. Words that one topic phrase matched are not matched again by the next one. |
 | **Languages** | All languages |

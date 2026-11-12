@@ -13,7 +13,7 @@ The **Subheading distribution** assessment checks whether long texts are divided
 | **Call to action URL** | [https://yoa.st/34y](https://yoa.st/34y) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Japanese counts characters instead of words, with different boundaries (see the scoring table). |
 | **Cornerstone** | ✅ Lower boundaries (see the scoring table) |
 | **Uses highlighting** | ✅ Highlights the text sections that are too long |

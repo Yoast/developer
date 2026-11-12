@@ -13,7 +13,7 @@ The **Meta description length** assessment checks whether the meta description h
 | **Call to action URL** | [https://yoa.st/34e](https://yoa.st/34e) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Japanese has different boundaries (see the scoring table). |

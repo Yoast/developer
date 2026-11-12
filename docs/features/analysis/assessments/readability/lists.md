@@ -13,7 +13,7 @@ The **Lists** assessment checks whether the text has a list. It only runs on pro
 | **Call to action URL** | [https://yoa.st/4ff](https://yoa.st/4ff) |
 | **When it applies** | Always, on product pages. |
 | **Product** | Yoast WooCommerce SEO, Yoast SEO for Shopify |
-| **Content types** | Product pages |
+| **Content types** | **WordPress**: products (WooCommerce SEO)<br/>**Shopify**: products<br/>**Google Docs**: not available |
 | **Languages** | All languages |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ❌ |

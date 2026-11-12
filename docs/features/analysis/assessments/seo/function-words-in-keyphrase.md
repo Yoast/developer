@@ -13,7 +13,7 @@ The **Function words in keyphrase** assessment checks whether the keyphrase cons
 | **Call to action URL** | [https://yoa.st/functionwordskeyphrase-2](https://yoa.st/functionwordskeyphrase-2) |
 | **When it applies** | Only when the keyphrase consists of function words only. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Only languages with function word support |

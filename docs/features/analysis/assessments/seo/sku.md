@@ -13,7 +13,7 @@ The **SKU** assessment checks whether a product has a SKU. If the product has va
 | **Call to action URL** | [https://yoa.st/4lx](https://yoa.st/4lx) |
 | **When it applies** | See [When it applies](#when-it-applies). |
 | **Product** | Yoast WooCommerce SEO, Yoast SEO for Shopify |
-| **Content types** | Product pages |
+| **Content types** | **WordPress**: products (WooCommerce SEO)<br/>**Shopify**: products<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

@@ -13,7 +13,7 @@ The **Text length** assessment checks whether the text is long enough.
 | **Call to action URL** | [https://yoa.st/34o](https://yoa.st/34o) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Japanese counts characters instead of words, with different boundaries (see the scoring tables). |

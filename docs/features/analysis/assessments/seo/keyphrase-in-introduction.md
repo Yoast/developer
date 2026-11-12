@@ -13,7 +13,7 @@ The **Keyphrase in introduction** assessment checks whether words from the keyph
 | **Call to action URL** | [https://yoa.st/33f](https://yoa.st/33f) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ✅ |
 | **Languages** | All languages |

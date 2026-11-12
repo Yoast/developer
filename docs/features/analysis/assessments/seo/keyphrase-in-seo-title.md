@@ -13,7 +13,7 @@ The **Keyphrase in SEO title** assessment checks whether the keyphrase is used i
 | **Call to action URL** | [https://yoa.st/33h](https://yoa.st/33h) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

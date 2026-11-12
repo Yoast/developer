@@ -13,7 +13,7 @@ The **Keyphrase length** assessment checks whether the number of (content) words
 | **Call to action URL** | [https://yoa.st/33j](https://yoa.st/33j) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Different limits for languages without function word support. Japanese counts characters instead of words. |

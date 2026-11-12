@@ -19,7 +19,7 @@ The recommended maximum sentence length is:
 | **Call to action URL** | [https://yoa.st/34w](https://yoa.st/34w) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Different maximum sentence length per language (see above), and different percentages for Polish and Turkish (see the scoring table). |
 | **Cornerstone** | ✅ Lower percentages (see the scoring table) |
 | **Uses highlighting** | ✅ Highlights the sentences that are too long |

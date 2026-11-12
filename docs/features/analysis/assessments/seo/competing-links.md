@@ -13,7 +13,7 @@ The **Competing links** assessment checks whether there are links in the text th
 | **Call to action URL** | [https://yoa.st/34m](https://yoa.st/34m) |
 | **When it applies** | Always. Does not apply to taxonomies (in WordPress), or to collection pages and store blogs (in Shopify). |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ✅ |
 | **Languages** | All languages |

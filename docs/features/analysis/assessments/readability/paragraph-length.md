@@ -13,7 +13,7 @@ The **Paragraph length** assessment checks whether paragraphs are longer than th
 | **Call to action URL** | [https://yoa.st/35e](https://yoa.st/35e) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages (with different boundaries) |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Japanese counts characters instead of words, with different boundaries (see the scoring tables). |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ✅ Highlights the paragraphs that are too long |

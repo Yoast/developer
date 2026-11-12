@@ -13,7 +13,7 @@ The **Outbound links** assessment checks whether the text has outbound links (li
 | **Call to action URL** | [https://yoa.st/34g](https://yoa.st/34g) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages |
+| **Content types** | **WordPress**: posts and pages<br/>**Shopify**: blog posts and pages<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

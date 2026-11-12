@@ -13,7 +13,7 @@ The **Passive voice** assessment checks whether the share of sentences with pass
 | **Call to action URL** | [https://yoa.st/34u](https://yoa.st/34u) |
 | **When it applies** | When the assessment is supported for the language of the text. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Only [supported languages](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis) |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ✅ Highlights the sentences with passive voice |

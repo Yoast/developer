@@ -13,7 +13,7 @@ The **Consecutive sentences** assessment checks whether 3 or more sentences in a
 | **Call to action URL** | [https://yoa.st/35g](https://yoa.st/35g) |
 | **When it applies** | When the assessment is supported for the language of the text. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies. Not on product pages: product texts are more descriptive, and repetition is okay there. |
+| **Content types** | **WordPress**: posts and pages, taxonomies<br/>**Shopify**: collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | Only [supported languages](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis) |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ✅ Highlights the consecutive sentences |

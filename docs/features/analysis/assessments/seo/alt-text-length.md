@@ -17,7 +17,7 @@ Images without alt text are not counted as too short. That case is covered by th
 | **Call to action URL** | [https://yoa.st/alt-text-length-cta](https://yoa.st/alt-text-length-cta) |
 | **When it applies** | Only when at least one assessed image has alt text that is too short or too long. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Japanese has different limits: 5 characters or fewer, and 100 characters or more. |

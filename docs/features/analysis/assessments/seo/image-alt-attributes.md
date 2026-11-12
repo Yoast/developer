@@ -15,7 +15,7 @@ By default, it assesses the images in the text. A platform can limit all image a
 | **Call to action URL** | [https://yoa.st/33d](https://yoa.st/33d) |
 | **When it applies** | Always, on product pages. |
 | **Product** | Yoast WooCommerce SEO, Yoast SEO for Shopify |
-| **Content types** | Product pages |
+| **Content types** | **WordPress**: products (WooCommerce SEO)<br/>**Shopify**: products<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

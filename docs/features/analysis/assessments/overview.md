@@ -4,9 +4,14 @@ title: "Assessments: Overview"
 sidebar_label: Overview
 description: This documentation provides a list of all assessments in the Yoast SEO content analysis, and explains how they are scored.
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 The Yoast SEO content analysis is made up of separate checks, called **assessments**. Each assessment checks one aspect of a text, gives it a score, and shows feedback with a traffic light. This page explains how the scores work and lists all assessments. Each assessment has its own page with the details.
 
 Most assessments are part of the [`yoastseo`](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo) JavaScript package. Some assessments are only available in [Yoast SEO Premium](https://yoast.com/product/yoast-seo-premium-wordpress/), in [Yoast SEO for Shopify](https://yoast.com/product/yoast-seo-shopify/), or in the add-ons [Yoast Local SEO](https://yoast.com/product/local-seo-wordpress/), [Yoast Video SEO](https://yoast.com/product/video-seo-wordpress/) and [Yoast WooCommerce SEO](https://yoast.com/product/yoast-woocommerce-seo/).
+
+These pages describe the analysis as of Yoast SEO 28.9.
 
 The inclusive language assessments are not documented here yet.
 
@@ -139,35 +144,157 @@ The penalties of all assessments are added up. The sum defines the overall score
 * [Product description](woocommerce-seo/product-description.md)
 
 ## Assessments per content type
-Different content types use a different set of assessments. The table below shows which SEO assessments run for the focus keyphrase on each content type, and which also run for related keyphrases.
+Different content types use a different set of assessments. Select your platform to see which assessments run on each content type. Some assessments use different boundaries on some content types. The assessment pages describe these differences.
 
-| Assessment | Posts and pages | Taxonomies | Product pages | Related keyphrases |
+Related keyphrases use a smaller set of assessments. See the **Related keyphrases** row on each assessment page.
+
+### SEO
+
+<Tabs groupId="platform">
+<TabItem value="wordpress" label="WordPress">
+
+| Assessment | Posts and pages | Taxonomies | Products (WooCommerce SEO) |
+|---|---|---|---|
+| [Keyphrase in introduction](seo/keyphrase-in-introduction.md) | ✅ | ✅ | ✅ |
+| [Keyphrase length](seo/keyphrase-length.md) | ✅ | ✅ | ✅ |
+| [Keyphrase density](seo/keyphrase-density.md) | ✅ | ✅ | ✅ |
+| [Keyphrase in meta description](seo/keyphrase-in-meta-description.md) | ✅ | ✅ | ✅ |
+| [Keyphrase in subheadings](seo/keyphrase-in-subheadings.md) | ✅ | ❌ | ✅ |
+| [Competing links](seo/competing-links.md) | ✅ | ❌ | ✅ |
+| [Keyphrase in SEO title](seo/keyphrase-in-seo-title.md) | ✅ | ✅ | ✅ |
+| [Keyphrase in slug](seo/keyphrase-in-slug.md) | ✅ | ✅ | ✅ |
+| [Previously used keyphrase](seo/previously-used-keyphrase.md) | ✅ | ✅ | ✅ |
+| [Keyphrase stuffing in alt text](seo/keyphrase-stuffing-in-alt-text.md) | ✅ | ❌ | ✅ |
+| [Text length](seo/text-length.md) | ✅ | ✅ | ✅ |
+| [Outbound links](seo/outbound-links.md) | ✅ | ❌ | ❌ |
+| [Internal links](seo/internal-links.md) | ✅ | ❌ | ❌ |
+| [SEO title width](seo/seo-title-width.md) | ✅ | ✅ | ✅ |
+| [Meta description length](seo/meta-description-length.md) | ✅ | ✅ | ✅ |
+| [Single title](seo/single-title.md) | ✅ | ✅ | ✅ |
+| [Function words in keyphrase](seo/function-words-in-keyphrase.md) | ✅ | ✅ | ✅ |
+| [Images](seo/images.md) | ✅ | ❌ | ✅ |
+| [Alt text length](seo/alt-text-length.md) | ✅ | ❌ | ✅ |
+| [Duplicate alt text](seo/duplicate-alt-text.md) | ✅ | ❌ | ✅ |
+| [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md) | ✅ | ❌ | ✅ |
+| [Non-descriptive alt text](seo/non-descriptive-alt-text.md) | ✅ | ❌ | ✅ |
+| [Image alt attributes](seo/image-alt-attributes.md) | ❌ | ❌ | ✅ |
+| [Product identifier](seo/product-identifier.md) | ❌ | ❌ | ✅ |
+| [SKU](seo/sku.md) | ❌ | ❌ | ✅ |
+
+Yoast SEO Premium also adds [Keyphrase distribution](seo/keyphrase-distribution.md) (all content types) and [Title](seo/title.md) (not on taxonomies). Taxonomies are category, tag and custom taxonomy pages.
+
+</TabItem>
+<TabItem value="shopify" label="Shopify">
+
+| Assessment | Products | Collections | Blog posts and pages | Blogs |
 |---|---|---|---|---|
-| Keyphrase in introduction | ✅ | ✅ | ✅ | ✅ |
-| Keyphrase length | ✅ | ✅ | ✅ | ✅ |
-| Keyphrase density | ✅ | ✅ | ✅ | ✅ |
-| Keyphrase in meta description | ✅ | ✅ | ✅ | ✅ |
-| Keyphrase in subheadings | ✅ | ❌ | ✅ | ❌ |
-| Competing links | ✅ | ❌ | ✅ | ✅ |
-| Keyphrase in SEO title | ✅ | ✅ | ✅ | ❌ |
-| Keyphrase in slug | ✅ | ✅ | ✅ | ❌ |
-| Previously used keyphrase<sup>1</sup> | ✅ | ✅ | ✅ | ✅ |
-| Keyphrase stuffing in alt text | ✅ | ❌ | ✅ | ✅ |
-| Text length | ✅ | ✅ | ✅ | ❌ |
-| Outbound links | ✅ | ❌ | ❌ | ❌ |
-| Internal links | ✅ | ❌ | ❌ | ❌ |
-| SEO title width | ✅ | ✅ | ✅ | ❌ |
-| Meta description length | ✅ | ✅ | ✅ | ❌ |
-| Single title | ✅ | ✅ | ✅ | ❌ |
-| Function words in keyphrase | ✅ | ✅ | ✅ | ✅ |
-| Images | ✅ | ❌ | ✅ | ❌ |
-| Alt text length | ✅ | ❌ | ✅ | ❌ |
-| Duplicate alt text | ✅ | ❌ | ✅ | ❌ |
-| Redundant phrase in alt text | ✅ | ❌ | ✅ | ❌ |
-| Non-descriptive alt text | ✅ | ❌ | ✅ | ❌ |
+| [Keyphrase in introduction](seo/keyphrase-in-introduction.md) | ✅ | ✅ | ✅ | ❌ |
+| [Keyphrase length](seo/keyphrase-length.md) | ✅ | ✅ | ✅ | ✅ |
+| [Keyphrase density](seo/keyphrase-density.md) | ✅ | ✅ | ✅ | ❌ |
+| [Keyphrase in meta description](seo/keyphrase-in-meta-description.md) | ✅ | ✅ | ✅ | ✅ |
+| [Keyphrase in subheadings](seo/keyphrase-in-subheadings.md) | ✅ | ❌ | ✅ | ❌ |
+| [Competing links](seo/competing-links.md) | ✅ | ❌ | ✅ | ❌ |
+| [Keyphrase in SEO title](seo/keyphrase-in-seo-title.md) | ✅ | ✅ | ✅ | ✅ |
+| [Keyphrase in slug](seo/keyphrase-in-slug.md) | ✅ | ✅ | ✅ | ✅ |
+| [Keyphrase stuffing in alt text](seo/keyphrase-stuffing-in-alt-text.md) | ✅ | ❌ | ✅ | ❌ |
+| [Text length](seo/text-length.md) | ✅ | ✅ | ✅ | ❌ |
+| [Outbound links](seo/outbound-links.md) | ❌ | ❌ | ✅ | ❌ |
+| [Internal links](seo/internal-links.md) | ❌ | ❌ | ✅ | ❌ |
+| [SEO title width](seo/seo-title-width.md) | ✅ | ✅ | ✅ | ✅ |
+| [Meta description length](seo/meta-description-length.md) | ✅ | ✅ | ✅ | ✅ |
+| [Single title](seo/single-title.md) | ✅ | ✅ | ✅ | ❌ |
+| [Function words in keyphrase](seo/function-words-in-keyphrase.md) | ✅ | ✅ | ✅ | ✅ |
+| [Images](seo/images.md) | ✅ | ❌ | ✅ | ❌ |
+| [Alt text length](seo/alt-text-length.md) | ✅ | ❌ | ✅ | ❌ |
+| [Duplicate alt text](seo/duplicate-alt-text.md) | ✅ | ❌ | ✅ | ❌ |
+| [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md) | ✅ | ❌ | ✅ | ❌ |
+| [Non-descriptive alt text](seo/non-descriptive-alt-text.md) | ✅ | ❌ | ✅ | ❌ |
+| [Image alt attributes](seo/image-alt-attributes.md) | ✅ | ❌ | ❌ | ❌ |
+| [Product identifier](seo/product-identifier.md) | ✅ | ❌ | ❌ | ❌ |
+| [SKU](seo/sku.md) | ✅ | ❌ | ❌ | ❌ |
 
-<sup>1</sup> Only in the Yoast SEO WordPress plugin. See [Previously used keyphrase](seo/previously-used-keyphrase.md).
+Yoast SEO for Shopify also adds [Keyphrase distribution](seo/keyphrase-distribution.md). **Blogs** is the overview page of a blog.
 
-The Premium assessments [Keyphrase distribution](seo/keyphrase-distribution.md) and [Title](seo/title.md) are added to the SEO analysis by Yoast SEO Premium. See their pages for when they apply.
+</TabItem>
+<TabItem value="google-docs" label="Google Docs">
+
+| Assessment | Documents |
+|---|---|
+| [Keyphrase in introduction](seo/keyphrase-in-introduction.md) | ✅ |
+| [Keyphrase length](seo/keyphrase-length.md) | ✅ |
+| [Keyphrase density](seo/keyphrase-density.md) | ✅ |
+| [Keyphrase in subheadings](seo/keyphrase-in-subheadings.md) | ✅ |
+| [Competing links](seo/competing-links.md) | ✅ |
+| [Keyphrase stuffing in alt text](seo/keyphrase-stuffing-in-alt-text.md) | ✅ |
+| [Text length](seo/text-length.md) | ✅ |
+| [Single title](seo/single-title.md) | ✅ |
+| [Function words in keyphrase](seo/function-words-in-keyphrase.md) | ✅ |
+| [Images](seo/images.md) | ✅ |
+| [Alt text length](seo/alt-text-length.md) | ✅ |
+| [Duplicate alt text](seo/duplicate-alt-text.md) | ✅ |
+| [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md) | ✅ |
+| [Non-descriptive alt text](seo/non-descriptive-alt-text.md) | ✅ |
+| [Keyphrase distribution](seo/keyphrase-distribution.md) | ✅ |
+| [Title](seo/title.md) | ✅ |
+
+Yoast SEO for Google Docs always includes [Keyphrase distribution](seo/keyphrase-distribution.md) and [Title](seo/title.md), without Yoast SEO Premium. The assessments about the SEO title, meta description, slug, internal links and outbound links are not available in Google Docs.
+
+</TabItem>
+</Tabs>
+
+### Readability
+
+<Tabs groupId="platform">
+<TabItem value="wordpress" label="WordPress">
+
+| Assessment | Posts and pages | Taxonomies | Products (WooCommerce SEO) |
+|---|---|---|---|
+| [Subheading distribution](readability/subheading-distribution.md) | ✅ | ✅ | ✅ |
+| [Paragraph length](readability/paragraph-length.md) | ✅ | ✅ | ✅ |
+| [Sentence length](readability/sentence-length.md) | ✅ | ✅ | ✅ |
+| [Consecutive sentences](readability/consecutive-sentences.md) | ✅ | ✅ | ❌ |
+| [Passive voice](readability/passive-voice.md) | ✅ | ✅ | ✅ |
+| [Transition words](readability/transition-words.md) | ✅ | ✅ | ✅ |
+| [Text presence](readability/text-presence.md) | ✅ | ✅ | ✅ |
+| [Lists](readability/lists.md) | ❌ | ❌ | ✅ |
+
+Yoast SEO Premium also adds [Word complexity](readability/word-complexity.md) and [Text alignment](readability/text-alignment.md).
+
+</TabItem>
+<TabItem value="shopify" label="Shopify">
+
+| Assessment | Products | Collections | Blog posts and pages |
+|---|---|---|---|
+| [Subheading distribution](readability/subheading-distribution.md) | ✅ | ✅ | ✅ |
+| [Paragraph length](readability/paragraph-length.md) | ✅ | ✅ | ✅ |
+| [Sentence length](readability/sentence-length.md) | ✅ | ✅ | ✅ |
+| [Consecutive sentences](readability/consecutive-sentences.md) | ❌ | ✅ | ✅ |
+| [Passive voice](readability/passive-voice.md) | ✅ | ✅ | ✅ |
+| [Transition words](readability/transition-words.md) | ✅ | ✅ | ✅ |
+| [Text presence](readability/text-presence.md) | ✅ | ✅ | ✅ |
+| [Lists](readability/lists.md) | ✅ | ❌ | ❌ |
+
+Yoast SEO for Shopify also adds [Word complexity](readability/word-complexity.md). Blogs (the overview page of a blog) don't have a readability analysis.
+
+</TabItem>
+<TabItem value="google-docs" label="Google Docs">
+
+| Assessment | Documents |
+|---|---|
+| [Subheading distribution](readability/subheading-distribution.md) | ✅ |
+| [Paragraph length](readability/paragraph-length.md) | ✅ |
+| [Sentence length](readability/sentence-length.md) | ✅ |
+| [Consecutive sentences](readability/consecutive-sentences.md) | ✅ |
+| [Passive voice](readability/passive-voice.md) | ✅ |
+| [Transition words](readability/transition-words.md) | ✅ |
+| [Text presence](readability/text-presence.md) | ✅ |
+| [Word complexity](readability/word-complexity.md) | ✅ |
+| [Text alignment](readability/text-alignment.md) | ✅ |
+
+</TabItem>
+</Tabs>
+
+### Add-ons
+The [Yoast Local SEO](#yoast-local-seo), [Yoast Video SEO](#yoast-video-seo) and [Yoast WooCommerce SEO](#yoast-woocommerce-seo) assessments are only available in WordPress. See their pages for the content types.
 
 The assessor configuration for each content type can be found in the [`assessors` folder](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/src/scoring/assessors) of the `yoastseo` package.

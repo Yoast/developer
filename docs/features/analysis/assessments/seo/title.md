@@ -12,8 +12,8 @@ The **Title** assessment checks whether the page has a title.
 | **Title URL** | [https://yoa.st/4nh](https://yoa.st/4nh) |
 | **Call to action URL** | [https://yoa.st/4ni](https://yoa.st/4ni) |
 | **When it applies** | Always, when Yoast SEO Premium is active. Does not apply to taxonomies. |
-| **Product** | Yoast SEO Premium |
-| **Content types** | Added by Yoast SEO Premium to the SEO analysis when a title is available. Not on taxonomies. |
+| **Product** | Yoast SEO Premium. Also in Yoast SEO for Google Docs. |
+| **Content types** | **WordPress**: added by Yoast SEO Premium when the editor has a title; not on taxonomies<br/>**Shopify**: not available<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

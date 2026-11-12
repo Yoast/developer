@@ -19,7 +19,7 @@ By default, it assesses the images in the text. A platform can limit all image a
 | **Call to action URL** | [https://yoa.st/duplicate-alt-text-cta](https://yoa.st/duplicate-alt-text-cta) |
 | **When it applies** | Only when at least two different assessed images have the same alt text. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

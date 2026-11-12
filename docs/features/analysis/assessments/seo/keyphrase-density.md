@@ -13,7 +13,7 @@ The **Keyphrase density** assessment checks whether the (content) words from the
 | **Call to action URL** | [https://yoa.st/33w](https://yoa.st/33w) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |

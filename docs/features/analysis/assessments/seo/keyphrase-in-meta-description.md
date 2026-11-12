@@ -13,7 +13,7 @@ The **Keyphrase in meta description** assessment checks whether all (content) wo
 | **Call to action URL** | [https://yoa.st/33l](https://yoa.st/33l) |
 | **When it applies** | Always. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: not available |
 | **Related keyphrases** | ✅ |
 | **Uses synonyms** | ✅ |
 | **Languages** | All languages |

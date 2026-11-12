@@ -12,8 +12,8 @@ The **Word complexity** assessment checks whether the text contains too many com
 | **Title URL** | [https://yoa.st/4ls](https://yoa.st/4ls) |
 | **Call to action URL** | [https://yoa.st/4lt](https://yoa.st/4lt) |
 | **When it applies** | When the assessment is supported for the language of the text. |
-| **Product** | Yoast SEO Premium. Also in Yoast SEO for Shopify. |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Product** | Yoast SEO Premium. Also in Yoast SEO for Shopify and Yoast SEO for Google Docs. |
+| **Content types** | **WordPress**: added by Yoast SEO Premium to the readability analysis of all content types<br/>**Shopify**: added by Yoast SEO for Shopify<br/>**Google Docs**: documents |
 | **Languages** | English, German, Spanish and French |
 | **Cornerstone** | ✅ Red instead of orange when there are too many complex words |
 | **Uses highlighting** | ✅ Highlights the complex words |

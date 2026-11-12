@@ -12,8 +12,8 @@ The **Keyphrase distribution** assessment checks how evenly the words from the k
 | **Title URL** | [https://yoa.st/33q](https://yoa.st/33q) |
 | **Call to action URL** | [https://yoa.st/33u](https://yoa.st/33u) |
 | **When it applies** | Always, when Yoast SEO Premium is active. |
-| **Product** | Yoast SEO Premium |
-| **Content types** | Added by Yoast SEO Premium to the focus keyphrase analysis |
+| **Product** | Yoast SEO Premium. Also in Yoast SEO for Shopify and Yoast SEO for Google Docs. |
+| **Content types** | **WordPress**: added by Yoast SEO Premium to the SEO analysis of all content types<br/>**Shopify**: added by Yoast SEO for Shopify<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ✅ |
 | **Languages** | All languages |

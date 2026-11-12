@@ -13,7 +13,7 @@ The **Redundant phrase in alt text** assessment checks whether the assessed imag
 | **Call to action URL** | [https://yoa.st/redundant-phrase-in-alt-text-cta](https://yoa.st/redundant-phrase-in-alt-text-cta) |
 | **When it applies** | Only when at least one assessed image has alt text with a redundant phrase. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Languages with a list of redundant phrases (`redundantPhraseInAltText.js` in the [language config](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/src/languageProcessing/languages)) |

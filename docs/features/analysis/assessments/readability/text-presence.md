@@ -13,7 +13,7 @@ The **Text presence** assessment checks whether there is enough text for a good 
 | **Call to action URL** | [https://yoa.st/35i](https://yoa.st/35i) |
 | **When it applies** | Only shown when the text is too short (less than 50 characters). |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, taxonomies, product pages |
+| **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Languages** | All languages |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ❌ |

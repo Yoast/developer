@@ -18,7 +18,7 @@ The whole alt text is matched: "Product image" is flagged, "Product image of a r
 | **Call to action URL** | [https://yoa.st/non-descriptive-alt-text-cta](https://yoa.st/non-descriptive-alt-text-cta) |
 | **When it applies** | Only when at least one assessed image has non-descriptive alt text. Empty alt text is not flagged: that case is covered by the _Image alt attributes_ assessment on product pages. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Some checks work in all languages. Language-specific phrases are only available for English for now (see below). |

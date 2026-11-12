@@ -15,7 +15,7 @@ The **Keyphrase in subheadings** assessment checks whether the H2 and H3 subhead
 | **Call to action URL** | [https://yoa.st/33n](https://yoa.st/33n) |
 | **When it applies** | Always, except on taxonomies. |
 | **Product** | Yoast SEO (Free) |
-| **Content types** | Posts and pages, product pages |
+| **Content types** | **WordPress**: posts and pages, products (WooCommerce SEO)<br/>**Shopify**: products, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ✅ |
 | **Languages** | Different matching for languages without function word support. Japanese counts characters instead of words. |

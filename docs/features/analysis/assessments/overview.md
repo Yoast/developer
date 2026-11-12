@@ -19,17 +19,17 @@ Each assessment page starts with a card with the main information:
 | **When it applies** | When the assessment runs and shows a result. |
 | **Product** | Whether the assessment is part of Yoast SEO (Free) or Yoast SEO Premium. |
 | **Content types** | The content types the assessment runs on. See [Assessments per content type](#assessments-per-content-type). |
-| **Related keyphrases** | Whether the assessment also runs for related keyphrases (a Yoast SEO Premium feature). |
-| **Uses synonyms** | Whether keyphrase synonyms (a Yoast SEO Premium feature) are also used. |
+| **Related keyphrases** (SEO only) | Whether the assessment also runs for related keyphrases (a Yoast SEO Premium feature). |
+| **Uses synonyms** (SEO only) | Whether keyphrase synonyms (a Yoast SEO Premium feature) are also used. |
 | **Languages** | Whether the assessment works the same in all languages, or has language-specific behavior. |
 | **Cornerstone** | Whether the scoring is different for [cornerstone content](https://yoast.com/cornerstone-content-guide/). |
 | **Uses highlighting** | Whether the assessment can highlight the relevant parts of the text in the editor (the eye icon). |
-| **Uses morphology (Premium)** | Whether the assessment also matches other word forms of the keyphrase (for example, plural forms) in Yoast SEO Premium. |
+| **Uses morphology (Premium)** (SEO only) | Whether the assessment also matches other word forms of the keyphrase (for example, plural forms) in Yoast SEO Premium. |
 
 Below the card, a table shows the scoring criteria. In the feedback strings, `X` stands for a number that is filled in by the analysis.
 
-## How are individual and overall traffic lights assigned?
-Each assessment gives an individual score. The score defines the traffic light:
+## SEO analysis: how are individual traffic lights assigned?
+Each SEO assessment gives an individual score. The score defines the traffic light:
 
 | Individual score | Rating |
 |---|---|
@@ -39,7 +39,7 @@ Each assessment gives an individual score. The score defines the traffic light:
 | 5-7 | OK (orange traffic light) |
 | 8-9 | Good (green traffic light) |
 
-## How is the overall SEO score calculated?
+## SEO analysis: how is the overall score calculated?
 
 * Overall score<sup>1</sup> = ( sum of individual scores from each assessment ) / ( number of individual scores * 9 ) * 100
 * Round this number.
@@ -53,6 +53,27 @@ Each assessment gives an individual score. The score defines the traffic light:
 * Dividing the sum of individual scores by the number of scores * 9 (rather than simply by the number of scores) is necessary because the maximum score an individual assessment can have is 9.
 
 Assessments that return a result without a score (for example, image assessments when no image is flagged) are not shown and are not counted.
+
+## Readability analysis: how are individual traffic lights assigned?
+Each readability assessment gives an individual score. The score defines the traffic light and a penalty:
+
+| Individual score | Rating | Penalty (fully supported languages) | Penalty (other languages) |
+|---|---|---|---|
+| 0 (if it is not explicitly set as a score) | Feedback (gray traffic light) | - | - |
+| 0-4 | Bad (red traffic light) | 3 | 4 |
+| 5-7 | OK (orange traffic light) | 2 | 2 |
+| 8-10 | Good (green traffic light) | 0 | 0 |
+
+Fully supported languages are English, Dutch, German, Italian, Russian, French and Spanish. In these languages, all language-specific readability assessments are available. See the [readability support per language](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis).
+
+## Readability analysis: how is the overall score calculated?
+The penalties of all assessments are added up. The sum defines the overall score:
+
+| Sum of penalties (fully supported languages) | Sum of penalties (other languages) | Overall score | Traffic light |
+|---|---|---|---|
+| 7 or more | 5 or more | 30 | Red |
+| 5-6 | 3-4 | 60 | Orange |
+| 4 or less | 2 or less | 90 | Green |
 
 ## SEO assessments
 
@@ -83,6 +104,17 @@ Assessments that return a result without a score (for example, image assessments
 * [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md)
 * [Non-descriptive alt text](seo/non-descriptive-alt-text.md)
 * [Title](seo/title.md) (Premium)
+
+## Readability assessments
+* [Subheading distribution](readability/subheading-distribution.md)
+* [Paragraph length](readability/paragraph-length.md)
+* [Sentence length](readability/sentence-length.md)
+* [Consecutive sentences](readability/consecutive-sentences.md)
+* [Passive voice](readability/passive-voice.md)
+* [Transition words](readability/transition-words.md)
+* [Text presence](readability/text-presence.md)
+* [Word complexity](readability/word-complexity.md) (Premium, Shopify)
+* [Text alignment](readability/text-alignment.md) (Premium)
 
 ## Assessments per content type
 Different content types use a different set of assessments. The table below shows which SEO assessments run for the focus keyphrase on each content type, and which also run for related keyphrases.

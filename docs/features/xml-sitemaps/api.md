@@ -295,14 +295,18 @@ add_filter( 'wpseo_sitemap_urlset', function( $urlset ) {
 
 ### Filter the sitemap stylesheet URL
 
-By default, Yoast SEO resolves the stylesheet URL relative to `home_url` or the plugin directory. Use this filter to override it — for example, to serve the stylesheet from a CDN.
+By default, Yoast SEO resolves the stylesheet URL relative to `home_url` or the plugin directory. On sites where `home_url()` and `site_url()` differ, the stylesheet URL is `main-sitemap.css` relative to `home_url`, and you can use this filter to override it — for example, to serve the stylesheet from a CDN.
+
+:::note
+This filter is only applied when `home_url()` and `site_url()` differ. On sites where they are the same, the filter does not run and the stylesheet URL cannot be changed with it.
+:::
 
 ```php
 <?php
 /**
- * Filters the stylesheet URL used in the current environment.
+ * Filters the stylesheet URL used when home_url() and site_url() differ.
  *
- * @param string $current_url The current stylesheet URL (defaults to main-sitemap.css relative to home_url).
+ * @param string $current_url The current stylesheet URL (main-sitemap.css relative to home_url).
  */
 add_filter( 'wpseo_sitemap_public_url', function ( $current_url ) {
   return 'https://cdn.example.com/main-sitemap.css';

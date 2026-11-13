@@ -99,7 +99,7 @@ Requests to sitemaps where `{{n}}` is `1` or `0` should trigger a 301 redirect t
 
 ### Stylesheet
 
-The sitemap index and individual XML sitemaps include a processing instruction that references a CSS stylesheet (`main-sitemap.css`), which controls the layout and styling when a browser opens the sitemap. The stylesheet is served from the same domain as the sitemap to meet browser same-origin requirements; on sites where `home_url` and `site_url` differ, a WordPress rewrite rule routes the stylesheet through `home_url`.
+The sitemap index and individual XML sitemaps include a processing instruction that references a CSS stylesheet (`main-sitemap.css`), which controls the layout and styling when a browser opens the sitemap. Unlike the XSL stylesheet it replaces, a CSS stylesheet does not have to share the sitemap's origin for browsers to apply it. Yoast SEO nevertheless serves it from the same domain as the sitemap where it can: on sites where `home_url` and `site_url` differ, or where the plugin directory is on a different domain, a WordPress rewrite rule routes the stylesheet through `home_url`.
 
 The video and news sitemaps added by Yoast Video SEO and Yoast News SEO use their own dedicated XSL stylesheets.
 

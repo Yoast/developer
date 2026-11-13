@@ -97,8 +97,11 @@ E.g., `post-sitemap.xml`, `post-sitemap2.xml`, `custom_taxonomy_name-sitemap.xml
 
 Requests to sitemaps where `{{n}}` is `1` or `0` should trigger a 301 redirect to remove `{{n}}` (e.g., requests to `post-sitemap1.xml` and `post-sitemap0.xml` should redirect to `post-sitemap.xml`).
 
-### XSL stylesheets
-Sitemap indexes and individual sitemaps reference an XSL file, which provides the layout and styling configurations for the page.
+### Stylesheet
+
+The sitemap index and individual XML sitemaps include a processing instruction that references a CSS stylesheet (`main-sitemap.css`), which controls the layout and styling when a browser opens the sitemap. Unlike the XSL stylesheet it replaces, a CSS stylesheet does not have to share the sitemap's origin for browsers to apply it. Yoast SEO nevertheless serves it from the same domain as the sitemap where it can: on sites where `home_url` and `site_url` differ, or where the plugin directory is on a different domain, a WordPress rewrite rule routes the stylesheet through `home_url`.
+
+The video and news sitemaps added by Yoast Video SEO and Yoast News SEO use their own dedicated XSL stylesheets.
 
 ## Indexing controls
 XML sitemaps do not need to be indexed by search engines in order to be read or parsed. Therefore, a `x-robots-tag` HTTP header with a value of `noindex, follow` should returned with all XML sitemap responses.

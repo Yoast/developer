@@ -30,20 +30,20 @@ The keyphrase length is the number of (content) words in the keyphrase. Because 
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | -50 | No keyphrase and/or content | **Keyphrase density**: **Please add both a keyphrase and some text containing the keyphrase.** |
-| Red | 4 | Keyphrase not found in content | **Keyphrase density**: The keyphrase was found 0 times. That's less than the recommended minimum of X times for a text of this length. **Focus on your keyphrase!** |
+| Red | -50 | No keyphrase and/or content | **Keyphrase density**: **Please add both a keyphrase and some text containing the keyphrase**. |
+| Red | 4 | Keyphrase not found in content | **Keyphrase density**: The keyphrase was found 0 times. That's less than the recommended minimum of X times for a text of this length. **Focus on your keyphrase**! |
 | **Texts 100+ words** | | | |
-| Red | -50 | kd > 4 | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
-| Red | -10 | 3 < kd ≤ 4 (3.5 < kd ≤ 4 for multiple word forms) | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
-| Red | 4 | 0 < kd < 0.5, or the keyphrase is found only once | **Keyphrase density**: The keyphrase was found X times. That's less than the recommended minimum of X times for a text of this length. **Focus on your keyphrase!** |
+| Red | -50 | kd > 4 | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
+| Red | -10 | 3 < kd ≤ 4 (3.5 < kd ≤ 4 for multiple word forms) | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
+| Red | 4 | 0 < kd < 0.5, or the keyphrase is found only once | **Keyphrase density**: The keyphrase was found X times. That's less than the recommended minimum of X times for a text of this length. **Focus on your keyphrase**! |
 | Green | 9 | 0.5 ≤ kd ≤ 3 (0.5 ≤ kd ≤ 3.5 for multiple word forms), or the keyphrase is found twice and the recommended minimum (see below) is 2 | **Keyphrase density**: The keyphrase was found X times. This is great! |
 | **Texts 51-99 words** | | | |
-| Red | -50 | Keyphrase found 4+ times | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
-| Red | -10 | Keyphrase found 3 times | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
+| Red | -50 | Keyphrase found 4+ times | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
+| Red | -10 | Keyphrase found 3 times | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
 | Green | 9 | Keyphrase found 1-2 times | **Keyphrase density**: The keyphrase was found X times. This is great! |
 | **Texts < 51 words** | | | |
-| Red | -50 | Keyphrase found 3+ times | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
-| Red | -10 | Keyphrase found 2 times | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize!** |
+| Red | -50 | Keyphrase found 3+ times | **Keyphrase density**: The keyphrase was found X times. That's way more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
+| Red | -10 | Keyphrase found 2 times | **Keyphrase density**: The keyphrase was found X times. That's more than the recommended maximum of X times for a text of this length. **Don't overoptimize**! |
 | Green | 9 | Keyphrase found once | **Keyphrase density**: The keyphrase was found 1 time. This is great! |
 
 ## Recommended minimum and maximum number of matches

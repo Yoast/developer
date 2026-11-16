@@ -32,10 +32,10 @@ X is the number of images, not the number of keyphrase occurrences.
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | Images with more than 2 occurrences and images with exactly 2 occurrences on the same page | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym twice or more. **Do not overuse the keyphrase!** |
-| Red | 3 | X images with more than 2 occurrences | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym more than twice. **Do not overuse the keyphrase!** |
-| Red | 3 | X images with more than 1 occurrence, and exact matching is requested | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym multiple times. **Do not overuse the keyphrase!** |
-| Orange | 6 | X images with exactly 2 occurrences | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym twice. **Do not overuse the keyphrase!** |
+| Red | 3 | Images with more than 2 occurrences and images with exactly 2 occurrences on the same page | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym twice or more. **Do not overuse the keyphrase**! |
+| Red | 3 | X images with more than 2 occurrences | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym more than twice. **Do not overuse the keyphrase**! |
+| Red | 3 | X images with more than 1 occurrence, and exact matching is requested | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym multiple times. **Do not overuse the keyphrase**! |
+| Orange | 6 | X images with exactly 2 occurrences | **Keyphrase stuffing in alt text**: X of your images have alt text that uses the keyphrase or its synonym twice. **Do not overuse the keyphrase**! |
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag`, `overusedCount`, `twiceCount` and `exactMatchRequested`, and must return all four of `moreThanTwice`, `multipleTimes`, `twice` and `twiceOrMore`. The returned object is used as is, so an omitted key renders as an empty result text. It does not fall back to the default.

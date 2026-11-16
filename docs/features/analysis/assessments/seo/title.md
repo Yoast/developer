@@ -25,5 +25,5 @@ The **Title** assessment checks whether the page has a title.
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | -10000 | No title | **Title**: Your page does not have a title yet. **Add one!** |
+| Red | -10000 | No title | **Title**: Your page does not have a title yet. **Add one**! |
 | Green | 9 | There is a title | **Title**: Your page has a title. Well done! |

@@ -26,6 +26,6 @@ The **Keyphrase in slug** assessment checks whether the keyphrase is used in the
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
 | Red | 3 | There is no keyphrase and/or slug | **Keyphrase in slug**: **Please add both a keyphrase and a slug containing the keyphrase**. |
-| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Not all content words are in the slug | **Keyphrase in slug**: (Part of) your keyphrase does not appear in the slug. **Change that!** |
+| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Not all content words are in the slug | **Keyphrase in slug**: (Part of) your keyphrase does not appear in the slug. **Change that**! |
 | Green | 9 | Short keyphrases (1-2 content words): all content words are in the slug | **Keyphrase in slug**: Great work! |
 | Green | 9 | Longer keyphrases (> 2 content words): more than half of the content words are in the slug | **Keyphrase in slug**: More than half of your keyphrase appears in the slug. That's great! |

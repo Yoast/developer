@@ -35,6 +35,8 @@ Each assessment page starts with a card with the main information:
 
 Below the card, a table shows the scoring criteria. In the feedback strings, `X` stands for a number that is filled in by the analysis.
 
+The links and feedback strings on the assessment pages are the ones in Yoast SEO for WordPress. Yoast SEO for Shopify uses different shortlinks, which lead to the same articles. Yoast SEO for Google Docs can show the default feedback strings of the `yoastseo` package, which are sometimes slightly different (for example, without the percentage in the Word complexity feedback).
+
 ## SEO analysis: how are individual traffic lights assigned?
 Each SEO assessment gives an individual score. The score defines the traffic light:
 

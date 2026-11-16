@@ -25,7 +25,7 @@ The **Keyphrase in meta description** assessment checks whether all (content) wo
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | There is no keyphrase and/or meta description | **Keyphrase in meta description**: **Please add both a keyphrase and a meta description containing the keyphrase.** |
-| Red | 3 | 0 keyphrase matches | **Keyphrase in meta description**: The meta description has been specified, but it does not contain the keyphrase. **Fix that!** |
-| Red | 3 | > 2 matches found | **Keyphrase in meta description**: The meta description contains the keyphrase X times, which is over the advised maximum of 2 times. **Limit that!** |
-| Green | 9 | 1-2 sentences with a match | **Keyphrase in meta description**: Keyphrase or synonym appear in the meta description. Well done! |
+| Red | 3 | There is no keyphrase and/or meta description | **Keyphrase in meta description**: **Please add both a keyphrase and a meta description containing the keyphrase**. |
+| Red | 3 | 0 keyphrase matches | **Keyphrase in meta description**: The meta description has been specified, but it does not contain the keyphrase. **Fix that**! |
+| Red | 3 | > 2 matches found | **Keyphrase in meta description**: The meta description contains the keyphrase X times, which is over the advised maximum of 2 times. **Limit that**! |
+| Green | 9 | 1-2 matches | **Keyphrase in meta description**: Keyphrase or synonym appear in the meta description. Well done! |

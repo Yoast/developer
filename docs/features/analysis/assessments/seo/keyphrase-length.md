@@ -25,17 +25,19 @@ The **Keyphrase length** assessment checks whether the number of (content) words
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | -999 | No focus keyphrase set | **Keyphrase length**: No focus keyphrase was set for this page. **Set a focus keyphrase in order to calculate your SEO score**. |
+| Red | -999 | No focus keyphrase set | **Keyphrase length**: No focus keyphrase was set for this page. **Set a keyphrase in order to calculate your SEO score**. |
 | Red | 3 | Keyphrase length > 8 words (> 9 for languages without function words support, > 18 characters for Japanese) | **Keyphrase length**: The keyphrase contains X (content) words/characters. That's way more than the recommended maximum of X (content) words/characters. **Make it shorter!** |
 | Orange | 6 | Keyphrase length between 5-8 words (7-9 for languages without function words support, 13-18 characters for Japanese) | **Keyphrase length**: The keyphrase contains X (content) words/characters. That's more than the recommended maximum of X (content) words/characters. **Make it shorter!** |
 | Green | 9 | Keyphrase length between 1-4 words (1-6 for languages without function words support, 1-12 characters for Japanese) | **Keyphrase length**: Good job! |
+
+For a related keyphrase without text, the feedback is: **Keyphrase length**: **Set a keyphrase in order to calculate your SEO score**.
 
 ## Product pages
 On product pages, keyphrases that are too short also get a lower score. Dutch, German and Swedish get an orange or red traffic light with shorter keyphrases than other languages, because keyphrases tend to be shorter in these languages (compound words are written as one word).
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | -999 | No focus keyphrase set | **Keyphrase length**: No focus keyphrase was set for this page. **Set a focus keyphrase in order to calculate your SEO score**. |
+| Red | -999 | No focus keyphrase set | **Keyphrase length**: No focus keyphrase was set for this page. **Set a keyphrase in order to calculate your SEO score**. |
 | Red | 3 | Keyphrase length > 8 words (> 9 for languages without function words support; > 7 for Dutch, German and Swedish; > 18 characters for Japanese) | **Keyphrase length**: The keyphrase contains X (content) words/characters. That's way more than the recommended maximum of X (content) words/characters. **Make it shorter!** |
 | Red | 3 | Keyphrase length 1-2 words (1 word for Dutch, German and Swedish; 1-4 characters for Japanese) | **Keyphrase length**: The keyphrase contains X (content) word(s)/character(s). That's way less than the recommended minimum of X (content) words. **Make it longer!** |
 | Orange | 6 | Keyphrase length 7-8 words (7-9 for languages without function words support; 7 for Dutch, German and Swedish; 13-18 characters for Japanese) | **Keyphrase length**: The keyphrase contains X (content) words/characters. That's more than the recommended maximum of X (content) words/characters. **Make it shorter!** |

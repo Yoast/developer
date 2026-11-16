@@ -61,6 +61,16 @@ Each SEO assessment gives an individual score. The score defines the traffic lig
 
 Assessments that return a result without a score (for example, image assessments when no image is flagged) are not shown and are not counted.
 
+To get the overall traffic light, the overall score is divided by 10. The result is rated with the same scale as the individual scores (see [`getIndicatorForScore.js`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/js/src/analysis/getIndicatorForScore.js)):
+
+| Overall score | Divided by 10 | Traffic light |
+|---|---|---|
+| 40 or lower | 4 or lower | Red |
+| 41-70 | 4.1-7 | Orange |
+| 71 or higher | 7.1 or higher | Green |
+
+In the example above, 67 / 10 = 6.7, so the overall traffic light is orange. An overall score of exactly 0 gives a gray traffic light.
+
 ## Readability analysis: how are individual traffic lights assigned?
 Each readability assessment gives an individual score. The score defines the traffic light and a penalty:
 
@@ -74,13 +84,13 @@ Each readability assessment gives an individual score. The score defines the tra
 Fully supported languages are English, Dutch, German, Italian, Russian, French and Spanish. In these languages, all language-specific readability assessments are available. See the [readability support per language](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis).
 
 ## Readability analysis: how is the overall score calculated?
-The penalties of all assessments are added up. The sum defines the overall score:
+The penalties of all assessments are added up. The sum defines the overall score. To get the overall traffic light, the overall score is divided by 10, and the result is rated with the same scale as the individual scores (see [`getIndicatorForScore.js`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/js/src/analysis/getIndicatorForScore.js)):
 
-| Sum of penalties (fully supported languages) | Sum of penalties (other languages) | Overall score | Traffic light |
-|---|---|---|---|
-| 7 or more | 5 or more | 30 | Red |
-| 5-6 | 3-4 | 60 | Orange |
-| 4 or less | 2 or less | 90 | Green |
+| Sum of penalties (fully supported languages) | Sum of penalties (other languages) | Overall score | Divided by 10 | Traffic light |
+|---|---|---|---|---|
+| 7 or more | 5 or more | 30 | 3 | Red |
+| 5-6 | 3-4 | 60 | 6 | Orange |
+| 4 or less | 2 or less | 90 | 9 | Green |
 
 ## SEO assessments
 

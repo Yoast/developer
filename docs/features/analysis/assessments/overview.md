@@ -72,7 +72,7 @@ To get the overall traffic light, the overall score is divided by 10. The result
 In the example above, 67 / 10 = 6.7, so the overall traffic light is orange. An overall score of exactly 0 gives a gray traffic light.
 
 ## Readability analysis: how are individual traffic lights assigned?
-Each readability assessment gives an individual score. The score defines the traffic light and a penalty:
+Each readability assessment gives an individual score. The score defines the traffic light. Unlike the SEO analysis, the readability analysis doesn't average the scores. Instead, it counts problems: each red or orange result adds **penalty points**. Green results add no penalty points.
 
 | Individual score | Rating | Penalty (fully supported languages) | Penalty (other languages) |
 |---|---|---|---|
@@ -91,6 +91,17 @@ The penalties of all assessments are added up. The sum defines the overall score
 | 7 or more | 5 or more | 30 | 3 | Red |
 | 5-6 | 3-4 | 60 | 6 | Orange |
 | 4 or less | 2 or less | 90 | 9 | Green |
+
+Languages that are not fully supported have fewer readability assessments. Because there are fewer checks, each problem counts more: a red result gives 4 penalty points instead of 3, and the thresholds are lower.
+
+Examples:
+
+| Language | Results | Sum of penalties | Overall score | Traffic light |
+|---|---|---|---|---|
+| English (fully supported) | 1 red, 1 orange, all others green | 3 + 2 = 5 | 60 | Orange |
+| English (fully supported) | 2 red, 1 orange, all others green | 3 + 3 + 2 = 8 | 30 | Red |
+| English (fully supported) | 1 red, all others green | 3 | 90 | Green |
+| Swedish (not fully supported) | 1 red, all others green | 4 | 60 | Orange |
 
 ## SEO assessments
 

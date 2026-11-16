@@ -22,5 +22,5 @@ The **Consecutive sentences** assessment checks whether 3 or more sentences in a
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | 3 or more consecutive sentences start with the same word | **Consecutive sentences**: The text contains X consecutive sentences starting with the same word. **Try to mix things up!** |
+| Red | 3 | 3 or more consecutive sentences start with the same word | **Consecutive sentences**: The text contains X consecutive sentences starting with the same word. **Try to mix things up**! <br/> When this happens more than once: **Consecutive sentences**: The text contains X instances where X or more consecutive sentences start with the same word. **Try to mix things up**! |
 | Green | 9 | Fewer than 3 consecutive sentences start with the same word | **Consecutive sentences**: There are no repetitive sentence beginnings. That's great! |

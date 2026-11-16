@@ -34,3 +34,12 @@ The percentage is the share of sentences that are longer than the recommended ma
 | Green | 9 | ≤ 25% (cornerstone: ≤ 20%; Turkish: ≤ 20%; Polish: ≤ 15%) | **Sentence length**: Great! |
 
 For Polish, the percentages are the same for cornerstone content.
+
+## Product pages
+On product pages, the percentages are lower, and the language-specific percentages (Polish, Turkish) are not used:
+
+| Traffic light | Score | Criterion | Feedback |
+|---|---|---|---|
+| Red | 3 | > 25% (cornerstone: > 20%) | **Sentence length**: X of the sentences contain more than X words/characters, which is more than the recommended maximum of X%. **Try to shorten the sentences**. |
+| Orange | 6 | > 20% and ≤ 25% (cornerstone: > 15% and ≤ 20%) | **Sentence length**: X of the sentences contain more than X words/characters, which is more than the recommended maximum of X%. **Try to shorten the sentences**. |
+| Green | 9 | ≤ 20% (cornerstone: ≤ 15%) | **Sentence length**: Great! |

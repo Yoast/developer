@@ -11,7 +11,7 @@ The **Video body** assessment checks whether the text has a good length for a pa
 | **Name in code** | `VideoBodyAssessment` |
 | **Title URL** | None |
 | **Call to action URL** | [https://yoa.st/4g4](https://yoa.st/4g4) |
-| **When it applies** | Always. |
+| **When it applies** | Only when Yoast Video SEO has found a video in the post. In practice, this is after you save the post. |
 | **Product** | Yoast Video SEO |
 | **Content types** | Content types where Yoast Video SEO is active |
 | **Related keyphrases** | ❌ |

@@ -22,5 +22,5 @@ The **Word complexity** assessment checks whether the text contains too many com
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Orange (cornerstone: Red) | 6 (cornerstone: 3) | More than 10% of the words are complex | **Word complexity**: X% of the words in your text are considered complex. **Try to use shorter and more familiar words to improve readability**. |
-| Green | 9 | 10% of the words or fewer are complex | **Word complexity**: You are not using too many complex words, which makes your text easy to read. Good job! |
+| Orange (cornerstone: Red) | 6 (cornerstone: 3) | 10% of the words or more are complex | **Word complexity**: X% of the words in your text are considered complex. **Try to use shorter and more familiar words to improve readability**. |
+| Green | 9 | Less than 10% of the words are complex | **Word complexity**: You are not using too many complex words, which makes your text easy to read. Good job! |

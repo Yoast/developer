@@ -13,7 +13,7 @@ At the moment, it only detects the city in heading tags without attributes.
 | **Name in code** | `LocalTitleAssessment` |
 | **Title URL** | None |
 | **Call to action URL** | None |
-| **When it applies** | Always, on the **Location** post type. The assessment only appears after you save and reload the location page. |
+| **When it applies** | On the **Location** post type, when the location has a saved city. The assessment only appears after you save and reload the location page. |
 | **Product** | Yoast Local SEO |
 | **Content types** | The **Location** post type (for businesses with multiple locations) |
 | **Related keyphrases** | ❌ |

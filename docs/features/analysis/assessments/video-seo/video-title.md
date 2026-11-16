@@ -11,7 +11,7 @@ The **Video title** assessment checks whether the SEO title contains the word "v
 | **Name in code** | `VideoTitleAssessment` |
 | **Title URL** | None |
 | **Call to action URL** | None |
-| **When it applies** | Always. |
+| **When it applies** | Only when Yoast Video SEO has found a video in the post. In practice, this is after you save the post. |
 | **Product** | Yoast Video SEO |
 | **Content types** | Content types where Yoast Video SEO is active |
 | **Related keyphrases** | ❌ |

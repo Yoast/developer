@@ -22,7 +22,7 @@ The **Lists** assessment checks whether the text has a list. It only runs on pro
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | No list | **Lists**: No lists appear on this page. **Add at least one ordered or unordered list**. |
+| Red | 3 | No list | **Lists**: No lists appear on this page. **Add at least one ordered or unordered list**! |
 | Green | 9 | At least one list | **Lists**: There is at least one list on this page. Great! |
 
 The links in the feedback are different in WordPress and Shopify, but they lead to the same pages. This page lists the WordPress links.

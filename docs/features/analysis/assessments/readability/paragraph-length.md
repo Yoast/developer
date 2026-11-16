@@ -22,8 +22,8 @@ The **Paragraph length** assessment checks whether paragraphs are longer than th
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | > 200 words (Japanese: > 400 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs!** |
-| Orange | 6 | Between 150 and 200 words (Japanese: 300-400 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs!** |
+| Red | 3 | > 200 words (Japanese: > 400 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs**! |
+| Orange | 6 | Between 150 and 200 words (Japanese: 300-400 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs**! |
 | Green | 9 | ≤ 150 words (Japanese: ≤ 300 characters) | **Paragraph length**: There are no paragraphs that are too long. Great job! |
 
 ## Product pages
@@ -31,6 +31,6 @@ On product pages, the boundaries are lower:
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | > 100 words (Japanese: > 200 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs!** |
-| Orange | 6 | Between 70 and 100 words (Japanese: 140-200 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs!** |
+| Red | 3 | > 100 words (Japanese: > 200 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs**! |
+| Orange | 6 | Between 70 and 100 words (Japanese: 140-200 characters) | **Paragraph length**: X of the paragraphs contain(s) more than the recommended maximum number of words/characters (X). **Shorten your paragraphs**! |
 | Green | 9 | ≤ 70 words (Japanese: ≤ 140 characters) | **Paragraph length**: There are no paragraphs that are too long. Great job! |

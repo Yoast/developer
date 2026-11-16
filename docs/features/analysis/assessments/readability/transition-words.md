@@ -19,13 +19,13 @@ The **Transition words** assessment checks whether enough sentences contain tran
 | **Uses highlighting** | ✅ Highlights the sentences with transition words |
 
 ## Scoring
-A long text has more than 200 words (Japanese: 400 characters).
+A long text has 200 words or more (Japanese: 400 characters or more).
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
 | Red | 3 | No transition words in a long text | **Transition words**: None of the sentences contain transition words. **Use some**. |
-| Red | 3 | < 20% of sentences in a long text | **Transition words**: Only X of the sentences contain them. This is not enough. **Use more transition words**. |
-| Orange | 6 | Between 20% and 30% of sentences in a long text | **Transition words**: Only X of the sentences contain them. This is not enough. **Use more transition words**. |
+| Red | 3 | < 20% of sentences in a long text | **Transition words**: Only X of the sentences contain transition words, which is not enough. **Use more of them**. |
+| Orange | 6 | Between 20% and 30% of sentences in a long text | **Transition words**: Only X of the sentences contain transition words, which is not enough. **Use more of them**. |
 | Green | 9 | ≥ 30% of sentences in a long text | **Transition words**: Well done! |
 | Green | 9 | At least one sentence with transition words in a short text | **Transition words**: Well done! |
 | Green | 9 | No transition words in a short text | **Transition words**: You are not using any transition words, but your text is short enough and probably doesn't need them. |

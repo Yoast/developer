@@ -17,7 +17,7 @@ The **Meta description length** assessment checks whether the meta description h
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | Japanese has different boundaries (see the scoring table). |
-| **Cornerstone** | ✅ Red instead of orange when the meta description is too short or too long |
+| **Cornerstone** | ✅ Red instead of orange when the meta description is too short or too long. In Shopify, not on cornerstone collection pages. |
 | **Uses highlighting** | ❌ |
 | **Uses morphology (Premium)** | ❌ |
 
@@ -25,9 +25,9 @@ The **Meta description length** assessment checks whether the meta description h
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 1 | No meta description | **Meta description length**: No meta description has been specified. Search engines will display copy from the page instead. **Make sure to write one!** |
-| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) ≤ 120 characters (Japanese: ≤ 60 characters) | **Meta description length**: The meta description is too short (under X characters). Up to X characters are available. **Use the space!** |
-| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) > 156 characters (Japanese: > 80 characters) | **Meta description length**: The meta description is over X characters. To ensure the entire description will be visible, **you should reduce the length!** |
+| Red | 1 | No meta description | **Meta description length**: No meta description has been specified. Search engines will display copy from the page instead. **Make sure to write one**! |
+| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) ≤ 120 characters (Japanese: ≤ 60 characters) | **Meta description length**: The meta description is too short (under X characters). Up to X characters are available. **Use the space**! |
+| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Meta description (incl. the date) > 156 characters (Japanese: > 80 characters) | **Meta description length**: The meta description is over X characters. To ensure the entire description will be visible, **you should reduce the length**! |
 | Green | 9 | Meta description (incl. the date) > 120 and ≤ 156 characters (Japanese: > 60 and ≤ 80 characters) | **Meta description length**: Well done! |
 
 ## Taxonomies

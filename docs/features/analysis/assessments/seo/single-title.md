@@ -25,7 +25,7 @@ The **Single title** assessment checks whether the text has more than one H1 hea
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 1 | There are two or more H1 headings in the text<sup>1</sup> | **Single title**: H1s should only be used as your main title. Find all H1s in your text that aren't your main title and **change them to a lower heading level!** |
+| Red | 1 | There are two or more H1 headings in the text<sup>1</sup> | **Single title**: H1s should only be used as your main title. Find all H1s in your text that aren't your main title and **change them to a lower heading level**! |
 | Green | 8 | There are fewer than two H1 headings in the text<sup>1</sup> | **Single title**: You don't have multiple H1 headings, well done! |
 
-<sup>1</sup> In the Google Docs add-on, an H1 at the top of the document is not counted, because it is treated as the title.
+<sup>1</sup> H1 headings without text are not counted. In the Google Docs add-on, an H1 at the top of the document is not counted either, because it is treated as the title.

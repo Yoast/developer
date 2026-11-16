@@ -25,8 +25,8 @@ The **Outbound links** assessment checks whether the text has outbound links (li
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | No outbound links | **Outbound links**: No outbound links appear in this page. **Add some!** |
-| Orange | 7 | All outbound links are nofollowed | **Outbound links**: All outbound links on this page are nofollowed. **Add some normal links.** |
+| Red | 3 | No outbound links | **Outbound links**: No outbound links appear in this page. **Add some**! |
+| Orange | 7 | All outbound links are nofollowed | **Outbound links**: All outbound links on this page are nofollowed. **Add some normal links**. |
 | Green | 8 | There are both followed and nofollowed outbound links | **Outbound links**: There are both nofollowed and normal outbound links on this page. Good job! |
 | Green | 9 | All outbound links are followed | **Outbound links**: Good job! |
 

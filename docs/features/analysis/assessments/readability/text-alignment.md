@@ -11,9 +11,9 @@ The **Text alignment** assessment checks whether the text uses too much center a
 | **Name in code** | [`TextAlignmentAssessment`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/readability/TextAlignmentAssessment.js) |
 | **Title URL** | [https://yoa.st/assessment-alignment](https://yoa.st/assessment-alignment) |
 | **Call to action URL** | [https://yoa.st/assessment-alignment-cta](https://yoa.st/assessment-alignment-cta) |
-| **When it applies** | When the (sanitized) text has more than 50 characters, and at least one paragraph or heading is center-aligned. |
+| **When it applies** | When the (sanitized) text has more than 50 characters, and at least one paragraph or heading is center-aligned. In WordPress, only in the block editor. |
 | **Product** | Yoast SEO Premium. Also in Yoast SEO for Google Docs. |
-| **Content types** | **WordPress**: added by Yoast SEO Premium when text alignment is available in the editor<br/>**Shopify**: not available<br/>**Google Docs**: documents |
+| **Content types** | **WordPress**: added by Yoast SEO Premium, only in the block editor (not in the classic editor or Elementor)<br/>**Shopify**: not available<br/>**Google Docs**: documents |
 | **Languages** | All languages. The feedback is different for languages written from right to left (see the scoring table). |
 | **Cornerstone** | ❌ Same scoring |
 | **Uses highlighting** | ✅ Highlights the center-aligned text |

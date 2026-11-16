@@ -147,7 +147,7 @@ Examples:
 * [Transition words](readability/transition-words.md)
 * [Text presence](readability/text-presence.md)
 * [Word complexity](readability/word-complexity.md) (Premium, Shopify)
-* [Text alignment](readability/text-alignment.md) (Premium)
+* [Text alignment](readability/text-alignment.md) (Premium, block editor only)
 * [Lists](readability/lists.md) (product pages)
 
 ## Add-on assessments
@@ -279,7 +279,7 @@ Yoast SEO for Google Docs always includes [Keyphrase distribution](seo/keyphrase
 | [Text presence](readability/text-presence.md) | ✅ | ✅ | ✅ |
 | [Lists](readability/lists.md) | ❌ | ❌ | ✅ |
 
-Yoast SEO Premium also adds [Word complexity](readability/word-complexity.md) and [Text alignment](readability/text-alignment.md).
+Yoast SEO Premium also adds [Word complexity](readability/word-complexity.md) and [Text alignment](readability/text-alignment.md). Text alignment is only available in the block editor, not in the classic editor or Elementor.
 
 </TabItem>
 <TabItem value="shopify" label="Shopify">

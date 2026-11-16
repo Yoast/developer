@@ -27,7 +27,7 @@ The whole alt text is matched: "Product image" is flagged, "Product image of a r
 | **Uses morphology (Premium)** | ❌ |
 
 ## Language support
-* **Checks in all languages**: only numbers or punctuation, a name ending in an image file extension, file names that cameras, phones or WhatsApp generate, English screenshot names ("Screenshot 2026-03-14 at 10.32.45"), and the image's own file name. The file name check also works when the image is a resized, scaled or edited copy ("red-bike" for `red-bike-1024x576.jpg`).
+* **Checks in all languages**: only numbers, punctuation or symbols, a name ending in an image file extension, file names that cameras, phones or WhatsApp generate, English screenshot names ("Screenshot 2026-03-14 at 10.32.45"), and the image's own file name. The file name check also works when the image is a resized, scaled or edited copy ("red-bike" for `red-bike-1024x576.jpg`).
 * **English phrases**: also checked in every other language that has its own researcher, without the words that are ordinary words in other languages ("file", "pic", "alt", "null", "todo", "na").
 * Languages without their own researcher only get the checks that work in all languages.
 * Each language can add its own phrases. Only English has them for now.
@@ -36,7 +36,7 @@ The whole alt text is matched: "Product image" is flagged, "Product image of a r
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | At least 1 image has non-descriptive alt text | **Non-descriptive alt text**: X of your images have alt text that doesn't describe the image. **Describe what the image shows, or leave the alt text empty if the image is decorative.** |
+| Red | 3 | At least 1 image has non-descriptive alt text | **Non-descriptive alt text**: X of your images have alt text that doesn't describe the image. **Describe what the image shows, or leave the alt text empty if the image is decorative**. |
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag` and `nonDescriptiveCount`, and must return `nonDescriptive`. The returned object is used as is.

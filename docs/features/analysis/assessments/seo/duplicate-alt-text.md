@@ -34,7 +34,7 @@ X is the number of images that share their alt text with at least one other imag
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Orange | 6 | Two or more different images have the same alt text | **Duplicate alt text**: X of your images don't have unique alt text. **Give each image its own alt text.** |
+| Orange | 6 | Two or more different images have the same alt text | **Duplicate alt text**: X of your images don't have unique alt text. **Give each image its own alt text**. |
 
 ## Flagged items
 The result names the flagged images in `flaggedItems`, by their `id`, or else by their `src`. An image with neither is counted, but not named.
@@ -46,5 +46,3 @@ A platform can supply its own feedback strings through `callbacks.getResultTexts
 On product pages, the criterion and the score are the same. Only the feedback strings are different: the assessed images are the product's own, so the strings say "product images" instead of "images". WooCommerce SEO and Shopify both supply their own feedback strings, so a user sees the platform's strings, not the defaults.
 
 Provided images with the same `id` count as one image, so a product image that is also in the gallery is not a duplicate.
-
-In Shopify, the links are different: [https://yoa.st/shopify-duplicate-alt-text](https://yoa.st/shopify-duplicate-alt-text) and [https://yoa.st/shopify-duplicate-alt-text-cta](https://yoa.st/shopify-duplicate-alt-text-cta).

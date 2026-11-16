@@ -4,7 +4,7 @@ title: "Assessments: Redundant phrase in alt text"
 sidebar_label: Redundant phrase in alt text
 description: How the Redundant phrase in alt text assessment of the Yoast SEO analysis works and how it is scored.
 ---
-The **Redundant phrase in alt text** assessment checks whether the assessed images have alt text with a redundant phrase, such as "Image of", "A picture showing" or "This image depicts". The phrase is usually at the start of the alt text. In some languages (Hungarian, Japanese, Turkish), it can also be in the middle or at the end.
+The **Redundant phrase in alt text** assessment checks whether the assessed images have alt text with a redundant phrase, such as "Image of", "A picture showing" or "This image depicts". The phrase is usually at the start of the alt text. In some languages (Hungarian, Japanese, Turkish), it can also be in the middle or at the end. Only the first sentence of the alt text is checked.
 
 | **Redundant phrase in alt text** | |
 |---|---|
@@ -25,7 +25,7 @@ The **Redundant phrase in alt text** assessment checks whether the assessed imag
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Orange | 6 | At least 1 image has alt text with a redundant phrase | **Redundant phrase in alt text**: X of your images have alt text with a phrase like "Image of" or similar. **Remove it as screen readers already announce that it's an image. You may keep phrases that describe the type of image (e.g. "photograph", "illustration", "screenshot") if the type is worth pointing out.** |
+| Orange | 6 | At least 1 image has alt text with a redundant phrase | **Redundant phrase in alt text**: X of your images have alt text with a phrase like "Image of" or similar. **Remove it as screen readers already announce that it's an image. You may keep phrases that describe the type of image (e.g. "photograph", "illustration", "screenshot") if the type is worth pointing out**. |
 
 ## Custom feedback strings
 A platform can supply its own feedback strings through `callbacks.getResultTexts`. This callback receives `urlTitleAnchorOpeningTag`, `urlActionAnchorOpeningTag` and `redundantPhraseCount`, and must return `redundantPhrase`. The returned object is used as is.

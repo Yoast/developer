@@ -11,8 +11,8 @@ By default, it assesses the images in the text. A platform can limit all image a
 | **Image alt attributes** | |
 |---|---|
 | **Name in code** | [`ImageAltTagsAssessment`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/seo/ImageAltTagsAssessment.js) |
-| **Title URL** | [https://yoa.st/33c](https://yoa.st/33c) |
-| **Call to action URL** | [https://yoa.st/33d](https://yoa.st/33d) |
+| **Title URL** | [https://yoa.st/33c](https://yoa.st/33c) (set by Yoast WooCommerce SEO; the `yoastseo` default has no link) |
+| **Call to action URL** | [https://yoa.st/33d](https://yoa.st/33d) (set by Yoast WooCommerce SEO; the `yoastseo` default has no link) |
 | **When it applies** | Always, on product pages. |
 | **Product** | Yoast WooCommerce SEO, Yoast SEO for Shopify |
 | **Content types** | **WordPress**: products (WooCommerce SEO)<br/>**Shopify**: products<br/>**Google Docs**: not available |
@@ -28,10 +28,10 @@ These are the default feedback strings. WooCommerce SEO and Shopify supply their
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 3 | No images | **Image alt attributes**: This page does not have images with alt attributes. **Add some!** |
-| Red | 3 | None of the images have alt attributes | **Image alt attributes**: None of the images have alt attributes. **Add alt attributes to your images!** |
-| Red | 3 | One image has no alt attribute | **Image alt attributes**: One image doesn't have alt attributes. **Add alt attributes to your images!** |
-| Red | 3 | Not all images have alt attributes | **Image alt attributes**: Some images don't have alt attributes. **Add alt attributes to your images!** |
+| Red | 3 | No images | **Image alt attributes**: This page does not have images with alt attributes. **Add some**! |
+| Red | 3 | None of the images have alt attributes (also when there is only one image) | **Image alt attributes**: None of the images have alt attributes. **Add alt attributes to your images**! |
+| Red | 3 | One of several images has no alt attribute | **Image alt attributes**: One image doesn't have alt attributes. **Add alt attributes to your images**! |
+| Red | 3 | Not all images have alt attributes | **Image alt attributes**: Some images don't have alt attributes. **Add alt attributes to your images**! |
 | Green | 9 | All images have alt attributes | **Image alt attributes**: All images have alt attributes. Good job! |
 
 ## Flagged items

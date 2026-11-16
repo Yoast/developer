@@ -1,3 +1,11 @@
+## 16/11/2026 08:13 (UTC)
+
+Release date: 2026-11-16
+
+#### Bugfixes
+
+* Fixes a bug where the first-time configuration was skipped when a store reinstalled the app after finishing it before.
+
 ## 30/10/2026 14:43 (UTC)
 
 Release date: 2026-10-30

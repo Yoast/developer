@@ -11,7 +11,7 @@ The **Function words in keyphrase** assessment checks whether the keyphrase cons
 | **Name in code** | [`FunctionWordsInKeyphraseAssessment`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/seo/FunctionWordsInKeyphraseAssessment.js) |
 | **Title URL** | [https://yoa.st/functionwordskeyphrase-1](https://yoa.st/functionwordskeyphrase-1) |
 | **Call to action URL** | [https://yoa.st/functionwordskeyphrase-2](https://yoa.st/functionwordskeyphrase-2) |
-| **When it applies** | Only when the keyphrase consists of function words only. |
+| **When it applies** | Only when the keyphrase consists of function words only, and is not in double quotes. |
 | **Product** | Yoast SEO (Free) |
 | **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: documents |
 | **Related keyphrases** | ✅ |

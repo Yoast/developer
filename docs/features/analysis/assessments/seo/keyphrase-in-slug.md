@@ -11,13 +11,13 @@ The **Keyphrase in slug** assessment checks whether the keyphrase is used in the
 | **Name in code** | [`SlugKeywordAssessment`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/seo/UrlKeywordAssessment.js) |
 | **Title URL** | [https://yoa.st/33o](https://yoa.st/33o) |
 | **Call to action URL** | [https://yoa.st/33p](https://yoa.st/33p) |
-| **When it applies** | Always. |
+| **When it applies** | Always, except on the front page of the site. |
 | **Product** | Yoast SEO (Free) |
 | **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: products, collections, blog posts and pages, blogs<br/>**Google Docs**: not available |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |
-| **Cornerstone** | ✅ Red instead of orange when not all content words are in the slug |
+| **Cornerstone** | ✅ Red instead of orange when not all content words are in the slug. In Shopify, not on cornerstone collection pages. |
 | **Uses highlighting** | ❌ |
 | **Uses morphology (Premium)** | ✅ |
 

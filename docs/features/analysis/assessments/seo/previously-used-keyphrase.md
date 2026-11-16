@@ -14,7 +14,7 @@ The **Previously used keyphrase** assessment checks whether the keyphrase was al
 | **When it applies** | Always, in the Yoast SEO WordPress plugin. |
 | **Product** | Yoast SEO (Free) |
 | **Content types** | **WordPress**: posts and pages, taxonomies, products (WooCommerce SEO)<br/>**Shopify**: not available<br/>**Google Docs**: not available |
-| **Related keyphrases** | ✅ |
+| **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |
 | **Cornerstone** | ❌ Same scoring |
@@ -26,9 +26,11 @@ The **Previously used keyphrase** assessment checks whether the keyphrase was al
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
 | Red | 1 | There is no keyphrase | **Previously used keyphrase**: No focus keyphrase was set for this page. **Please add a focus keyphrase you haven't used before on other content**. |
-| Red | 1 | The keyphrase was used more than once before | **Previously used keyphrase**: You've used this keyphrase X times before. **Do not use your keyphrase more than once.** |
-| Orange | 6 | The keyphrase was used once before | **Previously used keyphrase**: You've used this keyphrase once before. **Do not use your keyphrase more than once.** |
+| Red | 1 | The keyphrase was used more than once before | **Previously used keyphrase**: You've used this keyphrase **multiple times before**. **Do not use your keyphrase more than once**. |
+| Orange | 6 | The keyphrase was used once before | **Previously used keyphrase**: You've used this keyphrase **once before**. **Do not use your keyphrase more than once**. |
 | Green | 9 | The keyphrase was not used before | **Previously used keyphrase**: You've not used this keyphrase before, very good. |
+
+In the feedback, **once before** links to the post that uses the keyphrase, and **multiple times before** links to a search for the keyphrase in the posts overview.
 
 ## Disabling the assessment
 In the Yoast SEO WordPress plugin, you can turn off this assessment with the `wpseo_previously_used_keyword_active` filter:

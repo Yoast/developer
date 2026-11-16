@@ -6,6 +6,8 @@ description: How the Keyphrase distribution assessment of the Yoast SEO Premium 
 ---
 The **Keyphrase distribution** assessment checks how evenly the words from the keyphrase (and its synonyms) are spread over the text.
 
+A sentence contains the keyphrase (or a synonym) when it has all of its (content) words, for keyphrases of fewer than 4 words. For keyphrases of 4 words or more, at least half of the words are enough. In Japanese, the limit is 7 characters instead of 4 words. List items are joined into one sentence.
+
 | **Keyphrase distribution** | |
 |---|---|
 | **Name in code** | [`KeyphraseDistributionAssessment`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/yoastseo/src/scoring/assessments/seo/KeyphraseDistributionAssessment.js) |
@@ -25,9 +27,9 @@ The **Keyphrase distribution** assessment checks how evenly the words from the k
 
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
-| Red | 1 | No keyphrase set and/or keyphrase not found in the text | **Keyphrase distribution**: **Please add both a keyphrase and some text containing the keyphrase or its synonyms.** |
-| Red | 1 | Texts of 15 sentences or longer: the distraction percentage<sup>1</sup> is > 50% | **Keyphrase distribution**: Very uneven. Large parts of your text do not contain the keyphrase or its synonyms. **Distribute them more evenly.** |
-| Orange | 6 | Texts of 15 sentences or longer: the distraction percentage is > 30% and ≤ 50% | **Keyphrase distribution**: Uneven. Some parts of your text do not contain your keyphrase or its synonyms. **Distribute them more evenly.** |
+| Red | 1 | No keyphrase set and/or keyphrase not found in the text | **Keyphrase distribution**: **Please add both a keyphrase and some text containing the keyphrase or its synonyms**. |
+| Red | 1 | Texts of 15 sentences or longer: the distraction percentage<sup>1</sup> is > 50% | **Keyphrase distribution**: Very uneven. Large parts of your text do not contain the keyphrase or its synonyms. **Distribute them more evenly**. |
+| Orange | 6 | Texts of 15 sentences or longer: the distraction percentage is > 30% and ≤ 50% | **Keyphrase distribution**: Uneven. Some parts of your text do not contain the keyphrase or its synonyms. **Distribute them more evenly**. |
 | Green | 9 | Texts of 15 sentences or longer: the distraction percentage is ≤ 30% | **Keyphrase distribution**: Good job! |
 | Green | 9 | Texts shorter than 15 sentences: the keyphrase is found in the text at least once | **Keyphrase distribution**: Good job! |
 

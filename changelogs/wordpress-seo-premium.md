@@ -1,3 +1,23 @@
+## 28.9
+
+Release date: 2026-11-18
+
+Yoast SEO Premium 28.9 brings five new image alt text assessments, with synonyms, word forms and related keyphrases included in the keyphrase stuffing assessment. [Read the release post here](https://yoa.st/58a).
+
+#### Enhancements
+
+* Enhances the Yoast abilities about archives, special pages and non-static homepages with social settings.
+* Enhances the Yoast ability that updates author Schema with Premium fields.
+* Introduces a new Yoast Ability to allow agents to block unwanted bots via dynamic robots.txt rules.
+
+#### Bugfixes
+
+* Fixes a bug where AI Optimize would show an error when the post contained headings without content.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.9.
+
 ## 28.8
 
 Release date: 2026-10-27

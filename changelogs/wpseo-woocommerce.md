@@ -1,3 +1,28 @@
+## 17.1
+
+Release date: 2026-11-18
+
+Yoast WooCommerce SEO 17.1 brings the new image alt text assessments to your products, each with a Fix with AI button, so you can fix what they flag right where you found it. [Read the release post here](https://yoa.st/589).
+
+#### Enhancements
+
+* Adds a _Fix with AI_ button next to the _Duplicate alt text_ result in the product editor.
+* Adds a _Fix with AI_ button to the _alt text length_ assessment on products.
+* Adds a _Fix with AI_ button to the _keyphrase stuffing in alt text_ assessment on products.
+* Adds a _Fix with AI_ button to the _redundant phrase in alt text_ assessment on products.
+* Adds an _Analyze all product images_ button to the _Image alt text_ tab of the bulk editor, so the image assessment filters also work for existing products.
+* Adds filters to the image alt text modal in the product editor, to show only the images an alt text assessment flagged.
+* Adds the WooCommerce wording for the _alt text length_ assessment, so its feedback names your product images.
+* Adds the WooCommerce wording for the _Duplicate alt text_ assessment, so its feedback names your product images.
+* Adds the WooCommerce wording for the _keyphrase stuffing in alt text_ assessment, so its feedback names your product images.
+* Adds the WooCommerce wording for the _redundant phrase in alt text_ assessment, so its feedback names your product images.
+* Adds WooCommerce wording and a _Fix with AI_ button to the new product image alt text assessments, and filters in the image alt text modal that show only the flagged images.
+* Replaces _Keyphrase in image alt attributes_ assessment on Products with 5 new assessments that can better assess the quality of the image alt text.
+
+#### Other
+
+* Bumps the minimum required version of Yoast SEO to 28.9.
+
 ## 17.0
 
 Release date: 2026-10-27

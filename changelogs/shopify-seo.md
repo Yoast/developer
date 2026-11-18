@@ -1,3 +1,11 @@
+## 18/11/2026 08:58 (UTC)
+
+Release date: 2026-11-18
+
+#### Bugfixes
+
+* Fixes a bug where `valueAddedTaxIncluded` in the product schema followed the product's "Charge tax on this product" setting instead of the store's "Include tax in prices" setting.
+
 ## 16/11/2026 08:13 (UTC)
 
 Release date: 2026-11-16

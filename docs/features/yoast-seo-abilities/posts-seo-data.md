@@ -7,7 +7,7 @@ description: This documentation explains the abilities that read and update the 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Yoast SEO registers two abilities to work with the SEO data of individual posts: one to read it and one to update it.
+Yoast SEO registers two abilities to work with the SEO data of individual posts of any post type: one to read it and one to update it.
 
 | Ability | Type | Returns |
 |---|---|---|
@@ -52,11 +52,11 @@ Reads the SEO data for one or more posts.
 Provide at least one of the following:
 
 * `post_id` – the ID of the post to retrieve. An integer of 1 or higher.
-* `permalink` – the permalink (URL) of the post to retrieve.
-* `title` – keywords to search for in post titles. 
-  * Pass a single phrase, or a comma-separated list to search for several titles at once. 
-  * Each value is matched as a whole phrase against the post title, and a post matching any value is returned. 
-  * At most 10 phrases are used per request; any beyond the first 10 are ignored. 
+* `permalink` – the full permalink (URL) of the post to retrieve, exactly as the site outputs it, including the protocol (`http` or `https`) and any trailing slash. Relative URLs are not supported.
+* `title` – keywords to search for in post titles. Every post type is searched.
+  * Pass a single phrase, or a comma-separated list to search for several titles at once.
+  * Each value is matched as a whole phrase against the breadcrumb title of the post when a custom one is set, otherwise the post title, and a post matching any value is returned.
+  * At most 10 phrases are used per request; any beyond the first 10 are ignored.
   * Results are paginated to 10 entities per page.
 * `page` – the page of title-search results to return, 1-based and defaulting to 1. 
   * Matches are ordered most recently modified first, so request a later page to reach older matches. 
@@ -130,7 +130,7 @@ Updates the SEO data for a single post.
 Only the fields you provide are changed; every other field is left untouched. A provided empty value (`""` or `null`, depending on the field) clears that field and lets Yoast SEO fall back to its default.
 
 ### Input
-Identify the post with `post_id` **or** `permalink` (a `title` search is not accepted here), then provide any of the writable fields you want to change:
+Identify the post with `post_id` **or** `permalink` (a `title` search is not accepted here; pass the full URL including protocol and trailing slash), then provide any of the writable fields you want to change:
 
 * `seo_title` – the custom SEO title. A string, or `null` to clear it and fall back to the default template.
 * `meta_description` – the custom meta description. A string, or `null` to clear it.
@@ -246,7 +246,7 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
 {
     "name": "yoast-seo/get-post-seo-data",
     "label": "Get Post SEO Data",
-    "description": "Get the SEO data for a post. Identify the post by post_id, by permalink (URL), or by title keywords; the title may be a comma-separated list and returns the SEO data for every post matching any of the values, paginated most recently modified first (use the page parameter to reach older matches). At least one identifier is required. Only posts the current user is allowed to edit are returned.",
+    "description": "Get the SEO data for a post of any post type. Identify the post by post_id, by permalink (URL), or by title keywords; the title may be a comma-separated list and returns the SEO data for every post matching any of the values, paginated most recently modified first (use the page parameter to reach older matches). At least one identifier is required. Only posts the current user is allowed to edit are returned.",
     "category": "yoast-seo",
     "input_schema": {
         "type": "object",
@@ -259,11 +259,11 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
             },
             "permalink": {
                 "type": "string",
-                "description": "The permalink (URL) of the post to retrieve."
+                "description": "The full permalink (URL) of the post to retrieve, exactly as the site outputs it, including the protocol (http or https) and any trailing slash. Relative URLs are not supported."
             },
             "title": {
                 "type": "string",
-                "description": "Keywords to search for in post titles. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page; see the page parameter."
+                "description": "Keywords to search for in post titles. Every post type is searched. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the breadcrumb title of the post when a custom one is set, otherwise the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page; see the page parameter."
             },
             "page": {
                 "type": "integer",
@@ -333,7 +333,7 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
 {
     "name": "yoast-seo/update-post-seo-data",
     "label": "Update Post SEO Data",
-    "description": "Update the SEO data for a single post. Identify the post by post_id or by permalink (URL). Only the fields you provide are changed; a provided empty value clears that field. Only posts the current user is allowed to edit can be updated.",
+    "description": "Update the SEO data for a single post of any post type. Identify the post by post_id or by permalink (URL). Only the fields you provide are changed; a provided empty value clears that field. Only posts the current user is allowed to edit can be updated.",
     "category": "yoast-seo",
     "input_schema": {
         "type": "object",
@@ -346,7 +346,7 @@ A _GET_ request to `/wp-json/wp-abilities/v1/abilities` returns the complete def
             },
             "permalink": {
                 "type": "string",
-                "description": "The permalink (URL) of the post to update."
+                "description": "The full permalink (URL) of the post to update, exactly as the site outputs it, including the protocol (http or https) and any trailing slash. Relative URLs are not supported."
             },
             "seo_title": {
                 "type": ["string", "null"],

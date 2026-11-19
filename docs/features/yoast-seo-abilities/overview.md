@@ -22,8 +22,11 @@ Yoast SEO registers the following abilities:
   * the SEO analysis score
   * the readability analysis score
   * the inclusive language analysis score.
-* Two [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts:
+* Two [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts of any post type:
   * one that **reads** a post's SEO data
+  * one that **updates** it.
+* Two [Author SEO data](author-seo-data.md) abilities for working with the SEO data of individual author archives:
+  * one that **reads** an author archive's SEO data
   * one that **updates** it.
 * Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
   * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
@@ -43,7 +46,7 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 * **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
 * **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
-The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), and [Site representation](site-representation.md#annotations).
+The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), [Site representation](site-representation.md#annotations), and [Author SEO data](author-seo-data.md#annotations).
 
 ## Use cases for the Yoast SEO Abilities
 
@@ -61,6 +64,11 @@ Beyond reading analysis scores, the agent can also read and update the SEO data 
 * Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_
 
 See [Post's SEO data](posts-seo-data.md#update-post-seo-data) for the full list of fields the agent can read and update.
+
+The same pattern extends to author archives with the [Author SEO data](author-seo-data.md) abilities:
+* _"Get the SEO settings for the author archive at https://example.com/author/jane/ and tell me whether it's being indexed."_
+* _"Set a custom meta description for the author archive of user 7."_
+* _"Noindex the author archive of this contributor since they publish very little content."_
 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 

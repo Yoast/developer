@@ -1,3 +1,11 @@
+## 20/11/2026 10:48 (UTC)
+
+Release date: 2026-11-20
+
+#### Bugfixes
+
+* Fixes a bug where the `Product variant` variable would be replaced with "Default Title" for products without variants when opened through a URL with the `variant` query parameter.
+
 ## 18/11/2026 08:58 (UTC)
 
 Release date: 2026-11-18

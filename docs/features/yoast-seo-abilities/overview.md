@@ -25,6 +25,17 @@ Yoast SEO registers the following abilities:
 * Two [Post's SEO data](posts-seo-data.md) abilities for working with the SEO data of individual posts:
   * one that **reads** a post's SEO data
   * one that **updates** it.
+* Two [Term's SEO data](terms-seo-data.md) abilities for working with the SEO data of individual taxonomy terms (categories, tags, and custom taxonomies):
+  * one that **reads** a term's SEO data
+  * one that **updates** it.
+* Two [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md) abilities for working with the SEO settings of the homepage (when it shows the latest posts), the author, date, and content type archives, and the search results and 404 pages:
+  * one that **reads** the settings of all of them
+  * one that **updates** the settings of one of them.
+
+  With [Yoast SEO Premium](archives-and-special-pages-seo-settings.md#yoast-seo-premium-fields) active, they also read and update the social title and description of these pages.
+* One [Author schema](author-schema.md) ability for working with the author schema settings of individual users, which populate their Person schema:
+  * it **reads** a user's author schema settings
+  * and **updates** them.
 * Six [Feature toggle](feature-toggles.md) abilities that enable or disable individual Yoast SEO features:
   * `yoast-seo/set-llms-txt-status` — toggle the llms.txt feature on or off
   * `yoast-seo/set-schema-aggregation-endpoint-status` — toggle the Schema Aggregation endpoint on or off
@@ -33,6 +44,12 @@ Yoast SEO registers the following abilities:
   * `yoast-seo/set-open-graph-status` — toggle Open Graph data output on or off
   * `yoast-seo/set-x-card-status` — toggle X card data output on or off
 * One [Site representation](site-representation.md) ability that updates the name, logo, social profiles, and person/organization toggle used in the site's organization schema. With [Yoast SEO Premium](site-representation.md#yoast-seo-premium-fields) active, it also updates the organization's additional details and identifiers.
+
+With Yoast SEO Premium active, it also registers:
+
+* Two [Blocked bots](blocked-bots.md) abilities for working with the bots that are prevented from crawling the site through the robots.txt file (Google-Extended, GPTBot, and CCBot):
+  * one that **reads** which bots are blocked
+  * one that **blocks or allows** them.
 
 They can all be discovered at `/wp-json/wp-abilities/v1/abilities?category=yoast-seo` along with their most relevant information.
 
@@ -43,7 +60,7 @@ Every ability declares a set of behavior annotations in its `meta.annotations`. 
 * **Destructive** – only meaningful when the ability is not read-only. When `true`, the ability may overwrite or remove existing data in a way that is not easily reversible; when `false`, any changes it makes should be additive or reversible. When `null`, the ability makes no claim either way, so a client should treat it as potentially destructive.
 * **Idempotent** – only meaningful when the ability is not read-only. When `true`, calling the ability again with the same input should have no further effect beyond the first call.
 
-The annotations for each ability are listed on its documentation page: [Analysis scores](analysis-scores.md#annotations), [Post's SEO data](posts-seo-data.md#annotations), [Feature toggles](feature-toggles.md#annotations), and [Site representation](site-representation.md#annotations).
+The Yoast SEO abilities that write data leave the destructive hint undeclared (`null`) rather than `false`: writing a field overwrites its previous value and a provided empty value clears it, so some data loss is possible and they make no non-destructive guarantee. They are idempotent because they only set the fields you provide, so sending the same request again leaves the data in the same state, rather than compounding the change.
 
 ## Use cases for the Yoast SEO Abilities
 
@@ -53,14 +70,18 @@ Assuming that an AI agent is connected to a WordPress-enabled MCP site (details 
 * _"Do you see the readability of my recent content going upwards or downwards?"_
 * _"I want to know if I have content on my site that uses non-inclusive language. If there's indeed not inclusive language in my content, do you see a correlation between the subjects covered?"_
 
-Beyond reading analysis scores, the agent can also read and update the SEO data of individual posts, answering requests like:
+Beyond reading analysis scores, the agent can also read and update the SEO data of individual posts and terms, the SEO settings of archives and special pages, and the author schema settings of users:
 * _"Show me the SEO settings for the post at https://example.com/homemade-sourdough-bread/. Is it set to be indexed?"_
 * _"Write a meta description of at most 155 characters for the post with ID 42, making sure it includes its focus keyphrase."_
 * _"Mark my post about sourdough bread as cornerstone content and set its canonical URL to https://example.com/sourdough/."_
 * _"Remove the custom Open Graph title from the post at https://example.com/homemade-sourdough-bread/ so that Facebook and other social platforms show the default title instead."_
-* Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title"_
+* _"Set a custom meta description for the category at https://example.com/category/recipes/."_
+* _"Make the titles of my author archives and my Books archive more descriptive."_
+* _"Hide the date archives from search engines."_
+* _"Update the LinkedIn profile for user ID 3 to https://www.linkedin.com/in/jane-doe/."_
+* Or even a bulk fetch and update of posts: _"Get me the SEO titles of all posts about hiking boots and noindex the ones without a custom SEO title."_
 
-See [Post's SEO data](posts-seo-data.md#update-post-seo-data) for the full list of fields the agent can read and update.
+See [Post's SEO data](posts-seo-data.md#update-post-seo-data), [Term's SEO data](terms-seo-data.md#update-term-seo-data), [Archives' and special pages' SEO settings](archives-and-special-pages-seo-settings.md#update-archive-and-special-page-seo-settings), and [Author schema](author-schema.md#input) for the full lists of fields the agent can read and update.
 
 That way, Yoast SEO exposes both the results of its analyses and the SEO data of individual posts to authenticated AI agents. This allows users to exploit AI capabilities to easily navigate through useful SEO data of their website and create reports, map out plans and perform SEO-related actions accordingly.
 

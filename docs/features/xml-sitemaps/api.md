@@ -217,6 +217,64 @@ function disable_sitemap_cache_priming( $disable ) {
 add_filter( 'wpseo_disable_xml_sitemap_cache_priming', 'disable_sitemap_cache_priming' );
 ```
 
+## Stylesheet
+
+Yoast SEO styles its XML sitemaps with a CSS stylesheet by default. Add-ons that register custom sitemap types can supply their own CSS stylesheets, and any plugin can filter the stylesheet processing instruction for the main sitemap.
+
+### Register a CSS stylesheet for a custom sitemap type
+
+Call `WPSEO_Sitemaps::register_css()` during `init` to register a callback that outputs the CSS content for a named sitemap type. Yoast SEO serves the stylesheet from `<name>-sitemap.css` on the home URL.
+
+```php
+<?php
+/**
+ * Registers a custom CSS stylesheet for a custom sitemap type.
+ *
+ * @return void
+ */
+function register_my_plugin_sitemap_css() {
+    global $wpseo_sitemaps;
+    if ( isset( $wpseo_sitemaps ) && ! empty( $wpseo_sitemaps ) ) {
+        $wpseo_sitemaps->register_css( 'my-plugin', 'my_plugin_output_sitemap_css' );
+    }
+}
+
+add_action( 'init', 'register_my_plugin_sitemap_css' );
+
+/**
+ * Outputs the CSS stylesheet content for the custom sitemap type.
+ *
+ * @return void
+ */
+function my_plugin_output_sitemap_css() {
+    echo 'body { background: #fff; font-family: sans-serif; }';
+}
+```
+
+The stylesheet is then available at `<home_url>/my-plugin-sitemap.css` and can be referenced from your sitemap's `<?xml-stylesheet?>` processing instruction.
+
+**Deprecation notice:** `WPSEO_Sitemaps::register_xsl()` and the `wpseo_xsl_<type>` action were deprecated in Yoast SEO 29.0. Use `WPSEO_Sitemaps::register_css()` instead.
+
+### Filter the stylesheet URL for the main XML sitemap
+
+Use the `wpseo_stylesheet_url` filter to modify the XML-stylesheet processing instruction that Yoast SEO prepends to the main sitemap.
+
+```php
+<?php
+/**
+ * Filters the stylesheet URL for the main XML sitemap.
+ *
+ * @param string $stylesheet Full XML-stylesheet processing instruction.
+ *
+ * @return string Modified processing instruction.
+ */
+function my_sitemap_stylesheet_url( $stylesheet ) {
+    return str_replace( 'main-sitemap.css', 'custom-sitemap.css', $stylesheet );
+}
+
+add_filter( 'wpseo_stylesheet_url', 'my_sitemap_stylesheet_url' );
+```
+
 ## Miscellaneous
 
 ### Alter the URL of an entry

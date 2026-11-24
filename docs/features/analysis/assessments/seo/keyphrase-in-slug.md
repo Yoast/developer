@@ -17,7 +17,7 @@ The **Keyphrase in slug** assessment checks whether the keyphrase is used in the
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ❌ |
 | **Languages** | All languages |
-| **Cornerstone** | ✅ Red instead of orange when not all content words are in the slug. In Shopify, not on cornerstone collection pages. |
+| **Cornerstone** | ✅ Red instead of orange when the keyphrase is not (enough) in the slug: not all content words for short keyphrases, or half or fewer for longer keyphrases. In Shopify, not on cornerstone collection pages. |
 | **Uses highlighting** | ❌ |
 | **Uses morphology (Premium)** | ✅ |
 
@@ -26,6 +26,6 @@ The **Keyphrase in slug** assessment checks whether the keyphrase is used in the
 | Traffic light | Score | Criterion | Feedback |
 |---|---|---|---|
 | Red | 3 | There is no keyphrase and/or slug | **Keyphrase in slug**: **Please add both a keyphrase and a slug containing the keyphrase**. |
-| Orange (cornerstone: Red) | 6 (cornerstone: 3) | Not all content words are in the slug | **Keyphrase in slug**: (Part of) your keyphrase does not appear in the slug. **Change that**! |
+| Orange (cornerstone: Red) | 6 (cornerstone: 3) | **Short keyphrases (1-2 content words)**: not all content words are in the slug. <br/> **Longer keyphrases (> 2 content words)**: half or fewer of the content words are in the slug. | **Keyphrase in slug**: (Part of) your keyphrase does not appear in the slug. **Change that**! |
 | Green | 9 | Short keyphrases (1-2 content words): all content words are in the slug | **Keyphrase in slug**: Great work! |
 | Green | 9 | Longer keyphrases (> 2 content words): more than half of the content words are in the slug | **Keyphrase in slug**: More than half of your keyphrase appears in the slug. That's great! |

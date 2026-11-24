@@ -88,7 +88,9 @@ Each readability assessment gives an individual score. The score defines the tra
 Fully supported languages are English, Dutch, German, Italian, Russian, French and Spanish. In these languages, all language-specific readability assessments are available. See the [readability support per language](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo/README.md#readability-analysis).
 
 ## Readability analysis: how is the overall score calculated?
-The penalties of all assessments are added up. The sum defines the overall score. To get the overall traffic light, the overall score is divided by 10, and the result is rated with the same scale as the individual scores (see [`getIndicatorForScore.js`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/js/src/analysis/getIndicatorForScore.js)):
+If there is only one result or none, the overall readability score is not available, and the traffic light is gray. This is usually the case for an empty text, where only [Text presence](readability/text-presence.md) gives a result.
+
+Otherwise, the penalties of all assessments are added up. The sum defines the overall score. To get the overall traffic light, the overall score is divided by 10, and the result is rated with the same scale as the individual scores (see [`getIndicatorForScore.js`](https://github.com/Yoast/wordpress-seo/blob/trunk/packages/js/src/analysis/getIndicatorForScore.js)):
 
 | Sum of penalties (fully supported languages) | Sum of penalties (other languages) | Overall score | Divided by 10 | Traffic light |
 |---|---|---|---|---|

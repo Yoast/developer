@@ -25,7 +25,7 @@ By default, it assesses the images in the text. A platform can limit all image a
 
 **What counts as a keyphrase match**: all (content) words of the keyphrase or of a synonym, within one sentence of the alt text. With exact matching (keyphrase in double quotes), the exact phrase.
 
-**Why there is no green traffic light**: using the keyphrase once does not prove that the alt text is good. It can still read unnaturally, which we cannot judge without the context. A missing keyphrase is not good either. So when nothing is flagged, the assessment returns a result without a score and without a text. `Assessor.isValidResult` drops this result, and the assessment is not shown at all. Red criteria are checked first.
+**Why there is no green traffic light**: using the keyphrase once does not prove that the alt text is good. It can still read unnaturally, which we cannot judge without the context. A missing keyphrase is not necessarily good either. So when nothing is flagged, the assessment returns a result without a score and without a text. `Assessor.isValidResult` drops this result, and the assessment is not shown at all. Red criteria are checked first.
 
 ## Scoring
 X is the number of images, not the number of keyphrase occurrences.

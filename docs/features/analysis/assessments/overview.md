@@ -52,13 +52,13 @@ An assessment that returns a result without a score is not shown. A score of exa
 
 ## SEO analysis: how is the overall score calculated?
 
-* Overall score<sup>1</sup> = ( sum of individual scores from each assessment ) / ( number of individual scores * 9 ) * 100
+* Overall score = ( sum of individual scores from each assessment ) / ( number of individual scores * 9 ) * 100
 * Round this number.
 * Example with three individual scores of 3, 6, and 9:
 
 ( 3 + 6 + 9 ) / ( 3 * 9 ) * 100 = **66.67** → rounded to **67**
 
-<sup>1</sup> The logic behind the formula is as follows:
+The logic behind the formula is as follows:
 * The overall score is the mean of the individual scores, adjusted to fit a 0-100 scale.
 * Multiplying the result by 100 is necessary to fit a 0-100 scale instead of a 0-1 scale.
 * Dividing the sum of individual scores by the number of scores * 9 (rather than simply by the number of scores) is necessary because the maximum score an individual assessment can have is 9.

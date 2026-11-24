@@ -25,7 +25,7 @@ Images without alt text are not counted as too short. That case is covered by th
 | **Uses highlighting** | ❌ |
 | **Uses morphology (Premium)** | ❌ |
 
-**Why there is no green traffic light**: there is no good range for alt text length. When nothing is flagged, the assessment returns a result without a score and without a text. `Assessor.isValidResult` drops this result, and the assessment is not shown at all.
+**Why there is no green traffic light**: Just because the alt text length is within a certain range, doesn't mean that the alt text is an appropriate length for the specific image. When nothing is flagged, the assessment returns a result without a score and without a text. `Assessor.isValidResult` drops this result, and the assessment is not shown at all.
 
 ## Scoring
 Each feedback text is two separately translated sentences: the count, then the action with the character limit. For Japanese, the limits in the action sentence are 5 and 100.

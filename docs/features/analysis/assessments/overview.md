@@ -43,10 +43,12 @@ Each SEO assessment gives an individual score. The score defines the traffic lig
 | Individual score | Rating |
 |---|---|
 | < 0 | Very bad (red traffic light) |
-| 0 (if it is not explicitly set as a score) | Feedback (gray traffic light) |
-| ≤ 4 | Bad (red traffic light) |
+| 0 | Feedback (gray traffic light) |
+| 1-4 | Bad (red traffic light) |
 | 5-7 | OK (orange traffic light) |
 | 8-9 | Good (green traffic light) |
+
+An assessment that returns a result without a score is not shown. A score of exactly 0 always gives a gray traffic light.
 
 ## SEO analysis: how is the overall score calculated?
 
@@ -78,8 +80,8 @@ Each readability assessment gives an individual score. The score defines the tra
 
 | Individual score | Rating | Penalty (fully supported languages) | Penalty (other languages) |
 |---|---|---|---|
-| 0 (if it is not explicitly set as a score) | Feedback (gray traffic light) | - | - |
-| 0-4 | Bad (red traffic light) | 3 | 4 |
+| 0 | Feedback (gray traffic light) | 0 | 0 |
+| 1-4 | Bad (red traffic light) | 3 | 4 |
 | 5-7 | OK (orange traffic light) | 2 | 2 |
 | 8-10 | Good (green traffic light) | 0 | 0 |
 

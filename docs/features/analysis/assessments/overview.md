@@ -141,7 +141,7 @@ Examples:
 * [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md)
 * [Non-descriptive alt text](seo/non-descriptive-alt-text.md)
 
-### Product page assessments
+### Product page assessments (Yoast WooCommerce SEO and Yoast SEO for Shopify)
 * [Image alt attributes](seo/image-alt-attributes.md)
 * [Product identifier](seo/product-identifier.md)
 * [SKU](seo/sku.md)

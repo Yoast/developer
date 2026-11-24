@@ -122,7 +122,6 @@ Examples:
 * [Keyphrase in slug](seo/keyphrase-in-slug.md)
 * [Previously used keyphrase](seo/previously-used-keyphrase.md)
 * [Keyphrase distribution](seo/keyphrase-distribution.md) (Premium)
-* [Keyphrase stuffing in alt text](seo/keyphrase-stuffing-in-alt-text.md)
 
 ### Other SEO assessments
 * [Text length](seo/text-length.md)
@@ -133,11 +132,14 @@ Examples:
 * [Single title](seo/single-title.md)
 * [Function words in keyphrase](seo/function-words-in-keyphrase.md)
 * [Images](seo/images.md)
+* [Title](seo/title.md) (Premium)
+
+### Alt text assessments
+* [Keyphrase stuffing in alt text](seo/keyphrase-stuffing-in-alt-text.md)
 * [Alt text length](seo/alt-text-length.md)
 * [Duplicate alt text](seo/duplicate-alt-text.md)
 * [Redundant phrase in alt text](seo/redundant-phrase-in-alt-text.md)
 * [Non-descriptive alt text](seo/non-descriptive-alt-text.md)
-* [Title](seo/title.md) (Premium)
 
 ### Product page assessments
 * [Image alt attributes](seo/image-alt-attributes.md)

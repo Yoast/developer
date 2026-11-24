@@ -11,7 +11,7 @@ The Yoast SEO content analysis is made up of separate checks, called **assessmen
 
 Most assessments are part of the [`yoastseo`](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo) JavaScript package. Some assessments are only available in [Yoast SEO Premium](https://yoast.com/product/yoast-seo-premium-wordpress/), in [Yoast SEO for Shopify](https://yoast.com/product/yoast-seo-shopify/), or in the add-ons [Yoast Local SEO](https://yoast.com/product/local-seo-wordpress/), [Yoast Video SEO](https://yoast.com/product/video-seo-wordpress/) and [Yoast WooCommerce SEO](https://yoast.com/product/yoast-woocommerce-seo/).
 
-These pages describe the analysis as of Yoast SEO 28.9.
+These pages describe the current analysis. If a page and the code disagree, the code in the [`yoastseo` package](https://github.com/Yoast/wordpress-seo/tree/trunk/packages/yoastseo) is correct. Please [open an issue](https://github.com/Yoast/developer/issues) so we can fix the page.
 
 The inclusive language assessments are not documented here yet.
 

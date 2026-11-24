@@ -6,7 +6,7 @@ description: How the Keyphrase distribution assessment of the Yoast SEO Premium 
 ---
 The **Keyphrase distribution** assessment checks how evenly the words from the keyphrase (and its synonyms) are spread over the text.
 
-A sentence contains the keyphrase (or a synonym) when it has all of its (content) words, for keyphrases of fewer than 4 words. For keyphrases of 4 words or more, at least half of the words are enough. In Japanese, the limit is 7 characters instead of 4 words. List items are joined into one sentence.
+A sentence contains the keyphrase (or a synonym) when it has all of its (content) words, for keyphrases of fewer than 4 words. For keyphrases of 4 words or more, at least half of the words are enough. In Japanese, the limit is 7 characters instead of 4 words. In languages without a function word list (Catalan, and languages without specific support), all (content) words are always needed, whatever the length of the keyphrase. List items are joined into one sentence.
 
 | **Keyphrase distribution** | |
 |---|---|

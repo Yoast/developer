@@ -209,8 +209,10 @@ Related keyphrases use a smaller set of assessments. See the **Related keyphrase
 | [Image alt attributes](seo/image-alt-attributes.md) | ❌ | ❌ | ✅ |
 | [Product identifier](seo/product-identifier.md) | ❌ | ❌ | ✅ |
 | [SKU](seo/sku.md) | ❌ | ❌ | ✅ |
+| [Keyphrase distribution](seo/keyphrase-distribution.md) (Premium) | ✅ | ✅ | ✅ |
+| [Title](seo/title.md) (Premium) | ✅ | ❌ | ✅ |
 
-Yoast SEO Premium also adds [Keyphrase distribution](seo/keyphrase-distribution.md) (all content types) and [Title](seo/title.md) (not on taxonomies). Taxonomies are category, tag and custom taxonomy pages.
+Taxonomies are category, tag and custom taxonomy pages.
 
 </TabItem>
 <TabItem value="shopify" label="Shopify">
@@ -241,8 +243,9 @@ Yoast SEO Premium also adds [Keyphrase distribution](seo/keyphrase-distribution.
 | [Image alt attributes](seo/image-alt-attributes.md) | ✅ | ❌ | ❌ | ❌ |
 | [Product identifier](seo/product-identifier.md) | ✅ | ❌ | ❌ | ❌ |
 | [SKU](seo/sku.md) | ✅ | ❌ | ❌ | ❌ |
+| [Keyphrase distribution](seo/keyphrase-distribution.md) | ✅ | ✅ | ✅ | ❌ |
 
-Yoast SEO for Shopify also adds [Keyphrase distribution](seo/keyphrase-distribution.md). **Blogs** is the overview page of a blog.
+**Blogs** is the overview page of a blog.
 
 </TabItem>
 <TabItem value="google-docs" label="Google Docs">
@@ -286,8 +289,10 @@ Yoast SEO for Google Docs always includes [Keyphrase distribution](seo/keyphrase
 | [Transition words](readability/transition-words.md) | ✅ | ✅ | ✅ |
 | [Text presence](readability/text-presence.md) | ✅ | ✅ | ✅ |
 | [Lists](readability/lists.md) | ❌ | ❌ | ✅ |
+| [Word complexity](readability/word-complexity.md) (Premium) | ✅ | ✅ | ✅ |
+| [Text alignment](readability/text-alignment.md) (Premium) | ✅ (block editor only) | ❌ | ❌ |
 
-Yoast SEO Premium also adds [Word complexity](readability/word-complexity.md) and [Text alignment](readability/text-alignment.md). Text alignment is only available in the block editor, not in the classic editor or Elementor.
+Text alignment is only available in the block editor, not in the classic editor or Elementor. Taxonomies and WooCommerce products don't use the block editor.
 
 </TabItem>
 <TabItem value="shopify" label="Shopify">
@@ -302,8 +307,9 @@ Yoast SEO Premium also adds [Word complexity](readability/word-complexity.md) an
 | [Transition words](readability/transition-words.md) | ✅ | ✅ | ✅ |
 | [Text presence](readability/text-presence.md) | ✅ | ✅ | ✅ |
 | [Lists](readability/lists.md) | ✅ | ❌ | ❌ |
+| [Word complexity](readability/word-complexity.md) | ✅ | ✅ | ✅ |
 
-Yoast SEO for Shopify also adds [Word complexity](readability/word-complexity.md). Blogs (the overview page of a blog) don't have a readability analysis.
+Blogs (the overview page of a blog) don't have a readability analysis.
 
 </TabItem>
 <TabItem value="google-docs" label="Google Docs">

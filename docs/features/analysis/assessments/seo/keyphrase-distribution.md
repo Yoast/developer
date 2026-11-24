@@ -15,7 +15,7 @@ A sentence contains the keyphrase (or a synonym) when it has all of its (content
 | **Call to action URL** | [https://yoa.st/33u](https://yoa.st/33u) |
 | **When it applies** | Always, when Yoast SEO Premium is active. |
 | **Product** | Yoast SEO Premium. Also in Yoast SEO for Shopify and Yoast SEO for Google Docs. |
-| **Content types** | **WordPress**: added by Yoast SEO Premium to the SEO analysis of all content types<br/>**Shopify**: added by Yoast SEO for Shopify<br/>**Google Docs**: documents |
+| **Content types** | **WordPress**: added by Yoast SEO Premium to the SEO analysis of all content types<br/>**Shopify**: products, collections, blog posts and pages<br/>**Google Docs**: documents |
 | **Related keyphrases** | ❌ |
 | **Uses synonyms** | ✅ |
 | **Languages** | All languages |
